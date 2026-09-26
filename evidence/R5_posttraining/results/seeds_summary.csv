@@ -1,0 +1,6 @@
+seed,base_validation_accuracy,rtg_selected_batch,recurrent_selected_batch,rtg_optimizer_updates,recurrent_optimizer_updates,adapter_trainable_parameters,base_parameters,base_update_fraction,base_only_long,iterated_base_long,rtg_step0_long,rtg_full_long,rtg_no_write_long,rtg_no_inheritance_long,rtg_reset_m_long,rtg_gamma_zero_long,rtg_unbounded_long,recurrent_long,full_minus_recurrent_pp,full_minus_base_pp
+101,1.0,1200,1200,884,884,2836,1290,0.0,0.19140625,1.0,0.9339192708333334,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,80.859375
+202,1.0,1200,1200,910,910,2836,1290,0.0,0.18815104166666666,1.0,0.9195963541666666,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,81.18489583333334
+303,1.0,1200,1200,903,903,2836,1290,0.0,0.21321614583333334,1.0,0.9127604166666666,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,78.67838541666666
+404,1.0,1000,1200,881,881,2836,1290,0.0,0.19466145833333334,1.0,0.951171875,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,80.53385416666666
+505,1.0,1200,1200,907,907,2836,1290,0.0,0.19889322916666666,1.0,0.9046223958333334,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,80.11067708333334

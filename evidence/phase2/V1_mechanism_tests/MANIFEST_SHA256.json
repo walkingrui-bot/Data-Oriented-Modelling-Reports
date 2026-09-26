@@ -1,0 +1,58 @@
+[
+  {
+    "file": "01_wrong_center_static_generalization.csv",
+    "sha256": "a9a0757e1f590672a624a553d0ea8b4f68eec34345532b35f05d0d6710f3e835"
+  },
+  {
+    "file": "02_wrong_center_closed_loop.csv",
+    "sha256": "e6d1a9d91fadcec1e23a82f43c28e039e4f4f7a1d076d73c3b4aa49c97fcf812"
+  },
+  {
+    "file": "03_mirror_vs_denoiser_OOD.csv",
+    "sha256": "ab6c7a85624f17f939d49111a1f026cdb6dbfb7e46eaaa5cbedc27dd31c6b60d"
+  },
+  {
+    "file": "04_TMC_dose_matched_cadence.csv",
+    "sha256": "720172f81551451f430ef1ad5dc7075037eafd2461b595ba6db13596491137ab"
+  },
+  {
+    "file": "05_TMC_dose_matched_paired_test.csv",
+    "sha256": "753604a4c29fe6beafe4b4fc334fafd9e330223ca268112146413789d834933e"
+  },
+  {
+    "file": "06_balance_band_negative_controls.csv",
+    "sha256": "39ce0684a4b7f4be6e75b4acb85ed23dad0292747cd26d1870635d4179bd7b08"
+  },
+  {
+    "file": "07_balance_band_with_residual_gate.csv",
+    "sha256": "0f38ce3ddbebf547a8eae8f8680ef8733f8e14103f79e5cc92d93e58dcb42526"
+  },
+  {
+    "file": "08_wrong_center_closed_loop.png",
+    "sha256": "0f8e3907adb80127625f86f1dc349ae9b409c6f5da7258741fc3fc59e87d5825"
+  },
+  {
+    "file": "09_mirror_vs_denoiser_ood.png",
+    "sha256": "66e9aa957eca420673406c052006782c17d883342849d4542d1b93ccd531d993"
+  },
+  {
+    "file": "10_dose_matched_cadence.png",
+    "sha256": "b14754ab2ef9e9f56a5104eee1ef081c50f143e9b9020d173a7f1e87f2260133"
+  },
+  {
+    "file": "11_balance_band_negative_controls.png",
+    "sha256": "be47b2a6c8c12d2370b8591d963409b477ff5a3ee4f9e2464cd814b1b846debc"
+  },
+  {
+    "file": "12_pure_noise_failure.png",
+    "sha256": "40c8be29959dd229624ba70a0430d850adac0502a68f557cc4fe4f5f438b3eae"
+  },
+  {
+    "file": "PROTOCOL.md",
+    "sha256": "ee0dd78fc112baa9ef6ff9d34e9c6393f4acb9398d66e93fe03fbbec5f92635f"
+  },
+  {
+    "file": "REPORT.md",
+    "sha256": "a862a61e1799f1d37d42fbeda3d17b64f84f26c6d46b3194314d0e0078c790ae"
+  }
+]

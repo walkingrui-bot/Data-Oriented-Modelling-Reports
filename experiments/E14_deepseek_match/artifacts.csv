@@ -1,0 +1,3 @@
+﻿experiment_id,source_path,stored_path,role,directly_cited,locator,sha256,size_bytes
+E14,audit/DISCUSSION_RECOVERY.md,audit/DISCUSSION_RECOVERY.md,method_or_report,True,,34a4f3e93cf86ae9a0e7b7d37733e49198918fcfca4b04f91fee2ee5b2186fff,3339
+E14,source/Original_Synthesis.docx,source/Original_Synthesis.docx,method_or_report,True,section 12.5,e38535c9e43c7a4cceede627f06b6ff2328df2d067a50b8f397dc2275db3bdf8,1487834

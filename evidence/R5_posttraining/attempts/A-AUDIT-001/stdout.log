@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "raw_predictions_checked": 563200,
+  "recovery_checks": 30,
+  "diagnostic_steps": 3600,
+  "base_all_states": [
+    {
+      "seed": 101,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 202,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 303,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 404,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 505,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    }
+  ]
+}

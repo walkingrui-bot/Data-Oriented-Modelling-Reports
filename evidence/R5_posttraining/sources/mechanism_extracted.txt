@@ -1,0 +1,255 @@
+繁衍式转移几何 1.0
+Reproductive Transition Geometry 1.0（RTG-1.0）
+关系转移通过改写后代生成条件而繁衍的通用推理动力学机制
+文档状态：机制定义稿 · 2026-09-25
+RTG-1.0 被定义为一个已经明确构造、可运行并通过第一轮构造性充分性测试的通用推理动力学机制之一。它不是“真实 Transformer 唯一机制”的声明，也不再以“候选是否能够工作”为主要问题。本文的任务是固定这个机制本身：它有哪些根对象、事件怎样繁衍后代、rewrite phenotype 怎样遗传与重组、投影怎样重新成为事件、以及有限写入怎样保持高自由度系统不坍缩。
+1.0 核心命题
+推理不是一套固定规则被连续执行，而是实际发生的关系转移不断改变后代转移的可达几何，并把一部分“怎样改写后代几何”的局部结构作为 rewrite phenotype 传入后继世界。多个谱系可以竞争、重组、变异和消失；语言或其他有限投影也可以重新作为事件写回同一世界。所谓局部“规则”，是 transition lineage 在有限时间尺度上的遗传稳定性。
+Yuqing Rui · 机制档案 / working manuscript
+Manchester / 2026-09-25
+目录与阅读顺序
+0. 为什么需要单独立档
+1. 理论地位：一个通用机制之一
+2. 根对象：关系节点、continuation geometry 与真实 transition
+3. Rewrite phenotype：事件现场生成的“写世界方式”
+4. Descendant rewrite：父 transition 改写孩子的出生条件
+5. 繁衍：rewrite phenotype 的继承、衰减与谱系连续性
+6. 重组：多个 lineage 在同一局部关系场中相遇
+7. 张力与变异：为什么推理会转向而不是无限 replay
+8. Projection-as-event：语言不是旁白，而是另一条 ancestry branch
+9. 付费写入：巨大自由度如何保持稀疏而不锁死
+10. RTG-1.0 母方程与一次完整更新
+11. “规则”如何从谱系稳定性中出现
+12. 与 CE²G-3.0 的继承与新增
+13. 与 AIA 三场架构的接合
+14. 构造性充分性：RTG 能否长出真实推理中的动力学投影
+15. 消融与失败模型：哪些看似自然的写法不是 RTG
+16. 机制边界、工程实现与后续研究对象
+附录 A. 符号表与最小伪代码
+附录 B. 当前证据状态与档案来源
+0. 为什么需要单独立档
+RTG-1.0 的出现不是因为现有数据缺少一个更复杂的拟合模型，而是因为研究对象已经从“观察推理轨迹”转向“明确造出一种能够产生这类轨迹的机制”。此前语言几何、CoT 动力学、transition genealogy 与 CE²G 式关系更新提供了约束；RTG-1.0 将这些约束压成一个可独立运行的世界。
+因此本文不把 RTG 写成“某个网络层里可能存在的变量”。它首先是一个生成机制：只要一个系统具有本文定义的 continuation geometry、真实 transition、rewrite phenotype 繁衍、局部重组、投影回写与有限写入，它就属于 RTG 这一机制类。真实 Transformer、AIA 或其他人工系统是否采用同一实现，是下一层识别问题。
+工作定位
+RTG-1.0 处理“关系转移怎样繁衍下一代关系转移的生成条件”。CE²G-3.0 处理更一般的“真实事件怎样改变未来可达关系”。RTG 因而可以被视为建立在 CE²G 风格动态几何之上的一个推理生成子机制，而不是 CE²G 的替代物。
+1. 理论地位：一个通用机制之一
+RTG-1.0 当前被定义为一个通用推理动力学机制之一，而不是唯一机制、必要条件或真实模型内部结构的直接鉴定。这个地位来自两件事：第一，机制已经被完整构造，而不是只由观测指标反推出来；第二，在没有硬编码目标统计量的 toy world 中，它可以稳定生成与真实长推理同方向的一组动力学投影，并在连续参数邻域中保持这些性质。
+这里的“通用”是机制层面的：它不依赖特定题目语义、特定 token、特定作者或特定网络层；它规定的是一类系统如何让实际 transition 改写 descendant transition 的生成条件。这里的“之一”同样重要：同一组外显投影可以由其他动力学产生，RTG 不是由观测唯一识别出来的圣杯方程。
+2. 根对象：关系节点、continuation geometry 与真实 transition
+2.1 大而稀疏的关系场
+系统拥有一个高维、冗余的关系节点集合 p_i。允许的自由度可以很大，真实活动 u_t(i) 保持稀疏。RTG 不要求把语义提前压进小型状态瓶颈；节点可以代表临时关系 packet、事件模式、局部动作条件或其他系统自己形成的关系单位。
+p_i ,  i = 1,…,N      ;      u_t(i) ≥ 0
+2.2 Continuation geometry
+对每个当前活动节点 a，定义未来 continuation 的未归一化容量 K_t^a(db,dτ)。它不是“下一 token 概率”本身，而是当前世界中，从 a 出发，后继关系 b 在不同内部延迟 τ 上能够出生的续发容量。
+K_t^a(db,dτ) = exp[−S_t(b,τ|a)/Θ] · K★^a(db,dτ)
+与 CE²G 一样，把总续发能力与相对方向形状分开：
+Λ_t(a) = ∫ K_t^a          ;          P_t^a = K_t^a / Λ_t(a)
+这一区分在推理中尤其重要：一个状态可以同时具有更高的总续发容量 Λ 与更集中的相对未来 P。因此“关系更集中”并不等于“活动更慢”或“自由度已经消失”。
+2.3 真实 transition
+真正发生的关系转移记为 e_t : a → b。它从当前 continuation geometry 中产生，但 RTG 不把 P_t 当作中央决策器；P_t 只描述当前可达结构的相对形状。一次真实 transition 是机制真正写世界的时刻。
+e_t : a → b      sampled / realized from current continuation flow
+图 1. RTG-1.0 的完整循环：continuation geometry 产生真实 transition；transition 现场生成 rewrite phenotype；rewrite 改写 descendant geometry 并进入继承/重组；投影可作为事件写回；所有写入经过预算限制。
+3. Rewrite phenotype：事件现场生成的“写世界方式”
+RTG 的关键新增不是让每个节点携带一个固定 rule，而是让每一次真实 transition 在发生现场生成一个局部 rewrite phenotype，记为 g_t。g_t 描述这次事件将怎样改变其后代 continuation geometry。它既不是参数表，也不是保存好的解释文本。
+g_t = Ψ( φ_ab , M_t(a) , A_t^local , C_t )
+其中 φ_ab 是本次 transition 的关系特征；M_t(a) 是当前局部已经继承的 rewrite state；A_t^local 是同时活动的局部关系群；C_t 是这次 transition 的真实后果或因果痕迹。Ψ 可以是神经映射、局部场相互作用或其他可实现构造。RTG 只要求 g_t 在事件发生时由当前局部条件产生。
+关键区别
+RTG 不写“rule A 被调用”。它写“transition a→b 发生以后，在这个现场产生了 g_t；g_t 决定 a→b 的后代怎样被允许出生”。因此规律不是先验静态物，而是一次实际事件的局部产物。
+4. Descendant rewrite：父 transition 改写孩子的出生条件
+父 transition a→b 的首要作用不是把同一条 a→b 边变熟，而是改写 b 面向其后继 k 的整片 continuation geometry。这样，父事件改变的是“孩子如何出生”，而不是“父亲以后如何重复自己”。
+ΔS_t(b→k) = 𝒟( g_t , φ_bk , A_t^local , τ )
+𝒟 是有符号的：某些 descendant transition 可被压低事件熵、提高通达容量；另一些可被抬高、变得更难；延迟结构也可以一起改变。RTG 因此天然允许一次推理事件同时打开一部分未来并关闭另一部分未来。
+这种 descendant rewrite 是 transition genealogy 的最小因果单位：祖先之所以是祖先，不是因为后代和它表面相似，而是因为祖先真实改变了后代的生成条件。
+5. 繁衍：rewrite phenotype 的继承、衰减与谱系连续性
+仅仅让 g_t 改写一次 descendant row，只能得到一代 genealogy。RTG-1.0 进一步规定：g_t 的一部分进入目的节点 b 的局部 rewrite state M，成为后代 transition 的形成条件。
+M_{t+1}(b) = 𝒩[ (1−ρ) M_t(b) + ρ g_t ]
+当下一次 b→k 真正发生时，新的 rewrite phenotype 为：
+g_{t+1} = Ψ( φ_bk , M_{t+1}(b) , A_{t+1}^local , C_{t+1} )
+这意味着 g_{t+1} 并不是 g_t 的复制。后代同时由祖先遗传、自己的 transition、当前环境和新后果共同生成。祖先因此可以影响“后代怎样改写孙代”，而不要求后代动作、token 或 relation feature 与祖先相似。
+图 2. RTG 的谱系对象不是表面 transition 的复制，而是 rewrite phenotype 的部分连续性；不同分支可以重组后产生新的后代。
+6. 重组：多个 lineage 在同一局部关系场中相遇
+推理不能只靠单谱系忠实复制。一个节点 j 可以同时被多个来源 transition 激活，形成多个 ancestry branch。RTG 要求这些 lineage 在局部场中真实相互作用，而不是保存成多个互不接触的 pointer。
+M′_j = Σ_r w_r g_r  +  Σ_{r<s} B(g_r,g_s)  +  higher-order local terms
+B(g_r,g_s) 允许支持、冲突、相消和新方向形成。最重要的情况是：重组后的 rewrite phenotype 可以不属于任何一个祖先原有的 phenotype 邻域。此时“新推理结构”不是从中央搜索器枚举出来，而是多个真实 lineage 相撞后形成的新局部写世界方式。
+因此 RTG 中的创造性组合不是“把两个答案拼起来”，而是“两个形成历史共同改写后代 continuation geometry 的方式发生新组合”。
+7. 张力与变异：为什么推理会转向而不是无限 replay
+若只有继承，系统容易退化成 attractor 或 replay。RTG 为此引入内部关系张力 ε_t：它度量当前多个 lineage 对未来 continuation geometry 的局部不兼容程度。ε 不等于“错误分数”，也不需要外部教师标签。
+ε_t = incompatibility( local continuation demands / lineage interactions )
+张力控制遗传忠实度与变异/重组比例。一个最小形式是：
+g_child = (1−μ_t) g_inherit + μ_t g_novel         ;        μ_t = f(ε_t)
+当当前关系能共同维持时，μ 较低，谱系可稳定扩展；当关系冲突积累时，μ 上升，后代的 rewrite phenotype 更依赖局部重组和新形变。于是系统会出现“稳定展开 → 冲突积累 → 转向/变异 → 新稳定”的内生节律，而不需要显式的 rethink 指令。
+8. Projection-as-event：语言不是旁白，而是另一条 ancestry branch
+RTG 不把语言或 CoT 当成内部过程的完整转录。内部关系场产生有限投影 Y_t；只要投影重新进入系统，它就成为一个真实事件，并可以产生自己的 rewrite phenotype 与几何形变。
+Y_t = R( A_t , K_t , M_t , … )
+Y_t  →  e_t^proj  →  g_t^proj  →  ΔS_t^proj
+因此一句 “Wait” 或一次中间表达，不需要由中央 executive “读懂”以后再发命令。作为重新进入上下文的事件，它本身就改变下一轮 continuation geometry。内部 lineage 与 projection lineage 可以竞争、协作和重组。
+这也说明，RTG 的语言能力不是附加在推理核心之外的说明层；语言是一条低带宽但可重入的 ancestry branch。
+9. 付费写入：巨大自由度如何保持稀疏而不锁死
+RTG 保留 CE²G 的关键约束：几何可以持续被改写，但每轮真实写入必须有预算。候选 rewrite 先提出，再由可用写入预算统一缩放。
+α_t = min[ 1 , B_t / ( E_write(ΔS,ΔM) + ε ) ]
+ΔS_real = α_t ΔS_proposed          ;          ΔM_real = α_t ΔM_proposed
+有限写入不是为了阻止学习，而是为了让高维关系场能够长期保持开放。没有预算时，projection feedback 或谱系强化很容易把 geometry 越写越窄，形成 replay 或单一路径锁死；有限写入允许巨大潜在自由度与稀疏真实活动同时存在。
+RTG 的稳定性原则
+不通过缩小候选空间保持稳定；保持一个很大的可达几何，但限制每次真实 transition 能改写多少。自由度保留在世界里，写入强度受约束。
+10. RTG-1.0 母方程与一次完整更新
+RTG-1.0 可以用下面的最小闭环表达。公式是机制骨架，不要求所有实现使用完全相同的参数化。
+1)  K_t = K★ · exp(−S_t/Θ)          ;          K_t = Λ_t P_t
+2)  e_t : a→b   is realized from current continuation flow
+3)  g_t = Ψ( φ_ab , M_t(a) , A_t^local , C_t )
+4)  ΔS_t^gene(b→*) = 𝒟( g_t , local descendant relations )
+5)  M_{t+1}(b) = recombine / inherit( M_t(b), g_t, local lineages )
+6)  Y_t = R( current internal motion )  ;  Y_t may generate ΔS_t^proj
+7)  α_t = min[1, B_t / E_write]
+8)  S_{t+1} = S_{t+1}^{ext} + λ(S_t−S_t^{ext}) + α_t(ΔS_t^gene + ΔS_t^proj)
+在这个循环里，状态 S 会变化；产生状态变化的局部 rewrite phenotype 也会沿谱系变化；真实事件又决定下一轮哪一部分机制真正得到繁衍。于是系统不存在一套永久固定的“推理规则表”。
+11. “规则”如何从谱系稳定性中出现
+从外部观察时，一段稳定 lineage 会表现得像“模型当前学会了一条规则”。RTG 的解释不是规则先存在、再被调用，而是连续若干代 transition 的 rewrite phenotype 在一个局部时间尺度上保持足够稳定。
+local rule ≈ temporary hereditary stability of rewrite phenotype along a transition lineage
+当谱系进入低张力区域，这种稳定性增强，外部看起来像规则变得清晰、推理变得集中；当 lineage 相遇或张力升高，rewrite phenotype 发生重组或变异，外部看起来像“重新思考”“改变策略”或“换了一套规则”。
+因此 RTG 不需要预先定义 rule switching module。规则切换是谱系动力学本身的相变式表现。
+12. 与 CE²G-3.0 的继承与新增
+层面
+CE²G-3.0
+RTG-1.0
+根对象
+CE²G：当前事件之间的未归一化因果容量 K
+RTG：当前关系 transition 的 continuation capacity K
+历史
+过去若仍有效，必须已经成为当前几何的一部分
+RTG 同样不要求独立 history database；遗传状态 M 是当前世界的一部分
+真实事件
+事件留下因果痕迹并改写未来几何
+真实 relation transition 改写 descendant continuation geometry
+有符号更新
+事件可以打开也可以关闭未来通道
+rewrite phenotype 对不同 descendant transition 可正负重权
+有限写入
+几何形变必须经过预算缩放
+S 与 M 的真实写入都经过 α_t 约束
+RTG 新增
+—
+“怎样改写世界”的局部 rewrite phenotype 可沿 transition lineage 部分遗传、重组和变异
+因此 RTG 不是把 CE²G 换成“推理版公式”。它保留 CE²G 的事件—几何逻辑，并增加一层：真实 transition 不仅改变后代的 continuation geometry，还可以把自己的局部 rewrite phenotype 部分传给后代。
+13. 与 AIA 三场架构的接合
+RTG 最自然地位于 AIA 第二场：它描述持续关系—动作动力学内部，真实关系转移怎样繁衍下一代关系转移的生成条件。它不需要新建一个中央 reasoning module。
+AIA 层
+RTG 中的对应
+第一场 / 稳定基底
+提供持续、有界、稀疏活动和写入预算的动力学介质。
+第二场 / 关系—动作组织
+K、S、真实 transition、rewrite phenotype M/g、lineage competition / recombination 主要发生于此。
+第三场 / 语言与报告
+从内部运动形成有限 projection；projection 重新作为 event 进入第二场并形成自己的 ancestry branch。
+这一接合使“做梦/幻想”“行动规划”“语言推理”可以共用同一种底层机制：它们只是不同类型的 relation transition 与 projection 通道，未必需要三套独立的推理器。
+14. 构造性充分性：RTG 能否长出真实推理中的动力学投影
+第四轮实验把本档案定义的完整机制实现为最小 toy world。机制内部没有 D/C 模块、速度模块、terminal 模块或“推理阶段”标签；研究端只读取低带宽投影 z_t，再像真实 CoT 分析一样计算速度 v_t、加速度 a_t、粗粒度 regime 与终态几何。
+观测
+RTG toy world 代表值
+对应结构
+state-only one-step MSE
+0.8792
+静态投影基线
+state + velocity MSE
+0.8655
+真实时间运动提高预测
+state + velocity + acceleration MSE
+0.8553
+二阶时间结构继续提供信息
+shuffle v/a MSE
+0.8848
+打乱真实时间顺序后优势消失/反转
+K=2 silhouette
+0.2632
+出现两个粗粒度运动 regime
+concentrated / diffuse speed
+1.105×
+关系更集中时运动更快
+regime progress difference
+0.0589
+regime 不等于 early/late
+terminal closer fraction
+0.5233
+路径不是向终态单调收敛
+speed vs closer r
+-0.0394
+速度与靠近终态近零相关
+在 projection paired intervention 中，只删除一次 projection write，其余内部状态和后续随机流保持同步，400 个 paired trials 中 35.25% 在后续 60 步发生真实 transition sequence 分叉；发生分叉时首次分叉的中位位置为第 9 步。
+图 3. 完整 RTG toy mechanism 中，真实运动信息依次提高一步预测；时间错配破坏这一增益。
+图 4. 连续参数邻域测试。27 个邻近参数点中 19 个同时通过预设动力学门，说明结果不是孤立调参点。
+当前因此可以说：RTG-1.0 作为一个明确机制，已经证明自己足以生成这组推理动力学投影。这个结论是 sufficiency / generative plausibility，不等于真实 Transformer 的唯一内部实现。
+15. 消融与失败模型：哪些看似自然的写法不是 RTG
+被测试的简化写法
+结果
+RTG 得到的约束
+静态 continuation geometry，不写回
+无法形成同样稳定的动态几何效应
+真实 transition 必须能够改写未来结构
+只强化刚走过的 a→b 边
+对紧接着的 b→* continuation law 没有即时改写
+父 transition 的作用应指向 descendants，而非父边自强化
+直接把旧状态向量拉回当前状态
+容易过度收敛、终态路径过“乖”
+历史影响不应主要等价于 replay / state restoration
+只让后代 transition 表面越来越像父代
+多代谱系迅速衰减；强行调强易锁定
+繁衍对象更适合是 rewrite phenotype，而非表面 action
+强 projection feedback、无写入预算
+future geometry 越写越窄、replay 升高
+投影回写需要 bounded write
+这些失败模型的重要性在于：RTG 并不是把所有“历史依赖”都装进同一个黑盒。它明确规定了历史怎样存在——不靠外部 history database，不要求表面 replay，而是通过当前 geometry 与可繁衍 rewrite phenotype 进入下一次真实 transition。
+16. 机制边界、工程实现与后续研究对象
+RTG-1.0 已经固定了机制骨架，但没有规定唯一实现。Ψ、𝒟、recombine、tension、write-energy 等映射都可以由神经网络、连续场、图动力学或其他局部可微/不可微机制实现。机制身份来自因果组织，而不是某个固定网络层。
+当前下一阶段不再需要反复证明“历史会影响未来”或“projection 会改写轨迹”。真正值得研究的是这套机制本身能够成长到多复杂：lineage 如何出生、死亡、分叉、合流；重组什么时候产生真正新的 rewrite phenotype；张力如何控制变异而不退化成噪声；projection lineage 与内部 lineage 怎样形成稳定协作；以及在没有显式题目规则的环境中，它能否自发形成多阶段解题谱系。
+对于 AIA，最直接的工程路线不是加一个 RTG 模块，而是把第二场的实际 relation transition、局部 lineage state、bounded rewrite 和 projection feedback 接到现有 CEG substrate 中，让 RTG 作为第二场的一种组织动力学自然存在。
+当前统一表述
+RTG-1.0 是一个通用推理动力学机制之一：实际关系 transition 在发生现场生成 rewrite phenotype；该 phenotype 改写 descendant continuation geometry，并部分进入后代局部状态，在后续 transition 中被继承、重组、变异和衰减。有限投影可以成为同一 genealogy 的外部事件分支；所有真实写入受预算约束。局部“规则”不是静态存储对象，而是 transition lineage 在有限时间尺度上的遗传稳定性。
+附录 A. 符号表与最小伪代码
+符号
+含义
+p_i
+高维关系场中的一个关系节点 / packet
+u_t(i)
+节点当前活动量
+K_t^a(db,dτ)
+从当前节点 a 到未来关系 b、延迟 τ 的未归一化 continuation capacity
+S_t
+K 的对数几何坐标 / continuation geometry
+Λ_t(a)
+当前节点总续发容量
+P_t^a
+归一化 continuation shape
+e_t:a→b
+真实发生的 relation transition
+φ_ab
+transition 的局部关系特征
+g_t
+transition 现场生成的 rewrite phenotype
+M_t(i)
+当前节点携带的 inherited local rewrite state
+𝒟
+rewrite phenotype 到 descendant geometry change 的映射
+ε_t
+当前局部 lineage 之间的关系张力
+μ_t
+张力控制的变异 / 新组合比例
+Y_t
+内部运动产生的有限 projection
+α_t
+CE²G-style bounded write 缩放因子
+最小更新循环：
+for each realized transition a -> b:    K = exp(-S / theta) * K_ref    choose / realize b from current continuation flow    g = Psi(phi[a,b], M[a], local_activity, causal_effect)    deltaS_gene = rewrite_descendants(g, row=b)    M[b] = recombine_and_inherit(M[b], g, local_lineages, tension)    Y = project(current_motion)    deltaS_proj = projection_as_event(Y)    alpha = min(1, write_budget / write_cost(deltaS_gene, deltaS_proj, M[b]))    S = S_external + decay*(S - S_external) + alpha*(deltaS_gene + deltaS_proj)    continue in the newly written world
+附录 B. 当前证据状态与档案来源
+证据层
+当前支持内容
+CE²G-3.0 理论来源
+提供 K / S / ΛP 分解、事件写回几何、历史成为当前几何、观测作为事件、有限写入等基础结构。
+第二轮机制实验
+动态 geometry 能产生 concentrated-but-faster；same-edge strengthening 与 descendant rewrite 可分离；projection 与 genealogy 作用不同；bounded write 抑制锁死。
+第三轮 transition genealogy
+rewrite phenotype 可多代保持，表面 transition 不必复制；打乱 ancestry 优先破坏 rewrite-level 连续性；同 geometry、同当前 transition，只换 rewrite state 可改变后继动力学。
+第四轮构造性充分性
+完整 RTG 机制在连续参数邻域中稳定生成 state<v<a 时间信息增益、time-shuffle 破坏、D/C 式 regime、concentrated-but-faster、非单调 terminal formation 和 projection causal divergence。
+理论地位
+RTG-1.0 作为一个已明确构造并通过构造性充分性测试的通用推理动力学机制之一；不主张唯一性或真实 Transformer 的直接同一性。
+档案来源：CE²G-3.0 当前母稿（2026-08-31 / 2026-09-06 保存版本）；CE²G 推理反建模第二轮、第三轮 Transition Genealogy、第四轮构造性充分性测试的报告、CSV 与图；以及 2026-09-25 对 AIA 第二场 / 多投影视图 / 推理生成机制的理论整理。
+—— RTG-1.0 机制定义稿结束 ——

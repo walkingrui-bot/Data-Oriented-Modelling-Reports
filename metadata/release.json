@@ -1,0 +1,72 @@
+{
+  "phases": [
+    1,
+    2
+  ],
+  "expected_experiment_ids": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27",
+    "E28",
+    "E29",
+    "E30",
+    "E31",
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36",
+    "E37",
+    "E38",
+    "E39"
+  ],
+  "hypothesis_count": 35,
+  "phase2_original_artifacts": 63,
+  "original_artifact_total": 512,
+  "model_training_rerun": false,
+  "version": "0.1.0",
+  "publication_status": "prepared",
+  "snapshot_date": "2026-09-25",
+  "publication_language": "en",
+  "source_language_policy": "Preserve original evidence language and bytes",
+  "project_nature": "self-directed personal-interest research",
+  "academic_supervision": false,
+  "report_edition_date": "2026-09-26",
+  "report_titles": {
+    "phase1": "Language Models Fit the Function That Generates the Answer",
+    "phase2": "Read the Future. Then Change It."
+  },
+  "project_title": "Biosphere 3 \u2014 Public Reports",
+  "repository_name": "biosphere-3-public-reports",
+  "next_phases": {
+    "chapters": [
+      3,
+      4
+    ],
+    "release_status": "coming soon"
+  }
+}

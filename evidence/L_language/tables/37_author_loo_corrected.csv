@@ -1,0 +1,15 @@
+﻿true_genre,author,window_level_accuracy,majority_prediction
+novel,Austen,0.7708333333,novel
+novel,Shelley,0.6875,novel
+novel,Twain,0.125,drama
+novel,Conrad,0.3125,poetry
+novel,Hardy,0.5833333333,novel
+poetry,Poe,0.3125,drama
+poetry,Milton,0.5208333333,poetry
+poetry,Pope,0.3958333333,novel
+poetry,Wilde,0.5208333333,poetry
+poetry,Hardy,0.5833333333,poetry
+drama,Shakespeare,0.3125,poetry
+drama,Wilde,0.8541666667,drama
+drama,Shaw,0.4791666667,drama
+drama,Ibsen,0.9166666667,drama

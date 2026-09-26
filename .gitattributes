@@ -1,0 +1,18 @@
+*.md text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.csv binary
+*.json binary
+*.jsonl binary
+*.txt binary
+*.log binary
+*.pt binary
+*.ckpt binary
+*.npz binary
+*.npy binary
+*.gz binary
+*.docx binary
+*.pdf binary
+*.png binary
+evidence/** -text
+source/** -text

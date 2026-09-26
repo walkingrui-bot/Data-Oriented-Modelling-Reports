@@ -1,0 +1,26 @@
+{
+  "id": "E29",
+  "slug": "future_influence_instruments",
+  "en": "Future sources and influence horizons",
+  "families": [
+    "G2_future_instruments"
+  ],
+  "files": [
+    "01_metric_benchmark.csv",
+    "02_metric_top1_by_seed.csv",
+    "03_influence_horizon_profile.csv"
+  ],
+  "methods_en": "Use three independent models and 64 held-out history patterns per model, totaling 192 examples with successful four-step rollouts. Select the attention layer and query read-position on training data, then freeze them for testing. Compare exact FCI, gradient norm, DFG along the actual cue-flip direction, three-point integrated DFG and batched future margin. Record counterfactual TV at each horizon.",
+  "results_en": "Source Top-1: calibrated attention 58.3%, attention×future-gradient 58.3%, gradient norm 69.3%, DFG 79.2%, and 100% for three-point IDFG, batched future margin and exact FCI. Relevant-source TV was about 0.000054/0.000056 at H1/H2 and 0.998948/0.998897 at H3/H4. All 192 examples first exceeded TV=0.1 at H3.",
+  "interpretation_en": "Measuring along an actual counterfactual connects local sensitivity to an operation that changes the future. Horizon profiles reveal constraints whose effects are still latent in the text. The 100% score describes source identification in this constructed task.",
+  "source_sections": "Original synthesis sections 15.1–15.4、17.7",
+  "directory": "experiments/E29_future_influence_instruments",
+  "hypotheses": [
+    "H20",
+    "H23",
+    "H24"
+  ],
+  "artifact_count": 12,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

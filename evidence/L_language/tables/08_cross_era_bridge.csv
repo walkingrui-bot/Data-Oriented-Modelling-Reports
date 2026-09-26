@@ -1,0 +1,9 @@
+﻿text,direction,bridge_AUC
+师说,classical→modern,0.994
+兰亭集序,classical→modern,0.887
+醉翁亭记,classical→modern,0.947
+桃花源记,classical→modern,0.809
+师说,modern→classical,0.82
+兰亭集序,modern→classical,0.739
+醉翁亭记,modern→classical,0.935
+桃花源记,modern→classical,0.615

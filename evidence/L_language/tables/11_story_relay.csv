@@ -1,0 +1,4 @@
+﻿feature_level,mean_AUC,seed_SD
+local,0.656,0.018
+recurrence,0.645,0.019
+bridge,0.806,0.012

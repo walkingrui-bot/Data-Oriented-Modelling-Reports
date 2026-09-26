@@ -1,0 +1,3 @@
+﻿experiment_id,source_path,stored_path,role,directly_cited,locator,sha256,size_bytes
+E19,evidence/P3_progressive/REPORT(20260925-042904).md,evidence/P3_progressive/REPORT(20260925-042904).md,method_or_report,True,,71434c1fdf6b6e18017dcf8f8ea638108405e13dca5e65a284ba19a6debb8eef,11332
+E19,evidence/P3_progressive/mechanism_summary.png,evidence/P3_progressive/mechanism_summary.png,figure,False,,85022f4f72f918caaca22439a87497477305abaa4c86db16f11911040edff34a,493162

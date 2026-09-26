@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "check_groups": 8,
+  "model_training_rerun": false,
+  "bootstrap_resampled": false,
+  "checks": {
+    "GCM1_correct_subset_seed_macro_means": {
+      "attention_mean_top1": 0.4250236666666667,
+      "attention_last_top1": 0.208085,
+      "next_step_effect_top1": 0.32882133333333335,
+      "linear_future_influence_top1": 0.3869573333333333,
+      "exact_future_influence_top1": 0.905915
+    },
+    "GCM2_seed_means": {
+      "independent_models": 3,
+      "heldout_per_model": 64,
+      "all_exact_fci": true
+    },
+    "hard_mirror_relative_reductions": {
+      "versus_self": 0.9231184129196341,
+      "versus_neutral": 0.8090096434090331
+    },
+    "state_mirror_relative_reductions": {
+      "late_TV": 0.7580402493240874,
+      "late_KL": 0.937492577490994
+    },
+    "frequency_scan_trajectory_means": {
+      "every_1": 0.06747427706917127,
+      "every_2": 0.23401243736346564,
+      "every_4": 0.32773340741793316,
+      "every_8": 0.3671331803003947,
+      "every_16": 0.39615023136138916,
+      "free": 0.41547803084055585
+    },
+    "matched_dose": {
+      "nominal_lambda_per_token": 0.025,
+      "range_of_means_recomputed": 0.004403380000000012,
+      "every1_minus_every16_from_rounded_means": -0.0004671800000000115,
+      "bootstrap_CI_retained": [
+        -0.00996414851397276,
+        0.008928614668548107
+      ]
+    },
+    "balance_neighborhood": {
+      "worlds": 9,
+      "mean_jaccard": 0.7507626592409201,
+      "median_jaccard": 0.8181818181818182
+    },
+    "residual_band": {
+      "pure_noise_jaccard": 0.6190476190476191,
+      "bad_timepoints_called_balance": 0.0
+    }
+  }
+}

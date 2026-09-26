@@ -1,0 +1,17 @@
+{
+  "id": "E04",
+  "en": "Structural scale and word-level checks",
+  "methods_en": "Contiguous blocks were shuffled as units, preserving within-block order, with block size increasing from 1 to 32. English, Spanish and French were also reanalyzed using word-level units.",
+  "results_en": "For stripped program explanations, bridge AUC at block sizes 1/2/4/8/16/24/32 was 1.000/0.995/0.909/0.754/0.643/0.571/0.551. In the three-language word-level check, mean local AUC was approximately 0.865 and bridge AUC 0.858.",
+  "interpretation_en": "Preserving larger local blocks made original and shuffled materials more similar, locating much of the discriminative signal at local to intermediate scales. Word-level results retain structural signal, with representation-dependent bridge gains.",
+  "source": "L_language/tables/06_multilingual_block_shuffle.csv; L_language/tables/07_word_level_sanity.csv",
+  "directory": "experiments/E04_structure_scale",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H01",
+    "H02",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 19
+}

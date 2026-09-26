@@ -1,0 +1,65 @@
+[
+  {
+    "check": "author_genre_rows",
+    "n": 14,
+    "unique_authors": 12,
+    "majority_correct": 9,
+    "mean_window_accuracy": 0.5267857142785715
+  },
+  {
+    "check": "expected_field_summary",
+    "language_batch_rows": 18,
+    "reported_sources": 290,
+    "unweighted_fraction": 0.8326222222222223,
+    "weighted_fraction": 0.83104,
+    "median_ratio": 1.4139
+  },
+  {
+    "check": "X2_selective_history/03_attention_vs_causal_voice.csv",
+    "means": {
+      "global_spearman": 0.6055633333333333,
+      "within_sample_spearman": 0.6561176666666667,
+      "relevant_attention": 0.4462463333333333,
+      "older_same_attention": 0.18141733333333332,
+      "other_attention": 0.025336333333333332,
+      "relevant_causal_effect": 0.9990593333333334,
+      "older_same_causal_effect": 0.00025833333333333334,
+      "other_causal_effect": 0.000129,
+      "top_attention_is_relevant": 0.906111,
+      "top_causal_is_relevant": 1.0,
+      "high_attention_low_effect_rate": 0.161713
+    }
+  },
+  {
+    "check": "X3_state_transplant/01_forged_history_injection.csv",
+    "means": {
+      "base_accuracy": 0.9923333333333333,
+      "mean_direction_target_manifold_win": 0.05,
+      "mean_direction_target_correct": 0.04666666666666667,
+      "mean_direction_tv_nearest_natural": 0.929574,
+      "mean_direction_h2_cos_nearest": 0.13052593333333334,
+      "query_only_target_correct": 0.2275,
+      "query_only_tv_vs_donor": 0.7654020333333333,
+      "query_only_h2_cos": 0.22708986666666667,
+      "evidence_only_target_correct": 0.37583333333333335,
+      "evidence_only_tv_vs_donor": 0.6120496,
+      "evidence_only_h2_cos": 0.3858648666666667,
+      "full_layer_target_correct": 0.9933333333333334,
+      "full_layer_tv_vs_donor": 7.43e-09,
+      "full_layer_h2_cos": 1.0
+    }
+  },
+  {
+    "check": "X3_state_transplant/02_one_shot_rule_formation.csv",
+    "means": {
+      "noiseless_unseen_pattern_accuracy": 1.0,
+      "noisy_30pct_one_shot_accuracy": 0.9716666666666667,
+      "noisy_oracle_reference": 0.9764
+    }
+  },
+  {
+    "check": "actual_optimizer_updates",
+    "total_base_updates": 4000,
+    "total_adapter_updates": 8970
+  }
+]

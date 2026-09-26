@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "markdown_documents": 10,
+  "local_links_checked": 42,
+  "helper_syntax_checked": [
+    "analyze.py",
+    "audit_completed.py",
+    "diagnose_saved_traces.py",
+    "reproduce.py",
+    "package.py"
+  ],
+  "formal_checkpoints": 85,
+  "requirement": "No new model run or broad repository checks."
+}

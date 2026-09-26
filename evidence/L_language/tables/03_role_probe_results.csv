@@ -1,0 +1,7 @@
+﻿condition,metric,value
+local geometry,coarse role accuracy,0.827
++ global recurrence,coarse role accuracy,0.938
+local geometry,fine-role accuracy,0.868
++ recurrence/context,fine-role accuracy,0.925
+context-split recurrence,fine-role AUC before,0.598
+context-split recurrence,fine-role AUC after,0.658

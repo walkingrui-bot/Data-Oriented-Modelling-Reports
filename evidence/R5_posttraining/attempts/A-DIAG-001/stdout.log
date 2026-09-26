@@ -1,0 +1,18 @@
+{
+  "run_id": "A-DIAG-001",
+  "status": "COMPLETED",
+  "ended_utc": "2026-09-25T07:19:52.950857+00:00",
+  "new_model_calls": 0,
+  "global_distinct_test_rules": 2553,
+  "saved_control_examples": 80,
+  "formal_errors_by_condition": {
+    "base_only": 41120,
+    "rtg_step0": 2726
+  },
+  "trace_scope": "prespecified four episodes per seed, two rules per seed; descriptive only",
+  "step0_retention": "registered value 0.9; float32 reconstruction has rounding error"
+}
+full {'max_write_is_correct_descendant': np.float64(1.0), 'correct_minus_other_mean': np.float64(1.044501974009108), 'actual_write_norm': np.float64(0.9998160956799984), 'local_transition_correct': np.float64(1.0)}
+step0 {'max_write_is_correct_descendant': np.float64(0.04), 'correct_minus_other_mean': np.float64(0.009675133615357073), 'actual_write_norm': np.float64(0.9562429340183736), 'local_transition_correct': np.float64(0.9924999999999999)}
+reset_m {'max_write_is_correct_descendant': np.float64(1.0), 'correct_minus_other_mean': np.float64(1.0439954410709469), 'actual_write_norm': np.float64(0.9995193037390708), 'local_transition_correct': np.float64(1.0)}
+unbounded {'max_write_is_correct_descendant': np.float64(1.0), 'correct_minus_other_mean': np.float64(1.2068462977989909), 'actual_write_norm': np.float64(1.154858369678259), 'local_transition_correct': np.float64(1.0)}

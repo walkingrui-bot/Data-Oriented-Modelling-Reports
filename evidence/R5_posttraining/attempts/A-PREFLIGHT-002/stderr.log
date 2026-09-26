@@ -1,0 +1,14 @@
+test_destination_write_and_budget (__main__.Contracts.test_destination_write_and_budget) ... ok
+test_exact_rule_partition (__main__.Contracts.test_exact_rule_partition) ... ok
+test_first_answer_precedes_trainable_write (__main__.Contracts.test_first_answer_precedes_trainable_write) ... ok
+test_inherited_state_causally_enters_phenotype (__main__.Contracts.test_inherited_state_causally_enters_phenotype) ... ok
+test_label_convention (__main__.Contracts.test_label_convention) ... ok
+test_matched_active_parameters_and_frozen_base (__main__.Contracts.test_matched_active_parameters_and_frozen_base) ... ok
+test_no_write_equals_iterated_reader (__main__.Contracts.test_no_write_equals_iterated_reader) ... ok
+test_row_order_invariance (__main__.Contracts.test_row_order_invariance) ... ok
+test_trace_contract (__main__.Contracts.test_trace_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.370s
+
+OK

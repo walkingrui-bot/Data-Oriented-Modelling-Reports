@@ -1,0 +1,92 @@
+{
+  "selected_step": 1200,
+  "validation": {
+    "accuracy": 1.0,
+    "loss": 0.19882752932608128,
+    "count": 1024,
+    "optimizer_updates": 910
+  },
+  "actual_optimizer_updates": 910,
+  "seconds": 3.938608208030928,
+  "trainable_parameters": 2836,
+  "base_changed_elements": 0,
+  "base_update_fraction": 0.0,
+  "coefficients": {
+    "gamma": 0.7522170543670654,
+    "eta": 2.813103437423706,
+    "rho": 0.4941711127758026,
+    "retention": 0.9663776159286499
+  },
+  "parameter_changes": {
+    "raw_gamma": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 0.42648062109947205
+    },
+    "raw_eta": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 0.8966217041015625
+    },
+    "raw_rho": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 0.023316487669944763
+    },
+    "raw_retention": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 1.1611382961273193
+    },
+    "reader.query": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.key": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.value": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.answer.weight": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.answer.bias": {
+      "changed_elements": 0,
+      "elements": 10,
+      "l2_change": 0.0
+    },
+    "relation.weight": {
+      "changed_elements": 2048,
+      "elements": 2048,
+      "l2_change": 6.048418998718262
+    },
+    "relation.bias": {
+      "changed_elements": 16,
+      "elements": 16,
+      "l2_change": 1.0191575288772583
+    },
+    "w_phi.weight": {
+      "changed_elements": 256,
+      "elements": 256,
+      "l2_change": 2.4696574211120605
+    },
+    "w_m.weight": {
+      "changed_elements": 256,
+      "elements": 256,
+      "l2_change": 1.0390437841415405
+    },
+    "w_inherit.weight": {
+      "changed_elements": 256,
+      "elements": 256,
+      "l2_change": 0.9432756304740906
+    }
+  }
+}

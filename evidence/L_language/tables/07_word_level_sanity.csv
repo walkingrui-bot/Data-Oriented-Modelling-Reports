@@ -1,0 +1,7 @@
+﻿group,language,local_AUC,recurrence_AUC,bridge_AUC
+formal,English,0.803,0.8,0.769
+formal,Spanish,0.856,0.928,0.922
+formal,French,0.666,0.708,0.664
+program_stripped,English,0.874,0.859,0.863
+program_stripped,Spanish,0.807,0.81,0.801
+program_stripped,French,0.914,0.924,0.909

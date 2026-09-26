@@ -1,0 +1,17 @@
+{
+  "id": "E06",
+  "en": "Program and natural-language round trips",
+  "methods_en": "Four small program families and three refactored versions were passed through program/explanation round trips. Exhaustive or dense input-domain execution checks assessed program equivalence, and multilingual explanations were analyzed for relational geometry.",
+  "results_en": "All 229014 execution comparisons agreed. Explanation-text local/recurrence/bridge AUCs were 0.697/0.712/0.803. Corresponding bridge AUCs at block sizes 1/2/4/8/12 were 0.806/0.737/0.655/0.581/0.540.",
+  "interpretation_en": "Across four program families, 229014 execution comparisons preserve program semantics over the tested input domains. Their explanations also carry measurable relational structure.",
+  "source": "L_language/tables/14_code_nl_roundtrip.csv; L_language/tables/15_code_nl_summary.csv; L_language/tables/16_code_nl_block_shuffle.csv",
+  "directory": "experiments/E06_program_roundtrip",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H02",
+    "H01",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 20
+}

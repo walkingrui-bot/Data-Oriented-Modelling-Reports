@@ -1,0 +1,76 @@
+{
+  "centroid_singular_variance_fraction": [
+    0.4236815273761749,
+    0.2604566216468811,
+    0.2443840056657791,
+    0.07147790491580963,
+    4.8689039453854444e-14
+  ],
+  "alphas": {
+    "0.25": {
+      "n": 500,
+      "recipient_accuracy": 0.992,
+      "operator_accuracy": 0.004,
+      "delta_recipient_p": -0.012120712816715241,
+      "delta_operator_p": 0.006447832395720545
+    },
+    "0.5": {
+      "n": 500,
+      "recipient_accuracy": 0.944,
+      "operator_accuracy": 0.018,
+      "delta_recipient_p": -0.06434694445133209,
+      "delta_operator_p": 0.02416198352805916
+    },
+    "0.75": {
+      "n": 500,
+      "recipient_accuracy": 0.852,
+      "operator_accuracy": 0.06,
+      "delta_recipient_p": -0.14874271756410598,
+      "delta_operator_p": 0.06077182393548597
+    },
+    "1.0": {
+      "n": 500,
+      "recipient_accuracy": 0.748,
+      "operator_accuracy": 0.096,
+      "delta_recipient_p": -0.24592104411125182,
+      "delta_operator_p": 0.09585920491400315
+    },
+    "1.25": {
+      "n": 500,
+      "recipient_accuracy": 0.65,
+      "operator_accuracy": 0.144,
+      "delta_recipient_p": -0.3306386451125145,
+      "delta_operator_p": 0.13004525842824105
+    },
+    "1.5": {
+      "n": 500,
+      "recipient_accuracy": 0.584,
+      "operator_accuracy": 0.158,
+      "delta_recipient_p": -0.4040787156224251,
+      "delta_operator_p": 0.15038493171014447
+    }
+  },
+  "wrong_direction_control": {
+    "0.5": {
+      "n": 500,
+      "recipient_accuracy": 0.962,
+      "operator_accuracy": 0.012,
+      "delta_recipient_p": -0.0400219304561615,
+      "delta_operator_p": 0.00976018019319002
+    },
+    "1.0": {
+      "n": 500,
+      "recipient_accuracy": 0.878,
+      "operator_accuracy": 0.022,
+      "delta_recipient_p": -0.1246847892999649,
+      "delta_operator_p": 0.023170790197518793
+    },
+    "1.5": {
+      "n": 500,
+      "recipient_accuracy": 0.776,
+      "operator_accuracy": 0.034,
+      "delta_recipient_p": -0.2166824471950531,
+      "delta_operator_p": 0.03439948093717078
+    }
+  }
+}

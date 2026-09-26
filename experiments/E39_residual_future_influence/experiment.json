@@ -1,0 +1,25 @@
+{
+  "id": "E39",
+  "slug": "residual_future_influence",
+  "en": "Residual future influence",
+  "families": [
+    "V1_mechanism_tests"
+  ],
+  "files": [
+    "06_balance_band_negative_controls.csv",
+    "07_balance_band_with_residual_gate.csv",
+    "PROTOCOL.md"
+  ],
+  "methods_en": "Keep E38’s worlds and thresholds and add residual FCI/external anchor FCI<5%. The constructed world permits latent-noise interventions, making future influence outside the three attributed sources measurable. Apply the same rule to all three worlds.",
+  "results_en": "In pure noise, the band changes from 13–111 to 13–45 against a true near-optimal interval of 20–54. Jaccard rises from 0.354 to 0.619 and the fraction of clearly bad time points inside the band falls from 73.5% to 0%. Bands in the other two worlds remain unchanged.",
+  "interpretation_en": "GCM combines source attribution and residual monitoring. The residual experiment intervenes on a latent-noise channel; the attributed FCI values measure each specified source intervention. Their interactions form a further experimental target.",
+  "source_sections": "Original synthesis sections 17.4–17.6",
+  "directory": "experiments/E39_residual_future_influence",
+  "hypotheses": [
+    "H20",
+    "H28"
+  ],
+  "artifact_count": 15,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

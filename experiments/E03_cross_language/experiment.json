@@ -1,0 +1,17 @@
+{
+  "id": "E03",
+  "en": "Structural comparison across five languages",
+  "methods_en": "Leave-one-language-out tests covered Chinese, English, French, Japanese and Spanish. The initial representation used Unicode-normalized character bigrams. Shared code terms were removed from program explanations. Formal prose and program explanations were separate groups.",
+  "results_en": "For code-term-stripped program explanations, mean local/recurrence/bridge AUCs were 0.871/0.950/0.989. Bridge values in the five languages were 0.958/0.993/0.999/0.999/0.995. Formal-prose means were 0.851/0.909/0.979.",
+  "interpretation_en": "Structural-discrimination AUCs show that relational information survives changes in surface language under the archived protocols.",
+  "source": "L_language/tables/04_multilingual_auc.csv; L_language/tables/05_multilingual_paired_shuffle.csv",
+  "directory": "experiments/E03_cross_language",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H02",
+    "H01",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 19
+}

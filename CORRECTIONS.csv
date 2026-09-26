@@ -1,0 +1,14 @@
+﻿correction_id,field_en,current_reading_en,evidence
+C01,Author-majority classification,"9/14 author-by-genre records, 12 unique authors; mean window accuracy 52.6786%.",E13
+C02,Gaze grouping,Retain overview 12 groups and gate-table 24 trials separately; two participants.,E10
+C03,Eight-dimensional projection,Interpret predictive gains as added information relative to the selected PCA projection.,E25
+C04,Repeated seeds,Pilot 01 multiseed repetitions resample one checkpoint.,E17
+C05,Initial-output control,Pilot 01 one-shot scores the first output of the same step-trained model.,E17
+C06,Transplant pool,Pilot 02 uses a baseline-correct pool; distinguish 500-pair and 400-pair analyses.,E18
+C07,Centroid dimension,Five centered centroids have algebraic rank at most four.,E18
+C08,Displacement endpoint,"TV is conditional on A/B; model training includes all contents, with separate subsets for displacement estimation and intervention testing.",E27
+C09,Prompt training version,Report: 45 steps. Available code: 220 steps. Preserve separate version provenance.,E27
+C10,Prompt dose table,Dose values come from the report; available code emits layer comparisons.,E27
+C11,QwQ regimes and entropy,Retain recorded D/C and speed replication; retire robust lower-transition-entropy claim.,E16
+C12,Long-run stability,Zero violations reflect masking; multipath stability is assessed for the combined configuration.,E24
+C13,Constructive sufficiency,Sufficiency refers to specified properties and tasks; RTG is an implemented mechanism instance.,E20–E24

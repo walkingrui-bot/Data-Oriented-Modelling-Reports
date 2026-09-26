@@ -1,0 +1,5 @@
+﻿experiment_id,source_path,stored_path,role,directly_cited,locator,sha256,size_bytes
+E24,evidence/R6_longrun/REPORT.md,evidence/R6_longrun/REPORT.md,method_or_report,True,,bd6718d4b95929eb6086a5bbe36f88479cc34b27d881884c2d4465affe1f9923,3866
+E24,evidence/R6_longrun/raw_results.txt,evidence/R6_longrun/raw_results.txt,result_or_record,True,,144a2f1b03c0e71320425bf45e8a9c8cef4e945be909e38d8309f78935cf73c1,1068
+E24,evidence/R6_longrun/rtg_longrun.cpp,evidence/R6_longrun/rtg_longrun.cpp,code,True,,0bc8ce3671e70fb5d7acea8bf2296225fe7da11268ff56ad24e53852dfd8f6e2,4973
+E24,evidence/R6_longrun/summary.csv,evidence/R6_longrun/summary.csv,result_or_record,True,,79461c334b0d798ec7839b1eee2f95722df6700103b367b93b5fe51b46d860ad,785

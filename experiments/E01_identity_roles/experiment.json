@@ -1,0 +1,16 @@
+{
+  "id": "E01",
+  "en": "Role information in anonymous identity and position",
+  "methods_en": "Three complexity levels of natural-language and code materials were represented through symbol identity, position and recurrence. Role-discrimination AUC and clustering ARI measured structural readability. Position shuffles preserved the token multiset to separate frequency from order. The retained records are task-level summaries.",
+  "results_en": "Natural L1/L2/L3 AUCs were 1.000/0.873/0.642, with ARIs of 1.000/0.757/0.166. Code AUCs were 0.983/0.804/0.922. Related frequency-preserving shuffle controls were approximately 0.48–0.51.",
+  "interpretation_en": "Identity and order carry role information in these materials, giving relational structure a measurable footprint.",
+  "source": "L_language/tables/01_baseline_identity_ladder.csv; L_language/tables/02_natural_L3_recurrence_bridge.csv",
+  "directory": "experiments/E01_identity_roles",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H01",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 19
+}

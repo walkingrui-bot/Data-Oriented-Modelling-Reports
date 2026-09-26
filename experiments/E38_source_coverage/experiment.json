@@ -1,0 +1,24 @@
+{
+  "id": "E38",
+  "slug": "source_coverage",
+  "en": "Coverage of the source model",
+  "families": [
+    "V1_mechanism_tests"
+  ],
+  "files": [
+    "06_balance_band_negative_controls.csv",
+    "PROTOCOL.md"
+  ],
+  "methods_en": "Hold the original Balance Band rule fixed across self-history takeover, prompt dilution and pure accumulated latent noise worlds. Self-opposition is zero in the latter two; the noise channel is outside the original three-source decomposition.",
+  "results_en": "Near-optimal interval/original band: 13–33/12–31, 21–39/11–33 and 20–54/13–111; Jaccard=0.864/0.448/0.354. In pure noise, 73.5% of clearly bad time points still lay inside the original band.",
+  "interpretation_en": "Source decomposition defines the monitored mechanism. Coverage can expand by explicitly adding other influence channels, as implemented in E39. The 73.5% denominator is clearly bad time points.",
+  "source_sections": "Original synthesis sections 17.4",
+  "directory": "experiments/E38_source_coverage",
+  "hypotheses": [
+    "H20",
+    "H27"
+  ],
+  "artifact_count": 15,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

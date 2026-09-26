@@ -1,0 +1,3 @@
+﻿experiment_id,source_path,stored_path,role,directly_cited,locator,sha256,size_bytes
+E31,evidence/phase2/M0_content_mirror/REPORT.md,evidence/phase2/M0_content_mirror/REPORT.md,protocol_or_report,True,,8c727ab1e4461c23589745b60bf5db7b6dd32580229f29aeec2c64464fc1cf60,2270
+E31,evidence/phase2/M0_content_mirror/results.csv,evidence/phase2/M0_content_mirror/results.csv,result_table,True,,83ccc4ccb3a3e454e1b99dfa25672d013568b83a9a3dd1244dbb0f2f171407bd,252

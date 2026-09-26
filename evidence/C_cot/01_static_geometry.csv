@@ -1,0 +1,8 @@
+metric,mean_R1_minus_chat,direction_consistency
+recurrence_density,-0.1347,R1 lower on 16/16 prompt sets
+bridge,-0.06273,R1 lower on 16/16 prompt sets
+repeated_bigram,-0.12584,R1 lower on 16/16 prompt sets
+repeated_trigram,-0.06601,R1 lower on 16/16 prompt sets
+burst_cv,0.10245,R1 higher on 14/16 prompt sets
+scale_entropy,-0.02904,R1 lower on 13/16 prompt sets
+burst_entropy,-0.0393,R1 lower on 14/16 prompt sets

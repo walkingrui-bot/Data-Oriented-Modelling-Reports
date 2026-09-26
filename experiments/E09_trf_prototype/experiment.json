@@ -1,0 +1,15 @@
+{
+  "id": "E09",
+  "en": "Qualification of the TRF neural prototype",
+  "methods_en": "TRF-v0.1R assessed temporal persistence, cross-event flow and structural-language performance against position shuffles over three seeds, 24 lives and 480 events.",
+  "results_en": "The prototype sustained temporal persistence and long-distance cross-event flow. Its FULL-versus-shuffle structural-language advantage varied across runs.",
+  "interpretation_en": "Persistent activity and cross-event flow were established engineering results. Order sensitivity supplied a separate test of learned language structure.",
+  "source": "L_language/tables/20_trf_negative_partial.csv",
+  "directory": "experiments/E09_trf_prototype",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 18
+}

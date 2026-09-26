@@ -1,0 +1,18 @@
+{
+  "id": "E13",
+  "en": "Genre authors and parallel translations",
+  "methods_en": "Equal-length English content-word windows compared novels, poetry and drama. Hardy and Wilde supplied same-author cross-genre cases, and human translations of Book I of the Odyssey and Iliad supplied same-source comparisons. Historical six-style pilot tables retain their correction flags.",
+  "results_en": "Genre explained approximately 55%–62% of author-mean variation in rec/local/mid/long/bridge. Recalculation gives mean window accuracy 52.6786% and 9/14 correct majority predictions; those 14 rows represent 12 unique authors. Hardy and Wilde were approximately 1.22 units from their new-genre centroids. Odyssey translations had recurrence CV 0.5134 and local/long/bridge CVs 0.0556/0.0663/0.0663. The six-style pilot recorded approximately 28%–30% classification with all tokens (reported p=0.033) and 38% with content words (reported p=0.01), against chance 1/6.",
+  "interpretation_en": "Genre and content jointly constrain relational geometry. The author comparison contains 12 unique authors and 14 author-by-genre records, with 9 correct majority predictions.",
+  "source": "L_language/tables/31_style_pilot_reported_with_flags.csv; L_language/tables/32_style_classifier_reported.csv; L_language/tables/33_style_bigram_reported.csv; L_language/tables/34_genre_means_corrected.csv; L_language/tables/35_genre_variance_decomposition.csv; L_language/tables/36_same_author_cross_style.csv; L_language/tables/37_author_loo_corrected.csv; L_language/tables/38_odyssey_translators.csv; L_language/tables/39_iliad_translators.csv; L_language/tables/40_translator_metric_CV.csv; L_language/tables/32_style_classifier_reported.csv",
+  "directory": "experiments/E13_genre_and_translation",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H02",
+    "H20"
+  ],
+  "corrections": [
+    "C01"
+  ],
+  "artifact_count": 27
+}

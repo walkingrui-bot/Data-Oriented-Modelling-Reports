@@ -1,0 +1,10 @@
+﻿domain,group,AUC,F1
+Natural,related-3,0.672,0.63
+Go,related-3,0.664,0.618
+Rust,related-3,0.642,0.594
+Natural,related-5,0.582,
+Go,related-5,0.567,
+Rust,related-5,0.541,
+Natural,random-3 after 5 rounds,0.465,
+Go,random-3 after 5 rounds,0.437,
+Rust,random-3 after 5 rounds,0.437,

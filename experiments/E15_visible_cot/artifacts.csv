@@ -1,0 +1,5 @@
+﻿experiment_id,source_path,stored_path,role,directly_cited,locator,sha256,size_bytes
+E15,evidence/C_cot/01_static_geometry.csv,evidence/C_cot/01_static_geometry.csv,result_or_record,True,,1045851a0f3df467bbc0a785405cc0fb304477a5eeeb69c66b2cd8ee1a258c5d,415
+E15,evidence/C_cot/02_raw_trajectory_change.csv,evidence/C_cot/02_raw_trajectory_change.csv,result_or_record,True,,c0bdae2d869e6bf23a42f25d9598cfa9bc9d19329e082ff1a75cf7bb5b936d2c,298
+E15,evidence/C_cot/03_shuffle_controlled_change.csv,evidence/C_cot/03_shuffle_controlled_change.csv,result_or_record,True,,41056dbe40c8300bc3d1f7d1d9076ff4ac27636f229867622b77b29282e0d33b,396
+E15,evidence/C_cot/REPORT(20260925-005446).md,evidence/C_cot/REPORT(20260925-005446).md,method_or_report,True,,4513083ccbcb9fcd208ebea4c0f2221e2e935ef9e718786fc54c7f22a8ad5636,5222

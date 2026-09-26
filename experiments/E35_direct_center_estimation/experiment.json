@@ -1,0 +1,26 @@
+{
+  "id": "E35",
+  "slug": "direct_center_estimation",
+  "en": "Direct center estimation and mirror parameterization",
+  "families": [
+    "V1_mechanism_tests"
+  ],
+  "files": [
+    "01_wrong_center_static_generalization.csv",
+    "02_wrong_center_closed_loop.csv",
+    "03_mirror_vs_denoiser_OOD.csv",
+    "PROTOCOL.md"
+  ],
+  "methods_en": "Train a same-width MLP on the same state distribution to estimate h(c,d=0) directly, and compare it with the mirror midpoint. Evaluate harder static perturbations, closed-loop operation in the same world and out-of-distribution drift-radius bands through 2.5–3.0.",
+  "results_en": "Output TV under harder static perturbations was 0.0431 for the mirror midpoint and 0.0364 for direct center estimation. Closed-loop late TV was 0.0797 and 0.0679. Direct estimation was also slightly better across the tested OOD radius bands.",
+  "interpretation_en": "Direct estimation is an effective implementation when center labels are available. Paired symmetry supplies a structured parameterization of center and counter-state. A next experiment compares them using paired labels as the supervision signal.",
+  "source_sections": "Original synthesis sections 17.2",
+  "directory": "experiments/E35_direct_center_estimation",
+  "hypotheses": [
+    "H20",
+    "H32"
+  ],
+  "artifact_count": 15,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

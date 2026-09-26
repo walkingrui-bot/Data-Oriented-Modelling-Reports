@@ -1,0 +1,6 @@
+﻿experiment,metric,value,status
+TRF first structural gate,FULL,0.49845,failed
+TRF first structural gate,position shuffle,0.49875,failed
+TRF-v0.1R,lives,24,3 seeds; 480 Events
+TRF-v0.1R,A-route linear probe L1,0.64–0.73,partial readability
+TRF-v0.1R,A-route linear probe L3,~0.66,partial readability

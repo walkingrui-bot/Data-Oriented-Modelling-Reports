@@ -1,0 +1,7 @@
+﻿style,content_recurrence_density,short_fraction,mid_fraction,long_fraction,short_surplus_vs_shuffle,mid_surplus_vs_shuffle,long_surplus_vs_shuffle,status_note
+novel,0.098,0.468,0.24,0.293,0.096,-0.245,0.149,reported summary; internally consistent
+poetry,0.073,0.721,0.079,0.0,0.405,,,reported summary; an earlier normalized chart visually filled remaining 20%; archive uses textual actual long=0
+daily_dialogue,0.138,0.498,0.399,0.103,0.079,,,reported summary
+scientific_paper,0.095,0.251,0.646,0.103,-0.136,0.168,,reported summary
+news,0.105,0.239,0.512,,-0.126,0.086,0.04,reported prose and chart disagreed on long fraction (0.149 vs 0.249); long fraction withheld pending rerun
+formal_document,0.178,0.436,0.495,0.069,,,,reported summary; highest recurrence density

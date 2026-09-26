@@ -1,0 +1,92 @@
+{
+  "selected_step": 2,
+  "validation": {
+    "accuracy": 0.09375,
+    "loss": 2.643493950366974,
+    "count": 32,
+    "optimizer_updates": 1
+  },
+  "actual_optimizer_updates": 1,
+  "seconds": 0.005517292011063546,
+  "trainable_parameters": 2836,
+  "base_changed_elements": 0,
+  "base_update_fraction": 0.0,
+  "coefficients": {
+    "gamma": 1.001896619796753,
+    "eta": 1.9974066019058228,
+    "rho": 0.49924999475479126,
+    "retention": 0.8997296690940857
+  },
+  "parameter_changes": {
+    "raw_gamma": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 0.0029987096786499023
+    },
+    "raw_eta": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 0.003000020980834961
+    },
+    "raw_rho": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 0.0029999965336173773
+    },
+    "raw_retention": {
+      "changed_elements": 1,
+      "elements": 1,
+      "l2_change": 0.003000020980834961
+    },
+    "reader.query": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.key": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.value": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.answer.weight": {
+      "changed_elements": 0,
+      "elements": 320,
+      "l2_change": 0.0
+    },
+    "reader.answer.bias": {
+      "changed_elements": 0,
+      "elements": 10,
+      "l2_change": 0.0
+    },
+    "relation.weight": {
+      "changed_elements": 2048,
+      "elements": 2048,
+      "l2_change": 0.13575898110866547
+    },
+    "relation.bias": {
+      "changed_elements": 16,
+      "elements": 16,
+      "l2_change": 0.011999993585050106
+    },
+    "w_phi.weight": {
+      "changed_elements": 256,
+      "elements": 256,
+      "l2_change": 0.04799968749284744
+    },
+    "w_m.weight": {
+      "changed_elements": 256,
+      "elements": 256,
+      "l2_change": 0.04799685627222061
+    },
+    "w_inherit.weight": {
+      "changed_elements": 256,
+      "elements": 256,
+      "l2_change": 0.04799935221672058
+    }
+  }
+}

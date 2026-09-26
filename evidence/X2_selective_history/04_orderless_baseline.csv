@@ -1,0 +1,4 @@
+seed,ordinary_test_acc,order_pair_original_acc,order_pair_swapped_acc,prediction_flip_rate,pair_tv
+11,0.7096,0.492,0.508,0.0,1.53e-08
+22,0.7154,0.502,0.498,0.0,1.84e-08
+33,0.708,0.5055,0.4945,0.0,1.62e-08

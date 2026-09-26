@@ -1,0 +1,58 @@
+{
+  "x1": {
+    "n": 400,
+    "flip": 0.135,
+    "operator": 0.0375,
+    "donor_own": 0.255,
+    "delta_operator_p": 0.03760793823422473,
+    "delta_recipient_p": -0.14011247895658016
+  },
+  "y1": {
+    "n": 400,
+    "flip": 0.44,
+    "operator": 0.1925,
+    "donor_own": 0.23,
+    "delta_operator_p": 0.1925111604699824,
+    "delta_recipient_p": -0.42628527715802195
+  },
+  "x2": {
+    "n": 400,
+    "flip": 0.35,
+    "operator": 0.1025,
+    "donor_own": 0.2425,
+    "delta_operator_p": 0.10107619677212995,
+    "delta_recipient_p": -0.3424432194232941
+  },
+  "y2_final": {
+    "n": 400,
+    "flip": 0.43,
+    "operator": 0.135,
+    "donor_own": 0.2225,
+    "delta_operator_p": 0.14143702784202794,
+    "delta_recipient_p": -0.4301410362124443
+  },
+  "first_pair": {
+    "n": 400,
+    "flip": 0.5025,
+    "operator": 0.23,
+    "donor_own": 0.21,
+    "delta_operator_p": 0.21701100761695147,
+    "delta_recipient_p": -0.48976889342069624
+  },
+  "second_pair": {
+    "n": 400,
+    "flip": 0.6,
+    "operator": 0.285,
+    "donor_own": 0.195,
+    "delta_operator_p": 0.2770230504704783,
+    "delta_recipient_p": -0.591256777793169
+  },
+  "all_evidence": {
+    "n": 400,
+    "flip": 0.8075,
+    "operator": 0.51,
+    "donor_own": 0.1525,
+    "delta_operator_p": 0.5077949087652507,
+    "delta_recipient_p": -0.800303645581007
+  }
+}

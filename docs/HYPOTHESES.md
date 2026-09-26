@@ -1,0 +1,39 @@
+# Hypotheses and final findings
+
+| ID | Claim | Status | Evidence |
+| --- | --- | --- | --- |
+| H20 | Models fit functions that generate answers | Unifying hypothesis | E01–E39 |
+| H01 | Identity order and local recurrence carry structural information | Observational support | E01–E07 |
+| H02 | Relational geometry partly survives language and form changes | Observational support | E03–E06 E13 |
+| H03 | Surface identity or visit strength suffices for gaze targeting | Unsupported in pilot | E10 E11 |
+| H04 | Regression launch has lower local duration load | Exploratory support | E10 |
+| H05 | Real motion history improves prediction from low-dimensional projections | Supported in tested settings | E16 E22 E25 |
+| H06 | D C describes movement regimes in some systems | Observed support | E16 E25 |
+| H07 | Concentrated states necessarily have lower transition entropy | Robust version retired | E16 |
+| H08 | Raw attention weight equals intervention effect | Refuted under tested definition | E26 |
+| H09 | Selective historical influence is realized across architectures | Demonstrated in task | E26 |
+| H10 | A local donor activation suffices to reproduce historical effects | Local sufficiency refuted | E26 |
+| H11 | Runtime state transfers rule-specific function to a new input | Demonstrated in model | E18 |
+| H12 | Rule formation can occur within one forward pass | Demonstrated | E26 |
+| H13 | Additional THINK progressively sharpens rules and improves performance | Pending | E19 |
+| H14 | RTG produces temporal and lineage dynamics | Constructively demonstrated | E20–E22 |
+| H15 | RTG outperforms ordinary recurrence on static permutations | Advantage prediction failed | E23 |
+| H16 | Final-answer supervision trains nonzero RTG writes | Demonstrated in task | E23 |
+| H17 | Combined constraints maintain long-run graph stability | Constructively demonstrated | E24 |
+| H18 | Real large models use the specific RTG mechanism | Pending | E20–E25 |
+| H19 | Deep-layer displacement partly reproduces a prompt effect | Recorded support | E27 |
+| H21 | AIA internal projections implement costly self-observation | Architecture and testable prediction | §3 |
+| H22 | DeepSeek continuation matches the human reference fingerprint of 0.263 | Exact match recorded | E14 |
+| H23 | Future influence locates delayed sources | Constructed support | E28–E29 |
+| H24 | Integration along an actual counterfactual recovers sources | Constructed support | E29 |
+| H25 | Readability and controllability require separate measurements | Constructed support | E30 |
+| H26 | Self-history takeover and opposition are distinct | Constructed support | E37 |
+| H27 | Balance Band monitors specified source relations | Mechanism-specific support | E37–E38 |
+| H28 | A residual influence channel extends source monitoring | Noise-world support | E39 |
+| H29 | Complementary content offsets recursive distribution drift | Constructed support | E31 |
+| H30 | A learned mirror stabilizes self-fed generation | Constructed support | E32–E33 |
+| H31 | Reference identification and stabilization are separate tasks | Constructed support | E34 |
+| H32 | Mirrors and direct center estimators are parallel implementations | Comparative support | E35 |
+| H33 | Cumulative dose is the main variable in the tested control regime | Dose-matched support | E33 E36 |
+| H34 | Transferable generative control variables exist in natural LLMs | Pending direct tests | Proposed protocol |
+| H35 | Paired symmetry can support stabilization and co-evolution without center labels | Theoretical direction | Future work |

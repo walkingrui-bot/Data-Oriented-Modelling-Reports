@@ -1,0 +1,13 @@
+﻿metric,value
+previously fixated target rate,0.7446808511
+distance-matched expected seen rate,0.6608983477
+event mean excess,0.0837825034
+trial-equal mean excess,0.1206142561
+trial bootstrap 2.5%,0.0556775819
+trial bootstrap 97.5%,0.1860823509
+sign-flip p,0.001099945
+prior count target rank,0.513487488
+prior dwell target rank,0.504344426
+prior max fixation target rank,0.4798538904
+recency target rank,0.5054507641
+recency×dwell strength target rank,0.5075644107

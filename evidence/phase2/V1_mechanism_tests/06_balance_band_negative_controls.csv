@@ -1,0 +1,4 @@
+world,best_token,near_opt_start,near_opt_end,balance_start,balance_end,band_jaccard,fraction_bad_timepoints_still_in_balance,fraction_balance_points_actually_bad,max_self_opposition,max_unmodeled_noise_FCI,late_error
+self_takeover,20,13,33,12,31,0.8636363636363636,0.0,0.0,0.0667632365257273,0.0,0.1376932040993371
+prompt_dilution,33,21,39,11,33,0.4482758620689655,0.02564102564102564,0.08695652173913043,0.0,0.0,0.20137208134517118
+pure_noise,32,20,54,13,111,0.35353535353535354,0.7346938775510204,0.36363636363636365,0.0,0.08816302862516077,0.09159845898100398

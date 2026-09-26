@@ -1,0 +1,23 @@
+﻿evidence_id,stage,claim,metric,value,status,caveat,table
+E001,baseline,Anonymous identity/order geometry contains role information beyond frequency,Natural L3 AUC,0.642,supported,tiny/synthetic pilot,01_baseline_identity_ladder.csv
+E002,baseline,Frequency-preserving position shuffle destroys role signal,AUC,~0.48–0.51,supported,same pilot family,02_natural_L3_recurrence_bridge.csv
+E003,mechanism,Long-range same-identity recurrence restores coarse role information,AUC,0.570→0.751,supported,anonymous synthetic text,02_natural_L3_recurrence_bridge.csv
+E004,mechanism,Typed structural bridge propagation further restores role information,AUC,0.707→0.883 over rounds,supported,ordinary untyped diffusion fails,02_natural_L3_recurrence_bridge.csv
+E005,cross-language,Local→recurrence→bridge signal transfers to unseen language,mean AUC,0.851→0.909→0.979,supported,character-bigram representation,04_multilingual_auc.csv
+E006,cross-language,Program explanations preserve stronger cross-language structure even after shared code terms removed,mean AUC,0.871→0.950→0.989,supported,character-bigram representation; word rerun lower,04_multilingual_auc.csv
+E007,scale,Block-preservation control localizes strongest signal to local–mesoscale structure,AUC block 1→32,1.000→0.551,supported,not evidence for mysterious global hundreds-token geometry,06_multilingual_block_shuffle.csv
+E008,representation,Word-level rerun survives but bridge gain is smaller,program stripped mean AUC,~0.865→0.858 bridge,supported,English/Spanish/French only,07_word_level_sanity.csv
+E009,diachronic,Classical→modern Chinese preserves bridge more than local or simple recurrence,mean AUC,0.592 / 0.586 / 0.842,supported,4 text pairs; exploratory modernizations,09_cross_era_summary.csv
+E010,translation,Same story across repeated multilingual rewrites retains bridge signal,bridge AUC,0.806±0.012,supported,event sequence manually locked,11_story_relay.csv
+E011,code semantics,Code↔natural-language round-trips can preserve executable semantics,comparisons,"229,014/229,014",supported,"4 small programs, exhaustive/dense domains",15_code_nl_summary.csv
+E012,eye pilot,Surface recurrence/packet/ordered bridge does not select human regression targets,rank/AUC,~0.43–0.50,negative evidence,2-reader OneStop demo,22_eye_surface_selector_negative.csv
+E013,eye pilot,Long regressions are initiated at relatively low local fixation-duration load,trial-equal percentile,0.364 (95% CI 0.300–0.428),supported pilot,small demo; word-length controls underpowered,23_eye_gate.csv
+E014,eye pilot,Regression targets prefer previously visited locations above distance-matched availability,excess seen rate,+0.084 event / +0.121 trial,supported pilot,participant heterogeneity,25_eye_target_history.csv
+E015,eye pilot,Prior visual/motor memory strength does not choose target among seen locations,target ranks,0.480–0.513,negative evidence,small demo,25_eye_target_history.csv
+E016,eye pilot,Revisit does not replay the old 4-step gaze packet,actual vs null,no positive advantage,negative evidence,behavioral scanpath ≠ internal state replay,26_eye_scanpath_replay_negative.csv
+E017,semantic field,Expected PPMI produces broader distributed candidate fields than direct PPMI,sources with wider expected field,83.1% across sampled 18 positions,supported exploratory probe,subset of Wilcox public predictors,30_expected_ppmi_three_batches.csv
+E018,genre,Genre explains substantial variance in recurrence scale and bridge across authors,η²,~0.55–0.62 for rec/local/mid/long/bridge,supported exploratory,novel/poetry/drama public-domain texts,35_genre_variance_decomposition.csv
+E019,same author,Same author shifts toward new genre geometry when changing genre,distance to own new genre centroid,~1.22 for Hardy/Wilde,supported exploratory,two authors only,36_same_author_cross_style.csv
+E020,same source,Human translations of same source preserve a constrained geometry but not every scalar,translator CV,low for subsets of long/gap/bridge/burst; high for n-grams,supported exploratory,Odyssey + Iliad book I,40_translator_metric_CV.csv
+E021,learning,Directional STDP can learn strong sequence distribution but not stable occurrence role,AUC,0.603→0.994,partial/negative,proxy learning experiment,19_learning_pilots.csv
+E022,neural follow-up,TRF-v0.1R restored temporal persistence but failed structural-language qualification,FULL vs shuffle,no reliable superiority,negative evidence,"3 seeds, 24 lives, 480 Events",20_trf_negative_partial.csv

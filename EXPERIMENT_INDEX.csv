@@ -1,0 +1,155 @@
+﻿experiment_id,title_en,relative_path,locator,source_path
+E01,Role information in anonymous identity and position,evidence/L_language/tables/01_baseline_identity_ladder.csv,,evidence/L_language/tables/01_baseline_identity_ladder.csv
+E01,Role information in anonymous identity and position,evidence/L_language/tables/02_natural_L3_recurrence_bridge.csv,,evidence/L_language/tables/02_natural_L3_recurrence_bridge.csv
+E02,Recurrence and typed relational propagation,evidence/L_language/tables/02_natural_L3_recurrence_bridge.csv,,evidence/L_language/tables/02_natural_L3_recurrence_bridge.csv
+E02,Recurrence and typed relational propagation,evidence/L_language/tables/03_role_probe_results.csv,,evidence/L_language/tables/03_role_probe_results.csv
+E03,Structural comparison across five languages,evidence/L_language/tables/04_multilingual_auc.csv,,evidence/L_language/tables/04_multilingual_auc.csv
+E03,Structural comparison across five languages,evidence/L_language/tables/05_multilingual_paired_shuffle.csv,,evidence/L_language/tables/05_multilingual_paired_shuffle.csv
+E04,Structural scale and word-level checks,evidence/L_language/tables/06_multilingual_block_shuffle.csv,,evidence/L_language/tables/06_multilingual_block_shuffle.csv
+E04,Structural scale and word-level checks,evidence/L_language/tables/07_word_level_sanity.csv,,evidence/L_language/tables/07_word_level_sanity.csv
+E05,Diachronic rewriting and multilingual relay,evidence/L_language/tables/08_cross_era_bridge.csv,,evidence/L_language/tables/08_cross_era_bridge.csv
+E05,Diachronic rewriting and multilingual relay,evidence/L_language/tables/09_cross_era_summary.csv,,evidence/L_language/tables/09_cross_era_summary.csv
+E05,Diachronic rewriting and multilingual relay,evidence/L_language/tables/11_story_relay.csv,,evidence/L_language/tables/11_story_relay.csv
+E05,Diachronic rewriting and multilingual relay,evidence/L_language/tables/12_story_external_versions.csv,,evidence/L_language/tables/12_story_external_versions.csv
+E05,Diachronic rewriting and multilingual relay,evidence/L_language/tables/10_cross_era_block_shuffle.csv,,evidence/L_language/tables/10_cross_era_block_shuffle.csv
+E05,Diachronic rewriting and multilingual relay,evidence/L_language/tables/13_story_block_shuffle.csv,,evidence/L_language/tables/13_story_block_shuffle.csv
+E06,Program and natural-language round trips,evidence/L_language/tables/14_code_nl_roundtrip.csv,,evidence/L_language/tables/14_code_nl_roundtrip.csv
+E06,Program and natural-language round trips,evidence/L_language/tables/15_code_nl_summary.csv,,evidence/L_language/tables/15_code_nl_summary.csv
+E06,Program and natural-language round trips,evidence/L_language/tables/16_code_nl_block_shuffle.csv,,evidence/L_language/tables/16_code_nl_block_shuffle.csv
+E07,Single-anchor hops and relational groups,evidence/L_language/tables/17_multibacktracking.csv,,evidence/L_language/tables/17_multibacktracking.csv
+E07,Single-anchor hops and relational groups,evidence/L_language/tables/18_related_groups.csv,,evidence/L_language/tables/18_related_groups.csv
+E08,Structural evaluation of learning proxies,evidence/L_language/tables/19_learning_pilots.csv,,evidence/L_language/tables/19_learning_pilots.csv
+E09,Qualification of the TRF neural prototype,evidence/L_language/tables/20_trf_negative_partial.csv,,evidence/L_language/tables/20_trf_negative_partial.csv
+E10,Human gaze launch and target selection,evidence/L_language/tables/21_eye_overview.csv,,evidence/L_language/tables/21_eye_overview.csv
+E10,Human gaze launch and target selection,evidence/L_language/tables/22_eye_surface_selector_negative.csv,,evidence/L_language/tables/22_eye_surface_selector_negative.csv
+E10,Human gaze launch and target selection,evidence/L_language/tables/23_eye_gate.csv,,evidence/L_language/tables/23_eye_gate.csv
+E10,Human gaze launch and target selection,evidence/L_language/tables/24_eye_gate_trajectory.csv,,evidence/L_language/tables/24_eye_gate_trajectory.csv
+E10,Human gaze launch and target selection,evidence/L_language/tables/28_eye_wordlength_controls.csv,,evidence/L_language/tables/28_eye_wordlength_controls.csv
+E10,Human gaze launch and target selection,evidence/L_language/tables/27_eye_threshold_sensitivity.csv,,evidence/L_language/tables/27_eye_threshold_sensitivity.csv
+E11,Target availability and post-return trajectories,evidence/L_language/tables/25_eye_target_history.csv,,evidence/L_language/tables/25_eye_target_history.csv
+E11,Target availability and post-return trajectories,evidence/L_language/tables/26_eye_scanpath_replay_negative.csv,,evidence/L_language/tables/26_eye_scanpath_replay_negative.csv
+E12,Candidate distributions in an expected relation field,evidence/L_language/tables/29_expected_ppmi_mid_probe.csv,,evidence/L_language/tables/29_expected_ppmi_mid_probe.csv
+E12,Candidate distributions in an expected relation field,evidence/L_language/tables/30_expected_ppmi_three_batches.csv,,evidence/L_language/tables/30_expected_ppmi_three_batches.csv
+E12,Candidate distributions in an expected relation field,audit/summary_recalculation.json,,audit/summary_recalculation.json
+E13,Genre authors and parallel translations,evidence/L_language/tables/31_style_pilot_reported_with_flags.csv,,evidence/L_language/tables/31_style_pilot_reported_with_flags.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/32_style_classifier_reported.csv,,evidence/L_language/tables/32_style_classifier_reported.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/33_style_bigram_reported.csv,,evidence/L_language/tables/33_style_bigram_reported.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/34_genre_means_corrected.csv,,evidence/L_language/tables/34_genre_means_corrected.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/35_genre_variance_decomposition.csv,,evidence/L_language/tables/35_genre_variance_decomposition.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/36_same_author_cross_style.csv,,evidence/L_language/tables/36_same_author_cross_style.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/37_author_loo_corrected.csv,,evidence/L_language/tables/37_author_loo_corrected.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/38_odyssey_translators.csv,,evidence/L_language/tables/38_odyssey_translators.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/39_iliad_translators.csv,,evidence/L_language/tables/39_iliad_translators.csv
+E13,Genre authors and parallel translations,evidence/L_language/tables/40_translator_metric_CV.csv,,evidence/L_language/tables/40_translator_metric_CV.csv
+E14,The DeepSeek Base match that changed the research question,source/Original_Synthesis.docx,section 12.5,source/Original_Synthesis.docx
+E14,The DeepSeek Base match that changed the research question,audit/DISCUSSION_RECOVERY.md,,audit/DISCUSSION_RECOVERY.md
+E15,Relational geometry of visible chain of thought,evidence/C_cot/REPORT(20260925-005446).md,,evidence/C_cot/REPORT(20260925-005446).md
+E15,Relational geometry of visible chain of thought,evidence/C_cot/01_static_geometry.csv,,evidence/C_cot/01_static_geometry.csv
+E15,Relational geometry of visible chain of thought,evidence/C_cot/02_raw_trajectory_change.csv,,evidence/C_cot/02_raw_trajectory_change.csv
+E15,Relational geometry of visible chain of thought,evidence/C_cot/03_shuffle_controlled_change.csv,,evidence/C_cot/03_shuffle_controlled_change.csv
+E16,QwQ trajectory prediction and movement regimes,evidence/C_cot/QwQ_后续动力学结果_会话归档.md,,evidence/C_cot/QwQ_后续动力学结果_会话归档.md
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotstep.py,,evidence/P1_fixed_weights/cotstep.py
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotstep_continue.py,,evidence/P1_fixed_weights/cotstep_continue.py
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotstep_eval2.json,,evidence/P1_fixed_weights/cotstep_eval2.json
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotfreedom_mechanism.json,,evidence/P1_fixed_weights/cotfreedom_mechanism.json
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotfreedom_kv_control.json,,evidence/P1_fixed_weights/cotfreedom_kv_control.json
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotfreedom_stratified.json,,evidence/P1_fixed_weights/cotfreedom_stratified.json
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotfreedom_multiseed.py,,evidence/P1_fixed_weights/cotfreedom_multiseed.py
+E17,External recurrence and K V intervention with fixed weights,evidence/P1_fixed_weights/cotstep.pt,,evidence/P1_fixed_weights/cotstep.pt
+E18,Transplanting executable state for a latent rule,evidence/P2_latent_rule/cotlatent_mechanism.py,,evidence/P2_latent_rule/cotlatent_mechanism.py
+E18,Transplanting executable state for a latent rule,evidence/P2_latent_rule/cotlatent_mechanism.json,,evidence/P2_latent_rule/cotlatent_mechanism.json
+E18,Transplanting executable state for a latent rule,evidence/P2_latent_rule/cotlatent_position.json,,evidence/P2_latent_rule/cotlatent_position.json
+E18,Transplanting executable state for a latent rule,evidence/P2_latent_rule/cotlatent_same_rule_control.json,,evidence/P2_latent_rule/cotlatent_same_rule_control.json
+E18,Transplanting executable state for a latent rule,evidence/P2_latent_rule/cotlatent_rule_direction.json,,evidence/P2_latent_rule/cotlatent_rule_direction.json
+E18,Transplanting executable state for a latent rule,evidence/P2_latent_rule/cotlatent.pt,,evidence/P2_latent_rule/cotlatent.pt
+E18,Transplanting executable state for a latent rule,evidence/P2_latent_rule/cotfreedom_upstream.json,,evidence/P2_latent_rule/cotfreedom_upstream.json
+E19,Progressive THINK with noisy evidence,evidence/P3_progressive/REPORT(20260925-042904).md,,evidence/P3_progressive/REPORT(20260925-042904).md
+E20,Decomposing writes to continuation geometry,evidence/R2_writeback/ROUND2_REPORT.md,,evidence/R2_writeback/ROUND2_REPORT.md
+E20,Decomposing writes to continuation geometry,evidence/R2_writeback/01_ablation_diagnostics.csv,,evidence/R2_writeback/01_ablation_diagnostics.csv
+E20,Decomposing writes to continuation geometry,evidence/R2_writeback/04_write_budget_sweep.csv,,evidence/R2_writeback/04_write_budget_sweep.csv
+E20,Decomposing writes to continuation geometry,evidence/R2_writeback/05_dynamic_writeback_gate_summary.csv,,evidence/R2_writeback/05_dynamic_writeback_gate_summary.csv
+E21,Lineage inheritance of rewrite behavior,evidence/R3_genealogy/ROUND3_REPORT.md,,evidence/R3_genealogy/ROUND3_REPORT.md
+E21,Lineage inheritance of rewrite behavior,evidence/R3_genealogy/round3_minimal_model.py,,evidence/R3_genealogy/round3_minimal_model.py
+E21,Lineage inheritance of rewrite behavior,evidence/R3_genealogy/02_paired_ancestry_effects.csv,,evidence/R3_genealogy/02_paired_ancestry_effects.csv
+E21,Lineage inheritance of rewrite behavior,evidence/R3_genealogy/04_mechanism_swap_interventions_gamma1.csv,,evidence/R3_genealogy/04_mechanism_swap_interventions_gamma1.csv
+E22,Constructive sufficiency of RTG dynamics,evidence/R4_sufficiency/ROUND4_REPORT.md,,evidence/R4_sufficiency/ROUND4_REPORT.md
+E22,Constructive sufficiency of RTG dynamics,evidence/R4_sufficiency/01_parameter_neighborhood_scan.csv,,evidence/R4_sufficiency/01_parameter_neighborhood_scan.csv
+E22,Constructive sufficiency of RTG dynamics,evidence/R4_sufficiency/02_robust_full_mechanism_summary.csv,,evidence/R4_sufficiency/02_robust_full_mechanism_summary.csv
+E22,Constructive sufficiency of RTG dynamics,evidence/R4_sufficiency/round4_full_mechanism_sketch.py,,evidence/R4_sufficiency/round4_full_mechanism_sketch.py
+E23,RTG post-training with final-answer supervision,evidence/R5_posttraining/configs/phaseA_v1.json,,evidence/R5_posttraining/configs/phaseA_v1.json
+E23,RTG post-training with final-answer supervision,evidence/R5_posttraining/results/seeds_summary.csv,,evidence/R5_posttraining/results/seeds_summary.csv
+E23,RTG post-training with final-answer supervision,evidence/R5_posttraining/results/accuracy_by_length.csv,,evidence/R5_posttraining/results/accuracy_by_length.csv
+E23,RTG post-training with final-answer supervision,evidence/R5_posttraining/results/per_episode_predictions.jsonl.gz,,evidence/R5_posttraining/results/per_episode_predictions.jsonl
+E23,RTG post-training with final-answer supervision,evidence/R5_posttraining/src/models.py,,evidence/R5_posttraining/src/models.py
+E23,RTG post-training with final-answer supervision,evidence/R5_posttraining/REPORT.md,,evidence/R5_posttraining/REPORT.md
+E24,Long-run stability of a single-step feedback loop,evidence/R6_longrun/rtg_longrun.cpp,,evidence/R6_longrun/rtg_longrun.cpp
+E24,Long-run stability of a single-step feedback loop,evidence/R6_longrun/raw_results.txt,,evidence/R6_longrun/raw_results.txt
+E24,Long-run stability of a single-step feedback loop,evidence/R6_longrun/summary.csv,,evidence/R6_longrun/summary.csv
+E24,Long-run stability of a single-step feedback loop,evidence/R6_longrun/REPORT.md,,evidence/R6_longrun/REPORT.md
+E25,History-conditioned continuation in three architectures,evidence/X1_cross_architecture/REPORT.md,,evidence/X1_cross_architecture/REPORT.md
+E25,History-conditioned continuation in three architectures,evidence/X1_cross_architecture/02_trajectory_prediction.csv,,evidence/X1_cross_architecture/02_trajectory_prediction.csv
+E25,History-conditioned continuation in three architectures,evidence/X1_cross_architecture/03_same_visible_state_different_history.csv,,evidence/X1_cross_architecture/03_same_visible_state_different_history.csv
+E25,History-conditioned continuation in three architectures,evidence/X1_cross_architecture/05_history_intervention_diagnostic.csv,,evidence/X1_cross_architecture/05_history_intervention_diagnostic.csv
+E26,Selective history attention and distributed state,evidence/X2_selective_history/PROTOCOL.md,,evidence/X2_selective_history/PROTOCOL.md
+E26,Selective history attention and distributed state,evidence/X2_selective_history/01_history_voice_interventions.csv,,evidence/X2_selective_history/01_history_voice_interventions.csv
+E26,Selective history attention and distributed state,evidence/X2_selective_history/02_same_material_different_order.csv,,evidence/X2_selective_history/02_same_material_different_order.csv
+E26,Selective history attention and distributed state,evidence/X2_selective_history/03_attention_vs_causal_voice.csv,,evidence/X2_selective_history/03_attention_vs_causal_voice.csv
+E26,Selective history attention and distributed state,evidence/X3_state_transplant/PROTOCOL.md,,evidence/X3_state_transplant/PROTOCOL.md
+E26,Selective history attention and distributed state,evidence/X3_state_transplant/01_forged_history_injection.csv,,evidence/X3_state_transplant/01_forged_history_injection.csv
+E26,Selective history attention and distributed state,evidence/X3_state_transplant/02_one_shot_rule_formation.csv,,evidence/X3_state_transplant/02_one_shot_rule_formation.csv
+E27,Prompt conditioning and within-network displacement,evidence/P4_prompt/archived_report.md,,evidence/P4_prompt/archived_report.md
+E27,Prompt conditioning and within-network displacement,evidence/P4_prompt/archived_code_220steps.py,,evidence/P4_prompt/archived_code_220steps.py
+E28,Future causal influence before delayed divergence,evidence/phase2/G1_generative_control/01_metric_comparison_all_examples.csv,,evidence/phase2/G1_generative_control/01_metric_comparison_all_examples.csv
+E28,Future causal influence before delayed divergence,evidence/phase2/G1_generative_control/02_metric_comparison_correct_examples.csv,,evidence/phase2/G1_generative_control/02_metric_comparison_correct_examples.csv
+E28,Future causal influence before delayed divergence,evidence/phase2/G1_generative_control/03_future_mode_readout_by_layer.csv,,evidence/phase2/G1_generative_control/03_future_mode_readout_by_layer.csv
+E28,Future causal influence before delayed divergence,evidence/phase2/G1_generative_control/04_bidirectional_control_layer1.csv,,evidence/phase2/G1_generative_control/04_bidirectional_control_layer1.csv
+E28,Future causal influence before delayed divergence,evidence/phase2/G1_generative_control/05_random_direction_control.csv,,evidence/phase2/G1_generative_control/05_random_direction_control.csv
+E28,Future causal influence before delayed divergence,evidence/phase2/G1_generative_control/REPORT.md,,evidence/phase2/G1_generative_control/REPORT.md
+E29,Future sources and influence horizons,evidence/phase2/G2_future_instruments/01_metric_benchmark.csv,,evidence/phase2/G2_future_instruments/01_metric_benchmark.csv
+E29,Future sources and influence horizons,evidence/phase2/G2_future_instruments/02_metric_top1_by_seed.csv,,evidence/phase2/G2_future_instruments/02_metric_top1_by_seed.csv
+E29,Future sources and influence horizons,evidence/phase2/G2_future_instruments/03_influence_horizon_profile.csv,,evidence/phase2/G2_future_instruments/03_influence_horizon_profile.csv
+E29,Future sources and influence horizons,evidence/phase2/G2_future_instruments/PROTOCOL.md,,evidence/phase2/G2_future_instruments/PROTOCOL.md
+E29,Future sources and influence horizons,evidence/phase2/G2_future_instruments/REPORT.md,,evidence/phase2/G2_future_instruments/REPORT.md
+E30,Readability and control gain,evidence/phase2/G2_future_instruments/04_readability_vs_control_gain.csv,,evidence/phase2/G2_future_instruments/04_readability_vs_control_gain.csv
+E30,Readability and control gain,evidence/phase2/G2_future_instruments/05_control_gain_heatmap.csv,,evidence/phase2/G2_future_instruments/05_control_gain_heatmap.csv
+E30,Readability and control gain,evidence/phase2/G2_future_instruments/06_control_gain_validation.csv,,evidence/phase2/G2_future_instruments/06_control_gain_validation.csv
+E30,Readability and control gain,evidence/phase2/G2_future_instruments/PROTOCOL.md,,evidence/phase2/G2_future_instruments/PROTOCOL.md
+E30,Readability and control gain,evidence/phase2/G2_future_instruments/REPORT.md,,evidence/phase2/G2_future_instruments/REPORT.md
+E31,Hard-mirror context,evidence/phase2/M0_content_mirror/REPORT.md,,evidence/phase2/M0_content_mirror/REPORT.md
+E31,Hard-mirror context,evidence/phase2/M0_content_mirror/results.csv,,evidence/phase2/M0_content_mirror/results.csv
+E32,"State mirrors and 30,000-step control",evidence/phase2/M1_state_mirror/01_long_run_summary.csv,,evidence/phase2/M1_state_mirror/01_long_run_summary.csv
+E32,"State mirrors and 30,000-step control",evidence/phase2/M1_state_mirror/02_mirror_quality.csv,,evidence/phase2/M1_state_mirror/02_mirror_quality.csv
+E32,"State mirrors and 30,000-step control",evidence/phase2/M1_state_mirror/REPORT.md,,evidence/phase2/M1_state_mirror/REPORT.md
+E33,Dynamic mirror dose response and shock control,evidence/phase2/M2_dynamic_mirror/01_shock_longrun_summary.csv,,evidence/phase2/M2_dynamic_mirror/01_shock_longrun_summary.csv
+E33,Dynamic mirror dose response and shock control,evidence/phase2/M2_dynamic_mirror/02_correction_frequency_stats.csv,,evidence/phase2/M2_dynamic_mirror/02_correction_frequency_stats.csv
+E33,Dynamic mirror dose response and shock control,evidence/phase2/M2_dynamic_mirror/03_per_token_dose_stats.csv,,evidence/phase2/M2_dynamic_mirror/03_per_token_dose_stats.csv
+E33,Dynamic mirror dose response and shock control,evidence/phase2/M2_dynamic_mirror/04_mirror_operator_quality.csv,,evidence/phase2/M2_dynamic_mirror/04_mirror_operator_quality.csv
+E33,Dynamic mirror dose response and shock control,evidence/phase2/M2_dynamic_mirror/05_frequency_seed_level.csv,,evidence/phase2/M2_dynamic_mirror/05_frequency_seed_level.csv
+E33,Dynamic mirror dose response and shock control,evidence/phase2/M2_dynamic_mirror/PROTOCOL.md,,evidence/phase2/M2_dynamic_mirror/PROTOCOL.md
+E33,Dynamic mirror dose response and shock control,evidence/phase2/M2_dynamic_mirror/REPORT.md,,evidence/phase2/M2_dynamic_mirror/REPORT.md
+E34,The reference center determines stabilization direction,evidence/phase2/V1_mechanism_tests/01_wrong_center_static_generalization.csv,,evidence/phase2/V1_mechanism_tests/01_wrong_center_static_generalization.csv
+E34,The reference center determines stabilization direction,evidence/phase2/V1_mechanism_tests/02_wrong_center_closed_loop.csv,,evidence/phase2/V1_mechanism_tests/02_wrong_center_closed_loop.csv
+E34,The reference center determines stabilization direction,evidence/phase2/V1_mechanism_tests/PROTOCOL.md,,evidence/phase2/V1_mechanism_tests/PROTOCOL.md
+E34,The reference center determines stabilization direction,evidence/phase2/V1_mechanism_tests/REPORT.md,,evidence/phase2/V1_mechanism_tests/REPORT.md
+E35,Direct center estimation and mirror parameterization,evidence/phase2/V1_mechanism_tests/01_wrong_center_static_generalization.csv,,evidence/phase2/V1_mechanism_tests/01_wrong_center_static_generalization.csv
+E35,Direct center estimation and mirror parameterization,evidence/phase2/V1_mechanism_tests/02_wrong_center_closed_loop.csv,,evidence/phase2/V1_mechanism_tests/02_wrong_center_closed_loop.csv
+E35,Direct center estimation and mirror parameterization,evidence/phase2/V1_mechanism_tests/03_mirror_vs_denoiser_OOD.csv,,evidence/phase2/V1_mechanism_tests/03_mirror_vs_denoiser_OOD.csv
+E35,Direct center estimation and mirror parameterization,evidence/phase2/V1_mechanism_tests/PROTOCOL.md,,evidence/phase2/V1_mechanism_tests/PROTOCOL.md
+E35,Direct center estimation and mirror parameterization,evidence/phase2/V1_mechanism_tests/REPORT.md,,evidence/phase2/V1_mechanism_tests/REPORT.md
+E36,Control cadence at matched dose,evidence/phase2/V1_mechanism_tests/04_TMC_dose_matched_cadence.csv,,evidence/phase2/V1_mechanism_tests/04_TMC_dose_matched_cadence.csv
+E36,Control cadence at matched dose,evidence/phase2/V1_mechanism_tests/05_TMC_dose_matched_paired_test.csv,,evidence/phase2/V1_mechanism_tests/05_TMC_dose_matched_paired_test.csv
+E36,Control cadence at matched dose,evidence/phase2/V1_mechanism_tests/PROTOCOL.md,,evidence/phase2/V1_mechanism_tests/PROTOCOL.md
+E36,Control cadence at matched dose,evidence/phase2/V1_mechanism_tests/REPORT.md,,evidence/phase2/V1_mechanism_tests/REPORT.md
+E37,Source control and the reasoning balance interval,evidence/phase2/B1_causal_balance/01_source_control_over_time.csv,,evidence/phase2/B1_causal_balance/01_source_control_over_time.csv
+E37,Source control and the reasoning balance interval,evidence/phase2/B1_causal_balance/02_overthinking_warning_auc.csv,,evidence/phase2/B1_causal_balance/02_overthinking_warning_auc.csv
+E37,Source control and the reasoning balance interval,evidence/phase2/B1_causal_balance/03_fixed_false_alarm_early_warning.csv,,evidence/phase2/B1_causal_balance/03_fixed_false_alarm_early_warning.csv
+E37,Source control and the reasoning balance interval,evidence/phase2/B1_causal_balance/04_balance_band_neighborhood.csv,,evidence/phase2/B1_causal_balance/04_balance_band_neighborhood.csv
+E37,Source control and the reasoning balance interval,evidence/phase2/B1_causal_balance/PROTOCOL.md,,evidence/phase2/B1_causal_balance/PROTOCOL.md
+E37,Source control and the reasoning balance interval,evidence/phase2/B1_causal_balance/REPORT.md,,evidence/phase2/B1_causal_balance/REPORT.md
+E38,Coverage of the source model,evidence/phase2/V1_mechanism_tests/06_balance_band_negative_controls.csv,,evidence/phase2/V1_mechanism_tests/06_balance_band_negative_controls.csv
+E38,Coverage of the source model,evidence/phase2/V1_mechanism_tests/PROTOCOL.md,,evidence/phase2/V1_mechanism_tests/PROTOCOL.md
+E38,Coverage of the source model,evidence/phase2/V1_mechanism_tests/REPORT.md,,evidence/phase2/V1_mechanism_tests/REPORT.md
+E39,Residual future influence,evidence/phase2/V1_mechanism_tests/06_balance_band_negative_controls.csv,,evidence/phase2/V1_mechanism_tests/06_balance_band_negative_controls.csv
+E39,Residual future influence,evidence/phase2/V1_mechanism_tests/07_balance_band_with_residual_gate.csv,,evidence/phase2/V1_mechanism_tests/07_balance_band_with_residual_gate.csv
+E39,Residual future influence,evidence/phase2/V1_mechanism_tests/PROTOCOL.md,,evidence/phase2/V1_mechanism_tests/PROTOCOL.md
+E39,Residual future influence,evidence/phase2/V1_mechanism_tests/REPORT.md,,evidence/phase2/V1_mechanism_tests/REPORT.md

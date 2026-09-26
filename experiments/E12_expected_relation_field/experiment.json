@@ -1,0 +1,15 @@
+{
+  "id": "E12",
+  "en": "Candidate distributions in an expected relation field",
+  "methods_en": "Public Wilcox predictors were used to compare direct and expected PPMI over old candidates. Nonnegative weights were normalized and exponentiated entropy measured effective candidate count. Six languages and three positional batches were examined for field width and top-target choice.",
+  "results_en": "The 18 language-by-batch rows report 290 source observations. Weighting by these counts gives 83.104% with larger expected effective candidate count. The median of the 18 batch-level median ratios is 1.4139; the archived report gives approximately 59% top-target agreement.",
+  "interpretation_en": "Expected relation fields spread weight over more historical candidates, motivating a distributed representation of possible return targets.",
+  "source": "L_language/tables/29_expected_ppmi_mid_probe.csv; L_language/tables/30_expected_ppmi_three_batches.csv; audit/summary_recalculation.json",
+  "directory": "experiments/E12_expected_relation_field",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 20
+}

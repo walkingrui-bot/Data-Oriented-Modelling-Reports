@@ -1,0 +1,16 @@
+{
+  "id": "E11",
+  "en": "Target availability and post-return trajectories",
+  "methods_en": "Within the same gaze pilot, previously visited rates were compared between true targets and distance-matched old locations. Visit count, dwell, maximum fixation and recency ranked already-seen candidates. Four-step post-return scanpaths were compared with distance-matched null paths.",
+  "results_en": "Previously visited rates were 0.7447 for true targets and 0.6609 for controls. Trial-equal excess was 0.1206, with a bootstrap interval of 0.0557–0.1861. Candidate ranks for count, dwell, maximum fixation, recency and recency×dwell were 0.5135/0.5043/0.4799/0.5055/0.5076. Four-step set overlap was 0.2818 versus 0.2934; exact sequence overlap was 0.313 versus 0.317.",
+  "interpretation_en": "Prior visits make historical locations available for return. Candidate selection calls for richer relational information, and the post-return paths motivate reinstatement of useful relations rather than literal replay of a scanpath.",
+  "source": "L_language/tables/25_eye_target_history.csv; L_language/tables/26_eye_scanpath_replay_negative.csv",
+  "directory": "experiments/E11_gaze_return",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H03",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 19
+}

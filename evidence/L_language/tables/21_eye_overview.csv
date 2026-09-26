@@ -1,0 +1,7 @@
+﻿metric,value
+readers,2
+text/trials groups,12
+fixations,3209
+backward transitions,680
+long regressions (>=5 word positions),188
+comparable long regressions for surface selector,173

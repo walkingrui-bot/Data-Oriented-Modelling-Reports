@@ -1,0 +1,4 @@
+model_or_mode,n_traces_ge96,delta_local_surplus,delta_mid_surplus,delta_long_surplus,delta_bridge_surplus,delta_burst_cv_surplus,fixed_lag_early_speed,fixed_lag_late_speed
+DeepSeek-R1,398,0.05043,-0.06387,0.01345,-0.00771,-0.03896,2.94294,2.67213
+DeepSeek-chat,50,-0.012,0.05684,-0.04484,-0.03066,0.00548,2.81685,2.74277
+QwQ-32B-Preview,14,0.11082,-0.12783,0.017,0.02747,-0.07993,2.20406,2.55096

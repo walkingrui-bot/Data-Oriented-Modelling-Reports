@@ -1,0 +1,7 @@
+﻿mechanism,condition,AUC,interpretation
+predictive BP + homeostasis,L2,0.806,partial proxy; not final architecture
+predictive BP + homeostasis,L3,0.809,partial proxy; not final architecture
+BP + homeostasis diversity test,30 sentences ×10 repeats,0.689,repetition condition
+BP + homeostasis diversity test,300 diverse sentences,0.735,diversity condition
+directional STDP,L3 before,0.603,strong distribution learning
+directional STDP,L3 after,0.994,did not preserve occurrence role reliably

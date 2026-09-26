@@ -1,0 +1,36 @@
+# E10 Human gaze launch and target selection
+
+[Experiment index](../README.md)
+
+Literal recurrence, local bag overlap and ordered surface bridges produced target ranks around 0.43–0.50. The source table gives launch percentiles of 0.3768 per event and 0.3645 under trial-equal weighting, with a bootstrap interval of 0.3002–0.4285; trial-equal duration difference was −22.26 ms. Across minimum regression distances of 2–30 word positions, launch percentiles ranged approximately 0.345–0.426. Exact word-length matching yielded 0.3561 across 23 events, interval 0.2170–0.5049; length ±1 yielded 0.4355 across 110 events, interval 0.3555–0.5155.
+
+## Method
+
+The Scanpath Studio OneStop demo contained two readers, 3209 fixations, 680 backward transitions and 188 regressions spanning at least five word positions. Surface selectors used 173 comparable events with distance-matched, previously fixated candidates. Launch analysis used 175 matched events and ranked source duration against nearby forward-reading fixations within trials.
+
+## Interpretation
+
+Launch opportunity and destination selection have different signatures: lower-duration moments favor a return, and choosing its destination recruits additional relational information. The pilot contains two independent readers; event and trial summaries describe repeated observations within those readers.
+
+## Artifacts and reproduction
+
+**Derived tables and reference methods**
+
+Read the linked CSV tables with the shared protocol and metric definitions. The retained reference functions support descriptive geometry and gaze processing. Rebuilding full experiments also requires the source materials, labels and splits described by the protocol.
+
+Paths below are relative to the repository root. The complete file inventory is in [artifacts.csv](artifacts.csv).
+
+| File | Role | Locator |
+| --- | --- | --- |
+| [evidence/L_language/tables/21_eye_overview.csv](../../evidence/L_language/tables/21_eye_overview.csv) | result_or_record |  |
+| [evidence/L_language/tables/22_eye_surface_selector_negative.csv](../../evidence/L_language/tables/22_eye_surface_selector_negative.csv) | result_or_record |  |
+| [evidence/L_language/tables/23_eye_gate.csv](../../evidence/L_language/tables/23_eye_gate.csv) | result_or_record |  |
+| [evidence/L_language/tables/24_eye_gate_trajectory.csv](../../evidence/L_language/tables/24_eye_gate_trajectory.csv) | result_or_record |  |
+| [evidence/L_language/tables/28_eye_wordlength_controls.csv](../../evidence/L_language/tables/28_eye_wordlength_controls.csv) | result_or_record |  |
+| [evidence/L_language/tables/27_eye_threshold_sensitivity.csv](../../evidence/L_language/tables/27_eye_threshold_sensitivity.csv) | result_or_record |  |
+
+## Related hypotheses
+
+H03, H04, H20
+
+- C02: Retain overview 12 groups and gate-table 24 trials separately; two participants.

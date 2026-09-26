@@ -1,0 +1,4 @@
+﻿feature_level,mean_AUC
+local,0.592
+recurrence,0.586
+bridge,0.842

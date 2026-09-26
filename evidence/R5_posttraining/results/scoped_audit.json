@@ -1,0 +1,476 @@
+{
+  "run_id": "A-AUDIT-001",
+  "ended_utc": "2026-09-25T07:16:32.243865+00:00",
+  "status": "PASS",
+  "campaign_complete_before_read": true,
+  "data_contracts": [
+    {
+      "seed": 101,
+      "material": "base_train",
+      "episodes": 102400,
+      "unique_rules": 100714,
+      "split": "train",
+      "labels_checked": 102400
+    },
+    {
+      "seed": 101,
+      "material": "post_train",
+      "episodes": 153600,
+      "unique_rules": 149489,
+      "split": "train",
+      "labels_checked": 153600
+    },
+    {
+      "seed": 101,
+      "material": "validation",
+      "episodes": 256,
+      "unique_rules": 128,
+      "split": "validation",
+      "labels_checked": 0
+    },
+    {
+      "seed": 101,
+      "material": "test",
+      "episodes": 1024,
+      "unique_rules": 512,
+      "split": "test",
+      "labels_checked": 0
+    },
+    {
+      "seed": 202,
+      "material": "base_train",
+      "episodes": 102400,
+      "unique_rules": 100600,
+      "split": "train",
+      "labels_checked": 102400
+    },
+    {
+      "seed": 202,
+      "material": "post_train",
+      "episodes": 153600,
+      "unique_rules": 149538,
+      "split": "train",
+      "labels_checked": 153600
+    },
+    {
+      "seed": 202,
+      "material": "validation",
+      "episodes": 256,
+      "unique_rules": 128,
+      "split": "validation",
+      "labels_checked": 0
+    },
+    {
+      "seed": 202,
+      "material": "test",
+      "episodes": 1024,
+      "unique_rules": 512,
+      "split": "test",
+      "labels_checked": 0
+    },
+    {
+      "seed": 303,
+      "material": "base_train",
+      "episodes": 102400,
+      "unique_rules": 100681,
+      "split": "train",
+      "labels_checked": 102400
+    },
+    {
+      "seed": 303,
+      "material": "post_train",
+      "episodes": 153600,
+      "unique_rules": 149586,
+      "split": "train",
+      "labels_checked": 153600
+    },
+    {
+      "seed": 303,
+      "material": "validation",
+      "episodes": 256,
+      "unique_rules": 128,
+      "split": "validation",
+      "labels_checked": 0
+    },
+    {
+      "seed": 303,
+      "material": "test",
+      "episodes": 1024,
+      "unique_rules": 512,
+      "split": "test",
+      "labels_checked": 0
+    },
+    {
+      "seed": 404,
+      "material": "base_train",
+      "episodes": 102400,
+      "unique_rules": 100528,
+      "split": "train",
+      "labels_checked": 102400
+    },
+    {
+      "seed": 404,
+      "material": "post_train",
+      "episodes": 153600,
+      "unique_rules": 149653,
+      "split": "train",
+      "labels_checked": 153600
+    },
+    {
+      "seed": 404,
+      "material": "validation",
+      "episodes": 256,
+      "unique_rules": 128,
+      "split": "validation",
+      "labels_checked": 0
+    },
+    {
+      "seed": 404,
+      "material": "test",
+      "episodes": 1024,
+      "unique_rules": 512,
+      "split": "test",
+      "labels_checked": 0
+    },
+    {
+      "seed": 505,
+      "material": "base_train",
+      "episodes": 102400,
+      "unique_rules": 100617,
+      "split": "train",
+      "labels_checked": 102400
+    },
+    {
+      "seed": 505,
+      "material": "post_train",
+      "episodes": 153600,
+      "unique_rules": 149635,
+      "split": "train",
+      "labels_checked": 153600
+    },
+    {
+      "seed": 505,
+      "material": "validation",
+      "episodes": 256,
+      "unique_rules": 128,
+      "split": "validation",
+      "labels_checked": 0
+    },
+    {
+      "seed": 505,
+      "material": "test",
+      "episodes": 1024,
+      "unique_rules": 512,
+      "split": "test",
+      "labels_checked": 0
+    }
+  ],
+  "raw_predictions_checked": 563200,
+  "diagnostic_steps_checked": 3600,
+  "checkpoint_recovery": [
+    {
+      "seed": 101,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 101,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 101,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 101,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 101,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 101,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 202,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 202,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 202,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 202,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 202,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 202,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 303,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 303,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 303,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 303,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 303,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 303,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 404,
+      "arm": "rtg",
+      "checkpoint_batch": 1000,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 404,
+      "arm": "rtg",
+      "checkpoint_batch": 1000,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 404,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 404,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 404,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 404,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 505,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 505,
+      "arm": "rtg",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 505,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 505,
+      "arm": "step0",
+      "checkpoint_batch": 0,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 505,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 4,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    },
+    {
+      "seed": 505,
+      "arm": "recurrent",
+      "checkpoint_batch": 1200,
+      "length": 12,
+      "episodes": 16,
+      "predictions_exact": true,
+      "base_weights_exact": true
+    }
+  ],
+  "base_all_states": [
+    {
+      "seed": 101,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 202,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 303,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 404,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    },
+    {
+      "seed": 505,
+      "all_state_relation_accuracy": 1.0,
+      "queries": 5120
+    }
+  ],
+  "source_snapshot_byte_equality": {
+    "models.py": true,
+    "__init__.py": true,
+    "campaign.py": true,
+    "data.py": true
+  },
+  "scope": "only this experiment; no training, parameter changes, historical artifacts, or hashes"
+}

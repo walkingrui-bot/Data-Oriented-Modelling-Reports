@@ -1,0 +1,25 @@
+{
+  "id": "E34",
+  "slug": "reference_center",
+  "en": "The reference center determines stabilization direction",
+  "families": [
+    "V1_mechanism_tests"
+  ],
+  "files": [
+    "01_wrong_center_static_generalization.csv",
+    "02_wrong_center_closed_loop.csv",
+    "PROTOCOL.md"
+  ],
+  "methods_en": "In the same nonlinear 24-dimensional world, construct mirror-training pairs around either the true center or a shifted center. The strong shift has magnitude 1.5 along a normalized latent direction. Run 64 trajectories×6,000 tokens per condition and measure late TV to both the true and taught centers.",
+  "results_en": "Late TV to the true center was 0.4197 for free generation and 0.0797 for the correct-center mirror. A strongly biased-center mirror had TV=0.1833 to the true center and 0.0958 to the taught wrong center.",
+  "interpretation_en": "The stabilizer faithfully implements its learned reference relation. Identifying the right center is an upstream task; maintaining stability around it is the control task.",
+  "source_sections": "Original synthesis sections 17.1",
+  "directory": "experiments/E34_reference_center",
+  "hypotheses": [
+    "H20",
+    "H31"
+  ],
+  "artifact_count": 15,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

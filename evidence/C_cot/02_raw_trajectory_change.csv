@@ -1,0 +1,4 @@
+model_or_mode,n_traces,delta_rec,delta_local,delta_mid,delta_long,delta_bridge,delta_burst_cv
+DeepSeek-R1,400,0.07713,0.0784,-0.03552,-0.04288,0.03797,-0.11805
+DeepSeek-chat,321,0.02368,0.00331,0.01993,-0.02324,0.00235,-0.04142
+QwQ-32B-Preview,14,-0.01339,0.11813,-0.12271,0.00458,0.03381,-0.05611

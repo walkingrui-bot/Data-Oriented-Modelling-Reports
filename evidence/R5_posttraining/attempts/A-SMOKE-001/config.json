@@ -1,0 +1,48 @@
+{
+  "research_id": "P05-RTG-POSTTRAIN-20260925-001",
+  "n": 10,
+  "base_dim": 32,
+  "relation_dim": 16,
+  "geometry_scale": 1.0,
+  "write_budget": 1.0,
+  "seeds": [
+    731
+  ],
+  "base_updates": 2,
+  "post_updates": 2,
+  "batch_size": 8,
+  "base_lr": 0.01,
+  "post_lr": 0.003,
+  "validation_rules": 4,
+  "test_rules": 4,
+  "starts_per_rule": 2,
+  "validation_every": 1,
+  "train_lengths": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_lengths": [
+    1,
+    2,
+    4
+  ],
+  "surface_rules": 2,
+  "surface_lengths": [
+    4
+  ],
+  "diagnostic_episodes": 2,
+  "diagnostic_lengths": [
+    4
+  ],
+  "failure_traces_per_seed": 1,
+  "threads": 1,
+  "max_seconds": 120,
+  "max_bytes": 1073741824,
+  "gate": {
+    "base_accuracy": 0.98,
+    "long_accuracy": 0.9,
+    "advantage": 0.05
+  }
+}

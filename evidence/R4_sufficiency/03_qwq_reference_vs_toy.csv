@@ -1,0 +1,9 @@
+observable,QwQ_reference,toy_full_mechanism,interpretation
+K=2 regime silhouette,0.216,0.2631559580340295,same qualitative two-regime preference; absolute metric not directly comparable
+concentrated/diffuse speed ratio,1.1590296495956873,1.1047581164475586,same direction; toy effect somewhat smaller
+regime mean progress difference,0.009999999999999898,0.05885972850678739,toy still more progress-linked than QwQ
+state-only one-step MSE,0.791,0.8791604324971084,scale depends on projection standardization
+state+velocity MSE,0.743,0.8654808275756137,same direction
+state+velocity+acceleration MSE,0.737,0.8552706606322227,same direction
+terminal closer-step fraction,0.5076,0.5233333333333333,very close
+speed vs closer correlation,0.08,-0.03939516824886362,same weak/near-zero relation

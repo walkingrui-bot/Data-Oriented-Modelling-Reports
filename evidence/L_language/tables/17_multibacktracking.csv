@@ -1,0 +1,16 @@
+﻿domain,hop,single_anchor_AUC
+Natural,1,0.82
+Natural,2,0.534
+Natural,3,0.289
+Natural,4,0.285
+Natural,5,0.215
+Go,1,0.785
+Go,2,0.465
+Go,3,0.275
+Go,4,0.263
+Go,5,0.2
+Rust,1,0.799
+Rust,2,0.509
+Rust,3,0.263
+Rust,4,0.251
+Rust,5,0.196

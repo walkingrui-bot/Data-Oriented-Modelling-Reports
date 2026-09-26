@@ -1,0 +1,5 @@
+future_horizon,relevant_history_mean_tv,irrelevant_history_mean_tv,relevant_influence_latency_gt_0.1
+1,5.4e-05,4.4e-05,False
+2,5.6e-05,4.9e-05,False
+3,0.998948,0.000128,True
+4,0.998897,7.1e-05,True

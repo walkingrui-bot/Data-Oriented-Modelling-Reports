@@ -1,0 +1,4 @@
+world,near_opt_start,near_opt_end,extended_band_start,extended_band_end,extended_band_jaccard,fraction_bad_timepoints_still_called_balance,max_residual_to_external_ratio
+self_takeover,13,33,12,31,0.8636363636363636,0.0,0.0
+prompt_dilution,21,39,11,33,0.4482758620689655,0.02564102564102564,0.0
+pure_noise,20,54,13,45,0.6190476190476191,0.0,0.4011458340485236

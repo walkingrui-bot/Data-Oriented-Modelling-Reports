@@ -1,0 +1,17 @@
+﻿type,short_name,title,url,use_in_project
+literature,Wilcox et al. 2024,An information-theoretic analysis of targeted regressions during reading,https://doi.org/10.1016/j.cognition.2024.105765,reactivation vs reanalysis; PMI source-target
+literature,Rego et al. 2026,What drives regressions in reading? Insights from surprisal and saliency from language models,https://doi.org/10.1016/j.cognition.2026.106535,low-surprisal source; salient/surprising targets
+dataset,OneStop 2025,OneStop: A 360-Participant English Eye Tracking Dataset with Different Reading Regimes,https://doi.org/10.1038/s41597-025-06272-2,"full eye-tracking corpus; 360 participants, 2.6M tokens, 152 h"
+dataset,MECO 2022,Expanding horizons of cross-linguistic research on reading: MECO,https://doi.org/10.3758/s13428-021-01772-6,"580 readers, 13 languages, wave 1"
+dataset,Bidirectional Chinese MECO 2026,Corpus of Bidirectional Reading of Traditional Chinese Text,https://doi.org/10.1038/s41597-026-06989-8,60 participants; horizontal/vertical within-subject
+dataset,ZuCo 2018,"ZuCo, simultaneous EEG and eye-tracking resource for natural sentence reading",https://doi.org/10.1038/sdata.2018.291,"EEG + eye tracking; 12 readers, 154,173 fixations"
+code/data,Wilcox regressions repository,Public analysis code and harmonized predictor/results files,https://github.com/wilcoxeg/regressions,PPMI/E[PPMI] exploratory probes
+code/data,Scanpath Studio,Sample OneStop fixation/IA data used for pilot pipeline,https://github.com/lacclab/scanpath-studio,2-reader demo used in this research line
+dataset,OneStop repository,OneStop data/code,https://github.com/lacclab/OneStop-Eye-Movements,future full replication
+corpus,MECO project,MECO data portal,https://meco-read.com/,future multilingual replication
+corpus,Universal Declaration of Human Rights,Official multilingual UDHR,https://www.un.org/en/about-us/universal-declaration-of-human-rights,parallel formal prose pilot
+corpus,Python tutorial,Official multilingual control-flow tutorial,https://docs.python.org/3/tutorial/controlflow.html,program explanation pilot
+corpus,Chinese Text / Wikisource,Classical Chinese public texts,https://zh.wikisource.org/,桃花源记、师说、兰亭集序、醉翁亭记
+corpus,Gutenberg_Text mirror,Public-domain multi-author Project Gutenberg corpus,https://github.com/rcdm-uga/Gutenberg_Text,author/genre and Homer translation experiments
+corpus,XDailyDialog mirror,DailyDialog multilingual subset,https://github.com/liuzeming01/XDailyDialog,style dialogue pilot
+corpus,DailyDialog original paper,DailyDialog: A Manually Labelled Multi-turn Dialogue Dataset,https://arxiv.org/abs/1710.03957,dialogue source provenance

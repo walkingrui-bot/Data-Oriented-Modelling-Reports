@@ -1,0 +1,20 @@
+{
+  "id": "E24",
+  "en": "Long-run stability of a single-step feedback loop",
+  "methods_en": "A C++ world had 32 states, five allowed successors per state and 12-dimensional transition features. Free self-writing, support-mask-only and support-plus-budget-plus-reference-relaxation conditions were compared. Each used ten seeds for 100000 steps and seed101 for 1000000 steps, with geometry perturbations at one-quarter, one-half and three-quarters of the run. The constrained version used budget 0.12 and retention 0.98, versus 0.9995 in controls.",
+  "results_en": "Across ten seeds, free/mask-only/constrained violation rates were 31.39/0/0%, late entropies 0.065/0.158/1.582 nats and late coverage 43.1/49.7/100%. In the million-step representative run, mask-only late entropy/coverage was 0.000015/12.5%, versus 1.577/100% when constrained. Constrained entropy before perturbation, during the first 1000 subsequent steps and during steps 4000–5000 was 1.5771/1.5666/1.5777.",
+  "interpretation_en": "The combined configuration stabilizes a finite symbolic graph: the support mask enforces valid moves, and the full mechanism sustains path diversity and recovery after shocks.",
+  "source": "R6_longrun/rtg_longrun.cpp; R6_longrun/raw_results.txt; R6_longrun/summary.csv; R6_longrun/REPORT.md",
+  "directory": "experiments/E24_long_run_stability",
+  "artifact_profile_en": "C++ implementation and saved results",
+  "hypotheses": [
+    "H17",
+    "H18",
+    "H20"
+  ],
+  "corrections": [
+    "C12",
+    "C13"
+  ],
+  "artifact_count": 4
+}

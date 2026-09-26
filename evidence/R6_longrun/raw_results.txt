@@ -1,0 +1,8 @@
+TEN_SEED_100K
+free bad_all=0.313853 bad_late=0.328740 H_early=0.406277 H_late=0.065179 coverage=0.431250 maxshare=0.434290 Gnorm=387.387003 Hpre=0.068574 Hpost1=0.074728 Hpost5=0.081005
+support_only bad_all=0.000000 bad_late=0.000000 H_early=0.476511 H_late=0.157619 coverage=0.496875 maxshare=0.281270 Gnorm=293.473726 Hpre=0.150182 Hpost1=0.138354 Hpost5=0.154640
+rtg bad_all=0.000000 bad_late=0.000000 H_early=1.581856 H_late=1.581778 coverage=1.000000 maxshare=0.040960 Gnorm=0.772966 Hpre=1.581846 Hpost1=1.569629 Hpost5=1.581558
+ONE_SEED_1M
+free bad_all=0.460600 bad_late=0.464670 H_early=0.152507 H_late=0.118318 coverage=1.000000 maxshare=0.462410 Gnorm=375.277643 Hpre=0.102280 Hpost1=0.185920 Hpost5=0.156887
+support_only bad_all=0.000000 bad_late=0.000000 H_early=0.035510 H_late=0.000015 coverage=0.125000 maxshare=0.250000 Gnorm=287.992151 Hpre=0.000015 Hpost1=0.000048 Hpost5=0.000017
+rtg bad_all=0.000000 bad_late=0.000000 H_early=1.577243 H_late=1.577111 coverage=1.000000 maxshare=0.037380 Gnorm=0.733701 Hpre=1.577078 Hpost1=1.566568 Hpost5=1.577678

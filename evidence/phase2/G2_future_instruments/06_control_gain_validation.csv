@@ -1,0 +1,2 @@
+test,n_trajectories,spearman_predicted_vs_realized,pearson_predicted_vs_realized,finite_intervention_norm
+Finite intervention validation,36,0.99515,0.983761,0.75

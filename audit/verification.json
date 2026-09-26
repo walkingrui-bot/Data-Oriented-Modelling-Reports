@@ -1,0 +1,28 @@
+{
+  "editions": {
+    "CN": {
+      "pages": 24,
+      "all_pages_visually_reviewed": true
+    },
+    "EN": {
+      "pages": 21,
+      "all_pages_visually_reviewed": true
+    }
+  },
+  "source_mapping": "All paths in EXPERIMENT_INDEX.csv checked for existence",
+  "new_arithmetic": "audit/recalculate.py",
+  "training_rerun_in_this_audit": false,
+  "clock_times_in_new_report_narrative": false,
+  "format_checks": [
+    "CJK glyphs present",
+    "title border removed",
+    "tables have repeated headers",
+    "no clipped text or overlapping objects observed"
+  ],
+  "original_source_artifacts_unchanged": 448,
+  "discussion_sections": 16,
+  "later_GCM_and_mirror_results_reserved": true,
+  "rewrite_entrypoint": "report_sources/rewrite_reports.py",
+  "report_opening": "Generative function fitting conclusion first",
+  "turning_points": "DeepSeek at section 4 / E14; constructive methods at section 10 / E20 onward"
+}

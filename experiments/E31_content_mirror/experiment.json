@@ -1,0 +1,24 @@
+{
+  "id": "E31",
+  "slug": "content_mirror",
+  "en": "Hard-mirror context",
+  "families": [
+    "M0_content_mirror"
+  ],
+  "files": [
+    "REPORT.md",
+    "results.csv"
+  ],
+  "methods_en": "Use a four-layer causal Transformer with hidden size 32, four heads and a 31-token binary context to infer a Bernoulli parameter. The reference is known: p*=0.5. Add 16 tokens per round: 16 self-generated; eight self-generated plus eight neutral random; or eight self-generated with k ones plus a shuffled eight-token mirror containing 8−k ones. Run 64 independent trajectories per condition for 80 rounds.",
+  "results_en": "Final mean |p−0.5| was 0.2540 for self-feeding, 0.1022 for neutral blocks and 0.0195 for hard mirrors. Extreme fractions were 48.44%, 0% and 0%. The mirror reduced deviation by about 92.3% relative to self-feeding and 80.9% relative to neutral blocks. Within a round, deviation fell from 0.06595 after the self block to 0.01854 after the mirror block.",
+  "interpretation_en": "Exactly complementary evidence offsets newly formed bias at the content input. The known center and exactly pairable binary world make the operation directly testable.",
+  "source_sections": "Original synthesis sections 7–8",
+  "directory": "experiments/E31_content_mirror",
+  "hypotheses": [
+    "H20",
+    "H29"
+  ],
+  "artifact_count": 2,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

@@ -1,0 +1,16 @@
+{
+  "same_rule": {
+    "n": 400,
+    "recipient_accuracy": 0.705,
+    "operator_accuracy": 0.705,
+    "delta_recipient_p": -0.2887044359743595,
+    "delta_operator_p": -0.2887044359743595
+  },
+  "different_rule": {
+    "n": 400,
+    "recipient_accuracy": 0.18,
+    "operator_accuracy": 0.52,
+    "delta_recipient_p": -0.7996749333292246,
+    "delta_operator_p": 0.5146197932901366
+  }
+}

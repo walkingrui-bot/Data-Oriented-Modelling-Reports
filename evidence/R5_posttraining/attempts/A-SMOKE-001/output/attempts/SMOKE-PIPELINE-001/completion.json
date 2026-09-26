@@ -1,0 +1,15 @@
+{
+  "run_id": "SMOKE-PIPELINE-001",
+  "status": "PARTIAL_FAILED",
+  "completed_seeds": [],
+  "ended_utc": "2026-09-25T07:07:48.420783+00:00",
+  "seconds": 0.02395145798800513,
+  "errors": [
+    {
+      "seed": 731,
+      "error": "Traceback (most recent call last):\n  File \"/Users/rui/Documents/ChatGPT/生物圈3号/RTG_POSTTRAIN_V01/src/campaign.py\", line 356, in main\n    reader, rtg, recurrent, step0, info, data_dir = run_training(config, root, attempt, seed, curve)\n                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/rui/Documents/ChatGPT/生物圈3号/RTG_POSTTRAIN_V01/src/campaign.py\", line 177, in run_training\n    loss.backward()\n  File \"/Users/rui/Documents/ChatGPT/生物圈3号/.venv-neural/lib/python3.12/site-packages/torch/_tensor.py\", line 623, in backward\n    torch.autograd.backward(\n  File \"/Users/rui/Documents/ChatGPT/生物圈3号/.venv-neural/lib/python3.12/site-packages/torch/autograd/__init__.py\", line 395, in backward\n    _engine_run_backward(\n  File \"/Users/rui/Documents/ChatGPT/生物圈3号/.venv-neural/lib/python3.12/site-packages/torch/autograd/graph.py\", line 979, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: element 0 of tensors does not require grad and does not have a grad_fn\n"
+    }
+  ],
+  "training_updates": 0,
+  "predictions": 0
+}

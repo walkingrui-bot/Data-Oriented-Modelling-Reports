@@ -1,0 +1,4 @@
+﻿condition,accuracy,permutation_p
+6-class chance,0.167,
+all-token feature classifier,~0.28–0.30,0.033
+content-word-only classifier,~0.38,0.01

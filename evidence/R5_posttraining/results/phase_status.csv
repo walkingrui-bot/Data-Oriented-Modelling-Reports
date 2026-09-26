@@ -1,0 +1,6 @@
+phase,execution_status,engineering_status,scientific_status,reason
+A,COMPLETED,LOCAL_VALID,MIXED_RELATIVE_GATE_FAILED,Absolute extrapolation passed; RTG tied recurrent and iterated reader; ablations showed no accuracy loss
+B,NOT_RUN,NOT_TESTED,NOT_TESTED,Preceding Gate A relative advantage failed
+C,NOT_RUN,NOT_TESTED,NOT_TESTED,Preceding Gate A relative advantage failed
+D,NOT_RUN,NOT_TESTED,NOT_TESTED,A/B/C graduation requirements not met
+E,NOT_RUN,NOT_TESTED,NOT_TESTED,D not reached

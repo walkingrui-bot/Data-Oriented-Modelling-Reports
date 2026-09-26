@@ -1,0 +1,5 @@
+﻿program,reconstructed_versions,tests_per_version,all_equal_to_reference
+sum_positive,3,19531,True
+first_repeat,3,19531,True
+longest_positive_run,3,19531,True
+prefix_threshold,3,17745,True

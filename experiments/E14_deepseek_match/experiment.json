@@ -1,0 +1,16 @@
+{
+  "id": "E14",
+  "en": "The DeepSeek Base match that changed the research question",
+  "methods_en": "A human reference and a DeepSeek-V3-Base continuation in the same authorial context were compared through recurrence density. The original synthesis records the measurement; the author’s published example identifies the continuation [8].",
+  "results_en": "Both recurrence densities were reported as 0.263, to three decimal places.",
+  "interpretation_en": "This was the first turning point: a precise match in relational structure redirected the research toward the function generating that structure. Language prediction had reproduced the measured fingerprint, 0.263. The result made the upstream generative rule the next object of investigation.",
+  "source": "source/Original_Synthesis.docx section 12.5; audit/DISCUSSION_RECOVERY.md",
+  "directory": "experiments/E14_deepseek_match",
+  "artifact_profile_en": "Reported measurement and source provenance",
+  "hypotheses": [
+    "H22",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 2
+}

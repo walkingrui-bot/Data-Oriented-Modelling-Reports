@@ -1,0 +1,5 @@
+﻿control,n_events,n_trials,trial_equal_rank,rank_ci_low,rank_ci_high,trial_equal_diff_ms,diff_ci_low,diff_ci_high
+unmatched,181,24,0.35933,0.29854,0.41787,-22.79,-36.83,-9.38
+exact word length,23,16,0.3561,0.21704,0.50491,-12.72,-46.77,27.53
+length ±1,110,24,0.43547,0.35546,0.51548,-14.89,-33.99,2.67
+same surface word,18,9,0.33333,0.10972,0.61111,-7.28,-83.93,81.26

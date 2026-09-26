@@ -1,0 +1,16 @@
+{
+  "id": "E07",
+  "en": "Single-anchor hops and relational groups",
+  "methods_en": "Natural language, Go and Rust were tested with repeated single-anchor backtracking and with related three-word/five-word groups, random groups and position shuffles.",
+  "results_en": "Single-anchor AUCs at hop 1 were 0.820/0.785/0.799, at hop 2 were 0.534/0.465/0.509, and at hop 5 were 0.215/0.200/0.196. Related three-word groups yielded 0.672/0.664/0.642 and five-word groups 0.582/0.567/0.541. Random three-word groups after five rounds yielded 0.465/0.437/0.437.",
+  "interpretation_en": "Short-range backtracking and related groups preserve useful structure. Deep single-anchor hopping rapidly changes the relation between the representation and the original labels.",
+  "source": "L_language/tables/17_multibacktracking.csv; L_language/tables/18_related_groups.csv",
+  "directory": "experiments/E07_relational_groups",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H01",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 19
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "archive": "reviewer_followup_experiments_20260925.zip",
+    "library_file_id": "libfile_04359d6d76c48191a790899cd9e66359",
+    "sha256": "c06710bceff292ba9ed01b1b835a2a75b7b71e6af2edbc9a39ff74b517d181f8",
+    "evidence_families": [
+      "V1_mechanism_tests"
+    ]
+  },
+  {
+    "archive": "Phase2_GCM_Overthinking_Evidence_20260925.zip",
+    "library_file_id": "libfile_599d20b9763c8191b8110b9eb63d4a11",
+    "sha256": "eb38651237c90723b3de853d0441021dbe4605452f084048024d47af3cf78465",
+    "evidence_families": [
+      "G2_future_instruments",
+      "B1_causal_balance"
+    ]
+  },
+  {
+    "archive": "Phase2_Mirror_Control_Evidence_20260925.zip",
+    "library_file_id": "libfile_ca3c84e17df881919540e10ccbd8e27d",
+    "sha256": "53ac48f8db6ced7df283a8826ddd41bcaac14fb1e1cd2179d9c7b18e730a361c",
+    "evidence_families": [
+      "M0_content_mirror",
+      "M1_state_mirror",
+      "M2_dynamic_mirror"
+    ]
+  },
+  {
+    "archive": "generative_control_map_round1.zip",
+    "library_file_id": "libfile_312da7d238b08191ab915f319acc19bb",
+    "sha256": "2d37edf848fb1bf5d8131ee44172dce5d6cd6c8fe79c77006d6759ccbc4b109d",
+    "evidence_families": [
+      "G1_generative_control"
+    ]
+  }
+]

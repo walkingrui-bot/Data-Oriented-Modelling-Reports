@@ -1,0 +1,7 @@
+﻿lang,n_pairs,n_sources,direct_zero_fraction,corr_direct_expected,top20_expected_zero_direct_fraction,median_effN_direct,median_effN_expected,median_maxshare_direct,median_maxshare_expected,top_target_agreement
+de,120,15,0.3167,0.6092,0.32,3.3556,3.8648,0.4566,0.6236,0.3846
+es,66,11,0.2879,0.6551,0.0714,3.485,4.4476,0.4381,0.462,0.3333
+fi,153,17,0.4248,0.4982,0.4375,2.5983,4.8526,0.5477,0.4651,0.5333
+it,91,13,0.3297,0.75,0.1579,2.4677,4.1238,0.5778,0.4491,0.6364
+ru,153,17,0.3595,0.7268,0.2188,3.6066,5.5551,0.483,0.3031,0.5333
+tr,28,7,0.4286,0.7128,0.4286,2.6655,2.8139,0.5836,0.5695,0.6

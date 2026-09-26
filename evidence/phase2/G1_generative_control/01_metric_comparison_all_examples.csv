@@ -1,0 +1,4 @@
+seed,attention_mean_top1,attention_last_top1,next_step_effect_top1,linear_future_influence_top1,exact_future_influence_top1
+seed11,0.40625,0.203125,0.34375,0.28125,0.953125
+seed22,0.421875,0.28125,0.34375,0.453125,0.90625
+seed33,0.40625,0.125,0.234375,0.390625,0.59375

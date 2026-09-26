@@ -1,0 +1,14 @@
+{
+  "run_id": "A-DIAG-001",
+  "status": "COMPLETED",
+  "ended_utc": "2026-09-25T07:19:52.950857+00:00",
+  "new_model_calls": 0,
+  "global_distinct_test_rules": 2553,
+  "saved_control_examples": 80,
+  "formal_errors_by_condition": {
+    "base_only": 41120,
+    "rtg_step0": 2726
+  },
+  "trace_scope": "prespecified four episodes per seed, two rules per seed; descriptive only",
+  "step0_retention": "registered value 0.9; float32 reconstruction has rounding error"
+}

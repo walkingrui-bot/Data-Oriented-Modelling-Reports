@@ -1,0 +1,28 @@
+{
+  "id": "E37",
+  "slug": "causal_balance",
+  "en": "Source control and the reasoning balance interval",
+  "families": [
+    "B1_causal_balance"
+  ],
+  "files": [
+    "01_source_control_over_time.csv",
+    "02_overthinking_warning_auc.csv",
+    "03_fixed_false_alarm_early_warning.csv",
+    "04_balance_band_neighborhood.csv",
+    "PROTOCOL.md"
+  ],
+  "methods_en": "Use 4,000 independent constructed trajectories of 120 tokens, with manipulable prompt/question integration and self-conditioned updates. Measure external anchor, self-takeover and self-opposition using eight-step counterfactual future influence. Balance Band requires external≥95% of its trajectory peak and opposition/external<5%. Test a 3×3 parameter neighborhood. Split warning evaluation by trajectory, calibrate on safe points at least 24 tokens from failure and predict failure within 12 tokens.",
+  "results_en": "The near-optimal interval was 13–33 and the causal interval 12–31. Across nine worlds, mean/median Jaccard was 0.751/0.818. At about 5% safe false alarms, self-opposition detected 91.4% of imminent failures with median lead six tokens; output deviation detected 88.3% with lead five. Overall self-takeover AUC was 0.706.",
+  "interpretation_en": "Control share and effect direction distinguish who takes over from where that control points. The band characterizes the attributed mechanism. Its peak-based definition is used for whole-trajectory analysis; live deployment requires a separately calibrated reference available from the observed prefix.",
+  "source_sections": "Original synthesis sections 16、17.7",
+  "directory": "experiments/E37_causal_balance",
+  "hypotheses": [
+    "H20",
+    "H26",
+    "H27"
+  ],
+  "artifact_count": 9,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

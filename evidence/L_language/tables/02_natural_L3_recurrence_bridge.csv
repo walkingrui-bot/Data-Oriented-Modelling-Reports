@@ -1,0 +1,12 @@
+﻿representation,AUC,ARI,note
+local ±offset,0.558,,
+multiscale ±1…±16,0.57,0.098,
++ global same-identity recurrence,0.751,0.659,
+context-split fine-role,0.658,,
+bridge round 0,0.707,,
+bridge round 1,0.782,,
+bridge round 2,0.833,,
+bridge round 3,0.858,,
+bridge round 4,0.881,,
+bridge round 5,0.883,,
+shuffle control,0.486,,

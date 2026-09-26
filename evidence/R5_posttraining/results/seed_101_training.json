@@ -1,0 +1,197 @@
+{
+  "seed": 101,
+  "base_validation": {
+    "accuracy": 1.0,
+    "loss": 6.576499072252773e-05,
+    "count": 256
+  },
+  "base_seconds": 0.5877948749694042,
+  "base_parameters": 1290,
+  "base_pretrain_changed_elements": 1290,
+  "arms": {
+    "rtg": {
+      "selected_step": 1200,
+      "validation": {
+        "accuracy": 1.0,
+        "loss": 0.17893037851899862,
+        "count": 1024,
+        "optimizer_updates": 884
+      },
+      "actual_optimizer_updates": 884,
+      "seconds": 3.893357124994509,
+      "trainable_parameters": 2836,
+      "base_changed_elements": 0,
+      "base_update_fraction": 0.0,
+      "coefficients": {
+        "gamma": 0.921692967414856,
+        "eta": 2.0939207077026367,
+        "rho": 0.5099291205406189,
+        "retention": 0.970276951789856
+      },
+      "parameter_changes": {
+        "raw_gamma": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 0.12687215209007263
+        },
+        "raw_eta": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 0.10785412788391113
+        },
+        "raw_rho": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 0.03972173482179642
+        },
+        "raw_retention": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 1.2884323596954346
+        },
+        "reader.query": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.key": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.value": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.answer.weight": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.answer.bias": {
+          "changed_elements": 0,
+          "elements": 10,
+          "l2_change": 0.0
+        },
+        "relation.weight": {
+          "changed_elements": 2048,
+          "elements": 2048,
+          "l2_change": 2.2004940509796143
+        },
+        "relation.bias": {
+          "changed_elements": 16,
+          "elements": 16,
+          "l2_change": 0.36343634128570557
+        },
+        "w_phi.weight": {
+          "changed_elements": 256,
+          "elements": 256,
+          "l2_change": 1.155191421508789
+        },
+        "w_m.weight": {
+          "changed_elements": 256,
+          "elements": 256,
+          "l2_change": 0.6979191303253174
+        },
+        "w_inherit.weight": {
+          "changed_elements": 256,
+          "elements": 256,
+          "l2_change": 0.5596801042556763
+        }
+      }
+    },
+    "recurrent": {
+      "selected_step": 1200,
+      "validation": {
+        "accuracy": 1.0,
+        "loss": 0.18642420321702957,
+        "count": 1024,
+        "optimizer_updates": 884
+      },
+      "actual_optimizer_updates": 884,
+      "seconds": 3.2521082920138724,
+      "trainable_parameters": 2836,
+      "base_changed_elements": 0,
+      "base_update_fraction": 0.0,
+      "coefficients": {
+        "gamma": 1.05343496799469,
+        "eta": 2.244008779525757,
+        "rho": 0.5666466951370239,
+        "retention": 0.9093883037567139
+      },
+      "parameter_changes": {
+        "raw_gamma": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 0.0832672119140625
+        },
+        "raw_eta": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 0.27733635902404785
+        },
+        "raw_rho": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 0.26818251609802246
+        },
+        "raw_retention": {
+          "changed_elements": 1,
+          "elements": 1,
+          "l2_change": 0.10896420478820801
+        },
+        "reader.query": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.key": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.value": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.answer.weight": {
+          "changed_elements": 0,
+          "elements": 320,
+          "l2_change": 0.0
+        },
+        "reader.answer.bias": {
+          "changed_elements": 0,
+          "elements": 10,
+          "l2_change": 0.0
+        },
+        "relation.weight": {
+          "changed_elements": 2048,
+          "elements": 2048,
+          "l2_change": 3.4064183235168457
+        },
+        "relation.bias": {
+          "changed_elements": 16,
+          "elements": 16,
+          "l2_change": 0.6151368021965027
+        },
+        "w_phi.weight": {
+          "changed_elements": 256,
+          "elements": 256,
+          "l2_change": 2.3756182193756104
+        },
+        "w_m.weight": {
+          "changed_elements": 256,
+          "elements": 256,
+          "l2_change": 1.2400022745132446
+        },
+        "w_inherit.weight": {
+          "changed_elements": 256,
+          "elements": 256,
+          "l2_change": 2.116424322128296
+        }
+      }
+    }
+  }
+}

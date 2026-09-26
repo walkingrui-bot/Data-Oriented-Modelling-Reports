@@ -1,0 +1,24 @@
+{
+  "id": "E32",
+  "slug": "state_mirror",
+  "en": "State mirrors and 30,000-step control",
+  "families": [
+    "M1_state_mirror"
+  ],
+  "files": [
+    "01_long_run_summary.csv",
+    "02_mirror_quality.csv"
+  ],
+  "methods_en": "A nonlinear 24-dimensional self-fed generator combines slow task state, feedback drift and a nonlinear decoder. Train a two-hidden-layer MLP on same-task, opposite-drift state pairs, with an involution constraint. Its runtime input is the current hidden state. Run eight independent trajectories per condition for 30,000 steps, with shocks at steps 7,500/15,000/22,500. The closed loop fuses main-state and mirror-state logits.",
+  "results_en": "Mirror MSE was 0.0152 and involution MSE 0.00822. Under harder perturbations, main-state center MSE was 0.3806 versus 0.0553 for the midpoint; output TV was 0.2139 versus 0.0818. Long-run late TV was 0.0884 for free generation, 0.0880 for a clone, 0.1279 for a random mirror and 0.0214 for the learned mirror. Learned-mirror late KL was 0.00158 and TV over the first 500 post-shock steps was 0.0235.",
+  "interpretation_en": "Learned local symmetry supplies the stabilizing structure. Midpoint diagnostics and logit fusion are recorded separately because they differ under a nonlinear decoder. Runtime uses the current state; training pairs and evaluation use the experiment’s defined reference relation.",
+  "source_sections": "Original synthesis sections 9",
+  "directory": "experiments/E32_state_mirror",
+  "hypotheses": [
+    "H20",
+    "H30"
+  ],
+  "artifact_count": 6,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

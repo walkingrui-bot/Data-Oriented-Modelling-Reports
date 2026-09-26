@@ -1,0 +1,6 @@
+﻿metric,value
+total semantic-equivalence comparisons,229014.0
+mismatches,0.0
+local AUC,0.697
+recurrence AUC,0.712
+bridge AUC,0.803

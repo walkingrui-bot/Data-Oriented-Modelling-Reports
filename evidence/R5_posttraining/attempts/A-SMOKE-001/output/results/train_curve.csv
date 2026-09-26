@@ -1,0 +1,5 @@
+seed,arm,update,split,length,loss,accuracy,gradient_norm_before_clip
+731,base,1,train,1,2.338343858718872,0.125,0.38159438967704773
+731,base,2,train,1,2.267148494720459,0.125,0.40886327624320984
+731,base,2,validation,1,2.310607671737671,0.0,
+731,rtg,0,validation,1..4,2.535779654979706,0.125,

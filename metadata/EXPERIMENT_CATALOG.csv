@@ -1,0 +1,40 @@
+﻿experiment_id,directory,title_en,artifact_profile_en,artifact_count,hypotheses,corrections
+E01,experiments/E01_identity_roles,Role information in anonymous identity and position,Derived tables and reference methods,19,H01;H20,
+E02,experiments/E02_typed_relations,Recurrence and typed relational propagation,Derived tables and reference methods,19,H01;H20,
+E03,experiments/E03_cross_language,Structural comparison across five languages,Derived tables and reference methods,19,H02;H01;H20,
+E04,experiments/E04_structure_scale,Structural scale and word-level checks,Derived tables and reference methods,19,H01;H02;H20,
+E05,experiments/E05_translation_relay,Diachronic rewriting and multilingual relay,Derived tables and reference methods,23,H01;H02;H20,
+E06,experiments/E06_program_roundtrip,Program and natural-language round trips,Derived tables and reference methods,20,H02;H01;H20,
+E07,experiments/E07_relational_groups,Single-anchor hops and relational groups,Derived tables and reference methods,19,H01;H20,
+E08,experiments/E08_learning_proxies,Structural evaluation of learning proxies,Derived tables and reference methods,18,H20,
+E09,experiments/E09_trf_prototype,Qualification of the TRF neural prototype,Derived tables and reference methods,18,H20,
+E10,experiments/E10_gaze_launch,Human gaze launch and target selection,Derived tables and reference methods,23,H03;H04;H20,C02
+E11,experiments/E11_gaze_return,Target availability and post-return trajectories,Derived tables and reference methods,19,H03;H20,
+E12,experiments/E12_expected_relation_field,Candidate distributions in an expected relation field,Derived tables and reference methods,20,H20,
+E13,experiments/E13_genre_and_translation,Genre authors and parallel translations,Derived tables and reference methods,27,H02;H20,C01
+E14,experiments/E14_deepseek_match,The DeepSeek Base match that changed the research question,Reported measurement and source provenance,2,H22;H20,
+E15,experiments/E15_visible_cot,Relational geometry of visible chain of thought,Report and derived tables,4,H20,
+E16,experiments/E16_qwq_dynamics,QwQ trajectory prediction and movement regimes,Archived discussion results,1,H05;H06;H07;H20,C11
+E17,experiments/E17_fixed_weight_recurrence,External recurrence and K V intervention with fixed weights,Code checkpoint and intervention outputs,15,H20,C04;C05
+E18,experiments/E18_latent_rule_transfer,Transplanting executable state for a latent rule,Code checkpoint and intervention outputs,14,H11;H20,C06;C07
+E19,experiments/E19_progressive_think,Progressive THINK with noisy evidence,Report and figure,2,H13;H20,
+E20,experiments/E20_continuation_writeback,Decomposing writes to continuation geometry,Report and decomposition tables,6,H14;H18;H20,C13
+E21,experiments/E21_rewrite_inheritance,Lineage inheritance of rewrite behavior,Results and mechanism specification,13,H14;H18;H20,C13
+E22,experiments/E22_constructive_sufficiency,Constructive sufficiency of RTG dynamics,Results and mechanism specification,7,H05;H14;H18;H20,C13
+E23,experiments/E23_rtg_posttraining,RTG post-training with final-answer supervision,Code data checkpoints and per-episode outputs,294,H15;H16;H18;H20,C13
+E24,experiments/E24_long_run_stability,Long-run stability of a single-step feedback loop,C++ implementation and saved results,4,H17;H18;H20,C12;C13
+E25,experiments/E25_cross_architecture,History-conditioned continuation in three architectures,Report tables and figures,13,H05;H06;H18;H20,C03
+E26,experiments/E26_selective_history,Selective history attention and distributed state,Protocols tables and figures,15,H08;H09;H10;H12;H20,
+E27,experiments/E27_prompt_displacement,Prompt conditioning and within-network displacement,Reported results and a separate code version,2,H19;H20,C08;C09;C10
+E28,experiments/E28_future_causal_influence,Future causal influence before delayed divergence,"Protocols, result tables and figures",9,H20;H23,
+E29,experiments/E29_future_influence_instruments,Future sources and influence horizons,"Protocols, result tables and figures",12,H20;H23;H24,
+E30,experiments/E30_readability_and_control,Readability and control gain,"Protocols, result tables and figures",12,H20;H25,
+E31,experiments/E31_content_mirror,Hard-mirror context,"Protocols, result tables and figures",2,H20;H29,
+E32,experiments/E32_state_mirror,"State mirrors and 30,000-step control","Protocols, result tables and figures",6,H20;H30,
+E33,experiments/E33_dynamic_mirror_control,Dynamic mirror dose response and shock control,"Protocols, result tables and figures",10,H20;H30;H33,
+E34,experiments/E34_reference_center,The reference center determines stabilization direction,"Protocols, result tables and figures",15,H20;H31,
+E35,experiments/E35_direct_center_estimation,Direct center estimation and mirror parameterization,"Protocols, result tables and figures",15,H20;H32,
+E36,experiments/E36_dose_matched_cadence,Control cadence at matched dose,"Protocols, result tables and figures",15,H20;H33,
+E37,experiments/E37_causal_balance,Source control and the reasoning balance interval,"Protocols, result tables and figures",9,H20;H26;H27,
+E38,experiments/E38_source_coverage,Coverage of the source model,"Protocols, result tables and figures",15,H20;H27,
+E39,experiments/E39_residual_future_influence,Residual future influence,"Protocols, result tables and figures",15,H20;H28,

@@ -1,0 +1,6 @@
+monitor,AUC_predict_failure_within_12_tokens
+Causal self-opposition,0.6820333441383466
+Self-takeover share,0.7058950115211765
+Current output deviation,0.6237164807678125
+Visible-CoT EMA imbalance,0.6123477515764795
+Entropy deviation,0.6038523692659642

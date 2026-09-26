@@ -1,0 +1,20 @@
+{
+  "id": "E23",
+  "en": "RTG post-training with final-answer supervision",
+  "methods_en": "Phase A used ten-state random permutations, a 32-dimensional one-step reader, 16-dimensional relations and write budget 1. Seeds were 101/202/303/404/505. After reader training, the base was frozen. RTG and parameter-matched Elman adapters each had 2836 trainable parameters and used final-answer CE at lengths 1–4. Each seed tested 512 rules with two starts, 11 lengths and ten conditions.",
+  "results_en": "There were 4000 base updates and 8970 adapter updates, totaling 12970. Across 563200 formal outputs, post-trained RTG, the recurrent control, iterated reader and no-write/reset-M conditions all reached 100% over lengths 1–20. RTG step0 achieved 85.78% at length 20, rising to 100% after training; mean write norm on prespecified diagnostic trajectories was approximately 0.9998. RTG and the recurrent control had equal final accuracy.",
+  "interpretation_en": "Final-answer supervision trains nonzero RTG writes into task-compatible updates. Several mechanisms solve the static-rule task exactly, making their internal dynamics and response to interventions the next useful comparison.",
+  "source": "R5_posttraining/configs/phaseA_v1.json; R5_posttraining/results/seeds_summary.csv; R5_posttraining/results/accuracy_by_length.csv; R5_posttraining/results/per_episode_predictions.jsonl; R5_posttraining/src/models.py; R5_posttraining/REPORT.md",
+  "directory": "experiments/E23_rtg_posttraining",
+  "artifact_profile_en": "Code data checkpoints and per-episode outputs",
+  "hypotheses": [
+    "H15",
+    "H16",
+    "H18",
+    "H20"
+  ],
+  "corrections": [
+    "C13"
+  ],
+  "artifact_count": 294
+}

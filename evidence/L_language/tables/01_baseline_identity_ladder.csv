@@ -1,0 +1,7 @@
+﻿domain,level,AUC,ARI,note
+Natural,L1,1.0,1.0,identity-only role discrimination
+Natural,L2,0.873,0.757,identity-only role discrimination
+Natural,L3,0.642,0.166,identity-only role discrimination
+Code,L1,0.983,,identity-only role discrimination
+Code,L2,0.804,,identity-only role discrimination
+Code,L3,0.922,,identity-only role discrimination

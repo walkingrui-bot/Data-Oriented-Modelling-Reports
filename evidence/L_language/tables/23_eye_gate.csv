@@ -1,0 +1,13 @@
+﻿metric,value
+events,175.0
+trials,24.0
+event mean percentile,0.3767828824
+trial-equal mean percentile,0.3644561423
+bootstrap 2.5%,0.3001828531
+bootstrap 97.5%,0.4284950837
+one-sided sign-flip p,0.00019999
+event mean duration difference ms,-19.48571429
+trial-equal duration difference ms,-22.26100977
+duration bootstrap 2.5% ms,-36.6766333
+duration bootstrap 97.5% ms,-8.52207327
+duration sign-flip p,0.0019999

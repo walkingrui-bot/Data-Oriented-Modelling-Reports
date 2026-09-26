@@ -1,0 +1,15 @@
+{
+  "id": "E08",
+  "en": "Structural evaluation of learning proxies",
+  "methods_en": "Predictive backpropagation with homeostatic constraints, repeated versus diverse materials, and directional STDP were compared. Sequence-distribution discrimination and occurrence-level role retention were treated as separate outcomes.",
+  "results_en": "Predictive BP yielded L2/L3 AUCs of 0.806/0.809. Thirty sentences repeated ten times yielded 0.689, versus 0.735 for 300 diverse sentences. STDP distribution AUC rose from 0.603 to 0.994, with partial occurrence-role retention.",
+  "interpretation_en": "Distribution statistics and occurrence-level relational roles give two distinct views of what a learning system acquires.",
+  "source": "L_language/tables/19_learning_pilots.csv",
+  "directory": "experiments/E08_learning_proxies",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 18
+}

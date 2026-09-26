@@ -1,0 +1,27 @@
+{
+  "id": "E28",
+  "slug": "future_causal_influence",
+  "en": "Future causal influence before delayed divergence",
+  "families": [
+    "G1_generative_control"
+  ],
+  "files": [
+    "01_metric_comparison_all_examples.csv",
+    "02_metric_comparison_correct_examples.csv",
+    "03_future_mode_readout_by_layer.csv",
+    "04_bidirectional_control_layer1.csv",
+    "05_random_direction_control.csv"
+  ],
+  "methods_en": "Train three independent small causal Transformers. Each example has four binary history cues and a query selecting one. Future modes share their first two outputs and diverge at steps 3–4. Counterfactually flip each cue and measure the future distribution change, reporting all examples and the correctly predicted subset separately, with equal weighting across seeds. Estimate a mode direction on training data and intervene in layer 1 in both directions, with random-direction controls.",
+  "results_en": "Four-step held-out accuracy was approximately 98.8%, 98.0% and 94.1%. On correct examples, source Top-1 was 90.6% for exact FCI, 42.5% for mean attention, 20.8% for last-layer attention, 32.9% for immediate causal effect and 38.7% for a first-order future approximation. All-example FCI and mean attention were 81.8% and 41.1%. Directional intervention moved P(A) from 0.117 to 0.465 for B→A and from 0.834 to 0.444 in reverse.",
+  "interpretation_en": "The future distribution exposes task-relevant influence before the next token does. The 90.6% result belongs to this round’s correct-example protocol and is reported separately from E29’s 100%.",
+  "source_sections": "Original synthesis, opening GCM section and 17.7",
+  "directory": "experiments/E28_future_causal_influence",
+  "hypotheses": [
+    "H20",
+    "H23"
+  ],
+  "artifact_count": 9,
+  "artifact_profile_en": "Protocols, result tables and figures",
+  "training_rerun": false
+}

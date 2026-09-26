@@ -1,0 +1,7 @@
+﻿style,repeated_bigram_density
+formal_document,0.036
+poetry,0.018
+news,0.013
+daily_dialogue,0.01
+scientific_paper,0.008
+novel,0.005

@@ -1,0 +1,3 @@
+﻿experiment_id,source_path,stored_path,role,directly_cited,locator,sha256,size_bytes
+E27,evidence/P4_prompt/archived_code_220steps.py,evidence/P4_prompt/archived_code_220steps.py,code,True,,30e0315e3dd6fc21004723523ff8244323917e8ee69e937856c22cd6243f04db,3403
+E27,evidence/P4_prompt/archived_report.md,evidence/P4_prompt/archived_report.md,method_or_report,True,,a65cb35ebbcd9d75a4fbe6f3d2b954013dfd7131f815244005febc11b8a4e168,3474

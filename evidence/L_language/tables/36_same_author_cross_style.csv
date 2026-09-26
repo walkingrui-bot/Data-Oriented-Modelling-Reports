@@ -1,0 +1,3 @@
+﻿author,from_genre,to_genre,cross_style_distance,to_own_genre_centroid,to_previous_genre_centroid
+Hardy,novel,poetry,3.8705689284,1.2225834399,3.4607910476
+Wilde,poetry,drama,5.0322022213,1.2219330001,4.6271069396

@@ -1,0 +1,19 @@
+{
+  "id": "E20",
+  "en": "Decomposing writes to continuation geometry",
+  "methods_en": "A CE²G-inspired synthetic relational world compared static, same-edge, signed-local, genealogy, delay, projection and combined variants. A phenotype scan used 16 parameter points with three seeds each. Fixed-condition comparisons used 20/30 seeds for successor-row distributions, revisits and adjacent-edge similarity, followed by write-budget and single-projection deletion controls.",
+  "results_en": "Median immediate successor-law TV across 20 seeds was 0 for static and same-edge, 0.0202 for genealogy and 0.0173 for genealogy+projection. At projection strength 0.08, unbudgeted entropy/replay was 0.513/0.455, versus 0.816/0.220 at budget 0.15. Across 80 synchronized pairs, 60-step divergence after deletion was 46.25% in the unbudgeted condition, 38.75% at 0.15 and 48.75% at 0.25.",
+  "interpretation_en": "Strengthening an executed edge and rewriting successors of its destination produce different dynamics. Several update rules generate dynamic phenotypes, and bounded writes retain the causal effect of projection.",
+  "source": "R2_writeback/ROUND2_REPORT.md; R2_writeback/01_ablation_diagnostics.csv; R2_writeback/04_write_budget_sweep.csv; R2_writeback/05_dynamic_writeback_gate_summary.csv",
+  "directory": "experiments/E20_continuation_writeback",
+  "artifact_profile_en": "Report and decomposition tables",
+  "hypotheses": [
+    "H14",
+    "H18",
+    "H20"
+  ],
+  "corrections": [
+    "C13"
+  ],
+  "artifact_count": 6
+}

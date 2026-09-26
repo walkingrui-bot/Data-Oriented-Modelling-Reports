@@ -1,0 +1,22 @@
+{
+  "phase": "A",
+  "base_gate": true,
+  "absolute_extrapolation_gate": true,
+  "relative_advantage_gate": false,
+  "gate_pass": false,
+  "thresholds": {
+    "base_accuracy": 0.98,
+    "long_accuracy": 0.9,
+    "advantage": 0.05
+  },
+  "independent_seeds": 5,
+  "test_rules_per_seed": 512,
+  "long_lengths": [
+    8,
+    10,
+    12
+  ],
+  "main_predictions": 563200,
+  "optimizer_updates": 12970,
+  "next_phase": "STOP_AFTER_A_DIAGNOSIS"
+}

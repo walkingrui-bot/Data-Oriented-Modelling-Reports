@@ -1,0 +1,4 @@
+seed,global_spearman,within_sample_spearman,relevant_attention,older_same_attention,other_attention,relevant_causal_effect,older_same_causal_effect,other_causal_effect,top_attention_is_relevant,top_causal_is_relevant,high_attention_low_effect_rate
+11,0.438099,0.534538,0.427767,0.156134,0.025337,0.999137,0.000148,3.5e-05,0.978333,1.0,0.163611
+22,0.747787,0.785865,0.452406,0.194326,0.025337,0.998985,0.000362,6.7e-05,0.88,1.0,0.158611
+33,0.630804,0.64795,0.458566,0.193792,0.025335,0.999056,0.000265,0.000285,0.86,1.0,0.162917

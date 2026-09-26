@@ -1,0 +1,16 @@
+{
+  "id": "E02",
+  "en": "Recurrence and typed relational propagation",
+  "methods_en": "Natural L3 compared local offsets, multiscale offsets, global same-identity recurrence and iterative typed bridge propagation. Untyped graph diffusion and position shuffles served as controls; coarse and fine roles were evaluated separately.",
+  "results_en": "AUC was 0.558 for local offsets, 0.570 for multiscale offsets and 0.751 with global recurrence. Bridge rounds 0–5 yielded 0.707/0.782/0.833/0.858/0.881/0.883; the shuffle result was 0.486. Coarse-role probe accuracy rose from 82.7% to 93.8%, and fine-role accuracy from 86.8% to 92.5%. Untyped diffusion was approximately 0.44–0.50.",
+  "interpretation_en": "The results support representations that retain the type and direction of relations surrounding recurrence. They provide structural evidence for reconnecting local relational neighborhoods.",
+  "source": "L_language/tables/02_natural_L3_recurrence_bridge.csv; L_language/tables/03_role_probe_results.csv",
+  "directory": "experiments/E02_typed_relations",
+  "artifact_profile_en": "Derived tables and reference methods",
+  "hypotheses": [
+    "H01",
+    "H20"
+  ],
+  "corrections": [],
+  "artifact_count": 19
+}

@@ -1,0 +1,8 @@
+metric,top1_relevant_history,roc_auc,average_precision,spearman_vs_exact_fci
+Train-selected raw attention,0.583333,0.771701,0.709399,0.272917
+Attention × future-gradient,0.583333,0.707538,0.529468,0.290625
+Future gradient norm,0.692708,0.817292,0.629231,0.470833
+Directional future gradient,0.791667,0.869656,0.755624,0.533333
+3-point integrated directional future gradient,1.0,1.0,1.0,0.735417
+Batched future-margin counterfactual,1.0,1.0,1.0,0.80625
+Exact future causal influence (FCI),1.0,1.0,1.0,1.0

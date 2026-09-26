@@ -1,0 +1,23 @@
+{
+  "run_id": "A-PACKAGE-001",
+  "status": "COMPLETED",
+  "recorded_utc": "2026-09-25T07:32:25.094680+00:00",
+  "archive": "/Users/rui/Documents/ChatGPT/\u751f\u7269\u57083\u53f7/RTG_POSTTRAIN_V01_20260925.zip",
+  "files_before_this_receipt": 297,
+  "first_zip_crc": "PASS",
+  "document_check": {
+    "status": "PASS",
+    "markdown_documents": 10,
+    "local_links_checked": 42,
+    "helper_syntax_checked": [
+      "analyze.py",
+      "audit_completed.py",
+      "diagnose_saved_traces.py",
+      "reproduce.py",
+      "package.py"
+    ],
+    "formal_checkpoints": 85,
+    "requirement": "No new model run or broad repository checks."
+  },
+  "note": "This completion entry is appended, then the entire final ZIP is checked again. Final size/CRC receipt is external."
+}
