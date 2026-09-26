@@ -1,0 +1,8 @@
+Object,Definition,Experimental interface
+X,relational / predictive state space,q(c) in LANG-017 and predictive-state coordinates in LANG-018/019
+Sigma,"Observable linguistic units: characters, tokens, words and phrases",Surface handles for functional transformations
+Psi,Context→state mapping: x_t=Ψ(c_{≤t}),Estimated directly from empirical future distributions/predictive states
+G,Reusable generative/control operators,LANG-018 operator-family SVD；LANG-019 hierarchy
+rho,"(surface action, current state) → operator selection/mixture",One symbol performs different transformations at different states
+o,Ordered composition,LANG-018 forward/reverse composition and same-final-symbol order tests
+H,hierarchical generator structure,G_{l+1} = closure_o(G_l) direct-sum R_{l+1}

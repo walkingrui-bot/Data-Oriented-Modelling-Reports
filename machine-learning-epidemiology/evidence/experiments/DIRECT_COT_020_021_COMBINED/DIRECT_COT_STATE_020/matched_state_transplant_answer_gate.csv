@@ -1,0 +1,7 @@
+stage,donor_state,accuracy_via_common_answer_gate,mean_signed_margin
+after_r1_value,B,0.5,1.2533490359783173
+after_r1_value,C,0.5,1.0831603407859802
+after_r2_value,B,0.5625,2.412130743265152
+after_r2_value,C,0.6875,7.20161896944046
+after_r3_value,B,1.0,11.121091306209564
+after_r3_value,C,1.0,11.967080056667328

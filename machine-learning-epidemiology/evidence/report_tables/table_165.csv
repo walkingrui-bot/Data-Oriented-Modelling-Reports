@@ -1,0 +1,7 @@
+Factor,Levels or definition
+hidden width,8 / 16 / 32 / 64 / 128
+Parameter count,Approximately 1.7k / 4.1k / 12.4k / 42.8k / 158.9k
+unique coverage,25% / 50% / 100%
+Coverage subsets,"Nested and balanced; every goal × start × main-operation combination is represented, with increasing coverage of the counterfactual relation"
+Initialization,"Two shared seeds, 2501 and 2502"
+Measurement point,After CHECK; retain the complete recurrent state and continue with the same FINAL suffix

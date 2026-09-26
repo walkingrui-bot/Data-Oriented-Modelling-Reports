@@ -1,0 +1,7 @@
+action,Level,movement stable rank,d95,top-3 energy,mean movement norm
+R+1,relation,17.831,41,16.1%,14.743
+R+2,relation,17.828,41,16.1%,14.742
+R*2,relation,19.380,33,15.5%,12.641
+RNEG,relation,14.527,24,20.7%,12.637
+STORE,meta,9.092,43,21.3%,15.410
+RESET,meta,17.360,42,13.0%,12.638

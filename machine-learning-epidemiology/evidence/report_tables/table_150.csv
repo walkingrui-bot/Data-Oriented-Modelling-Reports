@@ -1,0 +1,4 @@
+answer-marker state pair,mean hidden L2
+Direct ↔ CoT,2.761
+Direct ↔ Blank,2.529
+Blank ↔ CoT,2.077

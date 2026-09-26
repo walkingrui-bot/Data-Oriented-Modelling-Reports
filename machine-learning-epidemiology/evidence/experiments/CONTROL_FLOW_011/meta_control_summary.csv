@@ -1,0 +1,3 @@
+history,question,answer_zero_alpha,next_code_zero_alpha,answer_changes_before_next_code_bit,max_downstream_control_rotation_before_code_switch_deg,alpha_of_max_rotation,downstream_control_gain_ratio_before_code_switch,local_control_direction_angular_velocity_rad_per_alpha,route_control_axis_d1,route_control_axis_d2,route_control_axis_d3,route_control_axis_d4
+A,00,0.3152466047996795,0.6035297156303634,True,22.8937710731761,0.6025,5.206875668391507,1.2120564617751686,-0.4556750919432301,0.04974458638137647,-0.770216425401037,0.44345500871083093
+B,00,1.0317779950332768,1.7645711518354184,True,48.97725305863674,1.5325000000000002,7.992840609519587,0.12256145251435795,-0.6074495881219164,0.08188926801798836,-0.6817922698617036,0.3993224842540408

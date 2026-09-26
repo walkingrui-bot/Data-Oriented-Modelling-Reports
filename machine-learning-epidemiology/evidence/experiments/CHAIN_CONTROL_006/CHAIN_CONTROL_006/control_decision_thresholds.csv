@@ -1,0 +1,11 @@
+model,surface,held,roots_in_range
+history_A,code_logit_vs_route_feedback,none,0.62853936
+history_A,answer_logit_vs_route_feedback,x_code=-1,0.93523675
+history_A,answer_logit_vs_route_feedback,x_code=+1,0.35818201
+history_A,answer_logit_vs_code_feedback,x_route=-1,
+history_A,answer_logit_vs_code_feedback,x_route=+1,-1.18634884
+history_B,code_logit_vs_route_feedback,none,
+history_B,answer_logit_vs_route_feedback,x_code=-1,
+history_B,answer_logit_vs_route_feedback,x_code=+1,
+history_B,answer_logit_vs_code_feedback,x_route=-1,
+history_B,answer_logit_vs_code_feedback,x_route=+1,

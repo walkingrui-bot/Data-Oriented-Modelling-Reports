@@ -1,0 +1,5 @@
+History,chain 1,chain 2,Hamming,Hidden-state distance,future RMS,|Δanswer logit|,Answer-gradient distance
+history_A,00,11,2,2.345494,2.898590,2.833530,0.979627
+history_A,01,11,1,1.987986,2.816272,2.744479,0.823645
+history_B,00,11,2,0.106825,0.007250,0.043104,0.089633
+history_B,01,11,1,0.032370,0.001136,0.006328,0.014072

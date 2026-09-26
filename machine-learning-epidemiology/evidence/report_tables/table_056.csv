@@ -1,0 +1,13 @@
+MRI ID,Original experiment,Core intervention/object,Current direct result
+MRI-001,TOKEN-REPLAY-001,Tokenwise cold start + complete future,Sharp complete-future collapse points within one CoT; methodological feasibility
+MRI-002,TRAINING-WORLD-REPLAY-001,Training-world structure changes information-release timing,Training content shifts complete-future entropy collapse; 40 targeted micro-updates transfer the timing
+MRI-003,ORDER-COT-CAUSAL-001,Training-group order swaps only,Local order causally changes the complete CoT response surface under identical endpoints
+MRI-004,FOUNDATION-COT-TERRAIN-001/002/004,Data volume × interleaving × order seed,Dataset foundations form whole-body terrain; 004 establishes a 36-model imaging map
+MRI-005,FOUNDATION-COT-TERRAIN-005 / BODYSCAN-001,Multiple probes / styles / architectures,Terrain persists across questions and in Transformers; semantic landmarks provide style alignment
+MRI-006,SEMANTIC-AND-BLOCKSHIFT / BLOCKSHIFT-SEMANTIC / CURRICULUM-MATH,Semantic alignment + block curricula,"Block order leaves cross-domain, cross-question and cross-style whole-body atlas identities"
+MRI-007,COT-ROOTCAUSE-001/002/003-FAST,Screening CoT and answer causal origins,"CoT-only, unchanged-text and short-horizon answer-changing phenotypes"
+MRI-008,HISTORY-TO-COT-KERNEL-001,"Two-layer Adam foundations + K(e,k)",Parameters and optimizer states both carry history; natural ≈ param + optim; K is low-rank
+MRI-009,HISTORY-TO-COT-KERNEL-002,Paired CoT / Answer kernels,CoT and answers share principal modes and have independent secondary modes; answer integration is more nonlinear
+MRI-010,TRAINING-SKY-001/002,Four-dimensional training sky + paired readouts,"Reconstruction of (τ,s,j,c;k); one training sky separates into CoT-dominant, Answer-dominant and coupled regions"
+MRI-011,TRAINING-SKY-003,Question × sky × CoT/Answer,Problem structure crystallizes progressively during CoT unfolding
+MRI-012,TRAINING-SKY-004-CORRECTED,realized token code trace,Token function depends on current state/history geometry; shared structural tokens can serve as crystallization gates

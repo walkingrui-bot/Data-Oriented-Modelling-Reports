@@ -1,0 +1,1 @@
+Reasoning state. A reasoning state is the behavioral equivalence class of a history under all allowed future control programs. Histories at the same local object belong to distinct states when retained commitments distinguish their reachable future behavior.

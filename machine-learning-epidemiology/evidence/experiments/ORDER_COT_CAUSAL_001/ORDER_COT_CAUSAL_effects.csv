@@ -1,0 +1,176 @@
+order_intervention,k,added_token,answer_JS_bits,greedy_answer_disagree,completion_edit_distance,base_greedy,intervention_greedy
+swap01,0,,0.005023944823835329,0,0.21739130434782605,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0,pair CD 0 0 result 0 ; pair CD 1 0 result 1 ; final pair 1 1 result 0 ; answer 0
+swap01,1,B,0.01709875546817178,0,0.21739130434782605,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 xor A 0 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,2,1,0.0004064766696314044,0,0.18181818181818177,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor A 0 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,3,xor,0.016640112121621996,0,0.19047619047619047,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,A 0 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,4,A,0.03852783479271071,0,0.19999999999999996,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,5,0,0.012065182513437578,0,0.21052631578947367,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,6,gives,0.03968351981228607,0,0.2222222222222222,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 ; C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,7,1,0.025684600146263892,0,0.17647058823529416,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,; C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,8,;,0.02711899660771097,0,0.1875,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,C 1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,9,C,0.0032256871429607002,0,0.19999999999999996,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,10,1,0.00812984231166538,0,0.1428571428571429,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,11,xor,0.018327766751335788,0,0.15384615384615385,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,D 0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,12,D,0.00032452069239495215,0,0.16666666666666663,0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,13,0,0.04790672222411349,0,0.18181818181818177,gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; 1 xor 0 gives 0 ; answer 0
+swap01,14,gives,0.005095254940332281,0,0.19999999999999996,0 ; 0 xor 0 gives 0 ; answer 0,1 ; 1 xor 0 gives 0 ; answer 0
+swap01,15,1,0.03852783479271071,0,0.11111111111111116,; 0 xor 0 gives 0 ; answer 0,; 1 xor 0 gives 0 ; answer 0
+swap01,16,;,0.0030436294762273344,0,0.125,0 xor 0 gives 0 ; answer 0,1 xor 0 gives 0 ; answer 0
+swap01,17,1,0.001774290143168395,0,0.0,xor 0 gives 0 ; answer 0,xor 0 gives 0 ; answer 0
+swap01,18,xor,0.0015865803549901976,0,0.0,0 gives 0 ; answer 0,0 gives 0 ; answer 0
+swap01,19,1,0.006077489978553483,0,0.0,gives 0 ; answer 0,gives 0 ; answer 0
+swap01,20,gives,0.0016712931357833454,0,0.0,0 ; answer 0,0 ; answer 0
+swap01,21,0,0.0,0,0.0,; answer 0,; answer 0
+swap01,22,;,0.0,0,0.0,answer 0,answer 0
+swap01,23,answer,0.0,0,0.0,0,0
+swap01,24,0,0.5,0,0.0,,
+swap12,0,,0.005244157622511191,0,0.04347826086956519,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0,pair BA 0 0 result 0 ; pair BA 0 0 result 0 ; final pair 0 0 result 0 ; answer 0
+swap12,1,B,0.012736391073288958,0,0.0,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap12,2,1,0.017655502144397588,0,0.0,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap12,3,xor,0.003664350160404811,0,0.0,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap12,4,A,0.03182530590331618,0,0.0,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap12,5,0,0.021068243524799073,0,0.0,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap12,6,gives,0.001458080889630304,0,0.0,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap12,7,1,0.020120430410499594,0,0.23529411764705888,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap12,8,;,0.021316363342694537,0,0.25,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap12,9,C,0.008699333397104318,0,0.2666666666666667,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap12,10,1,0.002976449979055152,0,0.2142857142857143,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap12,11,xor,0.009722627678896818,0,0.23076923076923073,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap12,12,D,0.00033046945547007735,0,0.25,0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap12,13,0,0.016112340002600756,0,0.2727272727272727,gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap12,14,gives,0.0,0,0.30000000000000004,0 ; 0 xor 0 gives 0 ; answer 0,1 ; 1 xor 1 gives 0 ; answer 0
+swap12,15,1,0.010808325753895093,0,0.2222222222222222,; 0 xor 0 gives 0 ; answer 0,; 1 xor 1 gives 0 ; answer 0
+swap12,16,;,0.005351707572143798,0,0.25,0 xor 0 gives 0 ; answer 0,1 xor 1 gives 0 ; answer 0
+swap12,17,1,0.030449723484242068,0,0.1428571428571429,xor 0 gives 0 ; answer 0,xor 1 gives 0 ; answer 0
+swap12,18,xor,0.0346028176642527,0,0.16666666666666663,0 gives 0 ; answer 0,1 gives 0 ; answer 0
+swap12,19,1,0.00136937549707691,0,0.0,gives 0 ; answer 0,gives 0 ; answer 0
+swap12,20,gives,0.02205565124143595,0,0.0,0 ; answer 0,0 ; answer 0
+swap12,21,0,0.0,0,0.0,; answer 0,; answer 0
+swap12,22,;,0.0,0,0.0,answer 0,answer 0
+swap12,23,answer,0.0,0,0.0,0,0
+swap12,24,0,0.5,0,0.0,,
+swap23,0,,0.002830694750015378,0,0.21739130434782605,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0,pair BA 0 0 result 0 ; pair BA 0 1 result 1 ; final pair 1 1 result 0 ; answer 0
+swap23,1,B,0.1573421227977609,1,0.3913043478260869,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,2,1,0.09473442959903257,1,0.40909090909090906,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,3,xor,0.12913553076463555,1,0.4285714285714286,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,A 1 gives 1 ; C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,4,A,0.13612437431750812,1,0.44999999999999996,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 gives 1 ; C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,5,0,0.10396176746544256,1,0.42105263157894735,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,6,gives,0.11623554160188086,1,0.4444444444444444,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 ; C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,7,1,0.14916627187299702,1,0.4117647058823529,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,; C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,8,;,0.1525362600937753,1,0.4375,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,C 1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,9,C,0.12913553076463555,1,0.4666666666666667,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,10,1,0.10478874259144848,1,0.4285714285714286,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,11,xor,0.18914046661281883,1,0.46153846153846156,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,D 1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,12,D,0.05380197748693823,1,0.5,0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,13,0,0.18061104558047342,1,0.4545454545454546,gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; 1 xor 1 gives 1 ; answer 1
+swap23,14,gives,0.121116465946246,1,0.5,0 ; 0 xor 0 gives 0 ; answer 0,1 ; 1 xor 1 gives 1 ; answer 1
+swap23,15,1,0.22554975952227763,1,0.4444444444444444,; 0 xor 0 gives 0 ; answer 0,; 1 xor 1 gives 1 ; answer 1
+swap23,16,;,0.06238237944644122,1,0.5,0 xor 0 gives 0 ; answer 0,1 xor 1 gives 1 ; answer 1
+swap23,17,1,0.06859186091507884,1,0.4285714285714286,xor 0 gives 0 ; answer 0,xor 1 gives 1 ; answer 1
+swap23,18,xor,0.13019784892915898,1,0.5,0 gives 0 ; answer 0,1 gives 1 ; answer 1
+swap23,19,1,0.10416714629124127,1,0.4,gives 0 ; answer 0,gives 1 ; answer 1
+swap23,20,gives,0.20670902722141937,1,0.5,0 ; answer 0,1 ; answer 1
+swap23,21,0,0.0,0,0.0,; answer 0,; answer 0
+swap23,22,;,0.0,0,0.0,answer 0,answer 0
+swap23,23,answer,0.010495763250254333,0,0.0,0,0
+swap23,24,0,0.5,0,0.0,,
+swap34,0,,0.012065182513437578,0,0.04347826086956519,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0,pair BA 0 0 result 0 ; pair BA 0 0 result 0 ; final pair 0 0 result 0 ; answer 0
+swap34,1,B,0.003875318761305587,0,0.0,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,2,1,0.012445628285273548,0,0.0,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,3,xor,0.003664350160404811,0,0.0,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,4,A,0.0004932460354462945,0,0.0,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,5,0,0.010212928161313327,0,0.0,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,6,gives,0.0067034567697254015,0,0.0,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,7,1,0.0,0,0.0,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,8,;,0.0,0,0.0,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,9,C,0.003664350160404811,0,0.0,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,10,1,0.0032256871429607002,0,0.0,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,11,xor,0.004452705623337189,0,0.0,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,12,D,0.00133635155148191,0,0.0,0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,13,0,0.004452705623337189,0,0.0,gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap34,14,gives,0.017655502144397588,0,0.0,0 ; 0 xor 0 gives 0 ; answer 0,0 ; 0 xor 0 gives 0 ; answer 0
+swap34,15,1,0.010175033205689566,0,0.11111111111111116,; 0 xor 0 gives 0 ; answer 0,; 0 xor 1 gives 0 ; answer 0
+swap34,16,;,0.020120430410499594,0,0.125,0 xor 0 gives 0 ; answer 0,0 xor 1 gives 0 ; answer 0
+swap34,17,1,0.004855163502371161,0,0.1428571428571429,xor 0 gives 0 ; answer 0,xor 1 gives 0 ; answer 0
+swap34,18,xor,0.012445628285273548,0,0.16666666666666663,0 gives 0 ; answer 0,1 gives 0 ; answer 0
+swap34,19,1,0.03554165475200111,0,0.0,gives 0 ; answer 0,gives 0 ; answer 0
+swap34,20,gives,0.04541735147606456,0,0.0,0 ; answer 0,0 ; answer 0
+swap34,21,0,0.0,0,0.0,; answer 0,; answer 0
+swap34,22,;,0.0,0,0.0,answer 0,answer 0
+swap34,23,answer,0.0,0,0.0,0,0
+swap34,24,0,0.5,0,0.0,,
+swap45,0,,0.0,0,0.0,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0
+swap45,1,B,0.03373141535576123,0,0.26086956521739135,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor A 1 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,2,1,0.04140933968590234,0,0.2727272727272727,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor A 1 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,3,xor,0.02697209171226702,0,0.2857142857142857,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,A 1 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,4,A,0.08025594233229472,0,0.30000000000000004,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,5,0,0.021068243524799073,0,0.26315789473684215,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,6,gives,0.05482205744674887,0,0.2777777777777778,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 ; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,7,1,0.09025451495614698,0,0.23529411764705888,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,; C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,8,;,0.07353460761739528,0,0.25,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,C 1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,9,C,0.03968351981228607,0,0.2666666666666667,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,10,1,0.0317679770483191,0,0.2142857142857143,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,11,xor,0.0858334118936832,0,0.23076923076923073,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,D 0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,12,D,0.025522009781184588,0,0.25,0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,13,0,0.11523066906964193,0,0.2727272727272727,gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; 1 xor 1 gives 0 ; answer 0
+swap45,14,gives,0.031538991239837805,0,0.30000000000000004,0 ; 0 xor 0 gives 0 ; answer 0,1 ; 1 xor 1 gives 0 ; answer 0
+swap45,15,1,0.04578215254789894,0,0.2222222222222222,; 0 xor 0 gives 0 ; answer 0,; 1 xor 1 gives 0 ; answer 0
+swap45,16,;,0.015967837402723464,0,0.25,0 xor 0 gives 0 ; answer 0,1 xor 1 gives 0 ; answer 0
+swap45,17,1,0.010212928161313327,0,0.1428571428571429,xor 0 gives 0 ; answer 0,xor 1 gives 0 ; answer 0
+swap45,18,xor,0.04140933968590234,0,0.16666666666666663,0 gives 0 ; answer 0,1 gives 0 ; answer 0
+swap45,19,1,0.011820677639932331,0,0.0,gives 0 ; answer 0,gives 0 ; answer 0
+swap45,20,gives,0.04775842119095834,0,0.0,0 ; answer 0,0 ; answer 0
+swap45,21,0,0.0,0,0.0,; answer 0,; answer 0
+swap45,22,;,0.0,0,0.0,answer 0,answer 0
+swap45,23,answer,0.010495763250254333,0,0.0,0,0
+swap45,24,0,0.0,0,0.0,,
+swap56,0,,0.0029226977913211424,0,0.2542372881355932,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; final pair 0 0 result 0 ; final pair 0 0 result 0 ; final
+swap56,1,B,0.027600698189448616,1,0.21739130434782605,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor A 0 gives 1 ; C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,2,1,0.028373306021052397,1,0.2272727272727273,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor A 0 gives 1 ; C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,3,xor,0.03968351981228607,1,0.23809523809523814,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,A 0 gives 1 ; C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,4,A,0.09025451495614698,1,0.25,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 1 ; C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,5,0,0.01626644493776993,1,0.26315789473684215,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,6,gives,0.06333279534523893,1,0.2777777777777778,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,1 ; C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,7,1,0.10082350672799531,1,0.23529411764705888,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,; C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,8,;,0.07353460761739528,1,0.25,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,C 0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,9,C,0.03968351981228607,1,0.2666666666666667,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,10,1,0.05360274403095737,1,0.2857142857142857,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,11,xor,0.0858334118936832,1,0.3076923076923077,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,D 0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,12,D,0.038239386644278506,1,0.33333333333333337,0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,13,0,0.08314020896178376,1,0.36363636363636365,gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 1 ; 0 xor 1 gives 1 ; answer 1
+swap56,14,gives,0.05380197748693823,1,0.4,0 ; 0 xor 0 gives 0 ; answer 0,1 ; 0 xor 1 gives 1 ; answer 1
+swap56,15,1,0.03852783479271071,1,0.33333333333333337,; 0 xor 0 gives 0 ; answer 0,; 0 xor 1 gives 1 ; answer 1
+swap56,16,;,0.005351707572143798,1,0.375,0 xor 0 gives 0 ; answer 0,0 xor 1 gives 1 ; answer 1
+swap56,17,1,0.030449723484242068,1,0.4285714285714286,xor 0 gives 0 ; answer 0,xor 1 gives 1 ; answer 1
+swap56,18,xor,0.05676526410038278,1,0.5,0 gives 0 ; answer 0,1 gives 1 ; answer 1
+swap56,19,1,0.015967837402723464,1,0.4,gives 0 ; answer 0,gives 1 ; answer 1
+swap56,20,gives,0.07334067928198411,1,0.5,0 ; answer 0,1 ; answer 1
+swap56,21,0,0.03197729100420771,0,0.0,; answer 0,; answer 0
+swap56,22,;,0.04297386768136866,0,0.0,answer 0,answer 0
+swap56,23,answer,0.010495763250254333,0,0.0,0,0
+swap56,24,0,0.0,0,0.0,,
+swap67,0,,0.0003165434835083426,0,0.17391304347826086,pair BA 0 0 result 0 ; pair CD 0 0 result 0 ; final pair 0 0 result 0 ; answer 0,pair BA 1 0 result 1 ; pair CD 1 1 result 0 ; final pair 0 0 result 0 ; answer 0
+swap67,1,B,0.0004064766696314044,0,0.04347826086956519,0 xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor A 0 gives 0 ; C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,2,1,0.00042973548235392903,0,0.045454545454545414,xor A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor A 0 gives 0 ; C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,3,xor,0.003664350160404811,0,0.04761904761904767,A 0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,A 0 gives 0 ; C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,4,A,0.0,0,0.050000000000000044,0 gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 0 ; C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,5,0,0.0034902589315265083,0,0.052631578947368474,gives 0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 0 ; C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,6,gives,0.0,0,0.05555555555555558,0 ; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 ; C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,7,1,0.0005373743422508155,0,0.05882352941176472,; C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,; C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,8,;,0.0005373743422508155,0,0.0625,C 0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,C 0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,9,C,0.0,0,0.06666666666666665,0 xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 xor D 1 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,10,1,0.00034700837422080907,0,0.0,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,xor D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,11,xor,0.004452705623337189,0,0.0,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0,D 0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,12,D,0.008699333397104318,0,0.0,0 gives 0 ; 0 xor 0 gives 0 ; answer 0,0 gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,13,0,0.002058616229243533,0,0.0,gives 0 ; 0 xor 0 gives 0 ; answer 0,gives 0 ; 0 xor 0 gives 0 ; answer 0
+swap67,14,gives,0.005484673339444444,0,0.0,0 ; 0 xor 0 gives 0 ; answer 0,0 ; 0 xor 0 gives 0 ; answer 0
+swap67,15,1,0.010175033205689566,0,0.0,; 0 xor 0 gives 0 ; answer 0,; 0 xor 0 gives 0 ; answer 0
+swap67,16,;,0.009722627678896818,0,0.0,0 xor 0 gives 0 ; answer 0,0 xor 0 gives 0 ; answer 0
+swap67,17,1,0.0004932460354462945,0,0.0,xor 0 gives 0 ; answer 0,xor 0 gives 0 ; answer 0
+swap67,18,xor,0.00042973548235392903,0,0.0,0 gives 0 ; answer 0,0 gives 0 ; answer 0
+swap67,19,1,0.003345805307684104,0,0.0,gives 0 ; answer 0,gives 0 ; answer 0
+swap67,20,gives,0.0,0,0.0,0 ; answer 0,0 ; answer 0
+swap67,21,0,0.010495763250254333,0,0.0,; answer 0,; answer 0
+swap67,22,;,0.0,0,0.0,answer 0,answer 0
+swap67,23,answer,0.0,0,0.0,0,0
+swap67,24,0,0.0,0,0.0,,

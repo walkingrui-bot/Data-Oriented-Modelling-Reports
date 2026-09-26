@@ -1,0 +1,16 @@
+{
+  "vocab_size": 60,
+  "seq_len": 41,
+  "final_losses": {
+    "RP": 0.125961571931839,
+    "PR": 0.1261305958032608,
+    "micro": 0.12562914192676544
+  },
+  "traces": {
+    "RP": "<bos> case c3 think : I inspect the possibilities and begin with a tone of calmly . Then I keep several paths alive , and trace them forward . Finally I settle into a manner of carefully . answer d0 <eos>",
+    "PR": "<bos> case c3 think : I inspect the possibilities and begin with a tone of directly . Then I keep several paths alive , and trace them forward . Finally I settle into a manner of sharply . answer d9 <eos>",
+    "RP_to_PR_micro40": "<bos> case c3 think : I inspect the possibilities and begin with a tone of directly . Then I keep several paths alive , and trace them forward . Finally I settle into a manner of steadily . answer d3 <eos>"
+  },
+  "runtime_sec": 25.17147660255432,
+  "notes": "RP: mod5 cue early, parity cue late. PR: parity cue early, mod5 cue late. Micro starts RP then 40 PR updates. Every prefix samples 32 complete continuations from a cold start."
+}

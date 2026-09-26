@@ -1,0 +1,39 @@
+{
+  "n_models": 1000,
+  "n_correct": 8,
+  "n_offsets": 25,
+  "n_strict_groups": 1,
+  "selected": {
+    "seed": 14,
+    "history": "A",
+    "off2": 0.6,
+    "off3": 0.0,
+    "off4": 0.0,
+    "chain": "00|00|11|11",
+    "ans": "0011",
+    "G_frob": 2.327450202719067,
+    "orthogonal_energy_fraction": 0.7860624682374353,
+    "top_control_angle_from_semantic_deg": 62.450140204287564,
+    "semantic_axis_projection_to_U_rowspace": 0.7001118535049414
+  },
+  "U_singular_values": [
+    1.0341466298975361,
+    0.33105496944612706
+  ],
+  "G_singular_values": [
+    2.3272171823781798,
+    0.032933754428984365,
+    2.039240340035183e-17,
+    2.3286201470075137e-18
+  ],
+  "G_energy_fractions": [
+    0.9997997734380613,
+    0.00020022656193883673,
+    7.676725858958069e-35,
+    1.0010055968856033e-36
+  ],
+  "gradient_rowspace_relative_residual": 3.7202133458603103e-16,
+  "nullspace_max_abs_logit_delta": 0.0,
+  "nullspace_max_hidden_distance": 0.0,
+  "strongest_strict_control_ratio": 99.98058815688738
+}

@@ -1,0 +1,6 @@
+Master-record ID,Original working ID / standalone package,Experimental role
+COT-DIAGNOSTIC-025,REASONING-GENERATOR-018,"Calibrate closure, low-rank, replication and functional-surgery criteria for added reasoning generators"
+COT-CLOSURE-026,REASONING-GENERATOR-019,Apply the assay to trained self-generating GRUs and identify microscopic closure's representational scale
+DIRECT-COT-STATE-027,DIRECT-vs-CoT-STATE-020,"Separate Direct, blank computational depth and relational CoT"
+COT-BUDGET-GEOMETRY-028,COT-BUDGET-GEOMETRY-021,Express per-question CoT requirements as finite state-space work and action-dependent admissible sets
+STOPPING-GEOMETRY-029,STOPPING-GEOMETRY-022,Formulate CoT control as optimal stopping on predictive states

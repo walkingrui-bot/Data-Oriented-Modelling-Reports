@@ -1,0 +1,15 @@
+model,condition,answer_logit,answer_pred,delta_logit_vs_full
+history_A,full,-0.237086169461368,0,0.0
+history_A,neutralize_route_feedback,1.6226001387056976,1,1.8596863081670656
+history_A,neutralize_code_feedback,-0.9731072603092152,0,-0.7360210908478473
+history_A,neutralize_both_feedback,1.5337989402479846,1,1.7708851097093525
+history_A,reset_before_route_feedback,-1.1692220839445058,0,-0.9321359144831378
+history_A,reset_before_code_feedback,1.1417091969853028,1,1.3787953664466708
+history_A,reset_both_boundaries,1.1417091969853028,1,1.3787953664466708
+history_B,full,-1.4795616715552076,0,0.0
+history_B,neutralize_route_feedback,-1.4927742973703364,0,-0.013212625815128831
+history_B,neutralize_code_feedback,-1.50382829130063,0,-0.024266619745422435
+history_B,neutralize_both_feedback,-1.5112263742037437,0,-0.03166470264853616
+history_B,reset_before_route_feedback,1.4740644104892149,1,2.9536260820444227
+history_B,reset_before_code_feedback,0.9318176678812816,1,2.4113793394364893
+history_B,reset_both_boundaries,0.9318176678812816,1,2.4113793394364893

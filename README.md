@@ -1,5 +1,22 @@
 # Biosphere 3 — Public Reports
 
+## New report · Machine Learning Epidemiology and Case Dissection
+
+**Living Experimental Record v1.9 · 26 September 2026 · 147-page English report**
+
+Matched interventions connect learning history, predictive states and control. This integrated record adds two completed validation campaigns across miniature GRU, Transformer and Mamba models, exact finite-state checks, and a 30-model study of capacity, coverage and predictive-state geometry. Each conclusion carries its current evidence status.
+
+| Open the record | Contents |
+| --- | --- |
+| [Read the English report](machine-learning-epidemiology/REPORT_EN.md) | Full experimental record, methods, results and synthesis |
+| [Download the Word report](machine-learning-epidemiology/ML_Epidemiology_Living_Report_v1.9_EN.docx) | Formatted 147-page edition |
+| [Browse the evidence](machine-learning-epidemiology/EVIDENCE_INDEX.md) | 38 original experiment archives, expanded data, code, figures and source reports |
+| [Current findings](machine-learning-epidemiology/CURRENT_FINDINGS.md) | Supported findings, conditional results and mechanistic hypotheses |
+| [Model scale and predictive geometry](machine-learning-epidemiology/MODEL_SCALE_EN.md) | Capacity, training coverage, state separation and local control |
+| [Source availability](machine-learning-epidemiology/SOURCE_AVAILABILITY.md) | File-level provenance and campaign attachment status |
+
+[Collection guide](machine-learning-epidemiology/README.md) · [Chapter contents](machine-learning-epidemiology/CONTENTS.md) · [Changes in v1.9](machine-learning-epidemiology/CHANGELOG.md)
+
 ## Language Models Fit the Function That Generates the Answer
 
 **A language model is fitting the function that will generate its answer.**
@@ -115,6 +132,7 @@ Every entry below opens a complete dossier: how the experiment was run, what hap
 
 | Path | Contents |
 | --- | --- |
+| `machine-learning-epidemiology/` | Living Experimental Record v1.9, expanded evidence and provenance indexes |
 | `experiments/E01_.../` through `E39_.../` | English methods, results, interpretation, `experiment.json`, and `artifacts.csv` |
 | `evidence/` | Original code, results, protocols, figures, inputs, checkpoints, and traces, according to each experiment's archive |
 | `reports/` and `report_text/` | English reports in DOCX and Markdown |
@@ -122,7 +140,7 @@ Every entry below opens a complete dossier: how the experiment was run, what hap
 | `scripts/` and `audit/` | Integrity checks, source restoration, summary recalculation, and discussion provenance |
 | `source/` | Original synthesis records in their source language |
 
-Source evidence retains its original language and bytes. English dossiers connect those records to the current findings. The archive contains **512 original source artifacts**, including **63 Phase 2 evidence files**.
+Source evidence retains its original language and bytes. English dossiers connect those records to the current findings. The Phase 1 and Phase 2 archive contains **512 original source artifacts**, including **63 Phase 2 evidence files**. The Machine Learning Epidemiology collection has its own [evidence manifest](machine-learning-epidemiology/EVIDENCE_MANIFEST.csv) and [checksums](machine-learning-epidemiology/CHECKSUMS.sha256).
 
 ## Check the evidence
 
@@ -142,7 +160,7 @@ For the per-episode RTG outputs, `python scripts/prepare_evidence.py` restores t
 
 ## Versions, citation, and feedback
 
-The prepared initial release is **v0.1.0**, with a research snapshot dated **25 September 2026** and report editions revised **26 September 2026**. Phases 1 and 2 are collected here under **Biosphere 3 — Public Reports**.
+The prepared initial release is **v0.1.0**, with a research snapshot dated **25 September 2026** and report editions revised **26 September 2026**. Phases 1 and 2 and the **Machine Learning Epidemiology v1.9** record are collected here under **Biosphere 3 — Public Reports**; each record keeps its own version history.
 
 [Change history](CHANGELOG.md) · [Release notes](RELEASE_NOTES.md) · [Citation guidance](CITATION.md) · [Source and reuse notes](SOURCE_NOTES.md)
 

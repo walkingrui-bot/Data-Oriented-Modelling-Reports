@@ -1,0 +1,35 @@
+{
+  "architecture": {
+    "embedding_dim": 16,
+    "hidden_dim": 48,
+    "vocab_size": 11
+  },
+  "tasks": {
+    "parallel_cases": 16,
+    "reason_cases": 16,
+    "generated_tokens_per_case": 21
+  },
+  "three_seeds_exact_generation": [
+    32,
+    32,
+    32
+  ],
+  "mean_R_over_P_closure_RMSE": 1.017188165975117,
+  "R_over_P_range": [
+    1.0152849831925845,
+    1.0193434264972627
+  ],
+  "paired_r95": [
+    17,
+    13,
+    11
+  ],
+  "paired_stable_rank": [
+    3.025075526322595,
+    3.3509558260662873,
+    2.579257978295368
+  ],
+  "top2_mean_cross_seed_angle_deg": 80.32597863416359,
+  "exact_micro_closure_max_error": 0.0,
+  "candidate_surgery_selective": false
+}

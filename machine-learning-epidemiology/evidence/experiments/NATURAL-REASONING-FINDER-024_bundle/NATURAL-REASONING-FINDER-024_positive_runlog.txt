@@ -1,0 +1,36 @@
+0 0.0 0.20000000298023224 0.20000000298023224 0.5
+25 0.49000000953674316 0.5400000214576721 0.4675000011920929 0.4975000023841858
+50 0.6924999952316284 0.8999999761581421 0.6424999833106995 0.5649999976158142
+75 0.824999988079071 1.0 0.9725000262260437 0.6974999904632568
+100 0.9524999856948853 1.0 1.0 0.8974999785423279
+125 0.9975000023841858 1.0 1.0 0.9950000047683716
+150 1.0 1.0 1.0 1.0
+answer 1.0
+checkpoint  layer target       AMI
+     THINK      1    cmp  0.035596
+     THINK      1 branch  0.332693
+     THINK      1 answer  0.467333
+     THINK      2    cmp  0.016375
+     THINK      2 branch  0.353896
+     THINK      2 answer  0.434188
+     THINK      3    cmp -0.003415
+     THINK      3 branch  0.294641
+     THINK      3 answer  0.522704
+     CHECK      1    cmp  0.027693
+     CHECK      1 branch  0.292535
+     CHECK      1 answer  0.350193
+     CHECK      2    cmp -0.008126
+     CHECK      2 branch  0.325402
+     CHECK      2 answer  0.392926
+     CHECK      3    cmp  0.008515
+     CHECK      3 branch  0.295999
+     CHECK      3 answer  0.534651
+     FINAL      1    cmp -0.019804
+     FINAL      1 branch  0.264062
+     FINAL      1 answer  0.875045
+     FINAL      2    cmp -0.019804
+     FINAL      2 branch  0.264062
+     FINAL      2 answer  0.875045
+     FINAL      3    cmp -0.019804
+     FINAL      3 branch  0.272572
+     FINAL      3 answer  0.863617

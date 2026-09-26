@@ -1,0 +1,51 @@
+states                                                       392
+predictive_probes                                            259
+predictive_signature_dim                                    2072
+predictive_equivalence_classes                               392
+predictive_state_stable_rank                            8.758242
+predictive_state_participation_rank                    34.824418
+predictive_state_d95                                          64
+predictive_state_d99                                          91
+pca_dim_used                                                  91
+operator_mse_shift_mean                               203.364308
+operator_mse_affine_mean                                7.000214
+operator_improvement_vs_shift_mean                      0.963449
+composition_correct_mse_mean                           14.399152
+composition_reversed_mse_mean                         167.373169
+noncommuting_pair_mean_state_fraction                    0.68254
+noncommuting_pair_max_state_fraction                         1.0
+relation_movement_stable_rank_mean                      17.39165
+meta_movement_stable_rank_mean                         13.225815
+meta_energy_outside_top3_relation_subspace              0.947052
+relation_meta_principal_angles_deg          67.331|90.000|90.000
+reentry_same_cursor_fraction                                 1.0
+reentry_raw_state_equal_fraction                             0.0
+reentry_future_rms_mean                                 0.388045
+reentry_pca_distance_mean                              17.639242
+same_cursor_diff_memory_future_rms_mean                 0.388045
+same_cursor_diff_memory_min_rms_global                  0.388045
+store_reset_swap_answer_change_fraction                    0.875
+remove_store_answer_change_fraction                          1.0
+reasoning_trace_movement_stable_rank                    3.118222
+reasoning_trace_movement_d95                                  12
+reasoning_trace_top3_energy                             0.532181
+
+OPERATOR FIT
+ action     kind  n_train  n_test  mse_identity  mse_fixed_shift  mse_fixed_reset  mse_affine_operator  improvement_vs_shift  improvement_vs_reset
+   R+1 relation      317      75    221.235383       222.432528       170.236152             1.049348              0.995282              0.993836
+   R+2 relation      317      75    221.289665       222.413147       170.246720             0.835936              0.996242              0.995090
+   R*2 relation      317      75    183.678361       184.880541       170.090425            11.063196              0.940160              0.934957
+  RNEG relation      317      75    183.622755       184.460297       170.164226             1.599372              0.991329              0.990601
+ STORE     meta      317      75    260.552381       241.248703       147.545642            12.632763              0.947636              0.914381
+ RESET     meta      317      75    171.426553       164.750629       160.893923            14.820667              0.910042              0.907885
+
+MOVEMENT
+ action     kind  stable_rank  d95     top1     top3  mean_norm
+   R+1 relation    17.830641   41 0.056083 0.161239  14.742903
+   R+2 relation    17.828453   41 0.056090 0.161259  14.741948
+   R*2 relation    19.380331   33 0.051599 0.154796  12.640768
+  RNEG relation    14.527174   24 0.068837 0.206510  12.637028
+ STORE     meta     9.091965   43 0.109987 0.212725  15.410018
+ RESET     meta    17.359666   42 0.057605 0.129568  12.637996
+
+ANGLES [67.33130494 90.         90.        ] meta_out 0.9470521404743283

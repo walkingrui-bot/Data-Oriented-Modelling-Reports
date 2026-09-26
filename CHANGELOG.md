@@ -1,5 +1,13 @@
 # Change History
 
+## Machine Learning Epidemiology v1.9 — 26 September 2026
+
+- Published the integrated English Living Experimental Record in `machine-learning-epidemiology/` with a formatted Word edition and an online Markdown edition.
+- Added the completed cross-architecture replication and controlled validation reports, the 30-model capacity-by-coverage study, and a unified evidence-status ledger.
+- Published 38 original experiment archives together with their expanded code, data, figures, source documents and file-level provenance.
+- Recorded numerical corrections, metric definitions and availability of separately referenced campaign attachments.
+- Added reading routes on the repository homepage and retained the Phase 1 and Phase 2 report editions and experiment identities.
+
 ## v0.1.0 — prepared initial public snapshot
 
 Research snapshot: 25 September 2026.

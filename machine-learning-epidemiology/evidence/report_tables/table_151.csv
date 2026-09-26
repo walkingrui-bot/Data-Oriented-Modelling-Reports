@@ -1,0 +1,4 @@
+Mode,mean |final answer margin|,Working organization
+Direct,8.86,Early compression into answer-ready representations
+Blank,11.12,Extra recurrent depth advances computation with blank feedback
+CoT,11.97,Extra computation plus relational tokens reinjected as external working memory/control actions

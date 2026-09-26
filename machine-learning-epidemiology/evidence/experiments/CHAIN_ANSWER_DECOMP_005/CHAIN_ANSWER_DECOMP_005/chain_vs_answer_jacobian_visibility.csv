@@ -1,0 +1,3 @@
+observable,jacobian_rank,J_delta_theta_L2,delta_theta_rowspace_fraction,delta_theta_nullspace_fraction,top_singular_value
+route_logits_4Q,4,1.504262059763324,0.8569778076176403,0.51535331302987,3.799055957254565
+canonical_answer_logits_4Q,4,10.935580821912236,0.7823324598483664,0.6228610778236221,23.6190933147042

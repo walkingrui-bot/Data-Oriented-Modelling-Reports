@@ -1,0 +1,6 @@
+Q=00 observation,route stage,code stage
+D1,0.555563,0.374992
+D2,0.649525,0.044581
+|D1|×||U row1||,0.250764,0.169260
+|D2|×||U row2||,0.839101,0.057593
+Principal-axis distance,0.0241° from U row2,0.0322° from U row1

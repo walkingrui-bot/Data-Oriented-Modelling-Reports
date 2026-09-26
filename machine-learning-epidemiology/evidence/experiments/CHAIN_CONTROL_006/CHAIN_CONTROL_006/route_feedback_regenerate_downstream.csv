@@ -1,0 +1,7 @@
+model,condition,visible_route,actual_route_action,regenerated_code,code_logit,answer_logit,answer_pred,code_changed,answer_changed
+history_A,normal,1,1.0,0,-0.5093474708920975,-0.237086169461368,0,0,0
+history_A,route_neutral,1,0.0,1,0.8672089285384038,1.1521763473281887,1,1,1
+history_A,route_opposite,1,-1.0,1,1.4361473166530636,1.5611693804962272,1,1,1
+history_B,normal,0,-1.0,0,-1.3347847018944035,-1.4795616715552076,0,0,0
+history_B,route_neutral,0,0.0,0,-1.444443029072732,-1.4927742973703364,0,0,0
+history_B,route_opposite,0,1.0,0,-1.4948276320295417,-1.4975653319458684,0,0,0

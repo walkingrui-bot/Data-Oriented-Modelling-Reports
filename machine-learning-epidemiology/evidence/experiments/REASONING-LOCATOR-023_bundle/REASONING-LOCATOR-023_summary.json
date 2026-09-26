@@ -1,0 +1,78 @@
+{
+  "n_examples": 400,
+  "answer_accuracy": 1.0,
+  "fixed_visible_cot": "THINK CHECK FINAL",
+  "best_probes": {
+    "main": {
+      "layer": 1,
+      "checkpoint": "SEP",
+      "label": "main",
+      "accuracy": 0.8651685393258427,
+      "chance": 0.2
+    },
+    "branch": {
+      "layer": 1,
+      "checkpoint": "SEP",
+      "label": "branch",
+      "accuracy": 0.7865168539325843,
+      "chance": 0.2
+    },
+    "cmp": {
+      "layer": 2,
+      "checkpoint": "FINAL",
+      "label": "cmp",
+      "accuracy": 0.6067415730337079,
+      "chance": 0.3333333333333333
+    },
+    "answer": {
+      "layer": 3,
+      "checkpoint": "THINK",
+      "label": "answer",
+      "accuracy": 1.0,
+      "chance": 0.2
+    },
+    "corrected": {
+      "layer": 1,
+      "checkpoint": "SEP",
+      "label": "corrected",
+      "accuracy": 0.7865168539325843,
+      "chance": 0.5
+    }
+  },
+  "best_full_patch": {
+    "checkpoint": "FINAL",
+    "layer": 3,
+    "mode": "full",
+    "n": 408,
+    "donor_answer_adoption": 1.0,
+    "recipient_answer_change": 1.0
+  },
+  "best_cmp_subspace_patch": {
+    "checkpoint": "FINAL",
+    "layer": 3,
+    "mode": "cmp_subspace",
+    "n": 408,
+    "donor_answer_adoption": 0.35294117647058826,
+    "recipient_answer_change": 0.39215686274509803
+  },
+  "best_finder": {
+    "cmp": {
+      "checkpoint": "THINK",
+      "layer": 1,
+      "target": "cmp",
+      "AMI": -0.01089218299776905
+    },
+    "branch": {
+      "checkpoint": "FINAL",
+      "layer": 2,
+      "target": "branch",
+      "AMI": 0.2577104011080666
+    },
+    "answer": {
+      "checkpoint": "FINAL",
+      "layer": 2,
+      "target": "answer",
+      "AMI": 0.9706953717346459
+    }
+  }
+}

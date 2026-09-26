@@ -1,0 +1,7 @@
+seed,Scalar policy,accuracy,mean k,saving
+22022,confidence,98.44%,4.922,1.56%
+22022,abs_margin,98.44%,4.922,1.56%
+22022,radius_abs,100.00%,5.000,0.00%
+22023,confidence,96.88%,4.453,10.94%
+22023,abs_margin,96.88%,4.453,10.94%
+22023,radius_abs,100.00%,4.609,7.81%

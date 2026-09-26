@@ -1,0 +1,10 @@
+Sequence world,Stable rank,Participation rank,95% energy dim,Top-3 energy
+Original language,2.481,4.335,13,71.95%
+First-order Markov surrogate,2.490,4.351,13,71.82%
+Word-order shuffled,2.481,4.335,13,71.95%
+Within-word letters shuffled,1.410,1.959,13,80.46%
+IID same unigram,5.406,12.719,25,39.35%
+Synthetic 2D world,2.495,2.947,3,99.60%
+Synthetic 3D world,4.462,6.366,7,55.65%
+Synthetic 6D world,11.402,27.918,45,21.78%
+Letters only,2.261,4.124,9,69.76%

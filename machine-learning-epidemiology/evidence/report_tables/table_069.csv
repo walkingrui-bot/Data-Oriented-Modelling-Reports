@@ -1,0 +1,1 @@
+Objective: recompute embedding→hidden and embedding→future-answer geometry at each self-generated CoT stage to measure how dominant control directions evolve with hidden state.

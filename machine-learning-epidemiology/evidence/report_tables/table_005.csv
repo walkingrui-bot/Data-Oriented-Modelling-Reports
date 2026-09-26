@@ -1,0 +1,9 @@
+Total trainable parameters,10
+W,"2×2, totaling 4 parameters"
+u,2 parameters
+b,2 parameters
+v,2 parameters
+Hidden state,2 dimensions
+Token encoding,"Fixed, nontrainable parameters"
+Learning rate,0.05
+Training epochs,20

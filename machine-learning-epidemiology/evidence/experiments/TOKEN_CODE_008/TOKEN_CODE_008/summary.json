@@ -1,0 +1,207 @@
+{
+  "gauge_control": {
+    "a": 1.7,
+    "c": -0.43,
+    "max_hidden_diff": 4.720488264635378e-16,
+    "max_logit_diff": 5.828670879282072e-16
+  },
+  "frozen_sweep_thresholds": [
+    {
+      "seed": 14,
+      "history": "history_A",
+      "answer_zero_crossings": "0.358184;0.627103;0.935238",
+      "downstream_code_switches": "0.627500",
+      "max_abs_local_gain": 199.09762900046104,
+      "code_at_max_gain": 0.625,
+      "gain_sign": 1.0
+    },
+    {
+      "seed": 14,
+      "history": "history_B",
+      "answer_zero_crossings": "",
+      "downstream_code_switches": "",
+      "max_abs_local_gain": 1.2810038504838246,
+      "code_at_max_gain": -3.0,
+      "gain_sign": -1.0
+    },
+    {
+      "seed": 25,
+      "history": "history_A",
+      "answer_zero_crossings": "-2.675469;-2.502681;-2.296054",
+      "downstream_code_switches": "-2.502500",
+      "max_abs_local_gain": 239.17780083976743,
+      "code_at_max_gain": -2.5,
+      "gain_sign": 1.0
+    },
+    {
+      "seed": 25,
+      "history": "history_B",
+      "answer_zero_crossings": "0.405996;0.672483;0.919771",
+      "downstream_code_switches": "0.672500",
+      "max_abs_local_gain": 140.9497532033568,
+      "code_at_max_gain": 0.6699999999999999,
+      "gain_sign": 1.0
+    }
+  ],
+  "codebook_grid": {
+    "n_models": 144,
+    "n_endpoint_matched": 58,
+    "best_abs_gain_endpoint_matched": {
+      "seed": 14,
+      "history": "history_B",
+      "code0": -2.0,
+      "code1": 1.0,
+      "center": -0.5,
+      "span": 3.0,
+      "min_marker_distance": 0.30000000000000004,
+      "natural_endpoint_vector": "0011",
+      "local_route_code_gain": -3.50586280546683,
+      "finite_route_bit_flip_effect": -0.7667728029219645,
+      "control_J_fro": 3.6622905009943807,
+      "probe_answer_logit": -0.3793650812216469,
+      "route0": 0,
+      "code0_generated": 0
+    },
+    "marker_distance_abs_gain_correlation": -0.075995816611851,
+    "same_span2_stats": [
+      {
+        "seed": 14,
+        "history": "history_A",
+        "n": 3,
+        "gain_min": -3.350051340877957,
+        "gain_max": -0.05651464577427489,
+        "gain_abs_ratio": 59.27757831481626
+      },
+      {
+        "seed": 14,
+        "history": "history_B",
+        "n": 3,
+        "gain_min": -0.08793299431266018,
+        "gain_max": -0.01183432607465562,
+        "gain_abs_ratio": 7.430333907525757
+      },
+      {
+        "seed": 25,
+        "history": "history_A",
+        "n": 2,
+        "gain_min": -0.0978694589370832,
+        "gain_max": -0.014674301129780075,
+        "gain_abs_ratio": 6.669445997111041
+      },
+      {
+        "seed": 25,
+        "history": "history_B",
+        "n": 3,
+        "gain_min": -3.020579535864542,
+        "gain_max": -0.003988979313529484,
+        "gain_abs_ratio": 757.2311856475072
+      }
+    ]
+  },
+  "orientation_control": [
+    {
+      "seed": 14,
+      "history": "history_A",
+      "codebook": "normal",
+      "code0": -1,
+      "code1": 1,
+      "endpoint_vector": "0011",
+      "accuracy": 4,
+      "route_gain": -3.350051340877957,
+      "probe_answer_logit": -0.237086169461368,
+      "route": 1,
+      "code": 0
+    },
+    {
+      "seed": 14,
+      "history": "history_A",
+      "codebook": "reversed",
+      "code0": 1,
+      "code1": -1,
+      "endpoint_vector": "0010",
+      "accuracy": 3,
+      "route_gain": 0.022421240375436465,
+      "probe_answer_logit": -1.5719450532911665,
+      "route": 0,
+      "code": 0
+    },
+    {
+      "seed": 14,
+      "history": "history_B",
+      "codebook": "normal",
+      "code0": -1,
+      "code1": 1,
+      "endpoint_vector": "0011",
+      "accuracy": 4,
+      "route_gain": -0.02256387662269432,
+      "probe_answer_logit": -1.4795616715552076,
+      "route": 0,
+      "code": 0
+    },
+    {
+      "seed": 14,
+      "history": "history_B",
+      "codebook": "reversed",
+      "code0": 1,
+      "code1": -1,
+      "endpoint_vector": "0010",
+      "accuracy": 3,
+      "route_gain": 0.06483247187993868,
+      "probe_answer_logit": -1.3648163481932325,
+      "route": 0,
+      "code": 0
+    },
+    {
+      "seed": 25,
+      "history": "history_A",
+      "codebook": "normal",
+      "code0": -1,
+      "code1": 1,
+      "endpoint_vector": "0011",
+      "accuracy": 4,
+      "route_gain": -0.014674301129780075,
+      "probe_answer_logit": -1.3595506647979807,
+      "route": 0,
+      "code": 0
+    },
+    {
+      "seed": 25,
+      "history": "history_A",
+      "codebook": "reversed",
+      "code0": 1,
+      "code1": -1,
+      "endpoint_vector": "0101",
+      "accuracy": 2,
+      "route_gain": -0.005266884561469509,
+      "probe_answer_logit": -0.011007275450256142,
+      "route": 0,
+      "code": 0
+    },
+    {
+      "seed": 25,
+      "history": "history_B",
+      "codebook": "normal",
+      "code0": -1,
+      "code1": 1,
+      "endpoint_vector": "0011",
+      "accuracy": 4,
+      "route_gain": -3.020579535864542,
+      "probe_answer_logit": -0.2648241301122834,
+      "route": 1,
+      "code": 0
+    },
+    {
+      "seed": 25,
+      "history": "history_B",
+      "codebook": "reversed",
+      "code0": 1,
+      "code1": -1,
+      "endpoint_vector": "0101",
+      "accuracy": 2,
+      "route_gain": -0.004845089456115975,
+      "probe_answer_logit": -0.01292167034924866,
+      "route": 0,
+      "code": 0
+    }
+  ]
+}

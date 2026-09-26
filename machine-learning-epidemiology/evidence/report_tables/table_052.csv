@@ -1,0 +1,7 @@
+seed,History,"(code0,code1)",Center,Local route gain,Finite bit-flip effect,Self-generated Q00 chain
+14,history_A,"(-2,0)",-1,-0.056515,-0.055936,00
+14,history_A,"(-1.5,0.5)",-0.5,-0.151602,-0.059037,00
+14,history_A,"(-1,1)",0,-3.350051,+1.887306,10
+25,history_B,"(-2,0)",-1,-0.039418,-0.030813,00
+25,history_B,"(-1.5,0.5)",-0.5,-0.003989,-0.002616,00
+25,history_B,"(-1,1)",0,-3.020580,+1.394302,10

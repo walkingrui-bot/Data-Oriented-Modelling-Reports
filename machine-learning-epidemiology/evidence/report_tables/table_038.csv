@@ -1,0 +1,9 @@
+Model,Control axis,Fixed coordinate,Finite effect,Integrated local gain,Closure error
+history_A,route_-1_to_+1,code=-1,-1.887306,-1.887306,4.00e-15
+history_A,route_-1_to_+1,code=+1,-2.744479,-2.744479,-7.99e-15
+history_A,code_-1_to_+1,route=-1,-0.089051,-0.089051,2.08e-16
+history_A,code_-1_to_+1,route=+1,-0.946224,-0.946224,2.44e-15
+history_B,route_-1_to_+1,code=-1,-0.018004,-0.018004,9.02e-17
+history_B,route_-1_to_+1,code=+1,-0.006328,-0.006328,-1.73e-18
+history_B,code_-1_to_+1,route=-1,-0.036776,-0.036776,1.87e-16
+history_B,code_-1_to_+1,route=+1,-0.025100,-0.025100,9.02e-17

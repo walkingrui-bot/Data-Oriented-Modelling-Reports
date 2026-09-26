@@ -1,0 +1,1 @@
+Experimental question. Repeatedly measure the MICRO-001 k=2 CoT slice after each optimizer update and intervene on local order within each of 20 epochs to locate accumulation of history effects along training time.

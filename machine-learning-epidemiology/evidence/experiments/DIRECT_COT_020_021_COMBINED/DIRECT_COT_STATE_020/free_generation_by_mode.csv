@@ -1,0 +1,49 @@
+mode,bits,exact,answer_ok,gen
+D,0000,True,True,answer 0 <EOS>
+D,0001,True,True,answer 1 <EOS>
+D,0010,True,True,answer 1 <EOS>
+D,0011,True,True,answer 0 <EOS>
+D,0100,True,True,answer 1 <EOS>
+D,0101,True,True,answer 0 <EOS>
+D,0110,True,True,answer 0 <EOS>
+D,0111,True,True,answer 1 <EOS>
+D,1000,True,True,answer 1 <EOS>
+D,1001,True,True,answer 0 <EOS>
+D,1010,True,True,answer 0 <EOS>
+D,1011,True,True,answer 1 <EOS>
+D,1100,True,True,answer 0 <EOS>
+D,1101,True,True,answer 1 <EOS>
+D,1110,True,True,answer 1 <EOS>
+D,1111,True,True,answer 0 <EOS>
+B,0000,True,True,r1 X r2 X r3 X answer 0 <EOS>
+B,0001,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,0010,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,0011,True,True,r1 X r2 X r3 X answer 0 <EOS>
+B,0100,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,0101,True,True,r1 X r2 X r3 X answer 0 <EOS>
+B,0110,True,True,r1 X r2 X r3 X answer 0 <EOS>
+B,0111,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,1000,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,1001,True,True,r1 X r2 X r3 X answer 0 <EOS>
+B,1010,True,True,r1 X r2 X r3 X answer 0 <EOS>
+B,1011,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,1100,True,True,r1 X r2 X r3 X answer 0 <EOS>
+B,1101,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,1110,True,True,r1 X r2 X r3 X answer 1 <EOS>
+B,1111,True,True,r1 X r2 X r3 X answer 0 <EOS>
+C,0000,True,True,r1 0 r2 0 r3 0 answer 0 <EOS>
+C,0001,True,True,r1 0 r2 1 r3 1 answer 1 <EOS>
+C,0010,True,True,r1 0 r2 1 r3 1 answer 1 <EOS>
+C,0011,True,True,r1 0 r2 0 r3 0 answer 0 <EOS>
+C,0100,True,True,r1 1 r2 0 r3 1 answer 1 <EOS>
+C,0101,True,True,r1 1 r2 1 r3 0 answer 0 <EOS>
+C,0110,True,True,r1 1 r2 1 r3 0 answer 0 <EOS>
+C,0111,True,True,r1 1 r2 0 r3 1 answer 1 <EOS>
+C,1000,True,True,r1 1 r2 0 r3 1 answer 1 <EOS>
+C,1001,True,True,r1 1 r2 1 r3 0 answer 0 <EOS>
+C,1010,True,True,r1 1 r2 1 r3 0 answer 0 <EOS>
+C,1011,True,True,r1 1 r2 0 r3 1 answer 1 <EOS>
+C,1100,True,True,r1 0 r2 0 r3 0 answer 0 <EOS>
+C,1101,True,True,r1 0 r2 1 r3 1 answer 1 <EOS>
+C,1110,True,True,r1 0 r2 1 r3 1 answer 1 <EOS>
+C,1111,True,True,r1 0 r2 0 r3 0 answer 0 <EOS>

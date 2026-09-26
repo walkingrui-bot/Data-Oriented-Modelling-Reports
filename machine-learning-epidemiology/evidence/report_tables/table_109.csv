@@ -1,0 +1,6 @@
+Two-step model,Weighted final-state error
+Correct T_b(T_a(q)),0.273221
+Apply T_b to measured intermediate,0.264036
+Final-token reset only,0.311581
+Reverse T_a(T_b(q)),0.464116
+Add fixed token shifts,0.551509

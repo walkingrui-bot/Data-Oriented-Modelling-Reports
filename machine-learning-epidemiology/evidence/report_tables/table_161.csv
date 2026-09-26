@@ -1,0 +1,7 @@
+seed,policy,accuracy,mean relation steps,saving vs full
+22022,full fixed CoT,100%,5.000,0%
+22022,state-geometry stopper,96.875%,2.813,43.75%
+22022,oracle first-ready,100%,1.203,75.94%
+22023,full fixed CoT,100%,5.000,0%
+22023,state-geometry stopper,95.313%,2.891,42.19%
+22023,oracle first-ready,100%,0.813,83.75%

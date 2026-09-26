@@ -1,0 +1,8 @@
+File,Contents
+order_commutator_by_epoch.csv,Actual order differences and Hessian/gradient commutator predictions at 20 epoch starts
+training_token_to_parameter_derivatives.csv,Mixed derivatives of one SGD update of 10 parameters with respect to 36 training tokens
+training_token_to_cot_transfer.csv,Chain transfer from training tokens through parameters to 8 CoT slices
+exact_parameter_to_cot_decomposition.csv,Exact ten-parameter finite-difference CoT decomposition between the final histories
+epoch_event_to_final_cot_causal_trace.csv,20 local historical events through subsequent training to 8 final CoT slices
+cot_tangent_delta_base_minus_swap.csv,Difference between two history-conditioned CoT tangent maps
+MATH_CAUSAL_TRACE_003.md,Mathematical description and key results

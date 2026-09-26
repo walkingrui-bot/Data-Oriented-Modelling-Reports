@@ -1,0 +1,13 @@
+Supervision,teacher d,Median global r95,Seed range,teacher-subspace energy,Mean principal angle,bit accuracy
+hard,1,1.0,1–1,0.9736,2.170°,0.9966
+hard,2,3.5,3–4,0.8318,15.533°,0.9972
+hard,3,4.5,4–5,0.8058,13.127°,0.9927
+hard,4,4.0,4–4,0.9628,3.959°,0.9879
+hard,5,5.0,5–5,0.9808,1.622°,0.9775
+hard,6,5.0,5–5,1.0000,0.003°,0.9940
+numeric_margin,1,1.0,1–1,0.9964,0.415°,0.9904
+numeric_margin,2,2.0,2–2,0.9950,0.938°,0.9812
+numeric_margin,3,3.0,3–3,0.9930,0.831°,0.9824
+numeric_margin,4,4.0,4–4,0.9943,0.322°,0.9874
+numeric_margin,5,5.0,5–5,0.9983,0.150°,0.9837
+numeric_margin,6,6.0,6–6,1.0000,0.008°,0.9768

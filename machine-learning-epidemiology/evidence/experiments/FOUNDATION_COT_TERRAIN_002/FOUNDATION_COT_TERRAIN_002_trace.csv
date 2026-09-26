@@ -1,0 +1,301 @@
+model_id,unique_records,interleave_chunk,k,added_token,greedy_answer,greedy_completion,p_correct,edit_to_canonical
+N32_chunk16,32,16,0,,1.0,B 0 xor A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.5,0.29166666666666663
+N32_chunk16,32,16,1,B,1.0,0 xor A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.5833333333333334,0.30434782608695654
+N32_chunk16,32,16,2,1,1.0,xor A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.4166666666666667,0.2727272727272727
+N32_chunk16,32,16,3,xor,1.0,A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.5,0.2857142857142857
+N32_chunk16,32,16,4,A,1.0,1 gives 1 ; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.4166666666666667,0.30000000000000004
+N32_chunk16,32,16,5,0,1.0,gives 0 ; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.5,0.3157894736842105
+N32_chunk16,32,16,6,gives,1.0,0 ; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.5833333333333334,0.33333333333333337
+N32_chunk16,32,16,7,1,1.0,; C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.5,0.2941176470588235
+N32_chunk16,32,16,8,;,1.0,C 0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.6666666666666666,0.3125
+N32_chunk16,32,16,9,C,1.0,0 xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.4166666666666667,0.33333333333333337
+N32_chunk16,32,16,10,1,1.0,xor D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.5,0.2857142857142857
+N32_chunk16,32,16,11,xor,1.0,D 1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.75,0.3076923076923077
+N32_chunk16,32,16,12,D,1.0,1 gives 1 ; combine 0 1 gives 1 ; answer 1,0.3333333333333333,0.33333333333333337
+N32_chunk16,32,16,13,0,1.0,gives 1 ; combine 0 1 gives 1 ; answer 1,0.5833333333333334,0.2727272727272727
+N32_chunk16,32,16,14,gives,1.0,1 ; combine 0 1 gives 1 ; answer 1,0.4166666666666667,0.30000000000000004
+N32_chunk16,32,16,15,1,1.0,; combine 0 1 gives 1 ; answer 1,0.5,0.33333333333333337
+N32_chunk16,32,16,16,;,1.0,combine 0 1 gives 1 ; answer 1,0.6666666666666666,0.375
+N32_chunk16,32,16,17,combine,1.0,0 1 gives 1 ; answer 1,0.3333333333333333,0.4285714285714286
+N32_chunk16,32,16,18,1,1.0,1 gives 1 ; answer 1,0.5833333333333334,0.33333333333333337
+N32_chunk16,32,16,19,1,1.0,gives 1 ; answer 1,0.75,0.4
+N32_chunk16,32,16,20,gives,1.0,1 ; answer 1,0.4166666666666667,0.5
+N32_chunk16,32,16,21,0,0.0,; answer 0,0.25,0.0
+N32_chunk16,32,16,22,;,0.0,answer 0,0.5,0.0
+N32_chunk16,32,16,23,answer,0.0,0,0.5833333333333334,0.0
+N32_chunk16,32,16,24,0,,,,0.0
+N32_chunk4,32,4,0,,0.0,take B 1 A 1 -> 1 ; take C 1 D 1 -> 1 ; combine 0 1 gives 0 ; answer 0,0.6666666666666666,0.29166666666666663
+N32_chunk4,32,4,1,B,0.0,1 xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.5833333333333334,0.08695652173913049
+N32_chunk4,32,4,2,1,0.0,xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.4166666666666667,0.09090909090909094
+N32_chunk4,32,4,3,xor,0.0,A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.5,0.09523809523809523
+N32_chunk4,32,4,4,A,0.0,1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.5,0.09999999999999998
+N32_chunk4,32,4,5,0,0.0,gives 1 ; C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.10526315789473684
+N32_chunk4,32,4,6,gives,0.0,1 ; C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.11111111111111116
+N32_chunk4,32,4,7,1,0.0,; C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.11764705882352944
+N32_chunk4,32,4,8,;,0.0,C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.6666666666666666,0.125
+N32_chunk4,32,4,9,C,0.0,1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.4166666666666667,0.1333333333333333
+N32_chunk4,32,4,10,1,0.0,xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.1428571428571429
+N32_chunk4,32,4,11,xor,0.0,D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5833333333333334,0.15384615384615385
+N32_chunk4,32,4,12,D,0.0,1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.4166666666666667,0.16666666666666663
+N32_chunk4,32,4,13,0,0.0,gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.09090909090909094
+N32_chunk4,32,4,14,gives,0.0,1 ; combine 0 1 gives 0 ; answer 0,0.4166666666666667,0.09999999999999998
+N32_chunk4,32,4,15,1,0.0,; combine 0 1 gives 0 ; answer 0,0.5833333333333334,0.11111111111111116
+N32_chunk4,32,4,16,;,0.0,combine 0 1 gives 0 ; answer 0,0.6666666666666666,0.125
+N32_chunk4,32,4,17,combine,0.0,0 1 gives 0 ; answer 0,0.25,0.1428571428571429
+N32_chunk4,32,4,18,1,1.0,1 gives 1 ; answer 1,0.5,0.33333333333333337
+N32_chunk4,32,4,19,1,1.0,gives 1 ; answer 1,0.75,0.4
+N32_chunk4,32,4,20,gives,1.0,1 ; answer 1,0.5,0.5
+N32_chunk4,32,4,21,0,0.0,; answer 0,0.25,0.0
+N32_chunk4,32,4,22,;,0.0,answer 0,0.5,0.0
+N32_chunk4,32,4,23,answer,0.0,0,0.5833333333333334,0.0
+N32_chunk4,32,4,24,0,,,,0.0
+N32_chunk1,32,1,0,,0.0,take B 1 A 1 -> 1 ; take C 1 D 1 -> 1 ; combine 0 1 gives 0 ; answer 0,0.6666666666666666,0.29166666666666663
+N32_chunk1,32,1,1,B,0.0,1 xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.5833333333333334,0.08695652173913049
+N32_chunk1,32,1,2,1,0.0,xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.4166666666666667,0.09090909090909094
+N32_chunk1,32,1,3,xor,0.0,A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.5,0.09523809523809523
+N32_chunk1,32,1,4,A,0.0,1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 0 ; answer 0,0.5,0.09999999999999998
+N32_chunk1,32,1,5,0,0.0,gives 1 ; C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.10526315789473684
+N32_chunk1,32,1,6,gives,0.0,1 ; C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.11111111111111116
+N32_chunk1,32,1,7,1,0.0,; C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.11764705882352944
+N32_chunk1,32,1,8,;,0.0,C 1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.6666666666666666,0.125
+N32_chunk1,32,1,9,C,0.0,1 xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.4166666666666667,0.1333333333333333
+N32_chunk1,32,1,10,1,0.0,xor D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.1428571428571429
+N32_chunk1,32,1,11,xor,0.0,D 1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.5833333333333334,0.15384615384615385
+N32_chunk1,32,1,12,D,0.0,1 gives 1 ; combine 0 1 gives 0 ; answer 0,0.4166666666666667,0.16666666666666663
+N32_chunk1,32,1,13,0,0.0,gives 1 ; combine 0 1 gives 0 ; answer 0,0.5,0.09090909090909094
+N32_chunk1,32,1,14,gives,0.0,1 ; combine 0 1 gives 0 ; answer 0,0.4166666666666667,0.09999999999999998
+N32_chunk1,32,1,15,1,0.0,; combine 0 1 gives 0 ; answer 0,0.5833333333333334,0.11111111111111116
+N32_chunk1,32,1,16,;,0.0,combine 0 1 gives 0 ; answer 0,0.6666666666666666,0.125
+N32_chunk1,32,1,17,combine,0.0,0 1 gives 0 ; answer 0,0.25,0.1428571428571429
+N32_chunk1,32,1,18,1,1.0,1 gives 1 ; answer 1,0.5,0.33333333333333337
+N32_chunk1,32,1,19,1,1.0,gives 1 ; answer 1,0.75,0.4
+N32_chunk1,32,1,20,gives,1.0,1 ; answer 1,0.5,0.5
+N32_chunk1,32,1,21,0,0.0,; answer 0,0.25,0.0
+N32_chunk1,32,1,22,;,0.0,answer 0,0.5,0.0
+N32_chunk1,32,1,23,answer,0.0,0,0.5833333333333334,0.0
+N32_chunk1,32,1,24,0,,,,0.0
+N64_chunk16,64,16,0,,1.0,compute BA 0 1 -> 1 ; compute CD 1 1 -> 0 ; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.7391304347826086
+N64_chunk16,64,16,1,B,1.0,0 xor A 0 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5,0.21739130434782605
+N64_chunk16,64,16,2,1,1.0,xor A 0 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.18181818181818177
+N64_chunk16,64,16,3,xor,1.0,A 0 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.19047619047619047
+N64_chunk16,64,16,4,A,1.0,0 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.19999999999999996
+N64_chunk16,64,16,5,0,1.0,gives 1 ; C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.21052631578947367
+N64_chunk16,64,16,6,gives,1.0,1 ; C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.2222222222222222
+N64_chunk16,64,16,7,1,1.0,; C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5,0.23529411764705888
+N64_chunk16,64,16,8,;,1.0,C 1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.75,0.25
+N64_chunk16,64,16,9,C,1.0,1 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.3333333333333333,0.2666666666666667
+N64_chunk16,64,16,10,1,1.0,xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5,0.2857142857142857
+N64_chunk16,64,16,11,xor,1.0,D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.3076923076923077
+N64_chunk16,64,16,12,D,1.0,1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.3333333333333333,0.33333333333333337
+N64_chunk16,64,16,13,0,1.0,gives 1 ; combine 1 0 gives 1 ; answer 1,0.5,0.2727272727272727
+N64_chunk16,64,16,14,gives,1.0,1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.30000000000000004
+N64_chunk16,64,16,15,1,1.0,; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.33333333333333337
+N64_chunk16,64,16,16,;,1.0,combine 1 0 gives 1 ; answer 1,0.5,0.375
+N64_chunk16,64,16,17,combine,1.0,1 0 gives 1 ; answer 1,0.25,0.4285714285714286
+N64_chunk16,64,16,18,1,1.0,0 gives 1 ; answer 1,0.5,0.5
+N64_chunk16,64,16,19,1,1.0,gives 1 ; answer 1,0.6666666666666666,0.4
+N64_chunk16,64,16,20,gives,1.0,1 ; answer 1,0.5,0.5
+N64_chunk16,64,16,21,0,0.0,; answer 0,0.25,0.0
+N64_chunk16,64,16,22,;,0.0,answer 0,0.5,0.0
+N64_chunk16,64,16,23,answer,0.0,0,0.4166666666666667,0.0
+N64_chunk16,64,16,24,0,,,,0.0
+N64_chunk4,64,4,0,,0.0,pair BA 0 0 result 0 ; pair CD 0 0 result 1 ; combine 1 1 gives 1 ; answer 0,0.75,0.5217391304347826
+N64_chunk4,64,4,1,B,0.0,1 xor A 1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.26086956521739135
+N64_chunk4,64,4,2,1,0.0,xor A 1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.4166666666666667,0.2727272727272727
+N64_chunk4,64,4,3,xor,0.0,A 1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.2857142857142857
+N64_chunk4,64,4,4,A,0.0,1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.4166666666666667,0.30000000000000004
+N64_chunk4,64,4,5,0,0.0,gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.4166666666666667,0.26315789473684215
+N64_chunk4,64,4,6,gives,0.0,0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.2777777777777778
+N64_chunk4,64,4,7,1,0.0,; C 1 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.17647058823529416
+N64_chunk4,64,4,8,;,0.0,C 1 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.1875
+N64_chunk4,64,4,9,C,0.0,1 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.3333333333333333,0.19999999999999996
+N64_chunk4,64,4,10,1,0.0,xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.2142857142857143
+N64_chunk4,64,4,11,xor,0.0,D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.23076923076923073
+N64_chunk4,64,4,12,D,0.0,1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.25
+N64_chunk4,64,4,13,0,0.0,gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.18181818181818177
+N64_chunk4,64,4,14,gives,0.0,0 ; combine 1 1 gives 1 ; answer 0,0.5,0.19999999999999996
+N64_chunk4,64,4,15,1,0.0,; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.11111111111111116
+N64_chunk4,64,4,16,;,0.0,combine 1 1 gives 1 ; answer 0,0.5,0.125
+N64_chunk4,64,4,17,combine,0.0,1 1 gives 1 ; answer 0,0.25,0.1428571428571429
+N64_chunk4,64,4,18,1,0.0,1 gives 1 ; answer 0,0.5,0.16666666666666663
+N64_chunk4,64,4,19,1,0.0,gives 1 ; answer 0,0.6666666666666666,0.19999999999999996
+N64_chunk4,64,4,20,gives,0.0,1 ; answer 0,0.5833333333333334,0.25
+N64_chunk4,64,4,21,0,0.0,; answer 0,0.25,0.0
+N64_chunk4,64,4,22,;,0.0,answer 0,0.5,0.0
+N64_chunk4,64,4,23,answer,0.0,0,0.4166666666666667,0.0
+N64_chunk4,64,4,24,0,,,,0.0
+N64_chunk1,64,1,0,,0.0,pair BA 0 0 result 0 ; pair CD 0 0 result 1 ; combine 1 1 gives 1 ; answer 0,0.75,0.5217391304347826
+N64_chunk1,64,1,1,B,0.0,1 xor A 1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.26086956521739135
+N64_chunk1,64,1,2,1,0.0,xor A 1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.4166666666666667,0.2727272727272727
+N64_chunk1,64,1,3,xor,0.0,A 1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.2857142857142857
+N64_chunk1,64,1,4,A,0.0,1 gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.4166666666666667,0.30000000000000004
+N64_chunk1,64,1,5,0,0.0,gives 0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.4166666666666667,0.26315789473684215
+N64_chunk1,64,1,6,gives,0.0,0 ; C 0 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.2777777777777778
+N64_chunk1,64,1,7,1,0.0,; C 1 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.17647058823529416
+N64_chunk1,64,1,8,;,0.0,C 1 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.1875
+N64_chunk1,64,1,9,C,0.0,1 xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.3333333333333333,0.19999999999999996
+N64_chunk1,64,1,10,1,0.0,xor D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.2142857142857143
+N64_chunk1,64,1,11,xor,0.0,D 1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.23076923076923073
+N64_chunk1,64,1,12,D,0.0,1 gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.25
+N64_chunk1,64,1,13,0,0.0,gives 0 ; combine 1 1 gives 1 ; answer 0,0.5,0.18181818181818177
+N64_chunk1,64,1,14,gives,0.0,0 ; combine 1 1 gives 1 ; answer 0,0.5,0.19999999999999996
+N64_chunk1,64,1,15,1,0.0,; combine 1 1 gives 1 ; answer 0,0.5833333333333334,0.11111111111111116
+N64_chunk1,64,1,16,;,0.0,combine 1 1 gives 1 ; answer 0,0.5,0.125
+N64_chunk1,64,1,17,combine,0.0,1 1 gives 1 ; answer 0,0.25,0.1428571428571429
+N64_chunk1,64,1,18,1,0.0,1 gives 1 ; answer 0,0.5,0.16666666666666663
+N64_chunk1,64,1,19,1,0.0,gives 1 ; answer 0,0.6666666666666666,0.19999999999999996
+N64_chunk1,64,1,20,gives,0.0,1 ; answer 0,0.5833333333333334,0.25
+N64_chunk1,64,1,21,0,0.0,; answer 0,0.25,0.0
+N64_chunk1,64,1,22,;,0.0,answer 0,0.5,0.0
+N64_chunk1,64,1,23,answer,0.0,0,0.4166666666666667,0.0
+N64_chunk1,64,1,24,0,,,,0.0
+N128_chunk16,128,16,0,,0.0,firstpair 0 1 yields 0 ; secondpair 0 1 yields 0 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.6818181818181819
+N128_chunk16,128,16,1,B,0.0,1 xor A 0 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.9166666666666666,0.17391304347826086
+N128_chunk16,128,16,2,1,0.0,xor A 0 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.18181818181818177
+N128_chunk16,128,16,3,xor,0.0,A 0 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.19047619047619047
+N128_chunk16,128,16,4,A,0.0,0 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.19999999999999996
+N128_chunk16,128,16,5,0,0.0,gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5833333333333334,0.21052631578947367
+N128_chunk16,128,16,6,gives,0.0,1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.2222222222222222
+N128_chunk16,128,16,7,1,0.0,; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.3333333333333333,0.23529411764705888
+N128_chunk16,128,16,8,;,0.0,C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.6666666666666666,0.25
+N128_chunk16,128,16,9,C,0.0,0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.2666666666666667
+N128_chunk16,128,16,10,1,0.0,xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.2142857142857143
+N128_chunk16,128,16,11,xor,0.0,D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.23076923076923073
+N128_chunk16,128,16,12,D,0.0,1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.25
+N128_chunk16,128,16,13,0,0.0,gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.18181818181818177
+N128_chunk16,128,16,14,gives,0.0,1 ; combine 1 0 gives 1 ; answer 0,0.5,0.19999999999999996
+N128_chunk16,128,16,15,1,0.0,; combine 1 0 gives 1 ; answer 0,0.6666666666666666,0.2222222222222222
+N128_chunk16,128,16,16,;,0.0,combine 1 0 gives 1 ; answer 0,0.5,0.25
+N128_chunk16,128,16,17,combine,0.0,1 0 gives 1 ; answer 0,0.25,0.2857142857142857
+N128_chunk16,128,16,18,1,0.0,0 gives 1 ; answer 0,0.5,0.33333333333333337
+N128_chunk16,128,16,19,1,0.0,gives 1 ; answer 0,0.8333333333333334,0.19999999999999996
+N128_chunk16,128,16,20,gives,0.0,1 ; answer 0,0.5833333333333334,0.25
+N128_chunk16,128,16,21,0,0.0,; answer 0,0.25,0.0
+N128_chunk16,128,16,22,;,0.0,answer 0,0.5,0.0
+N128_chunk16,128,16,23,answer,0.0,0,0.4166666666666667,0.0
+N128_chunk16,128,16,24,0,,,,0.0
+N128_chunk4,128,4,0,,1.0,BA check 1 xor 1 equals 1 ; CD check 1 xor 1 equals 1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.45833333333333337
+N128_chunk4,128,4,1,B,1.0,1 xor A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.6666666666666666,0.26086956521739135
+N128_chunk4,128,4,2,1,1.0,xor A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.2727272727272727
+N128_chunk4,128,4,3,xor,1.0,A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.6666666666666666,0.2857142857142857
+N128_chunk4,128,4,4,A,1.0,1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.30000000000000004
+N128_chunk4,128,4,5,0,1.0,gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.3333333333333333,0.26315789473684215
+N128_chunk4,128,4,6,gives,1.0,1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5,0.2777777777777778
+N128_chunk4,128,4,7,1,1.0,; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.2941176470588235
+N128_chunk4,128,4,8,;,1.0,C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.3125
+N128_chunk4,128,4,9,C,1.0,0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.25,0.33333333333333337
+N128_chunk4,128,4,10,1,1.0,xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5,0.2857142857142857
+N128_chunk4,128,4,11,xor,1.0,D 1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.5833333333333334,0.3076923076923077
+N128_chunk4,128,4,12,D,1.0,1 gives 1 ; combine 1 0 gives 1 ; answer 1,0.25,0.33333333333333337
+N128_chunk4,128,4,13,0,1.0,gives 1 ; combine 1 0 gives 1 ; answer 1,0.5,0.2727272727272727
+N128_chunk4,128,4,14,gives,1.0,1 ; combine 1 0 gives 1 ; answer 1,0.4166666666666667,0.30000000000000004
+N128_chunk4,128,4,15,1,1.0,; combine 1 0 gives 1 ; answer 1,0.5,0.33333333333333337
+N128_chunk4,128,4,16,;,1.0,combine 1 0 gives 1 ; answer 1,0.5,0.375
+N128_chunk4,128,4,17,combine,1.0,1 0 gives 1 ; answer 1,0.25,0.4285714285714286
+N128_chunk4,128,4,18,1,1.0,0 gives 1 ; answer 1,0.5,0.5
+N128_chunk4,128,4,19,1,1.0,gives 1 ; answer 1,0.6666666666666666,0.4
+N128_chunk4,128,4,20,gives,1.0,1 ; answer 1,0.5,0.5
+N128_chunk4,128,4,21,0,1.0,; answer 1,0.25,0.33333333333333337
+N128_chunk4,128,4,22,;,1.0,answer 1,0.5,0.5
+N128_chunk4,128,4,23,answer,1.0,1,0.3333333333333333,1.0
+N128_chunk4,128,4,24,0,,,,0.0
+N128_chunk1,128,1,0,,1.0,compute BA 1 1 -> 1 ; compute CD 0 0 -> 0 ; combine 1 0 gives 1 ; answer 1,0.3333333333333333,0.7391304347826086
+N128_chunk1,128,1,1,B,1.0,1 xor A 1 gives 1 ; C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.6666666666666666,0.17391304347826086
+N128_chunk1,128,1,2,1,1.0,xor A 1 gives 1 ; C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.18181818181818177
+N128_chunk1,128,1,3,xor,1.0,A 1 gives 1 ; C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.75,0.19047619047619047
+N128_chunk1,128,1,4,A,1.0,1 gives 1 ; C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.19999999999999996
+N128_chunk1,128,1,5,0,1.0,gives 1 ; C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.1578947368421053
+N128_chunk1,128,1,6,gives,1.0,1 ; C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.16666666666666663
+N128_chunk1,128,1,7,1,1.0,; C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.17647058823529416
+N128_chunk1,128,1,8,;,1.0,C 0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.1875
+N128_chunk1,128,1,9,C,1.0,0 xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.19999999999999996
+N128_chunk1,128,1,10,1,1.0,xor D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.1428571428571429
+N128_chunk1,128,1,11,xor,1.0,D 0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.15384615384615385
+N128_chunk1,128,1,12,D,1.0,0 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.16666666666666663
+N128_chunk1,128,1,13,0,1.0,gives 1 ; combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.18181818181818177
+N128_chunk1,128,1,14,gives,1.0,1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.19999999999999996
+N128_chunk1,128,1,15,1,1.0,; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.2222222222222222
+N128_chunk1,128,1,16,;,1.0,combine 1 1 gives 1 ; answer 1,0.5,0.25
+N128_chunk1,128,1,17,combine,1.0,1 1 gives 1 ; answer 1,0.25,0.2857142857142857
+N128_chunk1,128,1,18,1,1.0,1 gives 1 ; answer 1,0.5,0.33333333333333337
+N128_chunk1,128,1,19,1,1.0,gives 1 ; answer 1,0.6666666666666666,0.4
+N128_chunk1,128,1,20,gives,1.0,1 ; answer 1,0.5,0.5
+N128_chunk1,128,1,21,0,1.0,; answer 1,0.25,0.33333333333333337
+N128_chunk1,128,1,22,;,1.0,answer 1,0.5,0.5
+N128_chunk1,128,1,23,answer,1.0,1,0.3333333333333333,1.0
+N128_chunk1,128,1,24,0,,,,0.0
+N256_chunk16,256,16,0,,0.0,compute BA 0 1 -> 0 ; compute BA 0 0 -> 0 ; combine 1 0 gives 1 ; answer 0,0.5833333333333334,0.6956521739130435
+N256_chunk16,256,16,1,B,0.0,0 xor A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.26086956521739135
+N256_chunk16,256,16,2,1,0.0,xor A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.75,0.2272727272727273
+N256_chunk16,256,16,3,xor,0.0,A 1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.23809523809523814
+N256_chunk16,256,16,4,A,0.0,1 gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.25
+N256_chunk16,256,16,5,0,0.0,gives 1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.21052631578947367
+N256_chunk16,256,16,6,gives,0.0,1 ; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5833333333333334,0.2222222222222222
+N256_chunk16,256,16,7,1,0.0,; C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.5833333333333334,0.23529411764705888
+N256_chunk16,256,16,8,;,0.0,C 0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.3333333333333333,0.25
+N256_chunk16,256,16,9,C,0.0,0 xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.2666666666666667
+N256_chunk16,256,16,10,1,0.0,xor D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.3333333333333333,0.2142857142857143
+N256_chunk16,256,16,11,xor,0.0,D 1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.23076923076923073
+N256_chunk16,256,16,12,D,0.0,1 gives 1 ; combine 1 0 gives 1 ; answer 0,0.4166666666666667,0.25
+N256_chunk16,256,16,13,0,0.0,gives 1 ; combine 1 0 gives 1 ; answer 0,0.5,0.18181818181818177
+N256_chunk16,256,16,14,gives,0.0,1 ; combine 1 0 gives 1 ; answer 0,0.5,0.19999999999999996
+N256_chunk16,256,16,15,1,0.0,; combine 1 0 gives 1 ; answer 0,0.6666666666666666,0.2222222222222222
+N256_chunk16,256,16,16,;,0.0,combine 1 0 gives 1 ; answer 0,0.5833333333333334,0.25
+N256_chunk16,256,16,17,combine,0.0,1 0 gives 1 ; answer 0,0.25,0.2857142857142857
+N256_chunk16,256,16,18,1,0.0,0 gives 1 ; answer 0,0.5,0.33333333333333337
+N256_chunk16,256,16,19,1,0.0,gives 1 ; answer 0,0.6666666666666666,0.19999999999999996
+N256_chunk16,256,16,20,gives,0.0,1 ; answer 0,0.5833333333333334,0.25
+N256_chunk16,256,16,21,0,0.0,; answer 0,0.25,0.0
+N256_chunk16,256,16,22,;,0.0,answer 0,0.5,0.0
+N256_chunk16,256,16,23,answer,0.0,0,0.4166666666666667,0.0
+N256_chunk16,256,16,24,0,,,,0.0
+N256_chunk4,256,4,0,,1.0,compute CD 1 1 -> 1 ; compute BA 1 1 -> 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.4782608695652174
+N256_chunk4,256,4,1,B,1.0,1 xor A 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.25,0.3157894736842105
+N256_chunk4,256,4,2,1,1.0,xor A 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.33333333333333337
+N256_chunk4,256,4,3,xor,1.0,A 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.3529411764705882
+N256_chunk4,256,4,4,A,1.0,1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.0,0.375
+N256_chunk4,256,4,5,0,1.0,gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.4
+N256_chunk4,256,4,6,gives,1.0,1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.4285714285714286
+N256_chunk4,256,4,7,1,1.0,; combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.46153846153846156
+N256_chunk4,256,4,8,;,1.0,combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.5
+N256_chunk4,256,4,9,C,1.0,1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.19999999999999996
+N256_chunk4,256,4,10,1,1.0,xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.2142857142857143
+N256_chunk4,256,4,11,xor,1.0,D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.23076923076923073
+N256_chunk4,256,4,12,D,1.0,1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.16666666666666666,0.25
+N256_chunk4,256,4,13,0,1.0,gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.18181818181818177
+N256_chunk4,256,4,14,gives,1.0,1 ; combine 1 1 gives 1 ; answer 1,0.25,0.19999999999999996
+N256_chunk4,256,4,15,1,1.0,; combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.2222222222222222
+N256_chunk4,256,4,16,;,1.0,combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.25
+N256_chunk4,256,4,17,combine,1.0,1 1 gives 1 ; answer 1,0.25,0.2857142857142857
+N256_chunk4,256,4,18,1,1.0,1 gives 1 ; answer 1,0.5,0.33333333333333337
+N256_chunk4,256,4,19,1,1.0,gives 1 ; answer 1,0.6666666666666666,0.4
+N256_chunk4,256,4,20,gives,1.0,1 ; answer 1,0.4166666666666667,0.5
+N256_chunk4,256,4,21,0,1.0,; answer 1,0.25,0.33333333333333337
+N256_chunk4,256,4,22,;,1.0,answer 1,0.4166666666666667,0.5
+N256_chunk4,256,4,23,answer,1.0,1,0.3333333333333333,1.0
+N256_chunk4,256,4,24,0,,,,0.0
+N256_chunk1,256,1,0,,1.0,relation BA 1 1 gives 1 ; relation CD 1 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.3913043478260869
+N256_chunk1,256,1,1,B,1.0,1 xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.17391304347826086
+N256_chunk1,256,1,2,1,1.0,xor A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.18181818181818177
+N256_chunk1,256,1,3,xor,1.0,A 1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.25,0.19047619047619047
+N256_chunk1,256,1,4,A,1.0,1 gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.19999999999999996
+N256_chunk1,256,1,5,0,1.0,gives 1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.1578947368421053
+N256_chunk1,256,1,6,gives,1.0,1 ; C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.16666666666666663
+N256_chunk1,256,1,7,1,1.0,; C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.17647058823529416
+N256_chunk1,256,1,8,;,1.0,C 1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5833333333333334,0.1875
+N256_chunk1,256,1,9,C,1.0,1 xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.3333333333333333,0.19999999999999996
+N256_chunk1,256,1,10,1,1.0,xor D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.2142857142857143
+N256_chunk1,256,1,11,xor,1.0,D 1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.23076923076923073
+N256_chunk1,256,1,12,D,1.0,1 gives 1 ; combine 1 1 gives 1 ; answer 1,0.25,0.25
+N256_chunk1,256,1,13,0,1.0,gives 1 ; combine 1 1 gives 1 ; answer 1,0.5,0.18181818181818177
+N256_chunk1,256,1,14,gives,1.0,1 ; combine 1 1 gives 1 ; answer 1,0.4166666666666667,0.19999999999999996
+N256_chunk1,256,1,15,1,1.0,; combine 1 1 gives 1 ; answer 1,0.5,0.2222222222222222
+N256_chunk1,256,1,16,;,1.0,combine 1 1 gives 1 ; answer 1,0.5,0.25
+N256_chunk1,256,1,17,combine,1.0,1 1 gives 1 ; answer 1,0.25,0.2857142857142857
+N256_chunk1,256,1,18,1,1.0,1 gives 1 ; answer 1,0.5,0.33333333333333337
+N256_chunk1,256,1,19,1,1.0,gives 1 ; answer 1,0.6666666666666666,0.4
+N256_chunk1,256,1,20,gives,1.0,1 ; answer 1,0.4166666666666667,0.5
+N256_chunk1,256,1,21,0,1.0,; answer 1,0.25,0.33333333333333337
+N256_chunk1,256,1,22,;,1.0,answer 1,0.4166666666666667,0.5
+N256_chunk1,256,1,23,answer,1.0,1,0.3333333333333333,1.0
+N256_chunk1,256,1,24,0,,,,0.0

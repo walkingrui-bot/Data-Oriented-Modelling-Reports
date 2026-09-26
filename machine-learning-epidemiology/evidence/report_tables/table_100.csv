@@ -1,0 +1,6 @@
+Quantity,Language,6D matched
+Unigram entropy,3.198 nats,3.231 nats
+Conditional / trained difficulty,loss 1.82–1.90,theoretical H=1.836；loss 1.84–1.86
+Stable rank,2.238,3.101
+Participation rank,3.559,4.929
+Top-3 energy,79.9%,70.4%

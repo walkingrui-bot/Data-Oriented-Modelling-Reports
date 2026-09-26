@@ -1,0 +1,7 @@
+quantity,value,definition
+total_generated_logit_difference_A_minus_B,1.2424755020938396,z_A(C_A)-z_B(C_B)
+direct_parameter_effect_holding_chain_B,3.129781639404307,z_A(C_B)-z_B(C_B)
+chain_effect_within_model_A,-1.8873061373104676,z_A(C_A)-z_A(C_B)
+direct_parameter_effect_holding_chain_A,1.2604791624845004,z_A(C_A)-z_B(C_A)
+chain_effect_within_model_B,-0.018003660390660814,z_B(C_A)-z_B(C_B)
+model_x_chain_interaction,-1.8693024769198068,[z_A(C_A)-z_A(C_B)]-[z_B(C_A)-z_B(C_B)]

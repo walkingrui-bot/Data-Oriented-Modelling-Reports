@@ -1,0 +1,2 @@
+Version,Date,Changes
+v0.2,2026-09-26,"v0.2 includes MICRO-001, CAUSAL-002 and MATH-003, adding SGD commutators, mixed training-token derivatives, tangent propagation and exact parameterwise finite-difference CoT dissection."

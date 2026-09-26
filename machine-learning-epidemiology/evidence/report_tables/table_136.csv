@@ -1,0 +1,6 @@
+latent object,best probe acc,checkpoint,layer,chance
+main,0.865,SEP,1,0.200
+branch,0.787,SEP,1,0.200
+cmp,0.607,FINAL,2,0.333
+corrected,0.787,SEP,1,0.500
+answer,1.000,THINK,3,0.200

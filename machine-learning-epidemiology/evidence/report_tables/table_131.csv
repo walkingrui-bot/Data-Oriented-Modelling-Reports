@@ -1,0 +1,1 @@
+"Finite emulation proposition. Every finite reasoning algebra (R,A,G,O) has an autoregressive hidden-state realization encoding R and exactly reproducing its operators/outputs. Exact realization requires distinguishing any r1≠r2 that share P(r1)=P(r2) but differ in future-response behavior."

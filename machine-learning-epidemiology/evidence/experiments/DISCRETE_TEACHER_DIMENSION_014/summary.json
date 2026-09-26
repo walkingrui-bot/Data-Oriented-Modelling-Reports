@@ -1,0 +1,24 @@
+{
+  "hard_mean_bit_accuracy": 0.9909530331691107,
+  "numeric_mean_bit_accuracy": 0.9836370795965195,
+  "hard_mean_teacher_subspace_energy": 0.925814559062322,
+  "numeric_mean_teacher_subspace_energy": 0.9961725771427155,
+  "hard_mean_principal_angle_deg": 6.069073045587477,
+  "numeric_mean_principal_angle_deg": 0.4439255833082522,
+  "hard_median_r95_by_d": {
+    "1": 1.0,
+    "2": 3.5,
+    "3": 4.5,
+    "4": 4.0,
+    "5": 5.0,
+    "6": 5.0
+  },
+  "numeric_median_r95_by_d": {
+    "1": 1.0,
+    "2": 2.0,
+    "3": 3.0,
+    "4": 4.0,
+    "5": 5.0,
+    "6": 6.0
+  }
+}

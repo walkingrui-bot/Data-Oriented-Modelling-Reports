@@ -1,0 +1,18 @@
+{
+  "d3_hard_r95": 4.0,
+  "d3_hard_energy": 0.9137400686740876,
+  "d3_hard_angle": 5.413313865661621,
+  "d3_repeat_r95": 3.5,
+  "d3_order_r95": 4.0,
+  "d3_q4_energy": 0.9817897081375122,
+  "d3_q4_angle": 1.2926740944385529,
+  "d3_margin_energy": 0.9867863953113556,
+  "d3_margin_angle": 0.8482890725135803,
+  "d3_local_energy": 0.9881884455680846,
+  "d3_twolevel_r95": 3.0,
+  "d3_twolevel_energy": 0.9704413414001464,
+  "d3_twolevel_angle": 1.5715368390083313,
+  "d5_hard_energy": 0.9880096912384032,
+  "d5_margin_energy": 0.9970579743385316,
+  "d5_margin_angle": 0.1535888165235518
+}

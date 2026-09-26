@@ -1,0 +1,130 @@
+[
+  {
+    "old": "Current principal findings. The microscopy series decomposes training history → parameters/numerical encoding → CoT → answer into an intervenable causal chain amenable to integration, Jacobians and SVD. The MRI series reconstructs whole-body terrain, history-to-CoT kernels, paired CoT/Answer kernels and the training sky in larger models and across more problems. VECTOR-CODE-009 shows that, with visible tokens, complete CoT, endpoints and the token0→token1 contrast vector fixed, orthogonal embedding directions can carry local control gains differing by hundreds of times and can change the final answer before changing the next discrete CoT bit. VECTOR-SUBSPACE-010 exactly separates a 4D embedding into readable Row(U) and silent Null(U), and separates lexical contrast from downstream control modes within the readable subspace. CONTROL-FLOW-011 shows that CoT states reweight input channels through the nonlinear derivative gate D_t, producing state-dependent rotation of the principal control direction as the chain advances. Together, these cases support treating CoT as history/state-conditioned computational actions: tokens change the current state and the controllable geometry of subsequent tokens. HISTORY-ALGEBRA-012 represents complete training histories as noncommutative ordered operator products. In the perturbative regime, six pairwise-order/Lie-commutator coordinates explain 98.792% of control-field differences across the 4! permutations of the same training multiset. TEACHER-DIMENSION-TRANSFER-013 tests whether low-dimensional control fields originate in the model or the training world. In a shared 10D ambient space, increasing teacher intrinsic control dimension from 1 to 6 yields median future-control r95 values of 1/2/3/4/5/6 in full-capacity students and 1/2/3/3/3/3 with a fixed rank-3 readable bottleneck. This supports dimension transfer in which the teacher supplies independent control degrees of freedom and the architecture sets the representational ceiling. DISCRETE-TEACHER-DIMENSION-014 transfers this experiment to fully discrete autoregressive tokens. With hard 0/1 CoT alone, mean student bit accuracy is approximately 99.10%; continuous control geometry varies, with additional directions at d=2/3 and compression to r95=5 at d=6. Adding pre-threshold numerical margins to the same visible tokens restores global control r95 to 1/2/3/4/5/6 in both initializations and returns an average 99.62% of control energy to the teacher causal subspace. This separates transferability of teacher control dimension from its identifiability through hard language traces. TRACE-CHANNEL-015 examines which traces identify this geometry. Across d=2/3/5 and two initializations, hard neighborhood samples and local counterfactual ordering yield variable recovery; a small amount of graded confidence substantially narrows the geometric equivalence class. At d=3, both hard-trained seeds have r95=4; quantizing margin magnitude into just 2 bins restores r95=3 in both. Finer confidence, signed margins and local numerical contexts further concentrate control energy in the teacher causal subspace.\n",
+    "new": "Current principal findings. Matched interventions show that learning order, optimizer state, feedback resolution and training material shape predictive functions in controlled neural systems. Completed replication campaigns extend these findings across miniature GRU, causal Transformer and Mamba architectures. Statistical state-dependent operators lower test distribution MSE on four text sources and improve within-source character prediction on three external works. The 30-model scale study shows consistently greater different-answer state separation with width, together with concentrated local control. Requested-answer readiness can be disconnected across architectures and on unseen task combinations. Chapters 48–50 integrate the replication results, qualification denominators and current claim status."
+  },
+  {
+    "old": "The v1.4 language mathematics branch finds a low-rank language teacher field and represents linguistic units as state-dependent, noncommutative generative operators. Higher-level structures develop through ordered composition plus small, low-dimensional residual generators, forming Language Control Algebra v0.1.",
+    "new": "The v1.4 language branch reconstructs state-dependent, ordered update functions from language statistics. Its measured evidence comprises local transition spectra, held-out mapping errors, order effects and relation-specific residuals. The current synthesis treats these as approximate predictive operators; chapter 49 adds independent text segments, sufficient-state constructions and full-envelope measurements."
+  },
+  {
+    "old": "For 185 supported exact bigrams, wordwise composition has held-out MSE=0.141692 and direct phrase operators 0.112759; the source reports approximately 17.3% improvement. Phrase-level operators capture additional predictable structure beyond separately fitted word maps.",
+    "new": "For 185 supported exact bigrams, the test-count-weighted MSE is 0.141691854 for composed word operators and 0.112759496 for directly fitted phrase operators. The weighted mean of each phrase’s relative improvement is 17.3249%; the relative reduction in pooled weighted MSE is 20.4192%. These are two distinct estimands, both recalculated from the original CSV for this edition."
+  },
+  {
+    "old": "Shuffle relation labels on identical trajectories 30 times per horizon. Gains over global correction have mean −0.18% and 95th percentile +0.13%; actual relations give +3.29%. Genuine grouping carries the additional held-out movement.",
+    "new": "The original 30-shuffle analysis reports mean gain −0.18% and a 95th percentile of +0.13%. The source audit identifies different averaging rules: true relations give 3.293149% under test-count weighting and 3.529238% under equal class weighting at horizon three. The permutation comparison is marked PROVISIONAL pending a common estimand for the real and shuffled samples. The original effect estimates remain documented here."
+  },
+  {
+    "old": "LANG-019 evidence. In this technical-English corpus and count-derived state assay, higher relational motion combines ordered lower-level operators with small, reproducible, low-dimensional relation-specific residual generators. True-label held-out gains exceed shuffle controls; residual stable rank=1.327.\n",
+    "new": "LANG-019 evidence. In the technical-English corpus, directly fitted phrase maps improve the measured composition error, and relation-conditioned residuals have stable rank 1.327. These are fitted structure and residual-spectrum results. A claim of independent generators beyond a complete lower-level closure is PROVISIONAL; chapter 49 supplies the complete-envelope analysis and the corrected statistical scope."
+  },
+  {
+    "old": "Projection onto the word-level top-3 movement subspace explains 22.63% of relational residual energy. Principal angles between the two top-3 spaces are 19.70°, 61.41° and 77.97°. Higher relations reuse existing axes and add a small number of transverse directions.",
+    "new": "Projection onto the word-level top-three movement subspace explains 22.63% of relation-residual energy. Principal angles between these two selected subspaces are 19.70°, 61.41° and 77.97°. This measures transverse structure relative to the stated three-mode approximation; complete operator-envelope membership is tested separately in chapter 49."
+  },
+  {
+    "old": "closure_o(G_l) is the closure of lower-level operators under state-dependent, noncommutative ordered composition; R_{l+1} is the new residual-generator space at the next level. Here stable rank(R_relation)=1.327 and top-3 residual modes carry 95.18% of class-level energy.",
+    "new": "Here closure_o(G_l) denotes the selected lower-level operator closure. An independent residual extension R requires a declared closure, a common functional representation and verified independence. The observed residual stable rank is 1.327, with 95.18% of class-level energy in three modes. The direct-sum interpretation is retained as a PROVISIONAL hierarchical model."
+  },
+  {
+    "old": "Most higher-level motion inherits lower-level composition; added structure occupies a few low-dimensional directions. Complexity grows through composition, order, state dependence and recursion.",
+    "new": "The measured higher-level motion contains a composition component and concentrated fitted residuals. Their relative contribution is evaluated through held-out prediction and the chosen operator representation."
+  },
+  {
+    "old": "Characters, words, phrases and relations now share one picture: surface units select state-dependent operators, ordered composition is noncommutative, and higher relations inherit composition plus small new generators. The discussion culminates in Language Control Algebra v0.1.",
+    "new": "Characters, words, phrases and relation groups can be represented by approximate state-dependent update maps. Ordered composition and fitted residuals organize the observed motion. Language Control Algebra v0.1 records this working mathematical representation."
+  },
+  {
+    "old": "These five equations connect context states, linguistic actions, transformations, hierarchical extension and next-action generation into a closed loop. LANG-017 supplies low-dimensional movement, LANG-018 state dependence/composition/noncommutativity, and LANG-019 composition plus sparse low-dimensional extension.",
+    "new": "These equations define the proposed state-update framework. Exact deterministic updates require a sufficient state representation: contexts mapped to the same state must have matching successor states under each allowed input. V02b constructs and verifies such a representation using augmented future signatures. In the empirical language assay, the fitted operators describe approximate successor predictions."
+  },
+  {
+    "old": "Higher relations mainly compose existing operators and add small, low-dimensional residual generators predicted by genuine relation identities.",
+    "new": "Higher-level fits combine ordered lower-level operators with relation-conditioned residual terms. Complete-closure membership and statistical significance are evaluated under the updated tests in chapter 49."
+  },
+  {
+    "old": "Experiment 021 has 25 visible goal×main projections and 173 future-response classes. Each visible pair corresponds to 11.0 internal states on average; 89.89% of within-surface state pairs differ in future behavior.",
+    "new": "Experiment 021 has 25 visible goal × main projections and 275 legal internal states. The recorded horizon through three steps gives 173 future-response classes and the original within-surface pair statistic of 89.89%. Exhaustive refinement to a stable partition gives 275 full-future classes. Each visible pair contains 11 legal internal states; the finite-window geometry retains its original horizon label."
+  },
+  {
+    "old": "|H_min| >= |R / ~future| = 173",
+    "new": "|H_min| ≥ |R / ~all_future| = 275; |R / ~future_≤3| = 173"
+  },
+  {
+    "old": "hidden bits >= ceil(log2 173) = 8",
+    "new": "Fixed-length hidden-state encoding requires at least ceil(log2 275) = 9 bits for all future programs."
+  },
+  {
+    "old": "extra predictive information lower bound = 2.791 bits",
+    "new": "The log class-count ratio to the 25 visible states is log2(275/25) = 3.459; minimum fixed-length binary encodings use 9 and 5 bits, respectively."
+  },
+  {
+    "old": "A serial LM that exactly reproduces these future behaviors must distinguish the reasoning states merged by the surface projection within its hidden dynamics. Hidden state is therefore the candidate carrier of the reasoning algebra.",
+    "new": "An exact realization of all future behaviors in this finite system carries at least 275 distinguishable persistent states. This is an information-capacity statement. V10 realizes them with a single scalar and a finite ReLU transition circuit; chapter 49 gives the exhaustive transition checks and circuit size."
+  },
+  {
+    "old": "Figure 34.1 LM-vs-NATURAL-REASONING-MATH-022: counts of visible surface states and future-response reasoning states.",
+    "new": "Figure 34.1 Audited counts for the visible projection, the original three-step horizon and the full-future fixed point. The original figure is retained in the source archive."
+  },
+  {
+    "old": "Top-2 candidate planes have cross-seed mean principal angles approximately 76–83°, overall mean≈80.3°, showing strong initialization dependence of these coordinates.",
+    "new": "Top-two candidate planes have raw cross-seed mean principal angles of approximately 76–83°, with overall mean approximately 80.3°. These describe coordinate differences between independently learned hidden bases. V06 subsequently aligns response functions and demonstrates that reversible recoding alone can produce comparably large raw angles."
+  },
+  {
+    "old": "Figure 41.3 COT-CLOSURE-026: cross-initialization variability of candidate residual directions.",
+    "new": "Figure 41.3 Raw cross-seed candidate-subspace angles in the original hidden coordinates. Functional alignment is evaluated separately in V06."
+  },
+  {
+    "old": "44.5 Gold free state geometry stoppers save 42 to 44 percent of computation",
+    "new": "44.5 State geometry stoppers save 42 to 44 percent of relation steps"
+  },
+  {
+    "old": "44 STOPPING-GEOMETRY-029 Optimal stopping on predictive states Former 022",
+    "new": "44 STOPPING-GEOMETRY-029 State dependent stopping on predictive states Former 022"
+  },
+  {
+    "old": "Experiments 025–029 use controlled low-dimensional/small recurrent systems. They calibrate generator assays, establish microscopic closure scale, separate answer compression/depth/reinjection in fully correct models, measure finite thought work and disconnected admissible sets, and train stoppers on two exact-generation models. Gold-free inference saves approximately 42–44% computation at approximately 95–97% accuracy; oracle opportunities are 76–84%. Together these support model- and question-conditioned predictive-state geometry for CoT depth and stopping.",
+    "new": "Experiments COT-DIAGNOSTIC-025 through STOPPING-GEOMETRY-029 establish controlled assays for token-conditioned recurrence, relation reinjection, question-specific finite work and disconnected readiness. Two qualified models achieve 96.875% and 95.3125% binary answer accuracy using 43.75% and 42.1875% fewer relation steps than a five-step policy. These are relation-step measurements. Chapters 48–49 supply the subsequent replication, fixed-baseline comparisons and service timing; chapter 50 gives the current integrated interpretation."
+  },
+  {
+    "old": "G_{l+1} = closure_o(G_l)  direct-sum  R_{l+1}",
+    "new": "Proposed hierarchy: G_{l+1} = closure_o(G_l ∪ R_{l+1}); independent residual extensions require a specified closure test."
+  },
+  {
+    "old": "G_{l+1} = closure_o(G_l) direct-sum R_{l+1}",
+    "new": "Proposed hierarchy: G_{l+1} = closure_o(G_l ∪ R_{l+1}); independent residual extensions require a specified closure test."
+  },
+  {
+    "old": "Linguistic actions are state-dependent noncommutative operators; higher levels develop through composition and small low-dimensional residual generators",
+    "new": "Approximate state-dependent update maps; held-out prediction, order effects and measured residual spectra"
+  },
+  {
+    "old": "CoT state-space optimal stopping (formerly 022)",
+    "new": "CoT state-dependent stopping (formerly 022)"
+  },
+  {
+    "old": "Readiness sets are often disconnected; state stoppers save approximately 42–44% of computation at approximately 95–97% accuracy; oracle opportunity is 76–84%",
+    "new": "Readiness sets are often disconnected; state stoppers save approximately 42–44% of relation steps at approximately 95–97% accuracy; oracle opportunity is 76–84%"
+  },
+  {
+    "old": "G_{l+1} = closure_o(G_l) direct-sum R_{l+1}",
+    "new": "Proposed closure plus tested residual extension"
+  },
+  {
+    "old": "predictive equivalence classes",
+    "new": "predictive classes through 3 steps"
+  },
+  {
+    "old": "predictive equivalence classes",
+    "new": "predictive classes through 3 steps"
+  },
+  {
+    "old": "reasoning 021 full predictive state",
+    "new": "reasoning 021 predictive signature through 3 steps"
+  },
+  {
+    "old": "increased width consistently increases measured different-answer separation and hidden-state d95.",
+    "new": "increased width consistently increases measured different-answer separation and is strongly associated with higher hidden-state d95."
+  }
+]

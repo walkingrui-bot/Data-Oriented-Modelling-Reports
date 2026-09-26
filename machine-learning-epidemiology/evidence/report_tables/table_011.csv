@@ -1,0 +1,7 @@
+Baseline final k=2 logit,-0.022100
+Final k=2 logit with all 20 epochs swapped,0.013906
+Total history effect Δz,0.036006
+Updates with different hard predictions,"74, 77, 80"
+update 74 hidden-state distance,0.025941
+update 77 hidden-state distance,0.091344
+update 80 hidden-state distance,0.028939

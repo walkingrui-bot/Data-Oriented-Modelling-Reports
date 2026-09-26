@@ -1,0 +1,5 @@
+Language-action model,Weighted held-out MSE
+Leave state unchanged,0.623272
+Fixed token shift q+Δa,0.376802
+Fixed token reset r_a,0.255918
+State-dependent affine T_a(q),0.229164

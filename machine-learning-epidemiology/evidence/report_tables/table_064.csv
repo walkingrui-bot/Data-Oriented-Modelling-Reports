@@ -1,0 +1,1 @@
+"Evidence supported. In this controlled 2D RNN, identical visible CoT, endpoints and lexical contrast coexist with substantially different embedding gains. Orthogonal intervention can change the answer before the next discrete CoT bit. Invertible global coordinate changes with compensating weights preserve function."

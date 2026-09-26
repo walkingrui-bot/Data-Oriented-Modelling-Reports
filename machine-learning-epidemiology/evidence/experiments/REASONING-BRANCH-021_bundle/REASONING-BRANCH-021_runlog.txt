@@ -1,0 +1,67 @@
+{
+  "states": 275,
+  "actions": 11,
+  "future_probes": 1464,
+  "future_signature_dim": 7320,
+  "predictive_equivalence_classes": 173,
+  "predictive_stable_rank": 6.99644671535544,
+  "predictive_participation_rank": 10.482449086668774,
+  "predictive_d95": 15,
+  "predictive_d99": 23,
+  "operator_improvement_vs_shift_mean": 0.8554778255601395,
+  "composition_correct_mse_mean": 20.974504330518506,
+  "composition_reversed_mse_mean": 245.35048937641682,
+  "pair_noncommute_mean": 0.4258452291510143,
+  "branch_immediate_same": 1.0,
+  "branch_future_rms_mean": 0.027608150388323628,
+  "cf_immediate_same": 1.0,
+  "cf_changes_committed_after_compare_correct": 0.36,
+  "cf_mean_distance_gain": 0.45,
+  "compare_immediate_same": 1.0,
+  "compare_future_rms_mean": 0.06836737789805705,
+  "compare_correct_order_changes_result": 0.36,
+  "correct_changes_main": 0.36,
+  "correct_never_worse": 1.0,
+  "correct_mean_distance_gain": 0.45,
+  "wrong_compare_changes_output": 0.72,
+  "wrong_compare_mean_distance_penalty": 0.9,
+  "standard_no_branch_changed": 0.32,
+  "standard_swap_compare_correct_changed": 0.32,
+  "cf_energy_outside_base_top3": 0.9380561141091509,
+  "meta_energy_outside_base_top3": 0.6755789609056865,
+  "trajectory_movement_stable_rank": 5.58882926928477,
+  "trajectory_movement_d95": 16,
+  "trajectory_top3_energy": 0.4581676522631378,
+  "surface_states": 25,
+  "mean_hidden_states_per_surface": 11.0,
+  "surface_pair_future_inequivalence": 0.8989090909090908,
+  "surface_mean_future_rms": 0.08031843196513844,
+  "min_predictive_states_exact_serial": 173,
+  "min_hidden_bits_exact_serial": 8,
+  "visible_surface_bits": 5,
+  "extra_hidden_bits_lower_bound": 2.790772037862
+}
+
+operator fit
+  action                    kind  mse_fixed_shift  mse_fixed_reset  mse_state_operator  improvement_vs_shift
+    R+1           relation-main      2911.035521      1164.094169            1.083510              0.999628
+    R+2           relation-main      2896.425809      1165.965699            1.088788              0.999624
+    R*2           relation-main      2258.799034      1167.720302            1.307840              0.999421
+   RNEG           relation-main      2275.504907      1167.733717            1.206146              0.999470
+   CF+1 relation-counterfactual        27.485691      1165.036002            1.076653              0.960829
+   CF+2 relation-counterfactual        28.369025      1164.804819            1.190017              0.958052
+   CF*2 relation-counterfactual        26.029636      1165.928490            1.048346              0.959725
+  CFNEG relation-counterfactual        25.348013      1165.572655            1.131002              0.955381
+ BRANCH                    meta        27.489288      1169.233908            0.382902              0.986071
+COMPARE                    meta        21.247666      1160.509971           21.823640             -0.027108
+CORRECT                    meta       280.424126      1164.971595          106.795831              0.619163
+
+interventions
+                           metric    value
+               branch_future_rms 0.027608
+cf_changes_after_compare_correct 0.360000
+           compare_order_changes 0.360000
+     wrong_compare_output_change 0.720000
+             correct_never_worse 1.000000
+               no_branch_changed 0.320000
+    swap_compare_correct_changed 0.320000

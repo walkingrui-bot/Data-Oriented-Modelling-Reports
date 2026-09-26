@@ -1,0 +1,8 @@
+Observation,Value
+natural answer logit,2.114650285
+∂z_answer/∂e_route,"(-0.023833, -0.029375)"
+Orthogonal share of gradient norm,77.656%
+Orthogonal share of squared energy,60.304%
+Angle between gradient and lexical axis,50.946°
+First answer boundary with downstream code fixed,δ_y≈1.380351
+downstream code bit switch,δ_y≈1.42875

@@ -1,0 +1,7 @@
+action,Level,fixed-shift MSE,state-operator MSE,Error reduction
+R+1,relation,222.433,1.049,99.5%
+R+2,relation,222.413,0.836,99.6%
+R*2,relation,184.881,11.063,94.0%
+RNEG,relation,184.460,1.599,99.1%
+STORE,meta,241.249,12.633,94.8%
+RESET,meta,164.751,14.821,91.0%

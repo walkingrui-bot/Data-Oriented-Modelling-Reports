@@ -1,0 +1,1 @@
+"Experimental question. Convert training order → parameter history → conditional CoT response into computable equations: how training tokens change parameter updates, how neighboring sample order creates noncommutative displacements, and how subsequent training propagates these displacements to each CoT-prefix slice."

@@ -1,0 +1,5 @@
+condition,heldout_answer_accuracy_vs_reasoning_teacher,heldout_answer_flip_rate,final_state_RMSE,final_logit_RMSE
+language_closure_only,0.852,0.148,0.3014621667639804,0.6343555397247101
+generator_1_only,0.95375,0.04625,0.14876891776320147,0.22455682773796268
+generator_2_only,0.86225,0.13775,0.26234157033325006,0.5961298406251433
+both_reasoning_generators,1.0,0.0,6.918208658436028e-15,4.790092491452158e-15

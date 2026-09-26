@@ -1,0 +1,5 @@
+Model,Observable,Switch location x_R,Switch count
+history_A,regenerated_code,0.628750,1
+history_A,answer_pred,0.358750;0.628750;0.936250,3
+history_B,regenerated_code,,0
+history_B,answer_pred,,0

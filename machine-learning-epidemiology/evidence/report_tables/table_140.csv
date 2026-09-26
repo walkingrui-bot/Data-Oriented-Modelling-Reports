@@ -1,0 +1,4 @@
+target,output-only LM best AMI,aux-decodable model best AMI
+cmp,-0.011,0.036
+branch,0.258,0.354
+answer,0.971,0.875

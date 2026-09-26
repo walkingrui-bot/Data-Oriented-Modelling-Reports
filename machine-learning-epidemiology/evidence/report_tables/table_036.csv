@@ -1,0 +1,7 @@
+Model,Route feedback condition,x_R,Regenerated code,code logit,answer logit,hard
+history_A,normal,+1.0,0,-0.5093,-0.2371,0
+history_A,route_neutral,+0.0,1,+0.8672,+1.1522,1
+history_A,route_opposite,-1.0,1,+1.4361,+1.5612,1
+history_B,normal,-1.0,0,-1.3348,-1.4796,0
+history_B,route_neutral,+0.0,0,-1.4444,-1.4928,0
+history_B,route_opposite,+1.0,0,-1.4948,-1.4976,0

@@ -1,0 +1,22 @@
+{
+  "language_operator_fit_max_abs_error": 4.409667075933044e-15,
+  "closure_only_world_max_residual": 2.4313884239290928e-14,
+  "reasoning_residual_mode1_energy": 0.6992161872784036,
+  "reasoning_residual_top2_energy": 1.0,
+  "reasoning_residual_stable_rank": 1.4301728395224276,
+  "language_reasoning_principal_angles_deg": [
+    49.45839812649548,
+    78.46304096718453
+  ],
+  "recovered_vs_true_reasoning_generator_angles_deg": [
+    0.0,
+    0.0
+  ],
+  "natural_reasoning_vs_language_closure_answer_disagreement": 0.147125,
+  "heldout_closure_answer_accuracy": 0.852,
+  "heldout_full_generator_answer_accuracy": 1.0,
+  "replication_mean_mode1_energy": 0.7069645854993704,
+  "replication_mean_stable_rank": 1.4146581066710255,
+  "replication_mean_closure_answer_accuracy": 0.8382666666666667,
+  "replication_full_generator_answer_accuracy_min": 1.0
+}

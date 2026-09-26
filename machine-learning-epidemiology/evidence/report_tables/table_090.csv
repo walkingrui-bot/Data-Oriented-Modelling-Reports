@@ -1,0 +1,8 @@
+Control,Supervision,Variant,r95,teacher energy,Principal angle,bit acc
+surface,hard,dense,3,0.9158,7.197°,0.9959
+surface,hard,sparse,1,0.9955,19.677°,1.0000
+surface,numeric_margin,dense,2,0.9968,0.850°,0.9822
+surface,numeric_margin,sparse,2,0.9977,0.429°,1.0000
+orientation,numeric_margin,orient1,4,0.9966,0.328°,0.9792
+orientation,numeric_margin,orient2,4,0.9959,0.593°,0.9792
+orientation,numeric_margin,orient3,4,0.9950,0.299°,0.9843

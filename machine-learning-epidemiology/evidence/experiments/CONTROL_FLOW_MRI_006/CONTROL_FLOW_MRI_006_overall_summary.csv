@@ -1,0 +1,2 @@
+embedding_dim,stacked_input_rank,exact_input_nullity,future_J_functional_rank_min,future_J_functional_rank_max,mean_mode1_energy,mean_mode2_cumulative,mean_stable_rank,mean_adjacent_top1_rotation_deg,median_adjacent_top1_rotation_deg,max_adjacent_top1_rotation_deg
+6,6,0,6,6,0.6041994116202782,0.8501732792196384,1.7328389548713596,48.12993019028202,51.90509957741818,82.7988928165041

@@ -1,0 +1,8 @@
+Condition,Added trace,Direct information added
+hard,Thresholded 0/1 CoT + answer only,Discrete class
+hard_repeat,Hard labels plus hard labels at locally jittered contexts,Additional boundary samples with categorical values
+counterfactual_order,Hard labels plus teacher-logit increase/decrease ordering for neighboring pairs,Local direction/order
+probability,hard + sigmoid probability,Continuous compressed graded trace
+quantized_margin4,Hard labels plus four-bin signed margin magnitude,Coarse distance-to-boundary information
+margin,Hard labels plus full signed pre-threshold margins,Continuous signed distance scale
+local_numeric,Margins plus numerical margins at jittered neighbors,Numerical values and local geometry

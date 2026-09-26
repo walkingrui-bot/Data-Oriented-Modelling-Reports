@@ -1,0 +1,2 @@
+Version,Date,Additions
+v0.2,2026-09-26,"Added MATH-003: SGD commutators, mixed training-token derivatives, tangent propagation and exact parameterwise finite-difference CoT dissection."

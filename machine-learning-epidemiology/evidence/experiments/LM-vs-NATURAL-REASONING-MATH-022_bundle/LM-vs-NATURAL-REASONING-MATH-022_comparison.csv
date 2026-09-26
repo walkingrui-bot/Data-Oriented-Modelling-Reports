@@ -1,0 +1,9 @@
+axis,autoregressive_language_model,natural_reasoning_reference_algebra,mathematical_conclusion
+State carrier,prefix-conditioned hidden state h_t,"factored relational state r=(relation, commitment, branch, comparison, ...)",Representation/factorization differs; either can be encoded in a sufficiently large dynamical state.
+Primitive update,"h_{t+1}=F_theta(h_t,e(a_t))",r_{t+1}=G_a(r_t),Both are state-dependent dynamical operators.
+Trajectory topology,one realized serial path at each step,committed path + retained/alternative branch fibers + re-entry,Reasoning algebra contains explicit multi-locus state even when only one output is visible.
+Counterfactual,must be represented inside h_t or serialized into tokens,branch coordinate is a first-class state factor,"Difference is native coordinate structure, not computability."
+Comparison/correction,can be implemented implicitly by hidden dynamics,explicit COMPARE state gates conditional CORRECT,021 gives an explicit closed-loop selector algebra.
+Observability,token stream is a projection of h_t,committed answer is a projection of richer r_t,Surface equality does not imply state equality in either system.
+Composition,noncommutative token/state operators,noncommutative relation/meta operators,Shared mathematical family.
+Low-dimensional motion,language local teacher stable rank ~2.48; operator family rank ~6.02,020 legal reasoning movement stable rank ~3.12; 021 branch loop remains concentrated,Both can have high-dimensional state but lower-dimensional realized control motion.

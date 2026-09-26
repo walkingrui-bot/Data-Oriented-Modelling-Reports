@@ -1,0 +1,13 @@
+mode,stage,r1_acc,r2_acc,y_acc
+D,prompt_end,0.5625,0.5625,1.0
+D,answer,0.5,0.5,1.0
+B,prompt_end,0.8125,0.9375,0.9375
+B,after_r1_value,0.8125,0.875,1.0
+B,after_r2_value,0.5625,0.8125,1.0
+B,after_r3_value,0.5,0.25,1.0
+B,answer,0.4375,0.0625,1.0
+C,prompt_end,1.0,0.9375,0.6875
+C,after_r1_value,1.0,1.0,1.0
+C,after_r2_value,1.0,1.0,1.0
+C,after_r3_value,1.0,1.0,1.0
+C,answer,1.0,1.0,1.0

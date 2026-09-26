@@ -1,0 +1,2 @@
+Version,Date,Additions
+v0.3,2026-09-26,"Added SVD-004: history-to-CoT causal-kernel SVD, its parameter-space origin, low-frequency DCT history modes and low-rank training-token transfer."

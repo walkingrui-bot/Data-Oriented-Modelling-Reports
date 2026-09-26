@@ -1,0 +1,4 @@
+Version,Date,Added experiment,Core additions
+v1.1,2026-09-26,TEACHER-DIMENSION-TRANSFER-013,teacher intrinsic dimension 1–6；future-control rank transfer；rank-3 architecture ceiling；10-visible/2-causal redundancy control；orientation control
+v1.2,2026-09-26,DISCRETE-TEACHER-DIMENSION-014,Hard symbolic traces admit multiple continuous control geometries; numerical margins recover teacher d=1…6 rank and subspace direction
+v1.3,2026-09-26,TRACE-CHANNEL-015,Trace-channel dissection; hard/repeated/counterfactual/graded controls; two-bin confidence threshold for rank identification; quantization precision and subspace recovery

@@ -1,0 +1,3 @@
+Prediction chain,Correlation across 160 observations,relative L2 error (%)
+Actual local swap Δθ + tangent propagation,0.999994,0.338294
+Hessian/gradient commutator + tangent propagation,0.998317,2.544101

@@ -1,0 +1,75 @@
+{
+  "definition": "semantic signature = post-chain hidden state plus standardized future-response function",
+  "seed14_max_surface_pair_00_11": {
+    "history_A_future_RMS": 2.898590288834565,
+    "history_B_future_RMS": 0.007249591742011536,
+    "A_over_B_ratio": 399.8280719777879,
+    "history_A_hidden_distance": 2.345494334777085,
+    "history_B_hidden_distance": 0.10682482054015695
+  },
+  "seed14_near_synonym_pair_01_11": {
+    "history_A_future_RMS": 2.8162721800665076,
+    "history_B_future_RMS": 0.0011357841103597486,
+    "A_over_B_ratio": 2479.584063889114,
+    "history_B_answer_logit_absdiff": 0.006327917277558104,
+    "history_B_gradient_distance": 0.014072122589667614
+  },
+  "seed14_same_string_00_cross_history": {
+    "seed": 14,
+    "chain": "00",
+    "surface_hamming": 0,
+    "hidden_distance": 2.3505554896905676,
+    "answer_logit_absdiff": 3.129781639404307,
+    "answer_state_gradient_distance": 0.30261280076670916,
+    "future_response_RMS": 2.801313869393677,
+    "future_response_max_absdiff": 2.8173138720021185
+  },
+  "mirror_semantic_spread": [
+    {
+      "seed": 14,
+      "history": "history_A",
+      "mean_future_response_pair_distance": 1.8962312855298527,
+      "max_future_response_pair_distance": 2.898590288834565,
+      "min_future_response_pair_distance": 0.0991736750052505,
+      "mean_hidden_pair_distance": 1.4172683596947522,
+      "mean_control_jacobian_frobenius": 0.6526156471180253
+    },
+    {
+      "seed": 14,
+      "history": "history_B",
+      "mean_future_response_pair_distance": 0.004114592650830755,
+      "max_future_response_pair_distance": 0.007249591742011536,
+      "min_future_response_pair_distance": 0.0011357841103597486,
+      "mean_hidden_pair_distance": 0.061782104852051205,
+      "mean_control_jacobian_frobenius": 0.05060976884037966
+    },
+    {
+      "seed": 25,
+      "history": "history_A",
+      "mean_future_response_pair_distance": 0.004082558968772167,
+      "max_future_response_pair_distance": 0.006463928064481347,
+      "min_future_response_pair_distance": 0.0002408991563264961,
+      "mean_hidden_pair_distance": 0.04579311903823038,
+      "mean_control_jacobian_frobenius": 0.060445128215610634
+    },
+    {
+      "seed": 25,
+      "history": "history_B",
+      "mean_future_response_pair_distance": 1.4270557128721555,
+      "max_future_response_pair_distance": 2.19085066733904,
+      "min_future_response_pair_distance": 0.0456737727342451,
+      "mean_hidden_pair_distance": 1.254110372283322,
+      "mean_control_jacobian_frobenius": 0.655531048824838
+    }
+  ],
+  "homograph_parameter_integral": {
+    "chain": "00",
+    "delta_h1": -1.415894609898721,
+    "delta_h2": -1.8762605266258237,
+    "delta_answer_logit": 3.129781639404307,
+    "h_closure_error": 3.1401849173675502e-15,
+    "z_closure_error": 2.5844744122593966e-09
+  },
+  "max_action_integral_hidden_closure_error": 5.673622572086397e-15,
+  "max_action_integral_answer_closure_error": 8.104628079763643e-15
+}

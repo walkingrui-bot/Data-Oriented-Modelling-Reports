@@ -1,0 +1,2 @@
+seed,history,chain,answer,n_codebooks,min_control,max_control,control_ratio,max_orth_energy,max_top_angle,min_sem_projection
+2,A,00|00|11|11,0011,5,0.00784272470209243,0.7841202284678493,99.98058815688738,0.7976914136504573,63.28099817885278,0.7141359625831438

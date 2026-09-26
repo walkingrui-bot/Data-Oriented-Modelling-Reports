@@ -1,0 +1,5 @@
+Word-level model,Weighted MSE
+Leave state unchanged,0.125119
+Fixed token shift,0.074128
+Token-specific reset,0.029692
+State-dependent operator,0.027684

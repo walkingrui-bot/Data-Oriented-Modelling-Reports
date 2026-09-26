@@ -1,0 +1,3 @@
+Condition,held-out answer accuracy,Functional interpretation
+Language closure only,85.20%,Approximately 14.8% of reasoning outcomes differ from the full system
+Restore the two learned generators,100.00%,Final states and logits recover to numerical precision

@@ -1,0 +1,33 @@
+{
+  "runtime_sec": 18.715940952301025,
+  "teacher_dims": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "ambient_dim": 10,
+  "future_horizon": 5,
+  "full_teacher_r95_correlation": 1.0,
+  "full_linear_slope": 1.0,
+  "full_linear_intercept": 1.3674858771295259e-15,
+  "bottleneck_min_d3_correlation": 1.0,
+  "full_median_r95_by_d": {
+    "1": 1.0,
+    "2": 2.0,
+    "3": 3.0,
+    "4": 4.0,
+    "5": 5.0,
+    "6": 6.0
+  },
+  "bottleneck_median_r95_by_d": {
+    "1": 1.0,
+    "2": 2.0,
+    "3": 3.0,
+    "4": 3.0,
+    "5": 3.0,
+    "6": 3.0
+  }
+}

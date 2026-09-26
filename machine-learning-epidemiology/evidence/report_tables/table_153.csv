@@ -1,0 +1,10 @@
+mode,Source state for immediate answer jump,accuracy,mean correct-signed margin
+D,prompt_end,1.000,8.861
+B,prompt_end,0.500,0.741
+B,after_r1_value,0.500,1.253
+B,after_r2_value,0.562,2.412
+B,after_r3_value,1.000,11.121
+C,prompt_end,0.500,-0.482
+C,after_r1_value,0.500,1.083
+C,after_r2_value,0.688,7.202
+C,after_r3_value,1.000,11.967

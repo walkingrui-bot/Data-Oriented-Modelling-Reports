@@ -1,0 +1,55 @@
+{
+  "selected_seed": 14,
+  "codebook_offset": [
+    0.6,
+    0.0,
+    0.0
+  ],
+  "history_A_chain_signature": "00|00|11|11",
+  "history_B_chain_signature": "00|00|11|11",
+  "history_A_answer_signature": "0011",
+  "history_B_answer_signature": "0011",
+  "history_A_state_axis_rotation_range_deg": [
+    49.81587277716933,
+    59.31420705559597
+  ],
+  "history_B_state_axis_rotation_range_deg": [
+    89.47264065678941,
+    89.69781777250567
+  ],
+  "history_A_U_row_angle_deg": 73.49316236184266,
+  "history_B_U_row_angle_deg": 89.75412421842553,
+  "max_analytic_gradient_error": 1.942890293094024e-16,
+  "meta_control": [
+    {
+      "history": "A",
+      "question": "00",
+      "answer_zero_alpha": 0.3152466047996795,
+      "next_code_zero_alpha": 0.6035297156303634,
+      "answer_changes_before_next_code_bit": true,
+      "max_downstream_control_rotation_before_code_switch_deg": 22.8937710731761,
+      "alpha_of_max_rotation": 0.6025,
+      "downstream_control_gain_ratio_before_code_switch": 5.206875668391507,
+      "local_control_direction_angular_velocity_rad_per_alpha": 1.2120564617751686,
+      "route_control_axis_d1": -0.4556750919432301,
+      "route_control_axis_d2": 0.04974458638137647,
+      "route_control_axis_d3": -0.770216425401037,
+      "route_control_axis_d4": 0.44345500871083093
+    },
+    {
+      "history": "B",
+      "question": "00",
+      "answer_zero_alpha": 1.0317779950332768,
+      "next_code_zero_alpha": 1.7645711518354184,
+      "answer_changes_before_next_code_bit": true,
+      "max_downstream_control_rotation_before_code_switch_deg": 48.97725305863674,
+      "alpha_of_max_rotation": 1.5325000000000002,
+      "downstream_control_gain_ratio_before_code_switch": 7.992840609519587,
+      "local_control_direction_angular_velocity_rad_per_alpha": 0.12256145251435795,
+      "route_control_axis_d1": -0.6074495881219164,
+      "route_control_axis_d2": 0.08188926801798836,
+      "route_control_axis_d3": -0.6817922698617036,
+      "route_control_axis_d4": 0.3993224842540408
+    }
+  ]
+}

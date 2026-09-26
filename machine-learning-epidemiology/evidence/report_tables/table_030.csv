@@ -1,0 +1,9 @@
+File,Contents
+K_actual_20x8.csv,Measured causal kernel for 20 local historical events × 8 final CoT slices
+svd_spectrum_all_K.csv,Full singular spectra of measured K and two mathematical predictions
+history_singular_modes.csv / cot_singular_modes.csv,Left and right singular vectors of K
+history_event_to_final_parameter_matrix_D.csv,Final ten-parameter displacements from 20 historical events
+final_cot_parameter_jacobian_J.csv,Final Jacobian of 8 CoT slices with respect to 10 parameters
+history_shape_DCT_permutation_audit.csv,Permutation audit of amplitude-normalized history-shape/DCT alignment
+training_token_to_cot_svd_spectrum.csv,SVD of the local training-token→CoT derivative kernel
+SVD_HISTORY_MODES_004.md,Mathematical description and results

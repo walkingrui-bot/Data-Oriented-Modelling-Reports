@@ -1,0 +1,12 @@
+action,Level,fixed-shift MSE,single affine MSE,improvement
+R+1,relation-main,2911.04,1.08,100.0%
+R+2,relation-main,2896.43,1.09,100.0%
+R*2,relation-main,2258.80,1.31,99.9%
+RNEG,relation-main,2275.50,1.21,99.9%
+CF+1,relation-counterfactual,27.49,1.08,96.1%
+CF+2,relation-counterfactual,28.37,1.19,95.8%
+CF*2,relation-counterfactual,26.03,1.05,96.0%
+CFNEG,relation-counterfactual,25.35,1.13,95.5%
+BRANCH,meta,27.49,0.38,98.6%
+COMPARE,meta,21.25,21.82,-2.7%
+CORRECT,meta,280.42,106.80,61.9%

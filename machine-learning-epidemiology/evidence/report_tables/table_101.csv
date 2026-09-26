@@ -1,0 +1,5 @@
+Training sequence,Stable rank,Participation rank,Top-3 energy
+Language only,2.238 ± 0.026,3.559 ± 0.044,79.9% ± 0.9%
+6D only,3.358 ± 0.062,5.223 ± 0.024,68.4% ± 1.2%
+6D → Language,2.196 ± 0.156,3.472 ± 0.271,80.8% ± 2.3%
+Language → 6D,2.848 ± 0.105,4.489 ± 0.242,72.3% ± 2.3%

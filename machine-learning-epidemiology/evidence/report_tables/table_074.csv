@@ -1,0 +1,2 @@
+Version,Date,Added experiment,Core additions
+v0.9,2026-09-26,VECTOR-CODE-009 / VECTOR-SUBSPACE-010 / CONTROL-FLOW-011,vector token code；lexical/control/silent subspace；exact embedding quotient；strict observable lock；state-gated control-frame rotation；future controllability reconfiguration

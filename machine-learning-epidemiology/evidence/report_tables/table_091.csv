@@ -1,0 +1,2 @@
+Version,Date,Added experiment,Core additions
+v1.2,2026-09-26,DISCRETE-TEACHER-DIMENSION-014,Discrete teachers d=1…6; hard-token geometric equivalence; margin-based rank/orientation recovery; local/global rotating fields; dense/sparse and orientation controls

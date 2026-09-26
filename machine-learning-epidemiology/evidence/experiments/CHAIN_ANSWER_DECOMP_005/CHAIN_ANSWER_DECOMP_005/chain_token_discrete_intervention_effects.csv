@@ -1,0 +1,9 @@
+model,intervention,held_token,answer_logit_effect
+history_A,route_0_to_1,c=0,-1.8873061373104676
+history_A,route_0_to_1,c=1,-2.7444793718798475
+history_A,code_0_to_1,r=0,-0.08905058735287241
+history_A,code_0_to_1,r=1,-0.9462238219222523
+history_B,route_0_to_1,c=0,-0.018003660390660814
+history_B,route_0_to_1,c=1,-0.006327917277558104
+history_B,code_0_to_1,r=0,-0.036775707041293515
+history_B,code_0_to_1,r=1,-0.025099963928190805

@@ -1,0 +1,16 @@
+{
+  "exact_models": [
+    "22022",
+    "22023"
+  ],
+  "n_questions": 64,
+  "max_relation_depth": 5,
+  "seed22022_noncontiguous_readiness_sets": 39,
+  "seed22023_noncontiguous_readiness_sets": 43,
+  "seed22022_oracle_mean_depth": 1.203125,
+  "seed22023_oracle_mean_depth": 0.8125,
+  "seed22022_state_stopper_accuracy": 0.96875,
+  "seed22022_state_stopper_mean_depth": 2.8125,
+  "seed22023_state_stopper_accuracy": 0.953125,
+  "seed22023_state_stopper_mean_depth": 2.890625
+}

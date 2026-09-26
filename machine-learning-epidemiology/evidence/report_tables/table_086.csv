@@ -1,0 +1,3 @@
+surface geometry,future r95,stable rank,test MSE,causal-subspace energy
+dense10_to2,2.00,1.590,6.62e-07,0.999998
+sparse2_of10,2.00,1.583,4.35e-06,0.999999

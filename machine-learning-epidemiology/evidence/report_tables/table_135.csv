@@ -1,0 +1,6 @@
+Quantity,Result
+Finite-world cases,400
+Visible CoT,THINK → CHECK → FINAL (identical in all cases)
+Final answer accuracy,1.0000
+Model,3-layer autoregressive GRU
+hidden width,48 / layer

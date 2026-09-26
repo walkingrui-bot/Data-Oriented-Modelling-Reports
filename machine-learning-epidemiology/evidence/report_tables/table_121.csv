@@ -1,0 +1,6 @@
+Observation,Result
+Cursor=start after RESET,100.0%
+Complete state=initial state after RESET,0.0%
+future-signature RMS distance,0.3880
+PCA reasoning-state distance,17.6392
+Mean future RMS with start/cursor fixed and memory varied,0.3880

@@ -1,0 +1,42 @@
+{
+  "foundation_chain": "00|00|11|00",
+  "foundation_answer": "0011",
+  "foundation_loss": 0.9960953404506815,
+  "main_eta": 0.002,
+  "n_histories": 24,
+  "n_unique_chain_signatures_main": 1,
+  "n_unique_answer_signatures_main": 1,
+  "pairwise_linear_field_energy_fraction": 0.9879210562328652,
+  "parity_only_field_energy_fraction": 2.1899853691357874e-08,
+  "second_order_parameter_rel_error": 0.24807147909761126,
+  "second_order_parameter_cosine": 0.9776261986814069,
+  "second_order_nonlinear_field_rel_error": 0.33745482337621624,
+  "second_order_nonlinear_field_cosine": 0.9829583378235893,
+  "second_order_linear_field_rel_error": 0.3373422379434561,
+  "second_order_linear_field_cosine": 0.9830151968231359,
+  "BCH2_residual_scaling_power_small_eta": 3.172556748874484,
+  "control_field_svd_mode1_energy": 0.9736587612375177,
+  "control_field_svd_top2_energy": 0.9996712812492353,
+  "control_field_svd_top3_energy": 0.9999783667178566,
+  "irrep_energy": {
+    "trivial": 1.3143345655149258e-28,
+    "standard_31": 0.9156346018271108,
+    "two_dim_22": 0.0018493475782635574,
+    "standard_sign_211": 0.08251602869477186,
+    "sign": 2.189985369135965e-08
+  },
+  "position_energy": {
+    "Q_A": 0.6731745848447976,
+    "Q_B": 0.08546566935240474,
+    "ROUTE_MARK": 0.020865017036349492,
+    "ROUTE_BIT": 0.11912488449094383,
+    "CODE_MARK": 0.08662087282120885,
+    "CODE_BIT": 0.013008126557367031,
+    "ANSWER_MARK": 0.0017408448969285257
+  },
+  "wide_scan": {
+    "eta_pairwise_99pct_max": 0.0015,
+    "first_eta_visible_signature_split": 0.012,
+    "pairwise_energy_at_eta_0.012": 0.280042
+  }
+}

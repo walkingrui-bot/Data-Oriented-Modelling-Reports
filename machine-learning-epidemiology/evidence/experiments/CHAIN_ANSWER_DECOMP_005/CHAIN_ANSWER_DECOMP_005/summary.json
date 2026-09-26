@@ -1,0 +1,48 @@
+{
+  "theta_L2": 0.685555539419057,
+  "endpoint_A": "0011",
+  "endpoint_B": "0011",
+  "selected_Q": [
+    0,
+    0
+  ],
+  "chain_A": [
+    1,
+    0
+  ],
+  "chain_B": [
+    0,
+    0
+  ],
+  "generated_answer_logits": [
+    -0.237086169461368,
+    -1.4795616715552076
+  ],
+  "mediation": {
+    "total_generated_logit_difference_A_minus_B": 1.2424755020938396,
+    "direct_parameter_effect_holding_chain_B": 3.129781639404307,
+    "chain_effect_within_model_A": -1.8873061373104676,
+    "direct_parameter_effect_holding_chain_A": 1.2604791624845004,
+    "chain_effect_within_model_B": -0.018003660390660814,
+    "model_x_chain_interaction": -1.8693024769198068
+  },
+  "visibility": [
+    {
+      "observable": "route_logits_4Q",
+      "jacobian_rank": 4,
+      "J_delta_theta_L2": 1.504262059763324,
+      "delta_theta_rowspace_fraction": 0.8569778076176403,
+      "delta_theta_nullspace_fraction": 0.51535331302987,
+      "top_singular_value": 3.799055957254565
+    },
+    {
+      "observable": "canonical_answer_logits_4Q",
+      "jacobian_rank": 4,
+      "J_delta_theta_L2": 10.935580821912236,
+      "delta_theta_rowspace_fraction": 0.7823324598483664,
+      "delta_theta_nullspace_fraction": 0.6228610778236221,
+      "top_singular_value": 23.6190933147042
+    }
+  ],
+  "max_IG_closure_error": 2.5844753004378163e-09
+}

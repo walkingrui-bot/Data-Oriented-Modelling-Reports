@@ -1,0 +1,5 @@
+Document version,v1.8
+Current experiment series,MICRO-001 / CAUSAL-002 / MATH-003 / SVD-004 / CHAIN-005—008 / MRI-001—012 / VECTOR-009—010 / CONTROL-FLOW-011 / HISTORY-ALGEBRA-012 / TEACHER-013 / DISCRETE-014 / TRACE-015 / LANG-016—019 / LANGUAGE-CONTROL-ALGEBRA-v0.1 / REASONING-STATE-020 / REASONING_CONTROL_ALGEBRA_v0.2 / REASONING-BRANCH-021 / LM-vs-NATURAL-REASONING-MATH-022 / REASONING_CONTROL_ALGEBRA_v0.3 / REASONING-LOCATOR-023 / NATURAL-REASONING-FINDER-024 / REASONING_LOCUS_v0.1 / MODEL-SCALE-CORRIDOR-025 / GEOMETRIC_UNPACKING_v0.1
+Updated,2026-09-26
+Core objects,teacher / dataset constraints → representational capacity → predictive-state spreading / crowding → low-dimensional local control → answer accuracy
+Update policy,"Each new experiment is incorporated into the latest master record together with its full discussion, key values, figures, raw-data index and version history."

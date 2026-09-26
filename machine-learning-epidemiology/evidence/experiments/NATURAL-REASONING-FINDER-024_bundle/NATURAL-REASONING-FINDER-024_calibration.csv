@@ -1,0 +1,10 @@
+system,target,best_AMI,checkpoint,layer
+output-only LM,cmp,-0.010892182997769,THINK,1
+output-only LM,branch,0.2577104011080666,FINAL,2
+output-only LM,answer,0.970695371734646,FINAL,2
+aux-decodable hidden cmp control,cmp,0.0355956571532497,THINK,1
+aux-decodable hidden cmp control,branch,0.3538962709716907,THINK,2
+aux-decodable hidden cmp control,answer,0.87504514403563,FINAL,2
+reference reasoning algebra 021,cmp,,functional gate,-1
+reference reasoning algebra 021,branch,,functional branch,-1
+reference reasoning algebra 021,answer,,committed output,-1

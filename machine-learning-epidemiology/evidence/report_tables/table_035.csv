@@ -1,0 +1,13 @@
+Model,Condition,Visible R,Visible C,x_R,x_C,answer logit,hard
+history_A,Normal,1,0,+1.0,-1.0,-0.2371,0
+history_A,Hidden labels / original actions,∅,∅,+1.0,-1.0,-0.2371,0
+history_A,Renamed / original actions,0,1,+1.0,-1.0,-0.2371,0
+history_A,Original labels / neutral actions,1,0,+0.0,+0.0,+1.5338,1
+history_A,Original labels / reversed actions,1,0,-1.0,+1.0,+1.5612,1
+history_A,Renamed / reversed actions,0,1,-1.0,+1.0,+1.5612,1
+history_B,Normal,0,0,-1.0,-1.0,-1.4796,0
+history_B,Hidden labels / original actions,∅,∅,-1.0,-1.0,-1.4796,0
+history_B,Renamed / original actions,1,1,-1.0,-1.0,-1.4796,0
+history_B,Original labels / neutral actions,0,0,+0.0,+0.0,-1.5112,0
+history_B,Original labels / reversed actions,0,0,+1.0,+1.0,-1.5227,0
+history_B,Renamed / reversed actions,1,1,+1.0,+1.0,-1.5227,0

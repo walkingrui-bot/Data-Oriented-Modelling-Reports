@@ -1,0 +1,1 @@
+Current case model: training order → non-commuting optimizer updates → parameter-history divergence → hidden-state divergence under the same token history → logit shift on a CoT-prefix cross-section → hard-label difference when the shifted logit crosses the observation threshold.

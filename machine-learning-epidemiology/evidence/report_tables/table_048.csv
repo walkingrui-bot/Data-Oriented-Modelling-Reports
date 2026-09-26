@@ -1,0 +1,5 @@
+seed,History,Mean future-response pair distance,Maximum future-response pair distance,Mean hidden-state pair distance,Mean ||J_C||F
+14,history_A,1.896231,2.898590,1.417268,0.652616
+14,history_B,0.004115,0.007250,0.061782,0.050610
+25,history_A,0.004083,0.006464,0.045793,0.060445
+25,history_B,1.427056,2.190851,1.254110,0.655531

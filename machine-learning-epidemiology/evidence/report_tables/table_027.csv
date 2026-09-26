@@ -1,0 +1,1 @@
+Experimental question. Apply SVD to the 20×8 history-to-CoT causal kernel K from MATH-003 to determine how many independent modes carry training-history effects and trace the origin of low rank along history → parameters → CoT.

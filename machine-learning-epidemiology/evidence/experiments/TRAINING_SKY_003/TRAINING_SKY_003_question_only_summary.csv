@@ -1,0 +1,2 @@
+finding,n_questions,pairwise_cosine_min,pairwise_cosine_max,pairwise_cosine_mean,interpretation
+free_question_only,8,0.9999999999999999,0.9999999999999999,0.9999999999999999,All tested questions share the same question-only training-sky answer fingerprint in this tiny-model case.

@@ -1,0 +1,1 @@
+"Approximately additive historical accumulation. The 20 single-epoch effects sum to 0.03600304; swapping all 20 epochs produces 0.03600572. The difference is -0.00000268, an absolute relative difference of approximately 0.0074%. In this 10-parameter network at this fixed slice, small order effects accumulate almost additively."

@@ -1,0 +1,13 @@
+Experiment,File,Contents
+MICRO-001,ten_param_nn_training_trace.csv,Complete trajectories of 10 parameters over 80 training updates
+MICRO-001,ten_param_nn_token_by_token_microscope.csv,"Cold-start hidden states, logits, probabilities and hard outputs for probe k=0…7"
+MICRO-001,ten_param_nn_parameter_attribution.csv,Final values of 10 parameters and exact k=2 Shapley contributions
+MICRO-001,ten_param_nn_hidden_state_trajectory.png,Tokenwise two-dimensional hidden-state trajectories
+MICRO-001,ten_param_nn_parameter_divergence.png,Parameter-vector L2 distance during training
+CAUSAL-002,ten_param_update_by_update_probe_trace.csv,Continuous observations at the fixed k=2 slice after every optimizer update
+CAUSAL-002,ten_param_single_epoch_causal_swap.csv,20 single-epoch order interventions
+CAUSAL-002,ten_param_cumulative_history_interventions.csv,Cumulative order interventions in the first-n/last-n epochs
+CAUSAL-002,ten_param_pair_residuals_by_epoch.csv,Residual differences after consuming the same record pair in each epoch
+CAUSAL-002,ten_param_update_timeline_probe_logit.png,Updatewise logit plot at the fixed slice
+CAUSAL-002,ten_param_single_epoch_causal_effect.png,Single-epoch causal-effect plot
+CAUSAL-002,ten_param_cumulative_swap_threshold.png,History-depth and decision-threshold plot

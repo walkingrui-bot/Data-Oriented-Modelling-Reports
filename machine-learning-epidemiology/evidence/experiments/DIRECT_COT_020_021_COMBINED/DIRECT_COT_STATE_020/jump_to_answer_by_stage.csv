@@ -1,0 +1,10 @@
+mode,source_stage,jump_answer_accuracy,mean_correct_signed_margin
+D,prompt_end,1.0,8.860503792762756
+B,prompt_end,0.5,0.7413468807935715
+B,after_r1_value,0.5,1.2533490359783173
+B,after_r2_value,0.5625,2.412130743265152
+B,after_r3_value,1.0,11.121091306209564
+C,prompt_end,0.5,-0.481641948223114
+C,after_r1_value,0.5,1.0831603407859802
+C,after_r2_value,0.6875,7.20161896944046
+C,after_r3_value,1.0,11.967080056667328

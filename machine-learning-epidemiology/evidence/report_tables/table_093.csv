@@ -1,0 +1,22 @@
+teacher d,trace channel,Median r95,teacher-subspace energy,Principal-angle error,bit acc
+2,hard,2.5,0.9206,7.284°,0.9545
+2,hard+repeat,3.0,0.9361,4.878°,0.9439
+2,counterfactual order,3.0,0.9223,5.388°,0.9498
+2,probability,2.0,0.9571,3.082°,0.9643
+2,4-bin confidence,2.0,0.9658,2.376°,0.9512
+2,signed margin,2.0,0.9872,1.313°,0.9689
+2,local numeric,2.0,0.9871,1.196°,0.9684
+3,hard,4.0,0.9137,5.413°,0.9659
+3,hard+repeat,3.5,0.9461,3.379°,0.9550
+3,counterfactual order,4.0,0.8900,5.420°,0.9632
+3,probability,3.0,0.9562,2.250°,0.9721
+3,4-bin confidence,3.0,0.9818,1.293°,0.9548
+3,signed margin,3.0,0.9868,0.848°,0.9668
+3,local numeric,3.0,0.9882,0.925°,0.9632
+5,hard,5.0,0.9880,1.441°,0.9541
+5,hard+repeat,5.0,0.9851,1.200°,0.9372
+5,counterfactual order,5.0,0.9901,1.374°,0.9432
+5,probability,5.0,0.9900,1.236°,0.9709
+5,4-bin confidence,5.0,0.9963,0.378°,0.9586
+5,signed margin,5.0,0.9971,0.154°,0.9749
+5,local numeric,5.0,0.9966,0.158°,0.9714

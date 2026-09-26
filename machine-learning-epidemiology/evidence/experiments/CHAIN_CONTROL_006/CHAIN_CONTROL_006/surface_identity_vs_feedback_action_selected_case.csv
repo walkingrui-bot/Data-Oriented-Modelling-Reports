@@ -1,0 +1,13 @@
+model,condition,visible_route,visible_code,route_action,code_action,answer_logit,answer_p1,answer_pred,delta_logit_vs_normal
+history_A,normal,1,0,1.0,-1.0,-0.237086169461368,0.4410045429179331,0,0.0
+history_A,silent_surface_same_action,∅,∅,1.0,-1.0,-0.237086169461368,0.4410045429179331,0,0.0
+history_A,renamed_surface_same_action,0,1,1.0,-1.0,-0.237086169461368,0.4410045429179331,0,0.0
+history_A,same_surface_neutral_action,1,0,0.0,0.0,1.5337989402479846,0.8225614647333804,1,1.7708851097093525
+history_A,same_surface_opposite_action,1,0,-1.0,1.0,1.5611693804962272,0.8265210874365415,1,1.7982555499575952
+history_A,renamed_surface_matching_opposite_action,0,1,-1.0,1.0,1.5611693804962272,0.8265210874365415,1,1.7982555499575952
+history_B,normal,0,0,-1.0,-1.0,-1.4795616715552076,0.18549363534390373,0,0.0
+history_B,silent_surface_same_action,∅,∅,-1.0,-1.0,-1.4795616715552076,0.18549363534390373,0,0.0
+history_B,renamed_surface_same_action,1,1,-1.0,-1.0,-1.4795616715552076,0.18549363534390373,0,0.0
+history_B,same_surface_neutral_action,0,0,0.0,0.0,-1.5112263742037437,0.18075711567208885,0,-0.03166470264853616
+history_B,same_surface_opposite_action,0,0,1.0,1.0,-1.5226652958740592,0.17906937629533756,0,-0.04310362431885162
+history_B,renamed_surface_matching_opposite_action,1,1,1.0,1.0,-1.5226652958740592,0.17906937629533756,0,-0.04310362431885162

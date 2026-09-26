@@ -1,0 +1,17 @@
+bits,gold,earliest_correct_relation_step,prompt_correct,r1_correct,r2_correct,r3_correct,r3_boundary_radius
+0000,0,2,False,False,True,True,4.226876735687256
+0001,1,0,True,True,True,True,1.1410616636276245
+0010,1,0,True,True,True,True,1.0696814060211182
+0011,0,3,False,False,False,True,4.228363513946533
+0100,1,0,True,True,True,True,0.8196894526481628
+0101,0,3,False,False,False,True,1.5236777067184448
+0110,0,3,False,False,False,True,1.4987270832061768
+0111,1,0,True,True,True,True,0.8486074209213257
+1000,1,0,True,True,True,True,0.7733065485954285
+1001,0,3,False,False,False,True,1.524368166923523
+1010,0,3,False,False,False,True,1.5318306684494019
+1011,1,0,True,True,True,True,0.8057036995887756
+1100,0,2,False,False,True,True,4.227620601654053
+1101,1,0,True,True,True,True,1.0991318225860596
+1110,1,0,True,True,True,True,1.1111960411071777
+1111,0,2,False,False,True,True,4.23046875

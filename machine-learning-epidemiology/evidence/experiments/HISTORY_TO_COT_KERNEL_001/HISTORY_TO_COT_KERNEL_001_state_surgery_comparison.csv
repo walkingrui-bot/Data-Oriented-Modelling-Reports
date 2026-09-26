@@ -1,0 +1,4 @@
+comparison,cosine,fro_ratio_other_to_natural
+natural vs param_only,0.7938321334900162,1.1317008808514732
+natural vs optim_only,0.10409635785864661,0.6970581210501564
+natural vs (param+optim),0.9994458254379399,0.9714801058981246

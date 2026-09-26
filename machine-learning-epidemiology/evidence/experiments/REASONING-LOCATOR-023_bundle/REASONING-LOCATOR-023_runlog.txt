@@ -1,0 +1,4 @@
+ep 0 loss 1.45395 ans 0.3383 cot 1.0000
+ep 5 loss 0.87851 ans 0.6127 cot 1.0000
+ep 10 loss 0.62074 ans 0.8517 cot 1.0000
+ep 15 loss 0.49117 ans 0.9637 cot 1.0000

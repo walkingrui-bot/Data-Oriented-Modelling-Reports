@@ -1,0 +1,110 @@
+{
+  "operation": "Deterministic recomputation from archived files; no neural training",
+  "future_partition": {
+    "states": 275,
+    "actions": 11,
+    "horizons": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "classes": [
+      5,
+      65,
+      105,
+      173,
+      258,
+      275,
+      275
+    ],
+    "fixed_length_bits": 9,
+    "witness": [
+      [
+        1,
+        0,
+        5,
+        3
+      ],
+      [
+        1,
+        0,
+        2,
+        3
+      ]
+    ],
+    "program": [
+      "R+1",
+      "R+2",
+      "COMPARE",
+      "CORRECT"
+    ],
+    "outputs": [
+      2,
+      1
+    ]
+  },
+  "phrase_estimands": {
+    "items": 185,
+    "composed_weighted_mse": 0.1416918541803069,
+    "direct_weighted_mse": 0.11275949593331112,
+    "pooled_relative_reduction": 0.2041921069801128,
+    "weighted_mean_item_reduction": 0.17324858988687555
+  },
+  "scale": {
+    "models": 30,
+    "seeds": [
+      2501,
+      2502
+    ],
+    "epoch_range": [
+      71,
+      900
+    ],
+    "within_coverage_width_separation_spearman": {
+      "0.25": 0.9847319278346618,
+      "0.5": 0.9847319278346618,
+      "1.0": 0.9601136296387952
+    },
+    "size_d95_spearman": 0.9475782547336901,
+    "coverage_accuracy_spearman": 0.9088932591463859,
+    "control_stable_rank_range": [
+      1.43393223954476,
+      2.693564529786389
+    ],
+    "coverage_width": {
+      "coefficients": [
+        0.5498333295186366,
+        0.3837857280458724,
+        0.013208331664403206
+      ],
+      "r_squared": 0.9486684836502742
+    },
+    "coverage_width_separation": {
+      "coefficients": [
+        0.5779440985304752,
+        0.3224734237605945,
+        -0.006707047654917983,
+        0.1349294128649479
+      ],
+      "r_squared": 0.9619659591326687
+    }
+  },
+  "inputs": [
+    {
+      "path": "evidence/experiments/REASONING-BRANCH-021_bundle/REASONING-BRANCH-021.py",
+      "sha256": "1b92f242e668f67dd125b168ebc9930aa0a412dafdcccf6c733749c85dfe4f56"
+    },
+    {
+      "path": "evidence/experiments/LANGUAGE-HIERARCHICAL-GENERATORS-017_bundle/LANGUAGE-HIERARCHICAL-GENERATORS-017_phrases.csv",
+      "sha256": "c7b4411c4adb9c21e5c42f72ac6e01de4cc13d643c76267897b6dead90fcc7b9"
+    },
+    {
+      "path": "evidence/experiments/MODEL-SCALE-CORRIDOR-025_bundle/MODEL-SCALE-CORRIDOR-025_geo_models.csv",
+      "sha256": "bed895e61f9993ada2b90f1f43b83789fd1383a0e2e80e42029e31a20b582bcb"
+    }
+  ]
+}

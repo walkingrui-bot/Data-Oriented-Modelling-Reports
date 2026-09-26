@@ -1,0 +1,7 @@
+seed,task,n,baseline_exact_rate,surgery_exact_rate,baseline_answer_rate,surgery_answer_rate
+19020,P,8,1.0,0.0,1.0,0.0
+19020,R,8,1.0,0.0,1.0,0.0
+19021,P,8,1.0,0.0,1.0,0.0
+19021,R,8,1.0,0.0,1.0,0.0
+19022,P,8,1.0,0.0,1.0,0.0
+19022,R,8,1.0,0.0,1.0,0.0

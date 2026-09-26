@@ -1,0 +1,5 @@
+Model,Forced chain,answer logit,hard answer
+history_A,"(1,0)",-0.2371,0
+history_A,"(0,0)",+1.6502,1
+history_B,"(1,0)",-1.4976,0
+history_B,"(0,0)",-1.4796,0

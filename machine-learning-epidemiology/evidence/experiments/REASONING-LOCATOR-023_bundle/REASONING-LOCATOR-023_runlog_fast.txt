@@ -1,0 +1,8 @@
+ep 0 loss 2.05780 ans 0.2377 cot 1.0000
+ep 4 loss 1.12641 ans 0.4327 cot 1.0000
+ep 8 loss 1.01812 ans 0.5181 cot 1.0000
+ep 12 loss 0.80855 ans 0.6764 cot 1.0000
+ep 16 loss 0.66351 ans 0.7580 cot 1.0000
+ep 20 loss 0.54025 ans 0.8452 cot 1.0000
+ep 24 loss 0.43971 ans 0.9287 cot 1.0000
+ep 28 loss 0.36037 ans 0.9716 cot 1.0000

@@ -1,0 +1,5 @@
+Observable,History A,History B
+Hard endpoints across 4 questions,0011 (4/4 correct),0011 (4/4 correct)
+"Self-generated chain for Q=(0,0)","(1,0)","(0,0)"
+"Q=(0,0) route P(r=1)",0.612,0.311
+"Self-generated answer P(y=1) for Q=(0,0)",0.441,0.185

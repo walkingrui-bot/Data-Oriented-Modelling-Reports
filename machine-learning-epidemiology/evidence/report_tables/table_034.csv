@@ -1,0 +1,2 @@
+Version,Date,Added experiment,Core additions
+v0.4,2026-09-26,CHAIN-ANSWER-005,CoT as a self-generated/reinjected causal mediator; Model×Chain cross-transplants; parameter origins of chain/answer differences
