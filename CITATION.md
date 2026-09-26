@@ -16,3 +16,9 @@ Both report editions were revised on 26 September 2026.
 The experiment identifiers E01–E39 remain stable across the record. Subsequent releases retain their own dated citation context.
 
 Contact for citation details: walkingrui@gmail.com
+
+## Chapter 3 paired archival snapshot
+
+*Machine Learning Epidemiology and Case Dissection: Training History, Predictive-State Geometry, and Local Control — Chapter 3, with The Engineer’s Edition*. Research v1.9 + engineering v0.6. Snapshot dated 26 September 2026.
+
+Identify the component version, experiment identifier, and evidence file for a specific result. The [Chapter 3 entry](chapter-3/README.md) connects the two reports and their evidence indexes.

@@ -1,0 +1,1 @@
+工具调用的本质是：语言控制代数通过一个 registry/schema-conditioned decoder 跨入外部动作空间。不稳定性主要来自决策边界、可行性与目标增益失配、序列化参数误差，以及外部执行放大。因此工程上不能只监控 tool probability；必须监控“离边界多远”和“离 registry escape 多远”。

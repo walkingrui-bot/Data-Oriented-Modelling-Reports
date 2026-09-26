@@ -1,0 +1,1 @@
+"gℓt = ∂z/∂hℓt。对于 clean/failure pair，再计算 Δhℓt = h_failure − h_clean，单点故障载荷 cℓt = <Δhℓt, gℓt>。"

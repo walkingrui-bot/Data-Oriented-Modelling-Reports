@@ -1,0 +1,7 @@
+step,winner,margin,radius,semantic_match,coverage,uncertainty,call_ready,hard_call_admissible
+0,CALL,1.5360,0.3048,0.9300,1.0000,0.1200,True,True
+1,CALL,1.5980,0.3171,0.8200,0.8600,0.3000,True,True
+2,CALL,1.3430,0.2188,0.5800,0.5500,0.6200,True,True
+3,CONTINUE,2.1650,0.4052,0.3500,0.0500,1.0000,False,True
+4,CALL,1.6460,0.3266,0.5800,0.7000,0.4500,True,True
+5,CALL,1.5560,0.3087,0.9100,0.9600,0.1600,True,True

@@ -1,0 +1,5 @@
+Instrument,Direct question
+Capability Projection Error (CPE),选中的 tool operator 与用户 goal 的 capability mismatch 多大？
+Distractor Attraction Margin,available-but-wrong action 相对 abstain 的控制优势
+Actionability Bias,“有按钮可按”本身是否形成异常 control gain？
+Tool Capability Operator Distance,goal-relevant desired transition 与该 tool 实际可执行 transition 的距离

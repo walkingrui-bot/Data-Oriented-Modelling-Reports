@@ -1,0 +1,7 @@
+"z_t = (x_t, e_t, R_t, B_t, g_t)
+
+x_t : model / predictive state
+e_t : external environment state
+R_t : runtime tool registry
+B_t : bound argument information
+g_t : user goal / active subgoals"

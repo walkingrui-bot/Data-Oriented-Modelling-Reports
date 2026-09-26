@@ -1,0 +1,1 @@
+工具调用不是 p(tool|x) 一个 softmax。更完整的工程对象是：动态 admissible set U_t + mode selection + partial operator selection + argument binding + environment transition + result feedback。

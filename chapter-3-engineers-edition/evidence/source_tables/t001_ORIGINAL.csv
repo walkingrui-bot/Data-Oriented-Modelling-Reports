@@ -1,0 +1,10 @@
+Order,Experiment,Engineering question,Status
+1,WORD-SENSITIVITY-001,把 token 敏感性拆成可操作控制遥测，并有限干预闭环,completed
+2,WORD-SENSITIVITY-002,固定 token，跨真实 prefix states 测 Context Sensitivity,completed
+3,TOKEN-OPERATOR-ATLAS-001,把词的工程意义实现成可执行 state-dependent operator OS,completed
+4,REAL-WORLD-OPERATOR-FAILURES-001,收集现实公开故障文本并转成 operator-level 工程病历,completed
+5,REAL-WORLD-OPERATOR-TELEMETRY-002,一键定位 token × layer × Failure Control Axis，并生成干预/防护,completed
+6,TOOL-CALL-001,把工具调用写成 hybrid action system；定义工具稳定半径、registry escape 与 schema 连锁失稳,completed
+7,TOOL-CALL-002,用 BFCL V4 六类经典原始病例把工具调用拆成 partial operator、动态 admissible set、ASK/WAIT/ABSTAIN 与并行 action-set,completed
+8,TOOL-CALL-003,把 v1.8 stopping geometry 接到工具调用：CALL/CALL_SET/ASK/WAIT/ABSTAIN/CONTINUE action regions、readiness radius 与 tool-overthinking,completed
+9,TOOL-CALL-004,跨 GRU/LSTM/Transformer 复现：合法候选工具为何选错；name/description/schema 多证据通道、自然错例与 alias surgery,completed

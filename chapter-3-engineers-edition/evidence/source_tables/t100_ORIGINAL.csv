@@ -1,0 +1,1 @@
+工作定义：若 z_t 已在 robust S_CALL，而执行 CONTINUE 后 z_{t+1} 离开 robust S_CALL，同时 CALL 的硬执行域仍然成立，则记为 TOOL_OVERTHINKING_EXIT。本控制病例在 step 0 已 CALL-ready，step 3 退出到 CONTINUE，step 4 再次进入 CALL。

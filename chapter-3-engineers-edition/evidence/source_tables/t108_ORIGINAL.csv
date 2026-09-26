@@ -1,0 +1,4 @@
+architecture,name_reliance,description_reliance,schema_reliance
+gru,0.4390,3.9835,6.2090
+lstm,0.7461,6.0365,5.6975
+transformer,6.1415,7.1904,1.8292

@@ -1,0 +1,7 @@
+#,Control,Engineer action
+1,REGISTRY_ENUM,模型只能从 runtime registry 枚举 tool name；未知名称在执行前确定性 BLOCK
+2,NO_TOOL_PATH,无匹配工具时有一条正式 abstain/no-tool 分支，不让模型自己编函数名
+3,SCHEMA_CONSTRAINT,tool call 必须满足注册 schema，禁止把自由文本函数名直接解释成动作
+4,TOOL_GUARD,执行边界重新校验 name / args / permission / scope
+5,AXIS_MONITOR,监视 hallucinated-tool FCA；requested name 对 control 的捕获异常时强制 abstain
+6,REGRESSION,任何模型、system prompt、tool registry 更新后自动重放 NTA/DT 用例

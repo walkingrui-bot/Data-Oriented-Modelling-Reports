@@ -1,0 +1,7 @@
+Metric,Mathematical object,Engineering reading
+Drive,D_t = ||∂z/∂e_t||,当前 token 对最终目标的直接一阶驱动力
+Future Gain,G_t = σ₁(∂R_future/∂e_t),当前 token 对整个后续轨迹的最大局部控制增益
+Alignment,"A_t = |cos(e_t-e_ref, V₁,t)|",真实 token action 是否踩中当前最强未来控制方向
+Rotation,"R_t = angle(V₁,t, V₁,t+1)",相邻 token 之间主控制框架转动多少
+Steer,S_t = σ₁(∂²z/∂e_t∂e_t+1),当前 token 改写下一 token 控制能力的强度
+Persistence,P_t = Σ_{u≥t} ||∂h_u/∂e_t||_F,token 作用沿后续轨迹持续的面积

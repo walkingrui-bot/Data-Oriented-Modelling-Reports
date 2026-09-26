@@ -1,0 +1,4 @@
+Architecture,Selector,Seeds
+GRU,word/token embedding → GRU → nonlinear score head,3
+LSTM,word/token embedding → LSTM → nonlinear score head,3
+tiny Transformer,2-layer Transformer encoder → nonlinear score head,3

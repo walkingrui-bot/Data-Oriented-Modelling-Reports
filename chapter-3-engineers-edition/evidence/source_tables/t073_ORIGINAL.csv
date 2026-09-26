@@ -1,0 +1,8 @@
+Operation,Rule
+TOOL-RADIUS,实时算 d_flip；小于 clean p01 时停止直接执行
+REGISTRY-GATE,unknown tool name = deterministic BLOCK，不交给模型决定
+REGISTRY-RADIUS,实时算 d_reg；接近 0 时强制 NO_TOOL/clarification
+SCHEMA-CHECK,tool name/arguments 必须由 registry schema 约束
+ARG-SLOT TRACE,分别记录 tool name 与每个 argument value 的 margin/radius
+EXECUTION GUARD,真正执行前，模型外再次检查 name、args、permission、scope
+RETURN GATE,tool result 作为外部 observation/data，不自动升级成指令

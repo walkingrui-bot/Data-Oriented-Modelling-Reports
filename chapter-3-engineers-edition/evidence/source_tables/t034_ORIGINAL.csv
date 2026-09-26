@@ -1,0 +1,12 @@
+File,Use
+TOKEN_OPERATOR_ATLAS_001_os.py,命令行操作系统
+TOKEN_OPERATOR_ATLAS_001_runtime.npz,NumPy runtime + state bank + operator bases
+TOKEN_OPERATOR_ATLAS_001_ENGINEER_MANUAL.md,纯工程速查手册
+TOKEN_OPERATOR_ATLAS_001_QUICK_REFERENCE.csv,每个 token 的一行式手册
+TOKEN_OPERATOR_ATLAS_001_token_operator_cards.csv,完整 token cards
+TOKEN_OPERATOR_ATLAS_001_operator_state_table.csv,"6,336 个 token×state 运行结果"
+TOKEN_OPERATOR_ATLAS_001_global_operator_distance_matrix.csv,全局函数距离
+TOKEN_OPERATOR_ATLAS_001_order_effect_matrix.csv,全局顺序效应
+TOKEN_OPERATOR_ATLAS_001_conditional_operator_signature_coefficients.csv,共享 operator coordinates
+TOKEN_OPERATOR_ATLAS_001_affine_operators_long.csv,affine 摘要参数
+TOKEN_OPERATOR_ATLAS_001_manifest.json,运行时校准 + cards 元数据

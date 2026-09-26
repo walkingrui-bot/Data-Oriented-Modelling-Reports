@@ -1,0 +1,8 @@
+Calibration check,Value
+Natural transition MSE,7.027e-07
+95% abs coordinate error,0.0015
+Max abs coordinate error,0.0081
+Median cosine: A Jacobian,0.9998
+Median rel. error: A Jacobian,0.0182
+Median cosine: B Jacobian,0.9999
+Median rel. error: B Jacobian,0.0118

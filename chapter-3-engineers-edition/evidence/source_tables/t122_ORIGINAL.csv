@@ -1,0 +1,8 @@
+Status,Statement
+支持,Tool selection 可被分成 name / description / schema-binding 多证据通道；标准化 intervention 可直接定位某次错误主要吃了哪条证据。
+支持,跨 GRU/LSTM/Transformer 均可构造同一 evidence-conflict failure，但每个架构的主要证据通道和 hidden alias geometry 不同。
+支持,自然 held-out BFCL 错例中，61% 可通过单通道 neutralization 的反事实测试把 correct margin 拉回，说明 channel capture 是可诊断的真实机制。
+支持,Transformer name alias 在当前小模型中形成近低秩 hidden displacement，并可用低秩 patch 大量救回。
+不支持,存在一根跨架构共享的 universal tool-selection hidden axis。
+不支持,一个固定 name/schema/description 权重可以跨架构通用。
+不支持,本轮已经在公开 135M/0.5B pretrained model 上复现；权重访问失败，所以没有这项证据。

@@ -1,0 +1,8 @@
+"# 单状态决策
+python TOOL_CALL_003_action_readiness_os.py decide   state.json --thresholds thresholds.json
+
+# 用 clean telemetry 校准
+python TOOL_CALL_003_action_readiness_os.py calibrate   clean.jsonl --out thresholds.json
+
+# 扫完整 reasoning/tool trace，并自动找 tool-overthinking
+python TOOL_CALL_003_action_readiness_os.py trace   trace.jsonl --thresholds thresholds.json"

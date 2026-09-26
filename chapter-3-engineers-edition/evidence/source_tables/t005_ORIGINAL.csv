@@ -1,0 +1,9 @@
+Item,Value
+Model,897-param Adam GRU
+Embedding,6D learned token embedding
+Calibration set,8 matched XOR-style probes × 44 visible tokens
+Detailed case,Q=0110
+Visible trajectory,Prompt 11 tokens + CoT 31 tokens + Answer 2 tokens
+Target readout,final answer propensity z = logit(1) - logit(0)
+Future readout,all future hidden states + final answer propensity
+Finite perturbation,δ = 0.02 × median centered embedding norm = 0.05281

@@ -1,0 +1,8 @@
+Field,Use
+selected_layer,故障轴经 patch 验证后最强的 layer
+axis_file,FCA 的实际向量文件，可直接加载
+injection_onset,最早出现高因果载荷的 token
+source_authority_ratio,不可信 span 的行为控制梯度 / trusted user span
+goal_gradient_angle_deg,failure target 与 safe target 控制方向的夹角
+patch_rescue_fraction,去掉 FCA 后 clean↔failure 行为差被救回的比例
+layer_ranking,其他可疑 layers，按干预效果排序

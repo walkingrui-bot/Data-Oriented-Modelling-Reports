@@ -1,0 +1,11 @@
+"z_t = (x_t, e_t, R_t, B_t, g_t)
+
+u_t ~ πθ( · | z_t ),   ideally support(πθ) ⊆ U_t
+
+if u_t = ASK/WAIT/ABSTAIN:
+    e_{t+1} = e_t
+else:
+    u_t = (S_t, A_t)
+    e_{t+1} = E_{S_t}(e_t, A_t)
+
+x_{t+1} = T_observation(x_t, O(e_{t+1}))"

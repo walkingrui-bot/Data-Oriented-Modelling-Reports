@@ -1,0 +1,4 @@
+architecture,dominant_evidence,alias_stable_rank,top3_alias_energy,conflict_flip_rate,rank3_patch_rescue
+gru,schema,2.4945,0.6016,0.7222,0.2322
+lstm,description (clean surgery uses schema),2.5950,0.5798,0.5556,0.2885
+transformer,description (clean surgery uses name),1.2249,0.9892,0.1778,1.0000

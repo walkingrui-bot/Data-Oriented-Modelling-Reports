@@ -1,0 +1,5 @@
+Reference,Production implication
+OpenAI agent safety,Structured outputs；untrusted data 不直接驱动行为；tool approvals；guardrails
+OpenAI guardrails/human review,在 tool side effect 边界做 tool guardrail 与人工审批
+OWASP LLM01:2025,约束行为、输出验证、输入/输出过滤、最小权限、人工审批、外部内容隔离
+Anthropic prompt-injection defenses,不可信网页/内容扫描、模型训练、分类器、红队；强调没有单一防线足够

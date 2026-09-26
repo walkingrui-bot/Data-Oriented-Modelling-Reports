@@ -1,0 +1,6 @@
+"USER:
+Find the sum of all multiples of 3 and 5 between 1 and 1000.
+Also find the product of the first five prime numbers.
+
+GROUND TRUTH:
+{ sum_of_multiples(...), product_of_primes(count=5) }"

@@ -1,0 +1,1 @@
+前提：候选工具均通过 TOOL-CALL-002 hard-domain validator。若 selected tool 与 user goal 的功能匹配错误，则进入 TOOL-CALL-004；诊断单位不是 tool string，而是 candidate evidence views 在同一 state 上如何改变 pairwise selection margin。

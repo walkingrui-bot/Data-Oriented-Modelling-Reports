@@ -1,0 +1,1 @@
+核心问题：固定同一个 token embedding，不改 token identity、不改模型参数，只把它放入不同真实 prefix state。如果它的控制指纹仍发生大幅变化，那么“敏感词”就不是词本身的稳定属性，而是 token × state 的条件动力学。

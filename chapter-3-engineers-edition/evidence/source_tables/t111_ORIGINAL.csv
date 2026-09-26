@@ -1,0 +1,4 @@
+architecture,train_accuracy,test_accuracy
+gru,1.0000,0.5000
+lstm,1.0000,0.6333
+transformer,1.0000,0.5000

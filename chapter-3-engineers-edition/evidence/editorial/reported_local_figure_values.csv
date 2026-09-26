@@ -1,0 +1,23 @@
+study_id,condition,method,value,unit
+MCD-ENGINEERING-20260926-001,multiple_23 block 6,Full state patch,0.9884,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 6,Gradient projection,0.9907,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 6,Equal-norm random,0.998,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 15,Full state patch,0.9733,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 15,Gradient projection,0.9721,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 15,Equal-norm random,0.9979,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 24,Full state patch,-0.3073,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 24,Gradient projection,-0.1055,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 24,Equal-norm random,0.9193,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 29,Full state patch,-1.4946,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 29,Gradient projection,-0.3598,wrong-minus-correct margin
+MCD-ENGINEERING-20260926-001,multiple_23 block 29,Equal-norm random,1.0239,wrong-minus-correct margin
+MCD-SELECTION-20260926-002,multiple_60..159,135M original labels,40,correct out of 100
+MCD-SELECTION-20260926-002,multiple_60..159,135M prefixed labels,37,correct out of 100
+MCD-SELECTION-20260926-002,multiple_60..159,22.7M relevance ranker,99,correct out of 100
+MCD-SELECTION-20260926-002,multiple_60..159,TF-IDF lexical matching,99,correct out of 100
+MCD-SEMANTIC-STRESS-20260926-003,original,relevance,40,correct out of 40
+MCD-SEMANTIC-STRESS-20260926-003,original,lexical,40,correct out of 40
+MCD-SEMANTIC-STRESS-20260926-003,paraphrase,relevance,38,correct out of 40
+MCD-SEMANTIC-STRESS-20260926-003,paraphrase,lexical,34,correct out of 40
+MCD-SEMANTIC-STRESS-20260926-003,original,frozen rejection policy,12,accepted out of 40
+MCD-SEMANTIC-STRESS-20260926-003,paraphrase,frozen rejection policy,2,accepted out of 40

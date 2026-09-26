@@ -1,0 +1,6 @@
+"x_t = state before external content
+s in {system, user, tool-output}
+x_(t+1) = T(a_t, x_t, s)[x_t]
+
+correct: rho_action(a, x, s=tool-output) approximately 0 for instruction-like data
+failure: rho_action(a, x, tool-output) approximately rho_action(a, x, user)"

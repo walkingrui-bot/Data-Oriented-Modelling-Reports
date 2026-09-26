@@ -1,0 +1,5 @@
+"z_requested_tool = λ * goal_match + lexical_prior + registry_signal
+z_abstain        = abstain_signal
+
+If λ grows faster than registry/feasibility evidence:
+requested nonexistent tool can cross the action boundary."

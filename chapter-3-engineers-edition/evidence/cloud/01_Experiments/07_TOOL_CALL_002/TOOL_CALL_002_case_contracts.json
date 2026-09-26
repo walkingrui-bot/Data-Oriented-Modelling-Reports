@@ -1,0 +1,141 @@
+[
+  {
+    "case_id": "BFCL_simple_python_0",
+    "state_tuple": [
+      "model_state x",
+      "environment_state e",
+      "runtime_registry R",
+      "argument_bindings B",
+      "user_goal g"
+    ],
+    "admissibility": {
+      "registry_required": true,
+      "binding_complete_required": true,
+      "environment_preconditions": false,
+      "parallel_set_required": false,
+      "missing_function_expected": false,
+      "missing_parameter_expected": false
+    },
+    "correct_mode": "CALL",
+    "ground_truth": [
+      "calculate_triangle_area(base=10,height=5)"
+    ],
+    "user_text": "Find the area of a triangle with a base of 10 units and height of 5 units."
+  },
+  {
+    "case_id": "BFCL_multiple_1",
+    "state_tuple": [
+      "model_state x",
+      "environment_state e",
+      "runtime_registry R",
+      "argument_bindings B",
+      "user_goal g"
+    ],
+    "admissibility": {
+      "registry_required": true,
+      "binding_complete_required": true,
+      "environment_preconditions": false,
+      "parallel_set_required": false,
+      "missing_function_expected": false,
+      "missing_parameter_expected": false
+    },
+    "correct_mode": "CALL",
+    "ground_truth": [
+      "math.triangle_area_heron(side1=3,side2=4,side3=5)"
+    ],
+    "user_text": "Calculate the area of a triangle, given the lengths of its three sides: 3, 4, and 5."
+  },
+  {
+    "case_id": "BFCL_irrelevance_0",
+    "state_tuple": [
+      "model_state x",
+      "environment_state e",
+      "runtime_registry R",
+      "argument_bindings B",
+      "user_goal g"
+    ],
+    "admissibility": {
+      "registry_required": false,
+      "binding_complete_required": false,
+      "environment_preconditions": false,
+      "parallel_set_required": false,
+      "missing_function_expected": false,
+      "missing_parameter_expected": false
+    },
+    "correct_mode": "ABSTAIN",
+    "ground_truth": [],
+    "user_text": "Calculate the area of a triangle given the base is 10 meters and height is 5 meters."
+  },
+  {
+    "case_id": "BFCL_parallel_multiple_0",
+    "state_tuple": [
+      "model_state x",
+      "environment_state e",
+      "runtime_registry R",
+      "argument_bindings B",
+      "user_goal g"
+    ],
+    "admissibility": {
+      "registry_required": true,
+      "binding_complete_required": true,
+      "environment_preconditions": false,
+      "parallel_set_required": true,
+      "missing_function_expected": false,
+      "missing_parameter_expected": false
+    },
+    "correct_mode": "CALL_SET",
+    "ground_truth": [
+      "math_toolkit.sum_of_multiples(lower_limit=1,upper_limit=1000,multiples=[3,5])",
+      "math_toolkit.product_of_primes(count=5)"
+    ],
+    "user_text": "Find the sum of all the multiples of 3 and 5 between 1 and 1000. Also find the product of the first five prime numbers."
+  },
+  {
+    "case_id": "BFCL_multi_turn_miss_param_0",
+    "state_tuple": [
+      "model_state x",
+      "environment_state e",
+      "runtime_registry R",
+      "argument_bindings B",
+      "user_goal g"
+    ],
+    "admissibility": {
+      "registry_required": true,
+      "binding_complete_required": true,
+      "environment_preconditions": true,
+      "parallel_set_required": false,
+      "missing_function_expected": false,
+      "missing_parameter_expected": true
+    },
+    "correct_mode": "ASK_THEN_CALL",
+    "ground_truth": [
+      "Turn 4: NO CALL / ask for missing source",
+      "Turn 5: mv(source='previous_report.pdf',destination='temp'); diff(final_report.pdf,previous_report.pdf)"
+    ],
+    "user_text": "Turn 4: Move one of the file in document directory to temp as well and having final report also there, proceed to juxtapose it with 'previous_report.pdf' to detect any critical alterations. Turn 5 clarification: The specific file is previous_report.pdf."
+  },
+  {
+    "case_id": "BFCL_multi_turn_miss_func_0",
+    "state_tuple": [
+      "model_state x",
+      "environment_state e",
+      "runtime_registry R",
+      "argument_bindings B",
+      "user_goal g"
+    ],
+    "admissibility": {
+      "registry_required": true,
+      "binding_complete_required": true,
+      "environment_preconditions": true,
+      "parallel_set_required": false,
+      "missing_function_expected": true,
+      "missing_parameter_expected": false
+    },
+    "correct_mode": "WAIT_FOR_TOOL_THEN_CALL",
+    "ground_truth": [
+      "At missing-function turn: NO CALL / state that required function is unavailable",
+      "After sort is supplied: sort(file_name='final_report.pdf')"
+    ],
+    "user_text": "Upon identifying the requisite 'budget analysis' content, sort the 'final_report.pdf' by line for improved clarity and comprehension."
+  }
+]

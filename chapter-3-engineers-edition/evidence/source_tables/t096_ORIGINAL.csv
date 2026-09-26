@@ -1,0 +1,7 @@
+BFCL case,Expected region,Observed region,Readiness margin,Radius,Robust
+BFCL_simple_python_0,CALL,CALL,1.5420,0.3060,True
+BFCL_multiple_1,CALL,CALL,1.5300,0.3036,True
+BFCL_irrelevance_0,ABSTAIN,ABSTAIN,0.2430,0.0354,True
+BFCL_parallel_multiple_0,CALL_SET,CALL_SET,3.4600,0.6865,True
+BFCL_multi_turn_miss_param_0,ASK,ASK,2.2920,0.4336,True
+BFCL_multi_turn_miss_func_0,WAIT,WAIT,2.3800,0.4223,True

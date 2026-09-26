@@ -1,0 +1,5 @@
+metric,value
+fingerprint within-architecture mean,0.6700
+fingerprint cross-architecture mean,0.1963
+gradient Gram within-architecture mean,-0.0284
+gradient Gram cross-architecture mean,-0.0036

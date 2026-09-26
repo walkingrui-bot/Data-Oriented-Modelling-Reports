@@ -1,0 +1,7 @@
+case_id,kind,expected_region,predicted_region,runtime_status,readiness_margin,stability_radius,correct_region,robust,h_1,h_2,h_3,h_4,h_5,h_6,h_7
+BFCL_simple_python_0,simple,CALL,CALL,CALL,1.5420000000000007,0.3059620170960963,True,True,0.96,1,1,1,1.0,0,0.1
+BFCL_multiple_1,multiple,CALL,CALL,CALL,1.5300000000000002,0.3035809897256985,True,True,0.9,1,1,1,1.0,0,0.22
+BFCL_irrelevance_0,irrelevance,ABSTAIN,ABSTAIN,ABSTAIN,0.24300000000000033,0.035362526199526546,True,True,0.08,1,1,1,0.05,0,0.18
+BFCL_parallel_multiple_0,parallel,CALL_SET,CALL_SET,CALL_SET,3.46,0.6865295584646515,True,True,0.95,1,1,1,1.0,1,0.12
+BFCL_multi_turn_miss_param_0,missing_param,ASK,ASK,ASK,2.292,0.43361211963399504,True,True,0.92,1,0,1,0.8,0,0.4
+BFCL_multi_turn_miss_func_0,missing_func,WAIT,WAIT,WAIT,2.38,0.4223151973876672,True,True,0.9,0,1,1,0.9,0,0.35

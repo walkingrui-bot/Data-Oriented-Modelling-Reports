@@ -1,0 +1,38 @@
+{
+  "experiment": "TOOL-CALL-003",
+  "title": "Action Readiness Geometry",
+  "source_basis": {
+    "v1.8": "Reasoning Locus + COT-BUDGET-GEOMETRY-028 + STOPPING-GEOMETRY-029",
+    "real_cases": "Six BFCL V4 cases from TOOL-CALL-002"
+  },
+  "state": "z_t=(model_state x_t, environment e_t, registry R_t, bindings B_t, goal g_t)",
+  "actions": [
+    "CALL",
+    "CALL_SET",
+    "ASK",
+    "WAIT",
+    "ABSTAIN",
+    "CONTINUE"
+  ],
+  "definitions": {
+    "readiness_margin": "M_a=Q_a-max(other admissible action Q, Q_CONTINUE)",
+    "stability_radius": "rho_a=M_a/||grad_h M_a||",
+    "robust_region": "S_a(tau)={z:a is hard-admissible, M_a>=0, rho_a>=tau}",
+    "tool_overthinking": "robust CALL at t; after CONTINUE, leave robust CALL while hard CALL domain remains valid"
+  },
+  "controlled_threshold": 0.03,
+  "results": {
+    "BFCL canonical states in expected action region": "6",
+    "BFCL cases tested": "6",
+    "Robust canonical regions at controlled threshold": "6",
+    "Finite soft-boundary flips validated": "6",
+    "Finite soft-boundary cases with invariant hard domain": "6",
+    "Structural hard-gate/mode transitions correct": "5",
+    "Structural transitions tested": "5",
+    "Overthinking first robust CALL step": "0",
+    "First leave-after-ready step": "3",
+    "First CALL re-entry step": "4",
+    "Hard CALL domain stayed admissible across overthinking trace": "True"
+  },
+  "scope": "controlled geometric mechanism validation anchored to BFCL case topology; not a frontier-model hidden-state measurement"
+}

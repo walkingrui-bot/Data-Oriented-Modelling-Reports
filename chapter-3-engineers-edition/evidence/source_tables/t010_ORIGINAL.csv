@@ -1,0 +1,10 @@
+Field,Meaning
+Token / position / phase,表面定位
+Drive raw + percentile,直接 target 控制
+Future Gain raw + percentile,整条未来轨迹可控性
+Alignment,实际 action 是否进入当前主控制方向
+Rotation,当前步骤前后控制框架变化
+Steer,下一 token 控制能力被改写多少
+Persistence area / horizon,作用持续多远
+Finite intervention check,该仪表读数是否经有限干预确认
+Calibration scope,percentile 是在哪个模型/任务/phase 上定义

@@ -1,0 +1,1 @@
+下一实验建议名：REAL-WORLD-OPERATOR-TELEMETRY-002。目标：把这四类公开真实文本在同一可插桩模型上跑成逐 token × layer 故障地图。

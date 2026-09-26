@@ -1,0 +1,10 @@
+architecture,case_id,correct_tool,selected_wrong_tool,margin_correct_minus_wrong,largest_rescue_channel,largest_rescue_shift,channel_removal_flips_correct
+gru,multiple_2,country_info.capital,country_info.largest_city,-5.1629,remove_description,4.4186,False
+gru,multiple_22,sports_data.basketball.most_points_single_game,sports_data.basketball.most_points_career,-2.1450,remove_description,3.6380,True
+lstm,multiple_2,country_info.capital,country_info.population,-0.3154,remove_name,1.2940,True
+lstm,multiple_22,sports_data.basketball.most_points_single_game,sports_data.basketball.most_points_single_season,-6.2944,remove_description,6.4102,True
+transformer,multiple_2,country_info.capital,country_info.largest_city,-3.8296,remove_description,7.6741,True
+transformer,multiple_22,sports_data.basketball.most_points_single_game,sports_data.basketball.most_points_single_season,-2.0829,remove_description,1.8830,False
+gru,multiple_23,basketball.player_stats.get,basketball.game_stats.get,-5.4053,remove_schema,14.4256,True
+lstm,multiple_23,basketball.player_stats.get,basketball.game_stats.get,-7.0343,remove_description,6.6965,False
+transformer,multiple_23,basketball.player_stats.get,basketball.game_stats.get,-1.0359,remove_name,1.2693,True

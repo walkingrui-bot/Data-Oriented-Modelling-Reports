@@ -1,0 +1,28 @@
+{
+  "title": "Machine Learning Epidemiology and Case Dissection: Training History, Predictive-State Geometry, and Local Control — Chapter 3, with The Engineer’s Edition",
+  "version": "research-v1.9_engineering-v0.6",
+  "snapshot_date": "2026-09-26",
+  "language": "eng",
+  "resource_type": "publication-report",
+  "keywords": [
+    "predictive states",
+    "training history",
+    "mechanistic interpretability",
+    "model scaling",
+    "representation geometry",
+    "low-dimensional control",
+    "chain of thought",
+    "cross-architecture replication",
+    "model control diagnostics",
+    "token operators",
+    "tool selection",
+    "activation patching",
+    "abstention",
+    "engineering reproducibility"
+  ],
+  "description_file": "ZENODO_DESCRIPTION_EN.md",
+  "components": [
+    "../machine-learning-epidemiology",
+    "../chapter-3-engineers-edition"
+  ]
+}

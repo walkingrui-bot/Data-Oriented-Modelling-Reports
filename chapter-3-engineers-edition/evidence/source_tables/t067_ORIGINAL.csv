@@ -1,0 +1,5 @@
+Structure,Engineering consequence
+Discrete boundary,工具选择是 argmax / constrained decode；跨边界后动作身份瞬间改变
+Registry-conditioned admissibility,模型语言先验可以想到某个工具名，但 runtime registry 可能根本没有它
+Sequential schema,tool name + arguments 是按序生成；每个 slot 的误差会改变后续 state，整条 call 的有效率相乘
+External execution gain,内部 perturbation 很小，但不同 tool / args 对真实 world 的 effect 可以相差巨大

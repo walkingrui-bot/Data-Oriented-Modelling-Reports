@@ -1,0 +1,4 @@
+"python TOOL_CALL_002_partial_operator_guard.py validate   --case BFCL_simple_python_0   --proposal '{""mode"":""CALL"",""calls"":[
+    {""name"":""calculate_triangle_area"",
+     ""arguments"":{""base"":10,""height"":5}}
+  ]}'"

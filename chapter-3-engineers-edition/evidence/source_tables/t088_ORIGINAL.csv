@@ -1,0 +1,7 @@
+Failure type,Math condition,Example,Primary control
+Type I — Domain violation,u∉U_t,unregistered tool / missing required arg / invalid schema,硬 gate 直接 BLOCK
+Type II — Semantic mis-selection,u∈U_t but wrong for goal,Heron vs base-height,tool-control radius + semantic axis
+Type III — Set coverage error,S is incomplete/excessive,parallel under-call/over-call,cardinality + goal coverage check
+Type IV — State-path error,e_t incorrect after prior calls,cwd/file state drift,environment state telemetry
+Type V — Action-basis deficiency,desired operator ∉R_t,missing function,WAIT / request capability expansion
+Type VI — Information deficiency,operator exists but binding incomplete,missing parameter,ASK / clarification gate

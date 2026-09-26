@@ -1,0 +1,23 @@
+"A_t = {
+  CALL(tool,args),
+  CALL_SET({tool,args}_i),
+  ASK,
+  WAIT,
+  ABSTAIN,
+  CONTINUE
+}
+
+M_a(z) =
+Q_a(z) - max(
+    Q_CONTINUE(z),
+    max_{b != a, b admissible} Q_b(z)
+)
+
+rho_a(z) =
+M_a(z) / || grad_h M_a(z) ||
+
+S_a(tau) = {
+  z : a is hard-admissible
+      and M_a >= 0
+      and rho_a >= tau
+}"

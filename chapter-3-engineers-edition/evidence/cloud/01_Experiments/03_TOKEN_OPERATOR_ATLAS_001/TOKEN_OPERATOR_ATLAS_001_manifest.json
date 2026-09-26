@@ -1,0 +1,888 @@
+{
+  "recovered_runtime": {
+    "natural_transition_mse": 7.026932280496112e-07,
+    "natural_transition_q95_abs_coordinate_error": 0.0015366077423095703,
+    "natural_transition_max_abs_coordinate_error": 0.008141100406646729,
+    "A_jacobian_median_cosine": 0.99984384,
+    "A_jacobian_median_relative_error": 0.018177465,
+    "B_jacobian_median_cosine": 0.9999406,
+    "B_jacobian_median_relative_error": 0.011836884,
+    "numpy_runtime_vs_recovered_pytorch_max_error": 2.1924097504122386e-07
+  },
+  "atlas": {
+    "tokens": 18,
+    "states": 352,
+    "conditional_signature_stable_rank": 2.360690984738256,
+    "conditional_signature_top3_energy": 0.8729850449725919,
+    "conditional_signature_95pct_dimension": 6,
+    "movement_stable_rank": 2.06597792623724,
+    "movement_top3_energy": 0.8265148403792648,
+    "movement_95pct_dimension": 6
+  },
+  "cards": [
+    {
+      "token": "<Q>",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.5064653105278705,
+      "delta_norm_q05": 1.5476032258800936,
+      "delta_norm_q95": 3.499300789085811,
+      "movement_stable_rank": 1.536907692675714,
+      "movement_top1_energy": 0.650657163579569,
+      "movement_top3_energy": 0.9190678815840965,
+      "direction_consistency": 0.532085251821271,
+      "affine_summary_holdout_rmse": 0.061411785939890245,
+      "nearest_operators": [
+        {
+          "token": "1",
+          "rmse": 0.4024501659562286
+        },
+        {
+          "token": "0",
+          "rmse": 0.4243242063738715
+        },
+        {
+          "token": "compute",
+          "rmse": 0.49118257696467793
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "first",
+          "mean_order_effect": 3.6686066652309006
+        },
+        {
+          "token": "reason",
+          "mean_order_effect": 3.4886218543180636
+        },
+        {
+          "token": "result",
+          "mean_order_effect": 3.210667431543828
+        }
+      ],
+      "shared_operator_coordinates": [
+        -30.80919637882379,
+        -5.7927792826157445,
+        -7.104814813433566,
+        7.196268081099056,
+        -6.631382939278805,
+        5.352436349293253
+      ]
+    },
+    {
+      "token": "A",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.7874339507880075,
+      "delta_norm_q05": 0.8055768483536739,
+      "delta_norm_q95": 3.3128169519388253,
+      "movement_stable_rank": 1.7544772423396777,
+      "movement_top1_energy": 0.5699703455067067,
+      "movement_top3_energy": 0.8944744758094632,
+      "direction_consistency": 0.6987890325023439,
+      "affine_summary_holdout_rmse": 0.04533674950862509,
+      "nearest_operators": [
+        {
+          "token": "second",
+          "rmse": 0.12275123486145656
+        },
+        {
+          "token": "B",
+          "rmse": 0.16353086660930927
+        },
+        {
+          "token": "C",
+          "rmse": 0.2905382985017772
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": ":",
+          "mean_order_effect": 3.2891625674597247
+        },
+        {
+          "token": "compute",
+          "mean_order_effect": 3.1870671066235046
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 3.1666672433746315
+        }
+      ],
+      "shared_operator_coordinates": [
+        16.969143229334733,
+        12.00142651936749,
+        -7.3512091465361635,
+        3.062726334735638,
+        4.195639933913667,
+        5.008047908579635
+      ]
+    },
+    {
+      "token": "0",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.6219678949115917,
+      "delta_norm_q05": 1.086668439980108,
+      "delta_norm_q95": 3.415390135843811,
+      "movement_stable_rank": 1.7953046371270749,
+      "movement_top1_energy": 0.5570085317666442,
+      "movement_top3_energy": 0.8997901912976878,
+      "direction_consistency": 0.6923984932732546,
+      "affine_summary_holdout_rmse": 0.06722417321933001,
+      "nearest_operators": [
+        {
+          "token": "1",
+          "rmse": 0.15646973162445918
+        },
+        {
+          "token": "<Q>",
+          "rmse": 0.4243242063738715
+        },
+        {
+          "token": "compute",
+          "rmse": 0.4380154547733331
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "first",
+          "mean_order_effect": 3.724202233117995
+        },
+        {
+          "token": "reason",
+          "mean_order_effect": 3.467186864534855
+        },
+        {
+          "token": "combine",
+          "mean_order_effect": 3.2534635809890093
+        }
+      ],
+      "shared_operator_coordinates": [
+        -38.64738995176772,
+        8.327805481691708,
+        -0.07209483343563004,
+        2.204830762741337,
+        6.988839901354044,
+        -2.0105004017830077
+      ]
+    },
+    {
+      "token": "B",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.7230385974450613,
+      "delta_norm_q05": 0.8781639232341615,
+      "delta_norm_q95": 3.2671159339927938,
+      "movement_stable_rank": 1.7102419474785198,
+      "movement_top1_energy": 0.5847125907970748,
+      "movement_top3_energy": 0.8969820683112197,
+      "direction_consistency": 0.6154060302827962,
+      "affine_summary_holdout_rmse": 0.04755998514663862,
+      "nearest_operators": [
+        {
+          "token": "second",
+          "rmse": 0.13876157928146618
+        },
+        {
+          "token": "A",
+          "rmse": 0.16353086660930927
+        },
+        {
+          "token": "C",
+          "rmse": 0.2462306599677974
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": ":",
+          "mean_order_effect": 3.205759520006229
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 3.1272918658583175
+        },
+        {
+          "token": "compute",
+          "mean_order_effect": 3.0616936452411996
+        }
+      ],
+      "shared_operator_coordinates": [
+        15.784069420810455,
+        9.37374226873817,
+        -7.055761913721889,
+        2.356077065924822,
+        1.1422376648131256,
+        -1.3229031843074979
+      ]
+    },
+    {
+      "token": "C",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.43098244772044,
+      "delta_norm_q05": 1.037348586704409,
+      "delta_norm_q95": 2.885988261913816,
+      "movement_stable_rank": 1.9181293276204592,
+      "movement_top1_energy": 0.5213412805905808,
+      "movement_top3_energy": 0.8706158895598196,
+      "direction_consistency": 0.6149020325302069,
+      "affine_summary_holdout_rmse": 0.04753759545705183,
+      "nearest_operators": [
+        {
+          "token": "B",
+          "rmse": 0.2462306599677974
+        },
+        {
+          "token": "A",
+          "rmse": 0.2905382985017772
+        },
+        {
+          "token": "second",
+          "rmse": 0.3200996735698797
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": ":",
+          "mean_order_effect": 3.15053034604454
+        },
+        {
+          "token": ";",
+          "mean_order_effect": 2.7229428887983684
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 2.647050173976335
+        }
+      ],
+      "shared_operator_coordinates": [
+        7.386577901620559,
+        17.275695055294744,
+        -5.395828814682534,
+        -1.6177815497204653,
+        1.7181802581332772,
+        -4.178277542811125
+      ]
+    },
+    {
+      "token": "D",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.0469338567905266,
+      "delta_norm_q05": 0.9441419349235354,
+      "delta_norm_q95": 3.1369074415952167,
+      "movement_stable_rank": 1.55540271371326,
+      "movement_top1_energy": 0.6429203132947285,
+      "movement_top3_energy": 0.9011662935207182,
+      "direction_consistency": 0.47726190176820493,
+      "affine_summary_holdout_rmse": 0.055805474184019065,
+      "nearest_operators": [
+        {
+          "token": "combine",
+          "rmse": 0.2586245090991156
+        },
+        {
+          "token": "second",
+          "rmse": 0.3636934812369669
+        },
+        {
+          "token": "B",
+          "rmse": 0.3888674145183834
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "compute",
+          "mean_order_effect": 2.7963618529861303
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 2.7250952456813815
+        },
+        {
+          "token": "1",
+          "mean_order_effect": 2.537582244105525
+        }
+      ],
+      "shared_operator_coordinates": [
+        6.281845907916343,
+        -3.7556906292561325,
+        -7.486858387030576,
+        -5.357853203236722,
+        -0.767104474198024,
+        8.872367985773794
+      ]
+    },
+    {
+      "token": "reason",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.5874336299037015,
+      "delta_norm_q05": 0.8711314948494283,
+      "delta_norm_q95": 3.6712352515424502,
+      "movement_stable_rank": 1.595474008475832,
+      "movement_top1_energy": 0.6267729807490298,
+      "movement_top3_energy": 0.9151234383136359,
+      "direction_consistency": 0.7565366575737743,
+      "affine_summary_holdout_rmse": 0.050152720990000954,
+      "nearest_operators": [
+        {
+          "token": "result",
+          "rmse": 0.23701057022560837
+        },
+        {
+          "token": "final",
+          "rmse": 0.4206803401192372
+        },
+        {
+          "token": "second",
+          "rmse": 0.43270964509456483
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "<Q>",
+          "mean_order_effect": 3.4886218543180636
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 3.467186864534855
+        },
+        {
+          "token": "1",
+          "mean_order_effect": 3.2928316158087174
+        }
+      ],
+      "shared_operator_coordinates": [
+        18.42305692948063,
+        13.055889244134741,
+        18.586372235390762,
+        -4.294927722948655,
+        5.614929076367237,
+        1.8036837547543583
+      ]
+    },
+    {
+      "token": ":",
+      "state_bank_n": 352,
+      "delta_norm_median": 3.4453276230659786,
+      "delta_norm_q05": 1.4289556283807414,
+      "delta_norm_q95": 4.087131148772778,
+      "movement_stable_rank": 1.7088350114267332,
+      "movement_top1_energy": 0.5851940025298781,
+      "movement_top3_energy": 0.897781345316208,
+      "direction_consistency": 0.8183714896690941,
+      "affine_summary_holdout_rmse": 0.05548021060067716,
+      "nearest_operators": [
+        {
+          "token": ";",
+          "rmse": 0.359146961819473
+        },
+        {
+          "token": "first",
+          "rmse": 0.823526041816151
+        },
+        {
+          "token": "D",
+          "rmse": 0.8517811593773879
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "A",
+          "mean_order_effect": 3.2891625674597247
+        },
+        {
+          "token": "B",
+          "mean_order_effect": 3.205759520006229
+        },
+        {
+          "token": "C",
+          "mean_order_effect": 3.15053034604454
+        }
+      ],
+      "shared_operator_coordinates": [
+        -2.79650248210795,
+        -49.3446870897036,
+        2.170734321536489,
+        -2.8737168711849,
+        9.100297092678858,
+        1.4610472066111242
+      ]
+    },
+    {
+      "token": "compute",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.5262678632951685,
+      "delta_norm_q05": 1.3356952250583312,
+      "delta_norm_q95": 3.6020030195285355,
+      "movement_stable_rank": 1.419162655517882,
+      "movement_top1_energy": 0.7046408641827452,
+      "movement_top3_energy": 0.9169464427575804,
+      "direction_consistency": 0.6475014673478027,
+      "affine_summary_holdout_rmse": 0.05748364282218826,
+      "nearest_operators": [
+        {
+          "token": "0",
+          "rmse": 0.4380154547733331
+        },
+        {
+          "token": "<Q>",
+          "rmse": 0.49118257696467793
+        },
+        {
+          "token": "1",
+          "rmse": 0.49663377498769157
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "first",
+          "mean_order_effect": 3.66046258523518
+        },
+        {
+          "token": "reason",
+          "mean_order_effect": 3.284639372384129
+        },
+        {
+          "token": ";",
+          "mean_order_effect": 3.257255541610246
+        }
+      ],
+      "shared_operator_coordinates": [
+        -35.62704899669818,
+        2.8355676123982954,
+        15.48974715593306,
+        -5.247373210077108,
+        -8.041498372872702,
+        4.573204451430293
+      ]
+    },
+    {
+      "token": "xor",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.354288294048713,
+      "delta_norm_q05": 0.8452344626556492,
+      "delta_norm_q95": 2.8273473856719096,
+      "movement_stable_rank": 1.713416510520778,
+      "movement_top1_energy": 0.5836292541012452,
+      "movement_top3_energy": 0.8815216559239502,
+      "direction_consistency": 0.6668636751080311,
+      "affine_summary_holdout_rmse": 0.04684328619068024,
+      "nearest_operators": [
+        {
+          "token": "C",
+          "rmse": 0.40029297994004515
+        },
+        {
+          "token": "B",
+          "rmse": 0.5501302701555018
+        },
+        {
+          "token": "D",
+          "rmse": 0.5619375537297748
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": ":",
+          "mean_order_effect": 2.541394019001445
+        },
+        {
+          "token": ";",
+          "mean_order_effect": 2.5270968483688323
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 2.304508109630946
+        }
+      ],
+      "shared_operator_coordinates": [
+        -6.332887036993171,
+        19.54937330072744,
+        -10.57940298504154,
+        -17.413132058318006,
+        -3.7273329021833788,
+        -4.006792374046074
+      ]
+    },
+    {
+      "token": ";",
+      "state_bank_n": 352,
+      "delta_norm_median": 3.128514179975185,
+      "delta_norm_q05": 1.6634230896151598,
+      "delta_norm_q95": 4.543783280021466,
+      "movement_stable_rank": 1.524796691241939,
+      "movement_top1_energy": 0.6558251377011484,
+      "movement_top3_energy": 0.9152448958310923,
+      "direction_consistency": 0.7514719971883697,
+      "affine_summary_holdout_rmse": 0.05398260564696592,
+      "nearest_operators": [
+        {
+          "token": ":",
+          "rmse": 0.359146961819473
+        },
+        {
+          "token": "first",
+          "rmse": 0.6635289324402688
+        },
+        {
+          "token": "D",
+          "rmse": 0.7588807420574603
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "compute",
+          "mean_order_effect": 3.257255541610246
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 3.247639204928232
+        },
+        {
+          "token": "1",
+          "mean_order_effect": 3.141084604836895
+        }
+      ],
+      "shared_operator_coordinates": [
+        6.653897544460597,
+        -45.25533188621611,
+        -1.5351292788776363,
+        -4.568288615900038,
+        -2.200805107391353,
+        -4.563779499099113
+      ]
+    },
+    {
+      "token": "first",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.602654260981771,
+      "delta_norm_q05": 1.0007179334005956,
+      "delta_norm_q95": 4.252666759721131,
+      "movement_stable_rank": 1.5691000573150173,
+      "movement_top1_energy": 0.6373079876825452,
+      "movement_top3_energy": 0.9192902603334623,
+      "direction_consistency": 0.614999837094388,
+      "affine_summary_holdout_rmse": 0.056290107567155655,
+      "nearest_operators": [
+        {
+          "token": "combine",
+          "rmse": 0.28960393116914573
+        },
+        {
+          "token": "B",
+          "rmse": 0.46880154571924537
+        },
+        {
+          "token": "answer",
+          "rmse": 0.4752292037574188
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "0",
+          "mean_order_effect": 3.724202233117995
+        },
+        {
+          "token": "<Q>",
+          "mean_order_effect": 3.6686066652309006
+        },
+        {
+          "token": "compute",
+          "mean_order_effect": 3.66046258523518
+        }
+      ],
+      "shared_operator_coordinates": [
+        20.24417226505099,
+        -12.688272291911584,
+        0.49265222524664204,
+        2.972120288392235,
+        -9.107612101697912,
+        -6.048494417437572
+      ]
+    },
+    {
+      "token": "result",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.557618694872319,
+      "delta_norm_q05": 0.9850763211223247,
+      "delta_norm_q95": 3.362807437493495,
+      "movement_stable_rank": 1.6082510009943811,
+      "movement_top1_energy": 0.6217934883184902,
+      "movement_top3_energy": 0.8984881816601274,
+      "direction_consistency": 0.6549694022905642,
+      "affine_summary_holdout_rmse": 0.04339614730427011,
+      "nearest_operators": [
+        {
+          "token": "reason",
+          "rmse": 0.23701057022560837
+        },
+        {
+          "token": "final",
+          "rmse": 0.34925584170205637
+        },
+        {
+          "token": "C",
+          "rmse": 0.35444208801475463
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "0",
+          "mean_order_effect": 3.2494289833138605
+        },
+        {
+          "token": "<Q>",
+          "mean_order_effect": 3.210667431543828
+        },
+        {
+          "token": ":",
+          "mean_order_effect": 3.1444146720457313
+        }
+      ],
+      "shared_operator_coordinates": [
+        14.537858331705865,
+        13.24046748187398,
+        12.253294182059806,
+        -2.856059313227523,
+        -0.8387023113065977,
+        -2.5315802792264326
+      ]
+    },
+    {
+      "token": "second",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.6324324178823173,
+      "delta_norm_q05": 0.7373127879341784,
+      "delta_norm_q95": 3.3842224921686093,
+      "movement_stable_rank": 1.6625161896810692,
+      "movement_top1_energy": 0.6014979019192808,
+      "movement_top3_energy": 0.9048907713968841,
+      "direction_consistency": 0.6766106514838933,
+      "affine_summary_holdout_rmse": 0.04417193339784524,
+      "nearest_operators": [
+        {
+          "token": "A",
+          "rmse": 0.12275123486145656
+        },
+        {
+          "token": "B",
+          "rmse": 0.13876157928146618
+        },
+        {
+          "token": "combine",
+          "rmse": 0.28027470755287265
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "0",
+          "mean_order_effect": 3.1830489329682647
+        },
+        {
+          "token": "compute",
+          "mean_order_effect": 3.179919694696282
+        },
+        {
+          "token": "<Q>",
+          "mean_order_effect": 3.0703440354443203
+        }
+      ],
+      "shared_operator_coordinates": [
+        18.09460079461568,
+        8.485401081388865,
+        -5.395271130040007,
+        0.6789185969038318,
+        3.748378075450384,
+        4.125311360669373
+      ]
+    },
+    {
+      "token": "combine",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.4746233529759403,
+      "delta_norm_q05": 0.9474248797267492,
+      "delta_norm_q95": 3.6116070628842607,
+      "movement_stable_rank": 1.5631212445640106,
+      "movement_top1_energy": 0.639745639359487,
+      "movement_top3_energy": 0.9153102000031712,
+      "direction_consistency": 0.5163679505789626,
+      "affine_summary_holdout_rmse": 0.05256716888683795,
+      "nearest_operators": [
+        {
+          "token": "D",
+          "rmse": 0.2586245090991156
+        },
+        {
+          "token": "second",
+          "rmse": 0.28027470755287265
+        },
+        {
+          "token": "first",
+          "rmse": 0.28960393116914573
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "0",
+          "mean_order_effect": 3.2534635809890093
+        },
+        {
+          "token": "compute",
+          "mean_order_effect": 3.2322265877668084
+        },
+        {
+          "token": "<Q>",
+          "mean_order_effect": 3.0999585335973334
+        }
+      ],
+      "shared_operator_coordinates": [
+        14.806473056132061,
+        -2.801342232021172,
+        -0.34354111909248086,
+        0.6063813775742223,
+        -3.9580829621946347,
+        2.856000526312273
+      ]
+    },
+    {
+      "token": "final",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.3636802089723874,
+      "delta_norm_q05": 1.7787720115821526,
+      "delta_norm_q95": 3.021671921997688,
+      "movement_stable_rank": 1.6964624675522442,
+      "movement_top1_energy": 0.5894619062470972,
+      "movement_top3_energy": 0.9173752616172417,
+      "direction_consistency": 0.44200956162854677,
+      "affine_summary_holdout_rmse": 0.04435503499525125,
+      "nearest_operators": [
+        {
+          "token": "answer",
+          "rmse": 0.3464314521910701
+        },
+        {
+          "token": "result",
+          "rmse": 0.34925584170205637
+        },
+        {
+          "token": "combine",
+          "rmse": 0.4022790701120171
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "<Q>",
+          "mean_order_effect": 2.9411376840659176
+        },
+        {
+          "token": ":",
+          "mean_order_effect": 2.9139167432381807
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 2.881939998248601
+        }
+      ],
+      "shared_operator_coordinates": [
+        3.4356002847212856,
+        5.5054274656282765,
+        13.57700396014396,
+        10.091978427184708,
+        -0.14835082183600742,
+        -1.9634948803016208
+      ]
+    },
+    {
+      "token": "answer",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.4772456043082327,
+      "delta_norm_q05": 1.716144426209775,
+      "delta_norm_q95": 3.015543760116698,
+      "movement_stable_rank": 1.8291440050421612,
+      "movement_top1_energy": 0.5467038118614124,
+      "movement_top3_energy": 0.9051185173232256,
+      "direction_consistency": 0.41586869713854957,
+      "affine_summary_holdout_rmse": 0.04502375497203137,
+      "nearest_operators": [
+        {
+          "token": "B",
+          "rmse": 0.3037829467693257
+        },
+        {
+          "token": "combine",
+          "rmse": 0.3372655152658826
+        },
+        {
+          "token": "final",
+          "rmse": 0.3464314521910701
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": ":",
+          "mean_order_effect": 3.134317818420003
+        },
+        {
+          "token": "0",
+          "mean_order_effect": 2.808275102101406
+        },
+        {
+          "token": "compute",
+          "mean_order_effect": 2.7477178995986233
+        }
+      ],
+      "shared_operator_coordinates": [
+        5.382430832613366,
+        2.706681504229739,
+        -5.573514978778034,
+        12.812925119063156,
+        -3.025298866914104,
+        -1.6553126841066401
+      ]
+    },
+    {
+      "token": "1",
+      "state_bank_n": 352,
+      "delta_norm_median": 2.5002174935129178,
+      "delta_norm_q05": 1.1112971671989083,
+      "delta_norm_q95": 3.287309455928894,
+      "movement_stable_rank": 1.8675369647608868,
+      "movement_top1_energy": 0.5354646354365664,
+      "movement_top3_energy": 0.9053685100993205,
+      "direction_consistency": 0.619940434251641,
+      "affine_summary_holdout_rmse": 0.06226186501230813,
+      "nearest_operators": [
+        {
+          "token": "0",
+          "rmse": 0.15646973162445918
+        },
+        {
+          "token": "<Q>",
+          "rmse": 0.4024501659562286
+        },
+        {
+          "token": "compute",
+          "rmse": 0.49663377498769157
+        }
+      ],
+      "highest_order_effect_partners": [
+        {
+          "token": "first",
+          "mean_order_effect": 3.507455145647366
+        },
+        {
+          "token": "reason",
+          "mean_order_effect": 3.2928316158087174
+        },
+        {
+          "token": ";",
+          "mean_order_effect": 3.141084604836895
+        }
+      ],
+      "shared_operator_coordinates": [
+        -33.78670165207172,
+        7.2806263962508755,
+        -4.6763766796406525,
+        2.2469064909944083,
+        5.937668857162924,
+        -5.770964280305038
+      ]
+    }
+  ]
+}

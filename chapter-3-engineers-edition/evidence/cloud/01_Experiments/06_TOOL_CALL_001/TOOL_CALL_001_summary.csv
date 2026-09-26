@@ -1,0 +1,14 @@
+metric,value
+Boundary median d_flip,0.5964138701623949
+Boundary p05 d_flip,0.0442434292294944
+Near-boundary (d<0.05) fraction,0.0563
+Median finite world amplification,2.686078291333488
+P95 finite world amplification,34.76894740452998
+No-tool hallucination crossover reasoning gain,2.3000000000000003
+Distractor capture crossover reasoning gain,0.9
+Distractor best tool similarity,0.9338064385221904
+Goal-to-best-single-tool relative error,0.3577786122373761
+5-slot base full-call validity,0.8268309039374998
+5-slot perturbed full-call validity,0.648698080275
+Relative drop after early perturbation,0.2154404519886752
+Goal-to-valid-tool-positive-cone relative error,0.35777861223737606

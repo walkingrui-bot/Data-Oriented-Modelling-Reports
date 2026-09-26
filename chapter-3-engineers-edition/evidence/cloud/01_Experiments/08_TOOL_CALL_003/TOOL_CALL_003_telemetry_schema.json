@@ -1,0 +1,19 @@
+{
+  "state_id": "string",
+  "hard_state": {
+    "runtime_registry": "list[str]",
+    "bindings": "dict",
+    "environment_preconditions": "dict[str,bool]",
+    "parallel_goal_count": "int"
+  },
+  "actions": [
+    {
+      "name": "CALL:tool_name | CALL_SET | ASK | WAIT | ABSTAIN | CONTINUE",
+      "kind": "CALL | CALL_SET | ASK | WAIT | ABSTAIN | CONTINUE",
+      "score": "float; same convention for all candidates at one state",
+      "gradient": "float[D]; d(score)/d(hidden_state)",
+      "admissible": "bool from model-independent hard guard"
+    }
+  ],
+  "hard_call_domain": "bool"
+}

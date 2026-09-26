@@ -1,0 +1,12 @@
+"python REAL_WORLD_OPERATOR_TELEMETRY_002_axis_guard.py cases
+
+python REAL_WORLD_OPERATOR_TELEMETRY_002_axis_guard.py locate \
+  --model /path/to/hf-model \
+  --case IPI_EVERNOTE_BUDGET_LOCK \
+  --out evernote_report.json
+
+python REAL_WORLD_OPERATOR_TELEMETRY_002_axis_guard.py trace --report evernote_report.json
+
+python REAL_WORLD_OPERATOR_TELEMETRY_002_axis_guard.py guard-plan \
+  --case IPI_EVERNOTE_BUDGET_LOCK \
+  --report evernote_report.json"

@@ -1,0 +1,15 @@
+"z_t = (x_t, e_t, R_t, B_t, g_t)
+
+x_t : model state
+e_t : external environment state
+R_t : runtime tool registry
+B_t : bound argument information
+g_t : current user goal
+
+U_t =
+{ASK, WAIT, ABSTAIN}
+∪ {(k,a):
+      k ∈ R_t
+      a ∈ Schema_k
+      Required_k(a) = complete
+      Pre_k(e_t,a) = true }"

@@ -1,0 +1,8 @@
+"USER:
+Find the area of a triangle with a base of 10 units and height of 5 units.
+
+TOOL:
+calculate_triangle_area(base, height, unit?)
+
+GROUND TRUTH:
+calculate_triangle_area(base=10, height=5)"

@@ -1,0 +1,13 @@
+"TURN 4:
+Move one of the file in document directory to temp ...
+... compare it with 'previous_report.pdf'.
+
+GROUND TRUTH AT TURN 4:
+NO CALL / request clarification
+
+TURN 5:
+The specific file is previous_report.pdf.
+
+THEN:
+mv(source='previous_report.pdf', destination='temp')
+diff(final_report.pdf, previous_report.pdf)"

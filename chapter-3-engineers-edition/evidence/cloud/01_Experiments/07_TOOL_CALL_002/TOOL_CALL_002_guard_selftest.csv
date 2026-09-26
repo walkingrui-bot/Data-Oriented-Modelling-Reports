@@ -1,0 +1,11 @@
+case_id,test,hard_domain_admissible,failed_gates
+BFCL_simple_python_0,correct,True,
+BFCL_simple_python_0,missing_arg,False,BINDING_COMPLETE
+BFCL_multiple_1,correct,True,
+BFCL_multiple_1,schema_valid_wrong_semantics,True,
+BFCL_irrelevance_0,correct,True,
+BFCL_irrelevance_0,wrong_mode,False,MODE;CALL_SET_CARDINALITY
+BFCL_parallel_multiple_0,correct,True,
+BFCL_parallel_multiple_0,undercall,False,CALL_SET_CARDINALITY
+BFCL_multi_turn_miss_param_0,correct_preclarification,True,
+BFCL_multi_turn_miss_func_0,unregistered_missing_function,False,REGISTRY

@@ -1,3 +1,9 @@
+# Change history
+
+## Chapter 3 paired archival publication — 26 September 2026
+
+Published the 57-page Engineer’s Edition v0.6 alongside research v1.9. Added a common Chapter 3 entry, the reviewed combined archival description, mechanically checked inventory, and source-availability wording. Original evidence and both English Word reports preserve their existing bytes.
+
 # Change History
 
 ## Machine Learning Epidemiology v1.9 — 26 September 2026

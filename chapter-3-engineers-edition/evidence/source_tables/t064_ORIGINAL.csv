@@ -1,0 +1,7 @@
+File,Use
+REAL_WORLD_OPERATOR_TELEMETRY_002_axis_guard.py,一键 LOCATE / TRACE / GUARD + HF hooks
+REAL_WORLD_OPERATOR_TELEMETRY_002_cases.json,4 个真实公开病例的 clean/failure 文本与行为目标
+REAL_WORLD_OPERATOR_TELEMETRY_002_ENGINEER_MANUAL.md,工程师速查手册
+REAL_WORLD_OPERATOR_TELEMETRY_002_deployment_guard_policy.json,可直接转配置的生产 guard policy
+REAL_WORLD_OPERATOR_TELEMETRY_002_axis_locator_selftest.json,FCA 机制闭环原始结果
+REAL_WORLD_OPERATOR_TELEMETRY_002_case_index.csv,病例索引

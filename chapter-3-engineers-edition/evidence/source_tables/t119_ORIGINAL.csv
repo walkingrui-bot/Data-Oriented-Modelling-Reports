@@ -1,0 +1,10 @@
+"python TOOL_CALL_004_semantic_selection_os.py diagnose incident.json
+
+# incident.json 对每个 candidate 至少给：
+full
+name_neutral
+description_neutral
+schema_neutral
+
+# 若事故后已知正确工具，再加：
+correct_id"

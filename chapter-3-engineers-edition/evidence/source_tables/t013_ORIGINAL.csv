@@ -1,0 +1,9 @@
+Item,Value
+Frozen model,897-param Adam GRU
+Token embedding,6D learned embedding，整个实验保持固定
+State bank,8 probes × 44 real prefix states = 352 states
+Candidate tokens,"0, 1, ;, result, xor, A, B, C, D, compute"
+Full factorial,"10 tokens × 352 states = 3,520 cases"
+Steer probe,固定下一 probe token = result
+Natural subset,只保留 token == 该 state 原本 natural token 的 occurrence
+Stress-test subset,把同一固定 token transplant 到全部真实 prefix states

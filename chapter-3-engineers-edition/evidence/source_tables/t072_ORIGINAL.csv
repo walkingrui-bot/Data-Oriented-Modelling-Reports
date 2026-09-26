@@ -1,0 +1,2 @@
+"python TOOL_CALL_001_stability_guard.py calibrate clean_telemetry.npz --out thresholds.json
+python TOOL_CALL_001_stability_guard.py check run_telemetry.npz --thresholds thresholds.json"

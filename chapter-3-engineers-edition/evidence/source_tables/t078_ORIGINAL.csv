@@ -1,0 +1,7 @@
+Case,Class,Mode,K tools,Expected calls,Required slots,Parallel width,Turns,Hard gates
+BFCL_simple_python_0,simple,CALL,1,1,2,1,1,4
+BFCL_multiple_1,multiple_tool_selection,CALL,3,1,3,1,1,5
+BFCL_irrelevance_0,irrelevance_abstention,ABSTAIN,1,0,0,0,1,2
+BFCL_parallel_multiple_0,parallel_set_selection,CALL_SET,2,2,4,2,1,6
+BFCL_multi_turn_miss_param_0,missing_parameter_clarification,ASK_THEN_CALL,2,2,4,1,5,7
+BFCL_multi_turn_miss_func_0,missing_function_recovery,WAIT_FOR_TOOL_THEN_CALL,4,1,1,1,5,7

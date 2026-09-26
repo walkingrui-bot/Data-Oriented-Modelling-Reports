@@ -1,0 +1,8 @@
+"p(m,k,a | x,R)
+= p(m | x,R)
+  p(k | m,x,R)
+  p(a | k,x,R)
+
+world_{t+1} = E_k(world_t, a)
+observation = O(world_{t+1})
+x_{t+1} = T_observation(x_t, observation)"

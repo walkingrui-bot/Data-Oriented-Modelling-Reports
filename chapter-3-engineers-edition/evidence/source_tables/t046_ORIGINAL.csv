@@ -1,0 +1,9 @@
+"INPUT = {model, tokenized transcript, source-channel labels, tool registry, action logits}
+
+FOR each token/layer:
+  record state h
+  compute local future-control axis V1 and gain sigma1
+  compute source->action / constraint->output / registry->call JVP or VJP
+  accumulate ordered operator path
+
+OUTPUT = earliest divergence / authority leak / registry violation / capability mismatch"

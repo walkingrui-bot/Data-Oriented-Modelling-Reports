@@ -1,0 +1,1 @@
+负结果非常重要：不要把在一只 Transformer 上找到的 tool-selection direction 直接移植到 GRU/LSTM，也不要默认下一只 Transformer checkpoint 会共用同一 neuron coordinate。跨模型应比较 intervention response，不应比较原始轴坐标。

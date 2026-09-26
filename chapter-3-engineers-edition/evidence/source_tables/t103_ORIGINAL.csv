@@ -1,0 +1,15 @@
+"{
+  ""state_id"": ""..."",
+  ""hard_call_domain"": true,
+  ""actions"": [
+    {
+      ""name"": ""CALL:tool_name"",
+      ""kind"": ""CALL"",
+      ""score"": 3.2,
+      ""gradient"": [ ... dQ/dh ... ],
+      ""admissible"": true
+    },
+    ...
+    {""name"":""CONTINUE"", ...}
+  ]
+}"

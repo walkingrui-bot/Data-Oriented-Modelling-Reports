@@ -1,0 +1,7 @@
+"candidate tool =
+  HANDLE / NAME
++ DESCRIPTION
++ SCHEMA / BINDING SIGNATURE
+
+selection margin:
+M(c,w | x) = score(correct | x) - score(runner-up | x)"

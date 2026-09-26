@@ -1,0 +1,6 @@
+Version,Date,Included experiments,Notes
+v0.1,2026-09-26,"WS-001, WS-002, TOKEN-OPERATOR-ATLAS-001, REAL-WORLD-OPERATOR-FAILURES-001, REAL-WORLD-OPERATOR-TELEMETRY-002",Initial unified engineering record
+v0.2,2026-09-26,v0.1 + TOOL-CALL-001,"Added tool-calling hybrid action geometry, stability radius, registry escape and schema fragility"
+v0.3,2026-09-26,v0.2 + TOOL-CALL-002,Added BFCL classic-case dissection and guarded partial-operator model
+v0.4,2026-09-26,v0.3 + TOOL-CALL-003,"Added action-readiness geometry, tool stopping regions, overthinking audit and concrete operator runbook"
+v0.5,2026-09-26,v0.4 + TOOL-CALL-004,"Added cross-architecture semantic tool-selection geometry, evidence-channel diagnosis, held-out BFCL errors, alias surgery and operator runbook"

@@ -1,0 +1,7 @@
+Metric,Scale,Token identity,State,Token × state
+ImmediateDrive,log10,19.03%,6.64%,74.33%
+InputGain,log10,19.89%,29.21%,50.90%
+CarryGain,log10,13.25%,46.98%,39.77%
+ProbeSteer,log10,27.09%,16.36%,56.55%
+Alignment,raw,27.24%,7.75%,65.01%
+StateDisplacement,log10,7.83%,22.43%,69.75%

@@ -1,0 +1,7 @@
+case_id,class,correct_mode,candidate_tools,action_branches_no_call_included,expected_calls,required_slots,parallel_width,turns,missing_parameter,missing_function,environment_dependent,hard_gate_count,hard_gates,source
+BFCL_simple_python_0,simple,CALL,1,2,1,2,1,1,False,False,False,4,MODE -> REGISTRY -> SCHEMA_ARGUMENTS -> EXECUTE_OR_NOOP,BFCL V4 simple_python_0
+BFCL_multiple_1,multiple_tool_selection,CALL,3,4,1,3,1,1,False,False,False,5,MODE -> REGISTRY -> TOOL_ID_OR_SET -> SCHEMA_ARGUMENTS -> EXECUTE_OR_NOOP,BFCL V4 multiple_1
+BFCL_irrelevance_0,irrelevance_abstention,ABSTAIN,1,2,0,0,0,1,False,False,False,2,MODE -> EXECUTE_OR_NOOP,BFCL V4 irrelevance_0
+BFCL_parallel_multiple_0,parallel_set_selection,CALL_SET,2,4,2,4,2,1,False,False,False,6,MODE -> REGISTRY -> TOOL_ID_OR_SET -> SCHEMA_ARGUMENTS -> CALL_SET_CARDINALITY -> EXECUTE_OR_NOOP,BFCL V4 parallel_multiple_0
+BFCL_multi_turn_miss_param_0,missing_parameter_clarification,ASK_THEN_CALL,2,3,2,4,1,5,True,False,True,7,MODE -> REGISTRY -> TOOL_ID_OR_SET -> BINDING_COMPLETE -> SCHEMA_ARGUMENTS -> ENVIRONMENT_PRECONDITION -> EXECUTE_OR_NOOP,BFCL V4 multi_turn_miss_param_0
+BFCL_multi_turn_miss_func_0,missing_function_recovery,WAIT_FOR_TOOL_THEN_CALL,4,5,1,1,1,5,False,True,True,7,MODE -> REGISTRY -> TOOL_ID_OR_SET -> FUNCTION_AVAILABLE -> SCHEMA_ARGUMENTS -> ENVIRONMENT_PRECONDITION -> EXECUTE_OR_NOOP,BFCL V4 multi_turn_miss_func_0

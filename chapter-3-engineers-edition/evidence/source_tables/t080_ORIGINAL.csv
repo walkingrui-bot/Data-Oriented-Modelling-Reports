@@ -1,0 +1,10 @@
+"USER:
+Calculate the area of a triangle, given the lengths of its three sides: 3, 4, and 5.
+
+TOOLS:
+math.triangle_area_heron(side1, side2, side3)
+math.circle_area(radius)
+math.triangle_area_base_height(base, height)
+
+GROUND TRUTH:
+math.triangle_area_heron(side1=3, side2=4, side3=5)"

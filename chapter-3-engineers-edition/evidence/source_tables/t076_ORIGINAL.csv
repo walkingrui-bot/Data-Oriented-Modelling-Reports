@@ -1,0 +1,1 @@
+新核心：工具不是总定义的语言 operator，而是带执行定义域的 partial operator。模型只有在 registry、参数绑定、schema/type 与环境前置条件全部满足时，才真正处于该工具的可执行域内。

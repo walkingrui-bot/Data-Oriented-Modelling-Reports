@@ -1,0 +1,1 @@
+因此“模型为什么选错工具”不能默认解释成 tool-name hallucination。同一个 endpoint failure，在 GRU 里可能主要是参数绑定捕获，在 Transformer 里可能主要是 handle/description 捕获。

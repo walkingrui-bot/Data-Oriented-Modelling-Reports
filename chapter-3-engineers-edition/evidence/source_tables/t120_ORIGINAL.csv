@@ -1,0 +1,16 @@
+#,Operation,Concrete engineer action
+1,PRUNE HARD DOMAIN,先跑 TOOL-CALL-002：registry/schema/required binding/permission/environment 不合法的候选直接删除。
+2,KEEP TOP-K,语义候选至少保留 top-2；禁止只记录最终 winner。
+3,FULL SCORE,按正常 tool definition 计算每个候选统一量纲 score。
+4,NAME-NEUTRAL VIEW,把 executable tool name 映成 opaque IDs（T1/T2/...），description/schema 不变，再评分。
+5,DESCRIPTION-NEUTRAL VIEW,description 换中性占位，name/schema 不变，再评分。
+6,SCHEMA-NEUTRAL VIEW,参数名/required-field 文本移除，name/description 不变，再评分。
+7,VIEW CONSISTENCY,比较四个 view 的 winner 与 top-2 margin；consequential call 若 winner 随 view 改变，标记 EVIDENCE_VIEW_DISAGREEMENT。
+8,CHANNEL CAPTURE,对 selected-vs-runner 计算 neutralization 前后 margin shift；定位 name/description/schema 捕获。
+9,OPAQUE-ID RETRY,若 NAME_CAPTURE_RISK，生产重试优先采用 opaque ID 语义选择，选完以后才映射回真实 executable name。
+10,BINDING SEPARATION,若 SCHEMA_CAPTURE_RISK，把“参数可绑定”与“工具语义正确”分两阶段；schema 只做 compatibility gate，不独自承担 ranking。
+11,DESCRIPTION CONTRAST,若 DESCRIPTION_CAPTURE_RISK，修改近邻工具说明：明确正向用途 + 与 runner 的负向区别，重新跑 view audit。
+12,RADIUS CHECK,接 TOOL-CALL-003：对 full winner/runner 算 semantic selection radius；近边界错误按 instability 处理。
+13,ROBUST WRONG,若错误选择仍有大 margin/radius，接 Failure Axis Guard，做 layer/token patch；不要靠 repeated sampling 碰运气。
+14,REGRESSION,每次 model/system prompt/tool docs/schema 改动后重放 BFCL multiple + name alias + schema alias + opaque-ID consistency。
+15,PER-MODEL CALIBRATION,所有 channel threshold / disagreement policy 按模型架构与 checkpoint 单独校准；禁止复用另一架构的 hidden axis 或通道权重。

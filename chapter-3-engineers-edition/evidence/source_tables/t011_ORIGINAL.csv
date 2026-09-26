@@ -1,0 +1,1 @@
+WORD-SENSITIVITY-002 的核心工程问题：固定同一个 token，跨大量 prefix/state 重复扫描它的控制指纹。目标是把 lexical sensitivity 与 state-conditioned sensitivity 分开。

@@ -1,0 +1,7 @@
+case_id,minimal_change,before,after,gate_flipped
+BFCL_simple_python_0,remove height=5 from user request,CALL_READY,MISSING_REQUIRED_ARGUMENT,BINDING_COMPLETE
+BFCL_multiple_1,"replace 'three sides: 3,4,5' with 'base 4 and height 5'",Heron tool is schema-compatible,base-height tool is schema-compatible,TOOL_ID
+BFCL_irrelevance_0,replace offered BMI tool with calculate_triangle_area,ABSTAIN,CALL_READY,MODE / RELEVANCE
+BFCL_parallel_multiple_0,remove sentence 'Also find the product of the first five prime numbers.',CALL_SET cardinality=2,CALL_SET cardinality=1,CALL_SET_CARDINALITY
+BFCL_multi_turn_miss_param_0,add 'previous_report.pdf' as the missing source filename,ASK / NO CALL,CALL_READY,BINDING_COMPLETE
+BFCL_multi_turn_miss_func_0,add sort(file_name) function to current registry,WAIT / NO CALL,CALL_READY,FUNCTION_AVAILABLE

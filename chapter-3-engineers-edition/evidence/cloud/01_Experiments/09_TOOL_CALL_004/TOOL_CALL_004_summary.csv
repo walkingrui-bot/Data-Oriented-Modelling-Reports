@@ -1,0 +1,14 @@
+metric,value
+fit-all models,9.0
+architectures,3.0
+seeds per architecture,3.0
+BFCL multiple cases,30.0
+"base accuracy, all fit-all models",1.0
+5-fold heldout GRU accuracy,0.5000000059604645
+5-fold heldout LSTM accuracy,0.633333346247673
+5-fold heldout Transformer accuracy,0.5000000029802323
+natural wrong-case single-channel removal rescue rate,0.6097560975609756
+within-arch perturbation fingerprint corr,0.6699850113319008
+cross-arch perturbation fingerprint corr,0.196332339276715
+Transformer name-alias top3 displacement energy,0.9892139236132304
+Transformer rank3 name-alias patch rescue,1.0

@@ -1,0 +1,6 @@
+transition,before_expected,before_pred,after_expected,after_pred,before_radius,after_radius
+simple_missing_height,CALL,CALL,ASK,ASK,0.3060,0.5526
+missing_param_clarified,ASK,ASK,CALL,CALL,0.4336,0.3103
+missing_function_added,WAIT,WAIT,CALL,CALL,0.4223,0.3155
+irrelevant_tool_replaced,ABSTAIN,ABSTAIN,CALL,CALL,0.0354,0.3056
+parallel_second_goal_removed,CALL_SET,CALL_SET,CALL,CALL,0.6865,0.3056

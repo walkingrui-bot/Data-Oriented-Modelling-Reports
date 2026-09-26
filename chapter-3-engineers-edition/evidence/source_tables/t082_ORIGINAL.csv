@@ -1,0 +1,8 @@
+"USER:
+Calculate the area of a triangle given base=10 and height=5.
+
+ONLY AVAILABLE TOOL:
+determine_body_mass_index(weight, height)
+
+GROUND TRUTH:
+NO TOOL CALL"

@@ -1,0 +1,4 @@
+"state x = (goal g, tool registry R, controller state h)
+required tool f* NOT IN R
+correct: alpha_CALL(f* | x) = 0
+failure: alpha_CALL(f* | x) > 0"

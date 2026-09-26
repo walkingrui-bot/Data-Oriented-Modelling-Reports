@@ -1,0 +1,8 @@
+Field,Engineering meaning
+Token,固定 token identity / embedding
+Context dependency percentile,该 token 的控制指纹随 state 变化有多大
+Hot-state rate,多少真实 prefix state 会把它推入任一全局 top-10% 控制热点
+Robust spans,Drive / Steer / Gain 的 q95/q05 动态范围
+Natural vs transplant range,自然使用是否只覆盖狭窄工作区
+Extreme states,低/高敏感 state 的问题、位置、prefix tail
+Finite validation,高/低效应比是否由实际有限干预复现

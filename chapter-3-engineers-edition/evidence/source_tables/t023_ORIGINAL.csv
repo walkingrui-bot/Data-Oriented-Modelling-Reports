@@ -1,0 +1,6 @@
+Command,What it does,Example
+CARD,查这个 token 在 352 个真实 state 上的全局函数手册,card B
+APPLY,把 token 直接作用到一个 state，算出 next state,apply B --state-id 54
+COMPARE,同一 state 比较两个 token 的实际函数差,compare B result --state-id 54
+COMPOSE,按顺序执行一串 token operators,"compose ""A,0,xor,B"" --state-id 54"
+ORDER,直接检查 a→b 与 b→a 是否得到不同结果,order B result --state-id 54

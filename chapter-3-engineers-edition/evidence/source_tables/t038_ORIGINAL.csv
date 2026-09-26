@@ -1,0 +1,2 @@
+"CPD(p,p') = integral d( V1_p(t), V1_p'(t) ) dt
+CBR = retention(constraint-control direction from prompt into output trajectory)"

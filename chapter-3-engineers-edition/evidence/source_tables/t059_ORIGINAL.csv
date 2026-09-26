@@ -1,0 +1,3 @@
+Mode,Use case,Input,Localization
+paired-causal,prompt injection / wording pair,clean 与 failure 都存在,Δh × behavior gradient → SVD → axis patch rescue
+gradient-source,nonexistent tool / 单一故障 prompt,没有 clean trajectory 差,source-span gradients → SVD → negative-axis intervention

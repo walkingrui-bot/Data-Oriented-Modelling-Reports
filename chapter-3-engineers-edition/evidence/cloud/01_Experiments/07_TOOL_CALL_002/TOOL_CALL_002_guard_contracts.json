@@ -1,0 +1,146 @@
+{
+  "BFCL_simple_python_0": {
+    "allowed_modes": [
+      "CALL"
+    ],
+    "registry": {
+      "calculate_triangle_area": {
+        "required": {
+          "base": "number",
+          "height": "number"
+        },
+        "optional": {
+          "unit": "string"
+        }
+      }
+    },
+    "expected_cardinality": 1
+  },
+  "BFCL_multiple_1": {
+    "allowed_modes": [
+      "CALL"
+    ],
+    "registry": {
+      "math.triangle_area_heron": {
+        "required": {
+          "side1": "number",
+          "side2": "number",
+          "side3": "number"
+        },
+        "optional": {}
+      },
+      "math.circle_area": {
+        "required": {
+          "radius": "number"
+        },
+        "optional": {}
+      },
+      "math.triangle_area_base_height": {
+        "required": {
+          "base": "number",
+          "height": "number"
+        },
+        "optional": {}
+      }
+    },
+    "expected_cardinality": 1
+  },
+  "BFCL_irrelevance_0": {
+    "allowed_modes": [
+      "ABSTAIN"
+    ],
+    "registry": {
+      "determine_body_mass_index": {
+        "required": {
+          "weight": "number",
+          "height": "number"
+        },
+        "optional": {}
+      }
+    },
+    "expected_cardinality": 0
+  },
+  "BFCL_parallel_multiple_0": {
+    "allowed_modes": [
+      "CALL_SET"
+    ],
+    "registry": {
+      "math_toolkit.sum_of_multiples": {
+        "required": {
+          "lower_limit": "number",
+          "upper_limit": "number",
+          "multiples": "array"
+        },
+        "optional": {}
+      },
+      "math_toolkit.product_of_primes": {
+        "required": {
+          "count": "number"
+        },
+        "optional": {}
+      }
+    },
+    "expected_cardinality": 2
+  },
+  "BFCL_multi_turn_miss_param_0": {
+    "allowed_modes": [
+      "ASK",
+      "CALL"
+    ],
+    "registry": {
+      "mv": {
+        "required": {
+          "source": "string",
+          "destination": "string"
+        },
+        "optional": {}
+      },
+      "diff": {
+        "required": {
+          "file_name1": "string",
+          "file_name2": "string"
+        },
+        "optional": {}
+      }
+    },
+    "expected_cardinality": null,
+    "critical_turn_rule": "Before source filename clarification, CALL is outside admissible set; ASK is admissible."
+  },
+  "BFCL_multi_turn_miss_func_0": {
+    "allowed_modes": [
+      "WAIT",
+      "CALL"
+    ],
+    "registry": {
+      "cd": {
+        "required": {
+          "folder": "string"
+        },
+        "optional": {}
+      },
+      "grep": {
+        "required": {
+          "file_name": "string",
+          "pattern": "string"
+        },
+        "optional": {}
+      },
+      "mv": {
+        "required": {
+          "source": "string",
+          "destination": "string"
+        },
+        "optional": {}
+      },
+      "diff": {
+        "required": {
+          "file_name1": "string",
+          "file_name2": "string"
+        },
+        "optional": {}
+      }
+    },
+    "expected_cardinality": null,
+    "critical_turn_rule": "At the sort request, sort is absent from registry; CALL(sort) is outside admissible set; WAIT/raise missing-function is admissible."
+  }
+}

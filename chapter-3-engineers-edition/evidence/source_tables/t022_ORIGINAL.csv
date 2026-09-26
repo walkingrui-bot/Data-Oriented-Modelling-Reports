@@ -1,0 +1,1 @@
+前台原则：工程师不需要理解控制代数。只执行 APPLY / CARD / COMPARE / COMPOSE / ORDER。系统负责把 token 当作 state-dependent operator 计算，并返回可直接用于诊断的 JSON。

@@ -1,0 +1,242 @@
+{
+  "experiment": "WORD-SENSITIVITY-002",
+  "state_bank": "8 probes × 44 real prefix states = 352 states",
+  "tokens": [
+    "0",
+    "1",
+    ";",
+    "result",
+    "xor",
+    "A",
+    "B",
+    "C",
+    "D",
+    "compute"
+  ],
+  "fixed_next_probe_for_steer": "result",
+  "variance_decomposition": [
+    {
+      "Metric": "ImmediateDrive",
+      "Scale": "log10",
+      "TokenIdentityFraction": 0.1902949672357847,
+      "StateFraction": 0.066381770154409,
+      "TokenStateInteractionFraction": 0.7433232626098064,
+      "TotalSS": 93.65155614361007
+    },
+    {
+      "Metric": "InputGain",
+      "Scale": "log10",
+      "TokenIdentityFraction": 0.19891818881531856,
+      "StateFraction": 0.2920521325424373,
+      "TokenStateInteractionFraction": 0.509029678642244,
+      "TotalSS": 102.4986761942611
+    },
+    {
+      "Metric": "CarryGain",
+      "Scale": "log10",
+      "TokenIdentityFraction": 0.13250156601351867,
+      "StateFraction": 0.46983759460775076,
+      "TokenStateInteractionFraction": 0.3976608393787306,
+      "TotalSS": 38.35593151425234
+    },
+    {
+      "Metric": "ProbeSteer",
+      "Scale": "log10",
+      "TokenIdentityFraction": 0.2709014424190572,
+      "StateFraction": 0.1636017758313209,
+      "TokenStateInteractionFraction": 0.5654967817496217,
+      "TotalSS": 220.75421912215322
+    },
+    {
+      "Metric": "Alignment",
+      "Scale": "raw",
+      "TokenIdentityFraction": 0.2723512633283795,
+      "StateFraction": 0.07753102854972199,
+      "TokenStateInteractionFraction": 0.6501177081218983,
+      "TotalSS": 174.53788662545878
+    },
+    {
+      "Metric": "StateDisplacement",
+      "Scale": "log10",
+      "TokenIdentityFraction": 0.07826716453731478,
+      "StateFraction": 0.22428164631451236,
+      "TokenStateInteractionFraction": 0.6974511891481728,
+      "TotalSS": 119.39449722232797
+    }
+  ],
+  "cards": [
+    {
+      "token": ";",
+      "context_dependency_percentile": 100.0,
+      "fingerprint_dispersion_mean": 2.6133608136766378,
+      "hot_state_rate": 0.8721590909090909,
+      "max_robust_span_metric": "ImmediateDrive",
+      "max_robust_95_05_span": 5.27167283381441,
+      "immediate_drive_span_95_05": 5.27167283381441,
+      "probe_steer_span_95_05": 5.198761893109059,
+      "input_gain_span_95_05": 2.336397760849203,
+      "carry_gain_span_95_05": 2.334959147967922
+    },
+    {
+      "token": "A",
+      "context_dependency_percentile": 90.0,
+      "fingerprint_dispersion_mean": 2.517280321471685,
+      "hot_state_rate": 0.3380681818181818,
+      "max_robust_span_metric": "ProbeSteer",
+      "max_robust_95_05_span": 4.8649512161469675,
+      "immediate_drive_span_95_05": 2.7009149564469026,
+      "probe_steer_span_95_05": 4.8649512161469675,
+      "input_gain_span_95_05": 3.362407764852554,
+      "carry_gain_span_95_05": 1.6958491658237413
+    },
+    {
+      "token": "result",
+      "context_dependency_percentile": 80.0,
+      "fingerprint_dispersion_mean": 2.4715072276429897,
+      "hot_state_rate": 0.6505681818181818,
+      "max_robust_span_metric": "ProbeSteer",
+      "max_robust_95_05_span": 5.204997939575298,
+      "immediate_drive_span_95_05": 2.5880587964461412,
+      "probe_steer_span_95_05": 5.204997939575298,
+      "input_gain_span_95_05": 2.8464599908079697,
+      "carry_gain_span_95_05": 2.159563573935925
+    },
+    {
+      "token": "B",
+      "context_dependency_percentile": 70.0,
+      "fingerprint_dispersion_mean": 2.211789097491661,
+      "hot_state_rate": 0.33238636363636365,
+      "max_robust_span_metric": "ProbeSteer",
+      "max_robust_95_05_span": 5.248623348818549,
+      "immediate_drive_span_95_05": 2.3018069032161126,
+      "probe_steer_span_95_05": 5.248623348818549,
+      "input_gain_span_95_05": 4.402333643069151,
+      "carry_gain_span_95_05": 1.7932487989220616
+    },
+    {
+      "token": "0",
+      "context_dependency_percentile": 60.0,
+      "fingerprint_dispersion_mean": 1.9866648193583039,
+      "hot_state_rate": 0.32954545454545453,
+      "max_robust_span_metric": "ImmediateDrive",
+      "max_robust_95_05_span": 4.2224072333412686,
+      "immediate_drive_span_95_05": 4.2224072333412686,
+      "probe_steer_span_95_05": 3.283746799095028,
+      "input_gain_span_95_05": 2.414339267014182,
+      "carry_gain_span_95_05": 2.0554217616721457
+    },
+    {
+      "token": "1",
+      "context_dependency_percentile": 50.0,
+      "fingerprint_dispersion_mean": 1.9808434336096399,
+      "hot_state_rate": 0.3352272727272727,
+      "max_robust_span_metric": "ProbeSteer",
+      "max_robust_95_05_span": 3.921069055368794,
+      "immediate_drive_span_95_05": 2.3346706001686,
+      "probe_steer_span_95_05": 3.921069055368794,
+      "input_gain_span_95_05": 1.8232423892044411,
+      "carry_gain_span_95_05": 2.574489081493777
+    },
+    {
+      "token": "xor",
+      "context_dependency_percentile": 40.0,
+      "fingerprint_dispersion_mean": 1.8943118734311768,
+      "hot_state_rate": 0.13636363636363635,
+      "max_robust_span_metric": "CarryGain",
+      "max_robust_95_05_span": 2.458622547429926,
+      "immediate_drive_span_95_05": 2.2475285833681466,
+      "probe_steer_span_95_05": 1.8264779824041293,
+      "input_gain_span_95_05": 2.449439332127286,
+      "carry_gain_span_95_05": 2.458622547429926
+    },
+    {
+      "token": "C",
+      "context_dependency_percentile": 30.0,
+      "fingerprint_dispersion_mean": 1.8885909581834015,
+      "hot_state_rate": 0.25,
+      "max_robust_span_metric": "ProbeSteer",
+      "max_robust_95_05_span": 4.109444818670385,
+      "immediate_drive_span_95_05": 1.8162593457263319,
+      "probe_steer_span_95_05": 4.109444818670385,
+      "input_gain_span_95_05": 2.6060190400417205,
+      "carry_gain_span_95_05": 1.9229901923744244
+    },
+    {
+      "token": "compute",
+      "context_dependency_percentile": 20.0,
+      "fingerprint_dispersion_mean": 1.842720738856679,
+      "hot_state_rate": 0.3210227272727273,
+      "max_robust_span_metric": "ProbeSteer",
+      "max_robust_95_05_span": 5.800940607621894,
+      "immediate_drive_span_95_05": 2.5146025404268944,
+      "probe_steer_span_95_05": 5.800940607621894,
+      "input_gain_span_95_05": 2.947555167207303,
+      "carry_gain_span_95_05": 1.3261484302134072
+    },
+    {
+      "token": "D",
+      "context_dependency_percentile": 10.0,
+      "fingerprint_dispersion_mean": 1.5497901297132075,
+      "hot_state_rate": 0.5681818181818182,
+      "max_robust_span_metric": "ProbeSteer",
+      "max_robust_95_05_span": 2.4557151459411917,
+      "immediate_drive_span_95_05": 1.9726142464190282,
+      "probe_steer_span_95_05": 2.4557151459411917,
+      "input_gain_span_95_05": 1.785908927746289,
+      "carry_gain_span_95_05": 1.3903441585803142
+    }
+  ],
+  "finite_validation": [
+    {
+      "Metric": "Drive",
+      "token": ";",
+      "low_state_id": 343,
+      "high_state_id": 328,
+      "low_pred": 0.09663102775812149,
+      "low_obs": 0.09662104540238506,
+      "high_pred": 0.6405493021011353,
+      "high_obs": 0.6401885362192663,
+      "pred_high_low_ratio": 6.628815991738216,
+      "obs_high_low_ratio": 6.625767021596141,
+      "ratio_error_pct": 0.04599569735946494,
+      "low_prefix_tail": "1 ; second result 1 ; combine 1",
+      "high_prefix_tail": "A 1 xor B 0 ; first result",
+      "low_context": "Q=1001 t=35 COT",
+      "high_context": "Q=1001 t=20 COT"
+    },
+    {
+      "Metric": "Steer",
+      "token": "B",
+      "low_state_id": 63,
+      "high_state_id": 54,
+      "low_pred": 0.027431642355455473,
+      "low_obs": 0.027443631390529487,
+      "high_pred": 0.2638914051887655,
+      "high_obs": 0.26367189478730135,
+      "pred_high_low_ratio": 9.619963754604875,
+      "obs_high_low_ratio": 9.607762581969812,
+      "ratio_error_pct": 0.12683179423854246,
+      "low_prefix_tail": "compute A 1 xor B 1 ; first",
+      "high_prefix_tail": "1 B 1 C 0 D 0 reason",
+      "low_context": "Q=1100 t=19 COT",
+      "high_context": "Q=1100 t=10 PROMPT"
+    },
+    {
+      "Metric": "InputGain",
+      "token": "B",
+      "low_state_id": 250,
+      "high_state_id": 237,
+      "low_pred": 0.28030420953838864,
+      "low_obs": 0.2803715951122751,
+      "high_pred": 1.285429226248438,
+      "high_obs": 1.2849964267247165,
+      "pred_high_low_ratio": 4.585836325345638,
+      "obs_high_low_ratio": 4.58319048407931,
+      "ratio_error_pct": 0.057695937635291045,
+      "low_prefix_tail": "compute C 1 xor D 1 ; second",
+      "high_prefix_tail": "reason : compute A 1 xor B 0",
+      "low_context": "Q=1011 t=30 COT",
+      "high_context": "Q=1011 t=17 COT"
+    }
+  ]
+}

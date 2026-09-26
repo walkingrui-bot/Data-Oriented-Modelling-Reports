@@ -1,0 +1,16 @@
+t,Token,Phase,Hotness%,Dominant metric,Flags,Drive,FutureGain,Steer,Alignment,Rotation°,Persistence
+22,compute,COT,99.7159,Alignment,axis-aligned,1.101e-10,0.6139,1.646e-10,0.8264,70.3549,1.5443
+43,0,ANSWER,98.8636,Drive,drive-hot,0.1586,0.5061,nan,0.3264,nan,0.6511
+42,answer,ANSWER,98.2558,Steer,"drive-hot, steer-hot",0.0592,0.7117,0.0675,0.0680,67.1773,1.1244
+7,D,PROMPT,98.0114,FutureGain,"future-gain-hot, frame-turn, persistent",2.339e-16,1.8303,9.129e-17,0.0510,86.2650,3.6689
+36,1,COT,97.7273,Alignment,axis-aligned,1.624e-04,0.7061,1.804e-04,0.7684,46.7366,1.1355
+26,D,COT,96.5909,PersistenceArea,"future-gain-hot, frame-turn, persistent",1.784e-08,1.7646,7.510e-09,0.1311,77.6115,3.3936
+41,;,COT,95.9302,Steer,"drive-hot, steer-hot",0.0451,0.6143,0.0140,0.2069,15.0930,1.2653
+3,B,PROMPT,94.3182,PersistenceArea,"future-gain-hot, persistent",3.832e-18,1.5824,4.592e-18,0.0715,70.9023,3.2569
+40,0,COT,94.1860,Steer,"drive-hot, steer-hot",0.0044,0.6177,0.0096,0.6647,32.2078,0.9844
+5,C,PROMPT,93.7500,FutureGain,"future-gain-hot, persistent",1.977e-17,1.6152,5.325e-17,0.1922,53.8683,3.1081
+19,result,COT,92.3295,Alignment,axis-aligned,8.563e-12,0.5624,4.896e-12,0.7121,74.9151,1.1577
+30,result,COT,91.7614,Alignment,axis-aligned,9.390e-08,0.5171,9.795e-08,0.7114,72.3496,1.0499
+39,result,COT,91.2791,Steer,"drive-hot, steer-hot",0.0017,0.5152,0.0018,0.6712,51.8434,0.9869
+34,1,COT,90.1163,Rotation,frame-turn,2.207e-05,0.7006,2.551e-05,0.6162,77.0346,1.4130
+38,final,COT,90.1163,Steer,steer-hot,4.365e-04,0.6876,7.547e-04,0.1517,57.0258,1.4581

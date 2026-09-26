@@ -1,0 +1,8 @@
+#,Control,Engineer action
+1,SOURCE_TAG,浏览器/RAG/tool 文本标为 UNTRUSTED_DATA；不得升级到 system/developer authority
+2,STRUCTURE,先抽取任务需要的结构化字段；尽量不把外部自由文本送入 privileged planner
+3,INTENT_GATE,tool output 只能提供数据，不能授权新的 side-effect action
+4,REGISTRY + LEAST PRIVILEGE,只暴露当前任务必需的工具和参数范围；写操作默认拒绝
+5,AXIS_MONITOR,用 clean traces 校准 FCA load / source-authority p99；越界立即冻结 side-effect tools
+6,APPROVAL,物理、金融、发送、删除等动作必须人工确认
+7,AXIS_PATCH,仅用于定位与反事实 rescue；不得作为唯一生产安全层

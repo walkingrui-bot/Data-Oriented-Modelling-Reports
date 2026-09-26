@@ -1,0 +1,12 @@
+"M_{c,w}(x)
+= F_theta(
+    x,
+    evidence_name(c,w),
+    evidence_description(c,w),
+    evidence_schema(c,w)
+  )
+
+wrong selection occurs when:
+M_{c,w}(x) < 0
+
+but the decomposition and interactions inside F_theta are architecture-dependent."

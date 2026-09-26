@@ -1,0 +1,1 @@
+只有 axis patch 能实际减少 clean↔failure 行为差的轴，才被接受为工程故障轴。因此“哪个轴”不是人工给隐藏维起名字，而是 intervention-validated direction。

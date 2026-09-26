@@ -1,0 +1,7 @@
+architecture,threshold,n,error_rate
+gru,0.5,7,0.7142857142857143
+gru,0.7,5,1.0
+lstm,0.5,2,0.0
+lstm,0.7,0,
+transformer,0.5,7,0.7142857142857143
+transformer,0.7,4,0.75

@@ -1,21 +1,17 @@
 # Biosphere 3 — Public Reports
 
-## New report · Machine Learning Epidemiology and Case Dissection
+## Chapter 3 · Research and The Engineer’s Edition
 
-**Living Experimental Record v1.9 · 26 September 2026 · 147-page English report**
+**Paired archival snapshot · Research v1.9 + engineering v0.6 · 26 September 2026**
 
-Matched interventions connect learning history, predictive states and control. This integrated record adds two completed validation campaigns across miniature GRU, Transformer and Mamba models, exact finite-state checks, and a 30-model study of capacity, coverage and predictive-state geometry. Each conclusion carries its current evidence status.
+Chapter 3 connects training history and predictive-state geometry with practical measurements of trained models. Its two companion reports share one [reading and evidence entry](chapter-3/README.md).
 
-| Open the record | Contents |
-| --- | --- |
-| [Read the English report](machine-learning-epidemiology/REPORT_EN.md) | Full experimental record, methods, results and synthesis |
-| [Download the Word report](machine-learning-epidemiology/ML_Epidemiology_Living_Report_v1.9_EN.docx) | Formatted 147-page edition |
-| [Browse the evidence](machine-learning-epidemiology/EVIDENCE_INDEX.md) | 38 original experiment archives, expanded data, code, figures and source reports |
-| [Current findings](machine-learning-epidemiology/CURRENT_FINDINGS.md) | Supported findings, conditional results and mechanistic hypotheses |
-| [Model scale and predictive geometry](machine-learning-epidemiology/MODEL_SCALE_EN.md) | Capacity, training coverage, state separation and local control |
-| [Source availability](machine-learning-epidemiology/SOURCE_AVAILABILITY.md) | File-level provenance and campaign attachment status |
+| Companion report | Read | Evidence |
+| --- | --- | --- |
+| Machine Learning Epidemiology and Case Dissection · v1.9 · 147 pages | [English report](machine-learning-epidemiology/REPORT_EN.md) · [Word](machine-learning-epidemiology/ML_Epidemiology_Living_Report_v1.9_EN.docx) | [38 original experiment archives and replication reports](machine-learning-epidemiology/EVIDENCE_INDEX.md) |
+| Model Control Diagnostics — Chapter 3: The Engineer’s Edition · v0.6 · 57 pages | [English report](chapter-3-engineers-edition/REPORT_EN.md) · [Word](chapter-3-engineers-edition/Chapter_3_Engineers_Edition_v0.6_EN.docx) | [Cloud experiments, local reports, and evidence updates](chapter-3-engineers-edition/EVIDENCE_INDEX.md) |
 
-[Collection guide](machine-learning-epidemiology/README.md) · [Chapter contents](machine-learning-epidemiology/CONTENTS.md) · [Changes in v1.9](machine-learning-epidemiology/CHANGELOG.md)
+The research part develops the experimental account of history, geometry, and local control. The engineering part follows token diagnostics, executable operator queries, local pretrained interventions, tool ranking, and execution contracts. Both parts identify included files and referenced companion records. The [combined archival description](chapter-3/ZENODO_DESCRIPTION_EN.md) and [verified inventory](chapter-3/SNAPSHOT_INVENTORY.json) describe this fixed snapshot.
 
 ## Language Models Fit the Function That Generates the Answer
 
@@ -133,6 +129,8 @@ Every entry below opens a complete dossier: how the experiment was run, what hap
 | Path | Contents |
 | --- | --- |
 | `machine-learning-epidemiology/` | Living Experimental Record v1.9, expanded evidence and provenance indexes |
+| `chapter-3-engineers-edition/` | Engineer’s Edition v0.6, cloud experiments, local reports and evidence updates |
+| `chapter-3/` | Shared entry, reviewed archival description and paired snapshot inventory |
 | `experiments/E01_.../` through `E39_.../` | English methods, results, interpretation, `experiment.json`, and `artifacts.csv` |
 | `evidence/` | Original code, results, protocols, figures, inputs, checkpoints, and traces, according to each experiment's archive |
 | `reports/` and `report_text/` | English reports in DOCX and Markdown |
@@ -156,11 +154,11 @@ For the per-episode RTG outputs, `python scripts/prepare_evidence.py` restores t
 
 ## Coming next
 
-**Chapters 3 and 4 are coming soon.**
+**Chapter 3 is available in two companion parts. Chapter 4 is forthcoming.**
 
 ## Versions, citation, and feedback
 
-The prepared initial release is **v0.1.0**, with a research snapshot dated **25 September 2026** and report editions revised **26 September 2026**. Phases 1 and 2 and the **Machine Learning Epidemiology v1.9** record are collected here under **Biosphere 3 — Public Reports**; each record keeps its own version history.
+The initial Phases 1 and 2 release is **v0.1.0**, with a research snapshot dated **25 September 2026** and report editions revised **26 September 2026**. Chapter 3 pairs **Machine Learning Epidemiology v1.9** with **The Engineer’s Edition v0.6** in an archival snapshot dated **26 September 2026**. These records are collected under **Biosphere 3 — Public Reports**, and each retains its own version history.
 
 [Change history](CHANGELOG.md) · [Release notes](RELEASE_NOTES.md) · [Citation guidance](CITATION.md) · [Source and reuse notes](SOURCE_NOTES.md)
 

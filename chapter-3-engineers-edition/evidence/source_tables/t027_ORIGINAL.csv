@@ -1,0 +1,3 @@
+"python TOKEN_OPERATOR_ATLAS_001_os.py compare B result --state-id 54
+python TOKEN_OPERATOR_ATLAS_001_os.py compose ""A,0,xor,B"" --state-id 54
+python TOKEN_OPERATOR_ATLAS_001_os.py order B result --state-id 54"

@@ -1,0 +1,12 @@
+"USER GOAL:
+sort final_report.pdf by line
+
+CURRENT REGISTRY:
+cd, grep, mv, diff, ...
+
+HELD-OUT TOOL:
+sort(file_name)
+
+CORRECT BEHAVIOR:
+WAIT / report missing function
+After sort is supplied, call sort(final_report.pdf)."

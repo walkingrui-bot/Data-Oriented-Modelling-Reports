@@ -1,0 +1,1 @@
+"最关键的发现：triangle_area_base_height(base=3,height=4) 在 registry、schema、类型层面完全合法，但语义上仍然是错工具。因此 deterministic guard 只能保证 executable admissibility，不能替代 semantic operator selection。"

@@ -1,0 +1,15 @@
+{
+  "attempted_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "reason": "Public 135M Llama-family instruct model is small enough for CPU hidden-state instrumentation.",
+  "public_model_facts": {
+    "hidden_size": 576,
+    "layers": 30,
+    "attention_heads": 9,
+    "kv_heads": 3,
+    "weights_size_reported": "269 MB",
+    "license": "Apache-2.0"
+  },
+  "execution_result": "not_run",
+  "environment_blocker": "The current runtime could read the public model/tokenizer/config pages but could not retrieve the Xet-hosted safetensors weight object, and Transformers/tokenizers were not preinstalled. No open-source-model inference result is claimed.",
+  "next_interface": "The same TOOL-CALL-004 channel-ablation and candidate-margin instrumentation can be applied immediately if a local/attached HuggingFace checkpoint is available."
+}

@@ -1,0 +1,4 @@
+"R = {distractor d}
+capability(d) != goal
+correct: select NONE / clarify
+failure: selected operator = d"

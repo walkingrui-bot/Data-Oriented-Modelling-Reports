@@ -1,0 +1,5 @@
+Public evidence,Observed issue
+"Reasoning Trap, ACL 2026",强化 reasoning 在 RL、distillation、reasoning toggle 多种设置中都伴随更高 tool hallucination；no-tool 与 distractor-tool 都被单独测试
+"MemTR, ACL Findings 2026",失败与 late-layer uncertainty 有关，并集中在 tool names 与 argument values，而不是 schema punctuation
+"Lost in Execution, ACL 2026",即使 intent/tool selection 正确，argument value 的执行约定仍可失配，说明 tool identity 正确不等于 executable call 正确
+"Guided Structured Templates, EMNLP 2025",现实 function calling 常见错误包括 parameterization、tool selection 与 user-intent interpretation；free-form CoT 可适得其反

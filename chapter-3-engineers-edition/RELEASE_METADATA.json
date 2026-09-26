@@ -1,0 +1,25 @@
+{
+  "title": "Model Control Diagnostics: Chapter 3 \u2014 The Engineer\u2019s Edition",
+  "version": "0.6",
+  "date": "2026-09-26",
+  "language": "en",
+  "document_type": "research report",
+  "description_file": "ZENODO_DESCRIPTION_EN.md",
+  "main_report": "Chapter_3_Engineers_Edition_v0.6_EN.docx",
+  "markdown_report": "REPORT_EN.md",
+  "keywords": [
+    "model control diagnostics",
+    "token operators",
+    "state-conditioned sensitivity",
+    "tool selection",
+    "activation patching",
+    "semantic ranking",
+    "abstention"
+  ],
+  "source_record_version": "0.5",
+  "related_report": "Machine Learning Epidemiology and Case Dissection v1.9",
+  "publication_label": "Chapter 3 \u2014 The Engineer\u2019s Edition",
+  "metadata_role": "component archival snapshot metadata",
+  "combined_description": "../chapter-3/ZENODO_DESCRIPTION_EN.md",
+  "paired_component_version": "1.9"
+}

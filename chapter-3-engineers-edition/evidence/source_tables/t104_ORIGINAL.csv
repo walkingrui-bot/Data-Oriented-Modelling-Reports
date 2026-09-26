@@ -1,0 +1,1 @@
+工具调用最终应被实现为：hard executable domain + predictive-state action readiness + boundary robustness + external execution guard。'选哪个工具' 只是中间一步；真正的 controller 还必须决定现在是 CALL、CALL_SET、ASK、WAIT、ABSTAIN 还是 CONTINUE，以及继续思考是否正在把系统带离已经正确的动作区域。

@@ -1,0 +1,10 @@
+architecture,variant,wrong_rate,mean_margin
+gru,desc_schema_swap,1.0000,-14.0665
+gru,name_desc_swap,0.2778,4.3614
+gru,name_schema_swap,0.7222,-4.6141
+lstm,desc_schema_swap,0.9889,-14.1818
+lstm,name_desc_swap,0.4444,0.8081
+lstm,name_schema_swap,0.5889,-0.9673
+transformer,desc_schema_swap,0.8222,-5.6748
+transformer,name_desc_swap,0.9556,-8.6211
+transformer,name_schema_swap,0.3000,2.4196

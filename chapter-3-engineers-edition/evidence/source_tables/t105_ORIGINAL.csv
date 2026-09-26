@@ -1,0 +1,1 @@
+核心结论先写在工程前面：没有发现跨架构共享的一根“错工具隐藏轴”。真正跨架构可移植的是多证据通道诊断：tool name / description / schema-binding 会共同形成 selection margin，但不同架构给这些通道的权重与内部几何明显不同。

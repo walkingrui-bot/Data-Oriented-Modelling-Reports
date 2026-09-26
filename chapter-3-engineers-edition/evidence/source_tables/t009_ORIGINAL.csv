@@ -1,0 +1,8 @@
+t,Token,Phase,Observed role,Drive,FutureGain,Steer,Alignment,Rotation°,Persistence
+7,D,PROMPT,Prompt state-shaper,2.339e-16,1.8303,9.129e-17,0.0510,86.2650,3.6689
+3,B,PROMPT,Prompt persistent shaper,3.832e-18,1.5824,4.592e-18,0.0715,70.9023,3.2569
+22,compute,COT,Aligned but low direct drive,1.101e-10,0.6139,1.646e-10,0.8264,70.3549,1.5443
+26,D,COT,CoT trajectory hotspot,1.784e-08,1.7646,7.510e-09,0.1311,77.6115,3.3936
+41,;,COT,Late meta-controller,0.0451,0.6143,0.0140,0.2069,15.0930,1.2653
+42,answer,ANSWER,Answer-stage driver + steer,0.0592,0.7117,0.0675,0.0680,67.1773,1.1244
+43,0,ANSWER,Endpoint driver,0.1586,0.5061,nan,0.3264,nan,0.6511

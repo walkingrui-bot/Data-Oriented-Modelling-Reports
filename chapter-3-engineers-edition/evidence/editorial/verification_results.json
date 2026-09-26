@@ -1,0 +1,173 @@
+{
+  "operation": "deterministic recalculation and source-code counterexamples",
+  "neural_training_runs": 0,
+  "new_pretrained_inference_runs": 0,
+  "scanner": {
+    "FutureGain": {
+      "n": 44,
+      "pearson_r": 0.999999793640455,
+      "median_relative_error_with_1e_12_floor_pct": 0.029691664041230643,
+      "max_absolute_error": 0.0011452652257084583,
+      "zero_observed_count": 0
+    },
+    "Drive": {
+      "n": 44,
+      "pearson_r": 0.9999999774551255,
+      "median_relative_error_with_1e_12_floor_pct": 2.115038412670668,
+      "max_absolute_error": 3.347981537495104e-05,
+      "zero_observed_count": 28
+    },
+    "Steer": {
+      "n": 43,
+      "pearson_r": 0.9999999899890657,
+      "median_relative_error_with_1e_12_floor_pct": 0.016203674187706886,
+      "max_absolute_error": 1.2808212880952019e-05,
+      "zero_observed_count": 0
+    }
+  },
+  "state_transplant": {
+    "rows": 3520,
+    "tokens": 10,
+    "states": 352,
+    "variance": {
+      "ImmediateDrive": {
+        "token_pct": 19.02949672359177,
+        "state_pct": 6.638177015441685,
+        "interaction_pct": 74.33232626096655
+      },
+      "InputGain": {
+        "token_pct": 19.891818881527122,
+        "state_pct": 29.205213254245884,
+        "interaction_pct": 50.90296786422699
+      },
+      "CarryGain": {
+        "token_pct": 13.250156601352483,
+        "state_pct": 46.98375946076608,
+        "interaction_pct": 39.766083937881454
+      },
+      "ProbeSteer": {
+        "token_pct": 27.090144241854148,
+        "state_pct": 16.36017758315441,
+        "interaction_pct": 56.54967817499147
+      },
+      "Alignment": {
+        "token_pct": 27.23512633283795,
+        "state_pct": 7.753102854972199,
+        "interaction_pct": 65.01177081218984
+      },
+      "StateDisplacement": {
+        "token_pct": 7.826716453729846,
+        "state_pct": 22.428164631452173,
+        "interaction_pct": 69.745118914818
+      }
+    }
+  },
+  "recovered_runtime_consistency": {
+    "transitions": 6336,
+    "max_coordinate_error": 0.0,
+    "comparison": "recovered runtime versus its saved transition table"
+  },
+  "cloud_semantic_selection": {
+    "architecture_case_errors": 41,
+    "distinct_tasks": 25,
+    "retrospective_pairwise_recoveries": 25,
+    "recovery_percent": 60.97560975609756,
+    "geometry": {
+      "within_architecture": {
+        "pairs": 9,
+        "fingerprint_correlation_mean": 0.6699850113319008,
+        "gradient_gram_correlation_mean": -0.02843392663220267
+      },
+      "cross_architecture": {
+        "pairs": 27,
+        "fingerprint_correlation_mean": 0.196332339276715,
+        "gradient_gram_correlation_mean": -0.003647588005430272
+      }
+    }
+  },
+  "source_counterexamples": {
+    "runner_up_radius": 10.0,
+    "all_competitor_minimum": 0.02,
+    "finite_winning_candidate_index": 2,
+    "historical_type_check_accepts_nan": true,
+    "historical_unknown_integer_type_falls_through": true,
+    "historical_readiness_operation_with_false_hard_domain": "EXECUTE",
+    "pairwise_vs_all_candidate_construction": {
+      "correct_minus_original_wrong_after": 1.0,
+      "winner_after": "third",
+      "source_diagnosis": {
+        "case_id": null,
+        "selected": "wrong",
+        "runner_up": "correct",
+        "views": {
+          "full": {
+            "winner": "wrong",
+            "runner_up": "correct",
+            "margin": 1.0
+          },
+          "name_neutral": {
+            "winner": "third",
+            "runner_up": "correct",
+            "margin": 2.0
+          },
+          "description_neutral": {
+            "winner": "wrong",
+            "runner_up": "correct",
+            "margin": 1.0
+          },
+          "schema_neutral": {
+            "winner": "wrong",
+            "runner_up": "correct",
+            "margin": 1.0
+          }
+        },
+        "channel_effect_on_selected_margin": {
+          "name": 2.0,
+          "description": 0.0,
+          "schema": 0.0
+        },
+        "flags": [
+          "EVIDENCE_VIEW_DISAGREEMENT",
+          "NAME_CAPTURE_RISK"
+        ],
+        "correct_id": "correct",
+        "wrong": true,
+        "incident_root_channel": "name",
+        "channel_rescue": {
+          "name": {
+            "margin_shift": 2.0,
+            "new_correct_minus_selected_margin": 1.0,
+            "flips_correct": true
+          },
+          "description": {
+            "margin_shift": 0.0,
+            "new_correct_minus_selected_margin": -1.0,
+            "flips_correct": false
+          },
+          "schema": {
+            "margin_shift": 0.0,
+            "new_correct_minus_selected_margin": -1.0,
+            "flips_correct": false
+          }
+        },
+        "repair_plan": [
+          "Re-score with opaque/delexicalized tool IDs; map opaque ID to canonical executable name only after semantic selection.",
+          "HOLD_CONFLICT: do not execute consequential tools until multi-view disagreement is resolved."
+        ]
+      }
+    }
+  },
+  "reported_local_arithmetic_only": {
+    "four_view_accepted_accuracy": 0.39285714285714285,
+    "wilson_99_of_100": [
+      0.9455138038212946,
+      0.9982325679358593
+    ],
+    "paired_exact_p_for_59_vs_0": 3.469446951953614e-18,
+    "test_policy_coverage": 0.38,
+    "paraphrase_original_policy_coverage": 0.3,
+    "paraphrase_policy_coverage": 0.05,
+    "source": "aggregate values transcribed from supplied local reports"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,21 @@
+{
+  "snapshot_date": "2026-09-26",
+  "versions": {
+    "research": "1.9",
+    "engineering": "0.6"
+  },
+  "reviewed_render_pages": {
+    "research": 147,
+    "engineering": 57
+  },
+  "separately_paginated_total_pages": 204,
+  "research_original_experiment_archives": 38,
+  "engineering_original_stage_bundles": 11,
+  "engineering_expanded_cloud_members": 229,
+  "report_sha256": {
+    "ML_Epidemiology_Living_Report_v1.9_EN.docx": "1dc511b2bf31e92d6f2d4e1d61a748d8ffae1ba19b441938ea368d24a070cccd",
+    "Chapter_3_Engineers_Edition_v0.6_EN.docx": "b4a3c89c5d067d4bd3c68cb84821da27aca9bbae0fabba1a2371838e728f49cb"
+  },
+  "original_source_and_evidence_bytes_preserved": true,
+  "new_neural_experiments_run": false
+}

@@ -1,0 +1,15 @@
+#,Operation,Exact engineer action
+1,SNAPSHOT,保存 h_t、R_t、e_t、B_t、用户目标/子目标。
+2,COMPILE DOMAIN,模型外检查 registry、required args、schema/type、permission、environment preconditions；构造可执行 partial operators。
+3,ADD CONTROL ACTIONS,无论 registry 如何，加入 ASK / WAIT / ABSTAIN / CONTINUE；多子目标时加入 CALL_SET。
+4,SCORE,用同一量纲给所有可用动作算 Q；推荐 constrained continuation log-probability 或 action-value head。
+5,DIFFERENTIATE,对每个 Q_a 回传到选定 internal checkpoint，得到 g_a=dQ_a/dh。
+6,BOUNDARY,winner a* 与 runner b*：M=Q_a*-Q_b*；rho=M/||g_a*-g_b*||。
+7,ROBUSTNESS GATE,rho 低于该 action kind 的 clean-calibrated 阈值 → HOLD_UNSTABLE，不执行 consequential tool。
+8,MODE ACTION,CALL→EXECUTE；CALL_SET→EXECUTE_SET；ASK→补参数；WAIT→缺 capability；ABSTAIN→不用工具；CONTINUE→继续计算。
+9,ARGUMENT SUBCHECK,对每个 content-bearing argument value 再做 slot-level margin/radius，或强制 schema-constrained decoding。
+10,EXECUTION GUARD,真正执行前在模型外再次校验 tool name、args、权限、scope、side-effect policy。
+11,POST-RESULT RESET,工具结果到来后作为新 observation；更新 e/R/B 并从头重算 admissible set + readiness，禁止沿用旧 CALL。
+12,TRACE AUDIT,记录每个 checkpoint；出现 robust CALL→非CALL 且 hard domain 未变时报警 TOOL_OVERTHINKING_EXIT。
+13,CALIBRATE,按 model×task family×registry 建 clean radius 分布；p01 可作为初始 warning floor，高风险工具继续收紧。
+14,REGRESSION,任何模型/system prompt/tool schema/registry 修改后，重放 BFCL 六类 + tool hallucination + prompt injection 病例。

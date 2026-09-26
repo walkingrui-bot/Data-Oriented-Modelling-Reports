@@ -12,7 +12,7 @@ The published findings and guides are in English. Original experimental material
 
 ## The next chapters
 
-Chapters 3 and 4 are coming soon.
+[Chapter 3](chapter-3/README.md) is published in two companion parts: the research record v1.9 and The Engineer’s Edition v0.6. Chapter 4 is forthcoming.
 
 ## Versions and discussion
 

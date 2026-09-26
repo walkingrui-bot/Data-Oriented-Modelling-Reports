@@ -1,0 +1,76 @@
+{
+  "deployment_order": [
+    {
+      "step": 1,
+      "name": "SNAPSHOT",
+      "action": "Capture current registry R_t, environment state e_t, bound arguments B_t, user goal g_t and model checkpoint h_t."
+    },
+    {
+      "step": 2,
+      "name": "COMPILE_DOMAIN",
+      "action": "For every candidate tool, deterministically evaluate registry membership, required bindings, schema/types, permissions and environment preconditions. Build executable subset U_t."
+    },
+    {
+      "step": 3,
+      "name": "ADD_CONTROL_ACTIONS",
+      "action": "Always add ASK, WAIT, ABSTAIN and CONTINUE candidates. Add CALL_SET when the goal has multiple independent executable subgoals."
+    },
+    {
+      "step": 4,
+      "name": "SCORE",
+      "action": "Using one common scoring convention, compute Q for every admissible action. Recommended: constrained continuation log-probability or a separately trained action-value head."
+    },
+    {
+      "step": 5,
+      "name": "DIFFERENTIATE",
+      "action": "Backprop each action score to the chosen internal checkpoint h_t; save g_a=dQ_a/dh_t."
+    },
+    {
+      "step": 6,
+      "name": "LOCATE_BOUNDARY",
+      "action": "Let a* be top action and b* runner-up. Compute M=Q(a*)-Q(b*) and rho=M/||g_a*-g_b*||."
+    },
+    {
+      "step": 7,
+      "name": "ROBUSTNESS_GATE",
+      "action": "Compare rho with clean calibrated threshold for the winner action kind. Below threshold: HOLD_UNSTABLE; do not execute a consequential tool."
+    },
+    {
+      "step": 8,
+      "name": "DECIDE",
+      "action": "CALL->EXECUTE; CALL_SET->EXECUTE_SET; ASK->request missing information; WAIT->report/request missing capability; ABSTAIN->no tool; CONTINUE->allow another reasoning step."
+    },
+    {
+      "step": 9,
+      "name": "ARGUMENT_SUBCHECK",
+      "action": "Before execution, repeat the same margin/radius check for every content-bearing argument value or use schema-constrained decoding plus per-slot confidence/radius."
+    },
+    {
+      "step": 10,
+      "name": "EXECUTION_GUARD",
+      "action": "Outside the model, revalidate name, arguments, permission, scope and side-effect policy. The model cannot bypass this guard."
+    },
+    {
+      "step": 11,
+      "name": "POST_RESULT_RESET",
+      "action": "Treat tool result as a new observation; update e_t/B_t/R_t and recompute readiness from scratch. Never inherit the previous CALL decision automatically."
+    },
+    {
+      "step": 12,
+      "name": "TRACE_AUDIT",
+      "action": "Log every state. If a robust CALL was reached and a later CONTINUE step exits CALL while hard CALL admissibility stayed true, emit TOOL_OVERTHINKING_EXIT."
+    },
+    {
+      "step": 13,
+      "name": "CALIBRATE",
+      "action": "Build clean radius distributions per model/task/tool-family. Start with p01 as warning floor; tighten for consequential tools."
+    },
+    {
+      "step": 14,
+      "name": "REGRESSION",
+      "action": "Replay BFCL simple/multiple/irrelevance/parallel/missing-param/missing-function plus injection/hallucination cases after any model, prompt, registry or schema change."
+    }
+  ],
+  "production_rule": "Hard domain guard is mandatory. Readiness geometry decides when/how to act inside the hard domain; it never replaces registry/schema/permission enforcement.",
+  "debug_rule": "If a wrong action is robust, hand the state to Failure Axis Guard OS and run activation patch/transplant to localize the semantic mis-selection mechanism."
+}

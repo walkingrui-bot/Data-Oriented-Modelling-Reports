@@ -1,0 +1,1 @@
+规则：不从论文作者的抽象结论反推机制。先拿真实 prompt / tool-output / model-response 文本，再定义可插桩数学量。

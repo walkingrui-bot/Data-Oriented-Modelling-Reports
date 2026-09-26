@@ -1,0 +1,6 @@
+Instrument,Definition / use
+Authority Transfer Ratio (ATR),外部攻击 span 对 action-control 的影响 / 用户 goal span 对 action-control 的影响
+Source-Conditioned Operator Gap (SCOG),同一句文字作为 user instruction 与作为 tool-output data 时的函数距离
+Goal Replacement Angle (GRA),读入 attack span 前后，goal/action control direction 旋转多少
+External-Content Action Gain,tool-output token → future action 的 top singular gain
+Injection Onset,最早 attacker-action margin 超过 benign-task continuation margin 的 token/layer

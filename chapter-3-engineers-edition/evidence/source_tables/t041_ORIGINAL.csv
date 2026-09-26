@@ -1,0 +1,5 @@
+Instrument,Definition / use
+Registry Violation Margin (RVM),call(nonexistent tool) control score - abstain/clarify score
+Tool-Name Capture Ratio (TCR),user-written tool-name influence / registry-availability influence on call action
+Registry Counterfactual Gain,同一 query 下，仅把 f* 加入/移出 registry 后 control trajectory 应变化多少
+Fabricated Observation Onset,最早从“调用不存在工具”继续跨入“假装已经获得结果”的位置

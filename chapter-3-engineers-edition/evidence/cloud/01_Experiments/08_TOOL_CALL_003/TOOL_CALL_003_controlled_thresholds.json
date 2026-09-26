@@ -1,0 +1,5 @@
+{
+  "global_radius_min": 0.03,
+  "radius_min_by_kind": {},
+  "source": "controlled demonstrator; production must recalibrate on clean traces"
+}

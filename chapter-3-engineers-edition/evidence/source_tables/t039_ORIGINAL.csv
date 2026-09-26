@@ -1,0 +1,5 @@
+Instrument,Direct question
+Cousin Path Divergence (CPD),两条近义 prompt 的 state/control path 从哪个 token 开始明显分离？
+Constraint Binding Retention (CBR),长度/格式约束的控制方向是否一路保留到生成阶段？
+Surface-Equivalent Operator Distance,同一约束的两种措辞在相同 state 上执行的 operator 距离多大？
+Earliest Divergence Token,第一个把两条 cousin trajectories 拉开的 surface operator 是哪个？

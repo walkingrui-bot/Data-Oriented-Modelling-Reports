@@ -60,13 +60,19 @@
     "phase1": "Language Models Fit the Function That Generates the Answer",
     "phase2": "Read the Future. Then Change It."
   },
-  "project_title": "Biosphere 3 \u2014 Public Reports",
+  "project_title": "Biosphere 3 — Public Reports",
   "repository_name": "biosphere-3-public-reports",
   "next_phases": {
     "chapters": [
-      3,
       4
     ],
-    "release_status": "coming soon"
+    "release_status": "forthcoming"
+  },
+  "chapter3": {
+    "status": "published",
+    "entry": "chapter-3/README.md",
+    "research_version": "1.9",
+    "engineering_version": "0.6",
+    "snapshot_date": "2026-09-26"
   }
 }

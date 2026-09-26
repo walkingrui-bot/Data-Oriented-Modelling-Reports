@@ -1,0 +1,32 @@
+{
+  "bundle": "MODEL_CONTROL_DIAGNOSTICS_ENGINEERING_EVIDENCE_20260926",
+  "current_master_record": "MODEL_CONTROL_DIAGNOSTICS_Living_Engineering_Record_v0.5_20260926.docx",
+  "experiments": [
+    "01_WORD_SENSITIVITY_001",
+    "02_WORD_SENSITIVITY_002",
+    "03_TOKEN_OPERATOR_ATLAS_001",
+    "04_REAL_WORLD_OPERATOR_FAILURES_001",
+    "05_REAL_WORLD_OPERATOR_TELEMETRY_002",
+    "06_TOOL_CALL_001",
+    "07_TOOL_CALL_002",
+    "08_TOOL_CALL_003",
+    "09_TOOL_CALL_004"
+  ],
+  "file_count_before_index_refresh": 226,
+  "category_counts": {
+    "living_record": 5,
+    "experiment_evidence": 141,
+    "source_telemetry": 65,
+    "reference_basis": 1,
+    "original_bundle": 11,
+    "index": 3
+  },
+  "category_bytes": {
+    "living_record": 8850245,
+    "experiment_evidence": 12729876,
+    "source_telemetry": 6117558,
+    "reference_basis": 7622347,
+    "original_bundle": 10382648,
+    "index": 5174
+  }
+}

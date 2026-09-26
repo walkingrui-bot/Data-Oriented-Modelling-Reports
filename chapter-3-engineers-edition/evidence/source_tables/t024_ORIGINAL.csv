@@ -1,0 +1,3 @@
+"unzip TOKEN_OPERATOR_ATLAS_001_Artifacts.zip
+cd TOKEN_OPERATOR_ATLAS_001_Artifacts
+python TOKEN_OPERATOR_ATLAS_001_os.py list"

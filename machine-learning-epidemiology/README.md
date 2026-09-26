@@ -1,8 +1,10 @@
 # Machine Learning Epidemiology and Case Dissection
 
-Living Experimental Record v1.9 — Integrated English release — 26 September 2026
+Living Experimental Record v1.9 — Archival snapshot — 26 September 2026
 
-This continuously updated research report studies how learning history, state representation and input actions shape a model’s future response function. The integrated experiments connect matched neural interventions, statistical predictive operators, finite-state constructions, model-scale geometry and question-dependent stopping.
+This is the research part of [Chapter 3](../chapter-3/README.md), paired with [The Engineer’s Edition v0.6](../chapter-3-engineers-edition/README.md).
+
+This snapshot of a living research report studies how learning history, state representation and input actions shape a model’s future response function. The integrated experiments connect matched neural interventions, statistical predictive operators, finite-state constructions, model-scale geometry and question-dependent stopping.
 
 The current evidence includes cross-architecture replication in miniature GRU, Transformer and Mamba systems; useful state-dependent statistical prediction on independent text segments; exact finite-state checks; and a 30-model capacity-by-coverage study. The main report states the supported findings directly and marks conditional results and mechanistic hypotheses at their point of use.
 

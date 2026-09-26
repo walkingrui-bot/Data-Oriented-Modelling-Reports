@@ -1,0 +1,9 @@
+architecture,largest_rescue_channel,wrong_cases
+gru,remove_description,8
+gru,remove_name,1
+gru,remove_schema,6
+lstm,remove_description,6
+lstm,remove_name,4
+lstm,remove_schema,1
+transformer,remove_description,7
+transformer,remove_name,8

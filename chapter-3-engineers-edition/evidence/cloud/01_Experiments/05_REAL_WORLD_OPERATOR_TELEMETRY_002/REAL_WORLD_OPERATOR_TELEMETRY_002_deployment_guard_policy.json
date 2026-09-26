@@ -1,0 +1,52 @@
+{
+  "version": "0.1",
+  "principle": "Deterministic boundary guards first; model-internal axis telemetry adds diagnosis and early warning.",
+  "calibration": {
+    "clean_reference_required": true,
+    "recommended_threshold": "clean-set p99 or stricter, chosen per model/task/tool family",
+    "do_not_reuse_threshold_across_models": true
+  },
+  "tool_registry": {
+    "unknown_tool": "BLOCK",
+    "tool_name_source": "runtime registry only",
+    "arguments": "schema validate before execution",
+    "no_matching_tool": "ABSTAIN"
+  },
+  "untrusted_content": {
+    "label": "UNTRUSTED_DATA",
+    "may_authorize_new_tool": false,
+    "may_authorize_write_or_physical_action": false,
+    "structured_extraction_first": true,
+    "raw_free_text_to_privileged_planner": "AVOID"
+  },
+  "side_effects": {
+    "financial": "REQUIRE_APPROVAL",
+    "physical_access": "REQUIRE_APPROVAL",
+    "credential_or_secret_export": "BLOCK_OR_REQUIRE_STRICT_POLICY",
+    "destructive_write": "REQUIRE_APPROVAL"
+  },
+  "axis_monitor": {
+    "metrics": [
+      "failure_axis_load",
+      "source_authority_ratio",
+      "goal_gradient_angle_deg",
+      "paired_total_abs_contribution",
+      "patch_rescue_fraction"
+    ],
+    "on_threshold_exceed": [
+      "freeze_side_effect_tools",
+      "switch_to_structured_extraction",
+      "re-evaluate proposed action against explicit user intent",
+      "require approval or abstain"
+    ]
+  },
+  "axis_patch": {
+    "status": "EXPERIMENTAL_DIAGNOSTIC",
+    "production_role": "Never the sole safety barrier",
+    "allowed_use": [
+      "root-cause localization",
+      "counterfactual rescue testing",
+      "model/prompt regression debugging"
+    ]
+  }
+}

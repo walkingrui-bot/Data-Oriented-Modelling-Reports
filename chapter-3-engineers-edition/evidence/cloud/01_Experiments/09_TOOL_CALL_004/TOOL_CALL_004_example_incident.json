@@ -1,0 +1,26 @@
+{
+  "case_id": "example",
+  "candidates": [
+    {
+      "id": "tool_A",
+      "full": 1.4,
+      "name_neutral": 2.0,
+      "description_neutral": 0.8,
+      "schema_neutral": 1.6,
+      "name_only": -0.2,
+      "description_only": 1.3,
+      "schema_only": 0.4
+    },
+    {
+      "id": "tool_B",
+      "full": 1.7,
+      "name_neutral": 1.1,
+      "description_neutral": 1.4,
+      "schema_neutral": 1.2,
+      "name_only": 1.0,
+      "description_only": -0.1,
+      "schema_only": 0.5
+    }
+  ],
+  "correct_id": "tool_A"
+}

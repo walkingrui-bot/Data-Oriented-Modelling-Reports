@@ -1,0 +1,6 @@
+transition,before_expected,before_pred,after_expected,after_pred,before_radius,after_radius,hard_call_before,hard_call_after
+simple_missing_height,CALL,CALL,ASK,ASK,0.3059620170960963,0.5526095119768323,True,False
+missing_param_clarified,ASK,ASK,CALL,CALL,0.43361211963399504,0.3103272339418253,False,True
+missing_function_added,WAIT,WAIT,CALL,CALL,0.4223151973876672,0.3154861265776865,False,True
+irrelevant_tool_replaced,ABSTAIN,ABSTAIN,CALL,CALL,0.035362526199526546,0.30556517920103005,True,True
+parallel_second_goal_removed,CALL_SET,CALL_SET,CALL,CALL,0.6865295584646515,0.3055651792010299,True,True

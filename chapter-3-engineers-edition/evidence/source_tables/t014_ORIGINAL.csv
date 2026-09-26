@@ -1,0 +1,7 @@
+Metric,Definition,Engineering meaning
+Immediate Drive,||∂z_after-token / ∂e||,同一 token 此刻直接改变即时 answer propensity 的能力
+Input Gain,σ₁(∂h⁺/∂e),token→state 最大局部注入增益
+Carry Gain,σ₁(∂h⁺/∂h),当前 token 后，已有 state 差异还能被保留/放大多少
+Probe Steer,σ₁(∂²z₂/∂e_current∂e_result),当前 token 改变固定下一 probe token 控制能力的强度
+Alignment,"|cos(e-e_ref, ∂z/∂e)|",固定 token action 与当前即时 answer-control 方向的对齐
+State Displacement,||h⁺-h||,当前 token 对状态造成的有限位移

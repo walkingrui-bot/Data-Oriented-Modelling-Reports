@@ -1,0 +1,7 @@
+case_id,minimal_change,before,after,gate_flipped,correct_response_after
+BFCL_simple_python_0,remove height=5 from user request,CALL_READY,MISSING_REQUIRED_ARGUMENT,BINDING_COMPLETE,ASK for height
+BFCL_multiple_1,"replace 'three sides: 3,4,5' with 'base 4 and height 5'",Heron tool is schema-compatible,base-height tool is schema-compatible,TOOL_ID,"math.triangle_area_base_height(base=4,height=5)"
+BFCL_irrelevance_0,replace offered BMI tool with calculate_triangle_area,ABSTAIN,CALL_READY,MODE / RELEVANCE,call triangle-area tool
+BFCL_parallel_multiple_0,remove sentence 'Also find the product of the first five prime numbers.',CALL_SET cardinality=2,CALL_SET cardinality=1,CALL_SET_CARDINALITY,only sum_of_multiples
+BFCL_multi_turn_miss_param_0,add 'previous_report.pdf' as the missing source filename,ASK / NO CALL,CALL_READY,BINDING_COMPLETE,"mv(previous_report.pdf,temp), then diff"
+BFCL_multi_turn_miss_func_0,add sort(file_name) function to current registry,WAIT / NO CALL,CALL_READY,FUNCTION_AVAILABLE,sort(final_report.pdf)

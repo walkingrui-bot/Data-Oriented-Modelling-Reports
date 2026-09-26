@@ -1,0 +1,1 @@
+对固定 model + prompt + target readout，当前 token 在模型的整个 history-conditioned control field 中处于什么位置？

@@ -1,0 +1,2 @@
+"M_reg = max_{k in registry} z_k - max_{j outside registry} z_j
+d_reg = M_reg / ||∇x M_reg||"

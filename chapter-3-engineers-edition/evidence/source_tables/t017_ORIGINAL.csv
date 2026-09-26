@@ -1,0 +1,11 @@
+Token,Context-dependency %ile,Fingerprint dispersion,Hot-state rate %,Largest robust span metric,q95/q05 span
+;,100.0000,2.6134,87.2159,ImmediateDrive,5.2717
+A,90.0000,2.5173,33.8068,ProbeSteer,4.8650
+result,80.0000,2.4715,65.0568,ProbeSteer,5.2050
+B,70.0000,2.2118,33.2386,ProbeSteer,5.2486
+0,60.0000,1.9867,32.9545,ImmediateDrive,4.2224
+1,50.0000,1.9808,33.5227,ProbeSteer,3.9211
+xor,40.0000,1.8943,13.6364,CarryGain,2.4586
+C,30.0000,1.8886,25.0000,ProbeSteer,4.1094
+compute,20.0000,1.8427,32.1023,ProbeSteer,5.8009
+D,10.0000,1.5498,56.8182,ProbeSteer,2.4557

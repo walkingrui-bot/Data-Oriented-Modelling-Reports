@@ -1,0 +1,1 @@
+目标：把“某个词为什么敏感”从单一 attention / logit 现象拆成可操作的控制遥测。对每个 token 同时测 Drive、Future Gain、Alignment、Rotation、Steer 与 Persistence，并用有限 embedding 干预验证这些仪表读数是否对应真实可控效应。

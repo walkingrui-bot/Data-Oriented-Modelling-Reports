@@ -1,0 +1,7 @@
+case_id,before,runner_before,predicted_boundary_distance,finite_perturb_norm,after,flipped_to_runner
+BFCL_simple_python_0,CALL,CALL_SET,0.3060,0.3060,CALL_SET,True
+BFCL_multiple_1,CALL,CALL_SET,0.3036,0.3036,CALL_SET,True
+BFCL_irrelevance_0,ABSTAIN,CALL,0.0354,0.0354,CALL,True
+BFCL_parallel_multiple_0,CALL_SET,CALL,0.6865,0.6865,CALL,True
+BFCL_multi_turn_miss_param_0,ASK,CONTINUE,0.4336,0.4336,CONTINUE,True
+BFCL_multi_turn_miss_func_0,WAIT,CONTINUE,0.4223,0.4223,CONTINUE,True

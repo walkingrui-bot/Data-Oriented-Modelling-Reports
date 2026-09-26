@@ -1,0 +1,7 @@
+case,mathematical_object,engineering_reading
+simple_python_0,Single partial operator with complete bindings,baseline: mode gate + argument binding; no tool competition
+multiple_1,Competing partial operators with overlapping semantics,tool identity boundary is resolved by schema-compatible binding pattern
+irrelevance_0,Empty admissible action set,"correct action is identity/no-op (ABSTAIN), not nearest-tool projection"
+parallel_multiple_0,Set-valued action,"policy output is a subset S⊆R; correctness includes cardinality/coverage, not just top-1"
+multi_turn_miss_param_0,Operator exists but point is outside its domain,"required binding missing, so CALL is mathematically undefined until clarification"
+multi_turn_miss_func_0,Desired operator absent from current algebra,do not approximate with neighboring tool; wait until registry expands

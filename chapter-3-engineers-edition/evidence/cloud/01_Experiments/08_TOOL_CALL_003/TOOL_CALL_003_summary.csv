@@ -1,0 +1,12 @@
+metric,value
+BFCL canonical states in expected action region,6
+BFCL cases tested,6
+Robust canonical regions at controlled threshold,6
+Finite soft-boundary flips validated,6
+Finite soft-boundary cases with invariant hard domain,6
+Structural hard-gate/mode transitions correct,5
+Structural transitions tested,5
+Overthinking first robust CALL step,0
+First leave-after-ready step,3
+First CALL re-entry step,4
+Hard CALL domain stayed admissible across overthinking trace,True

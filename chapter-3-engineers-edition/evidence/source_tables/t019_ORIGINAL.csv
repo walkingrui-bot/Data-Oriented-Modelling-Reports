@@ -1,0 +1,4 @@
+Metric,Token,Low state,Low prefix tail,Low pred,Low obs,High state,High prefix tail,High pred,High obs,Pred ratio,Observed ratio,Ratio error %
+Drive,;,Q=1001 t=35 COT,1 ; second result 1 ; combine 1,0.0966,0.0966,Q=1001 t=20 COT,A 1 xor B 0 ; first result,0.6405,0.6402,6.6288,6.6258,0.0460
+Steer,B,Q=1100 t=19 COT,compute A 1 xor B 1 ; first,0.0274,0.0274,Q=1100 t=10 PROMPT,1 B 1 C 0 D 0 reason,0.2639,0.2637,9.6200,9.6078,0.1268
+InputGain,B,Q=1011 t=30 COT,compute C 1 xor D 1 ; second,0.2803,0.2804,Q=1011 t=17 COT,reason : compute A 1 xor B 0,1.2854,1.2850,4.5858,4.5832,0.0577
