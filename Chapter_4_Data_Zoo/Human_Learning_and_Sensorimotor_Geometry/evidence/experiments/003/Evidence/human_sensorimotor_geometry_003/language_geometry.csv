@@ -1,0 +1,4 @@
+representation,ambient_dim,stable_rank,participation_rank,d80,d95,top3_var,top4_var,local_id
+Character bigram teacher field,64,2.4798533528,4.3359287651,5,13,0.7191679273,0.7738085706,
+L3 predictive-state cloud,64,4.2945871596,10.1545576369,11,22,0.4470792109,0.5202716781,5.1018030558
+L3 predictive-state movement,64,4.0755227429,9.2385011191,11,20,0.4793113004,0.5506298881,

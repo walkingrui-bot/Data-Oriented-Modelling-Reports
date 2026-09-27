@@ -1,0 +1,4 @@
+role,source,identity
+primary_raw_data,mingyus/humans-combine-value-learning-and-hypothesis-testing:data/data_all_wClickInfo.csv,Git blob e834ccbbe1e183b7e2c094702b50f2e9ce558441
+primary_paper,Song et al. 2022 PLOS Computational Biology,DOI 10.1371/journal.pcbi.1010699
+external_validation,Vong et al. 2019 Cognitive Science,DOI 10.1111/cogs.12724

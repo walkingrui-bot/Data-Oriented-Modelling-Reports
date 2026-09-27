@@ -1,8 +1,8 @@
-# Chapter 2 — Read the Future. Then Change It.
+# Chapter 2 — Language Models: Motor Control and Deep-Space Drift
 
-[All three chapters](../README.md) · [Previous: Chapter 1](../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/README.md) · [Next: Chapter 3](../Chapter_3_Machine_Learning_Epidemiology/README.md)
+[All chapters](../README.md) · [Previous: Chapter 1](../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/README.md) · [Next: Chapter 3](../Chapter_3_Machine_Learning_Epidemiology/README.md)
 
-Find the source of a future fork before the outputs split, map where the future can still be changed, and use mirrors to offset preference and control drift. This is the report originally published as Phase 2.
+Find the source of a future fork before the outputs split, map where the future can still be changed, and use mirrors to offset preference and control drift. Motor control here concerns the evolution of generative states and output distributions; deep-space drift follows the chapter’s moving-compass account of recursive self-feeding. This is the report originally published as Phase 2.
 
 | Read or explore | Open |
 | --- | --- |

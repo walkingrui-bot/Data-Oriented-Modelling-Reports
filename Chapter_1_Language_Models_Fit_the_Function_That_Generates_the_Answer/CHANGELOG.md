@@ -1,5 +1,10 @@
 # Change history
 
+## Data Zoo Subreport 2 — 27 September 2026
+
+Published *Human Learning and Sensorimotor Geometry*, English edition v1.0, as Chapter 4 Data Zoo Subreport 2. Its 31-page Word report and online edition collect Studies 001–004, 21 numbered study tables, three reader tables and 17 figures, with original source reports, evidence archives, fixed raw-source identities, provenance and source-availability notes.
+
+
 ## Chapter 3 paired archival publication — 26 September 2026
 
 Published the 57-page Engineer’s Edition v0.6 alongside research v1.9. Added a common Chapter 3 entry, the reviewed combined archival description, mechanically checked inventory, and source-availability wording. Original evidence and both English Word reports preserve their existing bytes.
@@ -22,7 +27,7 @@ Research snapshot: 25 September 2026.
 
 - Rewrote both English reports with the central claim up front and a direct, exploratory narrative through the experiments and discussions.
 - Placed the DeepSeek 0.263 match and the move to constructed observable rules at their experimental turning points in Phase 1.
-- Retitled Phase 2 *Read the Future. Then Change It.* and developed the compass-and-course discussion through future influence, mirrors, reference centers, and dose.
+- Developed the compass-and-course discussion through future influence, mirrors, reference centers, and dose.
 - Retained the hypothesis statuses, experimental results, methods, and original evidence; synchronized DOCX, Markdown, and repository reading routes.
 
 ### Repository presentation — 26 September 2026

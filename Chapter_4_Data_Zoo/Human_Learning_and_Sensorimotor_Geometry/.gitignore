@@ -1,0 +1,10 @@
+# Provider inputs and original source attachments stay outside publication.
+**/raw_data/
+**/data_all_wClickInfo.csv
+**/DataSet.csv
+**/vong2019_published_aggregate.csv
+source/
+evidence/original_archives/
+replay/
+**/__pycache__/
+*.pyc

@@ -1,0 +1,8 @@
+domain,object,stable_rank,participation_rank,d95,top4_var,note
+Human motion,Joint-angle configuration (raw amplitude),1.990672911,3.00051114645,8.0,0.890232243,Median across 20 CMU clips
+Human motion,Angular-velocity movement (raw amplitude),4.0421539149,8.0604920408,20.0,0.6239723599,Median across 20 CMU clips
+Human motion,Angular-velocity movement (5-frame smooth),3.29472904165,7.00923564615,18.0,0.644298913,Median across 20 CMU clips
+Human motion,"Angular velocity, coordinate-balanced",6.5036677541,15.10738754375,25.0,0.4197905884,Each joint channel z-scored before spectrum
+Natural language,Character bigram teacher field,2.4798533528,4.3359287651,13.0,0.7738085706,"431,826-char technical English corpus"
+Natural language,L3 predictive-state movement,4.0755227429,9.2385011191,20.0,0.5506298881,3-char contexts with count >=10
+Natural language,L3 predictive-state cloud,4.2945871596,10.1545576369,22.0,0.5202716781,Weighted predictive state geometry

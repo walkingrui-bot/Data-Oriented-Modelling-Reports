@@ -1,0 +1,8 @@
+dataset,source,identity
+Iris,scikit-learn load_iris,sklearn 1.8.0 built-in
+Wine,scikit-learn load_wine,sklearn 1.8.0 built-in
+Diabetes,scikit-learn load_diabetes,sklearn 1.8.0 built-in
+Breast cancer,scikit-learn load_breast_cancer,sklearn 1.8.0 built-in
+Digits,scikit-learn load_digits,sklearn 1.8.0 built-in
+Palmer Penguins morphology,allisonhorst/palmerpenguins inst/extdata/penguins.csv,blob sha 25b46d384bf81f8399188500ea54917bb49d8890
+UCI HAR subject-activity summary,ahmedtadde/UCI-HAR-Dataset MyTidyDF.txt,"public GitHub file read 2026-09-27; 180 subject-activity rows, 66 numeric variables"

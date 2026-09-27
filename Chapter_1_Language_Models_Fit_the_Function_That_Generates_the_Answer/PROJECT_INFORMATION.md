@@ -10,9 +10,9 @@ The project is published as an evolving collection of research findings, experim
 
 The published findings and guides are in English. Original experimental materials retain their source language and format. Experiment IDs connect the prose to methods, results, code, tables, and figures.
 
-## The next chapters
+## The current chapters
 
-[Chapter 3 — Machine Learning Epidemiology](../Chapter_3_Machine_Learning_Epidemiology/README.md) is published in two companion parts: the research record v1.9 and The Engineer’s Edition v0.6. Chapter 4 is forthcoming.
+[Chapter 3 — Machine Learning Epidemiology](../Chapter_3_Machine_Learning_Epidemiology/README.md) is published in two companion parts: the research record v1.9 and The Engineer’s Edition v0.6. [Chapter 4 — Data Zoo](../Chapter_4_Data_Zoo/README.md) collects independently versioned reports. Its Human Learning and Sensorimotor Geometry subreport brings together Studies 001–004 in English edition v1.0.
 
 ## Versions and discussion
 

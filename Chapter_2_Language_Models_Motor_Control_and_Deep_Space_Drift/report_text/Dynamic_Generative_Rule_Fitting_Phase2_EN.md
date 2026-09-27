@@ -1,8 +1,10 @@
-# Read the Future. Then Change It.
+# Language Models: Motor Control and Deep-Space Drift
 
 *Phase 2 · Instruments and controls for the generative function*
 
 Independent research report · Revised 26 September 2026
+
+Here, motor control means measuring and steering the evolution of generative states and output distributions. The deep-space image follows the chapter’s self-feeding experiments: a drifting trajectory can also shift the reference used to judge its direction.
 
 A language model fits the function that generates its answer. The problem and computational history shape that function; each output adds conditions for what comes next. Thinking brings the generator into operation and changes it through its own results. Phase 2 gives us instruments and controls.
 

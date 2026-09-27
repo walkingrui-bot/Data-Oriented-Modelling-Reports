@@ -1,6 +1,6 @@
 # Chapter 1 — Language Models Fit the Function That Generates the Answer
 
-[All three chapters](../README.md) · [Next: Chapter 2](../Chapter_2_Read_the_Future_Then_Change_It/README.md)
+[All chapters](../README.md) · [Next: Chapter 2](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md)
 
 **A language model is fitting the function that will generate its answer.**
 

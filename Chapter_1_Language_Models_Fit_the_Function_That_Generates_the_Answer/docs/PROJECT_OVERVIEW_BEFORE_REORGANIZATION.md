@@ -38,20 +38,20 @@ This is a **self-directed personal-interest research project, conducted without 
 | Cumulative dose explains the main control benefit in the tested regime | Supported by dose-matched comparisons | E33 E36 |
 | Source monitoring and residual influence provide complementary observations | Demonstrated in specified source/noise worlds | E37–E39 |
 
-[All 35 hypothesis records](HYPOTHESES.md) · [Final Phase 2 interpretations](../../Chapter_2_Read_the_Future_Then_Change_It/FINAL_INTERPRETATIONS.csv)
+[All 35 hypothesis records](HYPOTHESES.md) · [Final Phase 2 interpretations](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/FINAL_INTERPRETATIONS.csv)
 
 ## Read the reports online
 
 | Entry | Contents |
 | --- | --- |
 | [Phase 1 — Language Models Fit the Function That Generates the Answer](../report_text/LLM_Activity_Report_EN.md) | Chase the rule through relational structure, historical influence, and an executable construction |
-| [Phase 2 — Read the Future. Then Change It.](../../Chapter_2_Read_the_Future_Then_Change_It/report_text/Dynamic_Generative_Rule_Fitting_Phase2_EN.md) | Find future influence, locate control sites, expose preference, and try the mirrors |
+| [Phase 2 — Language Models: Motor Control and Deep-Space Drift](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/report_text/Dynamic_Generative_Rule_Fitting_Phase2_EN.md) | Find future influence, locate control sites, expose preference, and try the mirrors |
 | [39 experiment dossiers](../experiments/README.md) | What was done, results, current interpretation, and file-level evidence |
-| [Connections between phases](../../Chapter_2_Read_the_Future_Then_Change_It/docs/PHASE2_CONNECTIONS.md) | Shared concepts and consistent interpretation across the two phases |
+| [Connections between phases](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/docs/PHASE2_CONNECTIONS.md) | Shared concepts and consistent interpretation across the two phases |
 | [Reproduction routes](REPRODUCTION.md) | Evidence inspection, summary recalculation, and available training replay routes |
 | [Project information](../PROJECT_INFORMATION.md) | Independent project status, living record, versioning, and contact |
 
-Download the English documents: [Phase 1 DOCX](../reports/LLM_Activity_Report_EN.docx) · [Phase 2 DOCX](../../Chapter_2_Read_the_Future_Then_Change_It/reports/Dynamic_Generative_Rule_Fitting_Phase2_EN.docx).
+Download the English documents: [Phase 1 DOCX](../reports/LLM_Activity_Report_EN.docx) · [Phase 2 DOCX](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/reports/Dynamic_Generative_Rule_Fitting_Phase2_EN.docx).
 
 ## Open the experiments
 
@@ -103,28 +103,28 @@ Every entry below opens a complete dossier: how the experiment was run, what hap
 | [E25 · History-conditioned continuation in three architectures](../experiments/E25_cross_architecture/README.md) | Report tables and figures |
 | [E26 · Selective history attention and distributed state](../experiments/E26_selective_history/README.md) | Protocols tables and figures |
 | [E27 · Prompt conditioning and within-network displacement](../experiments/E27_prompt_displacement/README.md) | Reported results and a separate code version |
-| [E28 · Future causal influence before delayed divergence](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E28_future_causal_influence/README.md) | Protocols, result tables and figures |
-| [E29 · Future sources and influence horizons](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E29_future_influence_instruments/README.md) | Protocols, result tables and figures |
-| [E30 · Readability and control gain](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E30_readability_and_control/README.md) | Protocols, result tables and figures |
+| [E28 · Future causal influence before delayed divergence](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E28_future_causal_influence/README.md) | Protocols, result tables and figures |
+| [E29 · Future sources and influence horizons](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E29_future_influence_instruments/README.md) | Protocols, result tables and figures |
+| [E30 · Readability and control gain](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E30_readability_and_control/README.md) | Protocols, result tables and figures |
 
 ### E31–E36 · Mirrors, reference centers, and control dose
 
 | Experiment | Evidence available |
 | --- | --- |
-| [E31 · Hard-mirror context](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E31_content_mirror/README.md) | Protocols, result tables and figures |
-| [E32 · State mirrors and 30,000-step control](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E32_state_mirror/README.md) | Protocols, result tables and figures |
-| [E33 · Dynamic mirror dose response and shock control](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E33_dynamic_mirror_control/README.md) | Protocols, result tables and figures |
-| [E34 · The reference center determines stabilization direction](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E34_reference_center/README.md) | Protocols, result tables and figures |
-| [E35 · Direct center estimation and mirror parameterization](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E35_direct_center_estimation/README.md) | Protocols, result tables and figures |
-| [E36 · Control cadence at matched dose](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E36_dose_matched_cadence/README.md) | Protocols, result tables and figures |
+| [E31 · Hard-mirror context](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E31_content_mirror/README.md) | Protocols, result tables and figures |
+| [E32 · State mirrors and 30,000-step control](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E32_state_mirror/README.md) | Protocols, result tables and figures |
+| [E33 · Dynamic mirror dose response and shock control](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E33_dynamic_mirror_control/README.md) | Protocols, result tables and figures |
+| [E34 · The reference center determines stabilization direction](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E34_reference_center/README.md) | Protocols, result tables and figures |
+| [E35 · Direct center estimation and mirror parameterization](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E35_direct_center_estimation/README.md) | Protocols, result tables and figures |
+| [E36 · Control cadence at matched dose](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E36_dose_matched_cadence/README.md) | Protocols, result tables and figures |
 
 ### E37–E39 · Source balance and residual influence
 
 | Experiment | Evidence available |
 | --- | --- |
-| [E37 · Source control and the reasoning balance interval](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E37_causal_balance/README.md) | Protocols, result tables and figures |
-| [E38 · Coverage of the source model](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E38_source_coverage/README.md) | Protocols, result tables and figures |
-| [E39 · Residual future influence](../../Chapter_2_Read_the_Future_Then_Change_It/experiments/E39_residual_future_influence/README.md) | Protocols, result tables and figures |
+| [E37 · Source control and the reasoning balance interval](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E37_causal_balance/README.md) | Protocols, result tables and figures |
+| [E38 · Coverage of the source model](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E38_source_coverage/README.md) | Protocols, result tables and figures |
+| [E39 · Residual future influence](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/experiments/E39_residual_future_influence/README.md) | Protocols, result tables and figures |
 
 ## Repository structure
 

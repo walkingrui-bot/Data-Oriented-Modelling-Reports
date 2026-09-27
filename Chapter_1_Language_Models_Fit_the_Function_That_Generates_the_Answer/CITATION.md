@@ -9,7 +9,7 @@ For a specific result, also identify the research phase, experiment ID, and rele
 ## Individual reports
 
 - **Phase 1:** *Language Models Fit the Function That Generates the Answer*.
-- **Phase 2:** *Read the Future. Then Change It.*
+- **Phase 2 / Chapter 2:** *Language Models: Motor Control and Deep-Space Drift*.
 
 Both report editions were revised on 26 September 2026.
 
@@ -24,3 +24,9 @@ Contact for citation details: walkingrui@gmail.com
 Identify the component version, experiment identifier, and evidence file for a specific result. The [Chapter 3 entry](../Chapter_3_Machine_Learning_Epidemiology/README.md) connects the two reports and their evidence indexes.
 
 Chapter 3 combined archival DOI: https://doi.org/10.5281/zenodo.22983593. The DOI preserves the original paired archive and its reviewed combined description.
+
+## Chapter 4 Data Zoo
+
+*Human Learning and Sensorimotor Geometry*. Biosphere 3, Chapter 4 Data Zoo, Subreport 2. English edition v1.0, 27 September 2026.
+
+Use the [subreport entry](../Chapter_4_Data_Zoo/Human_Learning_and_Sensorimotor_Geometry/README.md) as the reading route. Include the repository commit, study identifier 001–004, and evidence file for a specific result. The subreport has its own version history.

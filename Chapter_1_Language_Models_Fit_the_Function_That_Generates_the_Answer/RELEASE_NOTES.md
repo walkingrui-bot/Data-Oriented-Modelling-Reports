@@ -4,7 +4,7 @@ The model fits the function that generates the answer. These two reports follow 
 
 **Phase 1 — Language Models Fit the Function That Generates the Answer.** DeepSeek matches the measured recurrence density at 0.263. Runtime interventions transfer rule-specific function. Constructed rules let us exchange histories, erase projection writes, and run a self-rewriting world for a million steps. The report follows the chase and the discussion that grew with it.
 
-**Phase 2 — Read the Future. Then Change It.** In a held-out delayed-divergence task, three future-influence methods identify all 192 sources before the outputs split. The experiments then map readable and steerable sites, build content and state mirrors, and test reference centers, control dose, source balance, and residual influence.
+**Phase 2 — Language Models: Motor Control and Deep-Space Drift** In a held-out delayed-divergence task, three future-influence methods identify all 192 sources before the outputs split. The experiments then map readable and steerable sites, build content and state mirrors, and test reference centers, control dose, source balance, and residual influence.
 
 The English report editions were revised on 26 September 2026. The experimental snapshot is dated 25 September 2026.
 

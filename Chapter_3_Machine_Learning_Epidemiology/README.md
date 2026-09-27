@@ -1,6 +1,6 @@
 # Chapter 3 — Machine Learning Epidemiology
 
-[All three chapters](../README.md) · [Previous: Chapter 2](../Chapter_2_Read_the_Future_Then_Change_It/README.md)
+[All chapters](../README.md) · [Previous: Chapter 2](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) · [Next: Chapter 4](../Chapter_4_Data_Zoo/README.md)
 
 **Machine Learning Epidemiology is Chapter 3. The research report and The Engineer’s Edition are its two companion parts, collected here.**
 

@@ -1,0 +1,7 @@
+level,n_groups,median_samples,domain,stable_rank,d90,d95,top3,top4
+single trial,900,20,Kinematics,1.6058921244723359,3,3,0.9581576128837801,0.9871422963795076
+single trial,900,20,EMG RMS features,1.4204212526093296,3,3,0.9557868891045,0.979569470540586
+subject × target pooled,90,206,Kinematics,1.9442741303683637,4,5,,0.9481525447233213
+subject × target pooled,90,206,EMG RMS features,1.7412447286473012,4,5,,0.9398795325716827
+subject × target-row pooled,30,611.5,Kinematics,2.3454040605288147,4,5,,0.9318377579136081
+subject × target-row pooled,30,611.5,EMG RMS features,1.9617251337972172,4,5,,0.9192074476612659

@@ -1,0 +1,11 @@
+comparison,metric,estimate,ci_low,ci_high,sign_pattern
+Endpoint breadth ↔ kinematic energy breadth,median within-subject Spearman rho,0.39050911635181296,0.2702555871095197,0.5187224760258468,10/10 positive
+Endpoint breadth ↔ EMG RMS energy breadth,median within-subject Spearman rho,0.20785282133596739,-0.029427501337613696,0.2823311519940733,7/10 positive
+Endpoint breadth ↔ EMG MAV energy breadth,median within-subject Spearman rho,0.1771659052557929,-0.046581882536938714,0.30414454459398277,7/10 positive
+High vs low endpoint breadth: kinematic energy breadth,median high−low,0.5222106716251114,0.372722096243852,0.7412438636144616,10/10 positive
+High vs low endpoint breadth: EMG RMS energy breadth,median high−low,0.16438888634455706,-0.033747362141409276,0.2364976032697741,7/10 positive
+High vs low endpoint breadth: EMG MAV energy breadth,median high−low,0.15701922106424737,0.009267490728936068,0.23258306687669394,8/10 positive
+High vs low endpoint breadth: kinematic covariance stable rank,median high−low,-0.24426270520350868,-0.34334446800896656,-0.1373354111926799,9/10 negative; 10/10 when trials >45 windows excluded
+High vs low endpoint breadth: EMG covariance stable rank,median high−low,0.051150836620697526,-0.031087843928377712,0.10537695492429755,6/10 positive
+Spatial target row 2 vs row 0: endpoint breadth,median within-subject row2−row0,1.330169606972177,0.8524877347997184,1.500436439411399,10/10 positive
+Spatial target row 2 vs row 0: kinematic energy breadth,median within-subject row2−row0,0.6938036389983964,0.4307385052623127,0.9649698190154314,10/10 positive
