@@ -1,0 +1,4 @@
+stratum,n,mean_rank,perfect_target_fraction
+Simple,19,2.4123,0.0
+Filtered,20,1.5333,0.25
+Grouped,18,1.4537,0.2778

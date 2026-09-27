@@ -1,0 +1,8 @@
+representation,stable_rank,participation_rank,top3_energy,top3_overlap_with_naive
+Naive,6.6974,13.437,0.3457,1.0
+Syntactic,6.8983,13.7114,0.3668,0.6102
+Morphological,8.0956,15.4932,0.3229,0.9424
+Lexical,5.9348,11.0152,0.4131,0.8154
+Semantic,6.2435,12.4001,0.4049,0.6049
+Missing information,5.1162,10.8228,0.451,0.643
+SQL,3.5449,7.0209,0.5485,

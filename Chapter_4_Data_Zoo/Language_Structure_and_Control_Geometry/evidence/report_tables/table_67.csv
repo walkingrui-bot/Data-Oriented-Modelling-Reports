@@ -1,0 +1,4 @@
+Level,Human branch non-recovery,Random branch non-recovery,Human slot loss,Random slot loss,Human pred density,Random pred density
+Mild,24.2%,8.3%,18.2%,11.5%,21.16,20.18
+Medium,33.0%,16.5%,20.4%,18.7%,21.44,20.40
+Strong,47.1%,35.0%,25.0%,26.6%,21.90,20.42

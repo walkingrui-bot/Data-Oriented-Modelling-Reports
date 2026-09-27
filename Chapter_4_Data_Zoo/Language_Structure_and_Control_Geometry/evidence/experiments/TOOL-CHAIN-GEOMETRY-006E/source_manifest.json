@@ -1,0 +1,29 @@
+{
+  "seed": 26092791,
+  "planner_sha256": "2aa1bb47b25c6fc827c801602f26dd210933accae3c560cb0d1cebf809668bad",
+  "emitter_sha256": "d67bd35b0bedc1c2eb3e1af8e049ba55de5fd4ca06e59236a7ebb620560475cf",
+  "script_sha256": "21d8724edf53bab9042b1a96b9ac48e7a782503f02e16fa924d6fb04605d32b6",
+  "formal_trajectories": 2400,
+  "same_006D_panels": true,
+  "note": "Planner and event reader are frozen from final 006D. Only structured action serialization is replaced by unconstrained token-autoregressive neural JSON emission.",
+  "files": [
+    "006d_reader_reference.py",
+    "CALCULATION_RECORD.md",
+    "Figure_4_21_structured_vs_generated.png",
+    "Figure_4_22_interaction_transfer.png",
+    "Figure_4_23_generation_errors.png",
+    "PILOT_DIAGNOSTICS.md",
+    "comparison_with_006D.csv",
+    "emitter.pt",
+    "emitter_action_assay.csv",
+    "episode_summary.csv",
+    "outcome_changed_cases.json",
+    "paired_task_outcomes.csv",
+    "pilot_diagnostics",
+    "representative_traces.json",
+    "results.json",
+    "tool_chain_006e_controlled.py"
+  ],
+  "outcome_changes_vs_006D": 4,
+  "paired_outcome_agreement": 0.9983333333333333
+}

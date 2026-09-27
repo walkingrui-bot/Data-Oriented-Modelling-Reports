@@ -1,0 +1,9 @@
+tau3-Banking configuration,Retrieval,Reasoning,Pass^1
+Qwen 3.8 Max,alltools,xhigh,55.2%
+Claude Opus 5,alltools,max,48.7%
+Grok 4.5,alltools,high,47.9%
+GPT-5.6-sol,alltools,xhigh,46.9%
+GPT-5.2,alltools,high,32.2%
+GPT-5.2,qwen_embeddings,none,12.6%
+Claude Opus 4.5,alltools,high,24.7%
+Gemini 3 Pro,Terminal,high,18.0%

@@ -1,0 +1,7 @@
+Held-out style,Top-1,MRR,Matched-minus-mismatched cosine,Permutation-control mean
+Naive,89.5%,0.944,0.493,1.68%
+Syntactic,87.7%,0.930,0.422,1.68%
+Morphological,93.0%,0.962,0.410,1.70%
+Lexical,68.4%,0.808,0.308,1.72%
+Semantic,64.9%,0.765,0.229,1.75%
+Missing information,43.9%,0.601,0.201,1.82%

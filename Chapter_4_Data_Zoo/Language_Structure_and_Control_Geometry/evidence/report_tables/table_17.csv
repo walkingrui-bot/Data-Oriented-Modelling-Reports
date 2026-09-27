@@ -1,0 +1,4 @@
+Response regime,Event stable rank,Event top-3,Plan-event F1,Mean extracted events
+Natural-language procedural,2.101,97.2%,0.925,6.1
+Pseudocode,2.179,93.2%,0.989,6.4
+Executable Python,2.179,93.2%,0.989,6.4

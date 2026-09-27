@@ -1,0 +1,7 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006C",
+  "script": "tool_chain_006c_typed_policy.py",
+  "seed": 26092761,
+  "policy_sha256": "1a1e2fd464281b72ce43948e78f953c33162efffaded34e529a3c39fbc61dea9",
+  "note": "All three panels use the same frozen policy; task/world seeds are independent."
+}

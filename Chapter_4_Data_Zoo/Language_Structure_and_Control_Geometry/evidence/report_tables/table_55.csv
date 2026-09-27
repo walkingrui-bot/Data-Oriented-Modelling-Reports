@@ -1,0 +1,4 @@
+Pair class,N pairs,Direct Top-1,Learned Top-1,Transfer gain
+Same language / different script,8,5.36%,9.61%,+4.25 pp
+Different language / same script,33,7.53%,6.25%,-1.28 pp
+Different language / different script,33,2.67%,4.13%,+1.46 pp

@@ -1,0 +1,4 @@
+Quantity,006F estimate,Task-paired bootstrap 95% interval
+Provenance main effect,+8.92 pp,"[+6.42, +11.50] pp"
+Normalization main effect,+0.58 pp,"[-1.33, +2.25] pp"
+Provenance × normalization interaction,+1.83 pp,"[-1.00, +4.83] pp"

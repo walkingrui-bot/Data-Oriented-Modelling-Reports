@@ -1,0 +1,4 @@
+Level,N,Mean target/source length,Interpretation
+L1 mild,686,0.9505,Small reduction
+L2 medium,693,0.8552,Intermediate reduction
+L3 strong,699,0.6391,Large reduction

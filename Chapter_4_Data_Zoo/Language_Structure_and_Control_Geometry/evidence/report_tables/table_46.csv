@@ -1,0 +1,3 @@
+Schema regime,Prov+ / Norm+,Prov+ / Raw,No prov / Norm+,No prov / Raw
+Seen raw schemas,73.67%,73.83%,68.17%,70.33%
+Held-out raw schemas,73.67%,2.33%,68.17%,2.67%

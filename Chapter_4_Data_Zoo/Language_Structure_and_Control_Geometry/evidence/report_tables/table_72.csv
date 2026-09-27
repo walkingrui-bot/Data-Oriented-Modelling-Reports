@@ -1,0 +1,3 @@
+Measurement space,Stable rank,Participation rank,PCA95,TwoNN,Top-3 / neighborhood
+Sentence organization (7 coordinates),1.70,2.55,5,3.08,Top-3 87.15%; 4D kNN 62.7%; 8D kNN 82.6%
+Predicate realization (21D),5.62,7.71,9.1,—,Top-3 49.8%

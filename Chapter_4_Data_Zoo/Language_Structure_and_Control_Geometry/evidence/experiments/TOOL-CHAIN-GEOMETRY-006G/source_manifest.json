@@ -1,0 +1,22 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006G",
+  "planner_sha256": "5bb588e78d45a5bfa6096585c772285804d25f2aad5fc4c85c22e687336c9d02",
+  "train_script_sha256": "9bd6bea4c7db0860fa741f2fb0870c60fd74a2d95c5ef7c22fe65fb57b962bf1",
+  "formal_script_sha256": "45d389f0ba70f5e91294c9d13d6d54a75ba9c2f23b0f9e916059bf04076701ce",
+  "seen_raw_styles": [
+    0,
+    1,
+    2
+  ],
+  "unseen_raw_styles": [
+    3,
+    4,
+    5
+  ],
+  "formal_task_seeds": [
+    26142821,
+    26152821,
+    26162821
+  ],
+  "note": "Planner trained only on raw styles 0-2. Raw styles 3-5 occupied reserved feature coordinates that were never active during training. Canonical normalization maps all styles to the same trained value channels."
+}

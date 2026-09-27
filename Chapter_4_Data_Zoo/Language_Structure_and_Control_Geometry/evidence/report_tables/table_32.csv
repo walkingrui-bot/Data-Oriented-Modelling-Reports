@@ -1,0 +1,8 @@
+Condition,Accuracy,Delta vs baseline,Paired 95% CI pp,BASE-only / condition-only,Exact McNemar p
+Baseline,75.83%,reference,-,-,-
+State truncated,29.50%,-46.33 pp,"[-50.67, -42.00]",282 / 4,3.01e-15
+No binding / parallel,5.50%,-70.33 pp,"[-74.00, -66.33]",423 / 1,2.44e-15
+No binding / sequential,5.50%,-70.33 pp,"[-74.00, -66.33]",423 / 1,2.44e-15
+Raw JSON / no normalization,5.50%,-70.33 pp,"[-74.00, -66.33]",423 / 1,2.44e-15
+Best-effort schema,75.83%,0.00 pp,"[0.00, 0.00]",0 / 0,1.0
+No final verification,75.83%,0.00 pp,"[0.00, 0.00]",0 / 0,1.0

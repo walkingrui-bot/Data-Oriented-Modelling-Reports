@@ -1,0 +1,5 @@
+Model,Random-split NRMSE,Difference from flat
+Flat matched control,0.67170,-
+Hierarchical router,0.66969,-0.00201
+Adaptive sparse router,0.67011,-0.00159
+Shuffled-edge router,0.67250,+0.00081

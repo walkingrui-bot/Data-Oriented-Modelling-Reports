@@ -1,0 +1,5 @@
+Gate / component,Executed assay,Measured result,Formal role
+Generative planner,"6,376 oracle-prefix decisions",93.48% exact action,Passed ≥85% gate
+World competence,240 held-out P1/N1 tasks,84.17% exact final state,Passed ≥65% gate
+JSON emitter,153 legal action tuples,153/153 exact semantic round trips,Frozen generated action surface
+Formal campaign,600 worlds × 4 cells,"2,400 executed trajectories",Primary factorial evidence

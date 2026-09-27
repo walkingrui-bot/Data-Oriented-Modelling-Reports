@@ -1,0 +1,69 @@
+{
+  "bfcl_config_count": 109,
+  "spearman": {
+    "single_turn_nonlive_vs_multiturn": 0.452,
+    "multiturn_vs_agentic_mean": 0.62,
+    "single_turn_nonlive_vs_agentic_mean": 0.239,
+    "web_vs_memory": 0.793
+  },
+  "perturbation_drop_pp_all_109": {
+    "miss_function": {
+      "mean": 7.42,
+      "median": 5.0
+    },
+    "miss_parameter": {
+      "mean": 7.77,
+      "median": 7.0
+    },
+    "long_context": {
+      "mean": 5.0,
+      "median": 3.0
+    }
+  },
+  "perturbation_drop_pp_base_ge20_n57": {
+    "miss_function": {
+      "mean": 11.95,
+      "median": 9.5,
+      "q25": 5.0,
+      "q75": 18.5
+    },
+    "miss_parameter": {
+      "mean": 13.48,
+      "median": 12.5,
+      "q25": 10.0,
+      "q75": 17.0
+    },
+    "long_context": {
+      "mean": 8.3,
+      "median": 6.5,
+      "q25": 4.0,
+      "q75": 11.5
+    }
+  },
+  "paired_fc_prompt": {
+    "n": 25,
+    "multiturn_delta_mean_pp": 12.45,
+    "multiturn_delta_median_pp": 7.0,
+    "multiturn_positive": 21,
+    "multiturn_negative": 4,
+    "multiturn_min_pp": -47.5,
+    "multiturn_max_pp": 59.75,
+    "agentic_delta_mean_pp": 16.5,
+    "agentic_delta_median_pp": 6.47,
+    "agentic_positive": 21,
+    "agentic_negative": 3,
+    "agentic_zero": 1
+  },
+  "base_error_types_three_models": {
+    "total_episodes": 600,
+    "total_failures": 124,
+    "instance_state_mismatch": 79,
+    "execution_response_mismatch": 30,
+    "empty_turn_model_response": 15,
+    "failure_share_percent": {
+      "instance_state_mismatch": 63.7,
+      "execution_response_mismatch": 24.2,
+      "empty_turn": 12.1
+    }
+  }
+}

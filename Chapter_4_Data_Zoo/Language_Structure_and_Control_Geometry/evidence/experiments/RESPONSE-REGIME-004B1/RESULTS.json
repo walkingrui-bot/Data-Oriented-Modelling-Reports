@@ -1,0 +1,382 @@
+{
+  "experiment_id": "RESPONSE-REGIME-004B1",
+  "dataset": {
+    "name": "ParaphraseBench test split",
+    "targets": 57,
+    "nl_variants": 6,
+    "nl_rows": 342
+  },
+  "natural_language_transition_geometry": [
+    {
+      "variant": "Naive",
+      "stable_rank": 6.6974,
+      "participation_rank": 13.437,
+      "top3_energy": 0.3457,
+      "top3_overlap_with_naive": 1.0
+    },
+    {
+      "variant": "Syntactic",
+      "stable_rank": 6.8983,
+      "participation_rank": 13.7114,
+      "top3_energy": 0.3668,
+      "top3_overlap_with_naive": 0.6102
+    },
+    {
+      "variant": "Morphological",
+      "stable_rank": 8.0956,
+      "participation_rank": 15.4932,
+      "top3_energy": 0.3229,
+      "top3_overlap_with_naive": 0.9424
+    },
+    {
+      "variant": "Lexical",
+      "stable_rank": 5.9348,
+      "participation_rank": 11.0152,
+      "top3_energy": 0.4131,
+      "top3_overlap_with_naive": 0.8154
+    },
+    {
+      "variant": "Semantic",
+      "stable_rank": 6.2435,
+      "participation_rank": 12.4001,
+      "top3_energy": 0.4049,
+      "top3_overlap_with_naive": 0.6049
+    },
+    {
+      "variant": "Missing information",
+      "stable_rank": 5.1162,
+      "participation_rank": 10.8228,
+      "top3_energy": 0.451,
+      "top3_overlap_with_naive": 0.643
+    }
+  ],
+  "sql_transition_geometry": {
+    "stable_rank": 3.5449,
+    "participation_rank": 7.0209,
+    "top3_energy": 0.5485
+  },
+  "leave_one_style_out_target_retrieval": [
+    {
+      "held_out_style": "Naive",
+      "top1": 0.8947,
+      "mrr": 0.9444,
+      "matched_cosine": 0.7458,
+      "mismatched_cosine": 0.2528,
+      "gap": 0.493,
+      "permutation_control_mean": 0.0168,
+      "permutation_control_p95": 0.0526,
+      "correct_count": 51,
+      "binomial_p_vs_1_over_57": 9.224075749373117e-83
+    },
+    {
+      "held_out_style": "Syntactic",
+      "top1": 0.8772,
+      "mrr": 0.9304,
+      "matched_cosine": 0.648,
+      "mismatched_cosine": 0.2266,
+      "gap": 0.4215,
+      "permutation_control_mean": 0.0168,
+      "permutation_control_p95": 0.0526,
+      "correct_count": 50,
+      "binomial_p_vs_1_over_57": 3.764895593784027e-80
+    },
+    {
+      "held_out_style": "Morphological",
+      "top1": 0.9298,
+      "mrr": 0.962,
+      "matched_cosine": 0.6222,
+      "mismatched_cosine": 0.2123,
+      "gap": 0.4098,
+      "permutation_control_mean": 0.017,
+      "permutation_control_p95": 0.0526,
+      "correct_count": 53,
+      "binomial_p_vs_1_over_57": 3.1993965203680664e-88
+    },
+    {
+      "held_out_style": "Lexical",
+      "top1": 0.6842,
+      "mrr": 0.8081,
+      "matched_cosine": 0.5073,
+      "mismatched_cosine": 0.1994,
+      "gap": 0.3078,
+      "permutation_control_mean": 0.0172,
+      "permutation_control_p95": 0.0526,
+      "correct_count": 39,
+      "binomial_p_vs_1_over_57": 7.548087692187885e-55
+    },
+    {
+      "held_out_style": "Semantic",
+      "top1": 0.6491,
+      "mrr": 0.7649,
+      "matched_cosine": 0.3806,
+      "mismatched_cosine": 0.1513,
+      "gap": 0.2293,
+      "permutation_control_mean": 0.0175,
+      "permutation_control_p95": 0.0526,
+      "correct_count": 37,
+      "binomial_p_vs_1_over_57": 9.244299044968446e-51
+    },
+    {
+      "held_out_style": "Missing information",
+      "top1": 0.4386,
+      "mrr": 0.6008,
+      "matched_cosine": 0.3388,
+      "mismatched_cosine": 0.1382,
+      "gap": 0.2006,
+      "permutation_control_mean": 0.0182,
+      "permutation_control_p95": 0.0526,
+      "correct_count": 25,
+      "binomial_p_vs_1_over_57": 7.306560575549098e-29
+    }
+  ],
+  "retrieval_summary": {
+    "mean_top1": 0.7456,
+    "mean_mrr": 0.8351000000000001,
+    "mean_similarity_gap": 0.3436666666666666,
+    "exact_random_target_rate": 0.017543859649122806
+  },
+  "sql_structure_strata": [
+    {
+      "stratum": "Simple",
+      "n": 19,
+      "mean_retrieval_rank_across_six_styles": 2.4123,
+      "perfect_target_fraction": 0.0
+    },
+    {
+      "stratum": "Filtered",
+      "n": 20,
+      "mean_retrieval_rank_across_six_styles": 1.5333,
+      "perfect_target_fraction": 0.25
+    },
+    {
+      "stratum": "Grouped",
+      "n": 18,
+      "mean_retrieval_rank_across_six_styles": 1.4537,
+      "perfect_target_fraction": 0.2778
+    }
+  ],
+  "pairwise_cross_style_retrieval": {
+    "naive": {
+      "syntactic": [
+        0.8947,
+        0.9382,
+        0.7565,
+        0.225,
+        0.5315
+      ],
+      "morphological": [
+        0.9123,
+        0.9532,
+        0.694,
+        0.2033,
+        0.4907
+      ],
+      "lexical": [
+        0.5965,
+        0.7595,
+        0.5115,
+        0.1893,
+        0.3223
+      ],
+      "semantic": [
+        0.3158,
+        0.5303,
+        0.2942,
+        0.1239,
+        0.1704
+      ],
+      "missing": [
+        0.193,
+        0.4287,
+        0.2661,
+        0.1135,
+        0.1526
+      ]
+    },
+    "syntactic": {
+      "naive": [
+        0.8596,
+        0.9103,
+        0.7565,
+        0.225,
+        0.5315
+      ],
+      "morphological": [
+        0.7895,
+        0.8508,
+        0.5643,
+        0.1762,
+        0.3881
+      ],
+      "lexical": [
+        0.5263,
+        0.6754,
+        0.4061,
+        0.1623,
+        0.2437
+      ],
+      "semantic": [
+        0.3333,
+        0.5132,
+        0.2732,
+        0.1166,
+        0.1566
+      ],
+      "missing": [
+        0.2105,
+        0.4049,
+        0.2439,
+        0.1045,
+        0.1394
+      ]
+    },
+    "morphological": {
+      "naive": [
+        0.7544,
+        0.8191,
+        0.694,
+        0.2033,
+        0.4907
+      ],
+      "syntactic": [
+        0.7193,
+        0.8002,
+        0.5643,
+        0.1762,
+        0.3881
+      ],
+      "lexical": [
+        0.4912,
+        0.6418,
+        0.4005,
+        0.1479,
+        0.2526
+      ],
+      "semantic": [
+        0.3333,
+        0.507,
+        0.2711,
+        0.1108,
+        0.1604
+      ],
+      "missing": [
+        0.2105,
+        0.4029,
+        0.2418,
+        0.1009,
+        0.1409
+      ]
+    },
+    "lexical": {
+      "naive": [
+        0.4912,
+        0.657,
+        0.5115,
+        0.1893,
+        0.3223
+      ],
+      "syntactic": [
+        0.4035,
+        0.5696,
+        0.4061,
+        0.1623,
+        0.2437
+      ],
+      "morphological": [
+        0.4737,
+        0.6135,
+        0.4005,
+        0.1479,
+        0.2526
+      ],
+      "semantic": [
+        0.3158,
+        0.4894,
+        0.2775,
+        0.1122,
+        0.1653
+      ],
+      "missing": [
+        0.1404,
+        0.321,
+        0.2204,
+        0.1014,
+        0.1189
+      ]
+    },
+    "semantic": {
+      "naive": [
+        0.3158,
+        0.4666,
+        0.2942,
+        0.1239,
+        0.1704
+      ],
+      "syntactic": [
+        0.2632,
+        0.4241,
+        0.2732,
+        0.1166,
+        0.1566
+      ],
+      "morphological": [
+        0.2807,
+        0.4427,
+        0.2711,
+        0.1108,
+        0.1604
+      ],
+      "lexical": [
+        0.3509,
+        0.5023,
+        0.2775,
+        0.1122,
+        0.1653
+      ],
+      "missing": [
+        0.3509,
+        0.5077,
+        0.2893,
+        0.0938,
+        0.1955
+      ]
+    },
+    "missing": {
+      "naive": [
+        0.1754,
+        0.3163,
+        0.2661,
+        0.1135,
+        0.1526
+      ],
+      "syntactic": [
+        0.2456,
+        0.3591,
+        0.2439,
+        0.1045,
+        0.1394
+      ],
+      "morphological": [
+        0.2105,
+        0.3579,
+        0.2418,
+        0.1009,
+        0.1409
+      ],
+      "lexical": [
+        0.1754,
+        0.332,
+        0.2204,
+        0.1014,
+        0.1189
+      ],
+      "semantic": [
+        0.2982,
+        0.4987,
+        0.2893,
+        0.0938,
+        0.1955
+      ]
+    }
+  }
+}

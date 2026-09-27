@@ -1,0 +1,4 @@
+Cross-regime pair,Matched similarity,Mismatched similarity,Gap,Exact sign-flip p
+Natural language / pseudocode,0.829,0.507,0.322,0.0049
+Pseudocode / executable Python,1.000,0.488,0.512,0.0029
+Natural language / executable Python,0.829,0.507,0.322,0.0049

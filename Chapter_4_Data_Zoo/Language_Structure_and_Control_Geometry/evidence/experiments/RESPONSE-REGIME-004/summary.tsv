@@ -1,0 +1,4 @@
+mode	lex_stable_rank	lex_k32_stable_rank	lex_top3	event_stable_rank	event_top3	event_f1	mean_tokens	punct_per100	entity_gap
+nl	6.6627	2.9137	0.3263	2.1005	0.9718	0.9249	48.70	14.58	15.44
+pseudo	2.2710	2.2434	0.6950	2.1791	0.9319	0.9889	42.00	17.38	8.85
+code	1.6587	1.6587	0.8384	2.1791	0.9319	0.9889	42.60	39.67	3.35

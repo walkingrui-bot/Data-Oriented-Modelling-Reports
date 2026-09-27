@@ -1,0 +1,8 @@
+Condition,Exact states,Accuracy,Delta pp,Paired 95% CI pp,McNemar p
+Baseline,491/700,70.14%,reference,-,-
+Last-result handoff,325/700,46.43%,-23.71,"[-27.43, -20.00]",<0.0001
+No binding / parallel,239/700,34.14%,-36.00,"[-40.00, -31.86]",<0.0001
+No binding / sequential,232/700,33.14%,-37.00,"[-40.86, -33.00]",<0.0001
+Raw results,330/700,47.14%,-23.00,"[-26.71, -19.14]",<0.0001
+Best-effort schema,491/700,70.14%,+0.00,"[0.00, 0.00]",1.0000
+No verification,470/700,67.14%,-3.00,"[-4.29, -1.86]",<0.0001

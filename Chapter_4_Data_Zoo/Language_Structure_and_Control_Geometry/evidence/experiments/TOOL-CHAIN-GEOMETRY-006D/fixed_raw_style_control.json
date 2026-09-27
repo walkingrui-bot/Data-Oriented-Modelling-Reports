@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "panel": 1,
+      "style": 0,
+      "accuracy": 0.63
+    },
+    {
+      "panel": 1,
+      "style": 1,
+      "accuracy": 0.64
+    },
+    {
+      "panel": 1,
+      "style": 2,
+      "accuracy": 0.67
+    },
+    {
+      "panel": 2,
+      "style": 0,
+      "accuracy": 0.67
+    },
+    {
+      "panel": 2,
+      "style": 1,
+      "accuracy": 0.675
+    },
+    {
+      "panel": 2,
+      "style": 2,
+      "accuracy": 0.685
+    },
+    {
+      "panel": 3,
+      "style": 0,
+      "accuracy": 0.695
+    },
+    {
+      "panel": 3,
+      "style": 1,
+      "accuracy": 0.685
+    },
+    {
+      "panel": 3,
+      "style": 2,
+      "accuracy": 0.72
+    }
+  ]
+}

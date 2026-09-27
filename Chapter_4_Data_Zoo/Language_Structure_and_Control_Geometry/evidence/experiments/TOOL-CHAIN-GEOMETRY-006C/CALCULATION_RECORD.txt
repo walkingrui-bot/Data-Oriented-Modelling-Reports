@@ -1,0 +1,27 @@
+TOOL-CHAIN-GEOMETRY-006C | CALCULATION RECORD | 2026-09-27
+
+Frozen policy: DecisionTree structured transcript policy, four independent action heads
+Training tasks: 12000; decision examples: 62268; feature dimension: 429
+Policy SHA-256: 1a1e2fd464281b72ce43948e78f953c33162efffaded34e529a3c39fbc61dea9
+Interface: json.dumps -> json.loads; JSON Schema Draft 2020-12
+
+Panel 1 seed 26142761 | prefix exact 0.929282 | BASE 0.795000 | NO_STATE 0.305000 | NO_BIND 0.050000 | RAW 0.050000
+Panel 2 seed 26152761 | prefix exact 0.915477 | BASE 0.745000 | NO_STATE 0.285000 | NO_BIND 0.065000 | RAW 0.065000
+Panel 3 seed 26162761 | prefix exact 0.915919 | BASE 0.735000 | NO_STATE 0.295000 | NO_BIND 0.050000 | RAW 0.050000
+
+BASE: n=600; accuracy=0.758333; wrong_done=0.241667; schema_error_episode=0.000000; mean_steps=6.643333
+NO_STATE: n=600; accuracy=0.295000; wrong_done=0.441667; schema_error_episode=0.000000; mean_steps=11.258333
+NO_BINDING_PARALLEL: n=600; accuracy=0.055000; wrong_done=0.945000; schema_error_episode=0.196667; mean_steps=13.450000
+NO_BINDING_SEQUENTIAL: n=600; accuracy=0.055000; wrong_done=0.945000; schema_error_episode=0.196667; mean_steps=13.450000
+RAW_JSON_NO_NORMALIZATION: n=600; accuracy=0.055000; wrong_done=0.945000; schema_error_episode=0.196667; mean_steps=13.450000
+BEST_EFFORT_SCHEMA: n=600; accuracy=0.758333; wrong_done=0.241667; schema_error_episode=0.000000; mean_steps=6.643333
+NO_VERIFY: n=600; accuracy=0.758333; wrong_done=0.241667; schema_error_episode=0.000000; mean_steps=6.643333
+
+NO_STATE vs BASE: delta=-46.333333 pp; bootstrap95=[-50.666666666666664, -42.0]; BASE-only=282; condition-only=4; exact McNemar p=3.00558e-15
+NO_BINDING_PARALLEL vs BASE: delta=-70.333333 pp; bootstrap95=[-74.0, -66.33333333333333]; BASE-only=423; condition-only=1; exact McNemar p=2.4439e-15
+NO_BINDING_SEQUENTIAL vs BASE: delta=-70.333333 pp; bootstrap95=[-74.0, -66.33333333333333]; BASE-only=423; condition-only=1; exact McNemar p=2.4439e-15
+RAW_JSON_NO_NORMALIZATION vs BASE: delta=-70.333333 pp; bootstrap95=[-74.0, -66.33333333333333]; BASE-only=423; condition-only=1; exact McNemar p=2.4439e-15
+BEST_EFFORT_SCHEMA vs BASE: delta=0.000000 pp; bootstrap95=[0.0, 0.0]; BASE-only=0; condition-only=0; exact McNemar p=1
+NO_VERIFY vs BASE: delta=0.000000 pp; bootstrap95=[0.0, 0.0]; BASE-only=0; condition-only=0; exact McNemar p=1
+
+Evidence boundary: in this structured policy, canonical call_id/value fields map into explicit bound-value feature coordinates. Removing identity and bypassing normalization both disrupt access to those canonical coordinates, so their identical pooled endpoint does not identify equal effect magnitudes in general systems.

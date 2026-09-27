@@ -1,0 +1,5 @@
+Oracle-prefix diagnostic,Prov+ / Norm+,Prov+ / Raw,No prov / Norm+,No prov / Raw
+All action exact,94.98%,93.73%,91.81%,91.81%
+After-result action exact,87.91%,84.18%,77.46%,78.21%
+Multi-read WRITE exact,81.04%,75.67%,67.79%,67.45%
+Multi-read WRITE value correct,82.21%,77.68%,69.63%,69.80%

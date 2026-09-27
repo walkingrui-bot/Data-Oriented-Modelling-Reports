@@ -1,0 +1,3 @@
+measurement_space,stable_rank,participation_rank,pca95,twonn,distance_cv,knn10_preservation_pca4,knn10_preservation_pca8
+sentence_organization,1.70271,2.5485,5.0,3.07876,0.51686,0.62697,0.8258
+predicate_role_order_distance,5.61866,7.71372,9.1,,,,

@@ -1,0 +1,6 @@
+Gate / construction,Executed assay,Measured result,Role
+Raw-schema support,Styles 0-2 active in training; styles 3-5 reserved but inactive,3 seen + 3 held-out families,Defines representation-support intervention
+Planner training,"6,000 executable tasks; 109,684 oracle contexts",NLL 1.0469 -> 0.4793 -> 0.1609,Frozen generative planner
+Seen-schema prefix gate,"6,292 held-out oracle-prefix decisions",91.96% exact action,Passed >=85% gate
+Seen-schema world gate,240 held-out tasks,72.92% P+/N+; 73.33% P+/raw,Passed >=65% in both paths
+Formal campaign,600 worlds x 2 schema regimes x 4 cells,"4,800 executed trajectories",Primary paired schema-shift evidence

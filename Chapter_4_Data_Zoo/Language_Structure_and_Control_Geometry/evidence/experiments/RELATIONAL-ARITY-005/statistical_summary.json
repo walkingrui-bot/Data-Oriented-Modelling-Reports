@@ -1,0 +1,47 @@
+{
+  "total_sentences": 18355,
+  "total_predicates": 41223,
+  "predicate_weighted_mean_arity": 1.50757360697,
+  "predicate_weighted_fraction_arity_le2": 0.85520291342,
+  "predicate_weighted_fraction_arity_le3": 0.97359789195,
+  "predicate_weighted_fraction_arity_ge4": 0.02640210805,
+  "unweighted_language_mean_arity": 1.4098,
+  "median_language_p95_arity": 3.0,
+  "mean_spearman_sentence_length_vs_predicate_count": 0.7439,
+  "mean_spearman_sentence_length_vs_mean_arity": 0.2824,
+  "mean_spearman_tree_depth_vs_predicate_count": 0.6857,
+  "mean_spearman_tree_depth_vs_mean_arity": 0.2088,
+  "abstract_role_geometry": {
+    "mean_stable_rank": 4.9892,
+    "mean_participation_rank": 6.1551,
+    "mean_pca95": 6.4,
+    "mean_top3_energy": 0.5497
+  },
+  "role_plus_direction_geometry": {
+    "mean_stable_rank": 6.2565,
+    "mean_participation_rank": 9.0127,
+    "mean_pca95": 10.4,
+    "mean_top3_energy": 0.4457
+  },
+  "q1_to_q4": {
+    "mean_predicate_count_delta": 3.73012686324,
+    "bootstrap95_predicate_count_delta": [
+      3.08368849,
+      4.44652593
+    ],
+    "wilcoxon_predicate_count_increase_p": 0.0009765625,
+    "mean_predicate_arity_delta": 0.24407349291,
+    "bootstrap95_predicate_arity_delta": [
+      0.11697328,
+      0.40610241
+    ],
+    "wilcoxon_predicate_arity_increase_p": 0.0029296875,
+    "mean_role_stable_rank_delta": 0.63535082553,
+    "bootstrap95_role_stable_rank_delta": [
+      0.25777103,
+      1.00485018
+    ],
+    "wilcoxon_role_stable_rank_increase_p": 0.013671875
+  },
+  "role_signature_jsd_mean": 0.1369
+}

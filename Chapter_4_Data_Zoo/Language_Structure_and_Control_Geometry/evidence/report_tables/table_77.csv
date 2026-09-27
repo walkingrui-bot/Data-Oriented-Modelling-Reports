@@ -1,0 +1,7 @@
+Target,Flat NRMSE,Hierarchy NRMSE,Relative change
+tree_depth,0.74249,0.74314,-0.09%
+mean_dependency_distance,0.75364,0.75386,-0.03%
+max_predicate_nesting,0.39622,0.38474,+2.90%
+predicate_pair_tree_distance,0.53087,0.53065,+0.04%
+subordinate_predicate_count,0.38169,0.37777,+1.03%
+crossing_count,1.00164,0.99902,+0.26%

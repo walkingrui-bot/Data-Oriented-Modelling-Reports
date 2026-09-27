@@ -1,0 +1,4 @@
+pair_class,n,direct,mapped,gain,mrr
+same language / different script,8,0.2878,0.3353,0.0476,0.4299
+different language / same script,33,0.1099,0.1151,0.0052,0.207
+different language / different script,33,0.0642,0.0838,0.0196,0.173

@@ -1,0 +1,793 @@
+{
+  "experiment": "RESPONSE-REGIME-004",
+  "date": "2026-09-27",
+  "tasks": [
+    "clamp",
+    "gcd",
+    "fib",
+    "is_prime",
+    "binary_search",
+    "prefix_sums",
+    "count_vowels",
+    "merge_sorted",
+    "run_count",
+    "sum_positive"
+  ],
+  "event_vocab": [
+    "STATE",
+    "LOOP",
+    "BRANCH",
+    "APPEND",
+    "CALL",
+    "RETURN"
+  ],
+  "regime": {
+    "nl": {
+      "lexical": {
+        "stable_rank": 6.662687122655865,
+        "participation": 20.516003591776023,
+        "top3": 0.3263095169883801,
+        "vocab": 153,
+        "tokens": 487
+      },
+      "lexical_k32": {
+        "stable_rank": 2.9136820105418586,
+        "participation": 5.7233668912069025,
+        "top3": 0.6321972257026485,
+        "vocab": 35
+      },
+      "events": {
+        "stable_rank": 2.100503015043913,
+        "participation": 2.829374306672153,
+        "top3": 0.9717790801099304,
+        "mean_f1_vs_gold": 0.9248586707410237,
+        "mean_events": 6.1
+      }
+    },
+    "pseudo": {
+      "lexical": {
+        "stable_rank": 2.2710238887979832,
+        "participation": 4.093542646160048,
+        "top3": 0.6950074271915287,
+        "vocab": 42,
+        "tokens": 420
+      },
+      "lexical_k32": {
+        "stable_rank": 2.2433867600443334,
+        "participation": 4.018323982068596,
+        "top3": 0.6987077897561603,
+        "vocab": 35
+      },
+      "events": {
+        "stable_rank": 2.179083441111647,
+        "participation": 2.9531783532136746,
+        "top3": 0.931872113760951,
+        "mean_f1_vs_gold": 0.9888888888888889,
+        "mean_events": 6.4
+      }
+    },
+    "code": {
+      "lexical": {
+        "stable_rank": 1.658669317336184,
+        "participation": 2.4954123133609056,
+        "top3": 0.8383609888588371,
+        "vocab": 35,
+        "tokens": 426
+      },
+      "lexical_k32": {
+        "stable_rank": 1.6586693173361833,
+        "participation": 2.4954123133609034,
+        "top3": 0.8383609888588375,
+        "vocab": 35
+      },
+      "events": {
+        "stable_rank": 2.179083441111647,
+        "participation": 2.9531783532136746,
+        "top3": 0.931872113760951,
+        "mean_f1_vs_gold": 0.9888888888888889,
+        "mean_events": 6.4
+      }
+    }
+  },
+  "event_subspace_top3_overlap": {
+    "nl-pseudo": 0.9143159716471763,
+    "pseudo-code": 1.0000000000000009,
+    "nl-code": 0.9143159716471763
+  },
+  "matched_vs_mismatched": {
+    "nl-pseudo": {
+      "matched_mean": 0.8289682539682539,
+      "mismatched_mean": 0.5066622574955908,
+      "gap": 0.3223059964726631,
+      "bootstrap_95": [
+        0.19353549382716057,
+        0.4348001543209877
+      ],
+      "per_source_gap_mean": 0.3223059964726631,
+      "exact_signflip_p_two_sided": 0.004878048780487805,
+      "per_source_gaps": [
+        0.3511904761904763,
+        0.15291005291005288,
+        0.4306878306878307,
+        0.4250440917107584,
+        0.44973544973544965,
+        0.5154761904761904,
+        0.14550264550264558,
+        -0.07275132275132268,
+        0.44246031746031744,
+        0.3828042328042328
+      ]
+    },
+    "pseudo-code": {
+      "matched_mean": 1.0,
+      "mismatched_mean": 0.48796296296296293,
+      "gap": 0.5120370370370371,
+      "bootstrap_95": [
+        0.4751322751322752,
+        0.5477645502645503
+      ],
+      "per_source_gap_mean": 0.5120370370370371,
+      "exact_signflip_p_two_sided": 0.002926829268292683,
+      "per_source_gaps": [
+        0.6502645502645503,
+        0.5452380952380953,
+        0.4306878306878307,
+        0.488095238095238,
+        0.501984126984127,
+        0.5154761904761904,
+        0.4649470899470899,
+        0.6984126984126984,
+        0.44246031746031744,
+        0.3828042328042328
+      ]
+    },
+    "nl-code": {
+      "matched_mean": 0.8289682539682539,
+      "mismatched_mean": 0.5066622574955908,
+      "gap": 0.3223059964726631,
+      "bootstrap_95": [
+        0.19722883597883598,
+        0.43510890652557327
+      ],
+      "per_source_gap_mean": 0.3223059964726631,
+      "exact_signflip_p_two_sided": 0.004878048780487805,
+      "per_source_gaps": [
+        0.3511904761904763,
+        0.15291005291005288,
+        0.4306878306878307,
+        0.4250440917107584,
+        0.44973544973544965,
+        0.5154761904761904,
+        0.14550264550264558,
+        -0.07275132275132268,
+        0.44246031746031744,
+        0.3828042328042328
+      ]
+    }
+  },
+  "surface": {
+    "nl": {
+      "mean_tokens": 48.7,
+      "punct_per100": 14.57905544147844,
+      "mean_entity_recurrence_gap": 15.440000000000001
+    },
+    "pseudo": {
+      "mean_tokens": 42.0,
+      "punct_per100": 17.38095238095238,
+      "mean_entity_recurrence_gap": 8.85407450076805
+    },
+    "code": {
+      "mean_tokens": 42.6,
+      "punct_per100": 39.671361502347416,
+      "mean_entity_recurrence_gap": 3.349583333333334
+    }
+  },
+  "deletion_stress": {
+    "0.05": {
+      "nl": {
+        "mean_event_f1": 0.9074038555055197,
+        "syntax_valid_fraction": null
+      },
+      "pseudo": {
+        "mean_event_f1": 0.7203278482387178,
+        "syntax_valid_fraction": null
+      },
+      "code": {
+        "mean_event_f1": 0.07880122100122101,
+        "syntax_valid_fraction": 0.083
+      }
+    },
+    "0.1": {
+      "nl": {
+        "mean_event_f1": 0.8828397853307683,
+        "syntax_valid_fraction": null
+      },
+      "pseudo": {
+        "mean_event_f1": 0.6992700890833041,
+        "syntax_valid_fraction": null
+      },
+      "code": {
+        "mean_event_f1": 0.01074920634920635,
+        "syntax_valid_fraction": 0.0115
+      }
+    }
+  },
+  "per_task": [
+    {
+      "task": "clamp",
+      "nl": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "BRANCH",
+          "RETURN",
+          "BRANCH",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 0.9090909090909091,
+        "lex_tokens": 54,
+        "lex_types": 26,
+        "entity_gap": 11.333333333333334
+      },
+      "pseudo": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "BRANCH",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 0.888888888888889,
+        "lex_tokens": 20,
+        "lex_types": 8,
+        "entity_gap": 5.5
+      },
+      "code": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "BRANCH",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 0.888888888888889,
+        "lex_tokens": 26,
+        "lex_types": 10,
+        "entity_gap": 2.7142857142857144
+      },
+      "sim_nl_pseudo": 0.6666666666666667,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 0.6666666666666667
+    },
+    {
+      "task": "gcd",
+      "nl": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 0.8571428571428571,
+        "lex_tokens": 46,
+        "lex_types": 26,
+        "entity_gap": 9.333333333333334
+      },
+      "pseudo": {
+        "events": [
+          "LOOP",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 20,
+        "lex_types": 9,
+        "entity_gap": 5.666666666666667
+      },
+      "code": {
+        "events": [
+          "LOOP",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 24,
+        "lex_types": 12,
+        "entity_gap": 2.0
+      },
+      "sim_nl_pseudo": 0.75,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 0.75
+    },
+    {
+      "task": "fib",
+      "nl": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 47,
+        "lex_types": 26,
+        "entity_gap": 12.833333333333334
+      },
+      "pseudo": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 30,
+        "lex_types": 11,
+        "entity_gap": 8.428571428571429
+      },
+      "code": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 32,
+        "lex_types": 12,
+        "entity_gap": 3.2857142857142856
+      },
+      "sim_nl_pseudo": 1.0,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 1.0
+    },
+    {
+      "task": "is_prime",
+      "nl": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "BRANCH",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 0.9411764705882353,
+        "lex_tokens": 53,
+        "lex_types": 31,
+        "entity_gap": 11.2
+      },
+      "pseudo": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 35,
+        "lex_types": 17,
+        "entity_gap": 5.428571428571429
+      },
+      "code": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 37,
+        "lex_types": 18,
+        "entity_gap": 1.7142857142857142
+      },
+      "sim_nl_pseudo": 0.8888888888888888,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 0.8888888888888888
+    },
+    {
+      "task": "binary_search",
+      "nl": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "BRANCH",
+          "RETURN",
+          "BRANCH",
+          "STATE",
+          "RETURN",
+          "BRANCH"
+        ],
+        "event_f1_vs_gold": 0.9411764705882353,
+        "lex_tokens": 68,
+        "lex_types": 38,
+        "entity_gap": 18.0
+      },
+      "pseudo": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "BRANCH",
+          "RETURN",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 64,
+        "lex_types": 22,
+        "entity_gap": 12.5
+      },
+      "code": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "BRANCH",
+          "RETURN",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 67,
+        "lex_types": 20,
+        "entity_gap": 4.8125
+      },
+      "sim_nl_pseudo": 0.8888888888888888,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 0.8888888888888888
+    },
+    {
+      "task": "prefix_sums",
+      "nl": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "APPEND",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 46,
+        "lex_types": 28,
+        "entity_gap": 20.2
+      },
+      "pseudo": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "APPEND",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 26,
+        "lex_types": 12,
+        "entity_gap": 8.0
+      },
+      "code": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "STATE",
+          "APPEND",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 29,
+        "lex_types": 14,
+        "entity_gap": 3.8333333333333335
+      },
+      "sim_nl_pseudo": 1.0,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 1.0
+    },
+    {
+      "task": "count_vowels",
+      "nl": {
+        "events": [
+          "STATE",
+          "CALL",
+          "LOOP",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 37,
+        "lex_types": 25,
+        "entity_gap": 16.5
+      },
+      "pseudo": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "CALL",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 38,
+        "lex_types": 18,
+        "entity_gap": 11.25
+      },
+      "code": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "CALL",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 28,
+        "lex_types": 14,
+        "entity_gap": 3.0
+      },
+      "sim_nl_pseudo": 0.6666666666666667,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 0.6666666666666667
+    },
+    {
+      "task": "merge_sorted",
+      "nl": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "APPEND",
+          "STATE",
+          "APPEND",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 0.6,
+        "lex_tokens": 54,
+        "lex_types": 40,
+        "entity_gap": 27.0
+      },
+      "pseudo": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "APPEND",
+          "STATE",
+          "APPEND",
+          "STATE",
+          "LOOP",
+          "APPEND",
+          "STATE",
+          "LOOP",
+          "APPEND",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 113,
+        "lex_types": 22,
+        "entity_gap": 13.741935483870968
+      },
+      "code": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "APPEND",
+          "STATE",
+          "APPEND",
+          "STATE",
+          "LOOP",
+          "APPEND",
+          "STATE",
+          "LOOP",
+          "APPEND",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 113,
+        "lex_types": 19,
+        "entity_gap": 6.285714285714286
+      },
+      "sim_nl_pseudo": 0.4285714285714286,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 0.4285714285714286
+    },
+    {
+      "task": "run_count",
+      "nl": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 43,
+        "lex_types": 26,
+        "entity_gap": 14.0
+      },
+      "pseudo": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 49,
+        "lex_types": 20,
+        "entity_gap": 10.625
+      },
+      "code": {
+        "events": [
+          "BRANCH",
+          "RETURN",
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 46,
+        "lex_types": 18,
+        "entity_gap": 3.25
+      },
+      "sim_nl_pseudo": 1.0,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 1.0
+    },
+    {
+      "task": "sum_positive",
+      "nl": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 39,
+        "lex_types": 27,
+        "entity_gap": 14.0
+      },
+      "pseudo": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 25,
+        "lex_types": 13,
+        "entity_gap": 7.4
+      },
+      "code": {
+        "events": [
+          "STATE",
+          "LOOP",
+          "BRANCH",
+          "STATE",
+          "RETURN"
+        ],
+        "event_f1_vs_gold": 1.0,
+        "lex_tokens": 24,
+        "lex_types": 13,
+        "entity_gap": 2.6
+      },
+      "sim_nl_pseudo": 1.0,
+      "sim_pseudo_code": 1.0,
+      "sim_nl_code": 1.0
+    }
+  ],
+  "gold_events": {
+    "clamp": [
+      "BRANCH",
+      "RETURN",
+      "BRANCH",
+      "RETURN",
+      "RETURN"
+    ],
+    "gcd": [
+      "LOOP",
+      "STATE",
+      "RETURN"
+    ],
+    "fib": [
+      "STATE",
+      "LOOP",
+      "STATE",
+      "RETURN"
+    ],
+    "is_prime": [
+      "BRANCH",
+      "RETURN",
+      "STATE",
+      "LOOP",
+      "BRANCH",
+      "RETURN",
+      "STATE",
+      "RETURN"
+    ],
+    "binary_search": [
+      "STATE",
+      "LOOP",
+      "STATE",
+      "BRANCH",
+      "RETURN",
+      "BRANCH",
+      "STATE",
+      "RETURN"
+    ],
+    "prefix_sums": [
+      "STATE",
+      "LOOP",
+      "STATE",
+      "APPEND",
+      "RETURN"
+    ],
+    "count_vowels": [
+      "STATE",
+      "CALL",
+      "LOOP",
+      "BRANCH",
+      "STATE",
+      "RETURN"
+    ],
+    "merge_sorted": [
+      "STATE",
+      "LOOP",
+      "BRANCH",
+      "APPEND",
+      "STATE",
+      "APPEND",
+      "STATE",
+      "LOOP",
+      "APPEND",
+      "STATE",
+      "LOOP",
+      "APPEND",
+      "STATE",
+      "RETURN"
+    ],
+    "run_count": [
+      "BRANCH",
+      "RETURN",
+      "STATE",
+      "LOOP",
+      "BRANCH",
+      "STATE",
+      "RETURN"
+    ],
+    "sum_positive": [
+      "STATE",
+      "LOOP",
+      "BRANCH",
+      "STATE",
+      "RETURN"
+    ]
+  }
+}

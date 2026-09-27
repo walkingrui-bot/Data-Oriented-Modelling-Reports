@@ -1,0 +1,52 @@
+{
+  "clamp": {
+    "nl": "Take the input value x and compare it with the lower and upper bounds. If x is smaller than the lower bound, return the lower bound. Otherwise, if x is larger than the upper bound, return the upper bound. If neither condition holds, return x unchanged.",
+    "pseudo": "IF x < lo THEN\n    RETURN lo\nELSE IF x > hi THEN\n    RETURN hi\nELSE\n    RETURN x\nEND IF",
+    "code": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x\n"
+  },
+  "gcd": {
+    "nl": "Start with a and b. While b is not zero, compute the remainder of a divided by b, replace a with b, and replace b with that remainder. When b reaches zero, return a as the greatest common divisor.",
+    "pseudo": "WHILE b != 0 DO\n    remainder <- a MOD b\n    a <- b\n    b <- remainder\nEND WHILE\nRETURN a",
+    "code": "def gcd(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a\n"
+  },
+  "fib": {
+    "nl": "Initialize a to zero and b to one. Repeat the update n times. On each iteration, replace a with the old value of b and replace b with the sum of the old a and b. After the loop, return a.",
+    "pseudo": "a <- 0\nb <- 1\nFOR i FROM 0 TO n-1 DO\n    next <- a + b\n    a <- b\n    b <- next\nEND FOR\nRETURN a",
+    "code": "def fib(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a\n"
+  },
+  "is_prime": {
+    "nl": "If n is below two, return false. Otherwise initialize d to two. While d squared is no greater than n, test whether d divides n exactly. If it does, return false; otherwise increment d and continue. If no divisor is found, return true.",
+    "pseudo": "IF n < 2 THEN RETURN FALSE\nd <- 2\nWHILE d*d <= n DO\n    IF n MOD d == 0 THEN RETURN FALSE\n    d <- d + 1\nEND WHILE\nRETURN TRUE",
+    "code": "def is_prime(n):\n    if n < 2:\n        return False\n    d = 2\n    while d * d <= n:\n        if n % d == 0:\n            return False\n        d += 1\n    return True\n"
+  },
+  "binary_search": {
+    "nl": "Initialize lo to the first index and hi to the last index. While lo does not pass hi, compute the midpoint. If the midpoint value equals the target, return the midpoint. If it is smaller than the target, move lo just above the midpoint; otherwise move hi just below it. Return minus one if the search interval becomes empty.",
+    "pseudo": "lo <- 0\nhi <- LENGTH(xs)-1\nWHILE lo <= hi DO\n    mid <- FLOOR((lo+hi)/2)\n    IF xs[mid] == target THEN RETURN mid\n    IF xs[mid] < target THEN\n        lo <- mid + 1\n    ELSE\n        hi <- mid - 1\n    END IF\nEND WHILE\nRETURN -1",
+    "code": "def binary_search(xs, target):\n    lo, hi = 0, len(xs) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if xs[mid] == target:\n            return mid\n        if xs[mid] < target:\n            lo = mid + 1\n        else:\n            hi = mid - 1\n    return -1\n"
+  },
+  "prefix_sums": {
+    "nl": "Create an empty output list and initialize the running total to zero. Scan the input from left to right. For each value, add it to the running total and append the updated total to the output list. Return the completed list.",
+    "pseudo": "out <- EMPTY LIST\ntotal <- 0\nFOR EACH x IN xs DO\n    total <- total + x\n    APPEND total TO out\nEND FOR\nRETURN out",
+    "code": "def prefix_sums(xs):\n    out = []\n    total = 0\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n"
+  },
+  "count_vowels": {
+    "nl": "Initialize the count to zero. Convert the string to lowercase and scan its characters. For each character, if it belongs to the vowel set, increment the count. Return the final count.",
+    "pseudo": "count <- 0\nFOR EACH ch IN LOWERCASE(s) DO\n    IF ch IN {a,e,i,o,u} THEN\n        count <- count + 1\n    END IF\nEND FOR\nRETURN count",
+    "code": "def count_vowels(s):\n    count = 0\n    for ch in s.lower():\n        if ch in \"aeiou\":\n            count += 1\n    return count\n"
+  },
+  "merge_sorted": {
+    "nl": "Initialize indices i and j at zero and create an empty output list. While both input lists still contain unconsumed values, compare their current values, append the smaller one, and advance the corresponding index. Then append every remaining value from the unfinished list. Return the merged output.",
+    "pseudo": "i <- 0\nj <- 0\nout <- EMPTY LIST\nWHILE i < LENGTH(a) AND j < LENGTH(b) DO\n    IF a[i] <= b[j] THEN\n        APPEND a[i] TO out\n        i <- i + 1\n    ELSE\n        APPEND b[j] TO out\n        j <- j + 1\n    END IF\nEND WHILE\nWHILE i < LENGTH(a) DO APPEND a[i] TO out; i <- i + 1 END WHILE\nWHILE j < LENGTH(b) DO APPEND b[j] TO out; j <- j + 1 END WHILE\nRETURN out",
+    "code": "def merge_sorted(a, b):\n    i, j = 0, 0\n    out = []\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            out.append(a[i])\n            i += 1\n        else:\n            out.append(b[j])\n            j += 1\n    while i < len(a):\n        out.append(a[i])\n        i += 1\n    while j < len(b):\n        out.append(b[j])\n        j += 1\n    return out\n"
+  },
+  "run_count": {
+    "nl": "If the string is empty, return zero. Otherwise initialize the run count to one. Scan from the second character onward. Whenever the current character differs from the previous character, increment the count. Return the final count.",
+    "pseudo": "IF LENGTH(s) == 0 THEN RETURN 0\ncount <- 1\nFOR i FROM 1 TO LENGTH(s)-1 DO\n    IF s[i] != s[i-1] THEN\n        count <- count + 1\n    END IF\nEND FOR\nRETURN count",
+    "code": "def run_count(s):\n    if not s:\n        return 0\n    count = 1\n    for i in range(1, len(s)):\n        if s[i] != s[i - 1]:\n            count += 1\n    return count\n"
+  },
+  "sum_positive": {
+    "nl": "Initialize a running total to zero. Visit each value in the input list. If the value is positive, add it to the running total. After all values have been examined, return the total.",
+    "pseudo": "total <- 0\nFOR EACH x IN xs DO\n    IF x > 0 THEN\n        total <- total + x\n    END IF\nEND FOR\nRETURN total",
+    "code": "def sum_positive(xs):\n    total = 0\n    for x in xs:\n        if x > 0:\n            total += x\n    return total\n"
+  }
+}

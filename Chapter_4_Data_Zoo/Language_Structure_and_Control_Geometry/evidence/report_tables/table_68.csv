@@ -1,0 +1,7 @@
+Measured result,Implementation guidance,Concrete validation
+Local arity and role rank remain bounded across compression.,Keep the relation composer capacity stable across output-length targets.,Test fixed relation-width models across controlled compression bands before changing local arity capacity.
+Predicate density rises as human text shortens.,Allocate compression budget by pruning surface realization before pruning relational nodes indiscriminately.,Track predicates or relation events per generated token alongside conventional length metrics.
+Mild compression is replacement/re-expression dominated.,Provide a relation-preserving rewrite operator before hard content pruning.,Measure semantic/role preservation under paraphrase at mild target lengths.
+Strong compression shifts toward net branch pruning.,Expose branch-level selection as an explicit control or routing decision.,Compare learned branch pruning against token-level sparsification at matched output length.
+Lost slots increasingly travel with non-recovered branches.,Prefer deleting a coherent relation unit over independently dropping participant slots when stronger compression is required.,Measure branch coherence and participant retention after pruning.
+Random deletion does not reproduce the human trajectory.,Use relation-aware compression controls rather than token-drop baselines alone.,"Keep length-matched random deletion as a damage control, not as the target compression mechanism."

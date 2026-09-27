@@ -1,0 +1,44 @@
+{
+  "repository": "DataManagementLab/ParaphraseBench",
+  "repository_commit": "9c77daa11c7fa1fa16bbb2e314303b4017fb2220",
+  "accessed": "2026-09-27",
+  "files": [
+    {
+      "path": "test/naive_source.txt",
+      "git_blob_sha": "901e481c69ae97a9a0747ab33f996dc5aa0c69e7",
+      "rows": 57
+    },
+    {
+      "path": "test/syntactic_source.txt",
+      "git_blob_sha": "606b5f7b29f92fc8d600fab7ac6792220d556904",
+      "rows": 57
+    },
+    {
+      "path": "test/morphological_source.txt",
+      "git_blob_sha": "f3bf0fd2bf05e648d83a55ac70d673160f24b990",
+      "rows": 57
+    },
+    {
+      "path": "test/lexical_source.txt",
+      "git_blob_sha": "94ef608904e42bc5300c3344c59de7f35df4dcb5",
+      "rows": 57
+    },
+    {
+      "path": "test/semantic_source.txt",
+      "git_blob_sha": "49caa4cae431f439a392c2d9cd100de2d40ee469",
+      "rows": 57
+    },
+    {
+      "path": "test/missing_source.txt",
+      "git_blob_sha": "c9041b4d44f3fc4b311cf87fd66237b23488a123",
+      "rows": 57
+    },
+    {
+      "path": "test/patients_test.sql",
+      "git_blob_sha": "cb33a787182deb62d39d9eec0ba7e7eb22371beb",
+      "rows": 57
+    }
+  ],
+  "benchmark_reference": "Utama et al. (2018), An End-to-end Neural Natural Language Interface for Databases, arXiv:1804.00401",
+  "note": "Source rows are referenced by pinned repository commit and Git blob identity. The evidence package records derived calculations rather than redistributing the benchmark files."
+}

@@ -1,0 +1,11 @@
+﻿category,mild_deletion_pct,medium_deletion_pct,strong_deletion_pct,interpretation
+NUM,51.56,60.75,76.38,数量/数字细节
+ADV_DEG_TIME,37.52,50.94,65.99,程度、时间及常见副词性外围信息
+PREP_COVERB,30.43,49.48,61.07,介词/介词化动词等关系实现脚手架
+DET_DEMO,28.16,43.4,64.23,限定/指示
+CONJ,25.59,31.43,51.03,连接成分
+CONTENT_OTHER,22.44,31.02,47.69,其余内容词（粗粒度基线）
+ASPECT_MODAL,19.9,25.17,52.19,体貌/情态词
+STRUCT_PART,16.04,28.59,55.89,结构助词
+PRON,9.16,20.93,44.25,代词
+PUNCT,6.47,12.69,31.82,标点

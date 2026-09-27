@@ -1,0 +1,16 @@
+source,repository,path,git_blob_sha
+UD Chinese GSDSimp train,UniversalDependencies/UD_Chinese-GSDSimp,zh_gsdsimp-ud-train.conllu,cd7f5c6f1e81f04c8eaa81d2a96c42611dd43a54
+UD Chinese GSDSimp dev,UniversalDependencies/UD_Chinese-GSDSimp,zh_gsdsimp-ud-dev.conllu,675d7494ab79442a924a78808b7ab4ff9f9a8132
+UD Chinese GSDSimp test,UniversalDependencies/UD_Chinese-GSDSimp,zh_gsdsimp-ud-test.conllu,27d7fe6086cd85c75920acf546d5fce0d455a75e
+MCTS dev original,blcuicall/mcts,dataset/mcts.dev.orig,6fd0e48a20dc8e89cfe9eb0b58ca23723cd6d036
+MCTS dev simp0,blcuicall/mcts,dataset/mcts.dev.simp.0,6bd20ad1d62d85ad3ec652d05c4e767953d81a6c
+MCTS dev simp1,blcuicall/mcts,dataset/mcts.dev.simp.1,c8b550561e369a3d5cb0c65a7568c428760b1fb9
+MCTS dev simp2,blcuicall/mcts,dataset/mcts.dev.simp.2,a1a11818d8f03db6388c036b1793ba93e76cd514
+MCTS dev simp3,blcuicall/mcts,dataset/mcts.dev.simp.3,a904ac4a0c616a68e9847255ecac7915e61f15d8
+MCTS dev simp4,blcuicall/mcts,dataset/mcts.dev.simp.4,bdffe341496eb71ad8969d6a2eda2689683a980e
+MCTS test original,blcuicall/mcts,dataset/mcts.test.orig,750fdef553dfb7ea47da7da60c3e3fdbb356d602
+MCTS test simp0,blcuicall/mcts,dataset/mcts.test.simp.0,719dd51d2ed3cf834aff42f131ee5fcdbf73d1ec
+MCTS test simp1,blcuicall/mcts,dataset/mcts.test.simp.1,cc57ca172f27628a883129ca6916517318b2b5e4
+MCTS test simp2,blcuicall/mcts,dataset/mcts.test.simp.2,7f38080d98a16c4ec9968a984d6ae5e90a7d0ad4
+MCTS test simp3,blcuicall/mcts,dataset/mcts.test.simp.3,6f59e0794b714e89cd22af4da7be4300f3c7a549
+MCTS test simp4,blcuicall/mcts,dataset/mcts.test.simp.4,0575413025dc92bd7d19bde34c7ee83a875b2d07

@@ -1,0 +1,4 @@
+Level,Source branch non-recovery,Replacement lower bound,Net-pruning share,Net predicate reduction,Role-same recoding
+Mild,24.2%,84.2%,15.8%,3.8%,35.8%
+Medium,33.0%,62.9%,37.1%,12.2%,43.8%
+Strong,47.1%,35.9%,64.1%,30.2%,53.2%

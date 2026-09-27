@@ -1,0 +1,5 @@
+Length bin,Predicates / sentence,Mean arity,Mean P95 arity,Role stable rank,Role top-3
+Q1 shortest,1.09,1.19,2.60,4.30,62.25%
+Q2,1.91,1.40,2.91,4.77,57.37%
+Q3,2.80,1.45,3.10,4.93,55.52%
+Q4 longest,4.82,1.44,3.10,4.94,55.40%

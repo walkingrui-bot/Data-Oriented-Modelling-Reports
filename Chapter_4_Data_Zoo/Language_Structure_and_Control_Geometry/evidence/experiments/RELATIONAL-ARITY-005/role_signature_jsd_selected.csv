@@ -1,0 +1,17 @@
+language_a,language_b,signature_jsd,set
+Finnish,Spanish,0.0292,closest
+Turkish,Korean,0.0316,closest
+Japanese,Turkish,0.0446,closest
+Japanese,Korean,0.0553,closest
+English,Finnish,0.0671,closest
+Russian,Finnish,0.0703,closest
+English,Russian,0.0707,closest
+Russian,Spanish,0.0765,closest
+Japanese,Russian,0.1865,farthest
+Chinese,Hindi,0.1887,farthest
+Chinese,Japanese,0.2087,farthest
+English,Japanese,0.2315,farthest
+Chinese,Arabic,0.2507,farthest
+Turkish,Arabic,0.2538,farthest
+Arabic,Korean,0.2666,farthest
+Japanese,Arabic,0.2776,farthest

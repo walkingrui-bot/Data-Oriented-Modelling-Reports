@@ -1,0 +1,13 @@
+TOOL-CHAIN-GEOMETRY-006D — PRE-FORMAL DESIGN DIAGNOSTICS
+Date: 27 September 2026
+
+The formal statistics in results.json and CALCULATION_RECORD.txt come only from the final symmetry-controlled run.
+
+Diagnostic 1 — asymmetric result coordinates
+An initial 2 x 2 implementation routed provenance-present values into key-expanded bound slots and provenance-absent values into compact arrival-order slots. The resulting representation width changed together with provenance. That run was used only to identify the coordinate asymmetry and was excluded from formal inference.
+
+Diagnostic 2 — raw-style positional cue
+A second implementation used a raw JSON style selected from a seed + call-counter rule. A fixed-style control showed that the surface style could carry weak positional information. The final run therefore assigns backend-native surface style from an episode-varying random mapping independent of a stable call-identity code.
+
+Final formal construction
+Every result occupies the same recent-result event slot. Provenance adds only a call-derived key label. Normalization changes only the value code family: canonical numeric code vs style-preserving backend-native code. The numerical value remains visible in every cell. One policy is exposed to all four interfaces during training, then frozen for three independently sampled held-out panels.

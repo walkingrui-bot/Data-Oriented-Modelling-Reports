@@ -1,0 +1,51 @@
+{
+  "dataset": {
+    "sentences_with_at_least_one_predicate": 16264,
+    "languages": 10,
+    "targets": [
+      "tree_depth",
+      "mean_dependency_distance",
+      "max_predicate_nesting",
+      "predicate_pair_tree_distance",
+      "subordinate_predicate_count",
+      "crossing_count"
+    ]
+  },
+  "architecture": {
+    "local_composer": "8D PCA learned from training-set 21D predicate role/order/distance vectors",
+    "flat_control": "32 pooled local moments + log predicate count + 16 surface-adjacent predicate messages",
+    "hierarchical_router": "same 32 pooled local moments + log predicate count + 16 nearest-predicate-ancestor messages",
+    "adaptive_router_gate": "activate hierarchy if predicate_count >= 3 or max predicate nesting >= 2",
+    "feature_dim_each_model": 49,
+    "output_head": "same six-target ridge regression"
+  },
+  "random_split": {
+    "flat_nrmse": 0.6717,
+    "hierarchical_nrmse": 0.66969,
+    "adaptive_nrmse": 0.67011,
+    "shuffled_edge_nrmse": 0.6725,
+    "adaptive_activation_fraction": 0.39225,
+    "hierarchy_vs_flat_gain": 0.00201,
+    "hierarchy_vs_shuffled_gain": 0.00281,
+    "high_complexity_q4_flat": 0.95212,
+    "high_complexity_q4_hierarchical": 0.94935
+  },
+  "leave_one_language_out": {
+    "mean_flat_nrmse": 0.709911,
+    "mean_hierarchical_nrmse": 0.707332,
+    "mean_adaptive_nrmse": 0.707509,
+    "hierarchical_better_languages": 10,
+    "adaptive_better_languages": 10,
+    "mean_hierarchical_gain": 0.0025790000000000144,
+    "hierarchical_gain_bootstrap95": [
+      0.001313,
+      0.004106
+    ],
+    "exact_signflip_p": 0.001953125,
+    "mean_adaptive_gain": 0.002401999999999993,
+    "adaptive_gain_bootstrap95": [
+      0.001241,
+      0.003844
+    ]
+  }
+}

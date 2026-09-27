@@ -1,0 +1,53 @@
+TOOL-CHAIN-GEOMETRY-006D — CALCULATION RECORD
+Date: 27 September 2026
+
+FORMAL DESIGN
+- One frozen policy after balanced exposure to all four interface cells.
+- 5,000 training tasks; 90,696 decision examples; feature dimension 545.
+- Three independent held-out panels x 200 tasks = 600 paired task worlds.
+- Four factorial cells per world = 2,400 executed trajectories.
+- Factor A: provenance (explicit call-derived result identity present/absent).
+- Factor B: normalization (canonical numeric code/backend-native style-preserving raw code).
+- Numerical value visibility is retained in all four cells.
+- Raw-style assignment is independent of call identity in the final run.
+
+POOLED CELL ACCURACY
+P1_N1 = 83.50%
+P1_N0 = 68.67%
+P0_N1 = 74.33%
+P0_N0 = 67.33%
+
+FACTORIAL EFFECTS
+Provenance main effect = ((P1_N1 + P1_N0) - (P0_N1 + P0_N0))/2 = 5.25 pp
+Bootstrap 95% interval = [3.58, 6.92] pp
+Normalization main effect = ((P1_N1 + P0_N1) - (P1_N0 + P0_N0))/2 = 10.92 pp
+Bootstrap 95% interval = [7.75, 14.17] pp
+Interaction = (P1_N1 - P0_N1) - (P1_N0 - P0_N0) = 7.83 pp
+Bootstrap 95% interval = [5.00, 10.50] pp
+
+CONDITIONAL EFFECTS
+Normalization with provenance present = 14.83 pp
+Normalization with provenance absent = 7.00 pp
+Provenance with normalization present = 9.17 pp
+Provenance with normalization absent = 1.33 pp
+
+READ-AMBIGUITY STRATIFICATION
+Single-read N=337: all four cells = 94.66%; all three factorial effects = 0.00 pp.
+Multi-read N=263: P1_N1=69.20%, P1_N0=35.36%, P0_N1=48.29%, P0_N0=32.32%.
+Multi-read provenance main effect=11.98 pp; normalization main effect=24.90 pp; interaction=17.87 pp.
+
+FIRST DIVERGENCE AMONG FAILURES
+P1_N1: n=99, mean step=2.60, median=3.0
+P1_N0: n=188, mean step=2.54, median=2.0
+P0_N1: n=154, mean step=2.38, median=2.0
+P0_N0: n=196, mean step=2.48, median=2.0
+
+RAW FIXED-STYLE SECONDARY CONTROL (provenance preserved)
+Fixed raw style 0: 66.50% pooled accuracy
+Fixed raw style 1: 66.67% pooled accuracy
+Fixed raw style 2: 69.17% pooled accuracy
+Mixed raw P1_N0: 68.67%
+Canonical P1_N1: 83.50%
+
+EVIDENCE BOUNDARY
+These are causal interface effects within the specified frozen structured event-slot policy and executable register world. The formal inference uses the symmetry-controlled final run only. Earlier asymmetric/provisional factorial runs were retained as design diagnostics and excluded from the reported endpoint statistics.

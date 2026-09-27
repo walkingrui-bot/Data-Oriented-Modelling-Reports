@@ -1,0 +1,68 @@
+{
+  "candidate_count": 197,
+  "nominal_chance_top1": 0.005076142131979695,
+  "same_language_surface": {
+    "mean_direct": 0.053625,
+    "mean_mapped": 0.09611249999999999,
+    "mean_gain": 0.0425125,
+    "mean_permuted": 0.005075,
+    "mean_blocked": 0.076475,
+    "gain_bootstrap_95ci": [
+      0.0133375,
+      0.0710625
+    ],
+    "mapped_minus_permuted_mean": 0.0910375,
+    "mapped_minus_permuted_bootstrap_95ci": [
+      0.0558,
+      0.132925
+    ],
+    "blocked_minus_permuted_mean": 0.0714,
+    "blocked_minus_permuted_bootstrap_95ci": [
+      0.0383875,
+      0.10885
+    ],
+    "random_minus_blocked_mean": 0.019637500000000002,
+    "random_minus_blocked_bootstrap_95ci": [
+      0.0037625,
+      0.0374
+    ],
+    "wilcoxon_gain_greater_p": 0.02734375,
+    "wilcoxon_mapped_vs_permuted_p": 0.00390625,
+    "wilcoxon_blocked_vs_permuted_p": 0.00390625
+  },
+  "script_neutral": {
+    "same_language_mean_direct": 0.2878,
+    "same_language_mean_mapped": 0.3353,
+    "same_language_mean_gain": 0.0476,
+    "diff_language_same_script_direct": 0.1099,
+    "diff_language_same_script_mapped": 0.1151,
+    "diff_language_diff_script_direct": 0.0642,
+    "diff_language_diff_script_mapped": 0.0838,
+    "same_language_gain_bootstrap_95ci": [
+      0.01269937,
+      0.08755
+    ],
+    "wilcoxon_same_language_gain_greater_p": 0.03125
+  },
+  "displacement_geometry": {
+    "surface_mean_stable_rank": 14.9569625,
+    "surface_bootstrap_95ci": [
+      12.58576219,
+      17.0268125
+    ],
+    "script_neutral_mean_stable_rank": 4.385,
+    "script_neutral_bootstrap_95ci": [
+      3.57129406,
+      5.16254687
+    ],
+    "paired_wilcoxon_surface_greater_p": 0.00390625
+  },
+  "paired_length_structure": {
+    "mean_char_length_correlation": 0.910798038475,
+    "mean_word_count_correlation": 0.8803983475125
+  },
+  "low_dimensional_neighborhood": {
+    "mean_knn10_preservation_pca4": 0.20801124999999998,
+    "mean_knn10_preservation_pca8": 0.31349375
+  }
+}

@@ -1,0 +1,4 @@
+Response regime,Lexical stable rank (K=32),Lexical top-3,Mean lexical tokens,Punctuation /100
+Natural-language procedural,2.914,64.1%,48.7,14.6
+Pseudocode,2.243,69.9%,42.0,17.4
+Executable Python,1.659,83.8%,42.6,39.7

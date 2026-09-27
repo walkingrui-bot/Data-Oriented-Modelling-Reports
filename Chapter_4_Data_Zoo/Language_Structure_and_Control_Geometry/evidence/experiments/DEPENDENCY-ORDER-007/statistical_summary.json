@@ -1,0 +1,161 @@
+{
+  "total_sentences": 18355,
+  "mean_spearman_length": {
+    "predicate_count": 0.74392,
+    "mean_local_arity": 0.28243,
+    "tree_depth": 0.81661,
+    "mean_dependency_distance": 0.80286,
+    "long_arc_fraction_ge5": 0.53436,
+    "max_predicate_nesting": 0.66917,
+    "predicate_pair_tree_distance": 0.70068,
+    "crossing_count": 0.1712,
+    "subordinate_predicate_count": 0.69193
+  },
+  "q1_to_q4_paired": {
+    "tree_depth": {
+      "mean_delta": 3.865849,
+      "bootstrap95": [
+        3.16503,
+        4.696078
+      ],
+      "exact_signflip_p": 0.000977,
+      "positive_languages": 10
+    },
+    "predicate_count": {
+      "mean_delta": 3.712497,
+      "bootstrap95": [
+        3.065897,
+        4.455203
+      ],
+      "exact_signflip_p": 0.000977,
+      "positive_languages": 10
+    },
+    "mean_arity": {
+      "mean_delta": 0.270395,
+      "bootstrap95": [
+        0.137763,
+        0.444367
+      ],
+      "exact_signflip_p": 0.001953,
+      "positive_languages": 9
+    },
+    "mean_dependency_distance": {
+      "mean_delta": 1.902013,
+      "bootstrap95": [
+        1.622832,
+        2.227288
+      ],
+      "exact_signflip_p": 0.000977,
+      "positive_languages": 10
+    },
+    "long_arc_fraction_ge5": {
+      "mean_delta": 0.124012,
+      "bootstrap95": [
+        0.092492,
+        0.156577
+      ],
+      "exact_signflip_p": 0.000977,
+      "positive_languages": 10
+    },
+    "max_predicate_nesting": {
+      "mean_delta": 1.859202,
+      "bootstrap95": [
+        1.647809,
+        2.106173
+      ],
+      "exact_signflip_p": 0.000977,
+      "positive_languages": 10
+    },
+    "predicate_pair_tree_distance": {
+      "mean_delta": 2.245938,
+      "bootstrap95": [
+        1.879053,
+        2.700986
+      ],
+      "exact_signflip_p": 0.000977,
+      "positive_languages": 10
+    },
+    "crossing_count": {
+      "mean_delta": 0.290374,
+      "bootstrap95": [
+        0.142215,
+        0.446303
+      ],
+      "exact_signflip_p": 0.00293,
+      "positive_languages": 9
+    },
+    "subordinate_predicate_count": {
+      "mean_delta": 2.876776,
+      "bootstrap95": [
+        2.15706,
+        3.734338
+      ],
+      "exact_signflip_p": 0.000977,
+      "positive_languages": 10
+    }
+  },
+  "sentence_organization_geometry": {
+    "stable_rank": 1.70271,
+    "participation_rank": 2.5485,
+    "pca95": 5,
+    "top3_energy": 0.87153,
+    "twonn": 3.07876,
+    "distance_cv": 0.51686,
+    "mean_knn10_preservation_pca4": 0.62697,
+    "mean_knn10_preservation_pca8": 0.8258,
+    "mean_resampled_stable_rank_sd": 0.02678
+  },
+  "predicate_role_order_distance_geometry": {
+    "mean_stable_rank_all_languages": 5.61866,
+    "mean_participation_rank_all_languages": 7.71372,
+    "mean_pca95_all_languages": 9.1,
+    "mean_top3_energy_all_languages": 0.49785,
+    "quartile_stable_rank": [
+      3.94107,
+      4.43436,
+      4.77789,
+      5.06066
+    ],
+    "quartile_pca95": [
+      7.5,
+      8.1,
+      8.5,
+      9.1
+    ]
+  },
+  "pooled_structural_pca_axes": [
+    {
+      "pc": 1,
+      "variance_fraction": 0.5873,
+      "top_loadings": {
+        "sentence_length": 0.44593,
+        "predicate_count": 0.42368,
+        "mean_dependency_distance": 0.41628,
+        "tree_depth": 0.41006,
+        "max_predicate_nesting": 0.40131
+      }
+    },
+    {
+      "pc": 2,
+      "variance_fraction": 0.1683,
+      "top_loadings": {
+        "mean_local_arity": 0.6422,
+        "long_arc_fraction_ge5": 0.46733,
+        "max_predicate_nesting": -0.39822,
+        "predicate_count": -0.32777,
+        "mean_dependency_distance": 0.29684
+      }
+    },
+    {
+      "pc": 3,
+      "variance_fraction": 0.11593,
+      "top_loadings": {
+        "mean_local_arity": 0.71417,
+        "long_arc_fraction_ge5": -0.5494,
+        "mean_dependency_distance": -0.33191,
+        "tree_depth": 0.21925,
+        "predicate_count": 0.10478
+      }
+    }
+  ]
+}

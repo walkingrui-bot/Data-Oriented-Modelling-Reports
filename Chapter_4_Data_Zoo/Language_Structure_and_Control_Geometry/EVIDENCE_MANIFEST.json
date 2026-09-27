@@ -1,0 +1,183 @@
+{
+  "edition": "1.0",
+  "date": "2026-09-27",
+  "source_report_version": "1.8",
+  "source_report_sha256": "2b17fc4b56a3c84e72b63b72480c3e17226e532f04b4a54f18529906d1bde660",
+  "source_report_embedded_images": 69,
+  "retained_source_research_tables": 79,
+  "removed_process_tables": 1,
+  "recovered_archives": 15,
+  "topical_studies": 19,
+  "studies": [
+    {
+      "study": "LSP-001",
+      "original_archive": "LANGUAGE_COMPRESSION_SURVEY_001_20260927.zip",
+      "original_archive_sha256": "db1cd62a01ef136bdc4a4d3908e25775adb803894389333341e02ea6ce355bf4",
+      "original_archive_bytes": 5494,
+      "path": "evidence/experiments/LSP-001",
+      "archive_recovered": true
+    },
+    {
+      "study": "CODE-GEOMETRY-005A",
+      "original_archive": "CODE_GEOMETRY_005A_Evidence_20260927.zip",
+      "original_archive_sha256": "e7f45f706adbe5e0dd1d1831e89720c861ab37da3b8ef971f8bc611381450c40",
+      "original_archive_bytes": 180230,
+      "path": "evidence/experiments/CODE-GEOMETRY-005A",
+      "archive_recovered": true
+    },
+    {
+      "study": "RESPONSE-REGIME-004",
+      "original_archive": "RESPONSE_REGIME_004_Evidence_20260927.zip",
+      "original_archive_sha256": "fe9e6af2d85d5983ab909db875fbba3cc5681a84d9ddb0c462e585103f143bee",
+      "original_archive_bytes": 95591,
+      "path": "evidence/experiments/RESPONSE-REGIME-004",
+      "archive_recovered": true
+    },
+    {
+      "study": "RESPONSE-REGIME-004B1",
+      "original_archive": "RESPONSE_REGIME_004B1_Evidence_20260927.zip",
+      "original_archive_sha256": "4cab6635d3b1e47d3594fc47f14fb1dc84f9873be34838a72364bcec56743971",
+      "original_archive_bytes": 127690,
+      "path": "evidence/experiments/RESPONSE-REGIME-004B1",
+      "archive_recovered": true
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006",
+      "original_archive": "TOOL_CHAIN_GEOMETRY_006_Evidence_20260927.zip",
+      "original_archive_sha256": "d159e7bd6b437a646310bab07d6ee682304f7706e1f01fbf2ec44b236d7884eb",
+      "original_archive_bytes": 410036,
+      "path": "evidence/experiments/TOOL-CHAIN-GEOMETRY-006",
+      "archive_recovered": true
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006C",
+      "original_archive": "TOOL_CHAIN_GEOMETRY_006C_Evidence_20260927.zip",
+      "original_archive_sha256": "6fd8bd94e1fe5ba41986367304fe2f645e451c7274383b39b36819e450628447",
+      "original_archive_bytes": 426925,
+      "path": "evidence/experiments/TOOL-CHAIN-GEOMETRY-006C",
+      "archive_recovered": true
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006D",
+      "original_archive": "TOOL_CHAIN_GEOMETRY_006D_Evidence_20260927.zip",
+      "original_archive_sha256": "64a060e154e8b261bd28c3b9240a11c38cc2647a7b4ccd89ad18d96a15f0e2fd",
+      "original_archive_bytes": 450458,
+      "path": "evidence/experiments/TOOL-CHAIN-GEOMETRY-006D",
+      "archive_recovered": true
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006E",
+      "original_archive": "TOOL_CHAIN_GEOMETRY_006E_Evidence_20260927.zip",
+      "original_archive_sha256": "ee4e21fcdc41dd6c4a02238bcf23197c7720fc89807f9ca7797fa945e75536f1",
+      "original_archive_bytes": 344634,
+      "path": "evidence/experiments/TOOL-CHAIN-GEOMETRY-006E",
+      "archive_recovered": true
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006F",
+      "original_archive": "TOOL_CHAIN_GEOMETRY_006F_Evidence_20260927.zip",
+      "original_archive_sha256": "84283b4d9e131c6b93d487571fab81890cb2bda4e2825ab49a173da1700baa90",
+      "original_archive_bytes": 2028511,
+      "path": "evidence/experiments/TOOL-CHAIN-GEOMETRY-006F",
+      "archive_recovered": true
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006G",
+      "original_archive": "TOOL_CHAIN_GEOMETRY_006G_Evidence_20260927.zip",
+      "original_archive_sha256": "37344b438686aee5eaf640e343db03e373cd43540e99b0749cb75ab283f43d0a",
+      "original_archive_bytes": 2511186,
+      "path": "evidence/experiments/TOOL-CHAIN-GEOMETRY-006G",
+      "archive_recovered": true
+    },
+    {
+      "study": "NATLANG-COMPAT-004B",
+      "original_archive": "NATLANG_COMPAT_004B_Evidence_20260927.zip",
+      "original_archive_sha256": "a8d6cf48b572003606b1447a584ef29efd141fcc6a3f9cabb0daecf26c82d49a",
+      "original_archive_bytes": 296512,
+      "path": "evidence/experiments/NATLANG-COMPAT-004B",
+      "archive_recovered": true
+    },
+    {
+      "study": "RELATIONAL-ARITY-005",
+      "original_archive": "RELATIONAL_ARITY_005_Evidence_20260927.zip",
+      "original_archive_sha256": "b8d05dab60a527823397b97d3dbf065f5b6fe5343247569ce2303b7d046b11e1",
+      "original_archive_bytes": 432758,
+      "path": "evidence/experiments/RELATIONAL-ARITY-005",
+      "archive_recovered": true
+    },
+    {
+      "study": "RELATION-COMPRESSION-006",
+      "original_archive": "RELATION_COMPRESSION_006_Evidence_20260927.zip",
+      "original_archive_sha256": "744ff67657402b5da2e036ebb48a06ea0fb43b88695dfbda04bbff10691f0ce1",
+      "original_archive_bytes": 342915,
+      "path": "evidence/experiments/RELATION-COMPRESSION-006",
+      "archive_recovered": true
+    },
+    {
+      "study": "DEPENDENCY-ORDER-007",
+      "original_archive": "DEPENDENCY_ORDER_007_Evidence_20260927.zip",
+      "original_archive_sha256": "21bd01520dd4af739ef1a19a693ae58a7fbd6a2879605eeab72dd74c63b118bb",
+      "original_archive_bytes": 412034,
+      "path": "evidence/experiments/DEPENDENCY-ORDER-007",
+      "archive_recovered": true
+    },
+    {
+      "study": "RELATIONAL-ROUTER-008",
+      "original_archive": "RELATIONAL_ROUTER_008_Evidence_20260927.zip",
+      "original_archive_sha256": "9f9cf83a3ad5e439061174e0650c7de3a7834f1981df8ab4a655b8e31ca46de9",
+      "original_archive_bytes": 263955,
+      "path": "evidence/experiments/RELATIONAL-ROUTER-008",
+      "archive_recovered": true
+    },
+    {
+      "study": "LSP-002",
+      "original_archive": null,
+      "original_archive_sha256": null,
+      "original_archive_bytes": null,
+      "path": "evidence/report_tables/ and figures/",
+      "archive_recovered": false
+    },
+    {
+      "study": "LSP-003",
+      "original_archive": null,
+      "original_archive_sha256": null,
+      "original_archive_bytes": null,
+      "path": "evidence/report_tables/ and figures/",
+      "archive_recovered": false
+    },
+    {
+      "study": "NATLANG-COMPAT-004A",
+      "original_archive": null,
+      "original_archive_sha256": null,
+      "original_archive_bytes": null,
+      "path": "evidence/report_tables/ and figures/",
+      "archive_recovered": false
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006B",
+      "original_archive": null,
+      "original_archive_sha256": null,
+      "original_archive_bytes": null,
+      "path": "evidence/report_tables/ and figures/",
+      "archive_recovered": false
+    }
+  ],
+  "excluded_intermediates": [
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006F",
+      "path": "episode_summary.partial.csv",
+      "reason": "generated cache or intermediate partial-run copy"
+    },
+    {
+      "study": "TOOL-CHAIN-GEOMETRY-006F",
+      "path": "representative_traces.partial.json",
+      "reason": "generated cache or intermediate partial-run copy"
+    },
+    {
+      "study": "NATLANG-COMPAT-004B",
+      "path": "__pycache__/reproduce_natlang_compat_004b.cpython-313.pyc",
+      "reason": "generated cache or intermediate partial-run copy"
+    }
+  ],
+  "external_source_datasets_included": false
+}

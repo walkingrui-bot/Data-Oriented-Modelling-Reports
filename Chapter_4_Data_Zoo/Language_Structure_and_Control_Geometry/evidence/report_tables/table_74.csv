@@ -1,0 +1,6 @@
+Component,Flat matched control,Hierarchical router,Adaptive sparse router
+Local predicate composer,8D PCA,8D PCA,8D PCA
+Sentence feature width,49,49,49
+Relation messages,Surface-adjacent predicate pairs,Nearest predicate-ancestor edges,Ancestor edges only when gate activates
+Output head,6-target ridge,Same 6-target ridge,Uses the matched flat/hierarchical heads
+Routing rule,Always flat,Always hierarchical,predicate_count >= 3 or nesting >= 2

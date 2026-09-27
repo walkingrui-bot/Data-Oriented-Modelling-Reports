@@ -1,0 +1,11 @@
+language,repository,file,git_blob_sha,sentences,source_url
+English,UniversalDependencies/UD_English-EWT,en_ewt-ud-test.conllu,435cd8c5240754ba81a5d00ed119f63d1fae78b6,2077,https://github.com/UniversalDependencies/UD_English-EWT/blob/master/en_ewt-ud-test.conllu
+Chinese,UniversalDependencies/UD_Chinese-GSDSimp,zh_gsdsimp-ud-test.conllu,27d7fe6086cd85c75920acf546d5fce0d455a75e,500,https://github.com/UniversalDependencies/UD_Chinese-GSDSimp/blob/master/zh_gsdsimp-ud-test.conllu
+Japanese,UniversalDependencies/UD_Japanese-GSD,ja_gsd-ud-test.conllu,67a529689c473aeaa6232c8378c473e12489d225,543,https://github.com/UniversalDependencies/UD_Japanese-GSD/blob/master/ja_gsd-ud-test.conllu
+Turkish,UniversalDependencies/UD_Turkish-IMST,tr_imst-ud-test.conllu,55d12cf7e6e346810a1ad9328ce8598676a6fd47,1100,https://github.com/UniversalDependencies/UD_Turkish-IMST/blob/master/tr_imst-ud-test.conllu
+Arabic,UniversalDependencies/UD_Arabic-PADT,ar_padt-ud-test.conllu,a2684675edf31170ed1cc80798009a55bce58264,680,https://github.com/UniversalDependencies/UD_Arabic-PADT/blob/master/ar_padt-ud-test.conllu
+Russian,UniversalDependencies/UD_Russian-SynTagRus,ru_syntagrus-ud-test.conllu,3c817bd3219d482ae0714dbe41e3959b40c944f3,8800,https://github.com/UniversalDependencies/UD_Russian-SynTagRus/blob/master/ru_syntagrus-ud-test.conllu
+Finnish,UniversalDependencies/UD_Finnish-TDT,fi_tdt-ud-test.conllu,e69e8e7a6d248b42c8624244f773ce4202eaeeb4,1555,https://github.com/UniversalDependencies/UD_Finnish-TDT/blob/master/fi_tdt-ud-test.conllu
+Hindi,UniversalDependencies/UD_Hindi-HDTB,hi_hdtb-ud-test.conllu,49819a4a8f7acc4d40e04f09e26035cf42dd1717,1684,https://github.com/UniversalDependencies/UD_Hindi-HDTB/blob/master/hi_hdtb-ud-test.conllu
+Spanish,UniversalDependencies/UD_Spanish-GSD,es_gsd-ud-test.conllu,9a8f3262aaaab2dbd94f2eff34d43b1f44a971b3,427,https://github.com/UniversalDependencies/UD_Spanish-GSD/blob/master/es_gsd-ud-test.conllu
+Korean,UniversalDependencies/UD_Korean-GSD,ko_gsd-ud-test.conllu,b6e5e1f81201b02676b9f7efff69f05cf590cbc7,989,https://github.com/UniversalDependencies/UD_Korean-GSD/blob/master/ko_gsd-ud-test.conllu

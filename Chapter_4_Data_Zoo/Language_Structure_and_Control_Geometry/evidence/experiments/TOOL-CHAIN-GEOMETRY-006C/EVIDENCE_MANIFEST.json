@@ -1,0 +1,15 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006C",
+  "date": "2026-09-27",
+  "primary_script": "tool_chain_006c_tree_final2.py",
+  "primary_results": "results.json",
+  "episode_rows": "episode_summary.csv",
+  "policy": "policy.pkl",
+  "figures": [
+    "Figure_4_14_three_panel_replication.png",
+    "Figure_4_15_pooled_adapter_accuracy.png",
+    "Figure_4_16_chain_depth.png"
+  ],
+  "calculation_record": "CALCULATION_RECORD.txt",
+  "status": "completed three independent 200-task panels; 600 paired worlds x 7 adapters"
+}

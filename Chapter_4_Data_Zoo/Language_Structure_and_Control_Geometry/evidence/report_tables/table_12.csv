@@ -1,0 +1,11 @@
+Language,Lexical stable rank,Lexical top-3,POS stable rank,POS top-3
+English,1.753,79.6%,3.951,66.0%
+Chinese,1.667,83.8%,2.020,82.7%
+Japanese,2.159,75.6%,2.310,85.6%
+Turkish,1.252,93.8%,1.924,94.4%
+Arabic,1.871,72.3%,1.934,87.9%
+Russian,1.620,85.4%,2.011,88.8%
+Finnish,1.286,93.4%,1.952,89.3%
+Hindi,2.277,76.9%,3.051,80.6%
+Spanish,1.864,88.5%,2.079,83.6%
+Korean,1.291,94.0%,1.900,98.4%

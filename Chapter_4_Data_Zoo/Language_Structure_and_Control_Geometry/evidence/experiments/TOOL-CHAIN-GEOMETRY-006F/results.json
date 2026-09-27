@@ -1,0 +1,207 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006F",
+  "design": "end-to-end generative action path: autoregressive semantic planner -> frozen 006E autoregressive JSON emitter -> schema validator -> executor",
+  "seed": 26092931,
+  "training_checkpoint_epochs": 3,
+  "training_nll": [
+    1.0471477072600437,
+    0.4964504868275834,
+    0.1811967467455326
+  ],
+  "pilot_gate": {
+    "training_nll": [
+      1.0471477072600437,
+      0.4964504868275834,
+      0.1811967467455326
+    ],
+    "prefix_pilot": {
+      "n": 6376,
+      "exact": 0.9347553324968633,
+      "valid": 1.0,
+      "eos": 1.0,
+      "slot_error": 0.0,
+      "schema_error": 0.0,
+      "by_cell": {
+        "P1_N1": 0.9542032622333751,
+        "P1_N0": 0.944792973651192,
+        "P0_N1": 0.9222082810539524,
+        "P0_N0": 0.9178168130489335
+      }
+    },
+    "baseline_pilot_P1_N1": {
+      "n": 240,
+      "final_state_accuracy": 0.8416666666666667,
+      "planner_error_any": 0.004166666666666667,
+      "schema_error_any": 0.004166666666666667,
+      "mean_first_div_failure": 2.710526315789474
+    },
+    "prospective_gate": {
+      "prefix_exact_threshold": 0.85,
+      "baseline_final_state_threshold": 0.65,
+      "passed": true
+    }
+  },
+  "emitter_assay": {
+    "json_parse": 1.0,
+    "schema_valid": 1.0,
+    "semantic_exact": 1.0,
+    "n_actions": 153
+  },
+  "formal_prefix_competence": {
+    "n": 6376,
+    "exact": 0.9347553324968633,
+    "valid": 1.0,
+    "eos": 1.0,
+    "slot_error": 0.0,
+    "schema_error": 0.0,
+    "by_cell": {
+      "P1_N1": 0.9542032622333751,
+      "P1_N0": 0.944792973651192,
+      "P0_N1": 0.9222082810539524,
+      "P0_N0": 0.9178168130489335
+    }
+  },
+  "n_tasks": 600,
+  "n_trajectories": 2400,
+  "conditions": {
+    "P1_N1": {
+      "acc": 0.8216666666666667,
+      "planner_error_any": 0.0,
+      "planner_schema_any": 0.0,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.0,
+      "recovery_rate": 0.0
+    },
+    "P1_N0": {
+      "acc": 0.8066666666666666,
+      "planner_error_any": 0.0016666666666666668,
+      "planner_schema_any": 0.0016666666666666668,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.0,
+      "recovery_rate": 0.0
+    },
+    "P0_N1": {
+      "acc": 0.7233333333333334,
+      "planner_error_any": 0.0,
+      "planner_schema_any": 0.0,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.0,
+      "recovery_rate": 0.0
+    },
+    "P0_N0": {
+      "acc": 0.7266666666666667,
+      "planner_error_any": 0.0,
+      "planner_schema_any": 0.0,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.0,
+      "recovery_rate": 0.0
+    }
+  },
+  "panels": {
+    "1": {
+      "P1_N1": 0.83,
+      "P1_N0": 0.815,
+      "P0_N1": 0.69,
+      "P0_N0": 0.7
+    },
+    "2": {
+      "P1_N1": 0.8,
+      "P1_N0": 0.8,
+      "P0_N1": 0.74,
+      "P0_N0": 0.755
+    },
+    "3": {
+      "P1_N1": 0.835,
+      "P1_N0": 0.805,
+      "P0_N1": 0.74,
+      "P0_N0": 0.725
+    }
+  },
+  "pooled": {
+    "P1_N1": 0.8216666666666667,
+    "P1_N0": 0.8066666666666666,
+    "P0_N1": 0.7233333333333334,
+    "P0_N0": 0.7266666666666667,
+    "provenance_main_pp": 8.916666666666668,
+    "normalization_main_pp": 0.5833333333333302,
+    "interaction_pp": 1.8333333333333313
+  },
+  "bootstrap95": {
+    "provenance_main_pp": [
+      6.4166666666666705,
+      11.499999999999993
+    ],
+    "normalization_main_pp": [
+      -1.333333333333342,
+      2.2500000000000018
+    ],
+    "interaction_pp": [
+      -1.0000000000000009,
+      4.833333333333345
+    ]
+  },
+  "ambiguity_subgroups": {
+    "single_read": {
+      "n": 337,
+      "P1_N1": 0.9910979228486647,
+      "P1_N0": 0.9881305637982196,
+      "P0_N1": 0.9821958456973294,
+      "P0_N0": 0.9851632047477745,
+      "provenance_main_pp": 0.5934718100890191,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.5934718100890191,
+      "bootstrap95": {
+        "provenance_main_pp": [
+          -0.14836795252225476,
+          1.4836795252225643
+        ],
+        "normalization_main_pp": [
+          -0.8902077151335397,
+          0.7418397626112794
+        ],
+        "interaction_pp": [
+          -0.5934718100890191,
+          1.7804154302670683
+        ]
+      }
+    },
+    "multi_read": {
+      "n": 263,
+      "P1_N1": 0.6045627376425855,
+      "P1_N0": 0.5741444866920152,
+      "P0_N1": 0.3916349809885932,
+      "P0_N0": 0.39543726235741444,
+      "provenance_main_pp": 19.58174904942966,
+      "normalization_main_pp": 1.3307984790874499,
+      "interaction_pp": 3.422053231939154,
+      "bootstrap95": {
+        "provenance_main_pp": [
+          14.448669201520916,
+          24.904942965779465
+        ],
+        "normalization_main_pp": [
+          -2.6615969581749055,
+          5.513307984790872
+        ],
+        "interaction_pp": [
+          -3.0418250950570433,
+          10.266159695817484
+        ]
+      }
+    }
+  },
+  "paired_comparison": {
+    "006D": {
+      "paired_outcome_agreement": 0.7825,
+      "mean_accuracy_delta": 0.035
+    },
+    "006E": {
+      "paired_outcome_agreement": 0.7833333333333333,
+      "mean_accuracy_delta": 0.03333333333333333
+    }
+  }
+}

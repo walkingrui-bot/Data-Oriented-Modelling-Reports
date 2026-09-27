@@ -1,0 +1,9 @@
+Measurement,Executed result
+UD test micro-F1,0.591
+UD test arity correlation,0.582
+UD test arity MAE,0.525 slot
+SUBJ F1,0.628
+OBJ F1,0.728
+Matched MCTS sources,507
+Original lexicon coverage,95.1%
+Strong lexicon coverage,96.8%

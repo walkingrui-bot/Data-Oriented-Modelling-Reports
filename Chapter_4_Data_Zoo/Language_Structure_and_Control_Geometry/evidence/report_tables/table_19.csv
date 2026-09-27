@@ -1,0 +1,8 @@
+Representation,Stable rank,Participation rank,Top-3 energy,Top-3 overlap with naive
+Naive,6.697,13.437,34.6%,1.000
+Syntactic,6.898,13.711,36.7%,0.610
+Morphological,8.096,15.493,32.3%,0.942
+Lexical,5.935,11.015,41.3%,0.815
+Semantic,6.244,12.400,40.5%,0.605
+Missing information,5.116,10.823,45.1%,0.643
+Executable SQL,3.545,7.021,54.9%,-

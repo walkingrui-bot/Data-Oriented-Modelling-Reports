@@ -1,0 +1,17 @@
+variant,knn10_preservation_pca4,knn10_preservation_pca8
+ace_Arab.dev,0.19409,0.28636
+ace_Latn.dev,0.20591,0.33545
+arb_Arab.dev,0.21273,0.31273
+arb_Latn.dev,0.22227,0.30682
+bjn_Arab.dev,0.19409,0.28864
+bjn_Latn.dev,0.22,0.32773
+kas_Arab.dev,0.21182,0.31182
+kas_Deva.dev,0.19409,0.31182
+knc_Arab.dev,0.18045,0.3
+knc_Latn.dev,0.22727,0.32909
+min_Arab.dev,0.22273,0.32045
+min_Latn.dev,0.19455,0.29909
+taq_Latn.dev,0.19909,0.33636
+taq_Tfng.dev,0.19727,0.31409
+zho_Hans.dev,0.23182,0.32318
+zho_Hant.dev,0.22,0.31227

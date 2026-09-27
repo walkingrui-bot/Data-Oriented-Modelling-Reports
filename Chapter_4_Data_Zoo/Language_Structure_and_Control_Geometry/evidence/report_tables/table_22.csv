@@ -1,0 +1,4 @@
+Condition,All 109 mean drop,All median,Base>=20 N=57 mean,Base>=20 median
+Missing function,7.42 pp,5.0 pp,11.95 pp,9.5 pp
+Missing parameter,7.77 pp,7.0 pp,13.48 pp,12.5 pp
+Long context,5.00 pp,3.0 pp,8.30 pp,6.5 pp

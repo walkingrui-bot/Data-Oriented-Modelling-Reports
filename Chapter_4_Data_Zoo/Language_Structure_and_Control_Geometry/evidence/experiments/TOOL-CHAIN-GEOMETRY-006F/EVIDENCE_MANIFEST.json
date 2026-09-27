@@ -1,0 +1,23 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006F",
+  "formal_rows": 2400,
+  "formal_worlds": 600,
+  "task_seeds": [
+    26142821,
+    26152821,
+    26162821
+  ],
+  "hashes": {
+    "planner.pt": "7c01199707847e4891c384338ce45d0bae70f8466388323cf3f2cc2bd91d981b",
+    "results.json": "d13204816985180cf491fc7f9a2df9b706f9bb04537ad3dc1f1e3d4450de9e87",
+    "episode_summary.csv": "aef117a63fc6dc82db27422d3791519b13e1ac3afb82ea31bc0088a1e907edc6",
+    "paired_task_outcomes.csv": "7e14bae3186250980d209f67129ad0c661d9d6a2f22bc1f9f4f71c7158c67b93",
+    "prefix_diagnostics.csv": "2f7709ce049544b83d692bb005c0aad1469c10651532ed83d849a85f9061fcd4",
+    "case_traces.json": "22983b1784352aab847d6fd4c3d5ba395c9eaa781b4068c55e1801663847e792",
+    "emitter_action_assay.csv": "08b6f78f0f5275be3a6b3cdf15c04fb1af1fe13bcc774f758ed74ed38ebaaf6b"
+  },
+  "external_frozen_components": {
+    "006E_emitter_sha256": "d67bd35b0bedc1c2eb3e1af8e049ba55de5fd4ca06e59236a7ebb620560475cf",
+    "006D_reader_reference_sha256": "c7da59d7b603f22d637c46282ddffe6b162a5a1ceab626b3f0fc38a4f7296866"
+  }
+}

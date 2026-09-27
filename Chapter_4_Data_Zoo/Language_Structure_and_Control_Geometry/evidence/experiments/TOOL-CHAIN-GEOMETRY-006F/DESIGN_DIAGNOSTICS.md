@@ -1,0 +1,6 @@
+# Design diagnostics
+
+- The first two 006E end-to-end character/JSON pilots were already retained as evidence that surface syntax competence can dissociate from planning competence. 006F therefore factorizes generation into an autoregressive semantic planner and the already validated 006E autoregressive JSON emitter.
+- 006F training was configured for seven epochs, but the execution window ended after the third saved checkpoint. The checkpoint was not promoted automatically: a separate competence gate was run afterward. It passed both predeclared thresholds (>=85% oracle-prefix exact action; >=65% P1_N1 exact final-state accuracy) before any formal factorial inference was used.
+- The 006E emitter was exhaustively checked on all 153 legal action tuples and reproduced 153/153 exactly. In the 006F formal run, emitter mismatch, JSON syntax failure and emitted schema failure were all zero; the measured factorial differences therefore arise upstream in the learned planner/result representation in this construction.
+- Raw value styles used in formal evaluation are the same three backend-native style families represented during 006F training. The disappearance of the 006D normalization effect is therefore established under matched training coverage only.

@@ -1,0 +1,64 @@
+{
+  "experiment": "RELATION-COMPRESSION-006",
+  "matched_sources": 507,
+  "mean_length_ratios": {
+    "mild": 0.9220251024997077,
+    "medium": 0.8344621625707281,
+    "strong": 0.6563075458870933
+  },
+  "parser_gate": {
+    "training_source": "UD Chinese GSDSimp train",
+    "threshold_selection": "held-out dev",
+    "evaluation_source": "held-out UD Chinese GSDSimp test",
+    "micro_f1": 0.590796635329045,
+    "precision": 0.5751445086705202,
+    "recall": 0.6073245167853509,
+    "arity_mae": 0.5250227479526842,
+    "arity_correlation_r": 0.582048938450305,
+    "role_f1": {
+      "SUBJ": 0.6276346604215457,
+      "OBJ": 0.7282913165266107,
+      "OBL": 0.17737003058103978,
+      "COMP": 0.3765112262521589
+    },
+    "evidence_resolution": "Primary inference uses aggregate predicate count, aggregate arity, role geometry, and SUBJ/OBJ-supported structure. OBL/COMP components are retained as secondary measurements."
+  },
+  "primary_results": {
+    "mean_tokens": {
+      "original": 35.72978303747534,
+      "mild": 32.891518737672584,
+      "medium": 29.615384615384617,
+      "strong": 23.045364891518737
+    },
+    "mean_predicates": {
+      "original": 7.234714003944773,
+      "mild": 6.958579881656805,
+      "medium": 6.349112426035503,
+      "strong": 5.047337278106509
+    },
+    "mean_local_arity": {
+      "original": 1.059978189749182,
+      "mild": 1.0578231292517006,
+      "medium": 1.0341721031376203,
+      "strong": 1.041031652989449
+    },
+    "role_stable_rank": {
+      "original": 2.087797798420716,
+      "mild": 2.091588306200028,
+      "medium": 2.0439666332936803,
+      "strong": 2.0410205975549105
+    },
+    "predicate_density_per_100_tokens": {
+      "original": 20.24841291747171,
+      "mild": 21.15615255456944,
+      "medium": 21.438561438561436,
+      "strong": 21.901745977405
+    },
+    "strong_net_predicate_count_reduction": 0.30234460196292257,
+    "strong_source_branch_nonrecovery": 0.4713740458015267,
+    "strong_replacement_lower_bound_share_of_nonrecovery": 0.3585887796414113,
+    "strong_net_pruning_share_of_nonrecovery": 0.6414112203585887,
+    "strong_recode_rate_among_role_same": 0.5317725752508361,
+    "strong_slot_loss_via_nonrecovered_branches": 0.7659667541557306
+  }
+}

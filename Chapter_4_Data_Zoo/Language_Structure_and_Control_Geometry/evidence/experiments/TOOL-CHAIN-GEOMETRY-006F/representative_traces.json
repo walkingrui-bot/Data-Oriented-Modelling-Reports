@@ -1,0 +1,5045 @@
+[
+  {
+    "panel": 1,
+    "task_id": 2,
+    "kind": "SWAP",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"G\",\"b\":\"D\",\"task\":\"swap\"}",
+    "init": {
+      "A": 2,
+      "B": 8,
+      "C": 0,
+      "D": 7,
+      "E": 2,
+      "F": 4,
+      "G": 0,
+      "H": 8
+    },
+    "target": {
+      "A": 2,
+      "B": 8,
+      "C": 0,
+      "D": 0,
+      "E": 2,
+      "F": 4,
+      "G": 7,
+      "H": 8
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"G\",\"b\":\"D\",\"task\":\"swap\"}",
+      "ACTION {\"key1\":\"G\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":7}",
+      "RESULT {\"call_id\":\"c1\",\"value\":0}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":2,\"B\":8,\"C\":0,\"D\":6,\"E\":2,\"F\":4,\"G\":3,\"H\":8}",
+      "VERIFY_FAIL {\"D\":{\"expected\":0,\"observed\":6},\"G\":{\"expected\":7,\"observed\":3}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":2,\"B\":8,\"C\":0,\"D\":6,\"E\":2,\"F\":4,\"G\":3,\"H\":8}",
+      "VERIFY_FAIL {\"D\":{\"expected\":0,\"observed\":6},\"G\":{\"expected\":7,\"observed\":3}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_G",
+          "K2_D",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"G\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"G\",\"key2\":\"D\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 3,
+    "kind": "SWAP",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"A\",\"b\":\"B\",\"task\":\"swap\"}",
+    "init": {
+      "A": 1,
+      "B": 6,
+      "C": 2,
+      "D": 3,
+      "E": 6,
+      "F": 6,
+      "G": 0,
+      "H": 2
+    },
+    "target": {
+      "A": 6,
+      "B": 1,
+      "C": 2,
+      "D": 3,
+      "E": 6,
+      "F": 6,
+      "G": 0,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"A\",\"b\":\"B\",\"task\":\"swap\"}",
+      "ACTION {\"key1\":\"A\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":6}",
+      "RESULT {\"call_id\":\"c1\",\"value\":1}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":6,\"B\":9,\"C\":2,\"D\":3,\"E\":6,\"F\":6,\"G\":0,\"H\":2}",
+      "VERIFY_FAIL {\"B\":{\"expected\":1,\"observed\":9}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":6,\"B\":9,\"C\":2,\"D\":3,\"E\":6,\"F\":6,\"G\":0,\"H\":2}",
+      "VERIFY_FAIL {\"B\":{\"expected\":1,\"observed\":9}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_A",
+          "K2_B",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"A\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"A\",\"key2\":\"B\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 4,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"A\",\"dst2\":\"D\",\"src1\":\"F\",\"src2\":\"C\",\"task\":\"move2\"}",
+    "init": {
+      "A": 2,
+      "B": 8,
+      "C": 5,
+      "D": 3,
+      "E": 6,
+      "F": 9,
+      "G": 2,
+      "H": 8
+    },
+    "target": {
+      "A": 9,
+      "B": 8,
+      "C": 0,
+      "D": 5,
+      "E": 6,
+      "F": 0,
+      "G": 2,
+      "H": 8
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"A\",\"dst2\":\"D\",\"src1\":\"F\",\"src2\":\"C\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":5}",
+      "RESULT {\"call_id\":\"c1\",\"value\":9}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"F\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":8,\"C\":0,\"D\":9,\"E\":6,\"F\":0,\"G\":2,\"H\":8}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":5},\"D\":{\"expected\":5,\"observed\":9}}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"G\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":8,\"C\":0,\"D\":9,\"E\":6,\"F\":4,\"G\":0,\"H\":8}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":0},\"D\":{\"expected\":5,\"observed\":9},\"F\":{\"expected\":0,\"observed\":4},\"G\":{\"expected\":2,\"observed\":0}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_F",
+          "K2_C",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_F",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"F\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 15,
+    "kind": "SWAP",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"C\",\"b\":\"H\",\"task\":\"swap\"}",
+    "init": {
+      "A": 6,
+      "B": 3,
+      "C": 8,
+      "D": 0,
+      "E": 0,
+      "F": 9,
+      "G": 8,
+      "H": 5
+    },
+    "target": {
+      "A": 6,
+      "B": 3,
+      "C": 5,
+      "D": 0,
+      "E": 0,
+      "F": 9,
+      "G": 8,
+      "H": 8
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"C\",\"b\":\"H\",\"task\":\"swap\"}",
+      "ACTION {\"key1\":\"C\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":8}",
+      "RESULT {\"call_id\":\"c2\",\"value\":5}",
+      "ACTION {\"key\":\"C\",\"tool\":\"WRITE\",\"value\":8}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":6,\"B\":3,\"C\":8,\"D\":0,\"E\":0,\"F\":9,\"G\":8,\"H\":5}",
+      "VERIFY_FAIL {\"C\":{\"expected\":5,\"observed\":8},\"H\":{\"expected\":8,\"observed\":5}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":6,\"B\":3,\"C\":8,\"D\":0,\"E\":0,\"F\":9,\"G\":8,\"H\":5}",
+      "VERIFY_FAIL {\"C\":{\"expected\":5,\"observed\":8},\"H\":{\"expected\":8,\"observed\":5}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_C",
+          "K2_H",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"C\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"C\",\"key2\":\"H\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_C",
+          "K2_<NONE>",
+          "V_8"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"WRITE\",\"value\":8}",
+        "generated": "{\"key\":\"C\",\"tool\":\"WRITE\",\"value\":8}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 19,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"E\",\"b\":\"H\",\"c\":\"G\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 3,
+      "B": 9,
+      "C": 5,
+      "D": 3,
+      "E": 2,
+      "F": 0,
+      "G": 5,
+      "H": 9
+    },
+    "target": {
+      "A": 3,
+      "B": 9,
+      "C": 5,
+      "D": 3,
+      "E": 5,
+      "F": 0,
+      "G": 9,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"E\",\"b\":\"H\",\"c\":\"G\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"E\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":9}",
+      "RESULT {\"call_id\":\"c1\",\"value\":2}",
+      "ACTION {\"key\":\"G\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":5}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":9,\"C\":5,\"D\":3,\"E\":9,\"F\":0,\"G\":2,\"H\":5}",
+      "VERIFY_FAIL {\"E\":{\"expected\":5,\"observed\":9},\"G\":{\"expected\":9,\"observed\":2},\"H\":{\"expected\":2,\"observed\":5}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":9,\"C\":5,\"D\":3,\"E\":9,\"F\":0,\"G\":2,\"H\":5}",
+      "VERIFY_FAIL {\"E\":{\"expected\":5,\"observed\":9},\"G\":{\"expected\":9,\"observed\":2},\"H\":{\"expected\":2,\"observed\":5}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_E",
+          "K2_H",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"E\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"E\",\"key2\":\"H\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 27,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"D\",\"dst2\":\"F\",\"src1\":\"A\",\"src2\":\"H\",\"task\":\"move2\"}",
+    "init": {
+      "A": 7,
+      "B": 3,
+      "C": 8,
+      "D": 9,
+      "E": 7,
+      "F": 6,
+      "G": 0,
+      "H": 0
+    },
+    "target": {
+      "A": 0,
+      "B": 3,
+      "C": 8,
+      "D": 7,
+      "E": 7,
+      "F": 0,
+      "G": 0,
+      "H": 0
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"D\",\"dst2\":\"F\",\"src1\":\"A\",\"src2\":\"H\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"A\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":0}",
+      "RESULT {\"call_id\":\"c1\",\"value\":7}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"F\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":3,\"C\":8,\"D\":3,\"E\":7,\"F\":0,\"G\":0,\"H\":0}",
+      "VERIFY_FAIL {\"D\":{\"expected\":7,\"observed\":3}}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":3,\"C\":8,\"D\":3,\"E\":7,\"F\":4,\"G\":0,\"H\":0}",
+      "VERIFY_FAIL {\"D\":{\"expected\":7,\"observed\":3},\"F\":{\"expected\":0,\"observed\":4}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_A",
+          "K2_H",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"A\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"A\",\"key2\":\"H\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_F",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"F\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 32,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"E\",\"b\":\"D\",\"c\":\"A\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 0,
+      "B": 5,
+      "C": 8,
+      "D": 9,
+      "E": 3,
+      "F": 0,
+      "G": 4,
+      "H": 9
+    },
+    "target": {
+      "A": 9,
+      "B": 5,
+      "C": 8,
+      "D": 3,
+      "E": 0,
+      "F": 0,
+      "G": 4,
+      "H": 9
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 5,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"E\",\"b\":\"D\",\"c\":\"A\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":3}",
+      "RESULT {\"call_id\":\"c2\",\"value\":9}",
+      "ACTION {\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":0}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":9,\"B\":5,\"C\":8,\"D\":3,\"E\":3,\"F\":0,\"G\":4,\"H\":9}",
+      "VERIFY_FAIL {\"E\":{\"expected\":0,\"observed\":3}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":9,\"B\":5,\"C\":8,\"D\":3,\"E\":3,\"F\":0,\"G\":4,\"H\":9}",
+      "VERIFY_FAIL {\"E\":{\"expected\":0,\"observed\":3}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_E",
+          "K2_D",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 34,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"H\",\"dst2\":\"B\",\"src1\":\"D\",\"src2\":\"A\",\"task\":\"move2\"}",
+    "init": {
+      "A": 2,
+      "B": 8,
+      "C": 8,
+      "D": 6,
+      "E": 8,
+      "F": 7,
+      "G": 6,
+      "H": 3
+    },
+    "target": {
+      "A": 0,
+      "B": 2,
+      "C": 8,
+      "D": 0,
+      "E": 8,
+      "F": 7,
+      "G": 6,
+      "H": 6
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"H\",\"dst2\":\"B\",\"src1\":\"D\",\"src2\":\"A\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"D\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":2}",
+      "RESULT {\"call_id\":\"c1\",\"value\":6}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"key\":\"D\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":2,\"C\":8,\"D\":0,\"E\":8,\"F\":6,\"G\":6,\"H\":3}",
+      "VERIFY_FAIL {\"F\":{\"expected\":7,\"observed\":6},\"H\":{\"expected\":6,\"observed\":3}}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":2,\"C\":8,\"D\":7,\"E\":8,\"F\":6,\"G\":6,\"H\":3}",
+      "VERIFY_FAIL {\"D\":{\"expected\":0,\"observed\":7},\"F\":{\"expected\":7,\"observed\":6},\"H\":{\"expected\":6,\"observed\":3}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_D",
+          "K2_A",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"D\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"D\",\"key2\":\"A\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_D",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"D\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 35,
+    "kind": "SWAP",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"D\",\"b\":\"G\",\"task\":\"swap\"}",
+    "init": {
+      "A": 8,
+      "B": 6,
+      "C": 4,
+      "D": 9,
+      "E": 7,
+      "F": 6,
+      "G": 5,
+      "H": 7
+    },
+    "target": {
+      "A": 8,
+      "B": 6,
+      "C": 4,
+      "D": 5,
+      "E": 7,
+      "F": 6,
+      "G": 9,
+      "H": 7
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"D\",\"b\":\"G\",\"task\":\"swap\"}",
+      "ACTION {\"key1\":\"D\",\"key2\":\"G\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":5}",
+      "RESULT {\"call_id\":\"c1\",\"value\":9}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":6,\"C\":4,\"D\":5,\"E\":7,\"F\":6,\"G\":5,\"H\":7}",
+      "VERIFY_FAIL {\"G\":{\"expected\":9,\"observed\":5}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":6,\"C\":4,\"D\":5,\"E\":7,\"F\":6,\"G\":5,\"H\":7}",
+      "VERIFY_FAIL {\"G\":{\"expected\":9,\"observed\":5}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_D",
+          "K2_G",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"D\",\"key2\":\"G\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"D\",\"key2\":\"G\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 42,
+    "kind": "DUAL_COPY",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"H\",\"dst2\":\"G\",\"src1\":\"F\",\"src2\":\"C\",\"task\":\"dual_copy\"}",
+    "init": {
+      "A": 4,
+      "B": 7,
+      "C": 7,
+      "D": 7,
+      "E": 8,
+      "F": 5,
+      "G": 4,
+      "H": 1
+    },
+    "target": {
+      "A": 4,
+      "B": 7,
+      "C": 7,
+      "D": 7,
+      "E": 8,
+      "F": 5,
+      "G": 7,
+      "H": 5
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"H\",\"dst2\":\"G\",\"src1\":\"F\",\"src2\":\"C\",\"task\":\"dual_copy\"}",
+      "ACTION {\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":5}",
+      "RESULT {\"call_id\":\"c2\",\"value\":7}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":4,\"B\":7,\"C\":7,\"D\":7,\"E\":8,\"F\":5,\"G\":5,\"H\":7}",
+      "VERIFY_FAIL {\"G\":{\"expected\":7,\"observed\":5},\"H\":{\"expected\":5,\"observed\":7}}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":4,\"B\":0,\"C\":0,\"D\":7,\"E\":8,\"F\":5,\"G\":5,\"H\":7}",
+      "VERIFY_FAIL {\"B\":{\"expected\":7,\"observed\":0},\"C\":{\"expected\":7,\"observed\":0},\"G\":{\"expected\":7,\"observed\":5},\"H\":{\"expected\":5,\"observed\":7}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_F",
+          "K2_C",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 55,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"G\",\"dst2\":\"A\",\"src1\":\"B\",\"src2\":\"E\",\"task\":\"move2\"}",
+    "init": {
+      "A": 4,
+      "B": 3,
+      "C": 9,
+      "D": 5,
+      "E": 1,
+      "F": 6,
+      "G": 7,
+      "H": 8
+    },
+    "target": {
+      "A": 1,
+      "B": 0,
+      "C": 9,
+      "D": 5,
+      "E": 0,
+      "F": 6,
+      "G": 3,
+      "H": 8
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"G\",\"dst2\":\"A\",\"src1\":\"B\",\"src2\":\"E\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"B\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":1}",
+      "RESULT {\"call_id\":\"c1\",\"value\":3}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"E\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":0,\"C\":9,\"D\":5,\"E\":0,\"F\":6,\"G\":1,\"H\":8}",
+      "VERIFY_FAIL {\"A\":{\"expected\":1,\"observed\":3},\"G\":{\"expected\":3,\"observed\":1}}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":3,\"C\":9,\"D\":5,\"E\":0,\"F\":4,\"G\":1,\"H\":8}",
+      "VERIFY_FAIL {\"A\":{\"expected\":1,\"observed\":7},\"B\":{\"expected\":0,\"observed\":3},\"F\":{\"expected\":6,\"observed\":4},\"G\":{\"expected\":3,\"observed\":1}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_B",
+          "K2_E",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"B\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"B\",\"key2\":\"E\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_E",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"E\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 56,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"F\",\"b\":\"E\",\"c\":\"B\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 9,
+      "B": 1,
+      "C": 2,
+      "D": 0,
+      "E": 4,
+      "F": 0,
+      "G": 0,
+      "H": 6
+    },
+    "target": {
+      "A": 9,
+      "B": 4,
+      "C": 2,
+      "D": 0,
+      "E": 0,
+      "F": 1,
+      "G": 0,
+      "H": 6
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"F\",\"b\":\"E\",\"c\":\"B\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"F\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":0}",
+      "RESULT {\"call_id\":\"c2\",\"value\":4}",
+      "ACTION {\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":1}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":9,\"B\":9,\"C\":2,\"D\":0,\"E\":6,\"F\":1,\"G\":0,\"H\":6}",
+      "VERIFY_FAIL {\"B\":{\"expected\":4,\"observed\":9},\"E\":{\"expected\":0,\"observed\":6}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":9,\"B\":9,\"C\":2,\"D\":0,\"E\":6,\"F\":1,\"G\":0,\"H\":6}",
+      "VERIFY_FAIL {\"B\":{\"expected\":4,\"observed\":9},\"E\":{\"expected\":0,\"observed\":6}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_F",
+          "K2_E",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"F\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"F\",\"key2\":\"E\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 58,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"B\",\"b\":\"C\",\"c\":\"A\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 7,
+      "B": 8,
+      "C": 3,
+      "D": 5,
+      "E": 1,
+      "F": 0,
+      "G": 1,
+      "H": 8
+    },
+    "target": {
+      "A": 3,
+      "B": 7,
+      "C": 8,
+      "D": 5,
+      "E": 1,
+      "F": 0,
+      "G": 1,
+      "H": 8
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"B\",\"b\":\"C\",\"c\":\"A\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":3}",
+      "RESULT {\"call_id\":\"c1\",\"value\":8}",
+      "ACTION {\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":7}",
+      "ACTION {\"key\":\"C\",\"tool\":\"WRITE\",\"value\":0}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":4,\"B\":7,\"C\":0,\"D\":5,\"E\":1,\"F\":0,\"G\":1,\"H\":8}",
+      "VERIFY_FAIL {\"A\":{\"expected\":3,\"observed\":4},\"C\":{\"expected\":8,\"observed\":0}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":4,\"B\":7,\"C\":0,\"D\":5,\"E\":1,\"F\":0,\"G\":1,\"H\":8}",
+      "VERIFY_FAIL {\"A\":{\"expected\":3,\"observed\":4},\"C\":{\"expected\":8,\"observed\":0}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_B",
+          "K2_C",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_C",
+          "K2_<NONE>",
+          "V_0"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"WRITE\",\"value\":0}",
+        "generated": "{\"key\":\"C\",\"tool\":\"WRITE\",\"value\":0}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 61,
+    "kind": "SWAP",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"E\",\"b\":\"F\",\"task\":\"swap\"}",
+    "init": {
+      "A": 7,
+      "B": 8,
+      "C": 1,
+      "D": 1,
+      "E": 3,
+      "F": 0,
+      "G": 9,
+      "H": 7
+    },
+    "target": {
+      "A": 7,
+      "B": 8,
+      "C": 1,
+      "D": 1,
+      "E": 0,
+      "F": 3,
+      "G": 9,
+      "H": 7
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"E\",\"b\":\"F\",\"task\":\"swap\"}",
+      "ACTION {\"key1\":\"E\",\"key2\":\"F\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":3}",
+      "RESULT {\"call_id\":\"c2\",\"value\":0}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":0}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":8,\"C\":1,\"D\":1,\"E\":3,\"F\":3,\"G\":9,\"H\":0}",
+      "VERIFY_FAIL {\"E\":{\"expected\":0,\"observed\":3},\"H\":{\"expected\":7,\"observed\":0}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":8,\"C\":1,\"D\":1,\"E\":3,\"F\":3,\"G\":9,\"H\":0}",
+      "VERIFY_FAIL {\"E\":{\"expected\":0,\"observed\":3},\"H\":{\"expected\":7,\"observed\":0}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_E",
+          "K2_F",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"E\",\"key2\":\"F\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"E\",\"key2\":\"F\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_0"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":0}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":0}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 63,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"H\",\"dst2\":\"G\",\"src1\":\"A\",\"src2\":\"E\",\"task\":\"move2\"}",
+    "init": {
+      "A": 3,
+      "B": 5,
+      "C": 7,
+      "D": 6,
+      "E": 7,
+      "F": 2,
+      "G": 8,
+      "H": 2
+    },
+    "target": {
+      "A": 0,
+      "B": 5,
+      "C": 7,
+      "D": 6,
+      "E": 0,
+      "F": 2,
+      "G": 7,
+      "H": 3
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"H\",\"dst2\":\"G\",\"src1\":\"A\",\"src2\":\"E\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"A\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":7}",
+      "RESULT {\"call_id\":\"c1\",\"value\":3}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"E\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":5,\"C\":7,\"D\":6,\"E\":0,\"F\":2,\"G\":3,\"H\":7}",
+      "VERIFY_FAIL {\"G\":{\"expected\":7,\"observed\":3},\"H\":{\"expected\":3,\"observed\":7}}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"E\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":0,\"C\":7,\"D\":6,\"E\":0,\"F\":2,\"G\":3,\"H\":7}",
+      "VERIFY_FAIL {\"A\":{\"expected\":0,\"observed\":7},\"B\":{\"expected\":5,\"observed\":0},\"G\":{\"expected\":7,\"observed\":3},\"H\":{\"expected\":3,\"observed\":7}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_A",
+          "K2_E",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"A\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"A\",\"key2\":\"E\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_E",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"E\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_E",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"E\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 77,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"G\",\"dst2\":\"A\",\"src1\":\"C\",\"src2\":\"E\",\"task\":\"move2\"}",
+    "init": {
+      "A": 8,
+      "B": 5,
+      "C": 6,
+      "D": 7,
+      "E": 2,
+      "F": 0,
+      "G": 3,
+      "H": 2
+    },
+    "target": {
+      "A": 2,
+      "B": 5,
+      "C": 0,
+      "D": 7,
+      "E": 0,
+      "F": 0,
+      "G": 6,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 5,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"G\",\"dst2\":\"A\",\"src1\":\"C\",\"src2\":\"E\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"C\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":6}",
+      "RESULT {\"call_id\":\"c2\",\"value\":2}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":2,\"B\":5,\"C\":0,\"D\":7,\"E\":2,\"F\":0,\"G\":6,\"H\":2}",
+      "VERIFY_FAIL {\"E\":{\"expected\":0,\"observed\":2}}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"G\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"E\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":6,\"B\":5,\"C\":0,\"D\":7,\"E\":0,\"F\":0,\"G\":0,\"H\":2}",
+      "VERIFY_FAIL {\"A\":{\"expected\":2,\"observed\":6},\"G\":{\"expected\":6,\"observed\":0}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_C",
+          "K2_E",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"C\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"C\",\"key2\":\"E\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_E",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"E\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 80,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"A\",\"dst2\":\"F\",\"src1\":\"H\",\"src2\":\"B\",\"task\":\"move2\"}",
+    "init": {
+      "A": 9,
+      "B": 6,
+      "C": 9,
+      "D": 2,
+      "E": 1,
+      "F": 4,
+      "G": 8,
+      "H": 5
+    },
+    "target": {
+      "A": 5,
+      "B": 0,
+      "C": 9,
+      "D": 2,
+      "E": 1,
+      "F": 6,
+      "G": 8,
+      "H": 0
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"A\",\"dst2\":\"F\",\"src1\":\"H\",\"src2\":\"B\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"H\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":5}",
+      "RESULT {\"call_id\":\"c2\",\"value\":6}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"key\":\"H\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":6,\"B\":0,\"C\":9,\"D\":2,\"E\":1,\"F\":5,\"G\":8,\"H\":0}",
+      "VERIFY_FAIL {\"A\":{\"expected\":5,\"observed\":6},\"F\":{\"expected\":6,\"observed\":5}}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":6}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":0}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":6,\"B\":0,\"C\":9,\"D\":2,\"E\":1,\"F\":7,\"G\":8,\"H\":0}",
+      "VERIFY_FAIL {\"A\":{\"expected\":5,\"observed\":6},\"F\":{\"expected\":6,\"observed\":7}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_H",
+          "K2_B",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"H\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"H\",\"key2\":\"B\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_H",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"H\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_6"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":6}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 89,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"F\",\"b\":\"A\",\"c\":\"H\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 3,
+      "B": 7,
+      "C": 0,
+      "D": 5,
+      "E": 6,
+      "F": 9,
+      "G": 3,
+      "H": 2
+    },
+    "target": {
+      "A": 9,
+      "B": 7,
+      "C": 0,
+      "D": 5,
+      "E": 6,
+      "F": 2,
+      "G": 3,
+      "H": 3
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"F\",\"b\":\"A\",\"c\":\"H\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"F\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":3}",
+      "RESULT {\"call_id\":\"c1\",\"value\":9}",
+      "ACTION {\"key\":\"H\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":2}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":7,\"C\":0,\"D\":5,\"E\":6,\"F\":2,\"G\":3,\"H\":9}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":3},\"H\":{\"expected\":3,\"observed\":9}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":7,\"C\":0,\"D\":5,\"E\":6,\"F\":2,\"G\":3,\"H\":9}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":3},\"H\":{\"expected\":3,\"observed\":9}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_F",
+          "K2_A",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"F\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"F\",\"key2\":\"A\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_H",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"H\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 92,
+    "kind": "DUAL_COPY",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"B\",\"dst2\":\"D\",\"src1\":\"C\",\"src2\":\"A\",\"task\":\"dual_copy\"}",
+    "init": {
+      "A": 8,
+      "B": 9,
+      "C": 5,
+      "D": 8,
+      "E": 7,
+      "F": 3,
+      "G": 8,
+      "H": 1
+    },
+    "target": {
+      "A": 8,
+      "B": 5,
+      "C": 5,
+      "D": 8,
+      "E": 7,
+      "F": 3,
+      "G": 8,
+      "H": 1
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"B\",\"dst2\":\"D\",\"src1\":\"C\",\"src2\":\"A\",\"task\":\"dual_copy\"}",
+      "ACTION {\"key1\":\"C\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":5}",
+      "RESULT {\"call_id\":\"c2\",\"value\":8}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":8}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":8,\"C\":5,\"D\":5,\"E\":7,\"F\":3,\"G\":8,\"H\":1}",
+      "VERIFY_FAIL {\"B\":{\"expected\":5,\"observed\":8},\"D\":{\"expected\":8,\"observed\":5}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":8,\"C\":5,\"D\":5,\"E\":7,\"F\":3,\"G\":8,\"H\":1}",
+      "VERIFY_FAIL {\"B\":{\"expected\":5,\"observed\":8},\"D\":{\"expected\":8,\"observed\":5}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_C",
+          "K2_A",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"C\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"C\",\"key2\":\"A\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_8"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":8}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":8}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 94,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"G\",\"b\":\"H\",\"c\":\"D\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 8,
+      "B": 9,
+      "C": 4,
+      "D": 0,
+      "E": 3,
+      "F": 9,
+      "G": 2,
+      "H": 5
+    },
+    "target": {
+      "A": 8,
+      "B": 9,
+      "C": 4,
+      "D": 5,
+      "E": 3,
+      "F": 9,
+      "G": 0,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"G\",\"b\":\"H\",\"c\":\"D\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"G\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":2}",
+      "RESULT {\"call_id\":\"c2\",\"value\":5}",
+      "ACTION {\"key\":\"D\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":0}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":8}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":0}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":9,\"C\":4,\"D\":1,\"E\":3,\"F\":9,\"G\":0,\"H\":8}",
+      "VERIFY_FAIL {\"D\":{\"expected\":5,\"observed\":1},\"H\":{\"expected\":2,\"observed\":8}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":9,\"C\":4,\"D\":1,\"E\":3,\"F\":9,\"G\":0,\"H\":8}",
+      "VERIFY_FAIL {\"D\":{\"expected\":5,\"observed\":1},\"H\":{\"expected\":2,\"observed\":8}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_G",
+          "K2_H",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"G\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"G\",\"key2\":\"H\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_D",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"D\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_8"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":8}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":8}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_0"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":0}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":0}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 102,
+    "kind": "DUAL_COPY",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"E\",\"dst2\":\"F\",\"src1\":\"B\",\"src2\":\"C\",\"task\":\"dual_copy\"}",
+    "init": {
+      "A": 1,
+      "B": 7,
+      "C": 8,
+      "D": 1,
+      "E": 6,
+      "F": 3,
+      "G": 9,
+      "H": 3
+    },
+    "target": {
+      "A": 1,
+      "B": 7,
+      "C": 8,
+      "D": 1,
+      "E": 7,
+      "F": 8,
+      "G": 9,
+      "H": 3
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"E\",\"dst2\":\"F\",\"src1\":\"B\",\"src2\":\"C\",\"task\":\"dual_copy\"}",
+      "ACTION {\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":7}",
+      "RESULT {\"call_id\":\"c2\",\"value\":8}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":0}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":1,\"B\":7,\"C\":8,\"D\":1,\"E\":4,\"F\":0,\"G\":9,\"H\":3}",
+      "VERIFY_FAIL {\"E\":{\"expected\":7,\"observed\":4},\"F\":{\"expected\":8,\"observed\":0}}",
+      "ACTION {\"key\":\"G\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"G\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":1,\"B\":7,\"C\":8,\"D\":1,\"E\":4,\"F\":0,\"G\":0,\"H\":3}",
+      "VERIFY_FAIL {\"E\":{\"expected\":7,\"observed\":4},\"F\":{\"expected\":8,\"observed\":0},\"G\":{\"expected\":9,\"observed\":0}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_B",
+          "K2_C",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_0"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":0}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":0}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 106,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"H\",\"b\":\"G\",\"c\":\"E\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 5,
+      "B": 0,
+      "C": 4,
+      "D": 9,
+      "E": 3,
+      "F": 9,
+      "G": 7,
+      "H": 1
+    },
+    "target": {
+      "A": 5,
+      "B": 0,
+      "C": 4,
+      "D": 9,
+      "E": 7,
+      "F": 9,
+      "G": 1,
+      "H": 3
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"H\",\"b\":\"G\",\"c\":\"E\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"H\",\"key2\":\"G\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":1}",
+      "RESULT {\"call_id\":\"c2\",\"value\":7}",
+      "ACTION {\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":3}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":0,\"C\":4,\"D\":9,\"E\":3,\"F\":9,\"G\":3,\"H\":3}",
+      "VERIFY_FAIL {\"E\":{\"expected\":7,\"observed\":3},\"G\":{\"expected\":1,\"observed\":3}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":0,\"C\":4,\"D\":9,\"E\":3,\"F\":9,\"G\":3,\"H\":3}",
+      "VERIFY_FAIL {\"E\":{\"expected\":7,\"observed\":3},\"G\":{\"expected\":1,\"observed\":3}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_H",
+          "K2_G",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"H\",\"key2\":\"G\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"H\",\"key2\":\"G\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_E",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"E\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 109,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"F\",\"dst2\":\"E\",\"src1\":\"G\",\"src2\":\"C\",\"task\":\"move2\"}",
+    "init": {
+      "A": 0,
+      "B": 7,
+      "C": 7,
+      "D": 9,
+      "E": 7,
+      "F": 8,
+      "G": 2,
+      "H": 8
+    },
+    "target": {
+      "A": 0,
+      "B": 7,
+      "C": 0,
+      "D": 9,
+      "E": 7,
+      "F": 2,
+      "G": 0,
+      "H": 8
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"F\",\"dst2\":\"E\",\"src1\":\"G\",\"src2\":\"C\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"G\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":7}",
+      "RESULT {\"call_id\":\"c1\",\"value\":2}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"G\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":7,\"C\":0,\"D\":9,\"E\":4,\"F\":2,\"G\":0,\"H\":8}",
+      "VERIFY_FAIL {\"E\":{\"expected\":7,\"observed\":4}}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":8}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+      "ACTION {\"key\":\"G\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":7,\"C\":0,\"D\":9,\"E\":8,\"F\":7,\"G\":0,\"H\":8}",
+      "VERIFY_FAIL {\"E\":{\"expected\":7,\"observed\":8},\"F\":{\"expected\":2,\"observed\":7}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_G",
+          "K2_C",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"G\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"G\",\"key2\":\"C\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_8"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":8}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":8}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 111,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"F\",\"b\":\"H\",\"c\":\"D\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 8,
+      "B": 7,
+      "C": 0,
+      "D": 9,
+      "E": 4,
+      "F": 5,
+      "G": 0,
+      "H": 4
+    },
+    "target": {
+      "A": 8,
+      "B": 7,
+      "C": 0,
+      "D": 4,
+      "E": 4,
+      "F": 9,
+      "G": 0,
+      "H": 5
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"F\",\"b\":\"H\",\"c\":\"D\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"F\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":5}",
+      "RESULT {\"call_id\":\"c2\",\"value\":4}",
+      "ACTION {\"key\":\"D\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":9}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":7,\"C\":0,\"D\":4,\"E\":4,\"F\":9,\"G\":0,\"H\":4}",
+      "VERIFY_FAIL {\"H\":{\"expected\":5,\"observed\":4}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":7,\"C\":0,\"D\":4,\"E\":4,\"F\":9,\"G\":0,\"H\":4}",
+      "VERIFY_FAIL {\"H\":{\"expected\":5,\"observed\":4}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_F",
+          "K2_H",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"F\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"F\",\"key2\":\"H\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_D",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"D\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 114,
+    "kind": "MOVE2",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"E\",\"dst2\":\"G\",\"src1\":\"F\",\"src2\":\"C\",\"task\":\"move2\"}",
+    "init": {
+      "A": 3,
+      "B": 8,
+      "C": 2,
+      "D": 5,
+      "E": 0,
+      "F": 1,
+      "G": 2,
+      "H": 6
+    },
+    "target": {
+      "A": 3,
+      "B": 8,
+      "C": 0,
+      "D": 5,
+      "E": 1,
+      "F": 0,
+      "G": 2,
+      "H": 6
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"E\",\"dst2\":\"G\",\"src1\":\"F\",\"src2\":\"C\",\"task\":\"move2\"}",
+      "ACTION {\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":2}",
+      "RESULT {\"call_id\":\"c1\",\"value\":1}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"key\":\"F\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":8,\"C\":0,\"D\":5,\"E\":2,\"F\":0,\"G\":1,\"H\":6}",
+      "VERIFY_FAIL {\"E\":{\"expected\":1,\"observed\":2},\"G\":{\"expected\":2,\"observed\":1}}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":0}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"key\":\"C\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":0,\"C\":0,\"D\":5,\"E\":0,\"F\":2,\"G\":1,\"H\":6}",
+      "VERIFY_FAIL {\"B\":{\"expected\":8,\"observed\":0},\"E\":{\"expected\":1,\"observed\":0},\"F\":{\"expected\":0,\"observed\":2},\"G\":{\"expected\":2,\"observed\":1}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_F",
+          "K2_C",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"F\",\"key2\":\"C\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_F",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"F\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_0"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":0}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":0}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_C",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"C\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 116,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"B\",\"b\":\"E\",\"c\":\"A\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 4,
+      "B": 7,
+      "C": 8,
+      "D": 4,
+      "E": 9,
+      "F": 1,
+      "G": 3,
+      "H": 6
+    },
+    "target": {
+      "A": 9,
+      "B": 4,
+      "C": 8,
+      "D": 4,
+      "E": 7,
+      "F": 1,
+      "G": 3,
+      "H": 6
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"B\",\"b\":\"E\",\"c\":\"A\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"B\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":9}",
+      "RESULT {\"call_id\":\"c1\",\"value\":7}",
+      "ACTION {\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":4}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":4,\"C\":8,\"D\":4,\"E\":9,\"F\":1,\"G\":3,\"H\":6}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":7},\"E\":{\"expected\":7,\"observed\":9}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":4,\"C\":8,\"D\":4,\"E\":9,\"F\":1,\"G\":3,\"H\":6}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":7},\"E\":{\"expected\":7,\"observed\":9}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_B",
+          "K2_E",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"B\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"B\",\"key2\":\"E\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 137,
+    "kind": "FANOUT3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"F\",\"dst2\":\"G\",\"dst3\":\"B\",\"src\":\"A\",\"task\":\"fanout3\"}",
+    "init": {
+      "A": 1,
+      "B": 2,
+      "C": 2,
+      "D": 9,
+      "E": 2,
+      "F": 9,
+      "G": 4,
+      "H": 1
+    },
+    "target": {
+      "A": 1,
+      "B": 1,
+      "C": 2,
+      "D": 9,
+      "E": 2,
+      "F": 1,
+      "G": 1,
+      "H": 1
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"F\",\"dst2\":\"G\",\"dst3\":\"B\",\"src\":\"A\",\"task\":\"fanout3\"}",
+      "ACTION {\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":1}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":1,\"B\":1,\"C\":2,\"D\":9,\"E\":2,\"F\":1,\"G\":4,\"H\":1}",
+      "VERIFY_FAIL {\"G\":{\"expected\":1,\"observed\":4}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":1,\"B\":1,\"C\":2,\"D\":9,\"E\":2,\"F\":1,\"G\":4,\"H\":1}",
+      "VERIFY_FAIL {\"G\":{\"expected\":1,\"observed\":4}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 149,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"A\",\"b\":\"B\",\"c\":\"H\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 5,
+      "B": 3,
+      "C": 3,
+      "D": 8,
+      "E": 3,
+      "F": 9,
+      "G": 7,
+      "H": 5
+    },
+    "target": {
+      "A": 5,
+      "B": 5,
+      "C": 3,
+      "D": 8,
+      "E": 3,
+      "F": 9,
+      "G": 7,
+      "H": 3
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"A\",\"b\":\"B\",\"c\":\"H\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"A\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":5}",
+      "RESULT {\"call_id\":\"c2\",\"value\":3}",
+      "ACTION {\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":9}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":9,\"C\":3,\"D\":8,\"E\":3,\"F\":9,\"G\":7,\"H\":5}",
+      "VERIFY_FAIL {\"B\":{\"expected\":5,\"observed\":9},\"H\":{\"expected\":3,\"observed\":5}}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":0,\"C\":3,\"D\":8,\"E\":3,\"F\":9,\"G\":7,\"H\":5}",
+      "VERIFY_FAIL {\"B\":{\"expected\":5,\"observed\":0},\"H\":{\"expected\":3,\"observed\":5}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_A",
+          "K2_B",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"A\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"A\",\"key2\":\"B\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_F",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"F\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 150,
+    "kind": "DUAL_COPY",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"B\",\"dst2\":\"G\",\"src1\":\"F\",\"src2\":\"H\",\"task\":\"dual_copy\"}",
+    "init": {
+      "A": 5,
+      "B": 1,
+      "C": 6,
+      "D": 4,
+      "E": 6,
+      "F": 3,
+      "G": 0,
+      "H": 2
+    },
+    "target": {
+      "A": 5,
+      "B": 3,
+      "C": 6,
+      "D": 4,
+      "E": 6,
+      "F": 3,
+      "G": 2,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"B\",\"dst2\":\"G\",\"src1\":\"F\",\"src2\":\"H\",\"task\":\"dual_copy\"}",
+      "ACTION {\"key1\":\"F\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":2}",
+      "RESULT {\"call_id\":\"c1\",\"value\":3}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":0}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":1,\"C\":6,\"D\":4,\"E\":6,\"F\":3,\"G\":0,\"H\":2}",
+      "VERIFY_FAIL {\"B\":{\"expected\":3,\"observed\":1},\"G\":{\"expected\":2,\"observed\":0}}",
+      "ACTION {\"key\":\"B\",\"tool\":\"CLEAR\"}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":0,\"C\":6,\"D\":4,\"E\":6,\"F\":3,\"G\":0,\"H\":2}",
+      "VERIFY_FAIL {\"B\":{\"expected\":3,\"observed\":0},\"G\":{\"expected\":2,\"observed\":0}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_F",
+          "K2_H",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"F\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"F\",\"key2\":\"H\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_0"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":0}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":0}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_CLEAR",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"CLEAR\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"CLEAR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 152,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"B\",\"b\":\"C\",\"c\":\"E\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 8,
+      "B": 7,
+      "C": 8,
+      "D": 0,
+      "E": 5,
+      "F": 1,
+      "G": 3,
+      "H": 6
+    },
+    "target": {
+      "A": 8,
+      "B": 5,
+      "C": 7,
+      "D": 0,
+      "E": 8,
+      "F": 1,
+      "G": 3,
+      "H": 6
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"B\",\"b\":\"C\",\"c\":\"E\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"C\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":7}",
+      "RESULT {\"call_id\":\"c2\",\"value\":8}",
+      "ACTION {\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":5}",
+      "ACTION {\"key\":\"C\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":8}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":5,\"C\":5,\"D\":0,\"E\":8,\"F\":1,\"G\":3,\"H\":6}",
+      "VERIFY_FAIL {\"C\":{\"expected\":7,\"observed\":5}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":5,\"C\":5,\"D\":0,\"E\":8,\"F\":1,\"G\":3,\"H\":6}",
+      "VERIFY_FAIL {\"C\":{\"expected\":7,\"observed\":5}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_B",
+          "K2_C",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"B\",\"key2\":\"C\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_E",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"E\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_C",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"C\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"C\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_8"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":8}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":8}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 169,
+    "kind": "DUAL_COPY",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"dst1\":\"E\",\"dst2\":\"A\",\"src1\":\"D\",\"src2\":\"B\",\"task\":\"dual_copy\"}",
+    "init": {
+      "A": 0,
+      "B": 9,
+      "C": 4,
+      "D": 7,
+      "E": 9,
+      "F": 9,
+      "G": 8,
+      "H": 2
+    },
+    "target": {
+      "A": 9,
+      "B": 9,
+      "C": 4,
+      "D": 7,
+      "E": 7,
+      "F": 9,
+      "G": 8,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 2,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"dst1\":\"E\",\"dst2\":\"A\",\"src1\":\"D\",\"src2\":\"B\",\"task\":\"dual_copy\"}",
+      "ACTION {\"key1\":\"D\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":7}",
+      "RESULT {\"call_id\":\"c2\",\"value\":9}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":9,\"C\":4,\"D\":7,\"E\":9,\"F\":9,\"G\":8,\"H\":2}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":7},\"E\":{\"expected\":7,\"observed\":9}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":7,\"B\":9,\"C\":4,\"D\":7,\"E\":9,\"F\":9,\"G\":8,\"H\":2}",
+      "VERIFY_FAIL {\"A\":{\"expected\":9,\"observed\":7},\"E\":{\"expected\":7,\"observed\":9}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_D",
+          "K2_B",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"D\",\"key2\":\"B\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"D\",\"key2\":\"B\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_7"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":7}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 171,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"B\",\"b\":\"A\",\"c\":\"G\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 5,
+      "B": 1,
+      "C": 8,
+      "D": 5,
+      "E": 9,
+      "F": 6,
+      "G": 9,
+      "H": 2
+    },
+    "target": {
+      "A": 1,
+      "B": 9,
+      "C": 8,
+      "D": 5,
+      "E": 9,
+      "F": 6,
+      "G": 5,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"B\",\"b\":\"A\",\"c\":\"G\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"B\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":5}",
+      "RESULT {\"call_id\":\"c1\",\"value\":1}",
+      "ACTION {\"key\":\"G\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":9}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":1}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":9,\"C\":8,\"D\":5,\"E\":9,\"F\":6,\"G\":1,\"H\":2}",
+      "VERIFY_FAIL {\"A\":{\"expected\":1,\"observed\":5},\"G\":{\"expected\":5,\"observed\":1}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":5,\"B\":9,\"C\":8,\"D\":5,\"E\":9,\"F\":6,\"G\":1,\"H\":2}",
+      "VERIFY_FAIL {\"A\":{\"expected\":1,\"observed\":5},\"G\":{\"expected\":5,\"observed\":1}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_B",
+          "K2_A",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"B\",\"key2\":\"A\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"B\",\"key2\":\"A\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":1}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 184,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"D\",\"b\":\"F\",\"c\":\"E\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 8,
+      "B": 2,
+      "C": 2,
+      "D": 8,
+      "E": 3,
+      "F": 4,
+      "G": 3,
+      "H": 5
+    },
+    "target": {
+      "A": 8,
+      "B": 2,
+      "C": 2,
+      "D": 3,
+      "E": 4,
+      "F": 8,
+      "G": 3,
+      "H": 5
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"D\",\"b\":\"F\",\"c\":\"E\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"D\",\"key2\":\"F\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"F\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c1\",\"value\":8}",
+      "RESULT {\"call_id\":\"c2\",\"value\":4}",
+      "ACTION {\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":3}",
+      "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":2,\"C\":2,\"D\":3,\"E\":4,\"F\":4,\"G\":3,\"H\":5}",
+      "VERIFY_FAIL {\"F\":{\"expected\":8,\"observed\":4}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":8,\"B\":2,\"C\":2,\"D\":3,\"E\":4,\"F\":4,\"G\":3,\"H\":5}",
+      "VERIFY_FAIL {\"F\":{\"expected\":8,\"observed\":4}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_D",
+          "K2_F",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"D\",\"key2\":\"F\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"D\",\"key2\":\"F\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_E",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"E\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_F",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"F\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_4"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":4}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 193,
+    "kind": "ROTATE3",
+    "cell": "P1_N1",
+    "request": "REQUEST {\"a\":\"H\",\"b\":\"E\",\"c\":\"B\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 0,
+      "B": 0,
+      "C": 2,
+      "D": 2,
+      "E": 3,
+      "F": 8,
+      "G": 9,
+      "H": 9
+    },
+    "target": {
+      "A": 0,
+      "B": 3,
+      "C": 2,
+      "D": 2,
+      "E": 9,
+      "F": 8,
+      "G": 9,
+      "H": 0
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"H\",\"b\":\"E\",\"c\":\"B\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"H\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c2\",\"value\":3}",
+      "RESULT {\"call_id\":\"c1\",\"value\":9}",
+      "ACTION {\"key\":\"B\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"B\",\"tool\":\"READ\"}",
+      "RESULT {\"call_id\":\"c3\",\"value\":0}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"H\",\"tool\":\"WRITE\",\"value\":0}",
+      "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":9,\"C\":2,\"D\":2,\"E\":3,\"F\":8,\"G\":9,\"H\":0}",
+      "VERIFY_FAIL {\"B\":{\"expected\":3,\"observed\":9},\"E\":{\"expected\":9,\"observed\":3}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":0,\"B\":9,\"C\":2,\"D\":2,\"E\":3,\"F\":8,\"G\":9,\"H\":0}",
+      "VERIFY_FAIL {\"B\":{\"expected\":3,\"observed\":9},\"E\":{\"expected\":9,\"observed\":3}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_H",
+          "K2_E",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"H\",\"key2\":\"E\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"H\",\"key2\":\"E\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_B",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"B\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_B",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"B\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_H",
+          "K2_<NONE>",
+          "V_0"
+        ],
+        "planned": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":0}",
+        "generated": "{\"key\":\"H\",\"tool\":\"WRITE\",\"value\":0}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 19,
+    "kind": "ROTATE3",
+    "cell": "P1_N0",
+    "request": "REQUEST {\"a\":\"E\",\"b\":\"H\",\"c\":\"G\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 3,
+      "B": 9,
+      "C": 5,
+      "D": 3,
+      "E": 2,
+      "F": 0,
+      "G": 5,
+      "H": 9
+    },
+    "target": {
+      "A": 3,
+      "B": 9,
+      "C": 5,
+      "D": 3,
+      "E": 5,
+      "F": 0,
+      "G": 9,
+      "H": 2
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 3,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"E\",\"b\":\"H\",\"c\":\"G\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"E\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+      "RESULT {\"data\":{\"value\":\"09\"},\"id\":\"c2\"}",
+      "RESULT {\"request\":\"c1\",\"result\":{\"number\":2,\"unit\":\"register_value\"}}",
+      "ACTION {\"key\":\"G\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"G\",\"tool\":\"READ\"}",
+      "RESULT {\"request\":\"c3\",\"result\":{\"number\":5,\"unit\":\"register_value\"}}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"G\",\"tool\":\"WRITE\",\"value\":2}",
+      "RESULT {\"key\":\"G\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":2}",
+      "ACTION {\"key\":\"E\",\"tool\":\"WRITE\",\"value\":5}",
+      "RESULT {\"key\":\"E\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":9,\"C\":5,\"D\":3,\"E\":5,\"F\":0,\"G\":2,\"H\":9}",
+      "VERIFY_FAIL {\"G\":{\"expected\":9,\"observed\":2},\"H\":{\"expected\":2,\"observed\":9}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":3,\"B\":9,\"C\":5,\"D\":3,\"E\":5,\"F\":0,\"G\":2,\"H\":9}",
+      "VERIFY_FAIL {\"G\":{\"expected\":9,\"observed\":2},\"H\":{\"expected\":2,\"observed\":9}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_E",
+          "K2_H",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"E\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"E\",\"key2\":\"H\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_G",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"G\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_G",
+          "K2_<NONE>",
+          "V_2"
+        ],
+        "planned": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":2}",
+        "generated": "{\"key\":\"G\",\"tool\":\"WRITE\",\"value\":2}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_E",
+          "K2_<NONE>",
+          "V_5"
+        ],
+        "planned": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":5}",
+        "generated": "{\"key\":\"E\",\"tool\":\"WRITE\",\"value\":5}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  },
+  {
+    "panel": 1,
+    "task_id": 32,
+    "kind": "ROTATE3",
+    "cell": "P1_N0",
+    "request": "REQUEST {\"a\":\"E\",\"b\":\"D\",\"c\":\"A\",\"task\":\"rotate3\"}",
+    "init": {
+      "A": 0,
+      "B": 5,
+      "C": 8,
+      "D": 9,
+      "E": 3,
+      "F": 0,
+      "G": 4,
+      "H": 9
+    },
+    "target": {
+      "A": 9,
+      "B": 5,
+      "C": 8,
+      "D": 3,
+      "E": 0,
+      "F": 0,
+      "G": 4,
+      "H": 9
+    },
+    "result": {
+      "ok": 0,
+      "steps": 14,
+      "first_div": 5,
+      "planner_errors": 0,
+      "planner_schema_errors": 0,
+      "syntax_errors": 0,
+      "schema_errors": 0,
+      "emitter_mismatch": 0,
+      "verify_failures": 2,
+      "recovered": 0
+    },
+    "trace": [
+      "REQUEST {\"a\":\"E\",\"b\":\"D\",\"c\":\"A\",\"task\":\"rotate3\"}",
+      "ACTION {\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+      "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c2\",\"key\":\"D\",\"tool\":\"READ\"}",
+      "RESULT {\"call\":\"c1\",\"payload\":[3]}",
+      "RESULT {\"request\":\"c2\",\"result\":{\"number\":9,\"unit\":\"register_value\"}}",
+      "ACTION {\"key\":\"A\",\"tool\":\"READ\"}",
+      "CALL {\"id\":\"c3\",\"key\":\"A\",\"tool\":\"READ\"}",
+      "RESULT {\"call\":\"c3\",\"payload\":[0]}",
+      "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+      "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":3}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+      "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":9}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":9,\"B\":5,\"C\":8,\"D\":3,\"E\":3,\"F\":0,\"G\":4,\"H\":9}",
+      "VERIFY_FAIL {\"E\":{\"expected\":0,\"observed\":3}}",
+      "ACTION {\"tool\":\"DONE\"}",
+      "STATE {\"A\":9,\"B\":5,\"C\":8,\"D\":3,\"E\":3,\"F\":0,\"G\":4,\"H\":9}",
+      "VERIFY_FAIL {\"E\":{\"expected\":0,\"observed\":3}}"
+    ],
+    "generation": [
+      {
+        "planner_tokens": [
+          "TOOL_READPAIR",
+          "K1_E",
+          "K2_D",
+          "V_-1"
+        ],
+        "planned": "{\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+        "generated": "{\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_READ",
+          "K1_A",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"READ\"}",
+        "generated": "{\"key\":\"A\",\"tool\":\"READ\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_D",
+          "K2_<NONE>",
+          "V_3"
+        ],
+        "planned": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}",
+        "generated": "{\"key\":\"D\",\"tool\":\"WRITE\",\"value\":3}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_WRITE",
+          "K1_A",
+          "K2_<NONE>",
+          "V_9"
+        ],
+        "planned": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}",
+        "generated": "{\"key\":\"A\",\"tool\":\"WRITE\",\"value\":9}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      },
+      {
+        "planner_tokens": [
+          "TOOL_DONE",
+          "K1_<NONE>",
+          "K2_<NONE>",
+          "V_-1"
+        ],
+        "planned": "{\"tool\":\"DONE\"}",
+        "generated": "{\"tool\":\"DONE\"}"
+      }
+    ]
+  }
+]

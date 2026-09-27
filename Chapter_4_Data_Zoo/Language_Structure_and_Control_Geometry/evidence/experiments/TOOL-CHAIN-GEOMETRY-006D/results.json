@@ -1,0 +1,605 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006D",
+  "design": "symmetry-controlled 2x2 provenance x normalization factorial with identity-independent raw-style assignment",
+  "seed": 26092821,
+  "model": {
+    "family": "DecisionTree structured event-slot policy, four independent action heads",
+    "feature_dim": 545,
+    "train_tasks": 5000,
+    "train_decisions": 90696,
+    "policy_sha256": "2aa1bb47b25c6fc827c801602f26dd210933accae3c560cb0d1cebf809668bad"
+  },
+  "factorial": {
+    "provenance": "result event carries explicit call-derived key label vs unlabeled",
+    "normalization": "canonical numeric value code vs backend-specific style-preserving raw value code",
+    "value_visibility": "all four cells expose the observed value in the same event slot; factors change label/code only",
+    "raw_style_assignment": "backend raw style varies independently across episodes/calls and is not a deterministic call-index code"
+  },
+  "panels": [
+    {
+      "panel": 1,
+      "seed": 26142821,
+      "prefix_accuracy": {
+        "P1_N1": {
+          "n": 905,
+          "exact": 0.9524861878453039,
+          "tool": 1.0,
+          "k1": 0.9845303867403314,
+          "k2": 1.0,
+          "value": 0.9668508287292817
+        },
+        "P1_N0": {
+          "n": 905,
+          "exact": 0.9038674033149171,
+          "tool": 1.0,
+          "k1": 0.9845303867403314,
+          "k2": 1.0,
+          "value": 0.9171270718232044
+        },
+        "P0_N1": {
+          "n": 905,
+          "exact": 0.9303867403314917,
+          "tool": 1.0,
+          "k1": 0.9845303867403314,
+          "k2": 1.0,
+          "value": 0.9425414364640884
+        },
+        "P0_N0": {
+          "n": 905,
+          "exact": 0.8961325966850828,
+          "tool": 1.0,
+          "k1": 0.9845303867403314,
+          "k2": 1.0,
+          "value": 0.9093922651933701
+        }
+      },
+      "summaries": {
+        "P1_N1": {
+          "accuracy": 0.825,
+          "wrong_done_rate": 0.175,
+          "mean_steps": 6.06,
+          "mean_first_div_failure": 2.6
+        },
+        "P1_N0": {
+          "accuracy": 0.675,
+          "wrong_done_rate": 0.325,
+          "mean_steps": 7.48,
+          "mean_first_div_failure": 2.523076923076923
+        },
+        "P0_N1": {
+          "accuracy": 0.735,
+          "wrong_done_rate": 0.265,
+          "mean_steps": 6.87,
+          "mean_first_div_failure": 2.3773584905660377
+        },
+        "P0_N0": {
+          "accuracy": 0.66,
+          "wrong_done_rate": 0.34,
+          "mean_steps": 7.59,
+          "mean_first_div_failure": 2.5294117647058822
+        }
+      }
+    },
+    {
+      "panel": 2,
+      "seed": 26152821,
+      "prefix_accuracy": {
+        "P1_N1": {
+          "n": 913,
+          "exact": 0.9605695509309967,
+          "tool": 1.0,
+          "k1": 0.9901423877327492,
+          "k2": 1.0,
+          "value": 0.9704271631982475
+        },
+        "P1_N0": {
+          "n": 913,
+          "exact": 0.9101861993428259,
+          "tool": 1.0,
+          "k1": 0.9901423877327492,
+          "k2": 1.0,
+          "value": 0.9178532311062432
+        },
+        "P0_N1": {
+          "n": 913,
+          "exact": 0.9419496166484118,
+          "tool": 1.0,
+          "k1": 0.9901423877327492,
+          "k2": 1.0,
+          "value": 0.9518072289156626
+        },
+        "P0_N0": {
+          "n": 913,
+          "exact": 0.9058050383351588,
+          "tool": 1.0,
+          "k1": 0.9901423877327492,
+          "k2": 1.0,
+          "value": 0.9134720700985761
+        }
+      },
+      "summaries": {
+        "P1_N1": {
+          "accuracy": 0.83,
+          "wrong_done_rate": 0.17,
+          "mean_steps": 6.085,
+          "mean_first_div_failure": 2.5588235294117645
+        },
+        "P1_N0": {
+          "accuracy": 0.68,
+          "wrong_done_rate": 0.32,
+          "mean_steps": 7.415,
+          "mean_first_div_failure": 2.6875
+        },
+        "P0_N1": {
+          "accuracy": 0.74,
+          "wrong_done_rate": 0.26,
+          "mean_steps": 6.915,
+          "mean_first_div_failure": 2.423076923076923
+        },
+        "P0_N0": {
+          "accuracy": 0.655,
+          "wrong_done_rate": 0.345,
+          "mean_steps": 7.635,
+          "mean_first_div_failure": 2.5217391304347827
+        }
+      }
+    },
+    {
+      "panel": 3,
+      "seed": 26162821,
+      "prefix_accuracy": {
+        "P1_N1": {
+          "n": 892,
+          "exact": 0.9551569506726457,
+          "tool": 1.0,
+          "k1": 0.9876681614349776,
+          "k2": 1.0,
+          "value": 0.9663677130044843
+        },
+        "P1_N0": {
+          "n": 892,
+          "exact": 0.897982062780269,
+          "tool": 1.0,
+          "k1": 0.9876681614349776,
+          "k2": 1.0,
+          "value": 0.9069506726457399
+        },
+        "P0_N1": {
+          "n": 892,
+          "exact": 0.9327354260089686,
+          "tool": 1.0,
+          "k1": 0.9876681614349776,
+          "k2": 1.0,
+          "value": 0.9439461883408071
+        },
+        "P0_N0": {
+          "n": 892,
+          "exact": 0.899103139013453,
+          "tool": 1.0,
+          "k1": 0.9876681614349776,
+          "k2": 1.0,
+          "value": 0.9080717488789237
+        }
+      },
+      "summaries": {
+        "P1_N1": {
+          "accuracy": 0.85,
+          "wrong_done_rate": 0.15,
+          "mean_steps": 5.79,
+          "mean_first_div_failure": 2.6333333333333333
+        },
+        "P1_N0": {
+          "accuracy": 0.705,
+          "wrong_done_rate": 0.295,
+          "mean_steps": 7.17,
+          "mean_first_div_failure": 2.389830508474576
+        },
+        "P0_N1": {
+          "accuracy": 0.755,
+          "wrong_done_rate": 0.245,
+          "mean_steps": 6.7,
+          "mean_first_div_failure": 2.3469387755102042
+        },
+        "P0_N0": {
+          "accuracy": 0.705,
+          "wrong_done_rate": 0.295,
+          "mean_steps": 7.14,
+          "mean_first_div_failure": 2.3728813559322033
+        }
+      }
+    }
+  ],
+  "pooled": {
+    "P1_N1": 0.835,
+    "P1_N0": 0.6866666666666666,
+    "P0_N1": 0.7433333333333333,
+    "P0_N0": 0.6733333333333333,
+    "provenance_main_pp": 5.249999999999994,
+    "normalization_main_pp": 10.916666666666657,
+    "interaction_pp": 7.833333333333337
+  },
+  "bootstrap95": {
+    "provenance_main_pp": [
+      3.583333333333333,
+      6.91666666666666
+    ],
+    "normalization_main_pp": [
+      7.750000000000002,
+      14.166666666666671
+    ],
+    "interaction_pp": [
+      4.999999999999993,
+      10.500000000000009
+    ]
+  },
+  "ambiguity_subgroups": {
+    "single_read": {
+      "n": 337,
+      "P1_N1": 0.9465875370919882,
+      "P1_N0": 0.9465875370919882,
+      "P0_N1": 0.9465875370919882,
+      "P0_N0": 0.9465875370919882,
+      "provenance_main_pp": 0.0,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.0,
+      "bootstrap95": {
+        "provenance_main_pp": [
+          0.0,
+          0.0
+        ],
+        "normalization_main_pp": [
+          0.0,
+          0.0
+        ],
+        "interaction_pp": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "multi_read": {
+      "n": 263,
+      "P1_N1": 0.6920152091254753,
+      "P1_N0": 0.35361216730038025,
+      "P0_N1": 0.4828897338403042,
+      "P0_N0": 0.3231939163498099,
+      "provenance_main_pp": 11.977186311787069,
+      "normalization_main_pp": 24.904942965779465,
+      "interaction_pp": 17.870722433460074,
+      "bootstrap95": {
+        "provenance_main_pp": [
+          8.555133079847904,
+          15.5893536121673
+        ],
+        "normalization_main_pp": [
+          17.300380228136888,
+          31.558935361216733
+        ],
+        "interaction_pp": [
+          11.406844106463875,
+          24.334600760456272
+        ]
+      }
+    }
+  },
+  "task_family": {
+    "COPY": {
+      "n": 63,
+      "P1_N1": 1.0,
+      "P1_N0": 1.0,
+      "P0_N1": 1.0,
+      "P0_N0": 1.0,
+      "provenance_main_pp": 0.0,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.0
+    },
+    "BACKUP_CLEAR": {
+      "n": 72,
+      "P1_N1": 1.0,
+      "P1_N0": 1.0,
+      "P0_N1": 1.0,
+      "P0_N0": 1.0,
+      "provenance_main_pp": 0.0,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.0
+    },
+    "SWAP": {
+      "n": 77,
+      "P1_N1": 0.6623376623376623,
+      "P1_N0": 0.4025974025974026,
+      "P0_N1": 0.4675324675324675,
+      "P0_N0": 0.4155844155844156,
+      "provenance_main_pp": 9.090909090909099,
+      "normalization_main_pp": 15.584415584415584,
+      "interaction_pp": 20.77922077922078
+    },
+    "DUAL_COPY": {
+      "n": 59,
+      "P1_N1": 0.9152542372881356,
+      "P1_N0": 0.288135593220339,
+      "P0_N1": 0.576271186440678,
+      "P0_N0": 0.3050847457627119,
+      "provenance_main_pp": 16.10169491525423,
+      "normalization_main_pp": 44.915254237288124,
+      "interaction_pp": 35.59322033898305
+    },
+    "ROTATE3": {
+      "n": 70,
+      "P1_N1": 0.4,
+      "P1_N0": 0.18571428571428572,
+      "P0_N1": 0.37142857142857144,
+      "P0_N0": 0.2,
+      "provenance_main_pp": 0.7142857142857145,
+      "normalization_main_pp": 19.28571428571429,
+      "interaction_pp": 4.285714285714287
+    },
+    "DUPLICATE": {
+      "n": 83,
+      "P1_N1": 0.9397590361445783,
+      "P1_N0": 0.9397590361445783,
+      "P0_N1": 0.9397590361445783,
+      "P0_N0": 0.9397590361445783,
+      "provenance_main_pp": 0.0,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.0
+    },
+    "MOVE2": {
+      "n": 57,
+      "P1_N1": 0.8596491228070176,
+      "P1_N0": 0.5614035087719298,
+      "P0_N1": 0.543859649122807,
+      "P0_N0": 0.3684210526315789,
+      "provenance_main_pp": 25.438596491228072,
+      "normalization_main_pp": 23.684210526315788,
+      "interaction_pp": 12.280701754385964
+    },
+    "FANOUT3": {
+      "n": 59,
+      "P1_N1": 0.9661016949152542,
+      "P1_N0": 0.9661016949152542,
+      "P0_N1": 0.9661016949152542,
+      "P0_N0": 0.9661016949152542,
+      "provenance_main_pp": 0.0,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.0
+    },
+    "CHAIN_COPY": {
+      "n": 60,
+      "P1_N1": 0.8166666666666667,
+      "P1_N0": 0.8166666666666667,
+      "P0_N1": 0.8166666666666667,
+      "P0_N0": 0.8166666666666667,
+      "provenance_main_pp": 0.0,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.0
+    }
+  },
+  "first_divergence_failures": {
+    "P1_N1": {
+      "n_fail_div": 99,
+      "mean": 2.595959595959596,
+      "median": 3.0
+    },
+    "P1_N0": {
+      "n_fail_div": 188,
+      "mean": 2.5372340425531914,
+      "median": 2.0
+    },
+    "P0_N1": {
+      "n_fail_div": 154,
+      "mean": 2.383116883116883,
+      "median": 2.0
+    },
+    "P0_N0": {
+      "n_fail_div": 196,
+      "mean": 2.479591836734694,
+      "median": 2.0
+    }
+  },
+  "representative_cases": {
+    "provenance": {
+      "panel": 1,
+      "task_id": 27,
+      "kind": "MOVE2",
+      "request": "REQUEST {\"dst1\":\"D\",\"dst2\":\"F\",\"src1\":\"A\",\"src2\":\"H\",\"task\":\"move2\"}",
+      "init": {
+        "A": 7,
+        "B": 3,
+        "C": 8,
+        "D": 9,
+        "E": 7,
+        "F": 6,
+        "G": 0,
+        "H": 0
+      },
+      "target": {
+        "A": 0,
+        "B": 3,
+        "C": 8,
+        "D": 7,
+        "E": 7,
+        "F": 0,
+        "G": 0,
+        "H": 0
+      },
+      "traces": {
+        "P1_N1": [
+          "REQUEST {\"dst1\":\"D\",\"dst2\":\"F\",\"src1\":\"A\",\"src2\":\"H\",\"task\":\"move2\"}",
+          "ACTION {\"key1\":\"A\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+          "RESULT {\"call_id\":\"c2\",\"value\":0}",
+          "RESULT {\"call_id\":\"c1\",\"value\":7}",
+          "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":7}",
+          "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+          "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":0}",
+          "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+          "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"key\":\"H\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "VERIFY_OK"
+        ],
+        "P1_N0": [
+          "REQUEST {\"dst1\":\"D\",\"dst2\":\"F\",\"src1\":\"A\",\"src2\":\"H\",\"task\":\"move2\"}",
+          "ACTION {\"key1\":\"A\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+          "RESULT {\"request\":\"c2\",\"result\":{\"number\":0,\"unit\":\"register_value\"}}",
+          "RESULT {\"data\":{\"value\":\"07\"},\"id\":\"c1\"}",
+          "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":7}",
+          "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+          "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":0}",
+          "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+          "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"key\":\"H\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "VERIFY_OK"
+        ],
+        "P0_N1": [
+          "REQUEST {\"dst1\":\"D\",\"dst2\":\"F\",\"src1\":\"A\",\"src2\":\"H\",\"task\":\"move2\"}",
+          "ACTION {\"key1\":\"A\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+          "RESULT {\"value\":0}",
+          "RESULT {\"value\":7}",
+          "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":0}",
+          "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":0}",
+          "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+          "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+          "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"key\":\"H\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":0,\"B\":3,\"C\":8,\"D\":0,\"E\":7,\"F\":7,\"G\":0,\"H\":0}",
+          "VERIFY_FAIL {\"D\":{\"expected\":7,\"observed\":0},\"F\":{\"expected\":0,\"observed\":7}}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":0,\"B\":3,\"C\":8,\"D\":0,\"E\":7,\"F\":7,\"G\":0,\"H\":0}",
+          "VERIFY_FAIL {\"D\":{\"expected\":7,\"observed\":0},\"F\":{\"expected\":0,\"observed\":7}}"
+        ],
+        "P0_N0": [
+          "REQUEST {\"dst1\":\"D\",\"dst2\":\"F\",\"src1\":\"A\",\"src2\":\"H\",\"task\":\"move2\"}",
+          "ACTION {\"key1\":\"A\",\"key2\":\"H\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"A\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"H\",\"tool\":\"READ\"}",
+          "RESULT {\"result\":{\"number\":0,\"unit\":\"register_value\"}}",
+          "RESULT {\"data\":{\"value\":\"07\"}}",
+          "ACTION {\"key\":\"D\",\"tool\":\"WRITE\",\"value\":4}",
+          "RESULT {\"key\":\"D\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+          "ACTION {\"key\":\"F\",\"tool\":\"WRITE\",\"value\":7}",
+          "RESULT {\"key\":\"F\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":7}",
+          "ACTION {\"key\":\"A\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"A\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"key\":\"H\",\"tool\":\"CLEAR\"}",
+          "RESULT {\"key\":\"H\",\"status\":\"ok\",\"tool\":\"CLEAR\"}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":0,\"B\":3,\"C\":8,\"D\":4,\"E\":7,\"F\":7,\"G\":0,\"H\":0}",
+          "VERIFY_FAIL {\"D\":{\"expected\":7,\"observed\":4},\"F\":{\"expected\":0,\"observed\":7}}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":0,\"B\":3,\"C\":8,\"D\":4,\"E\":7,\"F\":7,\"G\":0,\"H\":0}",
+          "VERIFY_FAIL {\"D\":{\"expected\":7,\"observed\":4},\"F\":{\"expected\":0,\"observed\":7}}"
+        ]
+      }
+    },
+    "normalization": {
+      "panel": 1,
+      "task_id": 9,
+      "kind": "DUAL_COPY",
+      "request": "REQUEST {\"dst1\":\"C\",\"dst2\":\"B\",\"src1\":\"E\",\"src2\":\"D\",\"task\":\"dual_copy\"}",
+      "init": {
+        "A": 6,
+        "B": 0,
+        "C": 0,
+        "D": 8,
+        "E": 4,
+        "F": 1,
+        "G": 2,
+        "H": 7
+      },
+      "target": {
+        "A": 6,
+        "B": 8,
+        "C": 4,
+        "D": 8,
+        "E": 4,
+        "F": 1,
+        "G": 2,
+        "H": 7
+      },
+      "traces": {
+        "P1_N1": [
+          "REQUEST {\"dst1\":\"C\",\"dst2\":\"B\",\"src1\":\"E\",\"src2\":\"D\",\"task\":\"dual_copy\"}",
+          "ACTION {\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"D\",\"tool\":\"READ\"}",
+          "RESULT {\"call_id\":\"c1\",\"value\":4}",
+          "RESULT {\"call_id\":\"c2\",\"value\":8}",
+          "ACTION {\"key\":\"C\",\"tool\":\"WRITE\",\"value\":4}",
+          "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+          "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":8}",
+          "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "VERIFY_OK"
+        ],
+        "P1_N0": [
+          "REQUEST {\"dst1\":\"C\",\"dst2\":\"B\",\"src1\":\"E\",\"src2\":\"D\",\"task\":\"dual_copy\"}",
+          "ACTION {\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"D\",\"tool\":\"READ\"}",
+          "RESULT {\"data\":{\"value\":\"04\"},\"id\":\"c1\"}",
+          "RESULT {\"data\":{\"value\":\"08\"},\"id\":\"c2\"}",
+          "ACTION {\"key\":\"C\",\"tool\":\"WRITE\",\"value\":5}",
+          "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":5}",
+          "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":4}",
+          "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":6,\"B\":4,\"C\":5,\"D\":8,\"E\":4,\"F\":1,\"G\":2,\"H\":7}",
+          "VERIFY_FAIL {\"B\":{\"expected\":8,\"observed\":4},\"C\":{\"expected\":4,\"observed\":5}}",
+          "ACTION {\"key\":\"D\",\"tool\":\"DONE\"}",
+          "SCHEMA_ERROR {\"error\":\"invalid_tool_arguments\"}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":6,\"B\":4,\"C\":5,\"D\":8,\"E\":4,\"F\":1,\"G\":2,\"H\":7}",
+          "VERIFY_FAIL {\"B\":{\"expected\":8,\"observed\":4},\"C\":{\"expected\":4,\"observed\":5}}"
+        ],
+        "P0_N1": [
+          "REQUEST {\"dst1\":\"C\",\"dst2\":\"B\",\"src1\":\"E\",\"src2\":\"D\",\"task\":\"dual_copy\"}",
+          "ACTION {\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"D\",\"tool\":\"READ\"}",
+          "RESULT {\"value\":4}",
+          "RESULT {\"value\":8}",
+          "ACTION {\"key\":\"C\",\"tool\":\"WRITE\",\"value\":4}",
+          "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+          "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":8}",
+          "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "VERIFY_OK"
+        ],
+        "P0_N0": [
+          "REQUEST {\"dst1\":\"C\",\"dst2\":\"B\",\"src1\":\"E\",\"src2\":\"D\",\"task\":\"dual_copy\"}",
+          "ACTION {\"key1\":\"E\",\"key2\":\"D\",\"tool\":\"READPAIR\"}",
+          "CALL {\"id\":\"c1\",\"key\":\"E\",\"tool\":\"READ\"}",
+          "CALL {\"id\":\"c2\",\"key\":\"D\",\"tool\":\"READ\"}",
+          "RESULT {\"data\":{\"value\":\"04\"}}",
+          "RESULT {\"data\":{\"value\":\"08\"}}",
+          "ACTION {\"key\":\"C\",\"tool\":\"WRITE\",\"value\":8}",
+          "RESULT {\"key\":\"C\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":8}",
+          "ACTION {\"key\":\"B\",\"tool\":\"WRITE\",\"value\":4}",
+          "RESULT {\"key\":\"B\",\"status\":\"ok\",\"tool\":\"WRITE\",\"value\":4}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":6,\"B\":4,\"C\":8,\"D\":8,\"E\":4,\"F\":1,\"G\":2,\"H\":7}",
+          "VERIFY_FAIL {\"B\":{\"expected\":8,\"observed\":4},\"C\":{\"expected\":4,\"observed\":8}}",
+          "ACTION {\"key\":\"D\",\"tool\":\"DONE\"}",
+          "SCHEMA_ERROR {\"error\":\"invalid_tool_arguments\"}",
+          "ACTION {\"tool\":\"DONE\"}",
+          "STATE {\"A\":6,\"B\":4,\"C\":8,\"D\":8,\"E\":4,\"F\":1,\"G\":2,\"H\":7}",
+          "VERIFY_FAIL {\"B\":{\"expected\":8,\"observed\":4},\"C\":{\"expected\":4,\"observed\":8}}"
+        ]
+      }
+    }
+  }
+}

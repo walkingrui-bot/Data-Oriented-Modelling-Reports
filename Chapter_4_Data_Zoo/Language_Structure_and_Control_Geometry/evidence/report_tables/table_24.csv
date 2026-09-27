@@ -1,0 +1,4 @@
+Public interface,Call-result binding,State / continuation contract,Schema / concurrency controls
+OpenAI Responses,function_call.call_id -> function_call_output.call_id,Response history or previous-response continuation carries tool steps,strict schemas; parallel_tool_calls configurable
+Gemini Interactions,Function-call/result identifiers; Gemini 3+ signatures,Stateful previous_interaction_id or exact full-history replay in stateless mode,Parallel and compositional calls; validated schema mode
+Claude Messages,tool_use.id -> tool_result.tool_use_id,Tool results are content blocks in the continuing message history; server/client tool loops differ,strict tool use; parallel independent calls supported

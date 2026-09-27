@@ -1,0 +1,82 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006G data-geometry precheck",
+  "rows_per_representation": 2110,
+  "raw_seen_vs_unseen": {
+    "n_per_group": 2110,
+    "active_dims": 534,
+    "combined": {
+      "stable_rank": 36.434861107301415,
+      "participation_rank": 233.6250357116104,
+      "pca95": 368,
+      "top4_energy": 0.07243268108793603
+    },
+    "twonn_id": 4.359009865379823,
+    "pairwise_distance_cv": 0.13300507722595753,
+    "knn4d_retention": 0.060568720379146915,
+    "domain": {
+      "knn_same_domain_fraction": 0.8690995260663508,
+      "logistic5cv_accuracy": 1.0
+    },
+    "matched": {
+      "mean_l2": 21.444021249642812,
+      "median_l2": 21.333590359671994,
+      "mean_cosine": 0.5482758627311277,
+      "exact_fraction": 0.0
+    },
+    "bootstrap20_80pct": {
+      "stable_rank_mean": 36.43410733048164,
+      "stable_rank_sd": 0.15064541112409138,
+      "participation_rank_mean": 231.06163228336436,
+      "participation_rank_sd": 0.22770726539274155,
+      "pca95_mean": 365.75,
+      "twonn_mean": 4.111931900804419,
+      "twonn_sd": 0.604733923272793
+    }
+  },
+  "canonical_seen_vs_unseen": {
+    "n_per_group": 2110,
+    "active_dims": 304,
+    "combined": {
+      "stable_rank": 22.365350774960785,
+      "participation_rank": 106.21913989182276,
+      "pca95": 181,
+      "top4_energy": 0.11980402358373289
+    },
+    "twonn_id": 0.03974907158739186,
+    "pairwise_distance_cv": 0.144177534104419,
+    "knn4d_retention": 0.1429620853080569,
+    "domain": {
+      "knn_same_domain_fraction": 0.4991943127962085,
+      "logistic5cv_accuracy": 0.31943127962085305
+    },
+    "matched": {
+      "mean_l2": 0.0,
+      "median_l2": 0.0,
+      "mean_cosine": 0.9999999999999961,
+      "exact_fraction": 1.0
+    },
+    "bootstrap20_80pct": {
+      "stable_rank_mean": 22.3736488472328,
+      "stable_rank_sd": 0.10132388550128622,
+      "participation_rank_mean": 105.68683863381864,
+      "participation_rank_sd": 0.11954063890860324,
+      "pca95_mean": 180.0,
+      "twonn_mean": 0.048454864310018636,
+      "twonn_sd": 0.004159914762173714
+    }
+  },
+  "native_matched": {
+    "raw": {
+      "mean_l2": 1.7141655850274191,
+      "median_l2": 1.4142135623730951,
+      "mean_cosine": 0.9261075095837725,
+      "exact_fraction": 0.0
+    },
+    "canonical": {
+      "mean_l2": 0.0,
+      "median_l2": 0.0,
+      "mean_cosine": 0.9999999999999505,
+      "exact_fraction": 1.0
+    }
+  }
+}

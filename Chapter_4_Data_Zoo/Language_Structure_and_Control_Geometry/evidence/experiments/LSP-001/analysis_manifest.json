@@ -1,0 +1,11 @@
+{
+  "computed_human_pairs": 4381,
+  "mcts_pairs": 3615,
+  "css_pairs": 766,
+  "mcts_shorter_pairs": 2078,
+  "mcts_shorter_fraction": 0.5748271093,
+  "css_deletion_tagged_pairs": 212,
+  "css_deletion_tagged_mean_ratio": 0.8165124741,
+  "css_deletion_tagged_shorter_fraction": 0.9245283019,
+  "notes": "Deletion statistics are exact surface-token disappearance, not semantic information loss."
+}

@@ -1,0 +1,4 @@
+Corpus,Original sentences,Human simplifications,Pairs used,Role
+MCTS,723,5 per source,"3,615",Primary multi-reference analysis
+CSS,383,2 per source,766,Independent operation-label validation
+Total,,,"4,381",Computed human source-to-simplification pairs

@@ -1,0 +1,33 @@
+{
+  "training_nll": [
+    1.0471477072600437,
+    0.4964504868275834,
+    0.1811967467455326
+  ],
+  "prefix_pilot": {
+    "n": 6376,
+    "exact": 0.9347553324968633,
+    "valid": 1.0,
+    "eos": 1.0,
+    "slot_error": 0.0,
+    "schema_error": 0.0,
+    "by_cell": {
+      "P1_N1": 0.9542032622333751,
+      "P1_N0": 0.944792973651192,
+      "P0_N1": 0.9222082810539524,
+      "P0_N0": 0.9178168130489335
+    }
+  },
+  "baseline_pilot_P1_N1": {
+    "n": 240,
+    "final_state_accuracy": 0.8416666666666667,
+    "planner_error_any": 0.004166666666666667,
+    "schema_error_any": 0.004166666666666667,
+    "mean_first_div_failure": 2.710526315789474
+  },
+  "prospective_gate": {
+    "prefix_exact_threshold": 0.85,
+    "baseline_final_state_threshold": 0.65,
+    "passed": true
+  }
+}

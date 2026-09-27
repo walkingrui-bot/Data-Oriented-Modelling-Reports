@@ -1,0 +1,126 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006E",
+  "design": "frozen 006D planner with unconstrained neural autoregressive JSON action emitter",
+  "seed": 26092791,
+  "test_panels": "exact same 3 x 200 held-out panels as final 006D",
+  "emitter_assay": {
+    "json_parse": 1.0,
+    "schema_valid": 1.0,
+    "semantic_exact": 1.0,
+    "n_actions": 153
+  },
+  "conditions": {
+    "P1_N1": {
+      "acc": 0.835,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.056666666666666664
+    },
+    "P1_N0": {
+      "acc": 0.69,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.15166666666666667
+    },
+    "P0_N1": {
+      "acc": 0.7433333333333333,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.115
+    },
+    "P0_N0": {
+      "acc": 0.6766666666666666,
+      "syntax_any": 0.0,
+      "schema_any": 0.0,
+      "emitter_mismatch_any": 0.14833333333333334
+    }
+  },
+  "pooled": {
+    "P1_N1": 0.835,
+    "P1_N0": 0.69,
+    "P0_N1": 0.7433333333333333,
+    "P0_N0": 0.6766666666666666,
+    "provenance_main_pp": 5.249999999999999,
+    "normalization_main_pp": 10.583333333333329,
+    "interaction_pp": 7.833333333333337
+  },
+  "bootstrap95": {
+    "provenance_main_pp": [
+      3.749999999999992,
+      6.916666666666671
+    ],
+    "normalization_main_pp": [
+      7.499999999999996,
+      13.83333333333333
+    ],
+    "interaction_pp": [
+      5.166666666666664,
+      10.666666666666668
+    ]
+  },
+  "ambiguity_subgroups": {
+    "single_read": {
+      "n": 337,
+      "P1_N1": 0.9465875370919882,
+      "P1_N0": 0.9465875370919882,
+      "P0_N1": 0.9465875370919882,
+      "P0_N0": 0.9465875370919882,
+      "provenance_main_pp": 0.0,
+      "normalization_main_pp": 0.0,
+      "interaction_pp": 0.0,
+      "bootstrap95": {
+        "provenance_main_pp": [
+          0.0,
+          0.0
+        ],
+        "normalization_main_pp": [
+          0.0,
+          0.0
+        ],
+        "interaction_pp": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "multi_read": {
+      "n": 263,
+      "P1_N1": 0.6920152091254753,
+      "P1_N0": 0.3612167300380228,
+      "P0_N1": 0.4828897338403042,
+      "P0_N0": 0.33079847908745247,
+      "provenance_main_pp": 11.977186311787072,
+      "normalization_main_pp": 24.144486692015207,
+      "interaction_pp": 17.870722433460077,
+      "bootstrap95": {
+        "provenance_main_pp": [
+          8.17490494296578,
+          15.399239543726239
+        ],
+        "normalization_main_pp": [
+          17.110266159695815,
+          31.36882129277566
+        ],
+        "interaction_pp": [
+          11.787072243346008,
+          23.954372623574148
+        ]
+      }
+    }
+  },
+  "paired_outcome_agreement_with_006D": 0.9983333333333333,
+  "mean_accuracy_delta_vs_006D": 0.0016666666666666668,
+  "pilot_diagnostics": {
+    "end_to_end_AR_v1": {
+      "oracle_action_exact": 0.22181818181818183,
+      "json_parse": 1.0,
+      "schema_valid": 1.0,
+      "final_state_all_cells": 0.006666666666666667
+    },
+    "semantic_weighted_GRU_epoch1": {
+      "oracle_action_exact": 0.19152854511970535,
+      "json_parse": 0.5359116022099447,
+      "schema_valid": 0.35359116022099446
+    }
+  }
+}

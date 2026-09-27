@@ -1,0 +1,8 @@
+Stress-panel condition,Accuracy,Delta pp,Paired 95% CI pp
+Baseline,14.71%,reference,-
+Last-result handoff,5.57%,-9.14,"[-11.57, -6.86]"
+No binding / parallel,4.57%,-10.14,"[-12.71, -7.57]"
+No binding / sequential,4.57%,-10.14,"[-12.71, -7.57]"
+Raw results,2.71%,-12.00,"[-14.71, -9.43]"
+Best-effort schema,15.14%,+0.43,"[0.00, 1.00]"
+No verification,14.71%,+0.00,"[0.00, 0.00]"

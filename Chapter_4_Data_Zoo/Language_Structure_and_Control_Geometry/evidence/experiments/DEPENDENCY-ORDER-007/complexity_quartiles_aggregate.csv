@@ -1,0 +1,5 @@
+length_quartile,mean_tokens,mean_tree_depth,mean_predicates_per_sentence,predicate_weighted_mean_arity,mean_dependency_distance,fraction_arcs_distance_ge5,mean_max_predicate_nesting,mean_predicate_pair_tree_distance,mean_crossing_count,mean_subordinate_predicate_count,role_order_distance_stable_rank,role_order_distance_pca95,role_order_distance_top3_energy
+1,7.46308,3.33187,1.05045,1.1667,1.85626,0.06728,0.30124,0.35004,0.01308,0.30332,3.94107,7.5,0.62188
+2,14.09302,4.62789,1.82749,1.38941,2.56493,0.12972,0.73596,0.95163,0.06122,0.85605,4.43436,8.1,0.57336
+3,21.25296,5.66655,2.73728,1.44458,3.04164,0.16807,1.30562,1.61231,0.12421,1.56227,4.77789,8.5,0.54405
+4,38.52146,7.19772,4.76294,1.4371,3.75827,0.19129,2.16044,2.59598,0.30346,3.1801,5.06066,9.1,0.52434

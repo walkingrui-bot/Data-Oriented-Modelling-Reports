@@ -1,0 +1,5 @@
+Prefix diagnostic,Seen P+/N+,Seen P+/raw,Held-out P+/N+,Held-out P+/raw
+Overall action exact,92.84%,92.21%,92.84%,56.53%
+Post-result action exact,90.81%,90.00%,90.81%,44.17%
+WRITE-value exact,88.92%,88.28%,88.92%,14.35%
+Multi-read WRITE-value exact,77.01%,75.34%,77.01%,12.08%

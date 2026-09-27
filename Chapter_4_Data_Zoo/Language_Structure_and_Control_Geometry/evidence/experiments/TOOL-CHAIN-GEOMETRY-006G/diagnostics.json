@@ -1,0 +1,119 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006G diagnostics",
+  "prefix": {
+    "seen": {
+      "P1_N1": {
+        "n": 2710,
+        "overall_exact": 0.9284132841328413,
+        "post_result_exact": 0.9080568720379147,
+        "write_exact": 0.8620414673046252,
+        "write_value_exact": 0.8891547049441786,
+        "multi_read_write_exact": 0.7516778523489933,
+        "multi_read_write_value_exact": 0.7701342281879194
+      },
+      "P1_N0": {
+        "n": 2710,
+        "overall_exact": 0.9221402214022141,
+        "post_result_exact": 0.9,
+        "write_exact": 0.8532695374800638,
+        "write_value_exact": 0.8827751196172249,
+        "multi_read_write_exact": 0.7265100671140939,
+        "multi_read_write_value_exact": 0.7533557046979866
+      },
+      "P0_N1": {
+        "n": 2710,
+        "overall_exact": 0.9095940959409594,
+        "post_result_exact": 0.8838862559241706,
+        "write_exact": 0.8269537480063796,
+        "write_value_exact": 0.8516746411483254,
+        "multi_read_write_exact": 0.674496644295302,
+        "multi_read_write_value_exact": 0.6895973154362416
+      },
+      "P0_N0": {
+        "n": 2710,
+        "overall_exact": 0.9129151291512915,
+        "post_result_exact": 0.8881516587677725,
+        "write_exact": 0.8365231259968102,
+        "write_value_exact": 0.8604465709728868,
+        "multi_read_write_exact": 0.6828859060402684,
+        "multi_read_write_value_exact": 0.7063758389261745
+      }
+    },
+    "unseen": {
+      "P1_N1": {
+        "n": 2710,
+        "overall_exact": 0.9284132841328413,
+        "post_result_exact": 0.9080568720379147,
+        "write_exact": 0.8620414673046252,
+        "write_value_exact": 0.8891547049441786,
+        "multi_read_write_exact": 0.7516778523489933,
+        "multi_read_write_value_exact": 0.7701342281879194
+      },
+      "P1_N0": {
+        "n": 2710,
+        "overall_exact": 0.5653136531365314,
+        "post_result_exact": 0.44170616113744077,
+        "write_exact": 0.13476874003189793,
+        "write_value_exact": 0.14354066985645933,
+        "multi_read_write_exact": 0.10906040268456375,
+        "multi_read_write_value_exact": 0.12080536912751678
+      },
+      "P0_N1": {
+        "n": 2710,
+        "overall_exact": 0.9095940959409594,
+        "post_result_exact": 0.8838862559241706,
+        "write_exact": 0.8269537480063796,
+        "write_value_exact": 0.8516746411483254,
+        "multi_read_write_exact": 0.674496644295302,
+        "multi_read_write_value_exact": 0.6895973154362416
+      },
+      "P0_N0": {
+        "n": 2710,
+        "overall_exact": 0.5501845018450184,
+        "post_result_exact": 0.42227488151658765,
+        "write_exact": 0.12200956937799043,
+        "write_value_exact": 0.13157894736842105,
+        "multi_read_write_exact": 0.09563758389261745,
+        "multi_read_write_value_exact": 0.11073825503355705
+      }
+    }
+  },
+  "fixed_unseen_raw_style_control": {
+    "3": {
+      "P1_N0": {
+        "n": 600,
+        "accuracy": 0.018333333333333333,
+        "mean_first_div_failure": 2.1331058020477816
+      },
+      "P0_N0": {
+        "n": 600,
+        "accuracy": 0.02,
+        "mean_first_div_failure": 2.0923076923076924
+      }
+    },
+    "4": {
+      "P1_N0": {
+        "n": 600,
+        "accuracy": 0.03,
+        "mean_first_div_failure": 2.1310344827586207
+      },
+      "P0_N0": {
+        "n": 600,
+        "accuracy": 0.03333333333333333,
+        "mean_first_div_failure": 2.088695652173913
+      }
+    },
+    "5": {
+      "P1_N0": {
+        "n": 600,
+        "accuracy": 0.04,
+        "mean_first_div_failure": 2.1463414634146343
+      },
+      "P0_N0": {
+        "n": 600,
+        "accuracy": 0.035,
+        "mean_first_div_failure": 2.095486111111111
+      }
+    }
+  }
+}

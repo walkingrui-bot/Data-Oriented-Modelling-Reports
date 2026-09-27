@@ -1,0 +1,4 @@
+Oracle chain length,Baseline,Last-result handoff,No binding / parallel,Raw results
+3,100.0%,94.8%,99.1%,84.3%
+4,78.5%,52.8%,30.3%,55.8%
+6,34.4%,3.7%,2.6%,6.3%

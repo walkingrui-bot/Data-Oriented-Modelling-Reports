@@ -1,0 +1,10 @@
+Geometry coordinate,Raw seen vs unseen,Canonical seen vs unseen
+Matched exact identity,0.0%,100.0%
+Matched z-space mean L2,21.44,0.00
+Matched mean cosine,0.548,1.000
+10-NN same-domain fraction,86.9%,49.9% diagnostic mixing
+Stable rank,36.43,22.37
+Participation rank,233.63,106.22
+PCA-95 dimension,368,181
+Top-4 spectral energy,7.24%,11.98%
+4D PCA 10-NN retention,6.06%,14.30%

@@ -1,0 +1,8 @@
+Condition,Mean first action divergence,Wrong first DONE,Schema-error episodes,Mean steps
+Baseline,2.45,32.9%,4.4%,7.07
+Last-result handoff,2.49,78.7%,42.1%,10.77
+No binding / parallel,2.12,93.6%,10.3%,10.64
+No binding / sequential,2.12,93.6%,10.0%,10.73
+Raw results,2.44,82.7%,13.6%,9.49
+Best-effort schema,2.45,32.9%,0.0%,7.07
+No verification,2.45,32.9%,0.0%,7.29

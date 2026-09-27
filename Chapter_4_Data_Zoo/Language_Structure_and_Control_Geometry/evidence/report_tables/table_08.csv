@@ -1,0 +1,4 @@
+Level,Human stable rank,Random-deletion stable rank,Human top-3,Random top-3
+Mild,1.706,1.782,76.7%,74.5%
+Medium,1.671,1.809,76.4%,74.0%
+Strong,1.712,2.015,76.1%,68.4%

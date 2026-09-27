@@ -1,0 +1,8 @@
+Condition,History,Binding,Dispatch,Result surface,Schema,Completion
+Baseline,Full transcript,Explicit call IDs,Randomized pair return,Canonical result form,Strict reject,Check final state
+Last-result handoff,Last 3 transcript lines,Explicit call IDs,Randomized pair return,Canonical result form,Strict reject,Check final state
+No binding / parallel,Full transcript,IDs removed,Randomized pair return,Canonical result form,Strict reject,Check final state
+No binding / sequential,Full transcript,IDs removed,Issue order,Canonical result form,Strict reject,Check final state
+Raw results,Full transcript,Explicit call IDs,Randomized pair return,Heterogeneous backend form,Strict reject,Check final state
+Best-effort schema,Full transcript,Explicit call IDs,Randomized pair return,Canonical result form,Coerce malformed output,Check final state
+No verification,Full transcript,Explicit call IDs,Randomized pair return,Canonical result form,Strict reject,DONE terminates

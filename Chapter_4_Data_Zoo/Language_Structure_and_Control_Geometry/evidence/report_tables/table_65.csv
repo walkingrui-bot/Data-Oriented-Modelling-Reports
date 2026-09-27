@@ -1,0 +1,5 @@
+Level,Length ratio,Tokens,Predicates,Mean arity,Role stable rank,Predicates /100 tok
+Original,1.000,35.73,7.23,1.060,2.088,20.25
+Mild,0.922,32.89,6.96,1.058,2.092,21.16
+Medium,0.834,29.62,6.35,1.034,2.044,21.44
+Strong,0.656,23.05,5.05,1.041,2.041,21.90

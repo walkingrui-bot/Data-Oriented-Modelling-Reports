@@ -1,0 +1,8 @@
+Quantity,Estimate,Paired bootstrap 95% interval
+Provenance main effect,+5.25 pp,"[3.58, 6.92] pp"
+Normalization main effect,+10.92 pp,"[7.75, 14.17] pp"
+Provenance x normalization interaction,+7.83 pp,"[5.00, 10.50] pp"
+Normalization gain when provenance present,14.83 pp,derived paired cell contrast
+Normalization gain when provenance absent,7.00 pp,derived paired cell contrast
+Provenance gain when normalized,9.17 pp,derived paired cell contrast
+Provenance gain on raw surfaces,1.33 pp,derived paired cell contrast

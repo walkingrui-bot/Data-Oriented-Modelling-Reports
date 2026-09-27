@@ -1,0 +1,5 @@
+Model/config,Correct / 200,Instance-state mismatch,Execution-response mismatch,Empty turn
+Claude Opus 4.5 FC,162,25,10,3
+xLAM-2-70B FC,165,24,8,3
+GLM-4.6 FC thinking,149,30,12,9
+Combined,476,79,30,15

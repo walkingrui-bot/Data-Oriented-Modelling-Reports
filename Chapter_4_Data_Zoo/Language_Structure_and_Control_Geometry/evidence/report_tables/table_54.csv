@@ -1,0 +1,8 @@
+Diagnostic,Executed result,Interpretation
+Stable rank,6.34-12.43 across 16 primary script variants,Whole-sentence surface clouds remain multi-directional.
+Participation rank,19.13-25.67,Variance is distributed across many surface coordinates.
+PCA-95 dimension,26-28 of 32 coordinates,Most variance requires substantially more than the local 2-3 movement directions.
+TwoNN local dimension,17.05-22.37,Local point-cloud structure is also broad under this construction.
+10-NN retention after PCA-4D,20.80% mean,Four dimensions do not preserve most sentence neighborhoods.
+10-NN retention after PCA-8D,31.35% mean,Eight dimensions recover more neighborhood structure but remain strongly lossy.
+20 x 80% stable-rank resampling,Variant profiles remain stable; values stored per variant,Geometry is not driven by one row subset.

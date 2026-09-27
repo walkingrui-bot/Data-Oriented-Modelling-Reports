@@ -1,0 +1,5 @@
+Pair of measured axes,Spearman rho,N
+Single-turn non-live AST / Multi-turn,0.452,109
+Single-turn non-live AST / Agentic mean,0.239,109
+Multi-turn / Agentic mean,0.620,109
+Web Search / Memory,0.793,109

@@ -1,0 +1,5 @@
+Chapter 3 experiment,Measured object,Key result,Role in this edition
+LANG-016,Future-control Jacobian geometry after training,Language stable rank 2.238; entropy/difficulty-matched 6D world 3.101; 6D -> Language 2.196,Language training concentrates available control into a few high-gain modes
+LANG-017,Teacher-side conditional transition field,First-order language stable rank 2.481; top-3 energy 71.95%; longer context adds weaker directions,Low-dimensional movement is already present in the language teacher
+LANG-018,State-dependent linguistic operators,Affine state-dependent operators outperform fixed shifts/resets; ordered composition is noncommutative,Words/tokens act as reusable context-dependent transformations
+LANG-019,Higher-level fitted relations,Relation-conditioned residual stable rank 1.327; top-3 energy 95.18%,Higher levels contain concentrated residual structure around lower-level composition

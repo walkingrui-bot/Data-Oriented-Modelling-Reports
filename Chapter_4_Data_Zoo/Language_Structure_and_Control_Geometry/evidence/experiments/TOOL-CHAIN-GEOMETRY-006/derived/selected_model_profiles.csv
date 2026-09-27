@@ -1,0 +1,7 @@
+Model/config,Single-turn non-live AST,Multi-turn,Agentic mean (web+memory)
+Claude Opus 4.5 (FC),88.58,68.38,79.13
+GLM-4.6 (FC thinking),87.56,68.0,66.6
+Gemini 3 Pro (FC),85.75,63.12,61.67
+xLAM-2-70B (FC),88.44,77.38,14.705
+GPT-5.2 (FC),81.85,28.12,60.655
+o3 (Prompt),81.94,62.25,51.165

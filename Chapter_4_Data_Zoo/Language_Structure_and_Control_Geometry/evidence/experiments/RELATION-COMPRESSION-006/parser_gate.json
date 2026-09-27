@@ -1,0 +1,17 @@
+{
+  "training_source": "UD Chinese GSDSimp train",
+  "threshold_selection": "held-out dev",
+  "evaluation_source": "held-out UD Chinese GSDSimp test",
+  "micro_f1": 0.590796635329045,
+  "precision": 0.5751445086705202,
+  "recall": 0.6073245167853509,
+  "arity_mae": 0.5250227479526842,
+  "arity_correlation_r": 0.582048938450305,
+  "role_f1": {
+    "SUBJ": 0.6276346604215457,
+    "OBJ": 0.7282913165266107,
+    "OBL": 0.17737003058103978,
+    "COMP": 0.3765112262521589
+  },
+  "evidence_resolution": "Primary inference uses aggregate predicate count, aggregate arity, role geometry, and SUBJ/OBJ-supported structure. OBL/COMP components are retained as secondary measurements."
+}

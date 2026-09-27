@@ -1,0 +1,6 @@
+Schema-shift quantity,Estimate,Bootstrap 95% interval
+Seen-schema normalization effect,-1.17 pp,"[-3.00, +0.75] pp"
+Held-out-schema normalization effect,+68.42 pp,"[+64.92, +72.00] pp"
+Increase in normalization effect,+69.58 pp,"[+66.17, +73.08] pp"
+"Raw-path accuracy change, seen -> held-out",-69.58 pp,"[-73.08, -66.17] pp"
+"Canonical-path accuracy change, seen -> held-out",0.00 pp,"[0.00, 0.00] pp"

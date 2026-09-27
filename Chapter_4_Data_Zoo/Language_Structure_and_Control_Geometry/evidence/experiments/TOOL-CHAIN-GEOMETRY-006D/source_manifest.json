@@ -1,0 +1,7 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006D",
+  "script": "tool_chain_006d_final_eval.py",
+  "seed": 26092821,
+  "policy_sha256": "2aa1bb47b25c6fc827c801602f26dd210933accae3c560cb0d1cebf809668bad",
+  "note": "Final symmetry-controlled run. Raw style assignment is independent of call identity; all four interface cells included in training before freeze; three held-out 200-task panels share one frozen policy."
+}

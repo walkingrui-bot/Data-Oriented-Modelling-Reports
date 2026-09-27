@@ -1,0 +1,5 @@
+﻿corpus,sources,pairs_or_sentences,annotation,status
+MCTS,723,3615,5 human simplifications/source,Used in primary computation
+CSS,383,766,2 human simplifications/source,Used as independent validation
+CSSWiki,~1600,~1600,operation-annotated pairs,Located as next independent corpus; not included in current computed totals
+UD Chinese GSDSimp,4997,n/a,dependency treebank,Located for next structural/argument analysis; not included in current simplification computation

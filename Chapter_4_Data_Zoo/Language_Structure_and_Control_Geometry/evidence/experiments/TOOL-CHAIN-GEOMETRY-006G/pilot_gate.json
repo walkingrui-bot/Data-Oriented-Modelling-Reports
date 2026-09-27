@@ -1,0 +1,42 @@
+{
+  "experiment": "TOOL-CHAIN-GEOMETRY-006G pilot gate",
+  "seed": 26093041,
+  "train_tasks": 6000,
+  "feature_dim": 665,
+  "training_nll": [
+    1.0469150727954466,
+    0.47932558009849763,
+    0.16094833250292337
+  ],
+  "seen_styles": [
+    0,
+    1,
+    2
+  ],
+  "heldout_styles": [
+    3,
+    4,
+    5
+  ],
+  "prefix_pilot_seen": {
+    "n": 6292,
+    "exact": 0.9195804195804196,
+    "valid": 1.0,
+    "by_cell": {
+      "P1_N1": 0.9319771137952956,
+      "P1_N0": 0.926255562619199,
+      "P0_N1": 0.9090909090909091,
+      "P0_N0": 0.9109980928162746
+    }
+  },
+  "baseline_seen": {
+    "P1_N1": 0.7291666666666666,
+    "P1_N0": 0.7333333333333333
+  },
+  "prospective_gate": {
+    "prefix_exact_threshold": 0.85,
+    "canonical_final_threshold": 0.65,
+    "seen_raw_final_threshold": 0.65,
+    "passed": true
+  }
+}
