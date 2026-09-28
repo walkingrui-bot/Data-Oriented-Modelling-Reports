@@ -1,0 +1,1 @@
+﻿换核红线  关系约束已经安全；Attention 的有效邻居数或残差门为了安全而塌缩；性能仍系统性落后于非混合 relation operator；同时局部 convex-mixture probe 显示混合态频繁离开经验支持域。四项合在一起，才进入“必须换核”。

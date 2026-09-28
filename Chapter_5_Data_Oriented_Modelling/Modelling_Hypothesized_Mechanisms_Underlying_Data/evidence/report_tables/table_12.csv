@@ -1,0 +1,4 @@
+Network,N_eff at β 2,Local 0.5 edge F1,Global oracle edge F1,Interpretation
+Karate Club,3.163,0.794,0.962,Large recovery with global projection.
+Davis Southern Women,3.435,0.729,0.966,Large recovery with global projection.
+Florentine Families,2.915,0.987,1.000,Almost complete recovery.

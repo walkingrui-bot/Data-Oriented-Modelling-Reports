@@ -1,0 +1,13 @@
+experiment,question,report_section,report_anchor,evidence_directory,report_evidence
+MDM-ATTN-001,Label assisted gap occupancy,3,3-label-assisted-tests-of-gap-occupancy,evidence/experiments/EARLY_REPORT_RECORDS,Figures 1–2
+MDM-ATTN-002,Unsupervised topology and neighbourhood preservation,4,4-unsupervised-tests-of-topological-distortion,evidence/experiments/EARLY_REPORT_RECORDS,Figures 3–5
+MDM-SPRING-001,Candidate screening from local compression,6,6-screening-candidates-based-on-local-compression,evidence/experiments/EARLY_REPORT_RECORDS,Table 2
+MDM-SPRING-002,Elastic local scale dissimilarity,7,7-the-elastic-local-scale-metric,evidence/experiments/EARLY_REPORT_RECORDS,Figures 6–8
+MDM-SPRING-003,SpringGraph and multiscale relations,8,8-springgraph-and-relations-across-scales,evidence/experiments/EARLY_REPORT_RECORDS,Figures 9–10
+MDM-ATTN-003,Geometry constraints around attention,9,9-geometry-constraints-around-standard-attention,evidence/experiments/EARLY_REPORT_RECORDS,Displayed equations and method
+MDM-ATTN-004,Aggregation replacement criteria,10,10-criteria-for-replacing-the-aggregation-operator,evidence/experiments/EARLY_REPORT_RECORDS,Table 3
+MDM-TRAIN-001,Training coverage and prevalence calibration,11,11-training-coverage-and-sampling-density,evidence/experiments/EARLY_REPORT_RECORDS,Figures 11–13; sections 11–12
+MDM-SOP-001,Validation of the modelling procedure,17,17-validation-of-the-complete-modelling-procedure,evidence/experiments/EARLY_REPORT_RECORDS,Tables 5–8; Figures 14–15
+MDM-KERNEL-001,Discrete graph state constraints,18,18-state-legality-in-discrete-graphs,evidence/experiments/EARLY_REPORT_RECORDS,Tables 9–12; Figures 16–18; sections 18–19
+MDM-KERNEL-002,Selecting operators from graph relations,20,20-selecting-operators-from-the-relation-mechanism,evidence/experiments/MDM-KERNEL-002,Tables 13–14; Figures 19–20; per-split CSVs
+MDM-SOP-BLIND-VALIDATION-003,Precommitted validation across four datasets,21,21-precommitted-validation-on-additional-datasets,evidence/experiments/MDM-SOP-BLIND-VALIDATION-003,Tables 15–19; Figures 21–25; staged scripts and per-split CSVs

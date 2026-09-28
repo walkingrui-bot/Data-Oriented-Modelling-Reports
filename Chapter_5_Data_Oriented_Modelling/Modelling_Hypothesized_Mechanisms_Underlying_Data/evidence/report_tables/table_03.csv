@@ -1,0 +1,4 @@
+Dataset,Local attention,Geometry constrained,Spring relation,Effective neighbours,Interpretation
+Digits,88.90%,89.59%,91.55%,4.22 → 2.78; about 1.25 with stronger λ,The correction recovers some performance; stronger constraints suppress mixing.
+Wine,93.96%,95.35%,96.10%,About 1.03,Near single-neighbour operation still trails Spring.
+Breast Cancer,94.17%,94.68%,93.70%,No comparable collapse observed,The correction is sufficient in this comparison; retain attention.

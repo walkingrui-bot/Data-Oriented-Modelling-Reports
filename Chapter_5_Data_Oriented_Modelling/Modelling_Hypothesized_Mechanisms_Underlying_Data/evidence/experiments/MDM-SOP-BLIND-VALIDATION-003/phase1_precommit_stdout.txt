@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-09-28T16:49:59.453308+00:00",
+  "datasets": {
+    "Engel": {
+      "decision": "COVERAGE_BALANCED_STRUCTURE_TRAINING",
+      "diagnostics": {
+        "d": 1,
+        "gap_q90": 3.0520182025951765,
+        "gap_q95": 3.747668015152517,
+        "income_occupancy": {
+          "bins": 8,
+          "counts": [
+            138,
+            70,
+            19,
+            6,
+            1,
+            0,
+            0,
+            1
+          ],
+          "max_bin_share": 0.5872340425531914,
+          "max_min_positive": 138.0,
+          "normalized_entropy": 0.48898567157657424
+        },
+        "k": 10,
+        "local_scale_q10": 0.013221260421660193,
+        "local_scale_q50": 0.026631852001773103,
+        "local_scale_q90": 0.09698111604242919,
+        "n": 235,
+        "scale_cv": 4.3969352816854546,
+        "scale_heterogeneity_q90_q10": 7.335239829596464
+      },
+      "mechanism_target": "recover the food-expenditure response law across the observed income support, giving comparable importance to different income regions",
+      "no_op_allowed": true,
+      "prediction": "Equal-width coverage-balanced training should improve macro-RMSE across income regions; ordinary RMSE may improve less or remain similar because natural occupancy is intentionally not the primary target."
+    },
+    "Les_Miserables": {
+      "decision": "RELATION_NATIVE_KERNEL",
+      "diagnostics": {
+        "average_clustering": 0.5731367499320135,
+        "components": 1,
+        "cycle_rank": 178,
+        "degree_max": 36,
+        "degree_mean": 6.597402597402597,
+        "n_edges": 254,
+        "n_nodes": 77,
+        "weighted_input": true
+      },
+      "mechanism_target": "recover held-out relations in a one-mode undirected relation network",
+      "no_op_allowed": true,
+      "prediction": "Because the observed graph has substantial path/cycle redundancy, path- or neighborhood-native scores (3-hop/Adamic-Adar/SVD) should outperform a simple degree/prevalence baseline; no state-mixing kernel is required."
+    },
+    "ModeChoice": {
+      "decision": "GROUP_CHOICE_KERNEL",
+      "diagnostics": {
+        "d": 6,
+        "gap_q90": 1.900286451638098,
+        "gap_q95": 2.2110457692964416,
+        "group_size_unique": [
+          4
+        ],
+        "k": 15,
+        "local_scale_q10": 0.34805556442853214,
+        "local_scale_q50": 0.7727715848055889,
+        "local_scale_q90": 1.2746421837457516,
+        "modes_per_group_unique": [
+          4
+        ],
+        "n": 840,
+        "n_groups": 210,
+        "scale_cv": 0.47846396168936345,
+        "scale_heterogeneity_q90_q10": 3.6621801632120716
+      },
+      "mechanism_target": "predict one selected alternative within each individual choice set",
+      "no_op_allowed": false,
+      "prediction": "Flat i.i.d. row training is mechanism-misaligned. A group-normalized conditional-choice likelihood should improve held-out choice-set log loss and should not reduce choice-set accuracy."
+    },
+    "RAND_HIE": {
+      "decision": "COUNT_LIKELIHOOD_KERNEL",
+      "diagnostics": {
+        "d": 9,
+        "gap_q90": 9.796075375761767,
+        "gap_q95": 84570151282.83447,
+        "k": 20,
+        "local_scale_q10": 0.0,
+        "local_scale_q50": 0.12140177376569668,
+        "local_scale_q90": 0.8710379078410981,
+        "n": 5000,
+        "scale_cv": 1.5942247996920167,
+        "scale_heterogeneity_q90_q10": 871037907841.0981
+      },
+      "measurement_mechanism": "mdvis is a nonnegative count of medical visits (dataset variable semantics); values not inspected in phase 1",
+      "mechanism_target": "predict visit counts with a likelihood consistent with count-valued observations",
+      "no_op_allowed": false,
+      "prediction": "A Poisson log-link learner should improve Poisson deviance over a Gaussian/Ridge baseline; RMSE need not be the main winner because the target mechanism is count likelihood."
+    }
+  },
+  "rule": "All decisions below are based on design/feature/topology diagnostics only. Targets and downstream scores are not inspected until this file is written and hashed.",
+  "title": "MDM-SOP-BLIND-VALIDATION-003 precommit"
+}
+SHA256 9fe8186f86ddd697e29544bf8d4089aa1ff47fe49fcc987bbeb36d659e243159

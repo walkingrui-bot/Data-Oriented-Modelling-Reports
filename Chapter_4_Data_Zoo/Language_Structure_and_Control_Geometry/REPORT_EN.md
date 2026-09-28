@@ -1,6 +1,6 @@
 # Language Structure and Control Geometry
 
-Biosphere 3 · Chapter 4 Data Zoo · Subreport 1 · Language
+Data-Oriented Modelling · Chapter 4 Data Zoo · Subreport 1 · Language
 
 English report edition v1.0 · 27 September 2026
 
@@ -54,7 +54,7 @@ Publication annotations identify two specific limitations in the supplied record
 
 ## 1 Scope and evidence conventions
 
-Parent record. Chapter 3 - Machine Learning Epidemiology and Case Dissection, especially Research_Report/REPORT_EN.md sections 25-30, 49.4-49.6 and 50.2 in the public Biosphere 3 repository.
+Parent record. Chapter 3 - Machine Learning Epidemiology and Case Dissection, especially Research_Report/REPORT_EN.md sections 25-30, 49.4-49.6 and 50.2 in the public Data-Oriented Modelling repository.
 
 Topical scope. This edition studies language and response form as observable structure: how linguistic material is organized, compressed, recoded and moved through predictive/control geometry, and how the same task is realized as natural-language procedural response versus algorithmic response. Neural hidden states, corpus transition fields, human simplification behavior, explicit token codes, procedural event paths and executable code structure are treated as complementary measurement interfaces.
 

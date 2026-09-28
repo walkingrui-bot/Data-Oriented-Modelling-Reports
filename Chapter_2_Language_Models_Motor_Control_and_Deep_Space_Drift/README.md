@@ -13,4 +13,4 @@ Find the source of a future fork before the outputs split, map where the future 
 | Connections with Chapter 1 | [Read](docs/PHASE2_CONNECTIONS.md) |
 | Chapters 1 and 2 archival record | [DOI: 10.5281/zenodo.22974937](https://doi.org/10.5281/zenodo.22974937) |
 
-The [shared project and original path map](../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/REPOSITORY_ORGANIZATION.md) are kept once under Chapter 1. [Original reproduction instructions](https://github.com/walkingrui-bot/biosphere-3-public-reports/blob/v0.1.0/docs/REPRODUCTION.md) belong to the preserved v0.1.0 layout.
+The [shared project and original path map](../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/REPOSITORY_ORGANIZATION.md) are kept once under Chapter 1. [Original reproduction instructions](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/v0.1.0/docs/REPRODUCTION.md) belong to the preserved v0.1.0 layout.

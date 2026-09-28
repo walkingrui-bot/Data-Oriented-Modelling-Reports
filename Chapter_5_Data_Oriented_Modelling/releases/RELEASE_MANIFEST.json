@@ -1,18 +1,30 @@
 {
   "date": "2026-09-28",
-  "version": "1.0",
   "chapter": 5,
-  "report": 1,
+  "reports": [
+    1,
+    3
+  ],
   "downloads": [
-    {
-      "file": "Data_Oriented_Modelling_01_Publication_v1.0_20260928.zip",
-      "bytes": 22490169,
-      "sha256": "32f9e2e73fa39bf4af41031e8b912f7ffa105bac63fa2f21c148a70469030575"
-    },
     {
       "file": "Data_Oriented_Modelling_01_Evidence_v1.0_20260928.zip",
       "bytes": 9803517,
       "sha256": "7b6bc280347e2f2ae1af3be3aebc94ac7a01442beded5f23e212577e17dc7fee"
+    },
+    {
+      "file": "Data_Oriented_Modelling_01_Publication_v1.0_20260928.zip",
+      "bytes": 22499404,
+      "sha256": "3a01d461b687c6c10e7ff82c353d5c6d081e7dc8b0da3d839792e1da284dd3fe"
+    },
+    {
+      "file": "Data_Oriented_Modelling_03_Evidence_v1.0_20260928.zip",
+      "bytes": 3320369,
+      "sha256": "2bb1581f1150d308cd05aee2184e303060619de5c5c4ab71a2a744f83e4755d4"
+    },
+    {
+      "file": "Data_Oriented_Modelling_03_Publication_v1.0_20260928.zip",
+      "bytes": 5049057,
+      "sha256": "a47111f10ae6317eac78a8bc908c338c0cf34185c74923f96412e9db50f09747"
     }
   ]
 }

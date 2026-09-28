@@ -1,0 +1,3 @@
+Metric,Flat logistic,Group-choice model,Difference
+Choice-set NLL,1.0070,0.9394,6.72% improvement
+Choice-set accuracy,70.63%,70.26%,−0.37 pp

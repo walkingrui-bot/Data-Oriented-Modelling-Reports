@@ -1,0 +1,358 @@
+{
+  "2": {
+    "labels": [
+      "Breast Cancer",
+      "Digits"
+    ],
+    "series": [
+      "Original geometry",
+      "Global attention",
+      "Local attention"
+    ],
+    "values": [
+      [
+        9.67,
+        6.24
+      ],
+      [
+        13.36,
+        13.56
+      ],
+      [
+        7.56,
+        4.89
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Observations in the designated gap (%)",
+    "ylim": [
+      0,
+      16
+    ]
+  },
+  "3": {
+    "labels": [
+      "Iris",
+      "Wine",
+      "Breast Cancer",
+      "Digits"
+    ],
+    "series": [
+      "Global attention",
+      "Local attention"
+    ],
+    "values": [
+      [
+        54.7,
+        51.0,
+        37.7,
+        58.1
+      ],
+      [
+        61.4,
+        63.4,
+        49.2,
+        62.9
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Neighbour retention (%)",
+    "ylim": [
+      0,
+      76
+    ]
+  },
+  "4": {
+    "labels": [
+      "Iris",
+      "Wine",
+      "Breast Cancer",
+      "Digits"
+    ],
+    "series": [
+      "Global attention",
+      "Local attention"
+    ],
+    "values": [
+      [
+        0.931,
+        0.931,
+        0.918,
+        0.988
+      ],
+      [
+        0.946,
+        0.967,
+        0.945,
+        0.994
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Trustworthiness",
+    "ylim": [
+      0.87,
+      1.015
+    ]
+  },
+  "5": {
+    "labels": [
+      "Wine",
+      "Digits"
+    ],
+    "series": [
+      "Original geometry",
+      "Global attention",
+      "Local attention"
+    ],
+    "values": [
+      [
+        1.98,
+        2.06
+      ],
+      [
+        0.91,
+        0.58
+      ],
+      [
+        1.47,
+        2.86
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Between component gap / within component scale",
+    "ylim": [
+      0,
+      3.45
+    ]
+  },
+  "6": {
+    "labels": [
+      "Breast Cancer",
+      "Digits",
+      "Iris",
+      "Wine"
+    ],
+    "series": [
+      "Euclidean",
+      "Elastic arithmetic scale",
+      "Elastic geometric scale"
+    ],
+    "values": [
+      [
+        95.53,
+        96.21,
+        95.75,
+        96.06
+      ],
+      [
+        96.36,
+        97.42,
+        96.74,
+        98.06
+      ],
+      [
+        96.41,
+        97.28,
+        96.42,
+        98.52
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Accuracy (%)",
+    "ylim": [
+      93,
+      100
+    ]
+  },
+  "7": {
+    "labels": [
+      "Breast Cancer",
+      "Digits",
+      "Wine"
+    ],
+    "series": [
+      "Euclidean",
+      "Elastic arithmetic scale",
+      "Elastic geometric scale"
+    ],
+    "values": [
+      [
+        97.92,
+        89.71,
+        85.42
+      ],
+      [
+        98.61,
+        92.7,
+        92.71
+      ],
+      [
+        98.96,
+        92.37,
+        94.79
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Sparse quartile accuracy (%)",
+    "ylim": [
+      80,
+      102
+    ]
+  },
+  "8": {
+    "labels": [
+      "$R^2$ × 100",
+      "Overall RMSE",
+      "Sparse quartile RMSE"
+    ],
+    "series": [
+      "Euclidean",
+      "Elastic local scale"
+    ],
+    "values": [
+      [
+        42.48,
+        57.5,
+        57.77
+      ],
+      [
+        43.82,
+        56.81,
+        56.12
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Reported value (compare within each pair)",
+    "ylim": [
+      0,
+      67
+    ]
+  },
+  "9": {
+    "labels": [
+      "Iris",
+      "Wine",
+      "Breast Cancer",
+      "Digits"
+    ],
+    "series": [
+      "Euclidean graph",
+      "SpringGraph"
+    ],
+    "values": [
+      [
+        90.07,
+        95.0,
+        94.38,
+        95.62
+      ],
+      [
+        91.41,
+        97.25,
+        94.88,
+        96.19
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Propagation accuracy (%)",
+    "ylim": [
+      88,
+      99.3
+    ]
+  },
+  "10": {
+    "labels": [
+      "Breast Cancer",
+      "Digits",
+      "Iris",
+      "Wine"
+    ],
+    "series": [
+      "Euclidean baseline",
+      "Scale router"
+    ],
+    "values": [
+      [
+        95.72,
+        95.83,
+        96.5,
+        97.22
+      ],
+      [
+        96.05,
+        96.94,
+        96.94,
+        97.78
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Outer test accuracy (%)",
+    "ylim": [
+      94.5,
+      99
+    ]
+  },
+  "11": {
+    "labels": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "series": [
+      "Observations"
+    ],
+    "values": [
+      [
+        58,
+        130,
+        124,
+        71,
+        44,
+        12,
+        3
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "Number of observations",
+    "ylim": [
+      0,
+      151
+    ]
+  },
+  "12": {
+    "labels": [
+      "Overall RMSE",
+      "Macro RMSE"
+    ],
+    "series": [
+      "Ordinary training",
+      "Coverage balanced training"
+    ],
+    "values": [
+      [
+        64.01,
+        65.43
+      ],
+      [
+        63.37,
+        60.22
+      ]
+    ],
+    "source": "Numbers printed on the source report figure; English labels redrawn without changing reported values.",
+    "axis": "RMSE",
+    "ylim": [
+      56,
+      69
+    ]
+  },
+  "1": {
+    "source": "Source Figure 1 schematic; all operation boxes and the separate geometry branch retained with English labels."
+  },
+  "13": {
+    "source": "Source Figure 13 schematic; operation order and aggregation-replacement branch retained; compact two-row layout."
+  }
+}

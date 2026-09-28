@@ -1,0 +1,5 @@
+Dataset,Local attention,Geometry guard,Gain pp,Median N_eff,Guard win rate
+Breast Cancer,70.98%,80.84%,+9.86,3.62,100%
+Digits,92.07%,93.12%,+1.05,6.84,98%
+Wine,93.83%,94.82%,+0.98,10.05,74%
+Iris,87.89%,87.99%,+0.10,13.90,24%

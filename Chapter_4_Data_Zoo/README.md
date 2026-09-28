@@ -1,6 +1,6 @@
 # Chapter 4 — Data Zoo
 
-[All chapters](https://github.com/walkingrui-bot/biosphere-3-public-reports) · [Previous: Chapter 3](https://github.com/walkingrui-bot/biosphere-3-public-reports/tree/main/Chapter_3_Machine_Learning_Epidemiology)
+[All chapters](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports) · [Previous: Chapter 3](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/tree/main/Chapter_3_Machine_Learning_Epidemiology)
 
 Data Zoo is a continuing collection of studies built around concrete datasets. Each subreport brings together its English report, figures, methods, result tables and source evidence. Subreports develop independently and retain their own dated versions.
 
@@ -11,6 +11,6 @@ Data Zoo is a continuing collection of studies built around concrete datasets. E
 
 Subreport numbers identify the research series. This catalog lists the editions available in the current repository.
 
-[Download Subreport 1 publication package](https://github.com/walkingrui-bot/biosphere-3-public-reports/raw/refs/heads/main/Chapter_4_Data_Zoo/releases/Data_Zoo_01_Language_Publication_v1.0.zip) — English Word and online report, all 69 figures, 79 research and evidence tables, two reader tables, authored experiment materials, source records and checksums. [Download the evidence collection separately](https://github.com/walkingrui-bot/biosphere-3-public-reports/raw/refs/heads/main/Chapter_4_Data_Zoo/releases/Data_Zoo_01_Language_Evidence_v1.0.zip). The evidence index maps fifteen recovered study archives and four studies represented by their report results, tables and figures. Provider datasets are obtained separately.
+[Download Subreport 1 publication package](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/raw/refs/heads/main/Chapter_4_Data_Zoo/releases/Data_Zoo_01_Language_Publication_v1.0.zip) — English Word and online report, all 69 figures, 79 research and evidence tables, two reader tables, authored experiment materials, source records and checksums. [Download the evidence collection separately](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/raw/refs/heads/main/Chapter_4_Data_Zoo/releases/Data_Zoo_01_Language_Evidence_v1.0.zip). The evidence index maps fifteen recovered study archives and four studies represented by their report results, tables and figures. Provider datasets are obtained separately.
 
-[Download Subreport 2 publication package](https://github.com/walkingrui-bot/biosphere-3-public-reports/raw/refs/heads/main/Chapter_4_Data_Zoo/releases/Data_Zoo_02_Human_Learning_Publication_v1.0_20260927.zip) — English Word and online report, all 17 images, authored analysis outputs and code, source references and checksums. Provider datasets are obtained separately.
+[Download Subreport 2 publication package](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/raw/refs/heads/main/Chapter_4_Data_Zoo/releases/Data_Zoo_02_Human_Learning_Publication_v1.0_20260927.zip) — English Word and online report, all 17 images, authored analysis outputs and code, source references and checksums. Provider datasets are obtained separately.

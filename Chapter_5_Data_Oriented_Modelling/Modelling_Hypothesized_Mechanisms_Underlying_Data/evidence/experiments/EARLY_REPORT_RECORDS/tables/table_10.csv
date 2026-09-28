@@ -1,0 +1,13 @@
+﻿状态,候选,当前解释
+保留,Geometry mask,禁止跨空窗/断层连接；适合作为 Attention 外壳。
+保留,Elastic local-scale bias,在同一真实局部邻域中按当地尺度解释距离。
+保留,SpringGraph relation,不移动点，只重标关系强度；少标签传播表现稳定。
+保留,Scale trace,描述一个 observation 在不同观察半径下的压缩状态；作为诊断/路由依据。
+保留,Task/data-block router,让 Euclid / Spring / 其他关系算子按数据证据选择；4/4 分类外层测试正增益。
+保留,Coverage-balanced structure training,在检测到 coverage imbalance 时均衡已观测区域的训练机会。
+保留,Prevalence calibration,结构学习后恢复真实出现频率。
+淘汰为默认,长 spring trace feature,高阶量直接堆入特征会过拟合。
+淘汰为默认,统一 inverse-density loss,密度低不等于重要；真实 prevalence 可能被误删。
+淘汰为默认,多尺度简单平均,不同数据偏好不同尺度，平均会糊掉局部结构。
+淘汰为默认,min-over-scale tension,存在机械偏爱大尺度的问题，物理解读失真。
+淘汰为默认,Spring message 常开,Digits/Iris 有收益，Wine/Breast Cancer 添噪声；relation 层比 message 层稳定。

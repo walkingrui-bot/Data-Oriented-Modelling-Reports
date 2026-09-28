@@ -1,6 +1,6 @@
-# Biosphere 3 — Project Information
+# Data-Oriented Modelling — Project Information
 
-Biosphere 3 is a personal-interest research project by an independent researcher. It began with curiosity about what language models do as they generate, reason, and respond to their own outputs.
+Data-Oriented Modelling is a personal-interest research project by an independent researcher. It began with curiosity about what language models do as they generate, reason, and respond to their own outputs.
 
 The work is self-directed and conducted without academic supervision or institutional research guidance. Its questions, experiments, and interpretations are developed independently by the author.
 

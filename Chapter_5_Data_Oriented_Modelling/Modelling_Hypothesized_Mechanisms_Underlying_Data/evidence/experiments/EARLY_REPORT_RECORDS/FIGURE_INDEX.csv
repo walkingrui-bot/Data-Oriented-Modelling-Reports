@@ -1,0 +1,19 @@
+﻿figure_index,file,section,caption
+1,figure_01.png,2. 起点：Attention 为什么会拉歪数据空窗,图 1  不改 Attention 内核的几何修正框架：原始几何负责制定可见边界，标准 Attention 仍负责内容相关的关系评分。
+2,figure_02.png,3.3 结果,图 2  Breast Cancer 与 Digits 的低密度中间区占用。全局 Attention 明显增加中间区占用，局部 Attention 则保留更多原始分离。
+3,figure_03.png,4. MDM-ATTN-002：无监督拓扑失真,图 3  一次 Attention 更新后，原始 10-NN 邻域还能保留多少。4/4 数据集全局 Attention 均低于局部 Attention。
+4,figure_04.png,4. MDM-ATTN-002：无监督拓扑失真,图 4  Trustworthiness 对照。局部 Attention 在 4/4 数据集上保持更多原始邻域秩结构。
+5,figure_05.png,4. MDM-ATTN-002：无监督拓扑失真,图 5  mutual-kNN 天然结构的相对分离度。全局 Attention 在 Wine 与 Digits 中显著压缩块间间隔。
+6,figure_06.png,7. MDM-SPRING-002：Elastic Local-Scale Metric,图 6  固定同一设置的 Elastic Local-Scale Metric 分类结果。4 个真实分类数据集均出现正增益。
+7,figure_07.png,7. MDM-SPRING-002：Elastic Local-Scale Metric,图 7  稀疏四分位的改善更明显，尤其 Wine 与 Digits。
+8,figure_08.png,7. MDM-SPRING-002：Elastic Local-Scale Metric,图 8  Diabetes 回归中的同方向结果。
+9,figure_09.png,8. MDM-SPRING-003：SpringGraph 与 relation operator,图 9  10% 标签图传播。SpringGraph 在 4/4 真实分类数据集上超过普通欧氏图。
+10,figure_10.png,8. MDM-SPRING-003：SpringGraph 与 relation operator,图 10  任务级局部尺度 Router。在 4 个分类数据集外层测试中均提高准确率。
+11,figure_11.png,11. MDM-TRAIN-001：训练集本身也会被密度挤歪,图 11  Diabetes BMI 的 7 个等宽区间占用。中间两个区间合计 254/442，占 57.5% 的样本。
+12,figure_12.png,12. Coverage-aware structure learning,图 12  Coverage-balanced training 同时改善普通总体 RMSE 与等区域 Macro-RMSE，其中 Macro-RMSE 改善最明显。
+13,figure_13.png,13. 最终工程模板：面向数据，也面向数据背后的机制,图 13  从数据体检、结构学习、关系约束，到 prevalence calibration 与换核判据的完整流程。
+14,figure_14.png,17.2 Geometry guard 的操作必须允许 no-op,图14. 5% 标签条件下 geometry guard 相对局部 Attention 的准确率增益。不同数据要求不同操作强度，Iris 接近无需修正。
+15,figure_15.png,17.3 结构规律与真实 prevalence 可以拆开,图15. Balanced structure training 提高结构判别，但改变概率世界；恢复真实 prevalence 后，概率语义大幅恢复。
+16,figure_16.png,18.3 非退化 Attention 下，合法性持续被破坏,图16. Karate Club 在 β=2、只允许 self+真实邻居的条件下，Attention 对邻接状态做加权混合。输出已经出现大量连续值与拓扑改写。
+17,figure_17.png,18.4 安全线一旦满足，Attention 已经几乎不再 Attention,图17. 非边泄漏质量与有效邻居数。虚线分别表示 5% 泄漏安全线与 N_eff=2 的非退化线；进入安全区时三张图都已接近单状态复制。
+18,figure_18.png,18.5 投影可以救，但那意味着 Attention 已经降级为 proposal,图18. 局部阈值投影的 Edge-F1 与 N_eff。大多数数据只有在 Attention 接近单状态复制后，局部投影才稳定恢复结构。

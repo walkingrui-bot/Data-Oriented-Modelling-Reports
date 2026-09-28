@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-28",
+  "chapter": 5,
+  "report": 3,
+  "edition": "1.0",
+  "report_docx_sha256": "77b7103700435e83926b935d4af9fce0ae6434745c50372180292f2ef410b8f1",
+  "report_pages": 41,
+  "report_figures": 25,
+  "numbered_research_tables": 19,
+  "glossary_tables": 1,
+  "equation_displays": 15,
+  "source_numeric_cells_preserved": 179,
+  "source_collection_checksums_verified": 81,
+  "precommit_sha256": "9fe8186f86ddd697e29544bf8d4089aa1ff47fe49fcc987bbeb36d659e243159",
+  "precommit_hash_matches": true,
+  "evidence_source_files": 70,
+  "external_provider_raw_files_in_release": 0,
+  "evidence_levels": [
+    {
+      "study_or_record_group": "EARLY_REPORT_RECORDS",
+      "published_directory": "evidence/experiments/EARLY_REPORT_RECORDS",
+      "source_record_files": 41,
+      "source_bytes": 1578366,
+      "evidence_level": "Report-embedded records"
+    },
+    {
+      "study_or_record_group": "MDM-KERNEL-002",
+      "published_directory": "evidence/experiments/MDM-KERNEL-002",
+      "source_record_files": 10,
+      "source_bytes": 308430,
+      "evidence_level": "Per-split measurements and protocol sketch"
+    },
+    {
+      "study_or_record_group": "MDM-SOP-BLIND-VALIDATION-003",
+      "published_directory": "evidence/experiments/MDM-SOP-BLIND-VALIDATION-003",
+      "source_record_files": 19,
+      "source_bytes": 295028,
+      "evidence_level": "Precommit record; executable staged analyses; per-split measurements"
+    }
+  ],
+  "calculation_scope": "Means and win counts recalculated from supplied per-split CSVs; original report comparisons retained.",
+  "recalculated_values_and_counts": 115,
+  "figure_reproduction_scripts": 1
+}

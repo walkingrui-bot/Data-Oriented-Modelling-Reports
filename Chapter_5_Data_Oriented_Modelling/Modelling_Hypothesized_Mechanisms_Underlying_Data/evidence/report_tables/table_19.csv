@@ -1,0 +1,5 @@
+Dataset,Precommitted operation,Observed assessment,Implication for the procedure
+ModeChoice,Group-normalized choice model,Principal NLL target improves; mean accuracy is slightly lower.,Mechanism assumptions identify a relevant loss; evaluate other task metrics separately.
+Engel,Direct coverage correction,Prediction fails.,"A diagnostic opens a candidate comparison, including the unchanged baseline."
+RAND HIE,Poisson count model,Predicted deviance direction with a very small effect.,Choose a family before selecting its precise member.
+Les Misérables,Relation-based operator,Strong improvement over the degree-based comparison.,State constraints and redundant paths help constrain useful candidates before downstream scoring.

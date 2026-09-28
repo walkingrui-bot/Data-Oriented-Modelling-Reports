@@ -1,0 +1,7 @@
+Relation operator,Mean AUC over 100 splits
+Preferential attachment,0.775
+Common neighbours,0.907
+Adamic–Adar,0.914
+Three-hop score A³,0.856
+Rank-8 SVD,0.827
+Neighbour-profile cosine,0.882

@@ -1,0 +1,13 @@
+﻿编号,假说,当前状态,主要证据
+H1,全局 Attention 会在部分真实数据中桥接低密度空窗并重排局部几何,支持,Breast Cancer 空窗占用 +38.2%；Digits +117.4%；4/4 数据集全局 Attention 的邻域保留率低于局部 Attention。
+H2,只要堵住跨空窗关系，Attention 就总能继续作为合法的状态转换核,否定,在三张真实离散图上，即使 Attention 只看自己与真实邻居，WA 聚合仍产生大量非边、自环与非对称；要进入安全区，N_eff 几乎必须塌到 1。
+H3,局部压缩尺度可以作为数据原生关系尺度,支持,Elastic local metric 在 4 个分类数据集与 Diabetes 回归中出现重复收益，尤其集中在稀疏区。
+H4,高阶“加速度/jerk”特征直接塞给模型会更好,淘汰,长 spring trace、高阶差分、强制加速度惩罚多次出现过拟合或性能下降。
+H5,真正对象更像一条 scale trace，而不是单一尺度,支持,不同数据偏好不同 k；直接平均多尺度会掉点，路由尺度家族更稳定。
+H6,训练集密度不均匀应统一做 inverse-density loss,淘汰,简单反密度权重在多数据上不稳定；Diabetes 回归甚至略降。
+H7,结构学习与真实出现频率应分开处理,支持,Diabetes BMI coverage-balanced 训练使 macro-RMSE 65.43→60.22，同时总体 RMSE 64.01→63.37。
+H8,Attention 是否换核可以用 wrapper exhaustion 判据决定,已获得正触发验证,Karate、Davis、Florentine 三张真实图均出现：几何关系已经安全，但状态混合本体仍非法；满足安全线时 N_eff≈1。
+H9,数据诊断本身不能直接等同于修正动作；操作必须服从目标机制,支持,Diabetes BMI/s4/age 在相同 coverage balancing 下方向不同；同一数据在 natural RMSE 与 macro-RMSE 两个目标下收益也不同。
+H10,结构学习与 prevalence 可以拆开，并在输出端重新校准,支持,Digits 0-vs-rest：balanced structure training 提高 balanced accuracy/recall，但 log-loss 变差；恢复真实 prevalence 后约追回 80% 的额外 log-loss。
+H11,缺失 support 不能靠 reweighting 创造出来,支持,Digits 中心偏采样后外围准确率 93.13%→86.99%；即使 oracle inverse-propensity weighting 也仅到 87.59%。
+H12,Attention 可保留为 scoring/proposal，但在非凸离散状态上不应继续承担状态生成,支持,全局离散投影可把 Attention 提议恢复为合法图，但真正执行合法化的是投影核；relation-only edge gating 则从一开始保持 support 与对称性。

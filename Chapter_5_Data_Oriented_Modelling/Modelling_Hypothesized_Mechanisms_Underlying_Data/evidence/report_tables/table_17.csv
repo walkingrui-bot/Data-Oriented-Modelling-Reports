@@ -1,0 +1,4 @@
+Metric,Gaussian ridge,Poisson log link,Assessment
+Poisson deviance,4.1718,4.1690,Predicted direction with a very small gain
+RMSE,4.349,4.361,Slightly higher error
+MAE,2.587,2.595,Slightly higher error

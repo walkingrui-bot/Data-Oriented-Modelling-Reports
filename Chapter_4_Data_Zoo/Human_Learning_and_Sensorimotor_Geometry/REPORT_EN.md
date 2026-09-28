@@ -1,6 +1,6 @@
 # Human Learning and Sensorimotor Geometry
 
-Biosphere 3 · Chapter 4 Data Zoo · Subreport 2
+Data-Oriented Modelling · Chapter 4 Data Zoo · Subreport 2
 
 Living research report · English edition v1.0 · 27 September 2026
 
@@ -521,7 +521,7 @@ Table note. Scope: the 20 selected clips and the recorded technical-English corp
 
 - Public AMC source mirror used for reproducible file identity: <https://github.com/cyun9601/CMU-MOCAP-Data> . Exact Git blob SHAs are listed in source\_manifest.csv.
 
-- Natural-language corpus: walkingrui-bot/biosphere-3-public-reports, Chapter 3 evidence bundle, Git blob 51ccc565cb49f1da25c5791e62a8590ff2f72992.
+- Natural-language corpus: walkingrui-bot/Data-Oriented-Modelling-Reports, Chapter 3 evidence bundle, Git blob 51ccc565cb49f1da25c5791e62a8590ff2f72992.
 
 - d'Avella A, Saltiel P, Bizzi E. Combinations of muscle synergies in the construction of a natural motor behavior. Nature Neuroscience. 2003;6:300–308. doi:10.1038/nn1010.
 

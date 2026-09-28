@@ -1,0 +1,4 @@
+﻿阶段,Balanced accuracy,0 的 recall,Log-loss
+Natural training,98.68%,97.43%,0.01220
+Balanced structure training,99.10%,98.60%,0.01737
+恢复真实 prevalence,≈99.10%*,≈98.60%*,0.01322

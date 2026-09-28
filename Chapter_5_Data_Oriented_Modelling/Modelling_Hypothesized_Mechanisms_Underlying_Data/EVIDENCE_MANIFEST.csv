@@ -1,0 +1,4 @@
+study_or_record_group,published_directory,source_record_files,source_bytes,evidence_level
+EARLY_REPORT_RECORDS,evidence/experiments/EARLY_REPORT_RECORDS,41,1578366,Report-embedded records
+MDM-KERNEL-002,evidence/experiments/MDM-KERNEL-002,10,308430,Per-split measurements and protocol sketch
+MDM-SOP-BLIND-VALIDATION-003,evidence/experiments/MDM-SOP-BLIND-VALIDATION-003,19,295028,Precommit record; executable staged analyses; per-split measurements

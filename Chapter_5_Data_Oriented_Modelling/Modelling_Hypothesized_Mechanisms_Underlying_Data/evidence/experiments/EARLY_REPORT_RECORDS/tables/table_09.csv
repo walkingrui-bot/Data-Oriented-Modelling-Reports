@@ -1,0 +1,1 @@
+﻿硬边界  Weighting 能重新分配已经存在的 observation；它不会创造训练集中根本没有覆盖到的结构。Scale trace 显示某区域已经接近没有 observation 时，正确动作是标记 coverage insufficient，进入数据获取或补采样，而不是给孤立点无限权重。

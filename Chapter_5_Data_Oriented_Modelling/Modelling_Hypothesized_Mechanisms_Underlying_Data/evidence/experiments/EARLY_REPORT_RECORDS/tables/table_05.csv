@@ -1,0 +1,9 @@
+﻿候选,操作,实验结果,决策
+局部密度标量,将 ρᵢ 直接作为 feature,收益有限,保留为诊断量
+inverse-density loss,稀疏点直接获得更大 loss 权重,跨数据不稳定,淘汰为通用默认
+局部 spring force,由局部压缩差形成方向向量,Digits 等数据有收益,可作实验特征，但不是最终底座
+高阶 spring trace / 二阶差分,把 scale 变化、加速度、jerk 作为长特征串,多次过拟合,淘汰为默认输入
+全局 spring RBF kernel,将 local scale 硬塞入全局 kernel,只有个别数据收益,淘汰为统一核
+加速度惩罚 / 有向高压→低压,跨压缩突变边额外惩罚,Digits/Iris 下降,淘汰
+Elastic Local-Scale Metric,只改“当地一尺多长”，不移动点,跨分类/回归重复收益,保留
+SpringGraph relation,同一局部边集合，仅重标关系强度,少标签传播稳定收益,保留

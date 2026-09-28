@@ -1,0 +1,4 @@
+Condition,Overall accuracy,Peripheral quartile accuracy
+Complete training coverage,94.12%,93.13%
+Centre-biased sampling,92.47%,86.99%
+Oracle inverse-propensity weighting,92.44%,87.59%

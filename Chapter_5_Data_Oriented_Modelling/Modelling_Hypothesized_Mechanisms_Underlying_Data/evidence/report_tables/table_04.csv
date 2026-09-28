@@ -1,0 +1,13 @@
+Disposition,Candidate,Interpretation
+Retain,Geometry mask,Constrain connections across gaps and discontinuities around attention.
+Retain,Elastic local-scale bias,Interpret distance using regional scale within the same local neighbourhood.
+Retain,SpringGraph relations,Reweight relations without moving observations; stable results with few labels.
+Retain,Scale trace,Describe local compression at several observation radii for diagnosis and routing.
+Retain,Task or data-block router,"Choose Euclidean, Spring or other relations using data evidence; gains in four outer-test classification comparisons."
+Retain conditionally,Coverage-balanced structure learning,Give observed regions more comparable training influence when the target and validation support it.
+Retain,Prevalence calibration,Restore the relevant occurrence frequencies after structural learning.
+Reject as a default,Long spring-trace features,Directly stacking higher-order quantities can overfit.
+Reject as a default,Uniform inverse-density loss,Low density need not imply greater target importance; relevant prevalence can be lost.
+Reject as a default,Simple multiscale averaging,Averaging can obscure the local structure preferred by a particular dataset.
+Reject as a default,Minimum tension across scales,"Mechanically favours larger scales, weakening the intended interpretation."
+Reject as a default,Always-on Spring messages,Benefits Digits and Iris but adds noise in Wine and Breast Cancer; relation reweighting is more stable.

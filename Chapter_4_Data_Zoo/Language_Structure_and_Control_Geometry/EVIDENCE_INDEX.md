@@ -1,6 +1,6 @@
 # Evidence index
 
-Biosphere 3 · Chapter 4 Data Zoo · Subreport 1 · Language · English v1.0
+Data-Oriented Modelling · Chapter 4 Data Zoo · Subreport 1 · Language · English v1.0
 
 This index distinguishes recovered experiment artifacts from tables and images extracted from the supplied report. Recovery verifies file availability and integrity; it does not imply that every analysis was independently rerun.
 
@@ -28,7 +28,7 @@ This index distinguishes recovered experiment artifacts from tables and images e
 
 ## Inherited foundation
 
-[Chapter 3](https://github.com/walkingrui-bot/biosphere-3-public-reports/tree/main/Chapter_3_Machine_Learning_Epidemiology) supplies LANG-016 through LANG-019. The language issue retains their reported findings and scope. Those inherited campaigns are not counted among the nineteen topical studies or the fifteen recovered archives.
+[Chapter 3](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/tree/main/Chapter_3_Machine_Learning_Epidemiology) supplies LANG-016 through LANG-019. The language issue retains their reported findings and scope. Those inherited campaigns are not counted among the nineteen topical studies or the fifteen recovered archives.
 
 ## Analysis coverage
 

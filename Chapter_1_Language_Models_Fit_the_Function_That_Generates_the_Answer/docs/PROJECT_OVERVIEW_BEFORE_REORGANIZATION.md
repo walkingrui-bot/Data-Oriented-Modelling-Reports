@@ -1,6 +1,6 @@
 > Historical project overview preserved during the chapter reorganization. Use the [three-chapter homepage](../../README.md) for the current reading order.
 
-# Biosphere 3 — Public Reports
+# Data-Oriented Modelling — Reports
 
 ## Chapter 3 · Research and The Engineer’s Edition
 
@@ -160,7 +160,7 @@ For the per-episode RTG outputs, `python scripts/prepare_evidence.py` restores t
 
 ## Versions, citation, and feedback
 
-The initial Phases 1 and 2 release is **v0.1.0**, with a research snapshot dated **25 September 2026** and report editions revised **26 September 2026**. Chapter 3 pairs **Machine Learning Epidemiology v1.9** with **The Engineer’s Edition v0.6** in an archival snapshot dated **26 September 2026**. These records are collected under **Biosphere 3 — Public Reports**, and each retains its own version history.
+The initial Phases 1 and 2 release is **v0.1.0**, with a research snapshot dated **25 September 2026** and report editions revised **26 September 2026**. Chapter 3 pairs **Machine Learning Epidemiology v1.9** with **The Engineer’s Edition v0.6** in an archival snapshot dated **26 September 2026**. These records are collected under **Data-Oriented Modelling — Reports**, and each retains its own version history.
 
 [Change history](../CHANGELOG.md) · [Release notes](../RELEASE_NOTES.md) · [Citation guidance](../CITATION.md) · [Source and reuse notes](../SOURCE_NOTES.md)
 

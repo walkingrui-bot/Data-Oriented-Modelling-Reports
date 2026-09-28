@@ -1,0 +1,9 @@
+Candidate,Operation,Observed result,Disposition
+Local density scalar,Append ρᵢ as a feature.,Limited gain.,Retain as a diagnostic.
+Inverse-density loss,Increase the loss weight of sparse observations.,Unstable across datasets.,Reject as a universal default.
+Local spring force,Construct a direction from differences in local compression.,Gains in datasets including Digits.,Retain as an experimental feature.
+Higher-order spring trace,"Append scale changes, acceleration, jerk or second differences as a long feature sequence.",Repeated overfitting.,Reject as a default input.
+Global spring RBF kernel,Insert local scale into a global kernel.,Gains in isolated datasets.,Reject as a universal kernel.
+Acceleration penalty or directed pressure,Penalize abrupt compression changes or direct propagation from high to low pressure.,Reduced performance in Digits and Iris.,Reject.
+Elastic local-scale metric,Change the regional distance scale while retaining coordinates.,Repeated classification and regression gains.,Retain.
+SpringGraph relations,Reweight relations on the same local edge set.,Consistent gains with few labels.,Retain.

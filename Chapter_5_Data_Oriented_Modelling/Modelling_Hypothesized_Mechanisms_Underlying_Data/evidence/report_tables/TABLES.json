@@ -1,0 +1,934 @@
+[
+  {
+    "number": "glossary",
+    "caption": "Key terms and meanings",
+    "section": "Opening",
+    "rows": [
+      [
+        "Term",
+        "Meaning in this report"
+      ],
+      [
+        "Hypothesized mechanism",
+        "An explicit assumption about how observations, relations or target states arise, used to derive and test candidate model operations."
+      ],
+      [
+        "Support and coverage",
+        "Support is the domain of admissible or empirically represented states. Coverage describes how observations occupy that domain."
+      ],
+      [
+        "Local scale and scale trace",
+        "A local scale summarizes nearby distances. A scale trace records that quantity across several neighbourhood sizes."
+      ],
+      [
+        "Relation operator",
+        "An operation that defines or scores connections between observations or entities."
+      ],
+      [
+        "State-transition operator",
+        "An operation that produces the next state and must satisfy the target state’s structural requirements."
+      ],
+      [
+        "Geometry guard",
+        "A local mask, distance bias or update gate that constrains attention using anchored data geometry."
+      ],
+      [
+        "Wrapper exhaustion",
+        "The tested corrections meet their safety criteria only by suppressing useful mixing or update amplitude."
+      ],
+      [
+        "Micro-probe",
+        "A small validation comparison used to select an operation. In the final procedure it uses training data only."
+      ],
+      [
+        "No-op and abstention",
+        "No-op retains the unchanged baseline. Abstention withholds a model choice or prediction when evidence is insufficient."
+      ],
+      [
+        "Prevalence calibration",
+        "Adjustment of output probabilities to the occurrence frequencies relevant to the target population."
+      ],
+      [
+        "Kernel",
+        "Used broadly for a relation or state operation. The term does not always denote a positive-semidefinite kernel function."
+      ]
+    ]
+  },
+  {
+    "number": 1,
+    "caption": "Table 1. Hypotheses assessed across the experiments.",
+    "section": "1 Hypotheses and evidence",
+    "rows": [
+      [
+        "ID",
+        "Hypothesis",
+        "Assessment",
+        "Evidence"
+      ],
+      [
+        "H1",
+        "Global attention can bridge low-density gaps and rearrange local geometry.",
+        "Supported in the tested settings",
+        "Gap occupancy rises by 38.2% in Breast Cancer and 117.4% in Digits. Global attention retains fewer neighbours than local attention in all four datasets."
+      ],
+      [
+        "H2",
+        "Blocking cross-gap relations always preserves attention as a valid state-transition operator.",
+        "Rejected",
+        "Across three discrete graphs, mixing adjacency rows produces non-edge mass, self-loops and asymmetry even under an observed-neighbour mask. Meeting safety thresholds requires N_eff close to 1."
+      ],
+      [
+        "H3",
+        "Local compression scale can define a data-derived relation scale.",
+        "Supported",
+        "Elastic local distances produce repeated gains across four classification datasets and Diabetes regression, especially in sparse regions."
+      ],
+      [
+        "H4",
+        "Adding higher-order acceleration and jerk features improves modelling.",
+        "Rejected as a default",
+        "Long spring traces, higher-order differences and enforced acceleration penalties repeatedly overfit or reduce performance."
+      ],
+      [
+        "H5",
+        "A scale trace is more informative than one fixed local scale.",
+        "Supported",
+        "Datasets prefer different k values. Direct averaging can reduce performance; routing among scale families is more stable."
+      ],
+      [
+        "H6",
+        "Uneven training density should always trigger inverse-density loss weighting.",
+        "Rejected",
+        "Simple inverse-density weights are unstable across datasets and slightly reduce Diabetes regression performance."
+      ],
+      [
+        "H7",
+        "Structural learning and occurrence frequency should be treated separately.",
+        "Supported",
+        "Diabetes BMI coverage balancing reduces macro-RMSE from 65.43 to 60.22 and overall RMSE from 64.01 to 63.37."
+      ],
+      [
+        "H8",
+        "Wrapper exhaustion can guide replacement of attention aggregation.",
+        "Positive instance observed",
+        "Karate, Davis and Florentine retain state violations under admissible neighbour relations; the tested safe settings have N_eff close to 1."
+      ],
+      [
+        "H9",
+        "A diagnostic requires interpretation under the target mechanism before selecting an action.",
+        "Supported",
+        "BMI, s4 and age respond differently to coverage balancing. Natural RMSE and macro-RMSE also support different decisions on the same data."
+      ],
+      [
+        "H10",
+        "Structural learning can be separated from prevalence and followed by output calibration.",
+        "Supported",
+        "Balanced Digits training improves balanced accuracy and recall but raises log-loss. Prevalence calibration recovers about 80% of the additional log-loss."
+      ],
+      [
+        "H11",
+        "Reweighting cannot create missing support.",
+        "Supported",
+        "Biased sampling reduces peripheral Digits accuracy from 93.13% to 86.99%; oracle inverse-propensity weighting restores it only to 87.59%."
+      ],
+      [
+        "H12",
+        "Attention may score proposals while another operation generates admissible discrete states.",
+        "Supported",
+        "Global discrete projection restores valid graph form. Relation-only edge gating preserves observed support and symmetry; binary state generation remains a separate requirement."
+      ],
+      [
+        "H13",
+        "Operator selection should reflect state constraints, relation order and the hypothesized mechanism.",
+        "Supported",
+        "Davis path orders 1, 2 and 4 give AUC 0.500 for missing cross-partition edges. Three hops give 0.753; degree-normalized three-hop relations give 0.806."
+      ],
+      [
+        "H14",
+        "Insufficient relation evidence is a valid decision outcome.",
+        "Supported",
+        "Florentine candidates are weak across 100 edge-recovery splits, mostly with AUC approximately 0.43–0.60. The graph has limited cycle redundancy and clustering."
+      ],
+      [
+        "H15",
+        "Mechanism diagnostics can directly specify the final operation before downstream results are inspected.",
+        "Partially supported",
+        "ModeChoice, RAND HIE and Les Misérables improve on their principal metrics. Forced coverage correction fails on Engel, favouring candidate generation followed by selection."
+      ],
+      [
+        "H16",
+        "A diagnostic can be equated directly with an action.",
+        "Rejected",
+        "Despite uneven Engel coverage, forced balancing raises macro-RMSE from 130.08 to 135.07. A nested probe chooses the unchanged model in 63 of 80 outer splits."
+      ],
+      [
+        "H17",
+        "An unchanged baseline and abstention must be formal candidates.",
+        "Supported",
+        "The Engel probe selects ordinary training in 78.75% of outer splits and substantially reduces the loss from automatic correction."
+      ],
+      [
+        "H18",
+        "Diagnostics should identify admissible losses and candidate families before a precise algorithm is selected.",
+        "Supported",
+        "RAND HIE deviance improves by only about 0.067% under Poisson modelling, with variance about seven times the mean. ModeChoice improves NLL while accuracy is nearly unchanged."
+      ]
+    ]
+  },
+  {
+    "number": 2,
+    "caption": "Table 2. Screening of local compression candidates.",
+    "section": "6 Screening candidates based on local compression",
+    "rows": [
+      [
+        "Candidate",
+        "Operation",
+        "Observed result",
+        "Disposition"
+      ],
+      [
+        "Local density scalar",
+        "Append ρᵢ as a feature.",
+        "Limited gain.",
+        "Retain as a diagnostic."
+      ],
+      [
+        "Inverse-density loss",
+        "Increase the loss weight of sparse observations.",
+        "Unstable across datasets.",
+        "Reject as a universal default."
+      ],
+      [
+        "Local spring force",
+        "Construct a direction from differences in local compression.",
+        "Gains in datasets including Digits.",
+        "Retain as an experimental feature."
+      ],
+      [
+        "Higher-order spring trace",
+        "Append scale changes, acceleration, jerk or second differences as a long feature sequence.",
+        "Repeated overfitting.",
+        "Reject as a default input."
+      ],
+      [
+        "Global spring RBF kernel",
+        "Insert local scale into a global kernel.",
+        "Gains in isolated datasets.",
+        "Reject as a universal kernel."
+      ],
+      [
+        "Acceleration penalty or directed pressure",
+        "Penalize abrupt compression changes or direct propagation from high to low pressure.",
+        "Reduced performance in Digits and Iris.",
+        "Reject."
+      ],
+      [
+        "Elastic local-scale metric",
+        "Change the regional distance scale while retaining coordinates.",
+        "Repeated classification and regression gains.",
+        "Retain."
+      ],
+      [
+        "SpringGraph relations",
+        "Reweight relations on the same local edge set.",
+        "Consistent gains with few labels.",
+        "Retain."
+      ]
+    ]
+  },
+  {
+    "number": 3,
+    "caption": "Table 3. Attention corrections and effective mixing.",
+    "section": "10 Criteria for replacing the aggregation operator",
+    "rows": [
+      [
+        "Dataset",
+        "Local attention",
+        "Geometry constrained",
+        "Spring relation",
+        "Effective neighbours",
+        "Interpretation"
+      ],
+      [
+        "Digits",
+        "88.90%",
+        "89.59%",
+        "91.55%",
+        "4.22 → 2.78; about 1.25 with stronger λ",
+        "The correction recovers some performance; stronger constraints suppress mixing."
+      ],
+      [
+        "Wine",
+        "93.96%",
+        "95.35%",
+        "96.10%",
+        "About 1.03",
+        "Near single-neighbour operation still trails Spring."
+      ],
+      [
+        "Breast Cancer",
+        "94.17%",
+        "94.68%",
+        "93.70%",
+        "No comparable collapse observed",
+        "The correction is sufficient in this comparison; retain attention."
+      ]
+    ]
+  },
+  {
+    "number": 4,
+    "caption": "Table 4. Candidate disposition after the initial experiments.",
+    "section": "14 Retained candidates and unsuccessful defaults",
+    "rows": [
+      [
+        "Disposition",
+        "Candidate",
+        "Interpretation"
+      ],
+      [
+        "Retain",
+        "Geometry mask",
+        "Constrain connections across gaps and discontinuities around attention."
+      ],
+      [
+        "Retain",
+        "Elastic local-scale bias",
+        "Interpret distance using regional scale within the same local neighbourhood."
+      ],
+      [
+        "Retain",
+        "SpringGraph relations",
+        "Reweight relations without moving observations; stable results with few labels."
+      ],
+      [
+        "Retain",
+        "Scale trace",
+        "Describe local compression at several observation radii for diagnosis and routing."
+      ],
+      [
+        "Retain",
+        "Task or data-block router",
+        "Choose Euclidean, Spring or other relations using data evidence; gains in four outer-test classification comparisons."
+      ],
+      [
+        "Retain conditionally",
+        "Coverage-balanced structure learning",
+        "Give observed regions more comparable training influence when the target and validation support it."
+      ],
+      [
+        "Retain",
+        "Prevalence calibration",
+        "Restore the relevant occurrence frequencies after structural learning."
+      ],
+      [
+        "Reject as a default",
+        "Long spring-trace features",
+        "Directly stacking higher-order quantities can overfit."
+      ],
+      [
+        "Reject as a default",
+        "Uniform inverse-density loss",
+        "Low density need not imply greater target importance; relevant prevalence can be lost."
+      ],
+      [
+        "Reject as a default",
+        "Simple multiscale averaging",
+        "Averaging can obscure the local structure preferred by a particular dataset."
+      ],
+      [
+        "Reject as a default",
+        "Minimum tension across scales",
+        "Mechanically favours larger scales, weakening the intended interpretation."
+      ],
+      [
+        "Reject as a default",
+        "Always-on Spring messages",
+        "Benefits Digits and Iris but adds noise in Wine and Breast Cancer; relation reweighting is more stable."
+      ]
+    ]
+  },
+  {
+    "number": 5,
+    "caption": "Table 5. Coverage balancing under two evaluation targets.",
+    "section": "17 Validation of the complete modelling procedure",
+    "rows": [
+      [
+        "Probe",
+        "Evaluation target",
+        "Baseline",
+        "Balanced coverage",
+        "Change"
+      ],
+      [
+        "Diabetes BMI",
+        "Natural RMSE",
+        "64.18",
+        "63.20",
+        "−0.98"
+      ],
+      [
+        "Diabetes BMI",
+        "Macro-RMSE",
+        "65.55",
+        "60.33",
+        "−5.22"
+      ],
+      [
+        "Diabetes s4",
+        "Natural RMSE",
+        "69.51",
+        "69.55",
+        "+0.04"
+      ],
+      [
+        "Diabetes s4",
+        "Macro-RMSE",
+        "70.77",
+        "68.64",
+        "−2.13"
+      ],
+      [
+        "Diabetes age",
+        "Natural RMSE",
+        "75.85",
+        "75.87",
+        "+0.02"
+      ],
+      [
+        "Diabetes age",
+        "Macro-RMSE",
+        "71.68",
+        "71.85",
+        "+0.17"
+      ]
+    ]
+  },
+  {
+    "number": 6,
+    "caption": "Table 6. Geometry guards with five percent labels.",
+    "section": "17 Validation of the complete modelling procedure",
+    "rows": [
+      [
+        "Dataset",
+        "Local attention",
+        "Geometry guard",
+        "Gain pp",
+        "Median N_eff",
+        "Guard win rate"
+      ],
+      [
+        "Breast Cancer",
+        "70.98%",
+        "80.84%",
+        "+9.86",
+        "3.62",
+        "100%"
+      ],
+      [
+        "Digits",
+        "92.07%",
+        "93.12%",
+        "+1.05",
+        "6.84",
+        "98%"
+      ],
+      [
+        "Wine",
+        "93.83%",
+        "94.82%",
+        "+0.98",
+        "10.05",
+        "74%"
+      ],
+      [
+        "Iris",
+        "87.89%",
+        "87.99%",
+        "+0.10",
+        "13.90",
+        "24%"
+      ]
+    ]
+  },
+  {
+    "number": 7,
+    "caption": "Table 7. Structural learning and prevalence calibration.",
+    "section": "17 Validation of the complete modelling procedure",
+    "rows": [
+      [
+        "Training or calibration",
+        "Balanced accuracy",
+        "Recall for digit 0",
+        "Log-loss"
+      ],
+      [
+        "Natural training",
+        "98.68%",
+        "97.43%",
+        "0.01220"
+      ],
+      [
+        "Balanced structure training",
+        "99.10%",
+        "98.60%",
+        "0.01737"
+      ],
+      [
+        "Natural prevalence restored",
+        "≈99.10%*",
+        "≈98.60%*",
+        "0.01322"
+      ]
+    ]
+  },
+  {
+    "number": 8,
+    "caption": "Table 8. Biased coverage and oracle weighting.",
+    "section": "17 Validation of the complete modelling procedure",
+    "rows": [
+      [
+        "Condition",
+        "Overall accuracy",
+        "Peripheral quartile accuracy"
+      ],
+      [
+        "Complete training coverage",
+        "94.12%",
+        "93.13%"
+      ],
+      [
+        "Centre-biased sampling",
+        "92.47%",
+        "86.99%"
+      ],
+      [
+        "Oracle inverse-propensity weighting",
+        "92.44%",
+        "87.59%"
+      ]
+    ]
+  },
+  {
+    "number": 9,
+    "caption": "Table 9. Graph datasets and target states.",
+    "section": "18 State legality in discrete graphs",
+    "rows": [
+      [
+        "Observed network",
+        "Nodes",
+        "Edges",
+        "Target state"
+      ],
+      [
+        "Zachary Karate Club",
+        "34",
+        "78",
+        "Topology of a simple undirected graph."
+      ],
+      [
+        "Davis Southern Women",
+        "32",
+        "89",
+        "Discrete state of a bipartite affiliation graph."
+      ],
+      [
+        "Florentine Families",
+        "15",
+        "20",
+        "Discrete state of a family-relation network."
+      ]
+    ]
+  },
+  {
+    "number": 10,
+    "caption": "Table 10. Graph state diagnostics at beta 2.",
+    "section": "18 State legality in discrete graphs",
+    "rows": [
+      [
+        "Network",
+        "Median N_eff",
+        "Non-edge mass",
+        "Symmetry error",
+        "Mean self-loop mass",
+        "Local 0.5 edge F1"
+      ],
+      [
+        "Karate Club",
+        "3.163",
+        "45.27%",
+        "49.87%",
+        "45.07%",
+        "0.794"
+      ],
+      [
+        "Davis Southern Women",
+        "3.435",
+        "43.03%",
+        "30.94%",
+        "40.47%",
+        "0.729"
+      ],
+      [
+        "Florentine Families",
+        "2.915",
+        "21.10%",
+        "23.20%",
+        "30.53%",
+        "0.987"
+      ]
+    ]
+  },
+  {
+    "number": 11,
+    "caption": "Table 11. First tested settings satisfying the working safety thresholds.",
+    "section": "18 State legality in discrete graphs",
+    "rows": [
+      [
+        "Network",
+        "First safe β",
+        "Median N_eff",
+        "Non-edge mass",
+        "Symmetry error",
+        "Self-loop mass"
+      ],
+      [
+        "Karate Club",
+        "16",
+        "1.0005",
+        "0.034%",
+        "0.359%",
+        "0.093%"
+      ],
+      [
+        "Davis Southern Women",
+        "8",
+        "1.0137",
+        "0.220%",
+        "0.176%",
+        "0.186%"
+      ],
+      [
+        "Florentine Families",
+        "8",
+        "1.0121",
+        "0.276%",
+        "1.131%",
+        "0.824%"
+      ]
+    ]
+  },
+  {
+    "number": 12,
+    "caption": "Table 12. Local and global projection.",
+    "section": "18 State legality in discrete graphs",
+    "rows": [
+      [
+        "Network",
+        "N_eff at β 2",
+        "Local 0.5 edge F1",
+        "Global oracle edge F1",
+        "Interpretation"
+      ],
+      [
+        "Karate Club",
+        "3.163",
+        "0.794",
+        "0.962",
+        "Large recovery with global projection."
+      ],
+      [
+        "Davis Southern Women",
+        "3.435",
+        "0.729",
+        "0.966",
+        "Large recovery with global projection."
+      ],
+      [
+        "Florentine Families",
+        "2.915",
+        "0.987",
+        "1.000",
+        "Almost complete recovery."
+      ]
+    ]
+  },
+  {
+    "number": 13,
+    "caption": "Table 13. Davis recovery by adjacency path order.",
+    "section": "20 Selecting operators from the relation mechanism",
+    "rows": [
+      [
+        "Path order p",
+        "AUC",
+        "Average precision",
+        "Recall@k"
+      ],
+      [
+        "1",
+        "0.500",
+        "0.074",
+        "0.162"
+      ],
+      [
+        "2",
+        "0.500",
+        "0.074",
+        "0.162"
+      ],
+      [
+        "3",
+        "0.753",
+        "0.219",
+        "0.231"
+      ],
+      [
+        "4",
+        "0.500",
+        "0.074",
+        "0.162"
+      ],
+      [
+        "5",
+        "0.702",
+        "0.196",
+        "0.215"
+      ],
+      [
+        "7",
+        "0.668",
+        "0.178",
+        "0.193"
+      ]
+    ]
+  },
+  {
+    "number": 14,
+    "caption": "Table 14. Graph specific edge recovery.",
+    "section": "20 Selecting operators from the relation mechanism",
+    "rows": [
+      [
+        "Dataset",
+        "Operator",
+        "AUC",
+        "Average precision",
+        "Recall@k"
+      ],
+      [
+        "Davis",
+        "Attention followed by projection",
+        "0.500",
+        "0.074",
+        "0.162"
+      ],
+      [
+        "Davis",
+        "Degree-normalized three-hop relations",
+        "0.806",
+        "0.276",
+        "0.301"
+      ],
+      [
+        "Davis",
+        "SVD",
+        "0.817",
+        "0.296",
+        "0.297"
+      ],
+      [
+        "Karate",
+        "Attention followed by projection",
+        "0.622",
+        "0.043",
+        "0.015"
+      ],
+      [
+        "Karate",
+        "Adamic–Adar",
+        "0.719",
+        "0.137",
+        "0.174"
+      ],
+      [
+        "Karate",
+        "SVD",
+        "0.746",
+        "0.159",
+        "0.178"
+      ],
+      [
+        "Florentine",
+        "Attention followed by projection",
+        "0.560",
+        "0.106",
+        "0.073"
+      ],
+      [
+        "Florentine",
+        "Adamic–Adar",
+        "0.570",
+        "0.084",
+        "0.077"
+      ],
+      [
+        "Florentine",
+        "SVD",
+        "0.435",
+        "0.070",
+        "0.037"
+      ]
+    ]
+  },
+  {
+    "number": 15,
+    "caption": "Table 15. ModeChoice validation.",
+    "section": "21 Precommitted validation on additional datasets",
+    "rows": [
+      [
+        "Metric",
+        "Flat logistic",
+        "Group-choice model",
+        "Difference"
+      ],
+      [
+        "Choice-set NLL",
+        "1.0070",
+        "0.9394",
+        "6.72% improvement"
+      ],
+      [
+        "Choice-set accuracy",
+        "70.63%",
+        "70.26%",
+        "−0.37 pp"
+      ]
+    ]
+  },
+  {
+    "number": 16,
+    "caption": "Table 16. Engel coverage correction.",
+    "section": "21 Precommitted validation on additional datasets",
+    "rows": [
+      [
+        "Metric",
+        "Ordinary training",
+        "Forced coverage balance",
+        "Assessment"
+      ],
+      [
+        "Overall RMSE",
+        "106.76",
+        "109.90",
+        "Higher error"
+      ],
+      [
+        "Macro-RMSE",
+        "130.08",
+        "135.07",
+        "3.83% higher error"
+      ]
+    ]
+  },
+  {
+    "number": 17,
+    "caption": "Table 17. RAND HIE validation.",
+    "section": "21 Precommitted validation on additional datasets",
+    "rows": [
+      [
+        "Metric",
+        "Gaussian ridge",
+        "Poisson log link",
+        "Assessment"
+      ],
+      [
+        "Poisson deviance",
+        "4.1718",
+        "4.1690",
+        "Predicted direction with a very small gain"
+      ],
+      [
+        "RMSE",
+        "4.349",
+        "4.361",
+        "Slightly higher error"
+      ],
+      [
+        "MAE",
+        "2.587",
+        "2.595",
+        "Slightly higher error"
+      ]
+    ]
+  },
+  {
+    "number": 18,
+    "caption": "Table 18. Les Misérables relation recovery.",
+    "section": "21 Precommitted validation on additional datasets",
+    "rows": [
+      [
+        "Relation operator",
+        "Mean AUC over 100 splits"
+      ],
+      [
+        "Preferential attachment",
+        "0.775"
+      ],
+      [
+        "Common neighbours",
+        "0.907"
+      ],
+      [
+        "Adamic–Adar",
+        "0.914"
+      ],
+      [
+        "Three-hop score A³",
+        "0.856"
+      ],
+      [
+        "Rank-8 SVD",
+        "0.827"
+      ],
+      [
+        "Neighbour-profile cosine",
+        "0.882"
+      ]
+    ]
+  },
+  {
+    "number": 19,
+    "caption": "Table 19. Assessment of precommitted predictions.",
+    "section": "21 Precommitted validation on additional datasets",
+    "rows": [
+      [
+        "Dataset",
+        "Precommitted operation",
+        "Observed assessment",
+        "Implication for the procedure"
+      ],
+      [
+        "ModeChoice",
+        "Group-normalized choice model",
+        "Principal NLL target improves; mean accuracy is slightly lower.",
+        "Mechanism assumptions identify a relevant loss; evaluate other task metrics separately."
+      ],
+      [
+        "Engel",
+        "Direct coverage correction",
+        "Prediction fails.",
+        "A diagnostic opens a candidate comparison, including the unchanged baseline."
+      ],
+      [
+        "RAND HIE",
+        "Poisson count model",
+        "Predicted deviance direction with a very small effect.",
+        "Choose a family before selecting its precise member."
+      ],
+      [
+        "Les Misérables",
+        "Relation-based operator",
+        "Strong improvement over the degree-based comparison.",
+        "State constraints and redundant paths help constrain useful candidates before downstream scoring."
+      ]
+    ]
+  }
+]

@@ -1,0 +1,321 @@
+{
+  "precommit_sha256": "9fe8186f86ddd697e29544bf8d4089aa1ff47fe49fcc987bbeb36d659e243159",
+  "precommit_match": true,
+  "modechoice_blind_results": {
+    "n": 60,
+    "means": {
+      "seed": 29.5,
+      "flat_choice_acc": 0.7063492063492064,
+      "flat_set_nll": 1.007022297779128,
+      "conditional_choice_acc": 0.7026455026455026,
+      "conditional_set_nll": 0.9393852188523316
+    },
+    "nll_win_rate": 0.9
+  },
+  "engel_blind_results": {
+    "n": 120,
+    "means": {
+      "seed": 59.5,
+      "rmse_plain": 106.75963103617109,
+      "rmse_coverage": 109.89740417764368,
+      "macro_rmse_plain": 130.08332605769803,
+      "macro_rmse_coverage": 135.0679935498318,
+      "test_bins_used": 4.3
+    }
+  },
+  "randhie_blind_results": {
+    "n": 25,
+    "means": {
+      "seed": 12.0,
+      "ridge_poisson_deviance": 4.171802604263175,
+      "poisson_poisson_deviance": 4.169013157750975,
+      "ridge_rmse": 4.34905772774799,
+      "poisson_rmse": 4.361261599209056,
+      "ridge_mae": 2.586545567333935,
+      "poisson_mae": 2.59471047420351
+    },
+    "deviance_win_rate": 0.64
+  },
+  "lesmis_blind_results": {
+    "n": 100,
+    "means": {
+      "seed": 49.5,
+      "n_hidden": 30.0,
+      "PA_auc": 0.7752277777777777,
+      "CN_auc": 0.906938888888889,
+      "AA_auc": 0.9138888888888889,
+      "A3_auc": 0.8562333333333334,
+      "SVD8_auc": 0.827388888888889,
+      "Cosine_auc": 0.8821555555555556
+    },
+    "aa_wins": 100
+  },
+  "engel_nested_microprobe": {
+    "n": 80,
+    "means": {
+      "seed": 39.5,
+      "inner_macro_plain": 114.18641576409108,
+      "inner_macro_coverage": 119.86128805595828,
+      "outer_macro_plain": 138.09709053614992,
+      "outer_macro_coverage": 145.53074707055669,
+      "outer_macro_selected": 138.87694823320595,
+      "outer_rmse_plain": 111.390109064505,
+      "outer_rmse_coverage": 116.54352557051166,
+      "outer_rmse_selected": 111.83500286776332
+    },
+    "choices": {
+      "coverage": 17,
+      "plain": 63
+    }
+  },
+  "graph_edge_recovery_100splits": [
+    {
+      "group": {
+        "data": "Karate",
+        "method": "Attention\u2192projection"
+      },
+      "n": 100,
+      "AUC": 0.6217822636300897,
+      "AP": 0.04255008723772282,
+      "Recall@k": 0.015
+    },
+    {
+      "group": {
+        "data": "Karate",
+        "method": "SVD"
+      },
+      "n": 100,
+      "AUC": 0.7459592822636301,
+      "AP": 0.15914927275368573,
+      "Recall@k": 0.1775
+    },
+    {
+      "group": {
+        "data": "Karate",
+        "method": "Adamic-Adar"
+      },
+      "n": 100,
+      "AUC": 0.7187068668046929,
+      "AP": 0.13722514985586842,
+      "Recall@k": 0.17416666666666666
+    },
+    {
+      "group": {
+        "data": "Karate",
+        "method": "Jaccard"
+      },
+      "n": 100,
+      "AUC": 0.6046143892339545,
+      "AP": 0.03388302739794156,
+      "Recall@k": 0.008333333333333333
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "Attention\u2192projection"
+      },
+      "n": 100,
+      "AUC": 0.559843137254902,
+      "AP": 0.10606946114729575,
+      "Recall@k": 0.07333333333333333
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "SVD"
+      },
+      "n": 100,
+      "AUC": 0.43482352941176466,
+      "AP": 0.07009111349867525,
+      "Recall@k": 0.03666666666666667
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "Adamic-Adar"
+      },
+      "n": 100,
+      "AUC": 0.5698627450980392,
+      "AP": 0.08357917718021768,
+      "Recall@k": 0.07666666666666666
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "Jaccard"
+      },
+      "n": 100,
+      "AUC": 0.5621372549019608,
+      "AP": 0.09472238284327174,
+      "Recall@k": 0.06666666666666667
+    },
+    {
+      "group": {
+        "data": "Davis",
+        "method": "Attention\u2192projection"
+      },
+      "n": 100,
+      "AUC": 0.5,
+      "AP": 0.07386363636363637,
+      "Recall@k": 0.16230769230769232
+    },
+    {
+      "group": {
+        "data": "Davis",
+        "method": "SVD"
+      },
+      "n": 100,
+      "AUC": 0.8165290231241151,
+      "AP": 0.29557968335075663,
+      "Recall@k": 0.29692307692307696
+    },
+    {
+      "group": {
+        "data": "Davis",
+        "method": "Relation-native 3-hop"
+      },
+      "n": 100,
+      "AUC": 0.805762151958471,
+      "AP": 0.27623137915532836,
+      "Recall@k": 0.3007692307692308
+    }
+  ],
+  "davis_path_order_100splits": [
+    {
+      "group": {
+        "power": "1"
+      },
+      "n": 100,
+      "AUC": 0.5,
+      "AP": 0.07386363636363637,
+      "Recall@k": 0.16230769230769232
+    },
+    {
+      "group": {
+        "power": "2"
+      },
+      "n": 100,
+      "AUC": 0.5,
+      "AP": 0.07386363636363637,
+      "Recall@k": 0.16230769230769232
+    },
+    {
+      "group": {
+        "power": "3"
+      },
+      "n": 100,
+      "AUC": 0.7528433223218499,
+      "AP": 0.21909169493859684,
+      "Recall@k": 0.23076923076923078
+    },
+    {
+      "group": {
+        "power": "4"
+      },
+      "n": 100,
+      "AUC": 0.5,
+      "AP": 0.07386363636363637,
+      "Recall@k": 0.16230769230769232
+    },
+    {
+      "group": {
+        "power": "5"
+      },
+      "n": 100,
+      "AUC": 0.7015195847097688,
+      "AP": 0.1957341984312658,
+      "Recall@k": 0.2153846153846154
+    },
+    {
+      "group": {
+        "power": "7"
+      },
+      "n": 100,
+      "AUC": 0.6675530910806985,
+      "AP": 0.1781383493570546,
+      "Recall@k": 0.1930769230769231
+    }
+  ],
+  "one_mode_extra_kernels_100splits": [
+    {
+      "group": {
+        "data": "Karate",
+        "method": "RA"
+      },
+      "n": 100,
+      "AUC": 0.7256582125603865,
+      "AP": 0.13924244814179068,
+      "Recall@k": 0.16333333333333333
+    },
+    {
+      "group": {
+        "data": "Karate",
+        "method": "Preferential"
+      },
+      "n": 100,
+      "AUC": 0.7341890959282263,
+      "AP": 0.0885737376971884,
+      "Recall@k": 0.13083333333333333
+    },
+    {
+      "group": {
+        "data": "Karate",
+        "method": "Geodesic closure"
+      },
+      "n": 100,
+      "AUC": 0.6844849896480332,
+      "AP": 0.039167841535045676,
+      "Recall@k": 0.24833333333333332
+    },
+    {
+      "group": {
+        "data": "Karate",
+        "method": "Katz"
+      },
+      "n": 100,
+      "AUC": 0.790576259489303,
+      "AP": 0.16153399424588422,
+      "Recall@k": 0.1925
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "RA"
+      },
+      "n": 100,
+      "AUC": 0.5699019607843137,
+      "AP": 0.08357917718021768,
+      "Recall@k": 0.07666666666666666
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "Preferential"
+      },
+      "n": 100,
+      "AUC": 0.602313725490196,
+      "AP": 0.06262700853199961,
+      "Recall@k": 0.0
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "Geodesic closure"
+      },
+      "n": 100,
+      "AUC": 0.5247647058823529,
+      "AP": 0.04470225750262269,
+      "Recall@k": 0.0
+    },
+    {
+      "group": {
+        "data": "Florentine",
+        "method": "Katz"
+      },
+      "n": 100,
+      "AUC": 0.5268039215686274,
+      "AP": 0.08762451868577237,
+      "Recall@k": 0.04666666666666666
+    }
+  ]
+}

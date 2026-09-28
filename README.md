@@ -19,3 +19,5 @@ This is a self-directed personal-interest research project. It is maintained as 
 [About the project](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/PROJECT_INFORMATION.md) · [Citation](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/CITATION.md) · [Source and reuse terms](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/SOURCE_NOTES.md)
 
 Chapter 5, **Data-Oriented Modelling**, is a series of independently versioned reports. Its first report, **Heterogeneous Data and General Data Intelligence**, connects generating mechanisms, observation processes and source-native structures with modelling and distributed coordination.
+
+Chapter 5, Report 03, **[Modelling Hypothesized Mechanisms Underlying Data](Chapter_5_Data_Oriented_Modelling/Modelling_Hypothesized_Mechanisms_Underlying_Data/README.md)**, connects data geometry, training coverage and valid state transformations with candidate operations tested through validation.

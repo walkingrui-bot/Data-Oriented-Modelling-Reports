@@ -1,0 +1,4 @@
+Training or calibration,Balanced accuracy,Recall for digit 0,Log-loss
+Natural training,98.68%,97.43%,0.01220
+Balanced structure training,99.10%,98.60%,0.01737
+Natural prevalence restored,≈99.10%*,≈98.60%*,0.01322

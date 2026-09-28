@@ -29,4 +29,4 @@ Each component’s source map distinguishes included files from referenced compa
 
 Start with the report relevant to the claim, follow its experiment identifier to the evidence index, and verify the corresponding checksums. Use the supplied recalculation scripts for the supported replay route. Where a companion file is only referenced, the map preserves its identity and the report making the claim.
 
-Both parts are published together in the [Biosphere 3 repository](https://github.com/walkingrui-bot/biosphere-3-public-reports). The paired archival collection contains these two Chapter 3 parts; the repository also preserves earlier phases.
+Both parts are published together in the [Data-Oriented Modelling repository](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports). The paired archival collection contains these two Chapter 3 parts; the repository also preserves earlier phases.

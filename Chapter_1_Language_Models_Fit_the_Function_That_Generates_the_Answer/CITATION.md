@@ -2,7 +2,7 @@
 
 Use the following record title and identify the exact release you used:
 
-*Biosphere 3 — Public Reports: Dynamic Generative Rule Fitting, Phases 1 and 2*. Version 0.1.0. Research snapshot dated 25 September 2026.
+*Data-Oriented Modelling — Reports: Dynamic Generative Rule Fitting, Phases 1 and 2*. Version 0.1.0. Research snapshot dated 25 September 2026.
 
 For a specific result, also identify the research phase, experiment ID, and relevant evidence file. For a working-branch revision, include the commit hash. Use the public release URL as the location of the cited snapshot.
 
@@ -27,6 +27,6 @@ Chapter 3 combined archival DOI: https://doi.org/10.5281/zenodo.22983593. The DO
 
 ## Chapter 4 Data Zoo
 
-*Human Learning and Sensorimotor Geometry*. Biosphere 3, Chapter 4 Data Zoo, Subreport 2. English edition v1.0, 27 September 2026.
+*Human Learning and Sensorimotor Geometry*. Data-Oriented Modelling, Chapter 4 Data Zoo, Subreport 2. English edition v1.0, 27 September 2026.
 
 Use the [subreport entry](../Chapter_4_Data_Zoo/Human_Learning_and_Sensorimotor_Geometry/README.md) as the reading route. Include the repository commit, study identifier 001–004, and evidence file for a specific result. The subreport has its own version history.

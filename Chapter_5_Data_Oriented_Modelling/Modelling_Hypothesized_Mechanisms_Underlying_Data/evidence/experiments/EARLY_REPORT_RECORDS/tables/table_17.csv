@@ -1,0 +1,4 @@
+﻿真实图,节点,边,目标机制
+Zachary Karate Club,34,78,保持无向简单图的拓扑状态
+Davis Southern Women,32,89,保持二部社会关系的离散图状态
+Florentine Families,15,20,保持家族关系网络的离散图状态

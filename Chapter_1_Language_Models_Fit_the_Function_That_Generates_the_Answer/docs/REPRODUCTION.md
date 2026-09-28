@@ -1,4 +1,4 @@
-> These instructions describe the original v0.1.0 release layout. Run them from that [fixed snapshot](https://github.com/walkingrui-bot/biosphere-3-public-reports/tree/v0.1.0). The current chapter layout is documented in [Repository organization](../REPOSITORY_ORGANIZATION.md).
+> These instructions describe the original v0.1.0 release layout. Run them from that [fixed snapshot](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/tree/v0.1.0). The current chapter layout is documented in [Repository organization](../REPOSITORY_ORGANIZATION.md).
 
 # Reproduction routes
 

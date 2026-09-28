@@ -1,0 +1,12 @@
+Term,Meaning in this report
+Hypothesized mechanism,"An explicit assumption about how observations, relations or target states arise, used to derive and test candidate model operations."
+Support and coverage,Support is the domain of admissible or empirically represented states. Coverage describes how observations occupy that domain.
+Local scale and scale trace,A local scale summarizes nearby distances. A scale trace records that quantity across several neighbourhood sizes.
+Relation operator,An operation that defines or scores connections between observations or entities.
+State-transition operator,An operation that produces the next state and must satisfy the target state’s structural requirements.
+Geometry guard,"A local mask, distance bias or update gate that constrains attention using anchored data geometry."
+Wrapper exhaustion,The tested corrections meet their safety criteria only by suppressing useful mixing or update amplitude.
+Micro-probe,A small validation comparison used to select an operation. In the final procedure it uses training data only.
+No-op and abstention,No-op retains the unchanged baseline. Abstention withholds a model choice or prediction when evidence is insufficient.
+Prevalence calibration,Adjustment of output probabilities to the occurrence frequencies relevant to the target population.
+Kernel,Used broadly for a relation or state operation. The term does not always denote a positive-semidefinite kernel function.

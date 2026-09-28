@@ -4,8 +4,8 @@ The package contains both phases of the research, 39 experiment folders, 35 hypo
 
 | Publication item | Prepared text |
 | --- | --- |
-| Repository name | `biosphere-3-public-reports` |
-| Title | Biosphere 3 — Public Reports |
+| Repository name | `Data-Oriented-Modelling-Reports` |
+| Title | Data-Oriented Modelling — Reports |
 | Description | Independent personal-interest research on generative-function formation, observation, and control. |
 | First release | `v0.1.0` — both research phases |
 | Language | English |

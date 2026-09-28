@@ -1,0 +1,1437 @@
+{
+  "count": 179,
+  "checks": [
+    {
+      "source_block": 114,
+      "row": 1,
+      "col": 1,
+      "source": "88.90%",
+      "english": "88.90%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 1,
+      "col": 2,
+      "source": "89.59%",
+      "english": "89.59%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 1,
+      "col": 3,
+      "source": "91.55%",
+      "english": "91.55%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 2,
+      "col": 1,
+      "source": "93.96%",
+      "english": "93.96%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 2,
+      "col": 2,
+      "source": "95.35%",
+      "english": "95.35%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 2,
+      "col": 3,
+      "source": "96.10%",
+      "english": "96.10%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 3,
+      "col": 1,
+      "source": "94.17%",
+      "english": "94.17%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 3,
+      "col": 2,
+      "source": "94.68%",
+      "english": "94.68%",
+      "match": true
+    },
+    {
+      "source_block": 114,
+      "row": 3,
+      "col": 3,
+      "source": "93.70%",
+      "english": "93.70%",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 1,
+      "col": 2,
+      "source": "64.18",
+      "english": "64.18",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 1,
+      "col": 3,
+      "source": "63.20",
+      "english": "63.20",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 1,
+      "col": 4,
+      "source": "\u22120.98",
+      "english": "\u22120.98",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 2,
+      "col": 2,
+      "source": "65.55",
+      "english": "65.55",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 2,
+      "col": 3,
+      "source": "60.33",
+      "english": "60.33",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 2,
+      "col": 4,
+      "source": "\u22125.22",
+      "english": "\u22125.22",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 3,
+      "col": 2,
+      "source": "69.51",
+      "english": "69.51",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 3,
+      "col": 3,
+      "source": "69.55",
+      "english": "69.55",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 3,
+      "col": 4,
+      "source": "+0.04",
+      "english": "+0.04",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 4,
+      "col": 2,
+      "source": "70.77",
+      "english": "70.77",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 4,
+      "col": 3,
+      "source": "68.64",
+      "english": "68.64",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 4,
+      "col": 4,
+      "source": "\u22122.13",
+      "english": "\u22122.13",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 5,
+      "col": 2,
+      "source": "75.85",
+      "english": "75.85",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 5,
+      "col": 3,
+      "source": "75.87",
+      "english": "75.87",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 5,
+      "col": 4,
+      "source": "+0.02",
+      "english": "+0.02",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 6,
+      "col": 2,
+      "source": "71.68",
+      "english": "71.68",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 6,
+      "col": 3,
+      "source": "71.85",
+      "english": "71.85",
+      "match": true
+    },
+    {
+      "source_block": 171,
+      "row": 6,
+      "col": 4,
+      "source": "+0.17",
+      "english": "+0.17",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 1,
+      "col": 1,
+      "source": "70.98%",
+      "english": "70.98%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 1,
+      "col": 2,
+      "source": "80.84%",
+      "english": "80.84%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 1,
+      "col": 3,
+      "source": "+9.86",
+      "english": "+9.86",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 1,
+      "col": 4,
+      "source": "3.62",
+      "english": "3.62",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 1,
+      "col": 5,
+      "source": "100%",
+      "english": "100%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 2,
+      "col": 1,
+      "source": "92.07%",
+      "english": "92.07%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 2,
+      "col": 2,
+      "source": "93.12%",
+      "english": "93.12%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 2,
+      "col": 3,
+      "source": "+1.05",
+      "english": "+1.05",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 2,
+      "col": 4,
+      "source": "6.84",
+      "english": "6.84",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 2,
+      "col": 5,
+      "source": "98%",
+      "english": "98%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 3,
+      "col": 1,
+      "source": "93.83%",
+      "english": "93.83%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 3,
+      "col": 2,
+      "source": "94.82%",
+      "english": "94.82%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 3,
+      "col": 3,
+      "source": "+0.98",
+      "english": "+0.98",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 3,
+      "col": 4,
+      "source": "10.05",
+      "english": "10.05",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 3,
+      "col": 5,
+      "source": "74%",
+      "english": "74%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 4,
+      "col": 1,
+      "source": "87.89%",
+      "english": "87.89%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 4,
+      "col": 2,
+      "source": "87.99%",
+      "english": "87.99%",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 4,
+      "col": 3,
+      "source": "+0.10",
+      "english": "+0.10",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 4,
+      "col": 4,
+      "source": "13.90",
+      "english": "13.90",
+      "match": true
+    },
+    {
+      "source_block": 175,
+      "row": 4,
+      "col": 5,
+      "source": "24%",
+      "english": "24%",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 1,
+      "col": 1,
+      "source": "98.68%",
+      "english": "98.68%",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 1,
+      "col": 2,
+      "source": "97.43%",
+      "english": "97.43%",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 1,
+      "col": 3,
+      "source": "0.01220",
+      "english": "0.01220",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 2,
+      "col": 1,
+      "source": "99.10%",
+      "english": "99.10%",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 2,
+      "col": 2,
+      "source": "98.60%",
+      "english": "98.60%",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 2,
+      "col": 3,
+      "source": "0.01737",
+      "english": "0.01737",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 3,
+      "col": 1,
+      "source": "\u224899.10%*",
+      "english": "\u224899.10%*",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 3,
+      "col": 2,
+      "source": "\u224898.60%*",
+      "english": "\u224898.60%*",
+      "match": true
+    },
+    {
+      "source_block": 181,
+      "row": 3,
+      "col": 3,
+      "source": "0.01322",
+      "english": "0.01322",
+      "match": true
+    },
+    {
+      "source_block": 187,
+      "row": 1,
+      "col": 1,
+      "source": "94.12%",
+      "english": "94.12%",
+      "match": true
+    },
+    {
+      "source_block": 187,
+      "row": 1,
+      "col": 2,
+      "source": "93.13%",
+      "english": "93.13%",
+      "match": true
+    },
+    {
+      "source_block": 187,
+      "row": 2,
+      "col": 1,
+      "source": "92.47%",
+      "english": "92.47%",
+      "match": true
+    },
+    {
+      "source_block": 187,
+      "row": 2,
+      "col": 2,
+      "source": "86.99%",
+      "english": "86.99%",
+      "match": true
+    },
+    {
+      "source_block": 187,
+      "row": 3,
+      "col": 1,
+      "source": "92.44%",
+      "english": "92.44%",
+      "match": true
+    },
+    {
+      "source_block": 187,
+      "row": 3,
+      "col": 2,
+      "source": "87.59%",
+      "english": "87.59%",
+      "match": true
+    },
+    {
+      "source_block": 198,
+      "row": 1,
+      "col": 1,
+      "source": "34",
+      "english": "34",
+      "match": true
+    },
+    {
+      "source_block": 198,
+      "row": 1,
+      "col": 2,
+      "source": "78",
+      "english": "78",
+      "match": true
+    },
+    {
+      "source_block": 198,
+      "row": 2,
+      "col": 1,
+      "source": "32",
+      "english": "32",
+      "match": true
+    },
+    {
+      "source_block": 198,
+      "row": 2,
+      "col": 2,
+      "source": "89",
+      "english": "89",
+      "match": true
+    },
+    {
+      "source_block": 198,
+      "row": 3,
+      "col": 1,
+      "source": "15",
+      "english": "15",
+      "match": true
+    },
+    {
+      "source_block": 198,
+      "row": 3,
+      "col": 2,
+      "source": "20",
+      "english": "20",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 1,
+      "col": 1,
+      "source": "3.163",
+      "english": "3.163",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 1,
+      "col": 2,
+      "source": "45.27%",
+      "english": "45.27%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 1,
+      "col": 3,
+      "source": "49.87%",
+      "english": "49.87%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 1,
+      "col": 4,
+      "source": "45.07%",
+      "english": "45.07%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 1,
+      "col": 5,
+      "source": "0.794",
+      "english": "0.794",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 2,
+      "col": 1,
+      "source": "3.435",
+      "english": "3.435",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 2,
+      "col": 2,
+      "source": "43.03%",
+      "english": "43.03%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 2,
+      "col": 3,
+      "source": "30.94%",
+      "english": "30.94%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 2,
+      "col": 4,
+      "source": "40.47%",
+      "english": "40.47%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 2,
+      "col": 5,
+      "source": "0.729",
+      "english": "0.729",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 3,
+      "col": 1,
+      "source": "2.915",
+      "english": "2.915",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 3,
+      "col": 2,
+      "source": "21.10%",
+      "english": "21.10%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 3,
+      "col": 3,
+      "source": "23.20%",
+      "english": "23.20%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 3,
+      "col": 4,
+      "source": "30.53%",
+      "english": "30.53%",
+      "match": true
+    },
+    {
+      "source_block": 207,
+      "row": 3,
+      "col": 5,
+      "source": "0.987",
+      "english": "0.987",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 1,
+      "col": 1,
+      "source": "16",
+      "english": "16",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 1,
+      "col": 2,
+      "source": "1.0005",
+      "english": "1.0005",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 1,
+      "col": 3,
+      "source": "0.034%",
+      "english": "0.034%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 1,
+      "col": 4,
+      "source": "0.359%",
+      "english": "0.359%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 1,
+      "col": 5,
+      "source": "0.093%",
+      "english": "0.093%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 2,
+      "col": 1,
+      "source": "8",
+      "english": "8",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 2,
+      "col": 2,
+      "source": "1.0137",
+      "english": "1.0137",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 2,
+      "col": 3,
+      "source": "0.220%",
+      "english": "0.220%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 2,
+      "col": 4,
+      "source": "0.176%",
+      "english": "0.176%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 2,
+      "col": 5,
+      "source": "0.186%",
+      "english": "0.186%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 3,
+      "col": 1,
+      "source": "8",
+      "english": "8",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 3,
+      "col": 2,
+      "source": "1.0121",
+      "english": "1.0121",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 3,
+      "col": 3,
+      "source": "0.276%",
+      "english": "0.276%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 3,
+      "col": 4,
+      "source": "1.131%",
+      "english": "1.131%",
+      "match": true
+    },
+    {
+      "source_block": 213,
+      "row": 3,
+      "col": 5,
+      "source": "0.824%",
+      "english": "0.824%",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 1,
+      "col": 1,
+      "source": "3.163",
+      "english": "3.163",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 1,
+      "col": 2,
+      "source": "0.794",
+      "english": "0.794",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 1,
+      "col": 3,
+      "source": "0.962",
+      "english": "0.962",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 2,
+      "col": 1,
+      "source": "3.435",
+      "english": "3.435",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 2,
+      "col": 2,
+      "source": "0.729",
+      "english": "0.729",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 2,
+      "col": 3,
+      "source": "0.966",
+      "english": "0.966",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 3,
+      "col": 1,
+      "source": "2.915",
+      "english": "2.915",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 3,
+      "col": 2,
+      "source": "0.987",
+      "english": "0.987",
+      "match": true
+    },
+    {
+      "source_block": 219,
+      "row": 3,
+      "col": 3,
+      "source": "1.000",
+      "english": "1.000",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 1,
+      "col": 0,
+      "source": "1",
+      "english": "1",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 1,
+      "col": 1,
+      "source": "0.500",
+      "english": "0.500",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 1,
+      "col": 2,
+      "source": "0.074",
+      "english": "0.074",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 1,
+      "col": 3,
+      "source": "0.162",
+      "english": "0.162",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 2,
+      "col": 0,
+      "source": "2",
+      "english": "2",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 2,
+      "col": 1,
+      "source": "0.500",
+      "english": "0.500",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 2,
+      "col": 2,
+      "source": "0.074",
+      "english": "0.074",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 2,
+      "col": 3,
+      "source": "0.162",
+      "english": "0.162",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 3,
+      "col": 0,
+      "source": "3",
+      "english": "3",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 3,
+      "col": 1,
+      "source": "0.753",
+      "english": "0.753",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 3,
+      "col": 2,
+      "source": "0.219",
+      "english": "0.219",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 3,
+      "col": 3,
+      "source": "0.231",
+      "english": "0.231",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 4,
+      "col": 0,
+      "source": "4",
+      "english": "4",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 4,
+      "col": 1,
+      "source": "0.500",
+      "english": "0.500",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 4,
+      "col": 2,
+      "source": "0.074",
+      "english": "0.074",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 4,
+      "col": 3,
+      "source": "0.162",
+      "english": "0.162",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 5,
+      "col": 0,
+      "source": "5",
+      "english": "5",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 5,
+      "col": 1,
+      "source": "0.702",
+      "english": "0.702",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 5,
+      "col": 2,
+      "source": "0.196",
+      "english": "0.196",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 5,
+      "col": 3,
+      "source": "0.215",
+      "english": "0.215",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 6,
+      "col": 0,
+      "source": "7",
+      "english": "7",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 6,
+      "col": 1,
+      "source": "0.668",
+      "english": "0.668",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 6,
+      "col": 2,
+      "source": "0.178",
+      "english": "0.178",
+      "match": true
+    },
+    {
+      "source_block": 267,
+      "row": 6,
+      "col": 3,
+      "source": "0.193",
+      "english": "0.193",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 1,
+      "col": 2,
+      "source": "0.500",
+      "english": "0.500",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 1,
+      "col": 3,
+      "source": "0.074",
+      "english": "0.074",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 1,
+      "col": 4,
+      "source": "0.162",
+      "english": "0.162",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 2,
+      "col": 2,
+      "source": "0.806",
+      "english": "0.806",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 2,
+      "col": 3,
+      "source": "0.276",
+      "english": "0.276",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 2,
+      "col": 4,
+      "source": "0.301",
+      "english": "0.301",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 3,
+      "col": 2,
+      "source": "0.817",
+      "english": "0.817",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 3,
+      "col": 3,
+      "source": "0.296",
+      "english": "0.296",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 3,
+      "col": 4,
+      "source": "0.297",
+      "english": "0.297",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 4,
+      "col": 2,
+      "source": "0.622",
+      "english": "0.622",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 4,
+      "col": 3,
+      "source": "0.043",
+      "english": "0.043",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 4,
+      "col": 4,
+      "source": "0.015",
+      "english": "0.015",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 5,
+      "col": 2,
+      "source": "0.719",
+      "english": "0.719",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 5,
+      "col": 3,
+      "source": "0.137",
+      "english": "0.137",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 5,
+      "col": 4,
+      "source": "0.174",
+      "english": "0.174",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 6,
+      "col": 2,
+      "source": "0.746",
+      "english": "0.746",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 6,
+      "col": 3,
+      "source": "0.159",
+      "english": "0.159",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 6,
+      "col": 4,
+      "source": "0.178",
+      "english": "0.178",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 7,
+      "col": 2,
+      "source": "0.560",
+      "english": "0.560",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 7,
+      "col": 3,
+      "source": "0.106",
+      "english": "0.106",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 7,
+      "col": 4,
+      "source": "0.073",
+      "english": "0.073",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 8,
+      "col": 2,
+      "source": "0.570",
+      "english": "0.570",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 8,
+      "col": 3,
+      "source": "0.084",
+      "english": "0.084",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 8,
+      "col": 4,
+      "source": "0.077",
+      "english": "0.077",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 9,
+      "col": 2,
+      "source": "0.435",
+      "english": "0.435",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 9,
+      "col": 3,
+      "source": "0.070",
+      "english": "0.070",
+      "match": true
+    },
+    {
+      "source_block": 272,
+      "row": 9,
+      "col": 4,
+      "source": "0.037",
+      "english": "0.037",
+      "match": true
+    },
+    {
+      "source_block": 306,
+      "row": 1,
+      "col": 1,
+      "source": "1.0070",
+      "english": "1.0070",
+      "match": true
+    },
+    {
+      "source_block": 306,
+      "row": 1,
+      "col": 2,
+      "source": "0.9394",
+      "english": "0.9394",
+      "match": true
+    },
+    {
+      "source_block": 306,
+      "row": 2,
+      "col": 1,
+      "source": "70.63%",
+      "english": "70.63%",
+      "match": true
+    },
+    {
+      "source_block": 306,
+      "row": 2,
+      "col": 2,
+      "source": "70.26%",
+      "english": "70.26%",
+      "match": true
+    },
+    {
+      "source_block": 313,
+      "row": 1,
+      "col": 1,
+      "source": "106.76",
+      "english": "106.76",
+      "match": true
+    },
+    {
+      "source_block": 313,
+      "row": 1,
+      "col": 2,
+      "source": "109.90",
+      "english": "109.90",
+      "match": true
+    },
+    {
+      "source_block": 313,
+      "row": 2,
+      "col": 1,
+      "source": "130.08",
+      "english": "130.08",
+      "match": true
+    },
+    {
+      "source_block": 313,
+      "row": 2,
+      "col": 2,
+      "source": "135.07",
+      "english": "135.07",
+      "match": true
+    },
+    {
+      "source_block": 313,
+      "row": 2,
+      "col": 3,
+      "source": "+3.83%",
+      "english": "3.83% higher error",
+      "match": true
+    },
+    {
+      "source_block": 322,
+      "row": 1,
+      "col": 1,
+      "source": "4.1718",
+      "english": "4.1718",
+      "match": true
+    },
+    {
+      "source_block": 322,
+      "row": 1,
+      "col": 2,
+      "source": "4.1690",
+      "english": "4.1690",
+      "match": true
+    },
+    {
+      "source_block": 322,
+      "row": 2,
+      "col": 1,
+      "source": "4.349",
+      "english": "4.349",
+      "match": true
+    },
+    {
+      "source_block": 322,
+      "row": 2,
+      "col": 2,
+      "source": "4.361",
+      "english": "4.361",
+      "match": true
+    },
+    {
+      "source_block": 322,
+      "row": 3,
+      "col": 1,
+      "source": "2.587",
+      "english": "2.587",
+      "match": true
+    },
+    {
+      "source_block": 322,
+      "row": 3,
+      "col": 2,
+      "source": "2.595",
+      "english": "2.595",
+      "match": true
+    },
+    {
+      "source_block": 326,
+      "row": 1,
+      "col": 1,
+      "source": "0.775",
+      "english": "0.775",
+      "match": true
+    },
+    {
+      "source_block": 326,
+      "row": 2,
+      "col": 1,
+      "source": "0.907",
+      "english": "0.907",
+      "match": true
+    },
+    {
+      "source_block": 326,
+      "row": 3,
+      "col": 1,
+      "source": "0.914",
+      "english": "0.914",
+      "match": true
+    },
+    {
+      "source_block": 326,
+      "row": 4,
+      "col": 1,
+      "source": "0.856",
+      "english": "0.856",
+      "match": true
+    },
+    {
+      "source_block": 326,
+      "row": 5,
+      "col": 1,
+      "source": "0.827",
+      "english": "0.827",
+      "match": true
+    },
+    {
+      "source_block": 326,
+      "row": 6,
+      "col": 1,
+      "source": "0.882",
+      "english": "0.882",
+      "match": true
+    }
+  ]
+}

@@ -32,7 +32,6 @@ Research snapshot: 25 September 2026.
 
 ### Repository presentation — 26 September 2026
 
-- Named the public collection **Biosphere 3 — Public Reports** (`biosphere-3-public-reports`).
 - Expanded the homepage with direct entries to all 39 experiments and online reading routes for both reports.
 - Added the announcement: “Chapters 3 and 4 are coming soon.”
 

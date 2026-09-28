@@ -1,0 +1,7 @@
+Probe,Evaluation target,Baseline,Balanced coverage,Change
+Diabetes BMI,Natural RMSE,64.18,63.20,−0.98
+Diabetes BMI,Macro-RMSE,65.55,60.33,−5.22
+Diabetes s4,Natural RMSE,69.51,69.55,+0.04
+Diabetes s4,Macro-RMSE,70.77,68.64,−2.13
+Diabetes age,Natural RMSE,75.85,75.87,+0.02
+Diabetes age,Macro-RMSE,71.68,71.85,+0.17

@@ -1,0 +1,22 @@
+﻿table_index,file,section,first_row
+1,table_01.csv,,档案性质  本档案整理本轮连续实验中已经实际测试的假说、失败候选、数值快照与工程判据。数值来自本轮会话中的实验记录；跨表格的不同 protocol、随机划分与尺度设置各自独立，因此以“同表内对照”和“同 protocol 方向”作为主要解释单位。
+2,table_02.csv,1. 假说状态总表,编号 | 假说 | 当前状态 | 主要证据
+3,table_03.csv,1. 假说状态总表,一句话总纲  不是“先挑一个最强模型”，而是先问：这批数据允许什么关系、什么尺度、什么训练覆盖，以及最终想命中的究竟是表面频率还是背后的生成机制。
+4,table_04.csv,4. MDM-ATTN-002：无监督拓扑失真,生动讨论  GRU 偷偷对数据说：“你应该排成一条序列。” Attention 则偷偷说：“只要我觉得相关，你们就可以加权混合。” 面向数据建模的第一原则因此变得非常朴素：任何结构先验，都得先由数据证明自己有资格存在。
+5,table_05.csv,6. MDM-SPRING-001：从弹簧直觉到工程候选筛选,候选 | 操作 | 实验结果 | 决策
+6,table_06.csv,8. MDM-SPRING-003：SpringGraph 与 relation operator,PSYMOE 接口说明  本档案不重新定义 PSYMOE。PSYMOE 的正式概念沿用其独立工程文档；这里仅归档可以供其调用的 relation operator、诊断量与 preset。
+7,table_07.csv,10. MDM-ATTN-004：什么时候外壳失效，必须换核,数据 | 普通局部 Attn | 几何约束 Attn | Spring relation | 安全配置下 N_eff | 判定
+8,table_08.csv,10. MDM-ATTN-004：什么时候外壳失效，必须换核,换核红线  关系约束已经安全；Attention 的有效邻居数或残差门为了安全而塌缩；性能仍系统性落后于非混合 relation operator；同时局部 convex-mixture probe 显示混合态频繁离开经验支持域。四项合在一起，才进入“必须换核”。
+9,table_09.csv,12. Coverage-aware structure learning,硬边界  Weighting 能重新分配已经存在的 observation；它不会创造训练集中根本没有覆盖到的结构。Scale trace 显示某区域已经接近没有 observation 时，正确动作是标记 coverage insufficient，进入数据获取或补采样，而不是给孤立点无限权重。
+10,table_10.csv,14. 失败候选与保留候选清单,状态 | 候选 | 当前解释
+11,table_11.csv,15. 讨论：人类和机器预测的机制艺术,这条线最“艺术”的一句话  人类和机器预测都在选择“什么算重要”。面向数据建模的工作，不是把选择权交给某个固定架构，而是把这份选择权重新拆开：数据决定可行几何，任务决定目标机制，模型负责在两者之间学习。
+12,table_12.csv,17. MDM-SOP-001：面向机制建模 SOP 的整体验证,本轮结论先行：SOP 的关键不是“诊断得更复杂”，而是把 diagnostic 与 action 分开。数据告诉系统哪里可能有问题；目标机制决定这是不是需要修的问题；micro-probe 再决定具体修法。
+13,table_13.csv,17.1 目标机制改变，同一修正的意义也改变,Probe | 评价机制 | Baseline | Coverage-balanced | 变化
+14,table_14.csv,17.2 Geometry guard 的操作必须允许 no-op,数据 | Local Attention | Geometry Guard | 提升(pp) | Median N_eff | Guard 胜率
+15,table_15.csv,17.3 结构规律与真实 prevalence 可以拆开,阶段 | Balanced accuracy | 0 的 recall | Log-loss
+16,table_16.csv,17.4 Missing support：权重不能制造不存在的证据,条件 | 总体准确率 | 外围 25% 准确率
+17,table_17.csv,18.1 数据与机制目标,真实图 | 节点 | 边 | 目标机制
+18,table_18.csv,18.3 非退化 Attention 下，合法性持续被破坏,真实图 | Median N_eff | 非边泄漏质量 | 对称性误差 | 平均自环质量 | Local 0.5 投影 Edge-F1
+19,table_19.csv,18.4 安全线一旦满足，Attention 已经几乎不再 Attention,真实图 | 首次安全 β | Median N_eff | 非边泄漏 | 对称误差 | 自环质量
+20,table_20.csv,18.5 投影可以救，但那意味着 Attention 已经降级为 proposal,真实图 | β=2 N_eff | Local 0.5 Edge-F1 | Global oracle Edge-F1 | 解释
+21,table_21.csv,18.7 正触发结论：必须换的究竟是哪一层,正触发成立：如果目标机制要求每个中间状态都属于一个非凸/离散合法集合，而 geometry-safe Attention 在 N_eff≥2 时持续离开该集合；只有 N_eff→1 或外接全局投影才能恢复合法性，那么 ΣaV 不能继续作为“状态生成核”。Attention 可以保留为关系打分器，但状态转换必须交给离散选择、约束投影或其他非混合核。

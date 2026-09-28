@@ -1,10 +1,10 @@
 # Language Structure and Control Geometry
 
-Biosphere 3 · Chapter 4 Data Zoo · Subreport 1 · Language
+Data-Oriented Modelling · Chapter 4 Data Zoo · Subreport 1 · Language
 
 English report edition v1.0 · 27 September 2026
 
-[Data Zoo](https://github.com/walkingrui-bot/biosphere-3-public-reports/tree/main/Chapter_4_Data_Zoo) · [All chapters](https://github.com/walkingrui-bot/biosphere-3-public-reports)
+[Data Zoo](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/tree/main/Chapter_4_Data_Zoo) · [All chapters](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports)
 
 This language issue examines how narrow local transitions and predicate relations combine into richer sentence structure. Human simplification, multilingual and script controls, response-form comparisons, tool-interface interventions, dependency measurements and a compact relational router provide complementary evidence at different scales.
 

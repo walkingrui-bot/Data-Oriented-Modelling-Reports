@@ -1,0 +1,21 @@
+table,section,caption,path,rows_including_header,columns,sha256
+glossary,Opening,Key terms and meanings,evidence/report_tables/glossary.csv,12,2,96317419fe006aa222916f8dc7a6383a395368b52c2895fde278db54d0822550
+1,1 Hypotheses and evidence,Table 1. Hypotheses assessed across the experiments.,evidence/report_tables/table_01.csv,19,4,427355ca8c0ac14bb6dea0ccbc1bec410019b259ad58e2ea67da386a768542f9
+2,6 Screening candidates based on local compression,Table 2. Screening of local compression candidates.,evidence/report_tables/table_02.csv,9,4,88469a9fa9de3487de229fdaf96959f7475266e1483f8f79a01c81dc24487ee1
+3,10 Criteria for replacing the aggregation operator,Table 3. Attention corrections and effective mixing.,evidence/report_tables/table_03.csv,4,6,59048733ee60b4c9e9fd16ccc3fb0760b2fbb101518ac0d2bd7ec29f8b0bdfb4
+4,14 Retained candidates and unsuccessful defaults,Table 4. Candidate disposition after the initial experiments.,evidence/report_tables/table_04.csv,13,3,32f26941e914a1013559a236c38eb656582146e563926484cedda46b3704e9a3
+5,17 Validation of the complete modelling procedure,Table 5. Coverage balancing under two evaluation targets.,evidence/report_tables/table_05.csv,7,5,985ccfc30ddc804d992deed402d1fb9ff33a10a2b9332d6cbe45983cbb91d2ae
+6,17 Validation of the complete modelling procedure,Table 6. Geometry guards with five percent labels.,evidence/report_tables/table_06.csv,5,6,2d722fb6cc9897073418f4f532b3cb7f3183c51245128df799ff5507ac7a6613
+7,17 Validation of the complete modelling procedure,Table 7. Structural learning and prevalence calibration.,evidence/report_tables/table_07.csv,4,4,436ae2adf3625890ed9f74b161d4a25053f474c7403c418efa184d5d3c5d4cb7
+8,17 Validation of the complete modelling procedure,Table 8. Biased coverage and oracle weighting.,evidence/report_tables/table_08.csv,4,3,8e304e9afc64975107e2d1a4b7268b8e7531fb6622927f0bd1916a0e5727749b
+9,18 State legality in discrete graphs,Table 9. Graph datasets and target states.,evidence/report_tables/table_09.csv,4,4,895bdadb5607ed89f103f9539e307807542a012a8b2e25e17dfa878bb12c89c5
+10,18 State legality in discrete graphs,Table 10. Graph state diagnostics at beta 2.,evidence/report_tables/table_10.csv,4,6,205352c7ca63b2c087f9c65e53a6d9bd7039da2635e1539813203e48255735b5
+11,18 State legality in discrete graphs,Table 11. First tested settings satisfying the working safety thresholds.,evidence/report_tables/table_11.csv,4,6,f975754745dec1f8e73ccf40f7c514efc2e4e94d9c055edf61ec3d58697c5dc0
+12,18 State legality in discrete graphs,Table 12. Local and global projection.,evidence/report_tables/table_12.csv,4,5,0c81b4cf65ed290b2ad28ea1cc9607fe5b213a0b7c892816020093ef4b6e46e3
+13,20 Selecting operators from the relation mechanism,Table 13. Davis recovery by adjacency path order.,evidence/report_tables/table_13.csv,7,4,131564a44230dd53a2802e4424f007a551616115e59f0dc86b7193409f94d458
+14,20 Selecting operators from the relation mechanism,Table 14. Graph specific edge recovery.,evidence/report_tables/table_14.csv,10,5,d145e1274189882429d792f8234314c3dfbabf4f43427456ce8fe5009486bc3b
+15,21 Precommitted validation on additional datasets,Table 15. ModeChoice validation.,evidence/report_tables/table_15.csv,3,4,8420b9d4dc3f011d343cc4914a3844d1a0d6346a9e6e86d6d92e112af30bd6d5
+16,21 Precommitted validation on additional datasets,Table 16. Engel coverage correction.,evidence/report_tables/table_16.csv,3,4,e8f53ae6d83a7824fdcbb8daa564c5522ce40f2c3b77aa8f89c4373fd53522b7
+17,21 Precommitted validation on additional datasets,Table 17. RAND HIE validation.,evidence/report_tables/table_17.csv,4,4,0c5b5b4f6f3c7fa0fbe6c0ec05ab2d308ddbfa41378bfc0dad22df53eaf3ec11
+18,21 Precommitted validation on additional datasets,Table 18. Les Misérables relation recovery.,evidence/report_tables/table_18.csv,7,2,d9ad566b88186df9a9b950097ff9eddb3e8bde763eb5c0714c61f86bd68c3a41
+19,21 Precommitted validation on additional datasets,Table 19. Assessment of precommitted predictions.,evidence/report_tables/table_19.csv,5,4,f98a6283cfde14c81101a9c155e42a583d2ebf287094de58629cebcd5932963a
