@@ -1,0 +1,4241 @@
+[
+  {
+    "number": 1,
+    "caption": "Table 1. Reading map.",
+    "section": "Reading map",
+    "rows": [
+      [
+        "Study group",
+        "Purpose"
+      ],
+      [
+        "Foundational comparisons",
+        "Hierarchy, capacity, chemical signals, recorded animal communication, physical prediction and routing"
+      ],
+      [
+        "Experiments 003–009",
+        "Data geometry, observability, parameter sharing, hidden generating structure and drift"
+      ],
+      [
+        "Experiments 010–014",
+        "Persistent carriers, lifecycle relations, observation timing and measurement policy"
+      ],
+      [
+        "Experiments 015–020",
+        "Overlapping modules, resource availability, delayed depletion and integrated prediction"
+      ],
+      [
+        "Experiments 021–025",
+        "Architecture reuse across source structures and measured geometry of real graphs"
+      ],
+      [
+        "Experiments 026–028",
+        "Distributed corpus placement, retrieval, fault handling and consistent state updates"
+      ],
+      [
+        "General discussion",
+        "Data-oriented modelling principles and the scope of their experimental support"
+      ]
+    ]
+  },
+  {
+    "number": 2,
+    "caption": "Table 2. Terms used in the chapter.",
+    "section": "Terms and measures",
+    "rows": [
+      [
+        "Term",
+        "Meaning in this chapter"
+      ],
+      [
+        "Predictive state / GMS",
+        "Information retained from observations and history to answer specified future-response queries"
+      ],
+      [
+        "MoE",
+        "Mixture of experts; local prediction modules combined by a router"
+      ],
+      [
+        "MSE / R²",
+        "Mean squared error / coefficient of determination; lower MSE and higher R² are generally preferable within the same task"
+      ],
+      [
+        "d95 / r95",
+        "Reported dimension or rank capturing 95% of the relevant spectrum under the experiment’s stated convention"
+      ],
+      [
+        "Stable rank",
+        "A spectral measure of effective response complexity; distinct from parameter count"
+      ],
+      [
+        "NMI / ARI",
+        "Normalized mutual information / adjusted Rand index for comparing partitions"
+      ],
+      [
+        "Observability",
+        "Information about hidden state recoverable from the specified observations and history"
+      ],
+      [
+        "Conditional innovation",
+        "Variation random given the model’s specified state or history"
+      ],
+      [
+        "Rollout",
+        "Multi-step prediction using the model’s previous outputs as later inputs"
+      ],
+      [
+        "Computational body",
+        "Operational metaphor for available modules, capacities, load history and their coordination; also retained in model identifiers"
+      ],
+      [
+        "Owner / shard",
+        "The authority holding a state object / a physical partition of the corpus"
+      ],
+      [
+        "CAS / DAG",
+        "Compare-and-set version check / directed acyclic graph of task dependencies"
+      ],
+      [
+        "Recall@5 / exact set",
+        "Fraction of centralized top-5 items recovered / whether the entire top-5 set matches"
+      ],
+      [
+        "LCC / CV",
+        "Largest connected component / coefficient of variation"
+      ]
+    ]
+  },
+  {
+    "number": 3,
+    "caption": "Table 3. Modelling emphasis and task-oriented model selection.",
+    "section": "1.1 General data intelligence and automated model selection",
+    "rows": [
+      [
+        "Aspect",
+        "Task-oriented AutoML",
+        "General data intelligence in this chapter"
+      ],
+      [
+        "Starting point",
+        "Specified task, features, targets and metrics",
+        "Observed data and their generating and observation processes"
+      ],
+      [
+        "Emphasis",
+        "Model selection, combination and tuning",
+        "Predictive-state construction and mechanism-informed modelling"
+      ],
+      [
+        "Computation",
+        "Search over task-specific candidates",
+        "Allocate memory, modules and native representations from measured structure"
+      ],
+      [
+        "Local prediction",
+        "An element of the defined task",
+        "A scoring interface for evaluating a longer process"
+      ]
+    ]
+  },
+  {
+    "number": 4,
+    "caption": "Table 4. Native structure and measured response geometry.",
+    "section": "2. Generating mechanisms and predictive states",
+    "rows": [
+      [
+        "Property",
+        "Language / birdsong",
+        "Chemical / QS",
+        "Population statistics",
+        "Physical systems"
+      ],
+      [
+        "Native structure",
+        "Discrete sequences",
+        "Molecular structure, graphs, mixtures",
+        "Sets, hierarchy, repeated measures",
+        "Object graphs, fields, contacts, occlusion"
+      ],
+      [
+        "Time structure",
+        "History and order-sensitive composition",
+        "Concentrations, reactions, network timing",
+        "Multiple timescales and cohorts",
+        "Continuous dynamics and rollout"
+      ],
+      [
+        "Measured response complexity",
+        "Few dominant directions in the examples considered",
+        "Synthetic chemical system: ≈3 dominant axes",
+        "Statistical simulator: ≈1–2 axes",
+        "Rule model: r95≈15"
+      ],
+      [
+        "Modelling concern",
+        "Context aliasing",
+        "Confusing structure with identity",
+        "Pooling away hierarchy or confounding",
+        "Rollout drift and mechanism switches"
+      ],
+      [
+        "Candidate module",
+        "Sequence model",
+        "Graph or structural model",
+        "Hierarchical or set model",
+        "Dynamics or rule model"
+      ]
+    ]
+  },
+  {
+    "number": 5,
+    "caption": "Table 5. Foundational experiment map.",
+    "section": "3. Foundational experiments",
+    "rows": [
+      [
+        "Experiment",
+        "Data",
+        "Question",
+        "Reported result"
+      ],
+      [
+        "HIER-STAT-001",
+        "Simulated population and cohorts",
+        "Information retained by hierarchy",
+        "Confounding R²: 0.672→≈0 after reassignment"
+      ],
+      [
+        "STAT-SCALE-001",
+        "Statistical simulator",
+        "Capacity and mechanism aliasing",
+        "State separation increases 2.7–3.5×; control rank stays low"
+      ],
+      [
+        "SEMIOTIC-CHEM-001",
+        "Synthetic chemical communication",
+        "Compositional signal prediction",
+        "Held-out Top-1 ≈28–32%; shuffled chemistry performs poorly"
+      ],
+      [
+        "REAL-BIRD-001",
+        "Bengalese finch song",
+        "Predictive information in history",
+        "K=1→5: 81.3%→86.5%; shuffled trend reverses"
+      ],
+      [
+        "REAL-WAGGLE-001",
+        "Honeybee directions",
+        "Episode-conditioned signal structure",
+        "Previous run: 35.3° mean error; global: 45.6°"
+      ],
+      [
+        "QS-GRAPH-001",
+        "Quorum-sensing records",
+        "Relational signal structure",
+        "Signal-family / role information ≈0.408 bit"
+      ],
+      [
+        "WORLD-RULE-001",
+        "Synthetic physical dynamics",
+        "Direct prediction and generated rules",
+        "Rule Generator improves one-step and rollout MSE"
+      ],
+      [
+        "WORLD-MOE-002",
+        "Homogeneous and heterogeneous laws",
+        "Functional routing contribution",
+        "Router interventions: eight-step error +10.9% / +19.9%"
+      ]
+    ]
+  },
+  {
+    "number": 6,
+    "caption": "Table 6. Statistical hierarchy intervention.",
+    "section": "3.1 HIER-STAT-001 Preserving statistical hierarchy",
+    "rows": [
+      [
+        "Condition",
+        "Causal-curve MSE",
+        "Hidden-confounding R²"
+      ],
+      [
+        "Original cohort hierarchy",
+        "0.427",
+        "0.672"
+      ],
+      [
+        "Same individual records reassigned across cohorts",
+        "0.518",
+        "-0.003"
+      ]
+    ]
+  },
+  {
+    "number": 7,
+    "caption": "Table 7. Capacity comparison at three coverage levels.",
+    "section": "3.2 STAT-SCALE-001 Capacity and predictive-state separation",
+    "rows": [
+      [
+        "Coverage",
+        "Sep w=8",
+        "Sep w=128",
+        "Conf R² w=8",
+        "Conf R² w=128",
+        "MSE reduction"
+      ],
+      [
+        "25%",
+        "3.72",
+        "10.98",
+        "0.538",
+        "0.755",
+        "38.5%"
+      ],
+      [
+        "50%",
+        "3.82",
+        "10.14",
+        "0.488",
+        "0.765",
+        "46.9%"
+      ],
+      [
+        "100%",
+        "2.77",
+        "9.82",
+        "0.308",
+        "0.761",
+        "39.2%"
+      ]
+    ]
+  },
+  {
+    "number": 8,
+    "caption": "Table 8. Held-out synthetic molecular combinations.",
+    "section": "3.3 SEMIOTIC-CHEM-001 Predictive states in structured chemical signals",
+    "rows": [
+      [
+        "Model",
+        "Top-1",
+        "Top-5",
+        "Mean rank"
+      ],
+      [
+        "Transformer + structure",
+        "31.9%",
+        "90.6%",
+        "2.90"
+      ],
+      [
+        "GRU + structure",
+        "27.8%",
+        "94.2%",
+        "2.78"
+      ],
+      [
+        "Last-signal Markov",
+        "21.9%",
+        "84.7%",
+        "3.91"
+      ],
+      [
+        "Shuffled chemistry",
+        "0.0%",
+        "1.6%",
+        "30.27"
+      ],
+      [
+        "Random ranking",
+        "1.67%",
+        "8.33%",
+        "—"
+      ]
+    ]
+  },
+  {
+    "number": 9,
+    "caption": "Table 9. History and chemical predictive-state geometry.",
+    "section": "3.3 SEMIOTIC-CHEM-001 Predictive states in structured chemical signals",
+    "rows": [
+      [
+        "Prefix signals",
+        "GRU latent-state mean R²",
+        "GRU state d95",
+        "next-signal control stable rank"
+      ],
+      [
+        "0",
+        "-0.005",
+        "4",
+        "3.22"
+      ],
+      [
+        "1",
+        "0.659",
+        "8",
+        "2.93"
+      ],
+      [
+        "2",
+        "0.698",
+        "11",
+        "2.85"
+      ],
+      [
+        "3",
+        "0.706",
+        "12",
+        "2.81"
+      ],
+      [
+        "4",
+        "0.715",
+        "13",
+        "2.80"
+      ],
+      [
+        "5",
+        "0.711",
+        "11",
+        "2.74"
+      ]
+    ]
+  },
+  {
+    "number": 10,
+    "caption": "Table 10. History-dependent next-syllable prediction.",
+    "section": "3.4 REAL-BIRD-001 History-dependent prediction in Bengalese finch song",
+    "rows": [
+      [
+        "History K",
+        "Real Top-1",
+        "Real cross-entropy (bit)",
+        "Shuffled Top-1"
+      ],
+      [
+        "0",
+        "42.0%",
+        "2.352",
+        "42.0%"
+      ],
+      [
+        "1",
+        "81.3%",
+        "0.794",
+        "41.9%"
+      ],
+      [
+        "2",
+        "82.2%",
+        "0.684",
+        "41.9%"
+      ],
+      [
+        "3",
+        "82.9%",
+        "0.642",
+        "41.8%"
+      ],
+      [
+        "4",
+        "84.5%",
+        "0.581",
+        "40.6%"
+      ],
+      [
+        "5",
+        "86.5%",
+        "0.544",
+        "38.6%"
+      ]
+    ]
+  },
+  {
+    "number": 11,
+    "caption": "Table 11. Honeybee direction prediction.",
+    "section": "3.5.1 Continuous direction signals in honeybee dance",
+    "rows": [
+      [
+        "Predictor",
+        "Mean angular error",
+        "Median"
+      ],
+      [
+        "Global circular mean",
+        "45.6°",
+        "24.8°"
+      ],
+      [
+        "Previous waggle run",
+        "35.3°",
+        "19.2°"
+      ],
+      [
+        "Two-step constant angular velocity",
+        "55.8°",
+        "36.1°"
+      ]
+    ]
+  },
+  {
+    "number": 12,
+    "caption": "Table 12. Quorum-sensing family and role information.",
+    "section": "3.5.2 Relations among quorum-sensing signals and functions",
+    "rows": [
+      [
+        "Quantity",
+        "Value"
+      ],
+      [
+        "QS gene/function entries",
+        "134"
+      ],
+      [
+        "Signal families",
+        "7"
+      ],
+      [
+        "Functional roles",
+        "Synthesis / Receptor / Quenching"
+      ],
+      [
+        "H(role)",
+        "1.389 bit"
+      ],
+      [
+        "H(role | signal family)",
+        "0.982 bit"
+      ],
+      [
+        "I(signal family; role)",
+        "0.408 bit"
+      ]
+    ]
+  },
+  {
+    "number": 13,
+    "caption": "Table 13. Physical prediction by direct and generated-rule models.",
+    "section": "3.6 WORLD-RULE-001 Predicting continuous physical transitions",
+    "rows": [
+      [
+        "Metric",
+        "Direct predictor",
+        "Rule Generator"
+      ],
+      [
+        "One-step MSE",
+        "5.06e-4",
+        "5.39e-6"
+      ],
+      [
+        "3-step rollout MSE",
+        "0.00753",
+        "0.000353"
+      ],
+      [
+        "5-step rollout MSE",
+        "0.0368",
+        "0.00385"
+      ],
+      [
+        "9-step rollout MSE",
+        "0.2577",
+        "0.0672"
+      ]
+    ]
+  },
+  {
+    "number": 14,
+    "caption": "Table 14. State and rule response geometry.",
+    "section": "3.6 WORLD-RULE-001 Predicting continuous physical transitions",
+    "rows": [
+      [
+        "Geometry",
+        "Result"
+      ],
+      [
+        "Predictive-state r95",
+        "≈14"
+      ],
+      [
+        "Predictive-state stable rank",
+        "≈7.88"
+      ],
+      [
+        "Functional rule-mode r95",
+        "≈15"
+      ],
+      [
+        "Functional rule-mode stable rank",
+        "≈9.37"
+      ]
+    ]
+  },
+  {
+    "number": 15,
+    "caption": "Table 15. Homogeneous-law model comparison.",
+    "section": "3.7.1 Homogeneous transition law",
+    "rows": [
+      [
+        "Model",
+        "One-step MSE",
+        "8-step rollout MSE"
+      ],
+      [
+        "Direct",
+        "0.04735",
+        "0.67512"
+      ],
+      [
+        "GeneratedRule",
+        "0.01363",
+        "0.35012"
+      ],
+      [
+        "MoE-Rule",
+        "0.01416",
+        "0.34874"
+      ]
+    ]
+  },
+  {
+    "number": 16,
+    "caption": "Table 16. Heterogeneous-law model comparison.",
+    "section": "3.7.2 Heterogeneous transition laws",
+    "rows": [
+      [
+        "Model",
+        "Params",
+        "One-step MSE",
+        "4-step",
+        "8-step"
+      ],
+      [
+        "GeneratedRule",
+        "42,088",
+        "0.01468",
+        "0.24161",
+        "0.53892"
+      ],
+      [
+        "WorldMoE",
+        "37,794",
+        "0.01538",
+        "0.24467",
+        "0.50963"
+      ]
+    ]
+  },
+  {
+    "number": 17,
+    "caption": "Table 17. Routing interventions.",
+    "section": "3.7.2 Heterogeneous transition laws",
+    "rows": [
+      [
+        "Router intervention",
+        "Mean 8-step penalty"
+      ],
+      [
+        "Uniform routing",
+        "+10.94%"
+      ],
+      [
+        "Shuffle routing across worlds",
+        "+19.91%"
+      ]
+    ]
+  },
+  {
+    "number": 18,
+    "caption": "Table 18. Propositions and empirical tests.",
+    "section": "4.4 Hypotheses and empirical tests",
+    "rows": [
+      [
+        "Proposition",
+        "Comparison and interpretation"
+      ],
+      [
+        "Conditional routing helps under heterogeneity",
+        "Compare matched-budget long rollout with a shared model; test uniform and shuffled routing. Equal shared-model performance with insensitive routing would weaken the proposed benefit."
+      ],
+      [
+        "Experts have distinct functional roles",
+        "Remove or exchange experts and measure downstream responses. Complete interchangeability under the probe set would weaken a role-specific interpretation."
+      ],
+      [
+        "Predictive states can be shared across modalities",
+        "Test alignment of future-equivalent states using a common query set. This is a proposed cross-modal test."
+      ],
+      [
+        "Capacity reduces state aliasing",
+        "Measure coordinate-aware state separation and future-response robustness across capacity. Separation alone is insufficient if predictive behaviour does not improve."
+      ],
+      [
+        "Generated transitions help planning",
+        "Compare closed-loop transfer, planning and out-of-distribution rollout with and without rule generation. Closed-loop benefit is a separate evaluation target."
+      ]
+    ]
+  },
+  {
+    "number": 19,
+    "caption": "Table 19. Source and evidence references.",
+    "section": "4.7 Data sources and foundational evidence records",
+    "rows": [
+      [
+        "Source or experiment",
+        "Evidence reference",
+        "Use"
+      ],
+      [
+        "SEMIOTIC-CHEMICAL-GRAMMAR-001",
+        "SEMIOTIC_CHEMICAL_GRAMMAR_001_bundle.zip",
+        "zero-shot molecule / latent state / control geometry"
+      ],
+      [
+        "WORLD-RULE-MOE-002",
+        "WORLD_RULE_MOE_002_bundle.zip",
+        "homogeneous vs heterogeneous law / router ablation"
+      ],
+      [
+        "Bengalese finch",
+        "NickleDave/pomma → bl26lb16_sequences.txt",
+        "Recorded syllable sequences"
+      ],
+      [
+        "Honeybee WDD",
+        "BioroboticsLab/WDD_paper → GroundTruthData/GTAverage.csv",
+        "waggle direction sequence proxy"
+      ],
+      [
+        "QSDB",
+        "qhmu/QSDB → data/QSDB_qsgroups.txt",
+        "signal-family × function graph"
+      ],
+      [
+        "Berlin2019 waggle/follower",
+        "Zenodo 7928121",
+        "Related receiver / follower dataset"
+      ]
+    ]
+  },
+  {
+    "number": 20,
+    "caption": "Table 20. Factorial dimension memory and heterogeneity comparison.",
+    "section": "5.1.2 Results under a matched total parameter budget",
+    "rows": [
+      [
+        "Freedom",
+        "Memory",
+        "Generator",
+        "d95",
+        "History gain",
+        "MoE rollout gain"
+      ],
+      [
+        "d=3",
+        "m=1",
+        "laws=1",
+        "3",
+        "-5.5%",
+        "+0.3%"
+      ],
+      [
+        "d=3",
+        "m=1",
+        "laws=4",
+        "3",
+        "31.4%",
+        "-9.1%"
+      ],
+      [
+        "d=3",
+        "m=4",
+        "laws=1",
+        "3",
+        "-0.7%",
+        "-0.0%"
+      ],
+      [
+        "d=3",
+        "m=4",
+        "laws=4",
+        "3",
+        "53.0%",
+        "-13.1%"
+      ],
+      [
+        "d=14",
+        "m=1",
+        "laws=1",
+        "13",
+        "-2.3%",
+        "-33.6%"
+      ],
+      [
+        "d=14",
+        "m=1",
+        "laws=4",
+        "13",
+        "39.7%",
+        "-28.2%"
+      ],
+      [
+        "d=14",
+        "m=4",
+        "laws=1",
+        "13",
+        "3.3%",
+        "-52.9%"
+      ],
+      [
+        "d=14",
+        "m=4",
+        "laws=4",
+        "13",
+        "35.2%",
+        "-47.3%"
+      ]
+    ]
+  },
+  {
+    "number": 21,
+    "caption": "Table 21. Router diagnostics under multiple laws.",
+    "section": "5.1.3 Routing interventions and overall model performance",
+    "rows": [
+      [
+        "World",
+        "Router-law NMI",
+        "Norm. entropy",
+        "Uniform penalty",
+        "Shuffle penalty"
+      ],
+      [
+        "d=3, m=1",
+        "0.279",
+        "0.976",
+        "13.9%",
+        "13.9%"
+      ],
+      [
+        "d=3, m=4",
+        "0.342",
+        "0.921",
+        "43.7%",
+        "51.1%"
+      ],
+      [
+        "d=14, m=1",
+        "0.489",
+        "0.853",
+        "408.3%",
+        "505.5%"
+      ],
+      [
+        "d=14, m=4",
+        "0.435",
+        "0.908",
+        "103.1%",
+        "120.9%"
+      ]
+    ]
+  },
+  {
+    "number": 22,
+    "caption": "Table 22. Expert-capacity and oracle comparison.",
+    "section": "5.1.4 Capacity and oracle-routing comparisons",
+    "rows": [
+      [
+        "d",
+        "Model",
+        "Params",
+        "One-step MSE",
+        "Long rollout MSE"
+      ],
+      [
+        "3",
+        "MonoBlock",
+        "10,688",
+        "0.01230",
+        "0.05170"
+      ],
+      [
+        "3",
+        "MatchedMoE",
+        "10,332",
+        "0.01722",
+        "0.05847"
+      ],
+      [
+        "3",
+        "OvercompleteMoE",
+        "25,104",
+        "0.01242",
+        "0.04983"
+      ],
+      [
+        "3",
+        "Oracle4xMono",
+        "42,752",
+        "0.00658",
+        "0.00644"
+      ],
+      [
+        "14",
+        "MonoBlock",
+        "10,688",
+        "0.01518",
+        "0.02176"
+      ],
+      [
+        "14",
+        "MatchedMoE",
+        "10,332",
+        "0.03330",
+        "0.03206"
+      ],
+      [
+        "14",
+        "OvercompleteMoE",
+        "25,104",
+        "0.01863",
+        "0.01932"
+      ],
+      [
+        "14",
+        "Oracle4xMono",
+        "42,752",
+        "0.00597",
+        "0.00339"
+      ]
+    ]
+  },
+  {
+    "number": 23,
+    "caption": "Table 23. Data properties and architectural implications.",
+    "section": "5.1.6 Data properties and modelling implications",
+    "rows": [
+      [
+        "Data property",
+        "Observed training effect",
+        "Modelling implication"
+      ],
+      [
+        "Higher intrinsic dimension",
+        "Splitting a fixed budget can underallocate each local function",
+        "Test adequate per-expert capacity"
+      ],
+      [
+        "Multiple transition laws",
+        "Routing interventions affect long rollout",
+        "Evaluate state-conditioned modules"
+      ],
+      [
+        "Longer dynamical memory",
+        "One frame omits predictive information",
+        "Retain history in state estimation"
+      ],
+      [
+        "Hidden generator identity",
+        "History helps even with first-order latent dynamics",
+        "Evaluate system identification from history"
+      ],
+      [
+        "Rollout sensitivity",
+        "One-step and rollout rankings can differ",
+        "Select models using the relevant horizon"
+      ]
+    ]
+  },
+  {
+    "number": 24,
+    "caption": "Table 24. Diagnostic axes beyond dimension.",
+    "section": "5.1.7 Empirical design criteria",
+    "rows": [
+      [
+        "Diagnostic axis",
+        "Variation beyond effective dimension",
+        "Model comparison"
+      ],
+      [
+        "Curvature / nonlinearity",
+        "Equal d95 can have different local derivatives",
+        "Block width, expert count and routing sparsity"
+      ],
+      [
+        "Conditional innovation",
+        "Unpredictable noise differs from structured dimension",
+        "Noise fit and shared-predictor performance"
+      ],
+      [
+        "Partial observability",
+        "Hidden states can alias in current observations",
+        "History length, state dimension and specialization"
+      ],
+      [
+        "Topology",
+        "Sequences, sets, graphs and fields preserve different relations",
+        "Native encoders and common encodings"
+      ],
+      [
+        "Nonstationarity / switching",
+        "The generator can change within an episode",
+        "Routing response, lag and interference"
+      ],
+      [
+        "Symmetry / gauge",
+        "Raw coordinates can contain representational redundancy",
+        "Functional response geometry and state size"
+      ],
+      [
+        "Sparse events / heavy tails",
+        "Rare events can have large predictive consequences",
+        "Capacity allocation and retention of rare events"
+      ]
+    ]
+  },
+  {
+    "number": 25,
+    "caption": "Table 25. Experiment 003 evidence records.",
+    "section": "5.1.9 Evidence records",
+    "rows": [
+      [
+        "Evidence record",
+        "Contents"
+      ],
+      [
+        "WORLD_DATA_GEOMETRY_003_bundle.zip",
+        "Experiment evidence bundle"
+      ],
+      [
+        "all_runs.csv",
+        "8 conditions × 2 seeds × Mono/MoE results"
+      ],
+      [
+        "condition_geometry.csv",
+        "d95, history gain and law separation by condition"
+      ],
+      [
+        "condition_summary.csv",
+        "Factorial summary and MoE gain"
+      ],
+      [
+        "router_summary.csv",
+        "Entropy, law NMI and routing interventions"
+      ],
+      [
+        "capacity_followup.csv",
+        "Matched, overcomplete and oracle comparisons by seed"
+      ],
+      [
+        "factorial_moe_gain.png",
+        "Matched-budget 2×2×2 comparison"
+      ],
+      [
+        "capacity_ladder.png",
+        "Capacity comparisons at low and high dimension"
+      ],
+      [
+        "router_intervention.png",
+        "Functional routing interventions"
+      ]
+    ]
+  },
+  {
+    "number": 26,
+    "caption": "Table 26. Microstructure interventions.",
+    "section": "5.2.1 Controlled design",
+    "rows": [
+      [
+        "Axis",
+        "Operational measure",
+        "Prediction requirement"
+      ],
+      [
+        "Local curvature",
+        "Change in the transition Jacobian within a small neighbourhood",
+        "Complexity of the local rule representation"
+      ],
+      [
+        "Conditional innovation",
+        "Manipulated additive noise with known noise entropy",
+        "Unpredictable part of the future given inputs"
+      ],
+      [
+        "Anisotropy",
+        "Uneven singular-value spectrum of the transition Jacobian",
+        "Retention of high-sensitivity directions"
+      ]
+    ]
+  },
+  {
+    "number": 27,
+    "caption": "Table 27. Fixed-dimension condition comparison.",
+    "section": "5.2.2 Results across the eight conditions",
+    "rows": [
+      [
+        "Condition",
+        "d95",
+        "Curvature",
+        "Cond.#",
+        "Mono rollout",
+        "Matched MoE",
+        "MoE gain"
+      ],
+      [
+        "C0_N0_A0",
+        "8",
+        "0.021",
+        "1.37",
+        "0.0336",
+        "0.0234",
+        "+30.3%"
+      ],
+      [
+        "C0_N0_A1",
+        "8",
+        "0.014",
+        "5.36",
+        "0.0099",
+        "0.0139",
+        "-40.8%"
+      ],
+      [
+        "C0_N1_A0",
+        "8",
+        "0.033",
+        "1.35",
+        "0.2543",
+        "0.2490",
+        "+2.1%"
+      ],
+      [
+        "C0_N1_A1",
+        "8",
+        "0.027",
+        "4.88",
+        "0.2441",
+        "0.2421",
+        "+0.9%"
+      ],
+      [
+        "C1_N0_A0",
+        "8",
+        "0.387",
+        "10.47",
+        "0.7456",
+        "0.8187",
+        "-9.8%"
+      ],
+      [
+        "C1_N0_A1",
+        "8",
+        "0.270",
+        "20.43",
+        "0.0953",
+        "0.1219",
+        "-28.0%"
+      ],
+      [
+        "C1_N1_A0",
+        "8",
+        "0.381",
+        "5.42",
+        "0.7054",
+        "0.7438",
+        "-5.4%"
+      ],
+      [
+        "C1_N1_A1",
+        "8",
+        "0.358",
+        "20.89",
+        "0.7574",
+        "0.8080",
+        "-6.7%"
+      ]
+    ]
+  },
+  {
+    "number": 28,
+    "caption": "Table 28. Capacity and quadrant-oracle interventions.",
+    "section": "5.2.4 Capacity and regime-label interventions",
+    "rows": [
+      [
+        "Condition",
+        "Model",
+        "Final rollout MSE",
+        "Gain vs Mono"
+      ],
+      [
+        "C0_N0_A0",
+        "MonoBlock",
+        "0.0336",
+        "+0.0%"
+      ],
+      [
+        "C0_N0_A0",
+        "MatchedMoE",
+        "0.0234",
+        "+30.3%"
+      ],
+      [
+        "C0_N0_A0",
+        "OracleMoE",
+        "0.0238",
+        "+29.1%"
+      ],
+      [
+        "C0_N0_A0",
+        "OvercompleteMoE",
+        "0.0145",
+        "+56.9%"
+      ],
+      [
+        "C0_N0_A1",
+        "MonoBlock",
+        "0.0099",
+        "+0.0%"
+      ],
+      [
+        "C0_N0_A1",
+        "MatchedMoE",
+        "0.0139",
+        "-40.8%"
+      ],
+      [
+        "C0_N0_A1",
+        "OracleMoE",
+        "0.0199",
+        "-101.9%"
+      ],
+      [
+        "C0_N0_A1",
+        "OvercompleteMoE",
+        "0.0072",
+        "+27.1%"
+      ],
+      [
+        "C1_N0_A0",
+        "MonoBlock",
+        "0.7456",
+        "+0.0%"
+      ],
+      [
+        "C1_N0_A0",
+        "MatchedMoE",
+        "0.8187",
+        "-9.8%"
+      ],
+      [
+        "C1_N0_A0",
+        "OracleMoE",
+        "1.1242",
+        "-50.8%"
+      ],
+      [
+        "C1_N0_A0",
+        "OvercompleteMoE",
+        "0.6986",
+        "+6.3%"
+      ]
+    ]
+  },
+  {
+    "number": 29,
+    "caption": "Table 29. Observability and history comparison.",
+    "section": "5.3.2 Observability control",
+    "rows": [
+      [
+        "Condition",
+        "Rank 1",
+        "Rank 4",
+        "Single MSE",
+        "Recurrent MSE",
+        "History gain",
+        "Recurrent rollout",
+        "MoE rollout",
+        "MoE gain"
+      ],
+      [
+        "P0_M0",
+        "8",
+        "8",
+        "0.0004",
+        "0.0012",
+        "-163.3%",
+        "0.0013",
+        "0.0021",
+        "-59.9%"
+      ],
+      [
+        "P0_M1",
+        "8",
+        "8",
+        "0.1058",
+        "0.0368",
+        "+65.2%",
+        "0.0145",
+        "0.0158",
+        "-9.0%"
+      ],
+      [
+        "P1_M0",
+        "4",
+        "8",
+        "0.0652",
+        "0.0020",
+        "+97.0%",
+        "0.0014",
+        "0.0017",
+        "-14.3%"
+      ],
+      [
+        "P1_M1",
+        "4",
+        "8",
+        "0.1115",
+        "0.0794",
+        "+28.8%",
+        "0.0187",
+        "0.0195",
+        "-4.4%"
+      ]
+    ]
+  },
+  {
+    "number": 30,
+    "caption": "Table 30. Sharing strategies with matched local block capacity.",
+    "section": "5.4.3 Results with matched local block capacity",
+    "rows": [
+      [
+        "Condition",
+        "Mono",
+        "Hard split",
+        "Soft MoE",
+        "Shared+residual",
+        "Interpretation"
+      ],
+      [
+        "broad+dense",
+        "0.0881",
+        "0.0469",
+        "0.0148",
+        "0.0334",
+        "Soft routing retains continuous sharing and local specialization"
+      ],
+      [
+        "broad+sparse",
+        "0.0682",
+        "0.0608",
+        "0.0135",
+        "0.0256",
+        "Soft routing has lower error despite sparse bridge samples"
+      ],
+      [
+        "sharp+dense",
+        "0.2008",
+        "0.0403",
+        "0.0636",
+        "0.0937",
+        "Hard split has lower overall error; boundary cost is separate"
+      ],
+      [
+        "sharp+sparse",
+        "0.1961",
+        "0.0451",
+        "0.0814",
+        "0.1036",
+        "Concentrated drift and weak bridge favour hard split overall"
+      ]
+    ]
+  },
+  {
+    "number": 31,
+    "caption": "Table 31. Boundary error and response jumps.",
+    "section": "5.4.4 Prediction near hard boundaries",
+    "rows": [
+      [
+        "Condition",
+        "Hard boundary MSE",
+        "Soft boundary MSE",
+        "Hard jump",
+        "Soft jump"
+      ],
+      [
+        "broad+dense",
+        "0.0946",
+        "0.0125",
+        "0.728",
+        "0.011"
+      ],
+      [
+        "broad+sparse",
+        "0.1903",
+        "0.0156",
+        "0.963",
+        "0.013"
+      ],
+      [
+        "sharp+dense",
+        "0.1356",
+        "0.0954",
+        "1.377",
+        "0.020"
+      ],
+      [
+        "sharp+sparse",
+        "0.1900",
+        "0.1069",
+        "1.444",
+        "0.019"
+      ]
+    ]
+  },
+  {
+    "number": 32,
+    "caption": "Table 32. Local training transfer.",
+    "section": "5.4.5 Training compatibility kernel",
+    "rows": [
+      [
+        "Condition",
+        "Self gain",
+        "Adjacent transfer",
+        "Far transfer",
+        "Negative cells",
+        "Weakest adjacent edge"
+      ],
+      [
+        "broad+dense",
+        "0.0052",
+        "+0.0045",
+        "−0.0049",
+        "50.0%",
+        "−0.0007"
+      ],
+      [
+        "broad+sparse",
+        "0.0049",
+        "+0.0041",
+        "−0.0044",
+        "48.4%",
+        "≈0"
+      ],
+      [
+        "sharp+dense",
+        "0.0076",
+        "+0.0033",
+        "−0.0021",
+        "51.6%",
+        "−0.0054"
+      ],
+      [
+        "sharp+sparse",
+        "0.0071",
+        "+0.0044",
+        "−0.0033",
+        "51.6%",
+        "−0.0052"
+      ]
+    ]
+  },
+  {
+    "number": 33,
+    "caption": "Table 33. Generator-contrast scan.",
+    "section": "5.4.6 Generator-contrast scan",
+    "rows": [
+      [
+        "Contrast",
+        "Adjacent transfer",
+        "Far transfer",
+        "Negative fraction",
+        "Mono MSE",
+        "Soft MSE",
+        "Soft gain"
+      ],
+      [
+        "0.15",
+        "+0.0063",
+        "+0.0019",
+        "4.7%",
+        "0.0351",
+        "0.0315",
+        "10.2%"
+      ],
+      [
+        "0.45",
+        "+0.0047",
+        "−0.0004",
+        "20.3%",
+        "0.0423",
+        "0.0362",
+        "14.4%"
+      ],
+      [
+        "0.90",
+        "+0.0062",
+        "−0.0020",
+        "29.7%",
+        "0.0692",
+        "0.0535",
+        "22.7%"
+      ],
+      [
+        "1.50",
+        "+0.0060",
+        "−0.0039",
+        "39.1%",
+        "0.1101",
+        "0.0739",
+        "32.8%"
+      ],
+      [
+        "2.40",
+        "+0.0058",
+        "−0.0046",
+        "43.8%",
+        "0.2133",
+        "0.1149",
+        "46.1%"
+      ]
+    ]
+  },
+  {
+    "number": 34,
+    "caption": "Table 34. Three geometries for partition discovery.",
+    "section": "5.5.2 Observation predictive and training-compatibility geometry",
+    "rows": [
+      [
+        "Geometry",
+        "Construction",
+        "Relationship measured"
+      ],
+      [
+        "Observation",
+        "Raw high-dimensional context distance or K-means",
+        "Proximity in sensor space"
+      ],
+      [
+        "Predictive / generative",
+        "Pilot Jacobian J(x)=∂future/∂current-state",
+        "Similarity of local transition functions"
+      ],
+      [
+        "Training compatibility",
+        "Held-out loss change after a local update",
+        "Benefit or interference under parameter sharing"
+      ]
+    ]
+  },
+  {
+    "number": 35,
+    "caption": "Table 35. Recovery of hidden phase partitions.",
+    "section": "5.5.3 Recovery of hidden phase structure",
+    "rows": [
+      [
+        "Partition map",
+        "ARI vs hidden phase",
+        "NMI vs hidden phase"
+      ],
+      [
+        "RawGeometry",
+        "0.533",
+        "0.570"
+      ],
+      [
+        "PredictiveJacobian",
+        "0.798",
+        "0.796"
+      ],
+      [
+        "CompatibilityGraph",
+        "0.247",
+        "0.344"
+      ],
+      [
+        "RandomLocal",
+        "0.096",
+        "0.172"
+      ]
+    ]
+  },
+  {
+    "number": 36,
+    "caption": "Table 36. Hard-partition prediction.",
+    "section": "5.5.4 Hard partitions and shared parameters",
+    "rows": [
+      [
+        "Training scheme",
+        "Test MSE",
+        "Boundary MSE",
+        "Non-boundary MSE"
+      ],
+      [
+        "Mono",
+        "0.0250",
+        "0.0217",
+        "0.0256"
+      ],
+      [
+        "OraclePhase",
+        "0.0971",
+        "0.2052",
+        "0.0782"
+      ],
+      [
+        "PredictiveJacobian",
+        "0.0978",
+        "0.1849",
+        "0.0826"
+      ],
+      [
+        "RawGeometry",
+        "0.1482",
+        "0.1797",
+        "0.1427"
+      ],
+      [
+        "CompatibilityGraph",
+        "0.1516",
+        "0.1597",
+        "0.1502"
+      ],
+      [
+        "RandomLocal",
+        "0.2060",
+        "0.2232",
+        "0.2029"
+      ]
+    ]
+  },
+  {
+    "number": 37,
+    "caption": "Table 37. Shared prediction with local residuals.",
+    "section": "5.5.5 Local residual capacity over a shared predictor",
+    "rows": [
+      [
+        "Architecture",
+        "Test MSE",
+        "Boundary MSE",
+        "Non-boundary MSE"
+      ],
+      [
+        "SharedPredictiveResidual",
+        "0.0187",
+        "0.0170",
+        "0.0190"
+      ],
+      [
+        "SharedRawResidual",
+        "0.0188",
+        "0.0224",
+        "0.0182"
+      ],
+      [
+        "PredictiveCompatibilityGraph",
+        "0.0961",
+        "0.0941",
+        "0.0964"
+      ]
+    ]
+  },
+  {
+    "number": 38,
+    "caption": "Table 38. Drift with retrained experts.",
+    "section": "5.6.2 Retraining experts under current and stale maps",
+    "rows": [
+      [
+        "Era",
+        "Rule drift",
+        "Map migration",
+        "Mono MSE",
+        "Fresh map",
+        "Stale map",
+        "Stale penalty %"
+      ],
+      [
+        "0.0000",
+        "0.0000",
+        "0.0000",
+        "0.3274",
+        "0.2278",
+        "0.2278",
+        "0.0000"
+      ],
+      [
+        "1.0000",
+        "0.2216",
+        "0.2208",
+        "0.3360",
+        "0.2317",
+        "0.2436",
+        "5.1072"
+      ],
+      [
+        "2.0000",
+        "0.4356",
+        "0.3542",
+        "0.3220",
+        "0.2386",
+        "0.2344",
+        "-1.7429"
+      ],
+      [
+        "3.0000",
+        "0.6349",
+        "0.3917",
+        "0.3310",
+        "0.2381",
+        "0.2371",
+        "-0.4285"
+      ],
+      [
+        "4.0000",
+        "0.8137",
+        "0.4958",
+        "0.3551",
+        "0.2667",
+        "0.2513",
+        "-5.8030"
+      ],
+      [
+        "5.0000",
+        "0.9676",
+        "0.5000",
+        "0.3280",
+        "0.2371",
+        "0.2316",
+        "-2.2857"
+      ]
+    ]
+  },
+  {
+    "number": 39,
+    "caption": "Table 39. Stale routing with expert functions fixed.",
+    "section": "5.6.3 Replacing the router with expert functions held fixed",
+    "rows": [
+      [
+        "Era",
+        "Fresh route MSE",
+        "Stale route MSE",
+        "Penalty %",
+        "Rule drift",
+        "Map migration"
+      ],
+      [
+        "0.0000",
+        "0.2278",
+        "0.2278",
+        "0.0000",
+        "0.0000",
+        "0.0000"
+      ],
+      [
+        "1.0000",
+        "0.2317",
+        "0.3982",
+        "72.5438",
+        "0.2216",
+        "0.2208"
+      ],
+      [
+        "2.0000",
+        "0.2386",
+        "0.3197",
+        "34.0875",
+        "0.4356",
+        "0.3542"
+      ],
+      [
+        "3.0000",
+        "0.2381",
+        "0.4429",
+        "85.9859",
+        "0.6349",
+        "0.3917"
+      ],
+      [
+        "4.0000",
+        "0.2667",
+        "0.4246",
+        "59.4114",
+        "0.8137",
+        "0.4958"
+      ],
+      [
+        "5.0000",
+        "0.2371",
+        "0.3990",
+        "68.5625",
+        "0.9676",
+        "0.5000"
+      ]
+    ]
+  },
+  {
+    "number": 40,
+    "caption": "Table 40. Family-identification diagnostics.",
+    "section": "5.7.1 Matched stationary marginals",
+    "rows": [
+      [
+        "Diagnostic",
+        "Value"
+      ],
+      [
+        "Current-frame family classifier",
+        "0.4898"
+      ],
+      [
+        "Two-frame transition classifier",
+        "1.0000"
+      ],
+      [
+        "Normalized covariance difference",
+        "0.2185"
+      ],
+      [
+        "Current mean difference",
+        "0.1214"
+      ]
+    ]
+  },
+  {
+    "number": 41,
+    "caption": "Table 41. Prediction with alternative routers.",
+    "section": "5.7.2 Shared recurrence and alternative routers",
+    "rows": [
+      [
+        "Model",
+        "Params",
+        "One-step",
+        "Rollout-3",
+        "Final rollout"
+      ],
+      [
+        "OracleMoE",
+        "4934.00000",
+        "0.03973",
+        "0.08256",
+        "0.13395"
+      ],
+      [
+        "TransitionClusterMoE",
+        "4934.00000",
+        "0.04019",
+        "0.08468",
+        "0.13586"
+      ],
+      [
+        "MonoRNN",
+        "5406.00000",
+        "0.02425",
+        "0.14709",
+        "0.26418"
+      ],
+      [
+        "StateMoE",
+        "4934.00000",
+        "0.03942",
+        "0.28065",
+        "0.49309"
+      ],
+      [
+        "SingleFrame",
+        "2982.00000",
+        "0.30103",
+        "1.31456",
+        "1.60014"
+      ]
+    ]
+  },
+  {
+    "number": 42,
+    "caption": "Table 42. Carrier tracking with a fixed measurement system.",
+    "section": "6.1.4 Results with a fixed measurement system",
+    "rows": [
+      [
+        "Condition",
+        "Snapshot rollout",
+        "GlobalGRU",
+        "CompartmentGRU",
+        "SourceTracker",
+        "Best latent R²",
+        "Slot→source R²"
+      ],
+      [
+        "K0_O0",
+        "1.049",
+        "1.264",
+        "1.349",
+        "1.284",
+        "0.979",
+        "0.957"
+      ],
+      [
+        "K1_O0",
+        "1.100",
+        "1.360",
+        "1.543",
+        "1.233",
+        "0.979",
+        "0.954"
+      ],
+      [
+        "K0_O1",
+        "0.660",
+        "0.672",
+        "0.707",
+        "0.750",
+        "0.860",
+        "0.762"
+      ],
+      [
+        "K1_O1",
+        "0.810",
+        "0.769",
+        "0.802",
+        "0.844",
+        "0.878",
+        "0.774"
+      ]
+    ]
+  },
+  {
+    "number": 43,
+    "caption": "Table 43. Sparse anchor supervision.",
+    "section": "6.1.8 Anchors under identical ordinary signatures",
+    "rows": [
+      [
+        "Training contract",
+        "Main h1 MSE",
+        "Slot→source R²",
+        "Future-anchor MSE"
+      ],
+      [
+        "Aggregate future only",
+        "0.0549",
+        "0.584",
+        "1.149"
+      ],
+      [
+        "+ sparse future-anchor loss",
+        "0.0585",
+        "0.596",
+        "0.626"
+      ]
+    ]
+  },
+  {
+    "number": 44,
+    "caption": "Table 44. Lifecycle forecasting and latent-state probes.",
+    "section": "6.2.4 Forecast performance and observation-process memory",
+    "rows": [
+      [
+        "sampling",
+        "model",
+        "full MSE",
+        "event MSE",
+        "latent-state R²"
+      ],
+      [
+        "Regular",
+        "MaskDeltaGRU",
+        "0.3331",
+        "0.3712",
+        "0.8029"
+      ],
+      [
+        "Regular",
+        "FixedSlots",
+        "0.4095",
+        "0.4535",
+        "0.8291"
+      ],
+      [
+        "Regular",
+        "DynamicSlots",
+        "0.5652",
+        "0.6108",
+        "0.8307"
+      ],
+      [
+        "Irregular",
+        "MaskDeltaGRU",
+        "0.4322",
+        "0.4914",
+        "0.6066"
+      ],
+      [
+        "Irregular",
+        "FixedSlots",
+        "0.5931",
+        "0.6599",
+        "0.6295"
+      ],
+      [
+        "Irregular",
+        "DynamicSlots",
+        "0.6992",
+        "0.7595",
+        "0.6335"
+      ]
+    ]
+  },
+  {
+    "number": 45,
+    "caption": "Table 45. Prediction error by lifecycle event.",
+    "section": "6.2.5 Event-specific error",
+    "rows": [
+      [
+        "sampling",
+        "model",
+        "birth",
+        "branch",
+        "death",
+        "merge"
+      ],
+      [
+        "Regular",
+        "MaskDeltaGRU",
+        "0.220",
+        "0.316",
+        "0.443",
+        "0.515"
+      ],
+      [
+        "Regular",
+        "FixedSlots",
+        "0.244",
+        "0.318",
+        "0.504",
+        "0.766"
+      ],
+      [
+        "Regular",
+        "DynamicSlots",
+        "0.360",
+        "0.401",
+        "0.618",
+        "1.077"
+      ],
+      [
+        "Irregular",
+        "MaskDeltaGRU",
+        "0.366",
+        "0.466",
+        "0.526",
+        "0.600"
+      ],
+      [
+        "Irregular",
+        "FixedSlots",
+        "0.516",
+        "0.523",
+        "0.592",
+        "1.007"
+      ],
+      [
+        "Irregular",
+        "DynamicSlots",
+        "0.612",
+        "0.582",
+        "0.652",
+        "1.186"
+      ]
+    ]
+  },
+  {
+    "number": 46,
+    "caption": "Table 46. Relational carrier prediction under regular sampling.",
+    "section": "6.3.4 Regular-sampling results",
+    "rows": [
+      [
+        "Sampling",
+        "Model",
+        "Full MSE",
+        "Event MSE",
+        "Latent R²"
+      ],
+      [
+        "Regular",
+        "MaskDeltaGRU",
+        "0.2454",
+        "0.2833",
+        "0.8365"
+      ],
+      [
+        "Regular",
+        "FixedSlots",
+        "0.2815",
+        "0.3228",
+        "0.8744"
+      ],
+      [
+        "Regular",
+        "GraphSlots",
+        "0.3129",
+        "0.3545",
+        "0.8645"
+      ],
+      [
+        "Regular",
+        "GraphResidual",
+        "0.2093",
+        "0.2443",
+        "0.8790"
+      ],
+      [
+        "Regular",
+        "ClockedGraphResidual",
+        "0.2172",
+        "0.2501",
+        "0.8762"
+      ]
+    ]
+  },
+  {
+    "number": 47,
+    "caption": "Table 47. Relational carrier prediction under irregular sampling.",
+    "section": "6.3.6 Irregular-sampling results",
+    "rows": [
+      [
+        "Model",
+        "Full MSE",
+        "Event MSE",
+        "Latent R²"
+      ],
+      [
+        "MaskDeltaGRU",
+        "0.2884",
+        "0.3315",
+        "0.6331"
+      ],
+      [
+        "GraphResidual",
+        "0.2972",
+        "0.3470",
+        "0.6651"
+      ],
+      [
+        "ClockedGraphResidual",
+        "0.2972",
+        "0.3460",
+        "0.6737"
+      ]
+    ]
+  },
+  {
+    "number": 48,
+    "caption": "Table 48. Buckets and events at a common physical horizon.",
+    "section": "6.4.4 Main representation comparison",
+    "rows": [
+      [
+        "Condition",
+        "Model",
+        "MSE all",
+        "Lifecycle MSE",
+        "No-lifecycle MSE",
+        "Latent R²"
+      ],
+      [
+        "Moderate",
+        "BucketGRU",
+        "0.2800",
+        "0.2783",
+        "0.2807",
+        "0.5394"
+      ],
+      [
+        "Moderate",
+        "NoTime EventGRU",
+        "0.3648",
+        "0.3525",
+        "0.3703",
+        "0.5024"
+      ],
+      [
+        "Moderate",
+        "Timed EventGRU",
+        "0.3177",
+        "0.3132",
+        "0.3197",
+        "0.4844"
+      ],
+      [
+        "Moderate",
+        "CTGraph",
+        "0.4067",
+        "0.4001",
+        "0.4096",
+        "0.4885"
+      ],
+      [
+        "Severe",
+        "BucketGRU",
+        "0.3838",
+        "0.3973",
+        "0.3786",
+        "0.4348"
+      ],
+      [
+        "Severe",
+        "NoTime EventGRU",
+        "0.4494",
+        "0.4804",
+        "0.4374",
+        "0.4342"
+      ],
+      [
+        "Severe",
+        "Timed EventGRU",
+        "0.3700",
+        "0.3683",
+        "0.3707",
+        "0.4420"
+      ],
+      [
+        "Severe",
+        "CTGraph",
+        "0.4952",
+        "0.5491",
+        "0.4743",
+        "0.4268"
+      ]
+    ]
+  },
+  {
+    "number": 49,
+    "caption": "Table 49. Sampling-density scan.",
+    "section": "6.4.5 Sampling-density scan",
+    "rows": [
+      [
+        "Sampling",
+        "Obs frac",
+        "Bucket",
+        "NoTime event",
+        "Timed event",
+        "Timed vs Bucket",
+        "Lifecycle gain"
+      ],
+      [
+        "dense",
+        "0.2367",
+        "0.3357",
+        "0.3754",
+        "0.4596",
+        "-36.9%",
+        "-37.0%"
+      ],
+      [
+        "mid",
+        "0.1279",
+        "0.3560",
+        "0.3730",
+        "0.4400",
+        "-23.6%",
+        "-17.6%"
+      ],
+      [
+        "mid_dense",
+        "0.1648",
+        "0.3060",
+        "0.3213",
+        "0.3974",
+        "-29.9%",
+        "-38.0%"
+      ],
+      [
+        "sparse",
+        "0.0847",
+        "0.6642",
+        "0.5703",
+        "0.6877",
+        "-3.5%",
+        "-0.4%"
+      ],
+      [
+        "very_sparse",
+        "0.0577",
+        "0.5400",
+        "0.3958",
+        "0.5144",
+        "4.8%",
+        "5.9%"
+      ]
+    ]
+  },
+  {
+    "number": 50,
+    "caption": "Table 50. Timing-identification control.",
+    "section": "6.4.6 Identifying the information in timestamps",
+    "rows": [
+      [
+        "NoTime MSE",
+        "Timed MSE",
+        "Timed gain"
+      ],
+      [
+        "0.0197",
+        "0.0095",
+        "51.9%"
+      ]
+    ]
+  },
+  {
+    "number": 51,
+    "caption": "Table 51. Observation policies.",
+    "section": "6.5.1 Experimental construction",
+    "rows": [
+      [
+        "Measurement policy",
+        "Observed fraction",
+        "corr(observation rate, latent severity)"
+      ],
+      [
+        "A_informative",
+        "0.333",
+        "0.973"
+      ],
+      [
+        "B_weak",
+        "0.219",
+        "0.658"
+      ],
+      [
+        "C_dense",
+        "0.365",
+        "0.415"
+      ]
+    ]
+  },
+  {
+    "number": 52,
+    "caption": "Table 52. Prediction under policy shift.",
+    "section": "6.5.2 Training strategies",
+    "rows": [
+      [
+        "Training strategy",
+        "Test A",
+        "Test B",
+        "Test C"
+      ],
+      [
+        "ValueOnly_A",
+        "0.514",
+        "0.626",
+        "0.514"
+      ],
+      [
+        "MaskDelta_A",
+        "0.505",
+        "0.678",
+        "0.578"
+      ],
+      [
+        "JointPolicy_A",
+        "0.521",
+        "0.698",
+        "0.595"
+      ],
+      [
+        "RepeatedA",
+        "0.293",
+        "0.425",
+        "0.351"
+      ],
+      [
+        "PermutedMaskAug",
+        "0.254",
+        "0.326",
+        "0.268"
+      ],
+      [
+        "MultiPolicy",
+        "0.255",
+        "0.307",
+        "0.251"
+      ]
+    ]
+  },
+  {
+    "number": 53,
+    "caption": "Table 53. Matched training-exposure controls.",
+    "section": "6.5.4 Matched-exposure controls: what caused the gain?",
+    "rows": [
+      [
+        "Model",
+        "A MSE",
+        "B MSE",
+        "C MSE",
+        "Mean shifted MSE"
+      ],
+      [
+        "MultiPolicy",
+        "0.255",
+        "0.307",
+        "0.251",
+        "0.279"
+      ],
+      [
+        "PermutedMaskAug",
+        "0.254",
+        "0.326",
+        "0.268",
+        "0.297"
+      ],
+      [
+        "RepeatedA",
+        "0.293",
+        "0.425",
+        "0.351",
+        "0.388"
+      ],
+      [
+        "ValueOnly_A",
+        "0.514",
+        "0.626",
+        "0.514",
+        "0.570"
+      ],
+      [
+        "MaskDelta_A",
+        "0.505",
+        "0.678",
+        "0.578",
+        "0.628"
+      ],
+      [
+        "JointPolicy_A",
+        "0.521",
+        "0.698",
+        "0.595",
+        "0.647"
+      ]
+    ]
+  },
+  {
+    "number": 54,
+    "caption": "Table 54. Counterfactual policy sensitivity.",
+    "section": "6.5.5 Counterfactual measurement-policy sensitivity",
+    "rows": [
+      [
+        "Model",
+        "Same latent world, policy swap",
+        "Prediction disagreement"
+      ],
+      [
+        "JointPolicy_A",
+        "A_vs_B_weak",
+        "0.1869"
+      ],
+      [
+        "JointPolicy_A",
+        "A_vs_C_dense",
+        "0.1147"
+      ],
+      [
+        "MaskDelta_A",
+        "A_vs_B_weak",
+        "0.1849"
+      ],
+      [
+        "MaskDelta_A",
+        "A_vs_C_dense",
+        "0.1179"
+      ],
+      [
+        "MultiPolicy_MaskDelta",
+        "A_vs_B_weak",
+        "0.1343"
+      ],
+      [
+        "MultiPolicy_MaskDelta",
+        "A_vs_C_dense",
+        "0.1396"
+      ],
+      [
+        "ValueOnly_A",
+        "A_vs_B_weak",
+        "0.1374"
+      ],
+      [
+        "ValueOnly_A",
+        "A_vs_C_dense",
+        "0.1062"
+      ]
+    ]
+  },
+  {
+    "number": 55,
+    "caption": "Table 55. Intact and perturbed module prediction.",
+    "section": "7.1.4 Lesion experiment",
+    "rows": [
+      [
+        "Model",
+        "Params",
+        "Intact MSE",
+        "Single-lesion MSE",
+        "Single penalty (%)",
+        "Dual-lesion MSE",
+        "Dual penalty (%)"
+      ],
+      [
+        "SharedResidual",
+        "5124",
+        "0.0728",
+        "0.0918",
+        "26.0713",
+        "0.1266",
+        "73.9364"
+      ],
+      [
+        "CoordinatedEffectors",
+        "5124",
+        "0.0755",
+        "0.0850",
+        "12.5645",
+        "0.1041",
+        "37.8860"
+      ],
+      [
+        "SoftMixture",
+        "4614",
+        "0.0882",
+        "0.1323",
+        "50.2527",
+        "0.2145",
+        "143.6064"
+      ],
+      [
+        "SoftMixture_Perturb",
+        "4614",
+        "0.0927",
+        "0.1152",
+        "24.2196",
+        "0.1605",
+        "73.0586"
+      ],
+      [
+        "HardTop1",
+        "4614",
+        "0.1164",
+        "0.1501",
+        "28.9738",
+        "0.2124",
+        "82.5305"
+      ],
+      [
+        "HardTop1_Perturb",
+        "4614",
+        "0.1200",
+        "0.1336",
+        "11.3216",
+        "0.1641",
+        "36.7217"
+      ]
+    ]
+  },
+  {
+    "number": 56,
+    "caption": "Table 56. Matched perturbation-training effects.",
+    "section": "7.1.5 Perturbation curriculum effects",
+    "rows": [
+      [
+        "Base model",
+        "Perturb-trained",
+        "Intact MSE change (%)",
+        "Single penalty reduction (pp)",
+        "Dual penalty reduction (pp)"
+      ],
+      [
+        "HardTop1",
+        "HardTop1_Perturb",
+        "3.15",
+        "17.65",
+        "45.81"
+      ],
+      [
+        "SoftMixture",
+        "SoftMixture_Perturb",
+        "5.20",
+        "26.03",
+        "70.55"
+      ],
+      [
+        "SharedResidual",
+        "CoordinatedEffectors",
+        "3.72",
+        "13.51",
+        "36.05"
+      ]
+    ]
+  },
+  {
+    "number": 57,
+    "caption": "Table 57. Output overlap and routing geometry.",
+    "section": "7.1.6 Coordination geometry",
+    "rows": [
+      [
+        "Model",
+        "Expert effect cosine",
+        "Max router weight",
+        "Router entropy"
+      ],
+      [
+        "HardTop1",
+        "0.7412",
+        "1.0000",
+        "0.0000"
+      ],
+      [
+        "SoftMixture",
+        "0.6153",
+        "0.3980",
+        "1.2772"
+      ],
+      [
+        "SharedResidual",
+        "0.4537",
+        "0.4017",
+        "1.2773"
+      ],
+      [
+        "CoordinatedEffectors",
+        "0.5979",
+        "0.3963",
+        "1.2848"
+      ]
+    ]
+  },
+  {
+    "number": 58,
+    "caption": "Table 58. Router-only adaptation after removal.",
+    "section": "7.1.8 Rapid post-lesion plasticity",
+    "rows": [
+      [
+        "Model",
+        "Pre-adapt MSE",
+        "Post-router MSE",
+        "Router change (%)"
+      ],
+      [
+        "CoordinatedEffectors",
+        "0.0817",
+        "0.0809",
+        "-1.0254"
+      ],
+      [
+        "HardTop1",
+        "0.1280",
+        "0.1353",
+        "5.4697"
+      ],
+      [
+        "SharedResidual",
+        "0.0806",
+        "0.0794",
+        "-1.4884"
+      ],
+      [
+        "SoftMixture",
+        "0.1065",
+        "0.1038",
+        "-2.5528"
+      ]
+    ]
+  },
+  {
+    "number": 59,
+    "caption": "Table 59. Prediction under resource conditions.",
+    "section": "7.2.3 Main result",
+    "rows": [
+      [
+        "Model",
+        "Healthy",
+        "Chronic fatigue",
+        "Weak effector",
+        "Outages"
+      ],
+      [
+        "StateOnly",
+        "0.0855",
+        "0.1029",
+        "0.0963",
+        "0.0992"
+      ],
+      [
+        "AvailabilityAware",
+        "0.0797",
+        "0.0953",
+        "0.0860",
+        "0.0910"
+      ],
+      [
+        "FatigueAware_NoCurriculum",
+        "0.0847",
+        "0.1030",
+        "0.0920",
+        "0.0926"
+      ],
+      [
+        "CoordinatedBody",
+        "0.0834",
+        "0.1007",
+        "0.0905",
+        "0.0947"
+      ]
+    ]
+  },
+  {
+    "number": 60,
+    "caption": "Table 60. Matched curriculum comparison.",
+    "section": "7.2.4 Current availability and resource-history information",
+    "rows": [
+      [
+        "Scenario",
+        "Fatigue-aware / no curriculum",
+        "CoordinatedBody",
+        "Curriculum gain"
+      ],
+      [
+        "healthy",
+        "0.0847",
+        "0.0834",
+        "1.61%"
+      ],
+      [
+        "chronic_fatigue",
+        "0.1030",
+        "0.1007",
+        "2.18%"
+      ],
+      [
+        "weak_effector",
+        "0.0920",
+        "0.0905",
+        "1.67%"
+      ],
+      [
+        "outages",
+        "0.0926",
+        "0.0947",
+        "-2.24%"
+      ]
+    ]
+  },
+  {
+    "number": 61,
+    "caption": "Table 61. Substitute recruitment after outages.",
+    "section": "7.2.5 Outage compensation and substitute pathways",
+    "rows": [
+      [
+        "Model",
+        "Failed",
+        "Paired substitute",
+        "Δ desired weight",
+        "Δ realized load"
+      ],
+      [
+        "AvailabilityAware",
+        "1",
+        "0",
+        "0.0211",
+        "0.0178"
+      ],
+      [
+        "AvailabilityAware",
+        "2",
+        "3",
+        "-0.0221",
+        "-0.0119"
+      ],
+      [
+        "CoordinatedBody",
+        "1",
+        "0",
+        "0.0101",
+        "0.0090"
+      ],
+      [
+        "CoordinatedBody",
+        "2",
+        "3",
+        "-0.0204",
+        "-0.0122"
+      ],
+      [
+        "StateOnly",
+        "1",
+        "0",
+        "0.0000",
+        "0.0000"
+      ],
+      [
+        "StateOnly",
+        "2",
+        "3",
+        "0.0000",
+        "0.0000"
+      ]
+    ]
+  },
+  {
+    "number": 62,
+    "caption": "Table 62. Prediction and final resource state.",
+    "section": "7.3.4 Prediction and reserve capacity",
+    "rows": [
+      [
+        "Model",
+        "Parameters",
+        "Mean MSE",
+        "Early MSE",
+        "Late MSE",
+        "Worst MSE",
+        "Final availability",
+        "Final wear"
+      ],
+      [
+        "AnticipatoryCoordinator",
+        "7114",
+        "0.0889",
+        "0.1153",
+        "0.0797",
+        "0.1629",
+        "0.9844",
+        "0.1737"
+      ],
+      [
+        "CurrentAvailability",
+        "3540",
+        "0.1165",
+        "0.1328",
+        "0.1114",
+        "0.1675",
+        "0.8986",
+        "0.1528"
+      ],
+      [
+        "HistoryAware",
+        "7114",
+        "0.1031",
+        "0.1235",
+        "0.0972",
+        "0.1646",
+        "0.8899",
+        "0.1936"
+      ]
+    ]
+  },
+  {
+    "number": 63,
+    "caption": "Table 63. Concentration of hidden wear.",
+    "section": "7.3.5 The mechanism is load shaping, not simply lower total work",
+    "rows": [
+      [
+        "Model",
+        "Mean maximum wear",
+        "Late maximum wear",
+        "Mean wear SD across modules",
+        "Time above q>0.34",
+        "Time above q>0.38",
+        "Mean router entropy"
+      ],
+      [
+        "AnticipatoryCoordinator",
+        "0.2063",
+        "0.3141",
+        "0.0801",
+        "0.0331",
+        "0.0087",
+        "1.3277"
+      ],
+      [
+        "CurrentAvailability",
+        "0.3476",
+        "0.4044",
+        "0.1447",
+        "0.1998",
+        "0.1728",
+        "1.1568"
+      ],
+      [
+        "HistoryAware",
+        "0.3292",
+        "0.4012",
+        "0.1399",
+        "0.2271",
+        "0.1812",
+        "1.1521"
+      ]
+    ]
+  },
+  {
+    "number": 64,
+    "caption": "Table 64. Hidden-wear probes.",
+    "section": "7.3.6 Hidden-body-state audit",
+    "rows": [
+      [
+        "Model",
+        "Wear R² from history state",
+        "Wear R² from current availability"
+      ],
+      [
+        "AnticipatoryCoordinator",
+        "0.4232",
+        "0.1786"
+      ],
+      [
+        "HistoryAware",
+        "0.3707",
+        "0.3614"
+      ]
+    ]
+  },
+  {
+    "number": 65,
+    "caption": "Table 65. Matched-current-state history intervention.",
+    "section": "7.3.7 Matched-history probe",
+    "rows": [
+      [
+        "Model",
+        "Module 0 weight after heavy history",
+        "Module 0 weight after balanced history",
+        "Avoidance of module 0",
+        "Routing L1 change"
+      ],
+      [
+        "AnticipatoryCoordinator",
+        "0.2460",
+        "0.2493",
+        "0.0033",
+        "0.0254"
+      ],
+      [
+        "HistoryAware",
+        "0.2907",
+        "0.2896",
+        "-0.0010",
+        "0.0184"
+      ]
+    ]
+  },
+  {
+    "number": 66,
+    "caption": "Table 66. Autoregressive prediction under internal perturbations.",
+    "section": "7.4.3 Autoregressive world-generation result",
+    "rows": [
+      [
+        "Model",
+        "Body condition",
+        "Mean rollout MSE",
+        "Late MSE",
+        "Final availability"
+      ],
+      [
+        "DenseWorld",
+        "healthy",
+        "0.0987",
+        "0.1358",
+        "-"
+      ],
+      [
+        "DenseWorld",
+        "lesion1",
+        "0.0987",
+        "0.1358",
+        "-"
+      ],
+      [
+        "DenseWorld",
+        "lesion2",
+        "0.0987",
+        "0.1358",
+        "-"
+      ],
+      [
+        "DenseWorld",
+        "fatigue",
+        "0.0987",
+        "0.1358",
+        "-"
+      ],
+      [
+        "StaticWorldMoE",
+        "healthy",
+        "0.1090",
+        "0.1393",
+        "1.000"
+      ],
+      [
+        "StaticWorldMoE",
+        "lesion1",
+        "0.1745",
+        "0.2856",
+        "0.765"
+      ],
+      [
+        "StaticWorldMoE",
+        "lesion2",
+        "0.2108",
+        "0.3778",
+        "0.765"
+      ],
+      [
+        "StaticWorldMoE",
+        "fatigue",
+        "0.0928",
+        "0.1129",
+        "0.984"
+      ],
+      [
+        "ComputationalBody",
+        "healthy",
+        "0.1066",
+        "0.1365",
+        "1.000"
+      ],
+      [
+        "ComputationalBody",
+        "lesion1",
+        "0.1235",
+        "0.1819",
+        "0.765"
+      ],
+      [
+        "ComputationalBody",
+        "lesion2",
+        "0.1172",
+        "0.1650",
+        "0.765"
+      ],
+      [
+        "ComputationalBody",
+        "fatigue",
+        "0.0999",
+        "0.1208",
+        "0.982"
+      ]
+    ]
+  },
+  {
+    "number": 67,
+    "caption": "Table 67. Shared-only ablation.",
+    "section": "7.4.4 The effectors are now necessary computation",
+    "rows": [
+      [
+        "Model",
+        "Shared-only rollout MSE"
+      ],
+      [
+        "BodyAwareWorld",
+        "0.5868"
+      ],
+      [
+        "ComputationalBody",
+        "0.5530"
+      ],
+      [
+        "StaticWorldMoE",
+        "0.5917"
+      ]
+    ]
+  },
+  {
+    "number": 68,
+    "caption": "Table 68. Redistribution after module removal.",
+    "section": "7.4.5 Internal redistribution after lesion",
+    "rows": [
+      [
+        "Model",
+        "Failed effector Δweight",
+        "Nonfailed total Δweight",
+        "Failed realized-load Δ"
+      ],
+      [
+        "BodyAwareWorld",
+        "-0.0292",
+        "+0.0292",
+        "-0.2727"
+      ],
+      [
+        "ComputationalBody",
+        "-0.0479",
+        "+0.0479",
+        "-0.3077"
+      ],
+      [
+        "StaticWorldMoE",
+        "-0.0307",
+        "+0.0307",
+        "-0.2661"
+      ]
+    ]
+  },
+  {
+    "number": 69,
+    "caption": "Table 69. Cross-regime prediction after gain normalization.",
+    "section": "7.5.4 Corrected cross-world result",
+    "rows": [
+      [
+        "World",
+        "Dense MSE",
+        "Body healthy",
+        "Body lesion",
+        "Body fatigue",
+        "Healthy gain vs dense (%)",
+        "Lesion degradation (%)",
+        "Fatigue degradation (%)"
+      ],
+      [
+        "smooth",
+        "0.164",
+        "0.169",
+        "0.170",
+        "0.151",
+        "-3.104",
+        "0.281",
+        "-10.801"
+      ],
+      [
+        "switch",
+        "0.224",
+        "0.228",
+        "0.205",
+        "0.200",
+        "-1.433",
+        "-9.804",
+        "-11.910"
+      ],
+      [
+        "curved",
+        "0.463",
+        "0.583",
+        "0.593",
+        "0.546",
+        "-25.997",
+        "1.711",
+        "-6.337"
+      ],
+      [
+        "hidden_memory",
+        "0.291",
+        "0.361",
+        "0.364",
+        "0.330",
+        "-24.111",
+        "0.792",
+        "-8.747"
+      ]
+    ]
+  },
+  {
+    "number": 70,
+    "caption": "Table 70. Redistribution across transition regimes.",
+    "section": "7.5.5 Redistribution audit",
+    "rows": [
+      [
+        "World",
+        "Failed weight Δ",
+        "Nonfailed weight gain",
+        "Failed realized-load Δ"
+      ],
+      [
+        "curved",
+        "-0.256",
+        "0.256",
+        "-0.300"
+      ],
+      [
+        "hidden_memory",
+        "-0.199",
+        "0.199",
+        "-0.231"
+      ],
+      [
+        "smooth",
+        "-0.271",
+        "0.271",
+        "-0.295"
+      ],
+      [
+        "switch",
+        "-0.204",
+        "0.204",
+        "-0.228"
+      ]
+    ]
+  },
+  {
+    "number": 71,
+    "caption": "Table 71. Two-seed comparison of the Dual model.",
+    "section": "7.6.2 Two-seed regression result",
+    "rows": [
+      [
+        "World",
+        "Dense MSE",
+        "Baseline",
+        "Dual",
+        "Dual vs Dense",
+        "Lesion Δ"
+      ],
+      [
+        "smooth",
+        "0.157",
+        "0.142",
+        "0.117",
+        "-25.5%",
+        "+2.4%"
+      ],
+      [
+        "switch",
+        "0.143",
+        "0.133",
+        "0.138",
+        "-3.1%",
+        "+1.1%"
+      ],
+      [
+        "curved",
+        "0.653",
+        "0.641",
+        "0.554",
+        "-15.2%",
+        "+0.8%"
+      ],
+      [
+        "hidden_memory",
+        "0.330",
+        "0.374",
+        "0.295",
+        "-10.8%",
+        "+0.6%"
+      ]
+    ]
+  },
+  {
+    "number": 72,
+    "caption": "Table 72. Source structures and native objectives.",
+    "section": "8.1.2 Four source structures",
+    "rows": [
+      [
+        "Source",
+        "Structure",
+        "Native metric",
+        "Boundary adapter"
+      ],
+      [
+        "continuous",
+        "8-D continuous trajectory",
+        "MSE",
+        "thin MLP adapter"
+      ],
+      [
+        "event",
+        "categorical event stream from persistent hidden mechanism",
+        "cross-entropy + rollout accuracy",
+        "token embedding"
+      ],
+      [
+        "set",
+        "unordered moving 2-D point set; permutation shuffled every frame",
+        "Chamfer distance",
+        "permutation-invariant item encoder"
+      ],
+      [
+        "graph",
+        "node-state dynamics on a per-sample relation graph",
+        "node-state MSE",
+        "relation-aware message passing"
+      ]
+    ]
+  },
+  {
+    "number": 73,
+    "caption": "Table 73. Initial multi-source comparison.",
+    "section": "8.1.3 Initial comparison",
+    "rows": [
+      [
+        "Source",
+        "Dense",
+        "Body healthy",
+        "Body lesion",
+        "Healthy gain vs Dense (%)",
+        "Lesion degradation (%)"
+      ],
+      [
+        "continuous",
+        "0.057",
+        "0.047",
+        "0.048",
+        "17.014",
+        "1.079"
+      ],
+      [
+        "event",
+        "2.929",
+        "3.041",
+        "3.036",
+        "-3.813",
+        "-0.182"
+      ],
+      [
+        "set",
+        "0.663",
+        "0.667",
+        "0.669",
+        "-0.709",
+        "0.248"
+      ],
+      [
+        "graph",
+        "0.019",
+        "0.034",
+        "0.035",
+        "-78.448",
+        "4.667"
+      ]
+    ]
+  },
+  {
+    "number": 74,
+    "caption": "Table 74. Graph adapter preserving node identity.",
+    "section": "8.1.4 Graph adapter with retained node identity",
+    "rows": [
+      [
+        "Model",
+        "Scenario",
+        "Rollout metric",
+        "Late metric"
+      ],
+      [
+        "ComputationalBody_IDGraph",
+        "healthy",
+        "0.0198",
+        "0.0275"
+      ],
+      [
+        "ComputationalBody_IDGraph",
+        "lesion1",
+        "0.0190",
+        "0.0256"
+      ],
+      [
+        "DenseCore_IDGraph",
+        "healthy",
+        "0.0153",
+        "0.0159"
+      ]
+    ]
+  },
+  {
+    "number": 75,
+    "caption": "Table 75. Matched longer-training comparison.",
+    "section": "8.1.5 Matched longer-training comparison",
+    "rows": [
+      [
+        "Model",
+        "Scenario",
+        "Rollout metric",
+        "Late metric"
+      ],
+      [
+        "ComputationalBody_IDGraph_long",
+        "healthy",
+        "0.00906",
+        "0.00646"
+      ],
+      [
+        "ComputationalBody_IDGraph_long",
+        "lesion1",
+        "0.01142",
+        "0.01336"
+      ],
+      [
+        "DenseCore_IDGraph_long",
+        "healthy",
+        "0.00791",
+        "0.00549"
+      ]
+    ]
+  },
+  {
+    "number": 76,
+    "caption": "Table 76. Evaluation criteria by source.",
+    "section": "8.1.6 Results by source structure",
+    "rows": [
+      [
+        "Source",
+        "Healthy gain vs Dense (%)",
+        "Lesion degradation (%)",
+        "Healthy",
+        "Lesion",
+        "Overall"
+      ],
+      [
+        "continuous",
+        "17.0",
+        "1.1",
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      [
+        "event",
+        "-3.8",
+        "-0.2",
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      [
+        "set",
+        "-0.7",
+        "0.2",
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      [
+        "graph",
+        "-14.6",
+        "26.1",
+        "PASS",
+        "FAIL",
+        "FAIL"
+      ]
+    ]
+  },
+  {
+    "number": 77,
+    "caption": "Table 77. Largest-component scale and mixing.",
+    "section": "8.2.2 Measured geometry: scale and mixing",
+    "rows": [
+      [
+        "Dataset",
+        "LCC N",
+        "Mean distance",
+        "2-hop coverage",
+        "4-hop coverage",
+        "λ₂ (norm. Laplacian)"
+      ],
+      [
+        "Dolphins",
+        "62",
+        "3.357",
+        "33.19%",
+        "77.52%",
+        "0.0395"
+      ],
+      [
+        "Email-Eu-core",
+        "986",
+        "2.610",
+        "44.35%",
+        "99.61%",
+        "0.2122"
+      ],
+      [
+        "ca-GrQc",
+        "4158",
+        "6.065",
+        "0.78%",
+        "14.11%",
+        "0.0215"
+      ],
+      [
+        "Facebook Combined",
+        "4039",
+        "3.667",
+        "18.04%",
+        "78.69%",
+        "0.0073"
+      ],
+      [
+        "Cora",
+        "2485",
+        "6.269",
+        "1.82%",
+        "16.57%",
+        "0.0162"
+      ]
+    ]
+  },
+  {
+    "number": 78,
+    "caption": "Table 78. Degree heterogeneity and local mixing.",
+    "section": "8.2.3 Measured geometry: hub structure and local mixing",
+    "rows": [
+      [
+        "Dataset",
+        "Mean degree",
+        "Degree CV",
+        "Degree Gini",
+        "Degree assortativity",
+        "Clustering*"
+      ],
+      [
+        "Dolphins",
+        "5.13",
+        "0.572",
+        "0.325",
+        "-0.044",
+        "0.303"
+      ],
+      [
+        "Email-Eu-core",
+        "32.58",
+        "1.136",
+        "0.544",
+        "0.032",
+        "0.452"
+      ],
+      [
+        "ca-GrQc",
+        "5.53",
+        "1.433",
+        "0.555",
+        "0.703",
+        "0.687"
+      ],
+      [
+        "Facebook Combined",
+        "43.69",
+        "1.200",
+        "0.541",
+        "0.125",
+        "0.608"
+      ],
+      [
+        "Cora",
+        "3.90",
+        "1.341",
+        "0.405",
+        "-0.058",
+        "0.288"
+      ]
+    ]
+  },
+  {
+    "number": 79,
+    "caption": "Table 79. Facebook attributes and social circles.",
+    "section": "8.3.1 Facebook node-attribute geometry versus topology",
+    "rows": [
+      [
+        "Pair type",
+        "Feature cosine",
+        "Feature Jaccard",
+        "Shared-circle fraction",
+        "Lift"
+      ],
+      [
+        "Friendship edge",
+        "0.386",
+        "0.229",
+        "48.47%",
+        "circle 3.25×"
+      ],
+      [
+        "Sampled non-edge",
+        "0.355",
+        "0.206",
+        "14.93%",
+        "reference"
+      ]
+    ]
+  },
+  {
+    "number": 80,
+    "caption": "Table 80. Email temporal-edge measurements.",
+    "section": "8.3.2 Email-Eu-core temporal edge geometry",
+    "rows": [
+      [
+        "Measured quantity",
+        "Value"
+      ],
+      [
+        "Repeated-event fraction",
+        "92.50%"
+      ],
+      [
+        "Events per unique directed dyad",
+        "13.33"
+      ],
+      [
+        "Dyad event-count Gini",
+        "0.777"
+      ],
+      [
+        "Top 10% dyads' share of events",
+        "69.80%"
+      ],
+      [
+        "Top 1% dyads' share of events",
+        "26.56%"
+      ],
+      [
+        "Median sender burstiness",
+        "0.569"
+      ],
+      [
+        "Median dyad burstiness",
+        "0.216"
+      ],
+      [
+        "Median repeat-dyad gap",
+        "27.53 h"
+      ],
+      [
+        "Consecutive 30-day edge-set Jaccard",
+        "0.211"
+      ],
+      [
+        "Prior-window edge retention",
+        "32.61%"
+      ],
+      [
+        "Current-window new-edge fraction",
+        "36.40%"
+      ]
+    ]
+  },
+  {
+    "number": 81,
+    "caption": "Table 81. Bitcoin-OTC signed edge state.",
+    "section": "8.3.3 Bitcoin-OTC signed / weighted edge-state geometry",
+    "rows": [
+      [
+        "Quantity",
+        "Positive",
+        "Negative"
+      ],
+      [
+        "Mean absolute rating",
+        "1.97",
+        "7.56"
+      ],
+      [
+        "Mean common neighbors",
+        "4.61",
+        "5.45"
+      ],
+      [
+        "Median common neighbors",
+        "2",
+        "3"
+      ],
+      [
+        "Mean endpoint degree geometric mean",
+        "39.41",
+        "42.13"
+      ]
+    ]
+  },
+  {
+    "number": 82,
+    "caption": "Table 82. Active neighbourhood coverage by window.",
+    "section": "8.4.2 Active neighbourhoods occupy a sparse slice of lifetime topology",
+    "rows": [
+      [
+        "Window",
+        "Complete windows",
+        "Median coverage",
+        "Active partners",
+        "Effective partners",
+        "Effective static coverage"
+      ],
+      [
+        "7 d",
+        "75",
+        "10.0%",
+        "3",
+        "2.67",
+        "7.6%"
+      ],
+      [
+        "14 d",
+        "37",
+        "14.8%",
+        "5",
+        "3.13",
+        "9.9%"
+      ],
+      [
+        "30 d",
+        "17",
+        "22.5%",
+        "7",
+        "3.70",
+        "12.6%"
+      ],
+      [
+        "60 d",
+        "8",
+        "32.9%",
+        "9",
+        "4.23",
+        "15.8%"
+      ],
+      [
+        "90 d",
+        "5",
+        "40.0%",
+        "10",
+        "4.49",
+        "17.7%"
+      ]
+    ]
+  },
+  {
+    "number": 83,
+    "caption": "Table 83. Node and dyad continuity and spectral support.",
+    "section": "8.4.3 Node activity and directed relation activity occupy different temporal geometries",
+    "rows": [
+      [
+        "Window",
+        "Node cosine",
+        "Dyad cosine",
+        "Node r95",
+        "Dyad r95",
+        "Node entropy rank",
+        "Dyad entropy rank"
+      ],
+      [
+        "7 d",
+        "0.866",
+        "0.494",
+        "55",
+        "64",
+        "25.24",
+        "56.25"
+      ],
+      [
+        "14 d",
+        "0.923",
+        "0.597",
+        "29",
+        "33",
+        "16.03",
+        "29.24"
+      ],
+      [
+        "30 d",
+        "0.952",
+        "0.683",
+        "13",
+        "15",
+        "8.40",
+        "13.55"
+      ],
+      [
+        "60 d",
+        "0.962",
+        "0.743",
+        "6",
+        "7",
+        "5.08",
+        "6.38"
+      ],
+      [
+        "90 d",
+        "0.965",
+        "0.766",
+        "4",
+        "4",
+        "3.20",
+        "3.79"
+      ]
+    ]
+  },
+  {
+    "number": 84,
+    "caption": "Table 84. Activity by static-degree group.",
+    "section": "8.4.4 Degree changes the activity regime without turning lifetime topology into current occupancy",
+    "rows": [
+      [
+        "Static degree",
+        "Nodes",
+        "Median coverage",
+        "Active next month",
+        "Median partner retention"
+      ],
+      [
+        "1–6",
+        "247",
+        "33.3%",
+        "50.6%",
+        "1.000"
+      ],
+      [
+        "7–22",
+        "252",
+        "21.1%",
+        "87.5%",
+        "0.500"
+      ],
+      [
+        "23–44",
+        "240",
+        "21.4%",
+        "98.5%",
+        "0.571"
+      ],
+      [
+        "45–77",
+        "147",
+        "22.2%",
+        "99.3%",
+        "0.562"
+      ],
+      [
+        "78+",
+        "100",
+        "23.5%",
+        "99.9%",
+        "0.570"
+      ]
+    ]
+  },
+  {
+    "number": 85,
+    "caption": "Table 85. Persistence within and across topology partitions.",
+    "section": "8.4.5 Long-run topology forms a persistence landscape",
+    "rows": [
+      [
+        "Relation class",
+        "Active dyads",
+        "Mean events/dyad",
+        "Median lifetime",
+        "Mean Jaccard",
+        "Mean retention"
+      ],
+      [
+        "within partition",
+        "13,488",
+        "17.62",
+        "118.92 d",
+        "0.373",
+        "0.560"
+      ],
+      [
+        "cross partition",
+        "10,772",
+        "7.34",
+        "4.80 d",
+        "0.233",
+        "0.393"
+      ]
+    ]
+  },
+  {
+    "number": 86,
+    "caption": "Table 86. Multiscale relation-field summary.",
+    "section": "8.5.1 Multiscale summary",
+    "rows": [
+      [
+        "Window",
+        "Raw coverage",
+        "Effective coverage",
+        "Active partners",
+        "Effective partners",
+        "Node cosine",
+        "Dyad cosine",
+        "Retention",
+        "New edges"
+      ],
+      [
+        "7 d",
+        "10.0%",
+        "7.6%",
+        "3",
+        "2.67",
+        "0.866",
+        "0.494",
+        "39.6%",
+        "60.7%"
+      ],
+      [
+        "14 d",
+        "14.8%",
+        "9.9%",
+        "5",
+        "3.13",
+        "0.923",
+        "0.597",
+        "45.3%",
+        "54.9%"
+      ],
+      [
+        "30 d",
+        "22.5%",
+        "12.6%",
+        "7",
+        "3.70",
+        "0.952",
+        "0.683",
+        "50.5%",
+        "50.6%"
+      ],
+      [
+        "60 d",
+        "32.9%",
+        "15.8%",
+        "9",
+        "4.23",
+        "0.962",
+        "0.743",
+        "54.3%",
+        "47.3%"
+      ],
+      [
+        "90 d",
+        "40.0%",
+        "17.7%",
+        "10",
+        "4.49",
+        "0.965",
+        "0.766",
+        "55.2%",
+        "46.0%"
+      ]
+    ]
+  },
+  {
+    "number": 87,
+    "caption": "Table 87. Placement locality and load at 16 shards.",
+    "section": "9.1.2 Placement locality and load balance",
+    "rows": [
+      [
+        "16-shard placement",
+        "Byte-load CV",
+        "Largest shard",
+        "Semantic edge cut"
+      ],
+      [
+        "Hash",
+        "0.291",
+        "9.24%",
+        "93.3%"
+      ],
+      [
+        "Chapter-greedy",
+        "0.345",
+        "14.56%",
+        "41.5%"
+      ],
+      [
+        "Semantic K-means",
+        "1.347",
+        "32.58%",
+        "31.8%"
+      ],
+      [
+        "Balanced semantic",
+        "0.156",
+        "6.75%",
+        "52.4%"
+      ]
+    ]
+  },
+  {
+    "number": 88,
+    "caption": "Table 88. Compact routing against centralized retrieval.",
+    "section": "9.1.3 Coordinator metadata",
+    "rows": [
+      [
+        "Shards contacted",
+        "Body scored",
+        "Mean recall@5",
+        "Exact top-5 set"
+      ],
+      [
+        "1/16",
+        "5.9%",
+        "48.8%",
+        "9.6%"
+      ],
+      [
+        "2/16",
+        "11.7%",
+        "70.1%",
+        "26.4%"
+      ],
+      [
+        "4/16",
+        "23.8%",
+        "88.4%",
+        "58.2%"
+      ],
+      [
+        "8/16",
+        "47.1%",
+        "98.4%",
+        "92.2%"
+      ]
+    ]
+  },
+  {
+    "number": 89,
+    "caption": "Table 89. Single-machine execution throughput.",
+    "section": "9.1.4 Multiprocess execution and orchestration overhead",
+    "rows": [
+      [
+        "Execution mode",
+        "Workers",
+        "Dispatch batch",
+        "Queries/s",
+        "Agreement"
+      ],
+      [
+        "Centralized best",
+        "1",
+        "256",
+        "7667",
+        "100% reference"
+      ],
+      [
+        "8-worker broadcast",
+        "8",
+        "256",
+        "2853",
+        "100% reference"
+      ],
+      [
+        "8-worker routed top-2",
+        "8",
+        "grouped",
+        "3694",
+        "recall 73.3% / exact 27.2%"
+      ],
+      [
+        "8-worker routed top-4",
+        "8",
+        "grouped",
+        "2805",
+        "recall 91.5% / exact 68.1%"
+      ],
+      [
+        "8-worker routed top-8",
+        "8",
+        "grouped",
+        "2089",
+        "recall 100.0% / exact 100.0%"
+      ]
+    ]
+  },
+  {
+    "number": 90,
+    "caption": "Table 90. Replication and single-shard recovery.",
+    "section": "9.2.1 Single-shard loss and selective replication",
+    "rows": [
+      [
+        "Redundancy policy",
+        "Sparse-state overhead",
+        "Mean failure recall@5",
+        "Worst recall@5",
+        "Mean routed-top4 recall"
+      ],
+      [
+        "No replica",
+        "0.0%",
+        "87.50%",
+        "81.60%",
+        "82.57%"
+      ],
+      [
+        "Hot 25%",
+        "35.7%",
+        "94.62%",
+        "91.84%",
+        "91.00%"
+      ],
+      [
+        "Boundary 25%",
+        "36.0%",
+        "94.62%",
+        "92.20%",
+        "91.31%"
+      ],
+      [
+        "One backup/object",
+        "100.0%",
+        "100.00%",
+        "100.00%",
+        "98.49%"
+      ]
+    ]
+  },
+  {
+    "number": 91,
+    "caption": "Table 91. Delayed-shard completion rules.",
+    "section": "9.2.2 Completion rules under a delayed shard",
+    "rows": [
+      [
+        "Redundancy",
+        "Coordinator rule",
+        "Median orchestration wait",
+        "Recall@5",
+        "Exact top-5"
+      ],
+      [
+        "No replica",
+        "Wait all 8",
+        "351.58 ms",
+        "100.00%",
+        "100.0%"
+      ],
+      [
+        "No replica",
+        "Continue at 7/8",
+        "1.19 ms",
+        "81.60%",
+        "49.0%"
+      ],
+      [
+        "Hot 25%",
+        "Wait all 8",
+        "351.02 ms",
+        "100.00%",
+        "100.0%"
+      ],
+      [
+        "Hot 25%",
+        "Continue at 7/8",
+        "1.25 ms",
+        "91.84%",
+        "73.0%"
+      ],
+      [
+        "One backup/object",
+        "Wait all 8",
+        "351.25 ms",
+        "100.00%",
+        "100.0%"
+      ],
+      [
+        "One backup/object",
+        "Continue at 7/8",
+        "1.23 ms",
+        "100.00%",
+        "100.0%"
+      ]
+    ]
+  },
+  {
+    "number": 92,
+    "caption": "Table 92. Concurrent update synchronization.",
+    "section": "9.2.3 Concurrent state updates",
+    "rows": [
+      [
+        "Update discipline",
+        "Median updates/s",
+        "Mean lost updates",
+        "Objects with count error"
+      ],
+      [
+        "Naive shared RMW",
+        "633,027",
+        "1.354%",
+        "183.8"
+      ],
+      [
+        "One global lock",
+        "411,215",
+        "0.000%",
+        "0.0"
+      ],
+      [
+        "Ownership-scoped shard locks",
+        "668,856",
+        "0.000%",
+        "0.0"
+      ]
+    ]
+  },
+  {
+    "number": 93,
+    "caption": "Table 93. Persistent coordinator conditions.",
+    "section": "9.3.1 Continuous task sequence and coordinator conditions",
+    "rows": [
+      [
+        "Condition",
+        "Adaptive route",
+        "Replica budget",
+        "Commit discipline",
+        "Failure handling"
+      ],
+      [
+        "Static barrier / none",
+        "No",
+        "None",
+        "Unsafe set",
+        "Wait/fail"
+      ],
+      [
+        "Adaptive hot25 / unsafe",
+        "Yes",
+        "Hot 25%",
+        "Unsafe set",
+        "Health-aware + deferred log"
+      ],
+      [
+        "Adaptive hot25 / versioned",
+        "Yes",
+        "Hot 25%",
+        "CAS + retry",
+        "Health-aware + deferred log"
+      ],
+      [
+        "Adaptive full1 / versioned",
+        "Yes",
+        "One backup/object",
+        "CAS + retry",
+        "Health-aware + deferred log"
+      ]
+    ]
+  },
+  {
+    "number": 94,
+    "caption": "Table 94. Acceptance retrieval and final-state agreement.",
+    "section": "9.3.6 Final-state agreement",
+    "rows": [
+      [
+        "Condition",
+        "Accepted",
+        "Mean recall@5",
+        "Internal state error",
+        "Final L1 error vs reference",
+        "Objects exact vs reference"
+      ],
+      [
+        "Static / none",
+        "88.75%",
+        "0.824",
+        "1.846%",
+        "19.31%",
+        "49.19%"
+      ],
+      [
+        "Adaptive hot25 / unsafe",
+        "100.00%",
+        "0.905",
+        "1.595%",
+        "14.35%",
+        "51.88%"
+      ],
+      [
+        "Adaptive hot25 / versioned",
+        "100.00%",
+        "0.905",
+        "0.000%",
+        "13.33%",
+        "57.80%"
+      ],
+      [
+        "Adaptive full1 / versioned",
+        "100.00%",
+        "0.992",
+        "0.000%",
+        "1.50%",
+        "93.55%"
+      ]
+    ]
+  }
+]

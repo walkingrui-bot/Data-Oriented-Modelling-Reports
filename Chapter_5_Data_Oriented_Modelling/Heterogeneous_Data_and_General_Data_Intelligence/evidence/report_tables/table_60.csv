@@ -1,0 +1,5 @@
+Scenario,Fatigue-aware / no curriculum,CoordinatedBody,Curriculum gain
+healthy,0.0847,0.0834,1.61%
+chronic_fatigue,0.1030,0.1007,2.18%
+weak_effector,0.0920,0.0905,1.67%
+outages,0.0926,0.0947,-2.24%

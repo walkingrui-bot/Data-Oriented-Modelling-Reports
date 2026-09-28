@@ -1,0 +1,3 @@
+Condition,Causal-curve MSE,Hidden-confounding R²
+Original cohort hierarchy,0.427,0.672
+Same individual records reassigned across cohorts,0.518,-0.003

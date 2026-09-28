@@ -1,0 +1,17 @@
+{
+  "homogeneous": {
+    "direct_one_step": 0.047353,
+    "generated_rule_one_step": 0.013634,
+    "moe_one_step": 0.014156,
+    "direct_rollout8": 0.675118,
+    "generated_rule_rollout8": 0.350124,
+    "moe_rollout8": 0.348738
+  },
+  "heterogeneous": {
+    "generated_rule_rollout8_mean": 0.5389240185419718,
+    "moe_rollout8_mean": 0.509631743033727,
+    "uniform_router_penalty_pct_mean": 10.938315391540527,
+    "shuffle_router_penalty_pct_mean": 19.913305282592773,
+    "router_family_NMI_mean": 0.008744526063606732
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "latent_axes": 3,
+  "species": 3,
+  "environment_dims": 2,
+  "sequence_length": 5,
+  "library_design": {
+    "chain_lengths": [
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "functional_groups": [
+      "alcohol",
+      "aldehyde",
+      "ketone",
+      "ester"
+    ],
+    "unsaturation": [
+      0,
+      1,
+      2
+    ]
+  },
+  "holdout_ids": [
+    1,
+    11,
+    20,
+    21,
+    29,
+    30,
+    38,
+    39,
+    48,
+    58
+  ],
+  "training_rule": "autoregressive next-chemical prediction + receiver-response prediction; no semantic message labels",
+  "zero_shot": "heldout structural combinations available as descriptor candidates at inference only"
+}

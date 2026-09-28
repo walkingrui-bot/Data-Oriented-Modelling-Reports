@@ -1,0 +1,5 @@
+Source,Structure,Native metric,Boundary adapter
+continuous,8-D continuous trajectory,MSE,thin MLP adapter
+event,categorical event stream from persistent hidden mechanism,cross-entropy + rollout accuracy,token embedding
+set,unordered moving 2-D point set; permutation shuffled every frame,Chamfer distance,permutation-invariant item encoder
+graph,node-state dynamics on a per-sample relation graph,node-state MSE,relation-aware message passing

@@ -1,0 +1,5 @@
+Condition,Self gain,Adjacent transfer,Far transfer,Negative cells,Weakest adjacent edge
+broad+dense,0.0052,+0.0045,−0.0049,50.0%,−0.0007
+broad+sparse,0.0049,+0.0041,−0.0044,48.4%,≈0
+sharp+dense,0.0076,+0.0033,−0.0021,51.6%,−0.0054
+sharp+sparse,0.0071,+0.0044,−0.0033,51.6%,−0.0052

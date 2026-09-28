@@ -1,0 +1,4 @@
+Update discipline,Median updates/s,Mean lost updates,Objects with count error
+Naive shared RMW,"633,027",1.354%,183.8
+One global lock,"411,215",0.000%,0.0
+Ownership-scoped shard locks,"668,856",0.000%,0.0

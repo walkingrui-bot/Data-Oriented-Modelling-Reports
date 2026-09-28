@@ -1,0 +1,5 @@
+World,Dense MSE,Body healthy,Body lesion,Body fatigue,Healthy gain vs dense (%),Lesion degradation (%),Fatigue degradation (%)
+smooth,0.164,0.169,0.170,0.151,-3.104,0.281,-10.801
+switch,0.224,0.228,0.205,0.200,-1.433,-9.804,-11.910
+curved,0.463,0.583,0.593,0.546,-25.997,1.711,-6.337
+hidden_memory,0.291,0.361,0.364,0.330,-24.111,0.792,-8.747

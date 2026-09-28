@@ -1,0 +1,13 @@
+Model,Body condition,Mean rollout MSE,Late MSE,Final availability
+DenseWorld,healthy,0.0987,0.1358,-
+DenseWorld,lesion1,0.0987,0.1358,-
+DenseWorld,lesion2,0.0987,0.1358,-
+DenseWorld,fatigue,0.0987,0.1358,-
+StaticWorldMoE,healthy,0.1090,0.1393,1.000
+StaticWorldMoE,lesion1,0.1745,0.2856,0.765
+StaticWorldMoE,lesion2,0.2108,0.3778,0.765
+StaticWorldMoE,fatigue,0.0928,0.1129,0.984
+ComputationalBody,healthy,0.1066,0.1365,1.000
+ComputationalBody,lesion1,0.1235,0.1819,0.765
+ComputationalBody,lesion2,0.1172,0.1650,0.765
+ComputationalBody,fatigue,0.0999,0.1208,0.982

@@ -1,0 +1,5 @@
+Source,Healthy gain vs Dense (%),Lesion degradation (%),Healthy,Lesion,Overall
+continuous,17.0,1.1,PASS,PASS,PASS
+event,-3.8,-0.2,PASS,PASS,PASS
+set,-0.7,0.2,PASS,PASS,PASS
+graph,-14.6,26.1,PASS,FAIL,FAIL

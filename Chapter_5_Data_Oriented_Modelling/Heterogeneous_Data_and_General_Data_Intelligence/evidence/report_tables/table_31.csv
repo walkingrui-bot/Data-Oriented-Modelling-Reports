@@ -1,0 +1,5 @@
+Condition,Hard boundary MSE,Soft boundary MSE,Hard jump,Soft jump
+broad+dense,0.0946,0.0125,0.728,0.011
+broad+sparse,0.1903,0.0156,0.963,0.013
+sharp+dense,0.1356,0.0954,1.377,0.020
+sharp+sparse,0.1900,0.1069,1.444,0.019

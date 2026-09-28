@@ -1,0 +1,6 @@
+Data property,Observed training effect,Modelling implication
+Higher intrinsic dimension,Splitting a fixed budget can underallocate each local function,Test adequate per-expert capacity
+Multiple transition laws,Routing interventions affect long rollout,Evaluate state-conditioned modules
+Longer dynamical memory,One frame omits predictive information,Retain history in state estimation
+Hidden generator identity,History helps even with first-order latent dynamics,Evaluate system identification from history
+Rollout sensitivity,One-step and rollout rankings can differ,Select models using the relevant horizon

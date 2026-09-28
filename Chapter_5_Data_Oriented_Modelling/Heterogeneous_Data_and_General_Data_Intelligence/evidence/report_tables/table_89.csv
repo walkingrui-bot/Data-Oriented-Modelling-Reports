@@ -1,0 +1,6 @@
+Execution mode,Workers,Dispatch batch,Queries/s,Agreement
+Centralized best,1,256,7667,100% reference
+8-worker broadcast,8,256,2853,100% reference
+8-worker routed top-2,8,grouped,3694,recall 73.3% / exact 27.2%
+8-worker routed top-4,8,grouped,2805,recall 91.5% / exact 68.1%
+8-worker routed top-8,8,grouped,2089,recall 100.0% / exact 100.0%

@@ -1,0 +1,17 @@
+model,seed,policy_pair,counterfactual_prediction_disagreement
+ValueOnly_A,17,A_vs_B_weak,0.13533078134059906
+ValueOnly_A,17,A_vs_C_dense,0.10530206561088562
+MaskDelta_A,17,A_vs_B_weak,0.18580473959445953
+MaskDelta_A,17,A_vs_C_dense,0.11860824376344681
+JointPolicy_A,17,A_vs_B_weak,0.1971036195755005
+JointPolicy_A,17,A_vs_C_dense,0.12047255784273148
+MultiPolicy_MaskDelta,17,A_vs_B_weak,0.14049306511878967
+MultiPolicy_MaskDelta,17,A_vs_C_dense,0.14173120260238647
+ValueOnly_A,41,A_vs_B_weak,0.139418825507164
+ValueOnly_A,41,A_vs_C_dense,0.10707856714725494
+MaskDelta_A,41,A_vs_B_weak,0.1840074062347412
+MaskDelta_A,41,A_vs_C_dense,0.11726925522089005
+JointPolicy_A,41,A_vs_B_weak,0.17669568955898285
+JointPolicy_A,41,A_vs_C_dense,0.10897258669137955
+MultiPolicy_MaskDelta,41,A_vs_B_weak,0.12811245024204254
+MultiPolicy_MaskDelta,41,A_vs_C_dense,0.13747821748256683

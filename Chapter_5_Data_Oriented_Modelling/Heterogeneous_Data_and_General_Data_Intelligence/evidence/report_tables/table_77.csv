@@ -1,0 +1,6 @@
+Dataset,LCC N,Mean distance,2-hop coverage,4-hop coverage,λ₂ (norm. Laplacian)
+Dolphins,62,3.357,33.19%,77.52%,0.0395
+Email-Eu-core,986,2.610,44.35%,99.61%,0.2122
+ca-GrQc,4158,6.065,0.78%,14.11%,0.0215
+Facebook Combined,4039,3.667,18.04%,78.69%,0.0073
+Cora,2485,6.269,1.82%,16.57%,0.0162

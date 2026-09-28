@@ -1,0 +1,58 @@
+{
+  "dataset": "Email-Eu-core-temporal",
+  "official_page": "https://snap.stanford.edu/data/email-Eu-core-temporal.html",
+  "public_mirror_repository": "SteveHuntsman/PathHomologyDataAndScripts",
+  "public_mirror_path": "email-Eu-core-temporal.txt",
+  "git_blob_sha": "6d864f3a7d511359c8fc19c6a83b4e2302741669",
+  "events": 332334,
+  "nodes": 986,
+  "directed_dyads": 24929,
+  "time_span_days": 803.9265509259259,
+  "encoding_note": "Each recipient of a multi-recipient email is represented as a separate temporal edge.",
+  "analysis_rule": "Time-geometry analyses use only complete windows wholly inside the primary continuous segment before the largest timestamp gap.",
+  "gap_summary": {
+    "largest_gap_after_day": 525.5224305555555,
+    "largest_gap_before_day": 797.3379976851852,
+    "largest_gap_days": 271.81556712962964,
+    "second_largest_gap_days": 5.476226851851852,
+    "third_largest_gap_days": 2.4558217592592593,
+    "largest_to_second_ratio": 49.63555646671429,
+    "events_after_largest_gap": 2424,
+    "post_gap_tail_days": 6.58855324074074,
+    "primary_observed_segment_days": 525.5224305555555,
+    "primary_complete_30d_windows": 17
+  },
+  "community_partition": {
+    "partition_method": "deterministic one-level modularity move on undirected long-run union",
+    "communities": 10,
+    "modularity": 0.3934302668868847,
+    "largest_sizes": [
+      181,
+      159,
+      153,
+      146,
+      134,
+      101,
+      99,
+      9,
+      2,
+      2
+    ],
+    "static_cross_undirected_fraction": 0.45629980079681276,
+    "primary_30d_event_cross_fraction": 0.24973080845877185,
+    "primary_30d_window_cross_fraction_mean": 0.2534484496456753,
+    "primary_30d_window_cross_fraction_median": 0.2518368949464356,
+    "retention_difference": 0.16744179928619551,
+    "retention_difference_bootstrap95": [
+      0.15015172637156116,
+      0.1814540123337477
+    ],
+    "jaccard_difference": 0.1400869412826559,
+    "jaccard_difference_bootstrap95": [
+      0.1247938625381628,
+      0.1526785944537318
+    ],
+    "retention_positive_pairs": 16,
+    "jaccard_positive_pairs": 16
+  }
+}

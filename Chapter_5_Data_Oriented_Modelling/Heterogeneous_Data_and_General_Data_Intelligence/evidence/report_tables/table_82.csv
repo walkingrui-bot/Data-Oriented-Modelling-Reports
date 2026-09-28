@@ -1,0 +1,6 @@
+Window,Complete windows,Median coverage,Active partners,Effective partners,Effective static coverage
+7 d,75,10.0%,3,2.67,7.6%
+14 d,37,14.8%,5,3.13,9.9%
+30 d,17,22.5%,7,3.70,12.6%
+60 d,8,32.9%,9,4.23,15.8%
+90 d,5,40.0%,10,4.49,17.7%

@@ -1,0 +1,4 @@
+analysis,edge_jaccard,retention,new_edge_fraction,pair_count
+"023 all-span, empty/empty pair scored as 0",0.21140910880366182,0.3261358850973405,0.3640208100929011,26
+"all-span, only adjacent windows with edges on both sides",0.32333157817030633,0.4987960595606384,0.497914180142084,17
+"024 primary continuous segment, complete 30d windows",0.32310550673988186,0.5047934421106615,0.5061862511222063,16

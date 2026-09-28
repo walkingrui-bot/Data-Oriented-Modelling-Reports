@@ -1,0 +1,8 @@
+Diagnostic axis,Variation beyond effective dimension,Model comparison
+Curvature / nonlinearity,Equal d95 can have different local derivatives,"Block width, expert count and routing sparsity"
+Conditional innovation,Unpredictable noise differs from structured dimension,Noise fit and shared-predictor performance
+Partial observability,Hidden states can alias in current observations,"History length, state dimension and specialization"
+Topology,"Sequences, sets, graphs and fields preserve different relations",Native encoders and common encodings
+Nonstationarity / switching,The generator can change within an episode,"Routing response, lag and interference"
+Symmetry / gauge,Raw coordinates can contain representational redundancy,Functional response geometry and state size
+Sparse events / heavy tails,Rare events can have large predictive consequences,Capacity allocation and retention of rare events

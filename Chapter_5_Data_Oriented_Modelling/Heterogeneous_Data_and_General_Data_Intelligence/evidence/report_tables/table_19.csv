@@ -1,0 +1,7 @@
+Source or experiment,Evidence reference,Use
+SEMIOTIC-CHEMICAL-GRAMMAR-001,SEMIOTIC_CHEMICAL_GRAMMAR_001_bundle.zip,zero-shot molecule / latent state / control geometry
+WORLD-RULE-MOE-002,WORLD_RULE_MOE_002_bundle.zip,homogeneous vs heterogeneous law / router ablation
+Bengalese finch,NickleDave/pomma → bl26lb16_sequences.txt,Recorded syllable sequences
+Honeybee WDD,BioroboticsLab/WDD_paper → GroundTruthData/GTAverage.csv,waggle direction sequence proxy
+QSDB,qhmu/QSDB → data/QSDB_qsgroups.txt,signal-family × function graph
+Berlin2019 waggle/follower,Zenodo 7928121,Related receiver / follower dataset

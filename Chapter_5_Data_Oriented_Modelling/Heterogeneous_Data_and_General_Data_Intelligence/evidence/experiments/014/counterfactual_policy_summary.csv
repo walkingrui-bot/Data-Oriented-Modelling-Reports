@@ -1,0 +1,9 @@
+model,policy_pair,seed,counterfactual_prediction_disagreement
+JointPolicy_A,A_vs_B_weak,29.0,0.18689965456724167
+JointPolicy_A,A_vs_C_dense,29.0,0.11472257226705551
+MaskDelta_A,A_vs_B_weak,29.0,0.18490607291460037
+MaskDelta_A,A_vs_C_dense,29.0,0.11793874949216843
+MultiPolicy_MaskDelta,A_vs_B_weak,29.0,0.1343027576804161
+MultiPolicy_MaskDelta,A_vs_C_dense,29.0,0.13960471004247665
+ValueOnly_A,A_vs_B_weak,29.0,0.13737480342388153
+ValueOnly_A,A_vs_C_dense,29.0,0.10619031637907028

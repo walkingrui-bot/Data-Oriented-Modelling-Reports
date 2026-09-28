@@ -1,0 +1,2 @@
+Dense_metric,Body_metric,Body_lesion_metric,Body_vs_Dense_gain_pct,Lesion_degradation_pct,healthy_pass,lesion_pass
+0.007905782920054415,0.009057610073465516,0.011419042966074565,-14.569425508627209,26.071258019010152,True,False

@@ -1,0 +1,3 @@
+Model,Params,One-step MSE,4-step,8-step
+GeneratedRule,"42,088",0.01468,0.24161,0.53892
+WorldMoE,"37,794",0.01538,0.24467,0.50963

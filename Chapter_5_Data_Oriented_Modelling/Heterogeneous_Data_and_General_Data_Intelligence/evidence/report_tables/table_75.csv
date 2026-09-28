@@ -1,0 +1,4 @@
+Model,Scenario,Rollout metric,Late metric
+ComputationalBody_IDGraph_long,healthy,0.00906,0.00646
+ComputationalBody_IDGraph_long,lesion1,0.01142,0.01336
+DenseCore_IDGraph_long,healthy,0.00791,0.00549

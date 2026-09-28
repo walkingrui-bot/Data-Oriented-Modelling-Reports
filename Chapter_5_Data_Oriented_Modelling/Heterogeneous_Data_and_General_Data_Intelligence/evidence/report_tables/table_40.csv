@@ -1,0 +1,5 @@
+Diagnostic,Value
+Current-frame family classifier,0.4898
+Two-frame transition classifier,1.0000
+Normalized covariance difference,0.2185
+Current mean difference,0.1214

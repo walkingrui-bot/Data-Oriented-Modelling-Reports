@@ -1,0 +1,23 @@
+{
+  "study": "025",
+  "operation": "Re-execution of supplied derived analysis on included 024 summary tables",
+  "comparison_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-10
+  },
+  "comparisons": [
+    {
+      "file": "rg025_multiscale_renormalization.csv",
+      "rows": 5,
+      "numeric_cells": 125,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "rg025_descriptive_logfits.csv",
+      "rows": 5,
+      "numeric_cells": 15,
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "source_024_input_hashes_match": true
+}

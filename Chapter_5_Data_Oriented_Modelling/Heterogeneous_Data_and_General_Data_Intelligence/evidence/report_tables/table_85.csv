@@ -1,0 +1,3 @@
+Relation class,Active dyads,Mean events/dyad,Median lifetime,Mean Jaccard,Mean retention
+within partition,"13,488",17.62,118.92 d,0.373,0.560
+cross partition,"10,772",7.34,4.80 d,0.233,0.393

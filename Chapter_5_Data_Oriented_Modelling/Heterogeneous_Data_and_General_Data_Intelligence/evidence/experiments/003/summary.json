@@ -1,0 +1,10 @@
+{
+  "property_vs_moe_rollout_gain_spearman": {
+    "state_d95": -0.8728715609439696,
+    "memory_gain": -0.30952380952380953,
+    "law_separation": -0.11415291512216423
+  },
+  "mono_params_mean": 10688.0,
+  "moe_params_mean": 10332.0,
+  "elapsed_sec": 12.556917667388916
+}

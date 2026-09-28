@@ -1,0 +1,7 @@
+Training scheme,Test MSE,Boundary MSE,Non-boundary MSE
+Mono,0.0250,0.0217,0.0256
+OraclePhase,0.0971,0.2052,0.0782
+PredictiveJacobian,0.0978,0.1849,0.0826
+RawGeometry,0.1482,0.1797,0.1427
+CompatibilityGraph,0.1516,0.1597,0.1502
+RandomLocal,0.2060,0.2232,0.2029

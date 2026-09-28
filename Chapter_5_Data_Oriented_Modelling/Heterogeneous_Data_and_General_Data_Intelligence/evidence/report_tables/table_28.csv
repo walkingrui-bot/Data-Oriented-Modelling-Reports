@@ -1,0 +1,13 @@
+Condition,Model,Final rollout MSE,Gain vs Mono
+C0_N0_A0,MonoBlock,0.0336,+0.0%
+C0_N0_A0,MatchedMoE,0.0234,+30.3%
+C0_N0_A0,OracleMoE,0.0238,+29.1%
+C0_N0_A0,OvercompleteMoE,0.0145,+56.9%
+C0_N0_A1,MonoBlock,0.0099,+0.0%
+C0_N0_A1,MatchedMoE,0.0139,-40.8%
+C0_N0_A1,OracleMoE,0.0199,-101.9%
+C0_N0_A1,OvercompleteMoE,0.0072,+27.1%
+C1_N0_A0,MonoBlock,0.7456,+0.0%
+C1_N0_A0,MatchedMoE,0.8187,-9.8%
+C1_N0_A0,OracleMoE,1.1242,-50.8%
+C1_N0_A0,OvercompleteMoE,0.6986,+6.3%

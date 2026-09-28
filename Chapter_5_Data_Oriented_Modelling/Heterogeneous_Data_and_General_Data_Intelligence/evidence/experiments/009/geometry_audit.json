@@ -1,0 +1,8 @@
+{
+  "current_frame_family_accuracy": 0.4898148148148148,
+  "two_frame_transition_family_accuracy": 1.0,
+  "normalized_covariance_difference": 0.21847470584796197,
+  "current_mean_difference": 0.12138744443655014,
+  "rho": 0.997,
+  "sigma": 0.07740155037206922
+}

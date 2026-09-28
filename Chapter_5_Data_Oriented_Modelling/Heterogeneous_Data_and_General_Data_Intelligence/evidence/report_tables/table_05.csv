@@ -1,0 +1,9 @@
+Experiment,Data,Question,Reported result
+HIER-STAT-001,Simulated population and cohorts,Information retained by hierarchy,Confounding R²: 0.672→≈0 after reassignment
+STAT-SCALE-001,Statistical simulator,Capacity and mechanism aliasing,State separation increases 2.7–3.5×; control rank stays low
+SEMIOTIC-CHEM-001,Synthetic chemical communication,Compositional signal prediction,Held-out Top-1 ≈28–32%; shuffled chemistry performs poorly
+REAL-BIRD-001,Bengalese finch song,Predictive information in history,K=1→5: 81.3%→86.5%; shuffled trend reverses
+REAL-WAGGLE-001,Honeybee directions,Episode-conditioned signal structure,Previous run: 35.3° mean error; global: 45.6°
+QS-GRAPH-001,Quorum-sensing records,Relational signal structure,Signal-family / role information ≈0.408 bit
+WORLD-RULE-001,Synthetic physical dynamics,Direct prediction and generated rules,Rule Generator improves one-step and rollout MSE
+WORLD-MOE-002,Homogeneous and heterogeneous laws,Functional routing contribution,Router interventions: eight-step error +10.9% / +19.9%

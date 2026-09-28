@@ -1,0 +1,5 @@
+policy,replicated_objects,object_fraction,sparse_state_extra_bytes,storage_overhead_ratio
+none,0,0.0,0,0.0
+hot25,93,0.25,1429188,0.3573477433795599
+boundary25,93,0.25,1438512,0.35967907442856883
+full1,372,1.0,3999432,1.0

@@ -1,0 +1,7 @@
+Model,Failed,Paired substitute,Δ desired weight,Δ realized load
+AvailabilityAware,1,0,0.0211,0.0178
+AvailabilityAware,2,3,-0.0221,-0.0119
+CoordinatedBody,1,0,0.0101,0.0090
+CoordinatedBody,2,3,-0.0204,-0.0122
+StateOnly,1,0,0.0000,0.0000
+StateOnly,2,3,0.0000,0.0000

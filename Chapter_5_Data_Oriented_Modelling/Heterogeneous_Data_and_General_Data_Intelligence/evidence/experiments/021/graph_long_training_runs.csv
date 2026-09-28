@@ -1,0 +1,7 @@
+model,seed,scenario,rollout_metric,late_metric
+DenseCore_IDGraph_long,17,healthy,0.007435008841143413,0.004155974679936965
+ComputationalBody_IDGraph_long,17,healthy,0.010644712104377422,0.009909503161907196
+ComputationalBody_IDGraph_long,17,lesion1,0.013194780077107927,0.016975503725310166
+DenseCore_IDGraph_long,41,healthy,0.008376556998965416,0.006832948109755914
+ComputationalBody_IDGraph_long,41,healthy,0.007470508042553609,0.00300760994044443
+ComputationalBody_IDGraph_long,41,lesion1,0.0096433058550412,0.009735907117525736

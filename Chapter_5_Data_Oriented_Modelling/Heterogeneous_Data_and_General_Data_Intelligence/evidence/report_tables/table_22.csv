@@ -1,0 +1,9 @@
+d,Model,Params,One-step MSE,Long rollout MSE
+3,MonoBlock,"10,688",0.01230,0.05170
+3,MatchedMoE,"10,332",0.01722,0.05847
+3,OvercompleteMoE,"25,104",0.01242,0.04983
+3,Oracle4xMono,"42,752",0.00658,0.00644
+14,MonoBlock,"10,688",0.01518,0.02176
+14,MatchedMoE,"10,332",0.03330,0.03206
+14,OvercompleteMoE,"25,104",0.01863,0.01932
+14,Oracle4xMono,"42,752",0.00597,0.00339

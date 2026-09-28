@@ -1,0 +1,7 @@
+Prefix signals,GRU latent-state mean R²,GRU state d95,next-signal control stable rank
+0,-0.005,4,3.22
+1,0.659,8,2.93
+2,0.698,11,2.85
+3,0.706,12,2.81
+4,0.715,13,2.80
+5,0.711,11,2.74

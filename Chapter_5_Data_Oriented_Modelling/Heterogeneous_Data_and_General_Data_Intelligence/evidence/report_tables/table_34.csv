@@ -1,0 +1,4 @@
+Geometry,Construction,Relationship measured
+Observation,Raw high-dimensional context distance or K-means,Proximity in sensor space
+Predictive / generative,Pilot Jacobian J(x)=∂future/∂current-state,Similarity of local transition functions
+Training compatibility,Held-out loss change after a local update,Benefit or interference under parameter sharing

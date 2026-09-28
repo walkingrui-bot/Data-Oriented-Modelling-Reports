@@ -1,0 +1,10 @@
+Evidence record,Contents
+WORLD_DATA_GEOMETRY_003_bundle.zip,Experiment evidence bundle
+all_runs.csv,8 conditions × 2 seeds × Mono/MoE results
+condition_geometry.csv,"d95, history gain and law separation by condition"
+condition_summary.csv,Factorial summary and MoE gain
+router_summary.csv,"Entropy, law NMI and routing interventions"
+capacity_followup.csv,"Matched, overcomplete and oracle comparisons by seed"
+factorial_moe_gain.png,Matched-budget 2×2×2 comparison
+capacity_ladder.png,Capacity comparisons at low and high dimension
+router_intervention.png,Functional routing interventions

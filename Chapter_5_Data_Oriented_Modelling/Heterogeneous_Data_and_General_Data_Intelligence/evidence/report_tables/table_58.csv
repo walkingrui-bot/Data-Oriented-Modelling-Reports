@@ -1,0 +1,5 @@
+Model,Pre-adapt MSE,Post-router MSE,Router change (%)
+CoordinatedEffectors,0.0817,0.0809,-1.0254
+HardTop1,0.1280,0.1353,5.4697
+SharedResidual,0.0806,0.0794,-1.4884
+SoftMixture,0.1065,0.1038,-2.5528

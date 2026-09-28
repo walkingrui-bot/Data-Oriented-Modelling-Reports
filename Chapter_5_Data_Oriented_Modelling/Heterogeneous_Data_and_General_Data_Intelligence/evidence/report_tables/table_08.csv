@@ -1,0 +1,6 @@
+Model,Top-1,Top-5,Mean rank
+Transformer + structure,31.9%,90.6%,2.90
+GRU + structure,27.8%,94.2%,2.78
+Last-signal Markov,21.9%,84.7%,3.91
+Shuffled chemistry,0.0%,1.6%,30.27
+Random ranking,1.67%,8.33%,—

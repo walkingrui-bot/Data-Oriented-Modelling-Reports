@@ -1,0 +1,8 @@
+feature_group,num_features,edge_shared_any,random_shared_any,lift
+birthday,8,0.047638,0.002997,15.8929
+location,12,0.133386,0.030768,4.3352
+languages,14,0.092894,0.03068,3.0279
+work,84,0.202858,0.085692,2.3673
+gender,2,0.570067,0.53954,1.0566
+education,65,0.562525,0.539892,1.0419
+locale,3,0.873759,0.874636,0.999

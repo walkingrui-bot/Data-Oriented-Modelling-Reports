@@ -1,0 +1,6 @@
+Proposition,Comparison and interpretation
+Conditional routing helps under heterogeneity,Compare matched-budget long rollout with a shared model; test uniform and shuffled routing. Equal shared-model performance with insensitive routing would weaken the proposed benefit.
+Experts have distinct functional roles,Remove or exchange experts and measure downstream responses. Complete interchangeability under the probe set would weaken a role-specific interpretation.
+Predictive states can be shared across modalities,Test alignment of future-equivalent states using a common query set. This is a proposed cross-modal test.
+Capacity reduces state aliasing,Measure coordinate-aware state separation and future-response robustness across capacity. Separation alone is insufficient if predictive behaviour does not improve.
+Generated transitions help planning,"Compare closed-loop transfer, planning and out-of-distribution rollout with and without rule generation. Closed-loop benefit is a separate evaluation target."

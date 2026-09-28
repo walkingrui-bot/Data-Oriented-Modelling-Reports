@@ -1,0 +1,4 @@
+mode,median_updates_per_s,mean_lost_fraction,max_lost_fraction,mean_error_objects
+global_lock,411214.9065127375,0.0,0.0,0.0
+naive_rmw,633026.6526690654,0.01354499999999996,0.0156833333333333,183.8
+shard_locks,668856.46557734,0.0,0.0,0.0

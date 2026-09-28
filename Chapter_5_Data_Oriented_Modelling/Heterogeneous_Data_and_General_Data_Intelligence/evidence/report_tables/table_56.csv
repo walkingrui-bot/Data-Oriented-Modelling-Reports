@@ -1,0 +1,4 @@
+Base model,Perturb-trained,Intact MSE change (%),Single penalty reduction (pp),Dual penalty reduction (pp)
+HardTop1,HardTop1_Perturb,3.15,17.65,45.81
+SoftMixture,SoftMixture_Perturb,5.20,26.03,70.55
+SharedResidual,CoordinatedEffectors,3.72,13.51,36.05

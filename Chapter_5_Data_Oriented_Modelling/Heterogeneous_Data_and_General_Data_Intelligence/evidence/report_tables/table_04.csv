@@ -1,0 +1,6 @@
+Property,Language / birdsong,Chemical / QS,Population statistics,Physical systems
+Native structure,Discrete sequences,"Molecular structure, graphs, mixtures","Sets, hierarchy, repeated measures","Object graphs, fields, contacts, occlusion"
+Time structure,History and order-sensitive composition,"Concentrations, reactions, network timing",Multiple timescales and cohorts,Continuous dynamics and rollout
+Measured response complexity,Few dominant directions in the examples considered,Synthetic chemical system: ≈3 dominant axes,Statistical simulator: ≈1–2 axes,Rule model: r95≈15
+Modelling concern,Context aliasing,Confusing structure with identity,Pooling away hierarchy or confounding,Rollout drift and mechanism switches
+Candidate module,Sequence model,Graph or structural model,Hierarchical or set model,Dynamics or rule model

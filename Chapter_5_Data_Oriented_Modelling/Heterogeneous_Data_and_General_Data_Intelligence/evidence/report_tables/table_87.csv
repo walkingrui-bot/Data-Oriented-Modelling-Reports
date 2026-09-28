@@ -1,0 +1,5 @@
+16-shard placement,Byte-load CV,Largest shard,Semantic edge cut
+Hash,0.291,9.24%,93.3%
+Chapter-greedy,0.345,14.56%,41.5%
+Semantic K-means,1.347,32.58%,31.8%
+Balanced semantic,0.156,6.75%,52.4%

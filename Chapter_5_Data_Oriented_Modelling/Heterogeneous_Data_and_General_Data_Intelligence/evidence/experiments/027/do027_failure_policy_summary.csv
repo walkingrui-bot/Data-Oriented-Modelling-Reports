@@ -1,0 +1,5 @@
+replication,mean_recall,worst_recall,mean_exact,mean_routed4_recall,worst_routed4_recall,replicated_objects,object_fraction,sparse_state_extra_bytes,storage_overhead_ratio
+boundary25,0.94615,0.922,0.812,0.91305,0.8932,93,0.25,1438512,0.3596790744285688
+full1,1.0,1.0,1.0,0.9849,0.9656,372,1.0,3999432,1.0
+hot25,0.94615,0.9184,0.8095,0.91005,0.8876000000000001,93,0.25,1429188,0.3573477433795599
+none,0.875,0.816,0.66625,0.8257,0.78,0,0.0,0,0.0

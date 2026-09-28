@@ -1,0 +1,5 @@
+condition,partial,multilaw,obs_rank_single_frame,obs_rank_4frame_gramian,obs_cond_4frame
+P0_M0,0,0,8,8,1.2922790050506592
+P0_M1,0,1,8,8,1.2922790050506592
+P1_M0,1,0,4,8,2.4710707664489746
+P1_M1,1,1,4,8,2.4710707664489746

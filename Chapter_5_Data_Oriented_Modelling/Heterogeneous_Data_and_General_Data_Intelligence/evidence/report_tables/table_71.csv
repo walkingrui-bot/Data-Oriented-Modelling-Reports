@@ -1,0 +1,5 @@
+World,Dense MSE,Baseline,Dual,Dual vs Dense,Lesion Δ
+smooth,0.157,0.142,0.117,-25.5%,+2.4%
+switch,0.143,0.133,0.138,-3.1%,+1.1%
+curved,0.653,0.641,0.554,-15.2%,+0.8%
+hidden_memory,0.330,0.374,0.295,-10.8%,+0.6%

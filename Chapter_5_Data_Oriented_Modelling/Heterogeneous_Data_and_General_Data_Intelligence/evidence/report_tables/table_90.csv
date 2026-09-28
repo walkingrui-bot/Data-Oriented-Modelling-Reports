@@ -1,0 +1,5 @@
+Redundancy policy,Sparse-state overhead,Mean failure recall@5,Worst recall@5,Mean routed-top4 recall
+No replica,0.0%,87.50%,81.60%,82.57%
+Hot 25%,35.7%,94.62%,91.84%,91.00%
+Boundary 25%,36.0%,94.62%,92.20%,91.31%
+One backup/object,100.0%,100.00%,100.00%,98.49%

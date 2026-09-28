@@ -1,0 +1,1302 @@
+table,row,column,row_label,column_label,reported,evidence_value,absolute_difference,rounding_tolerance,status,source,calculation
+8,2,2,Transformer + structure,Top-1,31.9%,31.93863332271576,0.0386333227157607,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,Transformer-structure-contrastive; top1 × 100
+8,2,3,Transformer + structure,Top-5,90.6%,90.56252837181093,0.03747162818906702,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,Transformer-structure-contrastive; top5 × 100
+8,2,4,Transformer + structure,Mean rank,2.90,2.897257089614868,0.002742910385131747,0.00500001,matched,001/zero_shot_postprefix_summary.csv,Transformer-structure-contrastive; mean_rank × 1
+8,3,2,GRU + structure,Top-1,27.8%,27.801021933555596,0.0010219335555952114,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,GRU-structure-contrastive; top1 × 100
+8,3,3,GRU + structure,Top-5,94.2%,94.23524141311646,0.035241413116452236,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,GRU-structure-contrastive; top5 × 100
+8,3,4,GRU + structure,Mean rank,2.78,2.780567169189453,0.0005671691894533204,0.00500001,matched,001/zero_shot_postprefix_summary.csv,GRU-structure-contrastive; mean_rank × 1
+8,4,2,Last-signal Markov,Top-1,21.9%,21.94328159093856,0.04328159093856243,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,Markov-last-signal; top1 × 100
+8,4,3,Last-signal Markov,Top-5,84.7%,84.65830087661743,0.0416991233825712,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,Markov-last-signal; top5 × 100
+8,4,4,Last-signal Markov,Mean rank,3.91,3.909344434738159,0.0006555652618409624,0.00500001,matched,001/zero_shot_postprefix_summary.csv,Markov-last-signal; mean_rank × 1
+8,5,2,Shuffled chemistry,Top-1,0.0%,0.0,0.0,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,GRU-shuffled-structure; top1 × 100
+8,5,3,Shuffled chemistry,Top-5,1.6%,1.5806602314114502,0.01933976858854991,0.050000100000000006,matched,001/zero_shot_postprefix_summary.csv,GRU-shuffled-structure; top5 × 100
+8,5,4,Shuffled chemistry,Mean rank,30.27,30.26592254638672,0.004077453613280824,0.00500001,matched,001/zero_shot_postprefix_summary.csv,GRU-shuffled-structure; mean_rank × 1
+8,6,2,Random ranking,Top-1,1.67%,1.6666666666666667,0.0033333333333331883,0.00500001,matched,001/experiment_spec.json,uniform ranking; 1 / 60 × 100
+8,6,3,Random ranking,Top-5,8.33%,8.333333333333334,0.0033333333333338544,0.00500001,matched,001/experiment_spec.json,uniform ranking; 5 / 60 × 100
+9,2,2,0,GRU latent-state mean R²,-0.005,-0.004744013150533,0.00025598684946699993,0.000500001,matched,001/latent_communication_state_probe.csv,GRU mean_R2
+9,3,2,1,GRU latent-state mean R²,0.659,0.6589699983596802,3.0001640319854417e-05,0.000500001,matched,001/latent_communication_state_probe.csv,GRU mean_R2
+9,4,2,2,GRU latent-state mean R²,0.698,0.6982432007789612,0.00024320077896122783,0.000500001,matched,001/latent_communication_state_probe.csv,GRU mean_R2
+9,5,2,3,GRU latent-state mean R²,0.706,0.7063114444414774,0.00031144444147745975,0.000500001,matched,001/latent_communication_state_probe.csv,GRU mean_R2
+9,6,2,4,GRU latent-state mean R²,0.715,0.7145393093427023,0.0004606906572977021,0.000500001,matched,001/latent_communication_state_probe.csv,GRU mean_R2
+9,7,2,5,GRU latent-state mean R²,0.711,0.7112639546394348,0.0002639546394348491,0.000500001,matched,001/latent_communication_state_probe.csv,GRU mean_R2
+9,2,1,0,Prefix signals,0,0.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,prefix_signals
+9,2,3,0,GRU state d95,4,4.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,state_d95
+9,2,4,0,next-signal control stable rank,3.22,3.221923343340556,0.001923343340555661,0.00500001,matched,001/GRU_state_control_geometry.csv,next_signal_control_stable_rank_mean
+9,3,1,1,Prefix signals,1,1.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,prefix_signals
+9,3,3,1,GRU state d95,8,8.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,state_d95
+9,3,4,1,next-signal control stable rank,2.93,2.9263134479522703,0.0036865520477298297,0.00500001,matched,001/GRU_state_control_geometry.csv,next_signal_control_stable_rank_mean
+9,4,1,2,Prefix signals,2,2.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,prefix_signals
+9,4,3,2,GRU state d95,11,11.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,state_d95
+9,4,4,2,next-signal control stable rank,2.85,2.851614777247111,0.001614777247111121,0.00500001,matched,001/GRU_state_control_geometry.csv,next_signal_control_stable_rank_mean
+9,5,1,3,Prefix signals,3,3.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,prefix_signals
+9,5,3,3,GRU state d95,12,12.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,state_d95
+9,5,4,3,next-signal control stable rank,2.81,2.81378223101298,0.0037822310129800307,0.00500001,matched,001/GRU_state_control_geometry.csv,next_signal_control_stable_rank_mean
+9,6,1,4,Prefix signals,4,4.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,prefix_signals
+9,6,3,4,GRU state d95,13,13.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,state_d95
+9,6,4,4,next-signal control stable rank,2.80,2.800048494338989,4.849433898934663e-05,0.00500001,matched,001/GRU_state_control_geometry.csv,next_signal_control_stable_rank_mean
+9,7,1,5,Prefix signals,5,5.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,prefix_signals
+9,7,3,5,GRU state d95,11,11.0,0.0,0.500001,matched,001/GRU_state_control_geometry.csv,state_d95
+9,7,4,5,next-signal control stable rank,2.74,2.7383832693099976,0.0016167306900025658,0.00500001,matched,001/GRU_state_control_geometry.csv,next_signal_control_stable_rank_mean
+15,2,2,Direct,One-step MSE,0.04735,0.047353,2.9999999999960614e-06,5.000010000000001e-06,matched,002/summary.json,direct_one_step
+15,2,3,Direct,8-step rollout MSE,0.67512,0.675118,2.0000000000575113e-06,5.000010000000001e-06,matched,002/summary.json,direct_rollout8
+15,3,2,GeneratedRule,One-step MSE,0.01363,0.013634,4.000000000000531e-06,5.000010000000001e-06,matched,002/summary.json,generated_rule_one_step
+15,3,3,GeneratedRule,8-step rollout MSE,0.35012,0.350124,4.000000000004e-06,5.000010000000001e-06,matched,002/summary.json,generated_rule_rollout8
+15,4,2,MoE-Rule,One-step MSE,0.01416,0.014156,4.000000000000531e-06,5.000010000000001e-06,matched,002/summary.json,moe_one_step
+15,4,3,MoE-Rule,8-step rollout MSE,0.34874,0.348738,2.000000000002e-06,5.000010000000001e-06,matched,002/summary.json,moe_rollout8
+16,2,2,GeneratedRule,Params,"42,088",42088.0,0.0,0.500001,matched,002/matched_budget_models.csv,params
+16,2,3,GeneratedRule,One-step MSE,0.01468,0.014684187869230867,4.187869230867086e-06,5.000010000000001e-06,matched,002/matched_budget_models.csv,one_step
+16,2,4,GeneratedRule,4-step,0.24161,0.24160691102345785,3.088976542137134e-06,5.000010000000001e-06,matched,002/matched_budget_models.csv,rollout4
+16,2,5,GeneratedRule,8-step,0.53892,0.5389240185419718,4.018541971850809e-06,5.000010000000001e-06,matched,002/matched_budget_models.csv,rollout8
+16,3,2,WorldMoE,Params,"37,794",37794.0,0.0,0.500001,matched,002/matched_budget_models.csv,params
+16,3,3,WorldMoE,One-step MSE,0.01538,0.0153770179798205,2.9820201794990286e-06,5.000010000000001e-06,matched,002/matched_budget_models.csv,one_step
+16,3,4,WorldMoE,4-step,0.24467,0.24466697871685028,3.021283149717835e-06,5.000010000000001e-06,matched,002/matched_budget_models.csv,rollout4
+16,3,5,WorldMoE,8-step,0.50963,0.509631743033727,1.7430337270196716e-06,5.000010000000001e-06,matched,002/matched_budget_models.csv,rollout8
+17,2,2,Uniform routing,Mean 8-step penalty,+10.94%,10.938314499999999,0.0016855000000006726,0.00500001,matched,002/router_ablation.csv,mean over seeds: uniform_penalty_pct
+17,3,2,Shuffle routing across worlds,Mean 8-step penalty,+19.91%,19.913304333333333,0.0033043333333324654,0.00500001,matched,002/router_ablation.csv,mean over seeds: shuffle_penalty_pct
+20,2,4,d=3,d95,3,3.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,2,5,d=3,History gain,-5.5%,-5.51430769264698,0.014307692646980286,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,2,6,d=3,MoE rollout gain,+0.3%,0.2726353915153011,0.027364608484698905,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+20,3,4,d=3,d95,3,3.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,3,5,d=3,History gain,31.4%,31.38318955898285,0.016810441017149458,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,3,6,d=3,MoE rollout gain,-9.1%,-9.06450905251664,0.03549094748336046,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+20,4,4,d=3,d95,3,3.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,4,5,d=3,History gain,-0.7%,-0.65235290676355,0.04764709323645,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,4,6,d=3,MoE rollout gain,-0.0%,-0.0073073418185095,0.0073073418185095,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+20,5,4,d=3,d95,3,3.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,5,5,d=3,History gain,53.0%,52.982473373413086,0.017526626586914062,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,5,6,d=3,MoE rollout gain,-13.1%,-13.093590787624818,0.006409212375181994,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+20,6,4,d=14,d95,13,13.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,6,5,d=14,History gain,-2.3%,-2.32865121215581,0.028651212155810235,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,6,6,d=14,MoE rollout gain,-33.6%,-33.6417028512444,0.041702851244401984,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+20,7,4,d=14,d95,13,13.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,7,5,d=14,History gain,39.7%,39.73010778427124,0.030107784271237392,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,7,6,d=14,MoE rollout gain,-28.2%,-28.208140861262255,0.008140861262255328,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+20,8,4,d=14,d95,13,13.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,8,5,d=14,History gain,3.3%,3.27844247221946,0.021557527780539765,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,8,6,d=14,MoE rollout gain,-52.9%,-52.86183946362654,0.03816053637346073,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+20,9,4,d=14,d95,13,13.0,0.0,0.500001,matched,003/condition_summary.csv,state_d95
+20,9,5,d=14,History gain,35.2%,35.21687090396881,0.016870903968808193,0.050000100000000006,matched,003/condition_summary.csv,memory_gain × 100
+20,9,6,d=14,MoE rollout gain,-47.3%,-47.34602962601439,0.046029626014394864,0.050000100000000006,matched,003/condition_summary.csv,moe_gain_rollout_pct
+21,2,2,"d=3, m=1",Router-law NMI,0.279,0.2789871959189265,1.2804081073514162e-05,0.000500001,matched,003/router_summary.csv,router_law_NMI
+21,2,3,"d=3, m=1",Norm. entropy,0.976,0.9763160569192044,0.0003160569192044438,0.000500001,matched,003/router_summary.csv,router_entropy
+21,2,4,"d=3, m=1",Uniform penalty,13.9%,13.926915168762209,0.026915168762208452,0.050000100000000006,matched,003/router_summary.csv,uniform_penalty_pct
+21,2,5,"d=3, m=1",Shuffle penalty,13.9%,13.853783130645752,0.0462168693542484,0.050000100000000006,matched,003/router_summary.csv,shuffle_penalty_pct
+21,3,2,"d=3, m=4",Router-law NMI,0.342,0.3420042348467351,4.234846735062803e-06,0.000500001,matched,003/router_summary.csv,router_law_NMI
+21,3,3,"d=3, m=4",Norm. entropy,0.921,0.920813342880469,0.0001866571195310307,0.000500001,matched,003/router_summary.csv,router_entropy
+21,3,4,"d=3, m=4",Uniform penalty,43.7%,43.71947479248047,0.019474792480465908,0.050000100000000006,matched,003/router_summary.csv,uniform_penalty_pct
+21,3,5,"d=3, m=4",Shuffle penalty,51.1%,51.08774375915527,0.012256240844727984,0.050000100000000006,matched,003/router_summary.csv,shuffle_penalty_pct
+21,4,2,"d=14, m=1",Router-law NMI,0.489,0.4889461588731524,5.3841126847586906e-05,0.000500001,matched,003/router_summary.csv,router_law_NMI
+21,4,3,"d=14, m=1",Norm. entropy,0.853,0.8528265372025903,0.00017346279740970694,0.000500001,matched,003/router_summary.csv,router_entropy
+21,4,4,"d=14, m=1",Uniform penalty,408.3%,408.2517700195313,0.048229980468704525,0.050000100000000006,matched,003/router_summary.csv,uniform_penalty_pct
+21,4,5,"d=14, m=1",Shuffle penalty,505.5%,505.4690704345703,0.0309295654296875,0.050000100000000006,matched,003/router_summary.csv,shuffle_penalty_pct
+21,5,2,"d=14, m=4",Router-law NMI,0.435,0.4345793268647717,0.00042067313522831107,0.000500001,matched,003/router_summary.csv,router_law_NMI
+21,5,3,"d=14, m=4",Norm. entropy,0.908,0.907841637430467,0.00015836256953305483,0.000500001,matched,003/router_summary.csv,router_entropy
+21,5,4,"d=14, m=4",Uniform penalty,103.1%,103.13938903808594,0.039389038085943184,0.050000100000000006,matched,003/router_summary.csv,uniform_penalty_pct
+21,5,5,"d=14, m=4",Shuffle penalty,120.9%,120.93760681152344,0.037606811523431816,0.050000100000000006,matched,003/router_summary.csv,shuffle_penalty_pct
+22,2,1,3,d,3,3.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,2,3,3,Params,"10,688",10688.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,2,4,3,One-step MSE,0.01230,0.0122987665235996,1.2334764003998216e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,2,5,3,Long rollout MSE,0.05170,0.0516995210200548,4.789799451995758e-07,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+22,3,1,3,d,3,3.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,3,3,3,Params,"10,332",10332.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,3,4,3,One-step MSE,0.01722,0.0172197576612234,2.423387765980445e-07,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,3,5,3,Long rollout MSE,0.05847,0.0584688447415828,1.1552584172000446e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+22,4,1,3,d,3,3.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,4,3,3,Params,"25,104",25104.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,4,4,3,One-step MSE,0.01242,0.0124200638383626,6.38383625996275e-08,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,4,5,3,Long rollout MSE,0.04983,0.0498276632279157,2.336772084297889e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+22,5,1,3,d,3,3.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,5,3,3,Params,"42,752",42752.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,5,4,3,One-step MSE,0.00658,0.006581199588254,1.19958825399967e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,5,5,3,Long rollout MSE,0.00644,0.0064390511251986,9.488748014003373e-07,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+22,6,1,14,d,14,14.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,6,3,14,Params,"10,688",10688.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,6,4,14,One-step MSE,0.01518,0.0151844369247555,4.43692475549963e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,6,5,14,Long rollout MSE,0.02176,0.0217613633722066,1.3633722065996279e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+22,7,1,14,d,14,14.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,7,3,14,Params,"10,332",10332.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,7,4,14,One-step MSE,0.03330,0.0333036072552204,3.6072552203961217e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,7,5,14,Long rollout MSE,0.03206,0.0320645049214363,4.504921436304654e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+22,8,1,14,d,14,14.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,8,3,14,Params,"25,104",25104.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,8,4,14,One-step MSE,0.01863,0.0186300473287701,4.7328770100968365e-08,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,8,5,14,Long rollout MSE,0.01932,0.019317626953125,2.3730468750003675e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+22,9,1,14,d,14,14.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,latent_dim
+22,9,3,14,Params,"42,752",42752.0,0.0,0.500001,matched,003/capacity_followup_summary.csv,params
+22,9,4,14,One-step MSE,0.00597,0.0059722862206399,2.2862206399002286e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,one_step_mse
+22,9,5,14,Long rollout MSE,0.00339,0.0033946218900382,4.621890038200051e-06,5.000010000000001e-06,matched,003/capacity_followup_summary.csv,rollout_mse
+27,2,2,C0_N0_A0,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,2,3,C0_N0_A0,Curvature,0.021,0.0207806770186314,0.00021932298136860193,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,2,4,C0_N0_A0,Cond.#,1.37,1.3673481941223145,0.0026518058776856535,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,2,5,C0_N0_A0,Mono rollout,0.0336,0.0336130671203136,1.3067120313604852e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,2,6,C0_N0_A0,Matched MoE,0.0234,0.0234196623787283,1.9662378728298874e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,2,7,C0_N0_A0,MoE gain,+30.3%,30.325720366723083,0.025720366723081867,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+27,3,2,C0_N0_A1,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,3,3,C0_N0_A1,Curvature,0.014,0.0141014044699694,0.00010140446996939959,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,3,4,C0_N0_A1,Cond.#,5.36,5.355208396911621,0.004791603088379226,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,3,5,C0_N0_A1,Mono rollout,0.0099,0.0098541108891367,4.5889110863301524e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,3,6,C0_N0_A1,Matched MoE,0.0139,0.0138763925060629,2.3607493937099697e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,3,7,C0_N0_A1,MoE gain,-40.8%,-40.818310877345326,0.018310877345328436,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+27,4,2,C0_N1_A0,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,4,3,C0_N1_A0,Curvature,0.033,0.0333159586873951,0.0003159586873950973,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,4,4,C0_N1_A0,Cond.#,1.35,1.3498066067695618,0.00019339323043832124,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,4,5,C0_N1_A0,Mono rollout,0.2543,0.2543185800313949,1.858003139487696e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,4,6,C0_N1_A0,Matched MoE,0.2490,0.2489713802933693,2.86197066307059e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,4,7,C0_N1_A0,MoE gain,+2.1%,2.1025596074677546,0.002559607467754521,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+27,5,2,C0_N1_A1,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,5,3,C0_N1_A1,Curvature,0.027,0.0270109564608808,1.0956460880801738e-05,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,5,4,C0_N1_A1,Cond.#,4.88,4.884021759033203,0.004021759033203232,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,5,5,C0_N1_A1,Mono rollout,0.2441,0.2441447377204895,4.473772048949054e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,5,6,C0_N1_A1,Matched MoE,0.2421,0.2420580089092254,4.199109077460128e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,5,7,C0_N1_A1,MoE gain,+0.9%,0.8547097229074998,0.04529027709250022,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+27,6,2,C1_N0_A0,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,6,3,C1_N0_A0,Curvature,0.387,0.3873253271037656,0.0003253271037655936,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,6,4,C1_N0_A0,Cond.#,10.47,10.46679973602295,0.0032002639770514207,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,6,5,C1_N0_A0,Mono rollout,0.7456,0.7456105053424835,1.0505342483480007e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,6,6,C1_N0_A0,Matched MoE,0.8187,0.818717747926712,1.774792671205283e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,6,7,C1_N0_A0,MoE gain,-9.8%,-9.805017775419882,0.005017775419881687,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+27,7,2,C1_N0_A1,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,7,3,C1_N0_A1,Curvature,0.270,0.2701346696963615,0.00013466969636150017,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,7,4,C1_N0_A1,Cond.#,20.43,20.42622756958008,0.003772430419918038,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,7,5,C1_N0_A1,Mono rollout,0.0953,0.095272060483694,2.7939516306002554e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,7,6,C1_N0_A1,Matched MoE,0.1219,0.1219186000525951,1.8600052595102445e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,7,7,C1_N0_A1,MoE gain,-28.0%,-27.968891859394237,0.031108140605763168,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+27,8,2,C1_N1_A0,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,8,3,C1_N1_A0,Curvature,0.381,0.3807785966273126,0.00022140337268738985,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,8,4,C1_N1_A0,Cond.#,5.42,5.416208982467651,0.0037910175323485618,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,8,5,C1_N1_A0,Mono rollout,0.7054,0.7054252624511719,2.5262451171848e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,8,6,C1_N1_A0,Matched MoE,0.7438,0.7438311278820038,3.112788200376748e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,8,7,C1_N1_A0,MoE gain,-5.4%,-5.444356401042596,0.04435640104259608,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+27,9,2,C1_N1_A1,d95,8,8.0,0.0,0.500001,matched,004/condition_comparison.csv,observed_d95
+27,9,3,C1_N1_A1,Curvature,0.358,0.3576202891976071,0.00037971080239290744,0.000500001,matched,004/condition_comparison.csv,median_curvature_index
+27,9,4,C1_N1_A1,Cond.#,20.89,20.891316413879395,0.0013164138793939628,0.00500001,matched,004/condition_comparison.csv,median_local_condition
+27,9,5,C1_N1_A1,Mono rollout,0.7574,0.7573640048503876,3.599514961238892e-05,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_MonoBlock
+27,9,6,C1_N1_A1,Matched MoE,0.8080,0.8080048859119415,4.885911941476806e-06,5.00001e-05,matched,004/condition_comparison.csv,rollout_last_MSE_StateMoE
+27,9,7,C1_N1_A1,MoE gain,-6.7%,-6.68646525808389,0.013534741916109816,0.050000100000000006,matched,004/condition_comparison.csv,MoE_gain_pct_rollout_last_MSE
+28,2,3,C0_N0_A0,Final rollout MSE,0.0336,0.0336130671203136,1.3067120313604852e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,2,4,C0_N0_A0,Gain vs Mono,+0.0%,0.0,0.0,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,3,3,C0_N0_A0,Final rollout MSE,0.0234,0.0234196623787283,1.9662378728298874e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,3,4,C0_N0_A0,Gain vs Mono,+30.3%,30.325720366723083,0.025720366723081867,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,4,3,C0_N0_A0,Final rollout MSE,0.0238,0.0238173408433794,1.7340843379398674e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,4,4,C0_N0_A0,Gain vs Mono,+29.1%,29.142613620683903,0.04261362068390184,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,5,3,C0_N0_A0,Final rollout MSE,0.0145,0.0144895398989319,1.04601010681004e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,5,4,C0_N0_A0,Gain vs Mono,+56.9%,56.89313371175401,0.006866288245987562,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,6,3,C0_N0_A1,Final rollout MSE,0.0099,0.0098541108891367,4.5889110863301524e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,6,4,C0_N0_A1,Gain vs Mono,+0.0%,0.0,0.0,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,7,3,C0_N0_A1,Final rollout MSE,0.0139,0.0138763925060629,2.3607493937099697e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,7,4,C0_N0_A1,Gain vs Mono,-40.8%,-40.818310877345326,0.018310877345328436,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,8,3,C0_N0_A1,Final rollout MSE,0.0199,0.0198960937559604,3.906244039602463e-06,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,8,4,C0_N0_A1,Gain vs Mono,-101.9%,-101.9065340323498,0.006534032349790664,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,9,3,C0_N0_A1,Final rollout MSE,0.0072,0.007181343389675,1.8656610324999448e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,9,4,C0_N0_A1,Gain vs Mono,+27.1%,27.12337550826873,0.02337550826872814,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,10,3,C1_N0_A0,Final rollout MSE,0.7456,0.7456105053424835,1.0505342483480007e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,10,4,C1_N0_A0,Gain vs Mono,+0.0%,0.0,0.0,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,11,3,C1_N0_A0,Final rollout MSE,0.8187,0.818717747926712,1.774792671205283e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,11,4,C1_N0_A0,Gain vs Mono,-9.8%,-9.805017775419882,0.005017775419881687,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,12,3,C1_N0_A0,Final rollout MSE,1.1242,1.1242238879203796,2.3887920379550565e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,12,4,C1_N0_A0,Gain vs Mono,-50.8%,-50.77897640457554,0.02102359542445953,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+28,13,3,C1_N0_A0,Final rollout MSE,0.6986,0.6985538005828857,4.619941711425657e-05,5.00001e-05,matched,004/capacity_oracle_comparison_with_baseline.csv,rollout_last_MSE
+28,13,4,C1_N0_A0,Gain vs Mono,+6.3%,6.311164397822303,0.011164397822303052,0.050000100000000006,matched,004/capacity_oracle_comparison_with_baseline.csv,gain_vs_mono_pct
+29,2,2,P0_M0,Rank 1,8,8.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_single_frame
+29,2,3,P0_M0,Rank 4,8,8.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_4frame_gramian
+29,2,4,P0_M0,Single MSE,0.0004,0.0004378799349069,3.787993490689999e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_SingleFrame
+29,2,5,P0_M0,Recurrent MSE,0.0012,0.0011529709445312,4.702905546879999e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_RecurrentMono
+29,2,6,P0_M0,History gain,-163.3%,-163.30755365080717,0.0075536508071536446,0.050000100000000006,matched,005/condition_comparison.csv,history_gain_one_step_pct
+29,2,7,P0_M0,Recurrent rollout,0.0013,0.0012987410882487,1.2589117512999681e-06,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMono
+29,2,8,P0_M0,MoE rollout,0.0021,0.002076998935081,2.3001064918999788e-05,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMoE
+29,2,9,P0_M0,MoE gain,-59.9%,-59.924018256916106,0.024018256916107816,0.050000100000000006,matched,005/condition_comparison.csv,moe_gain_rollout_pct
+29,3,2,P0_M1,Rank 1,8,8.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_single_frame
+29,3,3,P0_M1,Rank 4,8,8.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_4frame_gramian
+29,3,4,P0_M1,Single MSE,0.1058,0.1057771891355514,2.2810864448608026e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_SingleFrame
+29,3,5,P0_M1,Recurrent MSE,0.0368,0.0368375442922115,3.754429221149852e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_RecurrentMono
+29,3,6,P0_M1,History gain,+65.2%,65.17439667922645,0.025603320773555538,0.050000100000000006,matched,005/condition_comparison.csv,history_gain_one_step_pct
+29,3,7,P0_M1,Recurrent rollout,0.0145,0.0144732440821826,2.675591781740004e-05,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMono
+29,3,8,P0_M1,MoE rollout,0.0158,0.0157757620327174,2.423796728260111e-05,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMoE
+29,3,9,P0_M1,MoE gain,-9.0%,-8.999488595223038,0.0005114047769616548,0.050000100000000006,matched,005/condition_comparison.csv,moe_gain_rollout_pct
+29,4,2,P1_M0,Rank 1,4,4.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_single_frame
+29,4,3,P1_M0,Rank 4,8,8.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_4frame_gramian
+29,4,4,P1_M0,Single MSE,0.0652,0.0651770308613777,2.2969138622291885e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_SingleFrame
+29,4,5,P1_M0,Recurrent MSE,0.0020,0.001964651804883,3.5348195116999964e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_RecurrentMono
+29,4,6,P1_M0,History gain,+97.0%,96.98566844957764,0.014331550422355122,0.050000100000000006,matched,005/condition_comparison.csv,history_gain_one_step_pct
+29,4,7,P1_M0,Recurrent rollout,0.0014,0.0014481196412816,4.8119641281599984e-05,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMono
+29,4,8,P1_M0,MoE rollout,0.0017,0.0016558224451728,4.417755482719987e-05,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMoE
+29,4,9,P1_M0,MoE gain,-14.3%,-14.342931203344769,0.042931203344767965,0.050000100000000006,matched,005/condition_comparison.csv,moe_gain_rollout_pct
+29,5,2,P1_M1,Rank 1,4,4.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_single_frame
+29,5,3,P1_M1,Rank 4,8,8.0,0.0,0.500001,matched,005/condition_comparison.csv,obs_rank_4frame_gramian
+29,5,4,P1_M1,Single MSE,0.1115,0.1114835999906063,1.6400009393707782e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_SingleFrame
+29,5,5,P1_M1,Recurrent MSE,0.0794,0.0794194266200065,1.942662000650741e-05,5.00001e-05,matched,005/condition_comparison.csv,one_step_MSE_RecurrentMono
+29,5,6,P1_M1,History gain,+28.8%,28.761336531383535,0.03866346861646619,0.050000100000000006,matched,005/condition_comparison.csv,history_gain_one_step_pct
+29,5,7,P1_M1,Recurrent rollout,0.0187,0.0187042579054832,4.2579054831994034e-06,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMono
+29,5,8,P1_M1,MoE rollout,0.0195,0.0195257775485515,2.5777548551500495e-05,5.00001e-05,matched,005/condition_comparison.csv,rollout_last_MSE_RecurrentMoE
+29,5,9,P1_M1,MoE gain,-4.4%,-4.392153098078706,0.00784690192129478,0.050000100000000006,matched,005/condition_comparison.csv,moe_gain_rollout_pct
+30,2,2,broad+dense,Mono,0.0881,0.0881103202700614,1.0320270061398018e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_dense; MonoFull; test_MSE
+30,2,3,broad+dense,Hard split,0.0469,0.0468770135194063,2.29864805936994e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_dense; HardSplitFull; test_MSE
+30,2,4,broad+dense,Soft MoE,0.0148,0.014779585879296,2.0414120704000463e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_dense; SoftMoEFull; test_MSE
+30,2,5,broad+dense,Shared+residual,0.0334,0.0334276817739009,2.7681773900903317e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_dense; SharedResidualFull; test_MSE
+31,2,2,broad+dense,Hard boundary MSE,0.0946,0.094557125121355,4.287487864500228e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_dense; HardSplitFull; boundary_MSE
+31,2,3,broad+dense,Soft boundary MSE,0.0125,0.0125390756875276,3.9075687527598615e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_dense; SoftMoEFull; boundary_MSE
+31,2,4,broad+dense,Hard jump,0.728,0.7279732525348663,2.6747465133647452e-05,0.000500001,matched,006/fair_capacity_summary.csv,X_broad_dense; HardSplitFull; jump
+31,2,5,broad+dense,Soft jump,0.011,0.0113769345916807,0.00037693459168069987,0.000500001,matched,006/fair_capacity_summary.csv,X_broad_dense; SoftMoEFull; jump
+30,3,2,broad+sparse,Mono,0.0682,0.0682294834405183,2.948344051829921e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_sparse; MonoFull; test_MSE
+30,3,3,broad+sparse,Hard split,0.0608,0.0607758127152919,2.4187284708099277e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_sparse; HardSplitFull; test_MSE
+30,3,4,broad+sparse,Soft MoE,0.0135,0.0134765859693288,2.3414030671199335e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_sparse; SoftMoEFull; test_MSE
+30,3,5,broad+sparse,Shared+residual,0.0256,0.0255747940391302,2.520596086980076e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_sparse; SharedResidualFull; test_MSE
+31,3,2,broad+sparse,Hard boundary MSE,0.1903,0.1903116852045059,1.1685204505895719e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_sparse; HardSplitFull; boundary_MSE
+31,3,3,broad+sparse,Soft boundary MSE,0.0156,0.0155848069116473,1.5193088352698572e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_broad_sparse; SoftMoEFull; boundary_MSE
+31,3,4,broad+sparse,Hard jump,0.963,0.9628643989562988,0.000135601043701139,0.000500001,matched,006/fair_capacity_summary.csv,X_broad_sparse; HardSplitFull; jump
+31,3,5,broad+sparse,Soft jump,0.013,0.0128159481100738,0.00018405188992619975,0.000500001,matched,006/fair_capacity_summary.csv,X_broad_sparse; SoftMoEFull; jump
+30,4,2,sharp+dense,Mono,0.2008,0.2008018344640731,1.834464073091624e-06,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_dense; MonoFull; test_MSE
+30,4,3,sharp+dense,Hard split,0.0403,0.0402775164693594,2.24835306406046e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_dense; HardSplitFull; test_MSE
+30,4,4,sharp+dense,Soft MoE,0.0636,0.0635742060840129,2.579391598710179e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_dense; SoftMoEFull; test_MSE
+30,4,5,sharp+dense,Shared+residual,0.0937,0.0936549380421638,4.506195783621214e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_dense; SharedResidualFull; test_MSE
+31,4,2,sharp+dense,Hard boundary MSE,0.1356,0.1355843916535377,1.560834646230358e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_dense; HardSplitFull; boundary_MSE
+31,4,3,sharp+dense,Soft boundary MSE,0.0954,0.0953609012067318,3.9098793268202425e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_dense; SoftMoEFull; boundary_MSE
+31,4,4,sharp+dense,Hard jump,1.377,1.3767747282981873,0.00022527170181274592,0.000500001,matched,006/fair_capacity_summary.csv,X_sharp_dense; HardSplitFull; jump
+31,4,5,sharp+dense,Soft jump,0.020,0.0198667598888278,0.00013324011117219967,0.000500001,matched,006/fair_capacity_summary.csv,X_sharp_dense; SoftMoEFull; jump
+30,5,2,sharp+sparse,Mono,0.1961,0.1960832551121711,1.6744887828906707e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_sparse; MonoFull; test_MSE
+30,5,3,sharp+sparse,Hard split,0.0451,0.0450698565691709,3.0143430829097928e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_sparse; HardSplitFull; test_MSE
+30,5,4,sharp+sparse,Soft MoE,0.0814,0.0814334489405155,3.344894051550418e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_sparse; SoftMoEFull; test_MSE
+30,5,5,sharp+sparse,Shared+residual,0.1036,0.1036208756268024,2.087562680240518e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_sparse; SharedResidualFull; test_MSE
+31,5,2,sharp+sparse,Hard boundary MSE,0.1900,0.1899601891636848,3.981083631521276e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_sparse; HardSplitFull; boundary_MSE
+31,5,3,sharp+sparse,Soft boundary MSE,0.1069,0.1068899445235729,1.0055476427101029e-05,5.00001e-05,matched,006/fair_capacity_summary.csv,X_sharp_sparse; SoftMoEFull; boundary_MSE
+31,5,4,sharp+sparse,Hard jump,1.444,1.444419026374817,0.00041902637481694427,0.000500001,matched,006/fair_capacity_summary.csv,X_sharp_sparse; HardSplitFull; jump
+31,5,5,sharp+sparse,Soft jump,0.019,0.0185499070212245,0.0004500929787755008,0.000500001,matched,006/fair_capacity_summary.csv,X_sharp_sparse; SoftMoEFull; jump
+32,2,2,broad+dense,Self gain,0.0052,0.0051838887738995,1.611122610049951e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,self_update_gain
+32,2,3,broad+dense,Adjacent transfer,+0.0045,0.0044583586339805,4.164136601949968e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,adjacent_transfer_gain
+32,2,4,broad+dense,Far transfer,−0.0049,-0.0048641531320754,3.584686792460021e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,far_transfer_gain
+32,2,5,broad+dense,Negative cells,50.0%,50.0,0.0,0.050000100000000006,matched,006/training_compatibility_summary.csv,negative_transfer_fraction × 100
+32,2,6,broad+dense,Weakest adjacent edge,−0.0007,-0.0006774526118533,2.2547388146700043e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,weakest_adjacent_mutual_transfer
+32,3,2,broad+sparse,Self gain,0.0049,0.0048791024746606,2.089752533940021e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,self_update_gain
+32,3,3,broad+sparse,Adjacent transfer,+0.0041,0.0040975199912541,2.480008745900722e-06,5.00001e-05,matched,006/training_compatibility_summary.csv,adjacent_transfer_gain
+32,3,4,broad+sparse,Far transfer,−0.0044,-0.0044035180413629,3.5180413628993143e-06,5.00001e-05,matched,006/training_compatibility_summary.csv,far_transfer_gain
+32,3,5,broad+sparse,Negative cells,48.4%,48.4375,0.03750000000000142,0.050000100000000006,matched,006/training_compatibility_summary.csv,negative_transfer_fraction × 100
+32,3,6,broad+sparse,Weakest adjacent edge,≈0,2.845528069883585e-05,2.845528069883585e-05,0.500001,matched,006/training_compatibility_summary.csv,weakest_adjacent_mutual_transfer
+32,4,2,sharp+dense,Self gain,0.0076,0.0075629776692949,3.702233070509986e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,self_update_gain
+32,4,3,sharp+dense,Adjacent transfer,+0.0033,0.0033172678574503,1.7267857450300062e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,adjacent_transfer_gain
+32,4,4,sharp+dense,Far transfer,−0.0021,-0.0021489465580089,4.894655800890017e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,far_transfer_gain
+32,4,5,sharp+dense,Negative cells,51.6%,51.5625,0.03750000000000142,0.050000100000000006,matched,006/training_compatibility_summary.csv,negative_transfer_fraction × 100
+32,4,6,sharp+dense,Weakest adjacent edge,−0.0054,-0.0053778707515448,2.2129248455200062e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,weakest_adjacent_mutual_transfer
+32,5,2,sharp+sparse,Self gain,0.0071,0.0070707075647078,2.929243529220006e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,self_update_gain
+32,5,3,sharp+sparse,Adjacent transfer,+0.0044,0.0043824854739276,1.7514526072400644e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,adjacent_transfer_gain
+32,5,4,sharp+sparse,Far transfer,−0.0033,-0.0032657046394888,3.4295360511200045e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,far_transfer_gain
+32,5,5,sharp+sparse,Negative cells,51.6%,51.5625,0.03750000000000142,0.050000100000000006,matched,006/training_compatibility_summary.csv,negative_transfer_fraction × 100
+32,5,6,sharp+sparse,Weakest adjacent edge,−0.0052,-0.0051735590677708,2.6440932229200055e-05,5.00001e-05,matched,006/training_compatibility_summary.csv,weakest_adjacent_mutual_transfer
+33,2,1,0.15,Contrast,0.15,0.15,0.0,0.00500001,matched,006/contrast_compatibility_scan.csv,contrast
+33,2,2,0.15,Adjacent transfer,+0.0063,0.0062503964041492,4.960359585079975e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,adjacent_transfer
+33,2,3,0.15,Far transfer,+0.0019,0.0018691688586841,3.08311413159e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,far_transfer
+33,2,4,0.15,Negative fraction,4.7%,4.6875,0.012500000000000178,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,negative_fraction × 100
+33,2,5,0.15,Mono MSE,0.0351,0.0351129472255706,1.2947225570603127e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,mono_MSE
+33,2,6,0.15,Soft MSE,0.0315,0.0315238796174526,2.387961745260042e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,softMoE_MSE
+33,2,7,0.15,Soft gain,10.2%,10.221493470944962,0.021493470944962567,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,soft_gain_pct
+33,3,1,0.45,Contrast,0.45,0.45,0.0,0.00500001,matched,006/contrast_compatibility_scan.csv,contrast
+33,3,2,0.45,Adjacent transfer,+0.0047,0.0047170827497861,1.7082749786099388e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,adjacent_transfer
+33,3,3,0.45,Far transfer,−0.0004,-0.0003707158419274,2.9284158072600012e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,far_transfer
+33,3,4,0.45,Negative fraction,20.3%,20.3125,0.01249999999999929,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,negative_fraction × 100
+33,3,5,0.45,Mono MSE,0.0423,0.0422577634453773,4.223655462269604e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,mono_MSE
+33,3,6,0.45,Soft MSE,0.0362,0.0361705794930458,2.9420506954203063e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,softMoE_MSE
+33,3,7,0.45,Soft gain,14.4%,14.404889080795474,0.004889080795473788,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,soft_gain_pct
+33,4,1,0.90,Contrast,0.90,0.9,0.0,0.00500001,matched,006/contrast_compatibility_scan.csv,contrast
+33,4,2,0.90,Adjacent transfer,+0.0062,0.0061963477970233,3.6522029766995062e-06,5.00001e-05,matched,006/contrast_compatibility_scan.csv,adjacent_transfer
+33,4,3,0.90,Far transfer,−0.0020,-0.0019996942304715,3.057695284998732e-07,5.00001e-05,matched,006/contrast_compatibility_scan.csv,far_transfer
+33,4,4,0.90,Negative fraction,29.7%,29.6875,0.01249999999999929,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,negative_fraction × 100
+33,4,5,0.90,Mono MSE,0.0692,0.0692164227366447,1.6422736644705616e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,mono_MSE
+33,4,6,0.90,Soft MSE,0.0535,0.0534844957292079,1.5504270792096597e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,softMoE_MSE
+33,4,7,0.90,Soft gain,22.7%,22.72860454995446,0.028604549954462044,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,soft_gain_pct
+33,5,1,1.50,Contrast,1.50,1.5,0.0,0.00500001,matched,006/contrast_compatibility_scan.csv,contrast
+33,5,2,1.50,Adjacent transfer,+0.0060,0.0060000633321968,6.333219680024899e-08,5.00001e-05,matched,006/contrast_compatibility_scan.csv,adjacent_transfer
+33,5,3,1.50,Far transfer,−0.0039,-0.0038714002495453,2.859975045469993e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,far_transfer
+33,5,4,1.50,Negative fraction,39.1%,39.0625,0.03750000000000142,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,negative_fraction × 100
+33,5,5,1.50,Mono MSE,0.1101,0.1100621744990348,3.7825500965205094e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,mono_MSE
+33,5,6,1.50,Soft MSE,0.0739,0.0739113986492157,1.139864921570477e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,softMoE_MSE
+33,5,7,1.50,Soft gain,32.8%,32.845776502567816,0.04577650256781851,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,soft_gain_pct
+33,6,1,2.40,Contrast,2.40,2.4,0.0,0.00500001,matched,006/contrast_compatibility_scan.csv,contrast
+33,6,2,2.40,Adjacent transfer,+0.0058,0.005837721134802,3.77211348020004e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,adjacent_transfer
+33,6,3,2.40,Far transfer,−0.0046,-0.0046233270099037,2.3327009903700326e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,far_transfer
+33,6,4,2.40,Negative fraction,43.8%,43.75,0.04999999999999716,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,negative_fraction × 100
+33,6,5,2.40,Mono MSE,0.2133,0.2132758796215057,2.412037849428006e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,mono_MSE
+33,6,6,2.40,Soft MSE,0.1149,0.1148586422204971,4.135777950289854e-05,5.00001e-05,matched,006/contrast_compatibility_scan.csv,softMoE_MSE
+33,6,7,2.40,Soft gain,46.1%,46.14550767562966,0.04550767562965774,0.050000100000000006,matched,006/contrast_compatibility_scan.csv,soft_gain_pct
+35,2,2,RawGeometry,ARI vs hidden phase,0.533,0.5325830491328747,0.000416950867125343,0.000500001,matched,007/partition_recovery.csv,ARI_oracle
+35,2,3,RawGeometry,NMI vs hidden phase,0.570,0.569795449277786,0.00020455072221392534,0.000500001,matched,007/partition_recovery.csv,NMI_oracle
+35,3,2,PredictiveJacobian,ARI vs hidden phase,0.798,0.7979053812686148,9.461873138527643e-05,0.000500001,matched,007/partition_recovery.csv,ARI_oracle
+35,3,3,PredictiveJacobian,NMI vs hidden phase,0.796,0.7963293830370145,0.0003293830370144635,0.000500001,matched,007/partition_recovery.csv,NMI_oracle
+35,4,2,CompatibilityGraph,ARI vs hidden phase,0.247,0.2465381309014114,0.0004618690985885854,0.000500001,matched,007/partition_recovery.csv,ARI_oracle
+35,4,3,CompatibilityGraph,NMI vs hidden phase,0.344,0.3443095124946637,0.00030951249466371067,0.000500001,matched,007/partition_recovery.csv,NMI_oracle
+35,5,2,RandomLocal,ARI vs hidden phase,0.096,0.0959380073563725,6.199264362749535e-05,0.000500001,matched,007/partition_recovery.csv,ARI_oracle
+35,5,3,RandomLocal,NMI vs hidden phase,0.172,0.1722177714282418,0.00021777142824180862,0.000500001,matched,007/partition_recovery.csv,NMI_oracle
+36,2,2,Mono,Test MSE,0.0250,0.0250147832557559,1.4783255755899949e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+36,2,3,Mono,Boundary MSE,0.0217,0.0217199958860874,1.9995886087399717e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+36,2,4,Mono,Non-boundary MSE,0.0256,0.025591155514121,8.844485879001135e-06,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+36,3,2,OraclePhase,Test MSE,0.0971,0.0970725826919078,2.7417308092206327e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+36,3,3,OraclePhase,Boundary MSE,0.2052,0.2051832005381584,1.6799461841604524e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+36,3,4,OraclePhase,Non-boundary MSE,0.0782,0.078160285949707,3.971405029300212e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+36,4,2,PredictiveJacobian,Test MSE,0.0978,0.0978493057191371,4.930571913709658e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+36,4,3,PredictiveJacobian,Boundary MSE,0.1849,0.1848819106817245,1.8089318275515964e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+36,4,4,PredictiveJacobian,Non-boundary MSE,0.0826,0.0826242864131927,2.4286413192686762e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+36,5,2,RawGeometry,Test MSE,0.1482,0.1482346206903457,3.462069034571025e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+36,5,3,RawGeometry,Boundary MSE,0.1797,0.1796659082174301,3.409178256991163e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+36,5,4,RawGeometry,Non-boundary MSE,0.1427,0.1427361816167831,3.618161678309306e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+36,6,2,CompatibilityGraph,Test MSE,0.1516,0.1515714526176452,2.8547382354804363e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+36,6,3,CompatibilityGraph,Boundary MSE,0.1597,0.1596838161349296,1.6183865070407144e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+36,6,4,CompatibilityGraph,Non-boundary MSE,0.1502,0.150152325630188,4.7674369812011896e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+36,7,2,RandomLocal,Test MSE,0.2060,0.2059551253914833,4.487460851668179e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+36,7,3,RandomLocal,Boundary MSE,0.2232,0.2231892123818397,1.0787618160312817e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+36,7,4,RandomLocal,Non-boundary MSE,0.2029,0.2029402777552604,4.0277755260414994e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+37,2,2,SharedPredictiveResidual,Test MSE,0.0187,0.0187440384179353,4.40384179352972e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+37,2,3,SharedPredictiveResidual,Boundary MSE,0.0170,0.0170212835073471,2.1283507347098773e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+37,2,4,SharedPredictiveResidual,Non-boundary MSE,0.0190,0.0190454088151454,4.540881514539935e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+37,3,2,SharedRawResidual,Test MSE,0.0188,0.0188232893124222,2.3289312422198477e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+37,3,3,SharedRawResidual,Boundary MSE,0.0224,0.0223749252036213,2.5074796378699027e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+37,3,4,SharedRawResidual,Non-boundary MSE,0.0182,0.0182019863277673,1.9863277672983737e-06,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+37,4,2,PredictiveCompatibilityGraph,Test MSE,0.0961,0.0960994251072406,5.748927594112496e-07,5.00001e-05,matched,007/all_partition_performance_combined.csv,test_MSE
+37,4,3,PredictiveCompatibilityGraph,Boundary MSE,0.0941,0.0941147729754448,1.4772975444790615e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,boundary_MSE
+37,4,4,PredictiveCompatibilityGraph,Non-boundary MSE,0.0964,0.0964466072618961,4.660726189610609e-05,5.00001e-05,matched,007/all_partition_performance_combined.csv,nonboundary_MSE
+38,2,1,0.0000,Era,0.0000,0.0,0.0,5.00001e-05,matched,008/drift_summary.csv,era
+38,2,2,0.0000,Rule drift,0.0000,0.0,0.0,5.00001e-05,matched,008/drift_summary.csv,functional_rule_drift
+38,2,3,0.0000,Map migration,0.0000,0.0,0.0,5.00001e-05,matched,008/drift_summary.csv,expert_map_migration
+38,2,4,0.0000,Mono MSE,0.3274,0.3273761421442032,2.38578557968383e-05,5.00001e-05,matched,008/drift_summary.csv,Mono
+38,2,5,0.0000,Fresh map,0.2278,0.2278445065021515,4.450650215148677e-05,5.00001e-05,matched,008/drift_summary.csv,RefreshedMap
+38,2,6,0.0000,Stale map,0.2278,0.2278445065021515,4.450650215148677e-05,5.00001e-05,matched,008/drift_summary.csv,StaleMap
+38,2,7,0.0000,Stale penalty %,0.0000,0.0,0.0,5.00001e-05,matched,008/drift_summary.csv,stale_penalty_vs_refreshed_pct
+38,3,1,1.0000,Era,1.0000,1.0,0.0,5.00001e-05,matched,008/drift_summary.csv,era
+38,3,2,1.0000,Rule drift,0.2216,0.22156623005867,3.3769941330002995e-05,5.00001e-05,matched,008/drift_summary.csv,functional_rule_drift
+38,3,3,1.0000,Map migration,0.2208,0.2208333333333333,3.333333333330191e-05,5.00001e-05,matched,008/drift_summary.csv,expert_map_migration
+38,3,4,1.0000,Mono MSE,0.3360,0.3359736204147339,2.6379585266134153e-05,5.00001e-05,matched,008/drift_summary.csv,Mono
+38,3,5,1.0000,Fresh map,0.2317,0.2317461892962455,4.618929624550239e-05,5.00001e-05,matched,008/drift_summary.csv,RefreshedMap
+38,3,6,1.0000,Stale map,0.2436,0.2435819655656814,1.803443431860896e-05,5.00001e-05,matched,008/drift_summary.csv,StaleMap
+38,3,7,1.0000,Stale penalty %,5.1072,5.107215055133435,1.5055133435026846e-05,5.00001e-05,matched,008/drift_summary.csv,stale_penalty_vs_refreshed_pct
+38,4,1,2.0000,Era,2.0000,2.0,0.0,5.00001e-05,matched,008/drift_summary.csv,era
+38,4,2,2.0000,Rule drift,0.4356,0.43555948138237,4.051861762999209e-05,5.00001e-05,matched,008/drift_summary.csv,functional_rule_drift
+38,4,3,2.0000,Map migration,0.3542,0.3541666666666667,3.333333333332966e-05,5.00001e-05,matched,008/drift_summary.csv,expert_map_migration
+38,4,4,2.0000,Mono MSE,0.3220,0.3219865411520004,1.3458847999581192e-05,5.00001e-05,matched,008/drift_summary.csv,Mono
+38,4,5,2.0000,Fresh map,0.2386,0.2385744228959083,2.5577104091706326e-05,5.00001e-05,matched,008/drift_summary.csv,RefreshedMap
+38,4,6,2.0000,Stale map,0.2344,0.2344162762165069,1.627621650690525e-05,5.00001e-05,matched,008/drift_summary.csv,StaleMap
+38,4,7,2.0000,Stale penalty %,-1.7429,-1.742913858463204,1.3858463204119431e-05,5.00001e-05,matched,008/drift_summary.csv,stale_penalty_vs_refreshed_pct
+38,5,1,3.0000,Era,3.0000,3.0,0.0,5.00001e-05,matched,008/drift_summary.csv,era
+38,5,2,3.0000,Rule drift,0.6349,0.6349185109138489,1.8510913848857058e-05,5.00001e-05,matched,008/drift_summary.csv,functional_rule_drift
+38,5,3,3.0000,Map migration,0.3917,0.3916666666666666,3.333333333338517e-05,5.00001e-05,matched,008/drift_summary.csv,expert_map_migration
+38,5,4,3.0000,Mono MSE,0.3310,0.3309897482395172,1.0251760482804517e-05,5.00001e-05,matched,008/drift_summary.csv,Mono
+38,5,5,3.0000,Fresh map,0.2381,0.2381076142191887,7.6142191886841015e-06,5.00001e-05,matched,008/drift_summary.csv,RefreshedMap
+38,5,6,3.0000,Stale map,0.2371,0.2370873391628265,1.2660837173494865e-05,5.00001e-05,matched,008/drift_summary.csv,StaleMap
+38,5,7,3.0000,Stale penalty %,-0.4285,-0.4284932507126561,6.749287343899013e-06,5.00001e-05,matched,008/drift_summary.csv,stale_penalty_vs_refreshed_pct
+38,6,1,4.0000,Era,4.0000,4.0,0.0,5.00001e-05,matched,008/drift_summary.csv,era
+38,6,2,4.0000,Rule drift,0.8137,0.8137281537055969,2.8153705596944967e-05,5.00001e-05,matched,008/drift_summary.csv,functional_rule_drift
+38,6,3,4.0000,Map migration,0.4958,0.4958333333333333,3.333333333327415e-05,5.00001e-05,matched,008/drift_summary.csv,expert_map_migration
+38,6,4,4.0000,Mono MSE,0.3551,0.3550746142864227,2.5385713577352753e-05,5.00001e-05,matched,008/drift_summary.csv,Mono
+38,6,5,4.0000,Fresh map,0.2667,0.2667494267225265,4.9426722526502154e-05,5.00001e-05,matched,008/drift_summary.csv,RefreshedMap
+38,6,6,4.0000,Stale map,0.2513,0.2512699589133262,3.0041086673815443e-05,5.00001e-05,matched,008/drift_summary.csv,StaleMap
+38,6,7,4.0000,Stale penalty %,-5.8030,-5.802999466350145,5.336498549723956e-07,5.00001e-05,matched,008/drift_summary.csv,stale_penalty_vs_refreshed_pct
+38,7,1,5.0000,Era,5.0000,5.0,0.0,5.00001e-05,matched,008/drift_summary.csv,era
+38,7,2,5.0000,Rule drift,0.9676,0.9675523042678832,4.769573211682587e-05,5.00001e-05,matched,008/drift_summary.csv,functional_rule_drift
+38,7,3,5.0000,Map migration,0.5000,0.5,0.0,5.00001e-05,matched,008/drift_summary.csv,expert_map_migration
+38,7,4,5.0000,Mono MSE,0.3280,0.3279632031917572,3.679680824281162e-05,5.00001e-05,matched,008/drift_summary.csv,Mono
+38,7,5,5.0000,Fresh map,0.2371,0.2370554730296135,4.452697038651032e-05,5.00001e-05,matched,008/drift_summary.csv,RefreshedMap
+38,7,6,5.0000,Stale map,0.2316,0.2316371276974678,3.7127697467803644e-05,5.00001e-05,matched,008/drift_summary.csv,StaleMap
+38,7,7,5.0000,Stale penalty %,-2.2857,-2.28568666350463,1.333649536983117e-05,5.00001e-05,matched,008/drift_summary.csv,stale_penalty_vs_refreshed_pct
+39,2,1,0.0000,Era,0.0000,0.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,era
+39,2,2,0.0000,Fresh route MSE,0.2278,0.2278445065021515,4.450650215148677e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,fresh_route_MSE
+39,2,3,0.0000,Stale route MSE,0.2278,0.2278445065021515,4.450650215148677e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,stale_route_same_experts_MSE
+39,2,4,0.0000,Penalty %,0.0000,0.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,strict_stale_route_penalty_pct
+39,2,5,0.0000,Rule drift,0.0000,0.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,functional_rule_drift
+39,2,6,0.0000,Map migration,0.0000,0.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,expert_map_migration
+39,3,1,1.0000,Era,1.0000,1.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,era
+39,3,2,1.0000,Fresh route MSE,0.2317,0.2317461892962455,4.618929624550239e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,fresh_route_MSE
+39,3,3,1.0000,Stale route MSE,0.3982,0.3981935232877731,6.476712226921588e-06,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,stale_route_same_experts_MSE
+39,3,4,1.0000,Penalty %,72.5438,72.54380302084571,3.0208457104663466e-06,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,strict_stale_route_penalty_pct
+39,3,5,1.0000,Rule drift,0.2216,0.22156623005867,3.3769941330002995e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,functional_rule_drift
+39,3,6,1.0000,Map migration,0.2208,0.2208333333333333,3.333333333330191e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,expert_map_migration
+39,4,1,2.0000,Era,2.0000,2.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,era
+39,4,2,2.0000,Fresh route MSE,0.2386,0.2385744228959083,2.5577104091706326e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,fresh_route_MSE
+39,4,3,2.0000,Stale route MSE,0.3197,0.3197474479675293,4.7447967529312685e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,stale_route_same_experts_MSE
+39,4,4,2.0000,Penalty %,34.0875,34.087544366396884,4.436639688520927e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,strict_stale_route_penalty_pct
+39,4,5,2.0000,Rule drift,0.4356,0.43555948138237,4.051861762999209e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,functional_rule_drift
+39,4,6,2.0000,Map migration,0.3542,0.3541666666666667,3.333333333332966e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,expert_map_migration
+39,5,1,3.0000,Era,3.0000,3.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,era
+39,5,2,3.0000,Fresh route MSE,0.2381,0.2381076142191887,7.6142191886841015e-06,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,fresh_route_MSE
+39,5,3,3.0000,Stale route MSE,0.4429,0.4428582340478897,4.1765952110306426e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,stale_route_same_experts_MSE
+39,5,4,3.0000,Penalty %,85.9859,85.98592797330174,2.797330174075796e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,strict_stale_route_penalty_pct
+39,5,5,3.0000,Rule drift,0.6349,0.6349185109138489,1.8510913848857058e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,functional_rule_drift
+39,5,6,3.0000,Map migration,0.3917,0.3916666666666666,3.333333333338517e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,expert_map_migration
+39,6,1,4.0000,Era,4.0000,4.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,era
+39,6,2,4.0000,Fresh route MSE,0.2667,0.2667494267225265,4.9426722526502154e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,fresh_route_MSE
+39,6,3,4.0000,Stale route MSE,0.4246,0.4245723783969879,2.76216030120624e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,stale_route_same_experts_MSE
+39,6,4,4.0000,Penalty %,59.4114,59.41142061081834,2.0610818339150683e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,strict_stale_route_penalty_pct
+39,6,5,4.0000,Rule drift,0.8137,0.8137281537055969,2.8153705596944967e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,functional_rule_drift
+39,6,6,4.0000,Map migration,0.4958,0.4958333333333333,3.333333333327415e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,expert_map_migration
+39,7,1,5.0000,Era,5.0000,5.0,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,era
+39,7,2,5.0000,Fresh route MSE,0.2371,0.2370554730296135,4.452697038651032e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,fresh_route_MSE
+39,7,3,5.0000,Stale route MSE,0.3990,0.399040475487709,4.047548770896858e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,stale_route_same_experts_MSE
+39,7,4,5.0000,Penalty %,68.5625,68.5625313623022,3.136230219524805e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,strict_stale_route_penalty_pct
+39,7,5,5.0000,Rule drift,0.9676,0.9675523042678832,4.769573211682587e-05,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,functional_rule_drift
+39,7,6,5.0000,Map migration,0.5000,0.5,0.0,5.00001e-05,matched,008/strict_routing_intervention_summary.csv,expert_map_migration
+40,2,2,Current-frame family classifier,Value,0.4898,0.4898148148148148,1.4814814814800847e-05,5.00001e-05,matched,009/geometry_audit.json,current_frame_family_accuracy
+40,3,2,Two-frame transition classifier,Value,1.0000,1.0,0.0,5.00001e-05,matched,009/geometry_audit.json,two_frame_transition_family_accuracy
+40,4,2,Normalized covariance difference,Value,0.2185,0.21847470584796197,2.5294152038030093e-05,5.00001e-05,matched,009/geometry_audit.json,normalized_covariance_difference
+40,5,2,Current mean difference,Value,0.1214,0.12138744443655014,1.2555563449853646e-05,5.00001e-05,matched,009/geometry_audit.json,current_mean_difference
+41,2,2,OracleMoE,Params,4934.00000,4934.0,0.0,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,params
+41,2,3,OracleMoE,One-step,0.03973,0.0397300459444522,4.594445220107435e-08,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,one_step_MSE
+41,2,4,OracleMoE,Rollout-3,0.08256,0.0825599767267704,2.32732295935012e-08,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout3_MSE
+41,2,5,OracleMoE,Final rollout,0.13395,0.133947268128395,2.7318716050162006e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout_last_MSE
+41,3,2,TransitionClusterMoE,Params,4934.00000,4934.0,0.0,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,params
+41,3,3,TransitionClusterMoE,One-step,0.04019,0.0401907712221145,7.712221145039777e-07,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,one_step_MSE
+41,3,4,TransitionClusterMoE,Rollout-3,0.08468,0.0846831910312175,3.1910312175004174e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout3_MSE
+41,3,5,TransitionClusterMoE,Final rollout,0.13586,0.1358621045947075,2.1045947074804783e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout_last_MSE
+41,4,2,MonoRNN,Params,5406.00000,5406.0,0.0,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,params
+41,4,3,MonoRNN,One-step,0.02425,0.0242485553026199,1.444697380101334e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,one_step_MSE
+41,4,4,MonoRNN,Rollout-3,0.14709,0.1470935493707656,3.549370765604243e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout3_MSE
+41,4,5,MonoRNN,Final rollout,0.26418,0.2641825079917907,2.507991790690056e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout_last_MSE
+41,5,2,StateMoE,Params,4934.00000,4934.0,0.0,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,params
+41,5,3,StateMoE,One-step,0.03942,0.0394205991178751,5.991178751024728e-07,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,one_step_MSE
+41,5,4,StateMoE,Rollout-3,0.28065,0.2806453555822372,4.644417762822428e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout3_MSE
+41,5,5,StateMoE,Final rollout,0.49309,0.4930907934904098,7.934904098227946e-07,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout_last_MSE
+41,6,2,SingleFrame,Params,2982.00000,2982.0,0.0,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,params
+41,6,3,SingleFrame,One-step,0.30103,0.3010330647230148,3.064723014756243e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,one_step_MSE
+41,6,4,SingleFrame,Rollout-3,1.31456,1.3145562410354614,3.758964538524978e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout3_MSE
+41,6,5,SingleFrame,Final rollout,1.60014,1.6001418828964231,1.8828964232220358e-06,5.000010000000001e-06,matched,009/model_summary_with_unsupervised_routing.csv,rollout_last_MSE
+42,2,2,K0_O0,Snapshot rollout,1.049,1.0490022003650663,2.2003650663737773e-06,0.000500001,matched,010/model_summary.csv,K0_O0; Snapshot; rollout_last_MSE
+42,2,3,K0_O0,GlobalGRU,1.264,1.263583779335022,0.0004162206649780398,0.000500001,matched,010/model_summary.csv,K0_O0; GlobalGRU; rollout_last_MSE
+42,2,4,K0_O0,CompartmentGRU,1.349,1.3488352298736572,0.00016477012634275034,0.000500001,matched,010/model_summary.csv,K0_O0; CompartmentGRU; rollout_last_MSE
+42,2,5,K0_O0,SourceTracker,1.284,1.2842767238616943,0.00027672386169430574,0.000500001,matched,010/model_summary.csv,K0_O0; SourceTracker; rollout_last_MSE
+42,2,6,K0_O0,Best latent R²,0.979,0.9785214811563492,0.0004785188436507992,0.000500001,matched,010/model_summary.csv,K0_O0; max latent_probe_R2 over architectures
+42,2,7,K0_O0,Slot→source R²,0.957,0.9572848255435624,0.00028482554356246137,0.000500001,matched,010/slot_specialization.csv,K0_O0; mean matched_slot_source_R2 over seeds
+42,3,2,K1_O0,Snapshot rollout,1.100,1.1002145409584043,0.00021454095840423015,0.000500001,matched,010/model_summary.csv,K1_O0; Snapshot; rollout_last_MSE
+42,3,3,K1_O0,GlobalGRU,1.360,1.3598754405975342,0.000124559402465918,0.000500001,matched,010/model_summary.csv,K1_O0; GlobalGRU; rollout_last_MSE
+42,3,4,K1_O0,CompartmentGRU,1.543,1.542516589164734,0.0004834108352658184,0.000500001,matched,010/model_summary.csv,K1_O0; CompartmentGRU; rollout_last_MSE
+42,3,5,K1_O0,SourceTracker,1.233,1.2329439520835876,5.604791641244944e-05,0.000500001,matched,010/model_summary.csv,K1_O0; SourceTracker; rollout_last_MSE
+42,3,6,K1_O0,Best latent R²,0.979,0.979442353049914,0.0004423530499140238,0.000500001,matched,010/model_summary.csv,K1_O0; max latent_probe_R2 over architectures
+42,3,7,K1_O0,Slot→source R²,0.954,0.9542367036143939,0.0002367036143939849,0.000500001,matched,010/slot_specialization.csv,K1_O0; mean matched_slot_source_R2 over seeds
+42,4,2,K0_O1,Snapshot rollout,0.660,0.6594661474227905,0.0005338525772095037,0.000500001,review,010/model_summary.csv,K0_O1; Snapshot; rollout_last_MSE
+42,4,3,K0_O1,GlobalGRU,0.672,0.6720516979694366,5.1697969436603763e-05,0.000500001,matched,010/model_summary.csv,K0_O1; GlobalGRU; rollout_last_MSE
+42,4,4,K0_O1,CompartmentGRU,0.707,0.7066746354103088,0.0003253645896911239,0.000500001,matched,010/model_summary.csv,K0_O1; CompartmentGRU; rollout_last_MSE
+42,4,5,K0_O1,SourceTracker,0.750,0.7495071589946747,0.0004928410053253174,0.000500001,matched,010/model_summary.csv,K0_O1; SourceTracker; rollout_last_MSE
+42,4,6,K0_O1,Best latent R²,0.860,0.8597335815429688,0.0002664184570312367,0.000500001,matched,010/model_summary.csv,K0_O1; max latent_probe_R2 over architectures
+42,4,7,K0_O1,Slot→source R²,0.762,0.7616434892018636,0.0003565107981363669,0.000500001,matched,010/slot_specialization.csv,K0_O1; mean matched_slot_source_R2 over seeds
+42,5,2,K1_O1,Snapshot rollout,0.810,0.8100324273109436,3.2427310943550225e-05,0.000500001,matched,010/model_summary.csv,K1_O1; Snapshot; rollout_last_MSE
+42,5,3,K1_O1,GlobalGRU,0.769,0.7690238058567047,2.380585670469504e-05,0.000500001,matched,010/model_summary.csv,K1_O1; GlobalGRU; rollout_last_MSE
+42,5,4,K1_O1,CompartmentGRU,0.802,0.8016338348388672,0.0003661651611328587,0.000500001,matched,010/model_summary.csv,K1_O1; CompartmentGRU; rollout_last_MSE
+42,5,5,K1_O1,SourceTracker,0.844,0.8434720039367676,0.0005279960632323943,0.000500001,review,010/model_summary.csv,K1_O1; SourceTracker; rollout_last_MSE
+42,5,6,K1_O1,Best latent R²,0.878,0.8781333193182945,0.00013331931829452248,0.000500001,matched,010/model_summary.csv,K1_O1; max latent_probe_R2 over architectures
+42,5,7,K1_O1,Slot→source R²,0.774,0.7741590837637584,0.00015908376375839417,0.000500001,matched,010/slot_specialization.csv,K1_O1; mean matched_slot_source_R2 over seeds
+43,2,2,Aggregate future only,Main h1 MSE,0.0549,0.0549431107938289,4.311079382890437e-05,5.00001e-05,matched,010/sparse_anchor_supervision_summary.csv,main_h1_MSE
+43,2,3,Aggregate future only,Slot→source R²,0.584,0.5841907262802124,0.00019072628021243876,0.000500001,matched,010/sparse_anchor_supervision_summary.csv,matched_slot_source_R2
+43,2,4,Aggregate future only,Future-anchor MSE,1.149,1.148518979549408,0.00048102045059206233,0.000500001,matched,010/sparse_anchor_supervision_summary.csv,future_anchor_MSE
+43,3,2,+ sparse future-anchor loss,Main h1 MSE,0.0585,0.0585345271974802,3.4527197480198335e-05,5.00001e-05,matched,010/sparse_anchor_supervision_summary.csv,main_h1_MSE
+43,3,3,+ sparse future-anchor loss,Slot→source R²,0.596,0.5960534984866779,5.3498486677905355e-05,0.000500001,matched,010/sparse_anchor_supervision_summary.csv,matched_slot_source_R2
+43,3,4,+ sparse future-anchor loss,Future-anchor MSE,0.626,0.625500500202179,0.0004994997978210458,0.000500001,matched,010/sparse_anchor_supervision_summary.csv,future_anchor_MSE
+44,2,3,Regular,full MSE,0.3331,0.3330877125263214,1.2287473678596061e-05,5.00001e-05,matched,011/replicated_summary.csv,full_MSE
+44,2,4,Regular,event MSE,0.3712,0.3711898177862167,1.0182213783294092e-05,5.00001e-05,matched,011/replicated_summary.csv,event_MSE
+44,2,5,Regular,latent-state R²,0.8029,0.8028681601087252,3.183989127475417e-05,5.00001e-05,matched,011/replicated_summary.csv,latent_probe_R2
+44,3,3,Regular,full MSE,0.4095,0.409535214304924,3.52143049240361e-05,5.00001e-05,matched,011/replicated_summary.csv,full_MSE
+44,3,4,Regular,event MSE,0.4535,0.453521728515625,2.172851562498579e-05,5.00001e-05,matched,011/replicated_summary.csv,event_MSE
+44,3,5,Regular,latent-state R²,0.8291,0.8291052281856537,5.228185653738393e-06,5.00001e-05,matched,011/replicated_summary.csv,latent_probe_R2
+44,4,3,Regular,full MSE,0.5652,0.5651686787605286,3.132123947147125e-05,5.00001e-05,matched,011/replicated_summary.csv,full_MSE
+44,4,4,Regular,event MSE,0.6108,0.6108177006244659,1.770062446593279e-05,5.00001e-05,matched,011/replicated_summary.csv,event_MSE
+44,4,5,Regular,latent-state R²,0.8307,0.8307375187675158,3.751876751578731e-05,5.00001e-05,matched,011/replicated_summary.csv,latent_probe_R2
+44,5,3,Irregular,full MSE,0.4322,0.4322313815355301,3.1381535530117244e-05,5.00001e-05,matched,011/replicated_summary.csv,full_MSE
+44,5,4,Irregular,event MSE,0.4914,0.4913965761661529,3.4238338471048735e-06,5.00001e-05,matched,011/replicated_summary.csv,event_MSE
+44,5,5,Irregular,latent-state R²,0.6066,0.6065885797142982,1.1420285701779775e-05,5.00001e-05,matched,011/replicated_summary.csv,latent_probe_R2
+44,6,3,Irregular,full MSE,0.5931,0.5931024849414825,2.4849414825833804e-06,5.00001e-05,matched,011/replicated_summary.csv,full_MSE
+44,6,4,Irregular,event MSE,0.6599,0.6598829925060272,1.700749397282042e-05,5.00001e-05,matched,011/replicated_summary.csv,event_MSE
+44,6,5,Irregular,latent-state R²,0.6295,0.6295270323753357,2.7032375335744874e-05,5.00001e-05,matched,011/replicated_summary.csv,latent_probe_R2
+44,7,3,Irregular,full MSE,0.6992,0.6992011070251465,1.1070251464406766e-06,5.00001e-05,matched,011/replicated_summary.csv,full_MSE
+44,7,4,Irregular,event MSE,0.7595,0.7594683468341827,3.165316581721367e-05,5.00001e-05,matched,011/replicated_summary.csv,event_MSE
+44,7,5,Irregular,latent-state R²,0.6335,0.6334609289964039,3.907100359601401e-05,5.00001e-05,matched,011/replicated_summary.csv,latent_probe_R2
+45,2,3,Regular,birth,0.220,0.2197111025452613,0.0002888974547387013,0.000500001,matched,011/replicated_summary.csv,birth_MSE
+45,2,4,Regular,branch,0.316,0.3159233927726745,7.660722732549807e-05,0.000500001,matched,011/replicated_summary.csv,branch_MSE
+45,2,5,Regular,death,0.443,0.4430930763483047,9.307634830468814e-05,0.000500001,matched,011/replicated_summary.csv,death_MSE
+45,2,6,Regular,merge,0.515,0.5148740261793137,0.00012597382068635365,0.000500001,matched,011/replicated_summary.csv,merge_MSE
+45,3,3,Regular,birth,0.244,0.2435374185442924,0.00046258145570760023,0.000500001,matched,011/replicated_summary.csv,birth_MSE
+45,3,4,Regular,branch,0.318,0.31756392121315,0.00043607878684998047,0.000500001,matched,011/replicated_summary.csv,branch_MSE
+45,3,5,Regular,death,0.504,0.5038555264472961,0.00014447355270386097,0.000500001,matched,011/replicated_summary.csv,death_MSE
+45,3,6,Regular,merge,0.766,0.7664345502853394,0.00043455028533934126,0.000500001,matched,011/replicated_summary.csv,merge_MSE
+45,4,3,Regular,birth,0.360,0.3599383980035782,6.160199642180064e-05,0.000500001,matched,011/replicated_summary.csv,birth_MSE
+45,4,4,Regular,branch,0.401,0.4011460244655609,0.00014602446556089,0.000500001,matched,011/replicated_summary.csv,branch_MSE
+45,4,5,Regular,death,0.618,0.6179518103599548,4.81896400451598e-05,0.000500001,matched,011/replicated_summary.csv,death_MSE
+45,4,6,Regular,merge,1.077,1.0772310495376587,0.00023104953765873404,0.000500001,matched,011/replicated_summary.csv,merge_MSE
+45,5,3,Irregular,birth,0.366,0.3655783087015152,0.00042169129848479425,0.000500001,matched,011/replicated_summary.csv,birth_MSE
+45,5,4,Irregular,branch,0.466,0.4661942571401596,0.00019425714015958162,0.000500001,matched,011/replicated_summary.csv,branch_MSE
+45,5,5,Irregular,death,0.526,0.5263145118951797,0.00031451189517972544,0.000500001,matched,011/replicated_summary.csv,death_MSE
+45,5,6,Irregular,merge,0.600,0.5996716916561127,0.0003283083438873069,0.000500001,matched,011/replicated_summary.csv,merge_MSE
+45,6,3,Irregular,birth,0.516,0.5159978270530701,2.1729469299458515e-06,0.000500001,matched,011/replicated_summary.csv,birth_MSE
+45,6,4,Irregular,branch,0.523,0.5226506143808365,0.0003493856191635336,0.000500001,matched,011/replicated_summary.csv,branch_MSE
+45,6,5,Irregular,death,0.592,0.5917972922325134,0.00020270776748654296,0.000500001,matched,011/replicated_summary.csv,death_MSE
+45,6,6,Irregular,merge,1.007,1.006545513868332,0.000454486131667986,0.000500001,matched,011/replicated_summary.csv,merge_MSE
+45,7,3,Irregular,birth,0.612,0.6116897165775299,0.00031028342247008123,0.000500001,matched,011/replicated_summary.csv,birth_MSE
+45,7,4,Irregular,branch,0.582,0.5819898545742035,1.0145425796470597e-05,0.000500001,matched,011/replicated_summary.csv,branch_MSE
+45,7,5,Irregular,death,0.652,0.6518650949001312,0.0001349050998687984,0.000500001,matched,011/replicated_summary.csv,death_MSE
+45,7,6,Irregular,merge,1.186,1.186316728591919,0.00031672859191900216,0.000500001,matched,011/replicated_summary.csv,merge_MSE
+46,2,3,Regular,Full MSE,0.2454,0.2453875094652176,1.2490534782416685e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+46,2,4,Regular,Event MSE,0.2833,0.2833098620176315,9.862017631478981e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+46,2,5,Regular,Latent R²,0.8365,0.8365445310870807,4.453108708069031e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+46,3,3,Regular,Full MSE,0.2815,0.2814989984035492,1.0015964507781305e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+46,3,4,Regular,Event MSE,0.3228,0.3227594196796417,4.058032035825221e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+46,3,5,Regular,Latent R²,0.8744,0.8743533318241437,4.666817585630145e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+46,4,3,Regular,Full MSE,0.3129,0.3129467666149139,4.676661491387346e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+46,4,4,Regular,Event MSE,0.3545,0.3544689267873764,3.1073212623577984e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+46,4,5,Regular,Latent R²,0.8645,0.864491693675518,8.306324482010297e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+46,5,3,Regular,Full MSE,0.2093,0.2092961892485618,3.8107514382101915e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+46,5,4,Regular,Event MSE,0.2443,0.2443078905344009,7.8905344009228e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+46,5,5,Regular,Latent R²,0.8790,0.8789964839816093,3.5160183906590703e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+46,6,3,Regular,Full MSE,0.2172,0.2172031626105308,3.162610530793586e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+46,6,4,Regular,Event MSE,0.2501,0.2500724270939827,2.7572906017292453e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+46,6,5,Regular,Latent R²,0.8762,0.8761688942710559,3.1105728944047506e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+47,2,2,MaskDeltaGRU,Full MSE,0.2884,0.2884449809789657,4.498097896571407e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+47,2,3,MaskDeltaGRU,Event MSE,0.3315,0.3315385431051254,3.854310512541037e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+47,2,4,MaskDeltaGRU,Latent R²,0.6331,0.6330677817265193,3.221827348065531e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+47,3,2,GraphResidual,Full MSE,0.2972,0.2972016036510467,1.603651046677701e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+47,3,3,GraphResidual,Event MSE,0.3470,0.3470168113708496,1.6811370849634244e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+47,3,4,GraphResidual,Latent R²,0.6651,0.6651077568531036,7.756853103613182e-06,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+47,4,2,ClockedGraphResidual,Full MSE,0.2972,0.2972457259893417,4.572598934166061e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,full_MSE
+47,4,3,ClockedGraphResidual,Event MSE,0.3460,0.3460128009319305,1.2800931930512238e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,event_MSE
+47,4,4,ClockedGraphResidual,Latent R²,0.6737,0.6737369547287623,3.695472876230621e-05,5.00001e-05,matched,012/model_summary_with_clocked_graph.csv,latent_probe_R2
+48,2,3,Moderate,MSE all,0.2800,0.2799922674894333,7.732510566738071e-06,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,2,4,Moderate,Lifecycle MSE,0.2783,0.2783341109752655,3.41109752655111e-05,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,2,5,Moderate,No-lifecycle MSE,0.2807,0.2807314842939377,3.148429393767804e-05,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,2,6,Moderate,Latent R²,0.5394,0.5394195285108354,1.95285108354204e-05,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+48,3,3,Moderate,MSE all,0.3648,0.3648368120193481,3.6812019348075875e-05,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,3,4,Moderate,Lifecycle MSE,0.3525,0.3525020480155945,2.048015594502406e-06,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,3,5,Moderate,No-lifecycle MSE,0.3703,0.3703354448080063,3.544480800626859e-05,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,3,6,Moderate,Latent R²,0.5024,0.5024078985055287,7.898505528736166e-06,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+48,4,3,Moderate,MSE all,0.3177,0.3176990151405334,9.848594665906596e-07,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,4,4,Moderate,Lifecycle MSE,0.3132,0.3131551295518875,4.487044811246621e-05,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,4,5,Moderate,No-lifecycle MSE,0.3197,0.3197245895862579,2.458958625789487e-05,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,4,6,Moderate,Latent R²,0.4844,0.484435498714447,3.549871444702424e-05,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+48,5,3,Moderate,MSE all,0.4067,0.4066816717386246,1.8328261375433197e-05,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,5,4,Moderate,Lifecycle MSE,0.4001,0.4001434445381164,4.3444538116388376e-05,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,5,5,Moderate,No-lifecycle MSE,0.4096,0.4095962941646576,3.7058353424268553e-06,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,5,6,Moderate,Latent R²,0.4885,0.4884518484274546,4.815157254539626e-05,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+48,6,3,Severe,MSE all,0.3838,0.3837835490703583,1.6450929641698142e-05,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,6,4,Severe,Lifecycle MSE,0.3973,0.3972589373588562,4.106264114378533e-05,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,6,5,Severe,No-lifecycle MSE,0.3786,0.3785647451877594,3.525481224059268e-05,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,6,6,Severe,Latent R²,0.4348,0.4347917470667097,8.252933290320286e-06,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+48,7,3,Severe,MSE all,0.4494,0.4493795931339264,2.040686607363007e-05,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,7,4,Severe,Lifecycle MSE,0.4804,0.4804216176271438,2.1617627143810658e-05,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,7,5,Severe,No-lifecycle MSE,0.4374,0.4373575299978256,4.2470002174388455e-05,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,7,6,Severe,Latent R²,0.4342,0.4342074029975467,7.402997546701595e-06,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+48,8,3,Severe,MSE all,0.3700,0.3700279742479324,2.7974247932383012e-05,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,8,4,Severe,Lifecycle MSE,0.3683,0.3682698458433151,3.0154156684891742e-05,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,8,5,Severe,No-lifecycle MSE,0.3707,0.3707088381052017,8.838105201747215e-06,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,8,6,Severe,Latent R²,0.4420,0.4420274396737417,2.743967374169154e-05,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+48,9,3,Severe,MSE all,0.4952,0.4951820969581604,1.790304183957314e-05,5.00001e-05,matched,013/model_summary.csv,MSE_all
+48,9,4,Severe,Lifecycle MSE,0.5491,0.5490776747465134,2.2325253486665808e-05,5.00001e-05,matched,013/model_summary.csv,MSE_cross_lifecycle
+48,9,5,Severe,No-lifecycle MSE,0.4743,0.4743092358112335,9.23581123352113e-06,5.00001e-05,matched,013/model_summary.csv,MSE_no_lifecycle
+48,9,6,Severe,Latent R²,0.4268,0.4268375237782796,3.752377827959119e-05,5.00001e-05,matched,013/model_summary.csv,latent_probe_R2
+49,2,2,dense,Obs frac,0.2367,0.2367023825645446,2.3825645446007293e-06,5.00001e-05,matched,013/sampling_density_scan_summary.csv,observed_fraction
+49,2,3,dense,Bucket,0.3357,0.3356600701808929,3.9929819107109576e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_BucketGRU
+49,2,4,dense,NoTime event,0.3754,0.3753859102725982,1.4089727401800367e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_NoTime
+49,2,5,dense,Timed event,0.4596,0.4595831632614136,1.6836738586434308e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_Time
+49,2,6,dense,Timed vs Bucket,-36.9%,-36.91922396778871,0.019223967788711604,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_gain_vs_Bucket_pct
+49,2,7,dense,Lifecycle gain,-37.0%,-36.9552896947212,0.044710305278798046,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_lifecycle_gain_vs_Bucket_pct
+49,3,2,mid,Obs frac,0.1279,0.1279166638851165,1.6663885116480204e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,observed_fraction
+49,3,3,mid,Bucket,0.3560,0.3559709787368774,2.902126312259723e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_BucketGRU
+49,3,4,mid,NoTime event,0.3730,0.3730035424232483,3.542423248292792e-06,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_NoTime
+49,3,5,mid,Timed event,0.4400,0.4399559795856476,4.402041435241921e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_Time
+49,3,6,mid,Timed vs Bucket,-23.6%,-23.593215701679213,0.006784298320788196,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_gain_vs_Bucket_pct
+49,3,7,mid,Lifecycle gain,-17.6%,-17.55218281657968,0.04781718342032093,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_lifecycle_gain_vs_Bucket_pct
+49,4,2,mid_dense,Obs frac,0.1648,0.1647619009017944,3.8099098205596205e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,observed_fraction
+49,4,3,mid_dense,Bucket,0.3060,0.3060246109962463,2.4610996246288153e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_BucketGRU
+49,4,4,mid_dense,NoTime event,0.3213,0.3213317096233368,3.170962333681748e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_NoTime
+49,4,5,mid_dense,Timed event,0.3974,0.3973836004734039,1.6399526596100333e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_Time
+49,4,6,mid_dense,Timed vs Bucket,-29.9%,-29.85347785583108,0.04652214416891809,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_gain_vs_Bucket_pct
+49,4,7,mid_dense,Lifecycle gain,-38.0%,-38.032419605502376,0.032419605502376214,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_lifecycle_gain_vs_Bucket_pct
+49,5,2,sparse,Obs frac,0.0847,0.0847023800015449,2.3800015448993683e-06,5.00001e-05,matched,013/sampling_density_scan_summary.csv,observed_fraction
+49,5,3,sparse,Bucket,0.6642,0.6641864776611328,1.3522338867200112e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_BucketGRU
+49,5,4,sparse,NoTime event,0.5703,0.5702812075614929,1.879243850710921e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_NoTime
+49,5,5,sparse,Timed event,0.6877,0.6877408623695374,4.086236953737554e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_Time
+49,5,6,sparse,Timed vs Bucket,-3.5%,-3.5463511379137054,0.046351137913705376,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_gain_vs_Bucket_pct
+49,5,7,sparse,Lifecycle gain,-0.4%,-0.4167160948906165,0.016716094890616484,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_lifecycle_gain_vs_Bucket_pct
+49,6,2,very_sparse,Obs frac,0.0577,0.057678572833538,2.142716646200138e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,observed_fraction
+49,6,3,very_sparse,Bucket,0.5400,0.5400185585021973,1.8558502197230098e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_BucketGRU
+49,6,4,very_sparse,NoTime event,0.3958,0.3957535624504089,4.643754959110513e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_NoTime
+49,6,5,very_sparse,Timed event,0.5144,0.514356255531311,4.3744468688933225e-05,5.00001e-05,matched,013/sampling_density_scan_summary.csv,MSE_all_EventGRU_Time
+49,6,6,very_sparse,Timed vs Bucket,4.8%,4.7521150091699695,0.04788499083003028,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_gain_vs_Bucket_pct
+49,6,7,very_sparse,Lifecycle gain,5.9%,5.900575938099497,0.0005759380994962982,0.050000100000000006,matched,013/sampling_density_scan_summary.csv,TimedEvent_lifecycle_gain_vs_Bucket_pct
+50,2,1,0.0197,NoTime MSE,0.0197,0.0197488591074943,4.8859107494299975e-05,5.00001e-05,matched,013/timing_identifiability_summary.csv,NoTime_MSE
+50,2,2,0.0197,Timed MSE,0.0095,0.009493893943727,6.106056272998928e-06,5.00001e-05,matched,013/timing_identifiability_summary.csv,Timed_MSE
+50,2,3,0.0197,Timed gain,51.9%,51.91427280843647,0.014272808436473383,0.050000100000000006,matched,013/timing_identifiability_summary.csv,Timed_gain_pct
+51,2,2,A_informative,Observed fraction,0.333,0.3333333432674408,0.0003333432674407777,0.000500001,matched,014/policy_audit.csv,observed_fraction
+51,2,3,A_informative,"corr(observation rate, latent severity)",0.973,0.9726213246759348,0.0003786753240652141,0.000500001,matched,014/policy_audit.csv,obsrate_severity_corr
+51,3,2,B_weak,Observed fraction,0.219,0.2190104126930236,1.0412693023598152e-05,0.000500001,matched,014/policy_audit.csv,observed_fraction
+51,3,3,B_weak,"corr(observation rate, latent severity)",0.658,0.6582497208205892,0.000249720820589161,0.000500001,matched,014/policy_audit.csv,obsrate_severity_corr
+51,4,2,C_dense,Observed fraction,0.365,0.3647836446762085,0.00021635532379149502,0.000500001,matched,014/policy_audit.csv,observed_fraction
+51,4,3,C_dense,"corr(observation rate, latent severity)",0.415,0.4153301582834875,0.00033015828348753606,0.000500001,matched,014/policy_audit.csv,obsrate_severity_corr
+52,2,2,ValueOnly_A,Test A,0.514,0.5137169659137726,0.0002830340862274294,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+52,2,3,ValueOnly_A,Test B,0.626,0.6264486610889435,0.00044866108894348056,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+52,2,4,ValueOnly_A,Test C,0.514,0.5143975168466568,0.0003975168466567869,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+52,3,2,MaskDelta_A,Test A,0.505,0.5050204694271088,2.0469427108760208e-05,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+52,3,3,MaskDelta_A,Test B,0.678,0.6784443855285645,0.00044438552856440605,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+52,3,4,MaskDelta_A,Test C,0.578,0.5782414674758911,0.00024146747589115503,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+52,4,2,JointPolicy_A,Test A,0.521,0.5209918320178986,8.167982101459081e-06,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+52,4,3,JointPolicy_A,Test B,0.698,0.6976732909679413,0.00032670903205866964,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+52,4,4,JointPolicy_A,Test C,0.595,0.5954837501049042,0.00048375010490420145,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+52,5,2,RepeatedA,Test A,0.293,0.2932919859886169,0.00029198598861690517,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+52,5,3,RepeatedA,Test B,0.425,0.4254527240991592,0.0004527240991591963,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+52,5,4,RepeatedA,Test C,0.351,0.3509476780891418,5.232191085818849e-05,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+52,6,2,PermutedMaskAug,Test A,0.254,0.254478357732296,0.00047835773229598644,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+52,6,3,PermutedMaskAug,Test B,0.326,0.3257718086242676,0.00022819137573243387,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+52,6,4,PermutedMaskAug,Test C,0.268,0.2678672075271606,0.00013279247283942697,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+52,7,2,MultiPolicy,Test A,0.255,0.2553477883338928,0.0003477883338928178,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+52,7,3,MultiPolicy,Test B,0.307,0.3070288449525833,2.8844952583317873e-05,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+52,7,4,MultiPolicy,Test C,0.251,0.2512787729501724,0.00027877295017242343,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+53,2,2,MultiPolicy,A MSE,0.255,0.2553477883338928,0.0003477883338928178,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+53,2,3,MultiPolicy,B MSE,0.307,0.3070288449525833,2.8844952583317873e-05,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+53,2,4,MultiPolicy,C MSE,0.251,0.2512787729501724,0.00027877295017242343,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+53,2,5,MultiPolicy,Mean shifted MSE,0.279,0.2791538089513778,0.00015380895137778738,0.000500001,matched,014/robustness_comparison.csv,mean_shifted_MSE
+53,3,2,PermutedMaskAug,A MSE,0.254,0.254478357732296,0.00047835773229598644,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+53,3,3,PermutedMaskAug,B MSE,0.326,0.3257718086242676,0.00022819137573243387,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+53,3,4,PermutedMaskAug,C MSE,0.268,0.2678672075271606,0.00013279247283942697,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+53,3,5,PermutedMaskAug,Mean shifted MSE,0.297,0.2968195080757141,0.0001804919242858749,0.000500001,matched,014/robustness_comparison.csv,mean_shifted_MSE
+53,4,2,RepeatedA,A MSE,0.293,0.2932919859886169,0.00029198598861690517,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+53,4,3,RepeatedA,B MSE,0.425,0.4254527240991592,0.0004527240991591963,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+53,4,4,RepeatedA,C MSE,0.351,0.3509476780891418,5.232191085818849e-05,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+53,4,5,RepeatedA,Mean shifted MSE,0.388,0.3882002010941505,0.00020020109415047616,0.000500001,matched,014/robustness_comparison.csv,mean_shifted_MSE
+53,5,2,ValueOnly_A,A MSE,0.514,0.5137169659137726,0.0002830340862274294,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+53,5,3,ValueOnly_A,B MSE,0.626,0.6264486610889435,0.00044866108894348056,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+53,5,4,ValueOnly_A,C MSE,0.514,0.5143975168466568,0.0003975168466567869,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+53,5,5,ValueOnly_A,Mean shifted MSE,0.570,0.5704230889678001,0.00042308896780018923,0.000500001,matched,014/robustness_comparison.csv,mean_shifted_MSE
+53,6,2,MaskDelta_A,A MSE,0.505,0.5050204694271088,2.0469427108760208e-05,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+53,6,3,MaskDelta_A,B MSE,0.678,0.6784443855285645,0.00044438552856440605,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+53,6,4,MaskDelta_A,C MSE,0.578,0.5782414674758911,0.00024146747589115503,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+53,6,5,MaskDelta_A,Mean shifted MSE,0.628,0.6283429265022278,0.00034292650222778054,0.000500001,matched,014/robustness_comparison.csv,mean_shifted_MSE
+53,7,2,JointPolicy_A,A MSE,0.521,0.5209918320178986,8.167982101459081e-06,0.000500001,matched,014/robustness_comparison.csv,A_MSE
+53,7,3,JointPolicy_A,B MSE,0.698,0.6976732909679413,0.00032670903205866964,0.000500001,matched,014/robustness_comparison.csv,B_MSE
+53,7,4,JointPolicy_A,C MSE,0.595,0.5954837501049042,0.00048375010490420145,0.000500001,matched,014/robustness_comparison.csv,C_MSE
+53,7,5,JointPolicy_A,Mean shifted MSE,0.647,0.6465785205364227,0.00042147946357729005,0.000500001,matched,014/robustness_comparison.csv,mean_shifted_MSE
+54,2,3,JointPolicy_A,Prediction disagreement,0.1869,0.1868996545672416,3.454327583973793e-07,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+54,3,3,JointPolicy_A,Prediction disagreement,0.1147,0.1147225722670555,2.2572267055501194e-05,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+54,4,3,MaskDelta_A,Prediction disagreement,0.1849,0.1849060729146003,6.072914600280255e-06,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+54,5,3,MaskDelta_A,Prediction disagreement,0.1179,0.1179387494921684,3.874949216839396e-05,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+54,6,3,MultiPolicy_MaskDelta,Prediction disagreement,0.1343,0.1343027576804161,2.757680416104469e-06,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+54,7,3,MultiPolicy_MaskDelta,Prediction disagreement,0.1396,0.1396047100424766,4.710042476596676e-06,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+54,8,3,ValueOnly_A,Prediction disagreement,0.1374,0.1373748034238815,2.5196576118491354e-05,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+54,9,3,ValueOnly_A,Prediction disagreement,0.1062,0.1061903163790702,9.683620929804015e-06,5.00001e-05,matched,014/counterfactual_policy_summary.csv,counterfactual_prediction_disagreement
+55,2,2,SharedResidual,Params,5124,5124.0,0.0,0.500001,matched,015/lesion_summary_with_training_ablation.csv,params
+55,2,3,SharedResidual,Intact MSE,0.0728,0.0727787092328071,2.1290767192899684e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,normal_MSE
+55,2,4,SharedResidual,Single-lesion MSE,0.0918,0.091751255095005,4.874490499501283e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_mean_MSE
+55,2,5,SharedResidual,Single penalty (%),26.0713,26.07131823301719,1.8233017190283363e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_penalty_pct
+55,2,6,SharedResidual,Dual-lesion MSE,0.1266,0.1265835687518119,1.6431248188092384e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_mean_MSE
+55,2,7,SharedResidual,Dual penalty (%),73.9364,73.9363953167942,4.683205801825352e-06,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_penalty_pct
+55,3,2,CoordinatedEffectors,Params,5124,5124.0,0.0,0.500001,matched,015/lesion_summary_with_training_ablation.csv,params
+55,3,3,CoordinatedEffectors,Intact MSE,0.0755,0.0754875019192695,1.2498080730491412e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,normal_MSE
+55,3,4,CoordinatedEffectors,Single-lesion MSE,0.0850,0.0849725184962153,2.7481503784704264e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_mean_MSE
+55,3,5,CoordinatedEffectors,Single penalty (%),12.5645,12.564520529862325,2.052986232392584e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_penalty_pct
+55,3,6,CoordinatedEffectors,Dual-lesion MSE,0.1041,0.1040879984696706,1.2001530329402987e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_mean_MSE
+55,3,7,CoordinatedEffectors,Dual penalty (%),37.8860,37.886044714358725,4.471435872233087e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_penalty_pct
+55,4,2,SoftMixture,Params,4614,4614.0,0.0,0.500001,matched,015/lesion_summary_with_training_ablation.csv,params
+55,4,3,SoftMixture,Intact MSE,0.0882,0.0881521515548229,4.7848445177106624e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,normal_MSE
+55,4,4,SoftMixture,Single-lesion MSE,0.1323,0.132338585332036,3.8585332035989683e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_mean_MSE
+55,4,5,SoftMixture,Single penalty (%),50.2527,50.25266774829652,3.22517034803127e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_penalty_pct
+55,4,6,SoftMixture,Dual-lesion MSE,0.2145,0.2145451133449872,4.5113344987190995e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_mean_MSE
+55,4,7,SoftMixture,Dual penalty (%),143.6064,143.60644624067316,4.624067315717184e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_penalty_pct
+55,5,2,SoftMixture_Perturb,Params,4614,4614.0,0.0,0.500001,matched,015/lesion_summary_with_training_ablation.csv,params
+55,5,3,SoftMixture_Perturb,Intact MSE,0.0927,0.092738851904869,3.8851904868991705e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,normal_MSE
+55,5,4,SoftMixture_Perturb,Single-lesion MSE,0.1152,0.1152043957263231,4.395726323103144e-06,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_mean_MSE
+55,5,5,SoftMixture_Perturb,Single penalty (%),24.2196,24.219610745253608,1.0745253607780114e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_penalty_pct
+55,5,6,SoftMixture_Perturb,Dual-lesion MSE,0.1605,0.1605058709780375,5.8709780375032494e-06,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_mean_MSE
+55,5,7,SoftMixture_Perturb,Dual penalty (%),73.0586,73.05861469060278,1.4690602782252427e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_penalty_pct
+55,6,2,HardTop1,Params,4614,4614.0,0.0,0.500001,matched,015/lesion_summary_with_training_ablation.csv,params
+55,6,3,HardTop1,Intact MSE,0.1164,0.1163737289607524,2.6271039247599548e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,normal_MSE
+55,6,4,HardTop1,Single-lesion MSE,0.1501,0.1501015117391944,1.511739194381967e-06,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_mean_MSE
+55,6,5,HardTop1,Single penalty (%),28.9738,28.97377807418277,2.192581722937348e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_penalty_pct
+55,6,6,HardTop1,Dual-lesion MSE,0.2124,0.2124095031370719,9.503137071903422e-06,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_mean_MSE
+55,6,7,HardTop1,Dual penalty (%),82.5305,82.53054801486573,4.801486572603153e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_penalty_pct
+55,7,2,HardTop1_Perturb,Params,4614,4614.0,0.0,0.500001,matched,015/lesion_summary_with_training_ablation.csv,params
+55,7,3,HardTop1_Perturb,Intact MSE,0.1200,0.1200413815677166,4.138156771660295e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,normal_MSE
+55,7,4,HardTop1_Perturb,Single-lesion MSE,0.1336,0.1336279762908816,2.7976290881609467e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_mean_MSE
+55,7,5,HardTop1_Perturb,Single penalty (%),11.3216,11.321571694495024,2.8305504976344764e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,single_lesion_penalty_pct
+55,7,6,HardTop1_Perturb,Dual-lesion MSE,0.1641,0.1641479283571243,4.792835712430499e-05,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_mean_MSE
+55,7,7,HardTop1_Perturb,Dual penalty (%),36.7217,36.72170453648461,4.536484610184743e-06,5.00001e-05,matched,015/lesion_summary_with_training_ablation.csv,dual_lesion_penalty_pct
+56,2,3,HardTop1,Intact MSE change (%),3.15,3.151615609224864,0.0016156092248640341,0.00500001,matched,015/perturbation_training_effects.csv,normal_MSE_change_pct
+56,2,4,HardTop1,Single penalty reduction (pp),17.65,17.652206379687748,0.0022063796877489494,0.00500001,matched,015/perturbation_training_effects.csv,single_lesion_penalty_reduction_pctpoints
+56,2,5,HardTop1,Dual penalty reduction (pp),45.81,45.80884347838112,0.0011565216188813565,0.00500001,matched,015/perturbation_training_effects.csv,dual_lesion_penalty_reduction_pctpoints
+56,3,3,SoftMixture,Intact MSE change (%),5.20,5.20316324575882,0.00316324575882021,0.00500001,matched,015/perturbation_training_effects.csv,normal_MSE_change_pct
+56,3,4,SoftMixture,Single penalty reduction (pp),26.03,26.03305700304291,0.003057003042908235,0.00500001,matched,015/perturbation_training_effects.csv,single_lesion_penalty_reduction_pctpoints
+56,3,5,SoftMixture,Dual penalty reduction (pp),70.55,70.54783155007038,0.002168449929612848,0.00500001,matched,015/perturbation_training_effects.csv,dual_lesion_penalty_reduction_pctpoints
+56,4,3,SharedResidual,Intact MSE change (%),3.72,3.72195758212394,0.001957582123939705,0.00500001,matched,015/perturbation_training_effects.csv,normal_MSE_change_pct
+56,4,4,SharedResidual,Single penalty reduction (pp),13.51,13.506797703154866,0.00320229684513329,0.00500001,matched,015/perturbation_training_effects.csv,single_lesion_penalty_reduction_pctpoints
+56,4,5,SharedResidual,Dual penalty reduction (pp),36.05,36.05035060243548,0.00035060243548201697,0.00500001,matched,015/perturbation_training_effects.csv,dual_lesion_penalty_reduction_pctpoints
+57,2,2,HardTop1,Expert effect cosine,0.7412,0.7412282526493073,2.8252649307280997e-05,5.00001e-05,matched,015/coordination_geometry.csv,expert_output_cosine_mean
+57,2,3,HardTop1,Max router weight,1.0000,1.0,0.0,5.00001e-05,matched,015/coordination_geometry.csv,mean_max_router_weight
+57,2,4,HardTop1,Router entropy,0.0000,7.342018548683883e-08,7.342018548683883e-08,5.00001e-05,matched,015/coordination_geometry.csv,mean_router_entropy
+57,3,2,SoftMixture,Expert effect cosine,0.6153,0.615346242984136,4.624298413602457e-05,5.00001e-05,matched,015/coordination_geometry.csv,expert_output_cosine_mean
+57,3,3,SoftMixture,Max router weight,0.3980,0.3979666382074356,3.336179256441252e-05,5.00001e-05,matched,015/coordination_geometry.csv,mean_max_router_weight
+57,3,4,SoftMixture,Router entropy,1.2772,1.277175784111023,2.4215888976941713e-05,5.00001e-05,matched,015/coordination_geometry.csv,mean_router_entropy
+57,4,2,SharedResidual,Expert effect cosine,0.4537,0.4537247866392135,2.4786639213514317e-05,5.00001e-05,matched,015/coordination_geometry.csv,expert_output_cosine_mean
+57,4,3,SharedResidual,Max router weight,0.4017,0.4016906470060348,9.352993965205947e-06,5.00001e-05,matched,015/coordination_geometry.csv,mean_max_router_weight
+57,4,4,SharedResidual,Router entropy,1.2773,1.2772963643074036,3.6356925965375098e-06,5.00001e-05,matched,015/coordination_geometry.csv,mean_router_entropy
+57,5,2,CoordinatedEffectors,Expert effect cosine,0.5979,0.5979215403397877,2.154033978774006e-05,5.00001e-05,matched,015/coordination_geometry.csv,expert_output_cosine_mean
+57,5,3,CoordinatedEffectors,Max router weight,0.3963,0.396314725279808,1.4725279808003311e-05,5.00001e-05,matched,015/coordination_geometry.csv,mean_max_router_weight
+57,5,4,CoordinatedEffectors,Router entropy,1.2848,1.2847917675971985,8.232402801455763e-06,5.00001e-05,matched,015/coordination_geometry.csv,mean_router_entropy
+58,2,2,CoordinatedEffectors,Pre-adapt MSE,0.0817,0.0817176513373851,1.7651337385099497e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,before_MSE
+58,2,3,CoordinatedEffectors,Post-router MSE,0.0809,0.0808803588151931,1.964118480689281e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,after_router_adaptation_MSE
+58,2,4,CoordinatedEffectors,Router change (%),-1.0254,-1.0254369868569082,3.698685690811665e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,router_adaptation_change_pct
+58,3,2,HardTop1,Pre-adapt MSE,0.1280,0.1280128508806228,1.2850880622805594e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,before_MSE
+58,3,3,HardTop1,Post-router MSE,0.1353,0.1353230327367782,2.303273677820017e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,after_router_adaptation_MSE
+58,3,4,HardTop1,Router change (%),5.4697,5.469730947427324,3.0947427324790056e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,router_adaptation_change_pct
+58,4,2,SharedResidual,Pre-adapt MSE,0.0806,0.0805540829896926,4.591701030740025e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,before_MSE
+58,4,3,SharedResidual,Post-router MSE,0.0794,0.0793566294014453,4.337059855469283e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,after_router_adaptation_MSE
+58,4,4,SharedResidual,Router change (%),-1.4884,-1.4884060868416504,6.086841650487784e-06,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,router_adaptation_change_pct
+58,5,2,SoftMixture,Pre-adapt MSE,0.1065,0.1064723990857601,2.7600914239894747e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,before_MSE
+58,5,3,SoftMixture,Post-router MSE,0.1038,0.103761687874794,3.831212520599703e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,after_router_adaptation_MSE
+58,5,4,SoftMixture,Router change (%),-2.5528,-2.5527599602272653,4.003977273470127e-05,5.00001e-05,matched,015/router_recovery_summary_corrected.csv,router_adaptation_change_pct
+59,2,2,StateOnly,Healthy,0.0855,0.0854821987450122,1.7801254987806492e-05,5.00001e-05,matched,016/scenario_summary.csv,StateOnly; healthy; MSE_mean
+59,2,3,StateOnly,Chronic fatigue,0.1029,0.1029065884649753,6.588464975296193e-06,5.00001e-05,matched,016/scenario_summary.csv,StateOnly; chronic_fatigue; MSE_mean
+59,2,4,StateOnly,Weak effector,0.0963,0.0962762683629989,2.3731637001089823e-05,5.00001e-05,matched,016/scenario_summary.csv,StateOnly; weak_effector; MSE_mean
+59,2,5,StateOnly,Outages,0.0992,0.0992469228804111,4.6922880411109924e-05,5.00001e-05,matched,016/scenario_summary.csv,StateOnly; outages; MSE_mean
+59,3,2,AvailabilityAware,Healthy,0.0797,0.079694427549839,5.572450160987175e-06,5.00001e-05,matched,016/scenario_summary.csv,AvailabilityAware; healthy; MSE_mean
+59,3,3,AvailabilityAware,Chronic fatigue,0.0953,0.0952645167708396,3.548322916040181e-05,5.00001e-05,matched,016/scenario_summary.csv,AvailabilityAware; chronic_fatigue; MSE_mean
+59,3,4,AvailabilityAware,Weak effector,0.0860,0.0860460400581359,4.6040058135909945e-05,5.00001e-05,matched,016/scenario_summary.csv,AvailabilityAware; weak_effector; MSE_mean
+59,3,5,AvailabilityAware,Outages,0.0910,0.0909635089337825,3.649106621750331e-05,5.00001e-05,matched,016/scenario_summary.csv,AvailabilityAware; outages; MSE_mean
+59,4,2,FatigueAware_NoCurriculum,Healthy,0.0847,0.0847403965890407,4.03965890407032e-05,5.00001e-05,matched,016/scenario_summary.csv,FatigueAware_NoCurriculum; healthy; MSE_mean
+59,4,3,FatigueAware_NoCurriculum,Chronic fatigue,0.1030,0.1029867455363273,1.3254463672687788e-05,5.00001e-05,matched,016/scenario_summary.csv,FatigueAware_NoCurriculum; chronic_fatigue; MSE_mean
+59,4,4,FatigueAware_NoCurriculum,Weak effector,0.0920,0.0920358188450336,3.581884503360555e-05,5.00001e-05,matched,016/scenario_summary.csv,FatigueAware_NoCurriculum; weak_effector; MSE_mean
+59,4,5,FatigueAware_NoCurriculum,Outages,0.0926,0.0926000699400901,6.994009009442248e-08,5.00001e-05,matched,016/scenario_summary.csv,FatigueAware_NoCurriculum; outages; MSE_mean
+59,5,2,CoordinatedBody,Healthy,0.0834,0.0833779908716678,2.2009128332195482e-05,5.00001e-05,matched,016/scenario_summary.csv,CoordinatedBody; healthy; MSE_mean
+59,5,3,CoordinatedBody,Chronic fatigue,0.1007,0.1007437258958816,4.3725895881599475e-05,5.00001e-05,matched,016/scenario_summary.csv,CoordinatedBody; chronic_fatigue; MSE_mean
+59,5,4,CoordinatedBody,Weak effector,0.0905,0.090498499572277,1.5004277229974106e-06,5.00001e-05,matched,016/scenario_summary.csv,CoordinatedBody; weak_effector; MSE_mean
+59,5,5,CoordinatedBody,Outages,0.0947,0.0946766138076782,2.3386192321811494e-05,5.00001e-05,matched,016/scenario_summary.csv,CoordinatedBody; outages; MSE_mean
+60,2,2,healthy,Fatigue-aware / no curriculum,0.0847,0.0847403965890407,4.03965890407032e-05,5.00001e-05,matched,016/current_availability_sufficiency.csv,FatigueAware_NoCurriculum_MSE
+60,2,3,healthy,CoordinatedBody,0.0834,0.0833779908716678,2.2009128332195482e-05,5.00001e-05,matched,016/current_availability_sufficiency.csv,CoordinatedBody_MSE
+60,2,4,healthy,Curriculum gain,1.61%,1.6077405490324204,0.0022594509675797347,0.00500001,matched,016/current_availability_sufficiency.csv,curriculum_gain_pct
+60,3,2,chronic_fatigue,Fatigue-aware / no curriculum,0.1030,0.1029867455363273,1.3254463672687788e-05,5.00001e-05,matched,016/current_availability_sufficiency.csv,FatigueAware_NoCurriculum_MSE
+60,3,3,chronic_fatigue,CoordinatedBody,0.1007,0.1007437258958816,4.3725895881599475e-05,5.00001e-05,matched,016/current_availability_sufficiency.csv,CoordinatedBody_MSE
+60,3,4,chronic_fatigue,Curriculum gain,2.18%,2.177969241347189,0.0020307586528112154,0.00500001,matched,016/current_availability_sufficiency.csv,curriculum_gain_pct
+60,4,2,weak_effector,Fatigue-aware / no curriculum,0.0920,0.0920358188450336,3.581884503360555e-05,5.00001e-05,matched,016/current_availability_sufficiency.csv,FatigueAware_NoCurriculum_MSE
+60,4,3,weak_effector,CoordinatedBody,0.0905,0.090498499572277,1.5004277229974106e-06,5.00001e-05,matched,016/current_availability_sufficiency.csv,CoordinatedBody_MSE
+60,4,4,weak_effector,Curriculum gain,1.67%,1.6703488837808411,0.00034888378084119154,0.00500001,matched,016/current_availability_sufficiency.csv,curriculum_gain_pct
+60,5,2,outages,Fatigue-aware / no curriculum,0.0926,0.0926000699400901,6.994009009442248e-08,5.00001e-05,matched,016/current_availability_sufficiency.csv,FatigueAware_NoCurriculum_MSE
+60,5,3,outages,CoordinatedBody,0.0947,0.0946766138076782,2.3386192321811494e-05,5.00001e-05,matched,016/current_availability_sufficiency.csv,CoordinatedBody_MSE
+60,5,4,outages,Curriculum gain,-2.24%,-2.242486284223665,0.002486284223664814,0.00500001,matched,016/current_availability_sufficiency.csv,curriculum_gain_pct
+61,2,2,AvailabilityAware,Failed,1,1.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,failed_effector
+61,2,3,AvailabilityAware,Paired substitute,0,0.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,paired_substitute
+61,2,4,AvailabilityAware,Δ desired weight,0.0211,0.0211380114778876,3.801147788759854e-05,5.00001e-05,matched,016/substitution_audit_summary.csv,desired_weight_change_substitute
+61,2,5,AvailabilityAware,Δ realized load,0.0178,0.0177710191346704,2.8980865329601008e-05,5.00001e-05,matched,016/substitution_audit_summary.csv,realized_load_change_substitute
+61,3,2,AvailabilityAware,Failed,2,2.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,failed_effector
+61,3,3,AvailabilityAware,Paired substitute,3,3.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,paired_substitute
+61,3,4,AvailabilityAware,Δ desired weight,-0.0221,-0.0220646397210657,3.536027893430091e-05,5.00001e-05,matched,016/substitution_audit_summary.csv,desired_weight_change_substitute
+61,3,5,AvailabilityAware,Δ realized load,-0.0119,-0.0119383388664573,3.833886645729888e-05,5.00001e-05,matched,016/substitution_audit_summary.csv,realized_load_change_substitute
+61,4,2,CoordinatedBody,Failed,1,1.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,failed_effector
+61,4,3,CoordinatedBody,Paired substitute,0,0.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,paired_substitute
+61,4,4,CoordinatedBody,Δ desired weight,0.0101,0.0101048843935132,4.884393513199595e-06,5.00001e-05,matched,016/substitution_audit_summary.csv,desired_weight_change_substitute
+61,4,5,CoordinatedBody,Δ realized load,0.0090,0.0090308375656604,3.083756566040104e-05,5.00001e-05,matched,016/substitution_audit_summary.csv,realized_load_change_substitute
+61,5,2,CoordinatedBody,Failed,2,2.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,failed_effector
+61,5,3,CoordinatedBody,Paired substitute,3,3.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,paired_substitute
+61,5,4,CoordinatedBody,Δ desired weight,-0.0204,-0.0203678528778255,3.2147122174502885e-05,5.00001e-05,matched,016/substitution_audit_summary.csv,desired_weight_change_substitute
+61,5,5,CoordinatedBody,Δ realized load,-0.0122,-0.0121811288408935,1.887115910650071e-05,5.00001e-05,matched,016/substitution_audit_summary.csv,realized_load_change_substitute
+61,6,2,StateOnly,Failed,1,1.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,failed_effector
+61,6,3,StateOnly,Paired substitute,0,0.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,paired_substitute
+61,6,4,StateOnly,Δ desired weight,0.0000,0.0,0.0,5.00001e-05,matched,016/substitution_audit_summary.csv,desired_weight_change_substitute
+61,6,5,StateOnly,Δ realized load,0.0000,0.0,0.0,5.00001e-05,matched,016/substitution_audit_summary.csv,realized_load_change_substitute
+61,7,2,StateOnly,Failed,2,2.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,failed_effector
+61,7,3,StateOnly,Paired substitute,3,3.0,0.0,0.500001,matched,016/substitution_audit_summary.csv,paired_substitute
+61,7,4,StateOnly,Δ desired weight,0.0000,0.0,0.0,5.00001e-05,matched,016/substitution_audit_summary.csv,desired_weight_change_substitute
+61,7,5,StateOnly,Δ realized load,0.0000,0.0,0.0,5.00001e-05,matched,016/substitution_audit_summary.csv,realized_load_change_substitute
+62,2,2,AnticipatoryCoordinator,Parameters,7114,7114.0,0.0,0.500001,matched,017/summary.csv,params
+62,2,3,AnticipatoryCoordinator,Mean MSE,0.0889,0.0889400653541088,4.006535410878975e-05,5.00001e-05,matched,017/summary.csv,MSE_mean
+62,2,4,AnticipatoryCoordinator,Early MSE,0.1153,0.1152929738163948,7.026183605193803e-06,5.00001e-05,matched,017/summary.csv,MSE_early
+62,2,5,AnticipatoryCoordinator,Late MSE,0.0797,0.0797482766211032,4.8276621103210404e-05,5.00001e-05,matched,017/summary.csv,MSE_late
+62,2,6,AnticipatoryCoordinator,Worst MSE,0.1629,0.1629225313663482,2.2531366348221837e-05,5.00001e-05,matched,017/summary.csv,MSE_worst
+62,2,7,AnticipatoryCoordinator,Final availability,0.9844,0.9844130575656892,1.3057565689145179e-05,5.00001e-05,matched,017/summary.csv,final_availability
+62,2,8,AnticipatoryCoordinator,Final wear,0.1737,0.1737416908144951,4.1690814495093376e-05,5.00001e-05,matched,017/summary.csv,final_hidden_wear
+62,3,2,CurrentAvailability,Parameters,3540,3540.0,0.0,0.500001,matched,017/summary.csv,params
+62,3,3,CurrentAvailability,Mean MSE,0.1165,0.1165243312716484,2.4331271648386776e-05,5.00001e-05,matched,017/summary.csv,MSE_mean
+62,3,4,CurrentAvailability,Early MSE,0.1328,0.1327504068613052,4.9593138694792316e-05,5.00001e-05,matched,017/summary.csv,MSE_early
+62,3,5,CurrentAvailability,Late MSE,0.1114,0.1114478930830955,4.7893083095496e-05,5.00001e-05,matched,017/summary.csv,MSE_late
+62,3,6,CurrentAvailability,Worst MSE,0.1675,0.1675249114632606,2.491146326058513e-05,5.00001e-05,matched,017/summary.csv,MSE_worst
+62,3,7,CurrentAvailability,Final availability,0.8986,0.8985617160797119,3.8283920288040285e-05,5.00001e-05,matched,017/summary.csv,final_availability
+62,3,8,CurrentAvailability,Final wear,0.1528,0.1528412699699401,4.1269969940110895e-05,5.00001e-05,matched,017/summary.csv,final_hidden_wear
+62,4,2,HistoryAware,Parameters,7114,7114.0,0.0,0.500001,matched,017/summary.csv,params
+62,4,3,HistoryAware,Mean MSE,0.1031,0.1030721589922905,2.7841007709500376e-05,5.00001e-05,matched,017/summary.csv,MSE_mean
+62,4,4,HistoryAware,Early MSE,0.1235,0.1235242299735546,2.422997355459866e-05,5.00001e-05,matched,017/summary.csv,MSE_early
+62,4,5,HistoryAware,Late MSE,0.0972,0.0972422063350677,4.2206335067698775e-05,5.00001e-05,matched,017/summary.csv,MSE_late
+62,4,6,HistoryAware,Worst MSE,0.1646,0.1646360456943512,3.6045694351199975e-05,5.00001e-05,matched,017/summary.csv,MSE_worst
+62,4,7,HistoryAware,Final availability,0.8899,0.8899331986904144,3.3198690414404375e-05,5.00001e-05,matched,017/summary.csv,final_availability
+62,4,8,HistoryAware,Final wear,0.1936,0.1935795247554779,2.0475244522089042e-05,5.00001e-05,matched,017/summary.csv,final_hidden_wear
+63,2,2,AnticipatoryCoordinator,Mean maximum wear,0.2063,0.2062668278813362,3.317211866379899e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_max_hidden_wear
+63,2,3,AnticipatoryCoordinator,Late maximum wear,0.3141,0.3141105026006698,1.050260066981501e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,late_max_hidden_wear
+63,2,4,AnticipatoryCoordinator,Mean wear SD across modules,0.0801,0.0801469013094902,4.690130949019933e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_cross_effector_wear_std
+63,2,5,AnticipatoryCoordinator,Time above q>0.34,0.0331,0.0330882352941176,1.1764705882398585e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,fraction_effector_time_q_gt_0_34
+63,2,6,AnticipatoryCoordinator,Time above q>0.38,0.0087,0.0086659663865546,3.4033613445399666e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,fraction_effector_time_q_gt_0_38
+63,2,7,AnticipatoryCoordinator,Mean router entropy,1.3277,1.3276626467704773,3.7353229522807396e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_router_entropy
+63,3,2,CurrentAvailability,Mean maximum wear,0.3476,0.3475875556468963,1.244435310371328e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_max_hidden_wear
+63,3,3,CurrentAvailability,Late maximum wear,0.4044,0.4043685495853424,3.145041465757448e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,late_max_hidden_wear
+63,3,4,CurrentAvailability,Mean wear SD across modules,0.1447,0.1446744948625564,2.5505137443593284e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_cross_effector_wear_std
+63,3,5,CurrentAvailability,Time above q>0.34,0.1998,0.1998424369747899,4.24369747898945e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,fraction_effector_time_q_gt_0_34
+63,3,6,CurrentAvailability,Time above q>0.38,0.1728,0.1727678571428571,3.214285714289722e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,fraction_effector_time_q_gt_0_38
+63,3,7,CurrentAvailability,Mean router entropy,1.1568,1.1568236947059631,2.3694705963084317e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_router_entropy
+63,4,2,HistoryAware,Mean maximum wear,0.3292,0.3291717618703842,2.823812961577632e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_max_hidden_wear
+63,4,3,HistoryAware,Late maximum wear,0.4012,0.4011691510677337,3.084893226629193e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,late_max_hidden_wear
+63,4,4,HistoryAware,Mean wear SD across modules,0.1399,0.1398939415812492,6.0584187507872755e-06,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_cross_effector_wear_std
+63,4,5,HistoryAware,Time above q>0.34,0.2271,0.2271271008403361,2.7100840336108378e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,fraction_effector_time_q_gt_0_34
+63,4,6,HistoryAware,Time above q>0.38,0.1812,0.1812237394957983,2.3739495798313914e-05,5.00001e-05,matched,017/wear_distribution_summary.csv,fraction_effector_time_q_gt_0_38
+63,4,7,HistoryAware,Mean router entropy,1.1521,1.152093768119812,6.231880187890226e-06,5.00001e-05,matched,017/wear_distribution_summary.csv,mean_router_entropy
+64,2,2,AnticipatoryCoordinator,Wear R² from history state,0.4232,0.4231853112578392,1.4688742160817725e-05,5.00001e-05,matched,017/hidden_wear_probe_summary.csv,hidden_wear_R2_from_history_state
+64,2,3,AnticipatoryCoordinator,Wear R² from current availability,0.1786,0.1786268129944801,2.6812994480096553e-05,5.00001e-05,matched,017/hidden_wear_probe_summary.csv,hidden_wear_R2_from_current_availability
+64,3,2,HistoryAware,Wear R² from history state,0.3707,0.3706550896167755,4.491038322446128e-05,5.00001e-05,matched,017/hidden_wear_probe_summary.csv,hidden_wear_R2_from_history_state
+64,3,3,HistoryAware,Wear R² from current availability,0.3614,0.3613913580775261,8.641922473906494e-06,5.00001e-05,matched,017/hidden_wear_probe_summary.csv,hidden_wear_R2_from_current_availability
+65,2,2,AnticipatoryCoordinator,Module 0 weight after heavy history,0.2460,0.2459844574332237,1.5542566776299838e-05,5.00001e-05,matched,017/matched_history_probe_summary.csv,final_weight_eff0_after_heavy_history
+65,2,3,AnticipatoryCoordinator,Module 0 weight after balanced history,0.2493,0.2492781579494476,2.1842050552389747e-05,5.00001e-05,matched,017/matched_history_probe_summary.csv,final_weight_eff0_after_balanced_history
+65,2,4,AnticipatoryCoordinator,Avoidance of module 0,0.0033,0.0032937005162239,6.299483776099884e-06,5.00001e-05,matched,017/matched_history_probe_summary.csv,history_avoidance_eff0
+65,2,5,AnticipatoryCoordinator,Routing L1 change,0.0254,0.0253530517220497,4.694827795029971e-05,5.00001e-05,matched,017/matched_history_probe_summary.csv,final_distribution_L1_change
+65,3,2,HistoryAware,Module 0 weight after heavy history,0.2907,0.2906592935323715,4.070646762849295e-05,5.00001e-05,matched,017/matched_history_probe_summary.csv,final_weight_eff0_after_heavy_history
+65,3,3,HistoryAware,Module 0 weight after balanced history,0.2896,0.2896469235420227,4.692354202268101e-05,5.00001e-05,matched,017/matched_history_probe_summary.csv,final_weight_eff0_after_balanced_history
+65,3,4,HistoryAware,Avoidance of module 0,-0.0010,-0.0010123699903488,1.2369990348800068e-05,5.00001e-05,matched,017/matched_history_probe_summary.csv,history_avoidance_eff0
+65,3,5,HistoryAware,Routing L1 change,0.0184,0.0184083236381411,8.323638141100043e-06,5.00001e-05,matched,017/matched_history_probe_summary.csv,final_distribution_L1_change
+66,2,3,DenseWorld,Mean rollout MSE,0.0987,0.0986840054392814,1.5994560718601836e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,2,4,DenseWorld,Late MSE,0.1358,0.1358162462711334,1.6246271133391055e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,3,3,DenseWorld,Mean rollout MSE,0.0987,0.0986840054392814,1.5994560718601836e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,3,4,DenseWorld,Late MSE,0.1358,0.1358162462711334,1.6246271133391055e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,4,3,DenseWorld,Mean rollout MSE,0.0987,0.0986840054392814,1.5994560718601836e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,4,4,DenseWorld,Late MSE,0.1358,0.1358162462711334,1.6246271133391055e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,5,3,DenseWorld,Mean rollout MSE,0.0987,0.0986840054392814,1.5994560718601836e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,5,4,DenseWorld,Late MSE,0.1358,0.1358162462711334,1.6246271133391055e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,6,3,StaticWorldMoE,Mean rollout MSE,0.1090,0.1089711003005504,2.8899699449594363e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,6,4,StaticWorldMoE,Late MSE,0.1393,0.1393138840794563,1.388407945629444e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,7,3,StaticWorldMoE,Mean rollout MSE,0.1745,0.1744747087359428,2.5291264057175633e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,7,4,StaticWorldMoE,Late MSE,0.2856,0.2855744361877441,2.5563812255935403e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,8,3,StaticWorldMoE,Mean rollout MSE,0.2108,0.2107786983251571,2.130167484287737e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,8,4,StaticWorldMoE,Late MSE,0.3778,0.3778073936700821,7.393670082067594e-06,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,9,3,StaticWorldMoE,Mean rollout MSE,0.0928,0.0928191915154457,1.9191515445701746e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,9,4,StaticWorldMoE,Late MSE,0.1129,0.1128677912056446,3.220879435540669e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,10,3,ComputationalBody,Mean rollout MSE,0.1066,0.1065951809287071,4.819071292905264e-06,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,10,4,ComputationalBody,Late MSE,0.1365,0.1364531815052032,4.6818494796818655e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,11,3,ComputationalBody,Mean rollout MSE,0.1235,0.1234560720622539,4.392793774610215e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,11,4,ComputationalBody,Late MSE,0.1819,0.1818870455026626,1.2954497337402948e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,12,3,ComputationalBody,Mean rollout MSE,0.1172,0.1172140687704086,1.4068770408603992e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,12,4,ComputationalBody,Late MSE,0.1650,0.1649598255753517,4.017442464832044e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,13,3,ComputationalBody,Mean rollout MSE,0.0999,0.0998838990926742,1.6100907325802827e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_mean
+66,13,4,ComputationalBody,Late MSE,0.1208,0.1207694001495838,3.0599850416201946e-05,5.00001e-05,matched,018B/scenario_summary.csv,MSE_late
+66,6,5,StaticWorldMoE,Final availability,1.000,1.0,0.0,0.000500001,matched,018B/scenario_summary.csv,final_availability
+66,7,5,StaticWorldMoE,Final availability,0.765,0.7649994492530823,5.50746917737932e-07,0.000500001,matched,018B/scenario_summary.csv,final_availability
+66,8,5,StaticWorldMoE,Final availability,0.765,0.7649994492530823,5.50746917737932e-07,0.000500001,matched,018B/scenario_summary.csv,final_availability
+66,9,5,StaticWorldMoE,Final availability,0.984,0.9840090274810792,9.027481079226796e-06,0.000500001,matched,018B/scenario_summary.csv,final_availability
+66,10,5,ComputationalBody,Final availability,1.000,1.0,0.0,0.000500001,matched,018B/scenario_summary.csv,final_availability
+66,11,5,ComputationalBody,Final availability,0.765,0.7649994492530823,5.50746917737932e-07,0.000500001,matched,018B/scenario_summary.csv,final_availability
+66,12,5,ComputationalBody,Final availability,0.765,0.7649994492530823,5.50746917737932e-07,0.000500001,matched,018B/scenario_summary.csv,final_availability
+66,13,5,ComputationalBody,Final availability,0.982,0.9820598661899568,5.986618995679205e-05,0.000500001,matched,018B/scenario_summary.csv,final_availability
+67,2,2,BodyAwareWorld,Shared-only rollout MSE,0.5868,0.5868426561355591,4.2656135559093755e-05,5.00001e-05,matched,018B/effector_necessity.csv,shared_only_MSE
+67,3,2,ComputationalBody,Shared-only rollout MSE,0.5530,0.553028404712677,2.840471267695488e-05,5.00001e-05,matched,018B/effector_necessity.csv,shared_only_MSE
+67,4,2,StaticWorldMoE,Shared-only rollout MSE,0.5917,0.591703861951828,3.861951827999199e-06,5.00001e-05,matched,018B/effector_necessity.csv,shared_only_MSE
+68,2,2,BodyAwareWorld,Failed effector Δweight,-0.0292,-0.0292043350636959,4.335063695900393e-06,5.00001e-05,matched,018B/redistribution.csv,failed_weight_change
+68,2,3,BodyAwareWorld,Nonfailed total Δweight,+0.0292,0.0292043359950184,4.335995018398681e-06,5.00001e-05,matched,018B/redistribution.csv,nonfailed_weight_gain
+68,2,4,BodyAwareWorld,Failed realized-load Δ,-0.2727,-0.2726725786924362,2.7421307563779695e-05,5.00001e-05,matched,018B/redistribution.csv,failed_realized_load_change
+68,3,2,ComputationalBody,Failed effector Δweight,-0.0479,-0.0479350220412015,3.502204120150315e-05,5.00001e-05,matched,018B/redistribution.csv,failed_weight_change
+68,3,3,ComputationalBody,Nonfailed total Δweight,+0.0479,0.0479350239038467,3.5023903846700954e-05,5.00001e-05,matched,018B/redistribution.csv,nonfailed_weight_gain
+68,3,4,ComputationalBody,Failed realized-load Δ,-0.3077,-0.3076883107423782,1.168925762179418e-05,5.00001e-05,matched,018B/redistribution.csv,failed_realized_load_change
+68,4,2,StaticWorldMoE,Failed effector Δweight,-0.0307,-0.0306922383606433,7.761639356701489e-06,5.00001e-05,matched,018B/redistribution.csv,failed_weight_change
+68,4,3,StaticWorldMoE,Nonfailed total Δweight,+0.0307,0.0306922364979982,7.763502001802147e-06,5.00001e-05,matched,018B/redistribution.csv,nonfailed_weight_gain
+68,4,4,StaticWorldMoE,Failed realized-load Δ,-0.2661,-0.2660799399018287,2.006009817129284e-05,5.00001e-05,matched,018B/redistribution.csv,failed_realized_load_change
+69,2,2,smooth,Dense MSE,0.164,0.164347656071186,0.0003476560711860033,0.000500001,matched,019/gain_normalization_comparison.csv,DenseWorld_MSE
+69,2,3,smooth,Body healthy,0.169,0.1694487631320953,0.00044876313209529783,0.000500001,matched,019/gain_normalization_comparison.csv,NormHealthy
+69,2,4,smooth,Body lesion,0.170,0.1699249818921089,7.501810789112273e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion
+69,2,5,smooth,Body fatigue,0.151,0.151146575808525,0.00014657580852500685,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue
+69,2,6,smooth,Healthy gain vs dense (%),-3.104,-3.103851422559881,0.0001485774401190909,0.000500001,matched,019/gain_normalization_comparison.csv,Norm_vs_Dense_gain_pct
+69,2,7,smooth,Lesion degradation (%),0.281,0.281039974096677,3.997409667699792e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion_degradation_pct
+69,2,8,smooth,Fatigue degradation (%),-10.801,-10.801015590360263,1.5590360263217917e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue_degradation_pct
+69,3,2,switch,Dense MSE,0.224,0.224387526512146,0.00038752651214599143,0.000500001,matched,019/gain_normalization_comparison.csv,DenseWorld_MSE
+69,3,3,switch,Body healthy,0.228,0.2276029363274574,0.000397063672542608,0.000500001,matched,019/gain_normalization_comparison.csv,NormHealthy
+69,3,4,switch,Body lesion,0.205,0.2052887231111526,0.0002887231111526056,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion
+69,3,5,switch,Body fatigue,0.200,0.2004946544766426,0.0004946544766425975,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue
+69,3,6,switch,Healthy gain vs dense (%),-1.433,-1.4329717276585707,2.827234142932511e-05,0.000500001,matched,019/gain_normalization_comparison.csv,Norm_vs_Dense_gain_pct
+69,3,7,switch,Lesion degradation (%),-9.804,-9.804009375433022,9.37543302192978e-06,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion_degradation_pct
+69,3,8,switch,Fatigue degradation (%),-11.910,-11.910339246156967,0.00033924615696712124,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue_degradation_pct
+69,4,2,curved,Dense MSE,0.463,0.4626429677009582,0.0003570322990418262,0.000500001,matched,019/gain_normalization_comparison.csv,DenseWorld_MSE
+69,4,3,curved,Body healthy,0.583,0.5829148441553116,8.515584468837822e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormHealthy
+69,4,4,curved,Body lesion,0.593,0.592890590429306,0.0001094095706939413,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion
+69,4,5,curved,Body fatigue,0.546,0.5459781885147095,2.18114852905682e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue
+69,4,6,curved,Healthy gain vs dense (%),-25.997,-25.996693962955547,0.0003060370444529781,0.000500001,matched,019/gain_normalization_comparison.csv,Norm_vs_Dense_gain_pct
+69,4,7,curved,Lesion degradation (%),1.711,1.7113556763938769,0.0003556763938767915,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion_degradation_pct
+69,4,8,curved,Fatigue degradation (%),-6.337,-6.33654400997905,0.00045599002094931507,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue_degradation_pct
+69,5,2,hidden_memory,Dense MSE,0.291,0.2910141944885254,1.419448852540972e-05,0.000500001,matched,019/gain_normalization_comparison.csv,DenseWorld_MSE
+69,5,3,hidden_memory,Body healthy,0.361,0.361179769039154,0.00017976903915400966,0.000500001,matched,019/gain_normalization_comparison.csv,NormHealthy
+69,5,4,hidden_memory,Body lesion,0.364,0.3640403896570205,4.0389657020523106e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion
+69,5,5,hidden_memory,Body fatigue,0.330,0.3295876234769821,0.00041237652301789884,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue
+69,5,6,hidden_memory,Healthy gain vs dense (%),-24.111,-24.110705209396677,0.0002947906033234915,0.000500001,matched,019/gain_normalization_comparison.csv,Norm_vs_Dense_gain_pct
+69,5,7,hidden_memory,Lesion degradation (%),0.792,0.7920212766835253,2.1276683525250917e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormLesion_degradation_pct
+69,5,8,hidden_memory,Fatigue degradation (%),-8.747,-8.74693110475608,6.889524392050816e-05,0.000500001,matched,019/gain_normalization_comparison.csv,NormFatigue_degradation_pct
+70,2,2,curved,Failed weight Δ,-0.256,-0.2556687220931053,0.00033127790689468917,0.000500001,matched,019/normalized_redistribution.csv,failed_weight_change
+70,2,3,curved,Nonfailed weight gain,0.256,0.2556673139333725,0.00033268606662750777,0.000500001,matched,019/normalized_redistribution.csv,nonfailed_weight_gain
+70,2,4,curved,Failed realized-load Δ,-0.300,-0.3003308773040771,0.00033087730407710403,0.000500001,matched,019/normalized_redistribution.csv,failed_realized_load_change
+70,3,2,hidden_memory,Failed weight Δ,-0.199,-0.1991656776517629,0.00016567765176289662,0.000500001,matched,019/normalized_redistribution.csv,failed_weight_change
+70,3,3,hidden_memory,Nonfailed weight gain,0.199,0.1991645153611898,0.0001645153611897765,0.000500001,matched,019/normalized_redistribution.csv,nonfailed_weight_gain
+70,3,4,hidden_memory,Failed realized-load Δ,-0.231,-0.2305818758904934,0.00041812410950661794,0.000500001,matched,019/normalized_redistribution.csv,failed_realized_load_change
+70,4,2,smooth,Failed weight Δ,-0.271,-0.2705405950546264,0.0004594049453736093,0.000500001,matched,019/normalized_redistribution.csv,failed_weight_change
+70,4,3,smooth,Nonfailed weight gain,0.271,0.2705399394035339,0.0004600605964661386,0.000500001,matched,019/normalized_redistribution.csv,nonfailed_weight_gain
+70,4,4,smooth,Failed realized-load Δ,-0.295,-0.2946985363960266,0.00030146360397337313,0.000500001,matched,019/normalized_redistribution.csv,failed_realized_load_change
+70,5,2,switch,Failed weight Δ,-0.204,-0.2041390165686607,0.00013901656866072143,0.000500001,matched,019/normalized_redistribution.csv,failed_weight_change
+70,5,3,switch,Nonfailed weight gain,0.204,0.2041380554437637,0.00013805544376371826,0.000500001,matched,019/normalized_redistribution.csv,nonfailed_weight_gain
+70,5,4,switch,Failed realized-load Δ,-0.228,-0.2284520119428634,0.00045201194286340063,0.000500001,matched,019/normalized_redistribution.csv,failed_realized_load_change
+71,2,2,smooth,Dense MSE,0.157,0.1574387177824974,0.00043871778249740534,0.000500001,matched,020/replicated_summary.csv,smooth; Dense; healthy MSE
+71,2,3,smooth,Baseline,0.142,0.1415794119238853,0.0004205880761146974,0.000500001,matched,020/replicated_summary.csv,smooth; Baseline; healthy MSE
+71,2,4,smooth,Dual,0.117,0.1173193603754043,0.0003193603754042956,0.000500001,matched,020/replicated_summary.csv,smooth; Dual; healthy MSE
+71,2,5,smooth,Dual vs Dense,-25.5%,-25.48252296015155,0.01747703984845117,0.050000100000000006,matched,020/replicated_scorecard.csv,smooth; Dual; vs_dense_pct
+71,2,6,smooth,Lesion Δ,+2.4%,2.4069469358526656,0.006946935852665703,0.050000100000000006,matched,020/replicated_scorecard.csv,smooth; Dual; lesion_deg_pct
+71,3,2,switch,Dense MSE,0.143,0.1426164247095585,0.0003835752904415013,0.000500001,matched,020/replicated_summary.csv,switch; Dense; healthy MSE
+71,3,3,switch,Baseline,0.133,0.132900658994913,9.934100508701693e-05,0.000500001,matched,020/replicated_summary.csv,switch; Baseline; healthy MSE
+71,3,4,switch,Dual,0.138,0.1382242515683173,0.00022425156831729076,0.000500001,matched,020/replicated_summary.csv,switch; Dual; healthy MSE
+71,3,5,switch,Dual vs Dense,-3.1%,-3.079710594474576,0.02028940552542391,0.050000100000000006,matched,020/replicated_scorecard.csv,switch; Dual; vs_dense_pct
+71,3,6,switch,Lesion Δ,+1.1%,1.086364945940254,0.013635054059746077,0.050000100000000006,matched,020/replicated_scorecard.csv,switch; Dual; lesion_deg_pct
+71,4,2,curved,Dense MSE,0.653,0.6531793773174286,0.000179377317428564,0.000500001,matched,020/replicated_summary.csv,curved; Dense; healthy MSE
+71,4,3,curved,Baseline,0.641,0.6411391198635101,0.00013911986351011763,0.000500001,matched,020/replicated_summary.csv,curved; Baseline; healthy MSE
+71,4,4,curved,Dual,0.554,0.5541644096374512,0.0001644096374511239,0.000500001,matched,020/replicated_summary.csv,curved; Dual; healthy MSE
+71,4,5,curved,Dual vs Dense,-15.2%,-15.15892435040224,0.04107564959775978,0.050000100000000006,matched,020/replicated_scorecard.csv,curved; Dual; vs_dense_pct
+71,4,6,curved,Lesion Δ,+0.8%,0.756023015625121,0.04397698437487907,0.050000100000000006,matched,020/replicated_scorecard.csv,curved; Dual; lesion_deg_pct
+71,5,2,hidden_memory,Dense MSE,0.330,0.3303316384553909,0.0003316384553908591,0.000500001,matched,020/replicated_summary.csv,hidden_memory; Dense; healthy MSE
+71,5,3,hidden_memory,Baseline,0.374,0.374128058552742,0.00012805855274200528,0.000500001,matched,020/replicated_summary.csv,hidden_memory; Baseline; healthy MSE
+71,5,4,hidden_memory,Dual,0.295,0.2946997433900833,0.00030025660991667147,0.000500001,matched,020/replicated_summary.csv,hidden_memory; Dual; healthy MSE
+71,5,5,hidden_memory,Dual vs Dense,-10.8%,-10.786703699324722,0.013296300675278871,0.050000100000000006,matched,020/replicated_scorecard.csv,hidden_memory; Dual; vs_dense_pct
+71,5,6,hidden_memory,Lesion Δ,+0.6%,0.6035506459155892,0.003550645915589179,0.050000100000000006,matched,020/replicated_scorecard.csv,hidden_memory; Dual; lesion_deg_pct
+73,2,2,continuous,Dense,0.057,0.0568350225856358,0.00016497741436419938,0.000500001,matched,021/cross_source_scorecard.csv,Dense_metric
+73,2,3,continuous,Body healthy,0.047,0.047164925543422,0.00016492554342199817,0.000500001,matched,021/cross_source_scorecard.csv,Body_healthy_metric
+73,2,4,continuous,Body lesion,0.048,0.0476739833724092,0.00032601662759080413,0.000500001,matched,021/cross_source_scorecard.csv,Body_lesion_metric
+73,2,5,continuous,Healthy gain vs Dense (%),17.014,17.01432778995279,0.0003277899527915906,0.000500001,matched,021/cross_source_scorecard.csv,Body_vs_Dense_gain_pct
+73,2,6,continuous,Lesion degradation (%),1.079,1.079314391196323,0.00031439119632303836,0.000500001,matched,021/cross_source_scorecard.csv,Lesion_degradation_pct
+73,3,2,event,Dense,2.929,2.9294392412359063,0.00043924123590644015,0.000500001,matched,021/cross_source_scorecard.csv,Dense_metric
+73,3,3,event,Body healthy,3.041,3.041142214428295,0.00014221442829498443,0.000500001,matched,021/cross_source_scorecard.csv,Body_healthy_metric
+73,3,4,event,Body lesion,3.036,3.035608053207397,0.0003919467926030151,0.000500001,matched,021/cross_source_scorecard.csv,Body_lesion_metric
+73,3,5,event,Healthy gain vs Dense (%),-3.813,-3.8131179380686553,0.00011793806865512124,0.000500001,matched,021/cross_source_scorecard.csv,Body_vs_Dense_gain_pct
+73,3,6,event,Lesion degradation (%),-0.182,-0.181976403294833,2.359670516699497e-05,0.000500001,matched,021/cross_source_scorecard.csv,Lesion_degradation_pct
+73,4,2,set,Dense,0.663,0.662565448067405,0.00043455193259500646,0.000500001,matched,021/cross_source_scorecard.csv,Dense_metric
+73,4,3,set,Body healthy,0.667,0.6672662821683016,0.00026628216830160145,0.000500001,matched,021/cross_source_scorecard.csv,Body_healthy_metric
+73,4,4,set,Body lesion,0.669,0.6689198857003993,8.011429960075311e-05,0.000500001,matched,021/cross_source_scorecard.csv,Body_lesion_metric
+73,4,5,set,Healthy gain vs Dense (%),-0.709,-0.7094897741209076,0.0004897741209076711,0.000500001,matched,021/cross_source_scorecard.csv,Body_vs_Dense_gain_pct
+73,4,6,set,Lesion degradation (%),0.248,0.2478176368696786,0.00018236313032141127,0.000500001,matched,021/cross_source_scorecard.csv,Lesion_degradation_pct
+73,5,2,graph,Dense,0.019,0.0187847800552845,0.0002152199447154994,0.000500001,matched,021/cross_source_scorecard.csv,Dense_metric
+73,5,3,graph,Body healthy,0.034,0.0335210019045255,0.0004789980954745046,0.000500001,matched,021/cross_source_scorecard.csv,Body_healthy_metric
+73,5,4,graph,Body lesion,0.035,0.0350853308019313,8.533080193129372e-05,0.000500001,matched,021/cross_source_scorecard.csv,Body_lesion_metric
+73,5,5,graph,Healthy gain vs Dense (%),-78.448,-78.44766777077847,0.0003322292215273137,0.000500001,matched,021/cross_source_scorecard.csv,Body_vs_Dense_gain_pct
+73,5,6,graph,Lesion degradation (%),4.667,4.666712832335014,0.0002871676649860433,0.000500001,matched,021/cross_source_scorecard.csv,Lesion_degradation_pct
+74,2,3,ComputationalBody_IDGraph,Rollout metric,0.0198,0.0197840269908986,1.5973009101402647e-05,5.00001e-05,matched,021/graph_adapter_repair_summary.csv,rollout_metric
+74,2,4,ComputationalBody_IDGraph,Late metric,0.0275,0.0275442566101749,4.425661017489965e-05,5.00001e-05,matched,021/graph_adapter_repair_summary.csv,late_metric
+74,3,3,ComputationalBody_IDGraph,Rollout metric,0.0190,0.0190014164386825,1.4164386825006592e-06,5.00001e-05,matched,021/graph_adapter_repair_summary.csv,rollout_metric
+74,3,4,ComputationalBody_IDGraph,Late metric,0.0256,0.0256482552116115,4.8255211611499677e-05,5.00001e-05,matched,021/graph_adapter_repair_summary.csv,late_metric
+74,4,3,DenseCore_IDGraph,Rollout metric,0.0153,0.0152721548537639,2.784514623609992e-05,5.00001e-05,matched,021/graph_adapter_repair_summary.csv,rollout_metric
+74,4,4,DenseCore_IDGraph,Late metric,0.0159,0.015889734805872,1.0265194128000754e-05,5.00001e-05,matched,021/graph_adapter_repair_summary.csv,late_metric
+75,2,3,ComputationalBody_IDGraph_long,Rollout metric,0.00906,0.0090576100734655,2.389926534500375e-06,5.000010000000001e-06,matched,021/graph_long_training_summary.csv,rollout_metric
+75,2,4,ComputationalBody_IDGraph_long,Late metric,0.00646,0.0064585565511758,1.4434488241994378e-06,5.000010000000001e-06,matched,021/graph_long_training_summary.csv,late_metric
+75,3,3,ComputationalBody_IDGraph_long,Rollout metric,0.01142,0.0114190429660745,9.570339254989096e-07,5.000010000000001e-06,matched,021/graph_long_training_summary.csv,rollout_metric
+75,3,4,ComputationalBody_IDGraph_long,Late metric,0.01336,0.0133557054214179,4.294578582100805e-06,5.000010000000001e-06,matched,021/graph_long_training_summary.csv,late_metric
+75,4,3,DenseCore_IDGraph_long,Rollout metric,0.00791,0.0079057829200544,4.2170799455995556e-06,5.000010000000001e-06,matched,021/graph_long_training_summary.csv,rollout_metric
+75,4,4,DenseCore_IDGraph_long,Late metric,0.00549,0.0054944613948464,4.461394846400242e-06,5.000010000000001e-06,matched,021/graph_long_training_summary.csv,late_metric
+76,2,2,continuous,Healthy gain vs Dense (%),17.0,17.01432778995279,0.014327789952790937,0.050000100000000006,matched,021/final_cross_source_scorecard.csv,Body_vs_Dense_gain_pct
+76,2,3,continuous,Lesion degradation (%),1.1,1.079314391196323,0.02068560880367709,0.050000100000000006,matched,021/final_cross_source_scorecard.csv,Lesion_degradation_pct
+76,3,2,event,Healthy gain vs Dense (%),-3.8,-3.8131179380686553,0.013117938068655466,0.050000100000000006,matched,021/final_cross_source_scorecard.csv,Body_vs_Dense_gain_pct
+76,3,3,event,Lesion degradation (%),-0.2,-0.181976403294833,0.01802359670516701,0.050000100000000006,matched,021/final_cross_source_scorecard.csv,Lesion_degradation_pct
+76,4,2,set,Healthy gain vs Dense (%),-0.7,-0.7094897741209076,0.00948977412090768,0.050000100000000006,matched,021/final_cross_source_scorecard.csv,Body_vs_Dense_gain_pct
+76,4,3,set,Lesion degradation (%),0.2,0.2478176368696786,0.047817636869678576,0.050000100000000006,matched,021/final_cross_source_scorecard.csv,Lesion_degradation_pct
+76,5,2,graph,Healthy gain vs Dense (%),-14.6,-14.569425508627209,0.030574491372791,0.050000100000000006,matched,021/graph_long_training_audit.csv,Body_vs_Dense_gain_pct
+76,5,3,graph,Lesion degradation (%),26.1,26.071258019010152,0.02874198098984948,0.050000100000000006,matched,021/graph_long_training_audit.csv,Lesion_degradation_pct
+77,2,2,Dolphins,LCC N,62,62.0,0.0,0.500001,matched,022/real_graph_geometry_metrics.csv,lcc_nodes
+77,2,3,Dolphins,Mean distance,3.357,3.357,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,avg_distance_lcc
+77,2,4,Dolphins,2-hop coverage,33.19%,33.19354838709677,0.0035483870967709663,0.00500001,matched,022/real_graph_geometry_metrics.csv,B2_fraction_lcc × 100
+77,2,5,Dolphins,4-hop coverage,77.52%,77.51612903225806,0.0038709677419319632,0.00500001,matched,022/real_graph_geometry_metrics.csv,B4_fraction_lcc × 100
+77,2,6,Dolphins,λ₂ (norm. Laplacian),0.0395,0.0395,0.0,5.00001e-05,matched,022/real_graph_geometry_metrics.csv,norm_laplacian_lambda2_lcc
+77,3,2,Email-Eu-core,LCC N,986,986.0,0.0,0.500001,matched,022/real_graph_geometry_metrics.csv,lcc_nodes
+77,3,3,Email-Eu-core,Mean distance,2.610,2.61,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,avg_distance_lcc
+77,3,4,Email-Eu-core,2-hop coverage,44.35%,44.34584178498986,0.004158215010143351,0.00500001,matched,022/real_graph_geometry_metrics.csv,B2_fraction_lcc × 100
+77,3,5,Email-Eu-core,4-hop coverage,99.61%,99.6105476673428,0.0005476673428006507,0.00500001,matched,022/real_graph_geometry_metrics.csv,B4_fraction_lcc × 100
+77,3,6,Email-Eu-core,λ₂ (norm. Laplacian),0.2122,0.2122,0.0,5.00001e-05,matched,022/real_graph_geometry_metrics.csv,norm_laplacian_lambda2_lcc
+77,4,2,ca-GrQc,LCC N,4158,4158.0,0.0,0.500001,matched,022/real_graph_geometry_metrics.csv,lcc_nodes
+77,4,3,ca-GrQc,Mean distance,6.065,6.065,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,avg_distance_lcc
+77,4,4,ca-GrQc,2-hop coverage,0.78%,0.77585377585377,0.004146224146230004,0.00500001,matched,022/real_graph_geometry_metrics.csv,B2_fraction_lcc × 100
+77,4,5,ca-GrQc,4-hop coverage,14.11%,14.11255411255411,0.0025541125541099774,0.00500001,matched,022/real_graph_geometry_metrics.csv,B4_fraction_lcc × 100
+77,4,6,ca-GrQc,λ₂ (norm. Laplacian),0.0215,0.0215,0.0,5.00001e-05,matched,022/real_graph_geometry_metrics.csv,norm_laplacian_lambda2_lcc
+77,5,2,Facebook Combined,LCC N,4039,4039.0,0.0,0.500001,matched,022/real_graph_geometry_metrics.csv,lcc_nodes
+77,5,3,Facebook Combined,Mean distance,3.667,3.667,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,avg_distance_lcc
+77,5,4,Facebook Combined,2-hop coverage,18.04%,18.04184204010893,0.0018420401089294103,0.00500001,matched,022/real_graph_geometry_metrics.csv,B2_fraction_lcc × 100
+77,5,5,Facebook Combined,4-hop coverage,78.69%,78.69002228274326,2.2282743259438575e-05,0.00500001,matched,022/real_graph_geometry_metrics.csv,B4_fraction_lcc × 100
+77,5,6,Facebook Combined,λ₂ (norm. Laplacian),0.0073,0.00731,9.999999999999593e-06,5.00001e-05,matched,022/real_graph_geometry_metrics.csv,norm_laplacian_lambda2_lcc
+77,6,2,Cora,LCC N,2485,2485.0,0.0,0.500001,matched,022/real_graph_geometry_metrics.csv,lcc_nodes
+77,6,3,Cora,Mean distance,6.269,6.269,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,avg_distance_lcc
+77,6,4,Cora,2-hop coverage,1.82%,1.8181086519114602,0.001891348088539857,0.00500001,matched,022/real_graph_geometry_metrics.csv,B2_fraction_lcc × 100
+77,6,5,Cora,4-hop coverage,16.57%,16.5682092555332,0.0017907444667990546,0.00500001,matched,022/real_graph_geometry_metrics.csv,B4_fraction_lcc × 100
+77,6,6,Cora,λ₂ (norm. Laplacian),0.0162,0.0162,0.0,5.00001e-05,matched,022/real_graph_geometry_metrics.csv,norm_laplacian_lambda2_lcc
+78,2,2,Dolphins,Mean degree,5.13,5.129,0.001000000000000334,0.00500001,matched,022/real_graph_geometry_metrics.csv,degree_mean
+78,2,3,Dolphins,Degree CV,0.572,0.572,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_cv
+78,2,4,Dolphins,Degree Gini,0.325,0.325,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_gini
+78,2,5,Dolphins,Degree assortativity,-0.044,-0.044,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_assortativity
+78,2,6,Dolphins,Clustering*,0.303,0.303,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,clustering_sample
+78,3,2,Email-Eu-core,Mean degree,32.58,32.584,0.0040000000000048885,0.00500001,matched,022/real_graph_geometry_metrics.csv,degree_mean
+78,3,3,Email-Eu-core,Degree CV,1.136,1.136,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_cv
+78,3,4,Email-Eu-core,Degree Gini,0.544,0.544,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_gini
+78,3,5,Email-Eu-core,Degree assortativity,0.032,0.032,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_assortativity
+78,3,6,Email-Eu-core,Clustering*,0.452,0.452,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,clustering_sample
+78,4,2,ca-GrQc,Mean degree,5.53,5.527,0.0030000000000001137,0.00500001,matched,022/real_graph_geometry_metrics.csv,degree_mean
+78,4,3,ca-GrQc,Degree CV,1.433,1.433,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_cv
+78,4,4,ca-GrQc,Degree Gini,0.555,0.555,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_gini
+78,4,5,ca-GrQc,Degree assortativity,0.703,0.703,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_assortativity
+78,4,6,ca-GrQc,Clustering*,0.687,0.687,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,clustering_sample
+78,5,2,Facebook Combined,Mean degree,43.69,43.691,0.0010000000000047748,0.00500001,matched,022/real_graph_geometry_metrics.csv,degree_mean
+78,5,3,Facebook Combined,Degree CV,1.200,1.2,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_cv
+78,5,4,Facebook Combined,Degree Gini,0.541,0.541,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_gini
+78,5,5,Facebook Combined,Degree assortativity,0.125,0.125,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_assortativity
+78,5,6,Facebook Combined,Clustering*,0.608,0.608,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,clustering_sample
+78,6,2,Cora,Mean degree,3.90,3.898,0.0019999999999997797,0.00500001,matched,022/real_graph_geometry_metrics.csv,degree_mean
+78,6,3,Cora,Degree CV,1.341,1.341,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_cv
+78,6,4,Cora,Degree Gini,0.405,0.405,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_gini
+78,6,5,Cora,Degree assortativity,-0.058,-0.058,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,degree_assortativity
+78,6,6,Cora,Clustering*,0.288,0.288,0.0,0.000500001,matched,022/real_graph_geometry_metrics.csv,clustering_sample
+79,2,2,Friendship edge,Feature cosine,0.386,0.386222,0.00022199999999999998,0.000500001,matched,023/facebook_attribute_summary.csv,edge_feature_cosine × 1
+79,2,3,Friendship edge,Feature Jaccard,0.229,0.228709,0.00029100000000001347,0.000500001,matched,023/facebook_attribute_summary.csv,edge_feature_jaccard × 1
+79,2,4,Friendship edge,Shared-circle fraction,48.47%,48.471599999999995,0.001599999999996271,0.00500001,matched,023/facebook_attribute_summary.csv,edge_shared_circle_fraction × 100
+79,3,2,Sampled non-edge,Feature cosine,0.355,0.354655,0.0003449999999999842,0.000500001,matched,023/facebook_attribute_summary.csv,random_nonedge_feature_cosine × 1
+79,3,3,Sampled non-edge,Feature Jaccard,0.206,0.206187,0.00018700000000002048,0.000500001,matched,023/facebook_attribute_summary.csv,random_nonedge_feature_jaccard × 1
+79,3,4,Sampled non-edge,Shared-circle fraction,14.93%,14.9341,0.004100000000001103,0.00500001,matched,023/facebook_attribute_summary.csv,random_nonedge_shared_circle_fraction × 100
+80,2,2,Repeated-event fraction,Value,92.50%,92.4988,0.0011999999999972033,0.00500001,matched,023/email_temporal_summary.csv,repeated_event_fraction
+80,3,2,Events per unique directed dyad,Value,13.33,13.3312,0.001200000000000756,0.00500001,matched,023/email_temporal_summary.csv,events_per_unique_dyad
+80,4,2,Dyad event-count Gini,Value,0.777,0.777169,0.00016899999999997473,0.000500001,matched,023/email_temporal_summary.csv,dyad_event_count_gini
+80,5,2,Top 10% dyads' share of events,Value,69.80%,69.8018,0.0018000000000029104,0.00500001,matched,023/email_temporal_summary.csv,top10pct_dyads_event_share
+80,6,2,Top 1% dyads' share of events,Value,26.56%,26.5579,0.0020999999999986585,0.00500001,matched,023/email_temporal_summary.csv,top1pct_dyads_event_share
+80,7,2,Median sender burstiness,Value,0.569,0.569014,1.4000000000069512e-05,0.000500001,matched,023/email_temporal_summary.csv,sender_burstiness_median
+80,8,2,Median dyad burstiness,Value,0.216,0.21595,4.999999999999449e-05,0.000500001,matched,023/email_temporal_summary.csv,dyad_burstiness_median
+80,9,2,Median repeat-dyad gap,Value,27.53 h,27.5289,0.001100000000000989,0.00500001,matched,023/email_temporal_summary.csv,repeat_dyad_gap_median_hours
+80,10,2,Consecutive 30-day edge-set Jaccard,Value,0.211,0.211409,0.00040900000000002046,0.000500001,matched,023/email_temporal_summary.csv,consecutive_30d_edge_jaccard_mean
+80,11,2,Prior-window edge retention,Value,32.61%,32.6136,0.0035999999999987153,0.00500001,matched,023/email_temporal_summary.csv,prior_window_edge_retention_mean
+80,12,2,Current-window new-edge fraction,Value,36.40%,36.4021,0.0020999999999986585,0.00500001,matched,023/email_temporal_summary.csv,current_window_new_edge_fraction_mean
+81,2,2,Mean absolute rating,Positive,1.97,1.965313,0.004686999999999886,0.00500001,matched,023/bitcoin_edge_attribute_summary.csv,positive_absolute_rating_mean
+81,2,3,Mean absolute rating,Negative,7.56,7.557395,0.0026049999999999685,0.00500001,matched,023/bitcoin_edge_attribute_summary.csv,negative_absolute_rating_mean
+81,3,2,Mean common neighbors,Positive,4.61,4.610353,0.00035299999999960363,0.00500001,matched,023/bitcoin_edge_attribute_summary.csv,positive_edge_common_neighbors_mean
+81,3,3,Mean common neighbors,Negative,5.45,5.445692,0.0043079999999999785,0.00500001,matched,023/bitcoin_edge_attribute_summary.csv,negative_edge_common_neighbors_mean
+81,4,2,Median common neighbors,Positive,2,2.0,0.0,0.500001,matched,023/bitcoin_edge_attribute_summary.csv,positive_edge_common_neighbors_median
+81,4,3,Median common neighbors,Negative,3,3.0,0.0,0.500001,matched,023/bitcoin_edge_attribute_summary.csv,negative_edge_common_neighbors_median
+81,5,2,Mean endpoint degree geometric mean,Positive,39.41,39.410389,0.0003890000000055238,0.00500001,matched,023/bitcoin_edge_attribute_summary.csv,positive_endpoint_degree_geomean
+81,5,3,Mean endpoint degree geometric mean,Negative,42.13,42.128184,0.0018160000000051468,0.00500001,matched,023/bitcoin_edge_attribute_summary.csv,negative_endpoint_degree_geomean
+82,2,1,7 d,Window,7 d,7.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,window_days
+82,2,2,7 d,Complete windows,75,75.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,n_windows
+82,2,3,7 d,Median coverage,10.0%,10.0,0.0,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_coverage × 100
+82,2,4,7 d,Active partners,3,3.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,median_active_partners
+82,2,5,7 d,Effective partners,2.67,2.6666666666666665,0.0033333333333334103,0.00500001,matched,024/active_neighbour_scale.csv,median_effective_partners
+82,2,6,7 d,Effective static coverage,7.6%,7.63790664780763,0.0379066478076302,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_effective_static_coverage × 100
+82,3,1,14 d,Window,14 d,14.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,window_days
+82,3,2,14 d,Complete windows,37,37.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,n_windows
+82,3,3,14 d,Median coverage,14.8%,14.814814814814811,0.014814814814810617,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_coverage × 100
+82,3,4,14 d,Active partners,5,5.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,median_active_partners
+82,3,5,14 d,Effective partners,3.13,3.125270562770563,0.004729437229436861,0.00500001,matched,024/active_neighbour_scale.csv,median_effective_partners
+82,3,6,14 d,Effective static coverage,9.9%,9.851874304539091,0.04812569546090906,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_effective_static_coverage × 100
+82,4,1,30 d,Window,30 d,30.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,window_days
+82,4,2,30 d,Complete windows,17,17.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,n_windows
+82,4,3,30 d,Median coverage,22.5%,22.5,0.0,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_coverage × 100
+82,4,4,30 d,Active partners,7,7.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,median_active_partners
+82,4,5,30 d,Effective partners,3.70,3.7037037037037033,0.0037037037037030984,0.00500001,matched,024/active_neighbour_scale.csv,median_effective_partners
+82,4,6,30 d,Effective static coverage,12.6%,12.6230916857351,0.023091685735099787,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_effective_static_coverage × 100
+82,5,1,60 d,Window,60 d,60.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,window_days
+82,5,2,60 d,Complete windows,8,8.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,n_windows
+82,5,3,60 d,Median coverage,32.9%,32.87671232876712,0.023287671232878893,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_coverage × 100
+82,5,4,60 d,Active partners,9,9.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,median_active_partners
+82,5,5,60 d,Effective partners,4.23,4.232,0.0019999999999997797,0.00500001,matched,024/active_neighbour_scale.csv,median_effective_partners
+82,5,6,60 d,Effective static coverage,15.8%,15.78947368421052,0.010526315789480378,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_effective_static_coverage × 100
+82,6,1,90 d,Window,90 d,90.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,window_days
+82,6,2,90 d,Complete windows,5,5.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,n_windows
+82,6,3,90 d,Median coverage,40.0%,40.0,0.0,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_coverage × 100
+82,6,4,90 d,Active partners,10,10.0,0.0,0.500001,matched,024/active_neighbour_scale.csv,median_active_partners
+82,6,5,90 d,Effective partners,4.49,4.487655025488854,0.002344974511146347,0.00500001,matched,024/active_neighbour_scale.csv,median_effective_partners
+82,6,6,90 d,Effective static coverage,17.7%,17.68679150014313,0.013208499856869338,0.050000100000000006,matched,024/active_neighbour_scale.csv,median_effective_static_coverage × 100
+83,2,1,7 d,Window,7 d,7.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,window_days
+83,2,2,7 d,Node cosine,0.866,0.8660784008706954,7.840087069543866e-05,0.000500001,matched,024/temporal_state_geometry.csv,node_consecutive_cosine
+83,2,3,7 d,Dyad cosine,0.494,0.4944619542018765,0.00046195420187650216,0.000500001,matched,024/temporal_state_geometry.csv,dyad_consecutive_cosine
+83,2,4,7 d,Node r95,55,55.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,node_r95
+83,2,5,7 d,Dyad r95,64,64.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,dyad_r95
+83,2,6,7 d,Node entropy rank,25.24,25.237484216006614,0.0025157839933847015,0.00500001,matched,024/temporal_state_geometry.csv,node_entropy_effective_rank
+83,2,7,7 d,Dyad entropy rank,56.25,56.247251571947885,0.0027484280521150595,0.00500001,matched,024/temporal_state_geometry.csv,dyad_entropy_effective_rank
+83,3,1,14 d,Window,14 d,14.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,window_days
+83,3,2,14 d,Node cosine,0.923,0.9229945893822216,5.41061777847851e-06,0.000500001,matched,024/temporal_state_geometry.csv,node_consecutive_cosine
+83,3,3,14 d,Dyad cosine,0.597,0.5965347607546566,0.0004652392453433629,0.000500001,matched,024/temporal_state_geometry.csv,dyad_consecutive_cosine
+83,3,4,14 d,Node r95,29,29.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,node_r95
+83,3,5,14 d,Dyad r95,33,33.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,dyad_r95
+83,3,6,14 d,Node entropy rank,16.03,16.025300546671527,0.004699453328473879,0.00500001,matched,024/temporal_state_geometry.csv,node_entropy_effective_rank
+83,3,7,14 d,Dyad entropy rank,29.24,29.23877759914003,0.0012224008599694969,0.00500001,matched,024/temporal_state_geometry.csv,dyad_entropy_effective_rank
+83,4,1,30 d,Window,30 d,30.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,window_days
+83,4,2,30 d,Node cosine,0.952,0.9516159612749628,0.0003840387250371169,0.000500001,matched,024/temporal_state_geometry.csv,node_consecutive_cosine
+83,4,3,30 d,Dyad cosine,0.683,0.6827241999674496,0.00027580003255045504,0.000500001,matched,024/temporal_state_geometry.csv,dyad_consecutive_cosine
+83,4,4,30 d,Node r95,13,13.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,node_r95
+83,4,5,30 d,Dyad r95,15,15.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,dyad_r95
+83,4,6,30 d,Node entropy rank,8.40,8.395993985593687,0.0040060144063129854,0.00500001,matched,024/temporal_state_geometry.csv,node_entropy_effective_rank
+83,4,7,30 d,Dyad entropy rank,13.55,13.553405689972422,0.0034056899724212997,0.00500001,matched,024/temporal_state_geometry.csv,dyad_entropy_effective_rank
+83,5,1,60 d,Window,60 d,60.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,window_days
+83,5,2,60 d,Node cosine,0.962,0.962335311974309,0.00033531197430902715,0.000500001,matched,024/temporal_state_geometry.csv,node_consecutive_cosine
+83,5,3,60 d,Dyad cosine,0.743,0.7428753307359842,0.00012466926401577538,0.000500001,matched,024/temporal_state_geometry.csv,dyad_consecutive_cosine
+83,5,4,60 d,Node r95,6,6.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,node_r95
+83,5,5,60 d,Dyad r95,7,7.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,dyad_r95
+83,5,6,60 d,Node entropy rank,5.08,5.075561735888028,0.00443826411197179,0.00500001,matched,024/temporal_state_geometry.csv,node_entropy_effective_rank
+83,5,7,60 d,Dyad entropy rank,6.38,6.379627346630082,0.00037265336991776365,0.00500001,matched,024/temporal_state_geometry.csv,dyad_entropy_effective_rank
+83,6,1,90 d,Window,90 d,90.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,window_days
+83,6,2,90 d,Node cosine,0.965,0.964569389926676,0.00043061007332401147,0.000500001,matched,024/temporal_state_geometry.csv,node_consecutive_cosine
+83,6,3,90 d,Dyad cosine,0.766,0.7664131293870042,0.00041312938700421853,0.000500001,matched,024/temporal_state_geometry.csv,dyad_consecutive_cosine
+83,6,4,90 d,Node r95,4,4.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,node_r95
+83,6,5,90 d,Dyad r95,4,4.0,0.0,0.500001,matched,024/temporal_state_geometry.csv,dyad_r95
+83,6,6,90 d,Node entropy rank,3.20,3.202021134583533,0.002021134583532813,0.00500001,matched,024/temporal_state_geometry.csv,node_entropy_effective_rank
+83,6,7,90 d,Dyad entropy rank,3.79,3.79313592249776,0.0031359224977598466,0.00500001,matched,024/temporal_state_geometry.csv,dyad_entropy_effective_rank
+84,2,2,1–6,Nodes,247,247.0,0.0,0.500001,matched,024/degree_strata_30d.csv,nodes
+84,2,3,1–6,Median coverage,33.3%,33.33333333333333,0.03333333333333144,0.050000100000000006,matched,024/degree_strata_30d.csv,median_coverage × 100
+84,2,4,1–6,Active next month,50.6%,50.56433408577878,0.03566591422121945,0.050000100000000006,matched,024/degree_strata_30d.csv,active_next_window_fraction × 100
+84,2,5,1–6,Median partner retention,1.000,1.0,0.0,0.000500001,matched,024/degree_strata_30d.csv,median_partner_retention
+84,3,2,7–22,Nodes,252,252.0,0.0,0.500001,matched,024/degree_strata_30d.csv,nodes
+84,3,3,7–22,Median coverage,21.1%,21.05263157894736,0.04736842105264216,0.050000100000000006,matched,024/degree_strata_30d.csv,median_coverage × 100
+84,3,4,7–22,Active next month,87.5%,87.49138525155065,0.008614748449346621,0.050000100000000006,matched,024/degree_strata_30d.csv,active_next_window_fraction × 100
+84,3,5,7–22,Median partner retention,0.500,0.5,0.0,0.000500001,matched,024/degree_strata_30d.csv,median_partner_retention
+84,4,2,23–44,Nodes,240,240.0,0.0,0.500001,matched,024/degree_strata_30d.csv,nodes
+84,4,3,23–44,Median coverage,21.4%,21.42857142857142,0.028571428571421364,0.050000100000000006,matched,024/degree_strata_30d.csv,median_coverage × 100
+84,4,4,23–44,Active next month,98.5%,98.52818661482921,0.02818661482920959,0.050000100000000006,matched,024/degree_strata_30d.csv,active_next_window_fraction × 100
+84,4,5,23–44,Median partner retention,0.571,0.5714285714285714,0.0004285714285714448,0.000500001,matched,024/degree_strata_30d.csv,median_partner_retention
+84,5,2,45–77,Nodes,147,147.0,0.0,0.500001,matched,024/degree_strata_30d.csv,nodes
+84,5,3,45–77,Median coverage,22.2%,22.22222222222222,0.022222222222222143,0.050000100000000006,matched,024/degree_strata_30d.csv,median_coverage × 100
+84,5,4,45–77,Active next month,99.3%,99.256993006993,0.04300699300699762,0.050000100000000006,matched,024/degree_strata_30d.csv,active_next_window_fraction × 100
+84,5,5,45–77,Median partner retention,0.562,0.5625,0.0004999999999999449,0.000500001,matched,024/degree_strata_30d.csv,median_partner_retention
+84,6,2,78+,Nodes,100,100.0,0.0,0.500001,matched,024/degree_strata_30d.csv,nodes
+84,6,3,78+,Median coverage,23.5%,23.49726775956284,0.0027322404371616926,0.050000100000000006,matched,024/degree_strata_30d.csv,median_coverage × 100
+84,6,4,78+,Active next month,99.9%,99.87253027405993,0.02746972594007957,0.050000100000000006,matched,024/degree_strata_30d.csv,active_next_window_fraction × 100
+84,6,5,78+,Median partner retention,0.570,0.5698924731182796,0.00010752688172033231,0.000500001,matched,024/degree_strata_30d.csv,median_partner_retention
+85,2,2,within partition,Active dyads,"13,488",13488.0,0.0,0.500001,matched,024/community_activity_30d.csv,active_dyads
+85,2,3,within partition,Mean events/dyad,17.62,17.615806642941873,0.0041933570581278445,0.00500001,matched,024/community_activity_30d.csv,mean_events_per_active_dyad
+85,2,4,within partition,Median lifetime,118.92 d,118.91975694444444,0.00024305555555770297,0.00500001,matched,024/community_activity_30d.csv,median_lifetime_days
+85,2,5,within partition,Mean Jaccard,0.373,0.3730819031861492,8.190318614920145e-05,0.000500001,matched,024/community_activity_30d.csv,mean_jaccard
+85,2,6,within partition,Mean retention,0.560,0.5601867640521881,0.0001867640521880931,0.000500001,matched,024/community_activity_30d.csv,mean_retention
+85,3,2,cross partition,Active dyads,"10,772",10772.0,0.0,0.500001,matched,024/community_activity_30d.csv,active_dyads
+85,3,3,cross partition,Mean events/dyad,7.34,7.341904938730041,0.0019049387300409393,0.00500001,matched,024/community_activity_30d.csv,mean_events_per_active_dyad
+85,3,4,cross partition,Median lifetime,4.80 d,4.796857638888889,0.0031423611111112137,0.00500001,matched,024/community_activity_30d.csv,median_lifetime_days
+85,3,5,cross partition,Mean Jaccard,0.233,0.2329949619034933,5.0380965067042816e-06,0.000500001,matched,024/community_activity_30d.csv,mean_jaccard
+85,3,6,cross partition,Mean retention,0.393,0.3927449647659926,0.0002550352340074391,0.000500001,matched,024/community_activity_30d.csv,mean_retention
+86,2,1,7 d,Window,7 d,7.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,window_days
+86,2,2,7 d,Raw coverage,10.0%,10.0,0.0,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_coverage × 100
+86,2,3,7 d,Effective coverage,7.6%,7.63790664780763,0.0379066478076302,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_effective_static_coverage × 100
+86,2,4,7 d,Active partners,3,3.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,median_active_partners
+86,2,5,7 d,Effective partners,2.67,2.6666666666666665,0.0033333333333334103,0.00500001,matched,025/rg025_multiscale_renormalization.csv,median_effective_partners
+86,2,6,7 d,Node cosine,0.866,0.8660784008706954,7.840087069543866e-05,0.000500001,matched,025/rg025_multiscale_renormalization.csv,node_consecutive_cosine
+86,2,7,7 d,Dyad cosine,0.494,0.4944619542018765,0.00046195420187650216,0.000500001,matched,025/rg025_multiscale_renormalization.csv,dyad_consecutive_cosine
+86,2,8,7 d,Retention,39.6%,39.58853359796824,0.011466402031764744,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,retention × 100
+86,2,9,7 d,New edges,60.7%,60.74664446341394,0.046644463413940684,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,new_edge_fraction × 100
+86,3,1,14 d,Window,14 d,14.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,window_days
+86,3,2,14 d,Raw coverage,14.8%,14.814814814814811,0.014814814814810617,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_coverage × 100
+86,3,3,14 d,Effective coverage,9.9%,9.851874304539091,0.04812569546090906,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_effective_static_coverage × 100
+86,3,4,14 d,Active partners,5,5.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,median_active_partners
+86,3,5,14 d,Effective partners,3.13,3.125270562770563,0.004729437229436861,0.00500001,matched,025/rg025_multiscale_renormalization.csv,median_effective_partners
+86,3,6,14 d,Node cosine,0.923,0.9229945893822216,5.41061777847851e-06,0.000500001,matched,025/rg025_multiscale_renormalization.csv,node_consecutive_cosine
+86,3,7,14 d,Dyad cosine,0.597,0.5965347607546566,0.0004652392453433629,0.000500001,matched,025/rg025_multiscale_renormalization.csv,dyad_consecutive_cosine
+86,3,8,14 d,Retention,45.3%,45.25706507766617,0.042934922333827785,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,retention × 100
+86,3,9,14 d,New edges,54.9%,54.886367357439426,0.01363264256057306,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,new_edge_fraction × 100
+86,4,1,30 d,Window,30 d,30.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,window_days
+86,4,2,30 d,Raw coverage,22.5%,22.5,0.0,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_coverage × 100
+86,4,3,30 d,Effective coverage,12.6%,12.6230916857351,0.023091685735099787,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_effective_static_coverage × 100
+86,4,4,30 d,Active partners,7,7.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,median_active_partners
+86,4,5,30 d,Effective partners,3.70,3.7037037037037033,0.0037037037037030984,0.00500001,matched,025/rg025_multiscale_renormalization.csv,median_effective_partners
+86,4,6,30 d,Node cosine,0.952,0.9516159612749628,0.0003840387250371169,0.000500001,matched,025/rg025_multiscale_renormalization.csv,node_consecutive_cosine
+86,4,7,30 d,Dyad cosine,0.683,0.6827241999674496,0.00027580003255045504,0.000500001,matched,025/rg025_multiscale_renormalization.csv,dyad_consecutive_cosine
+86,4,8,30 d,Retention,50.5%,50.47934421106615,0.020655788933851227,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,retention × 100
+86,4,9,30 d,New edges,50.6%,50.61862511222063,0.018625112220625795,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,new_edge_fraction × 100
+86,5,1,60 d,Window,60 d,60.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,window_days
+86,5,2,60 d,Raw coverage,32.9%,32.87671232876712,0.023287671232878893,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_coverage × 100
+86,5,3,60 d,Effective coverage,15.8%,15.78947368421052,0.010526315789480378,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_effective_static_coverage × 100
+86,5,4,60 d,Active partners,9,9.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,median_active_partners
+86,5,5,60 d,Effective partners,4.23,4.232,0.0019999999999997797,0.00500001,matched,025/rg025_multiscale_renormalization.csv,median_effective_partners
+86,5,6,60 d,Node cosine,0.962,0.962335311974309,0.00033531197430902715,0.000500001,matched,025/rg025_multiscale_renormalization.csv,node_consecutive_cosine
+86,5,7,60 d,Dyad cosine,0.743,0.7428753307359842,0.00012466926401577538,0.000500001,matched,025/rg025_multiscale_renormalization.csv,dyad_consecutive_cosine
+86,5,8,60 d,Retention,54.3%,54.276215032262456,0.023784967737540796,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,retention × 100
+86,5,9,60 d,New edges,47.3%,47.320545340798695,0.020545340798697964,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,new_edge_fraction × 100
+86,6,1,90 d,Window,90 d,90.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,window_days
+86,6,2,90 d,Raw coverage,40.0%,40.0,0.0,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_coverage × 100
+86,6,3,90 d,Effective coverage,17.7%,17.68679150014313,0.013208499856869338,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,median_effective_static_coverage × 100
+86,6,4,90 d,Active partners,10,10.0,0.0,0.500001,matched,025/rg025_multiscale_renormalization.csv,median_active_partners
+86,6,5,90 d,Effective partners,4.49,4.487655025488854,0.002344974511146347,0.00500001,matched,025/rg025_multiscale_renormalization.csv,median_effective_partners
+86,6,6,90 d,Node cosine,0.965,0.964569389926676,0.00043061007332401147,0.000500001,matched,025/rg025_multiscale_renormalization.csv,node_consecutive_cosine
+86,6,7,90 d,Dyad cosine,0.766,0.7664131293870042,0.00041312938700421853,0.000500001,matched,025/rg025_multiscale_renormalization.csv,dyad_consecutive_cosine
+86,6,8,90 d,Retention,55.2%,55.16592895107062,0.03407104892938406,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,retention × 100
+86,6,9,90 d,New edges,46.0%,46.0188082984383,0.018808298438301563,0.050000100000000006,matched,025/rg025_multiscale_renormalization.csv,new_edge_fraction × 100
+87,2,2,Hash,Byte-load CV,0.291,0.2913947501111364,0.00039475011113643266,0.000500001,matched,026/do026_summary_final.json,partition_16; hash; byte_load_cv × 1
+87,2,3,Hash,Largest shard,9.24%,9.23958877153528,0.00041122846472063657,0.00500001,matched,026/do026_summary_final.json,partition_16; hash; max_byte_share × 100
+87,2,4,Hash,Semantic edge cut,93.3%,93.25762952448544,0.0423704755145593,0.050000100000000006,matched,026/do026_summary_final.json,partition_16; hash; semantic_knn_edge_cut × 100
+87,3,2,Chapter-greedy,Byte-load CV,0.345,0.3451835243780013,0.00018352437800134291,0.000500001,matched,026/do026_summary_final.json,partition_16; chapter_greedy; byte_load_cv × 1
+87,3,3,Chapter-greedy,Largest shard,14.56%,14.55614232360146,0.0038576763985407325,0.00500001,matched,026/do026_summary_final.json,partition_16; chapter_greedy; max_byte_share × 100
+87,3,4,Chapter-greedy,Semantic edge cut,41.5%,41.51880766501065,0.018807665010648122,0.050000100000000006,matched,026/do026_summary_final.json,partition_16; chapter_greedy; semantic_knn_edge_cut × 100
+87,4,2,Semantic K-means,Byte-load CV,1.347,1.3465201589341118,0.00047984106588816466,0.000500001,matched,026/do026_summary_final.json,partition_16; semantic_kmeans; byte_load_cv × 1
+87,4,3,Semantic K-means,Largest shard,32.58%,32.57549897594474,0.00450102405525854,0.00500001,matched,026/do026_summary_final.json,partition_16; semantic_kmeans; max_byte_share × 100
+87,4,4,Semantic K-means,Semantic edge cut,31.8%,31.79559971611072,0.004400283889282264,0.050000100000000006,matched,026/do026_summary_final.json,partition_16; semantic_kmeans; semantic_knn_edge_cut × 100
+87,5,2,Balanced semantic,Byte-load CV,0.156,0.1564409011619443,0.0004409011619443126,0.000500001,matched,026/do026_summary_final.json,partition_16; balanced_svd_semantic; byte_load_cv × 1
+87,5,3,Balanced semantic,Largest shard,6.75%,6.749226938677159,0.0007730613228407179,0.00500001,matched,026/do026_summary_final.json,partition_16; balanced_svd_semantic; max_byte_share × 100
+87,5,4,Balanced semantic,Semantic edge cut,52.4%,52.384675527756066,0.015324472243932519,0.050000100000000006,matched,026/do026_summary_final.json,partition_16; balanced_svd_semantic; semantic_knn_edge_cut × 100
+88,2,2,1/16,Body scored,5.9%,5.85322580645161,0.04677419354839074,0.050000100000000006,matched,026/do026_compact_router.csv,mean_scored_fraction × 100
+88,2,3,1/16,Mean recall@5,48.8%,48.84,0.04000000000000625,0.050000100000000006,matched,026/do026_compact_router.csv,mean_recall_at5 × 100
+88,2,4,1/16,Exact top-5 set,9.6%,9.6,0.0,0.050000100000000006,matched,026/do026_compact_router.csv,exact_top5_set_rate × 100
+88,3,2,2/16,Body scored,11.7%,11.7016129032258,0.001612903225801432,0.050000100000000006,matched,026/do026_compact_router.csv,mean_scored_fraction × 100
+88,3,3,2/16,Mean recall@5,70.1%,70.12,0.020000000000010232,0.050000100000000006,matched,026/do026_compact_router.csv,mean_recall_at5 × 100
+88,3,4,2/16,Exact top-5 set,26.4%,26.400000000000002,3.552713678800501e-15,0.050000100000000006,matched,026/do026_compact_router.csv,exact_top5_set_rate × 100
+88,4,2,4/16,Body scored,23.8%,23.83494623655914,0.034946236559139976,0.050000100000000006,matched,026/do026_compact_router.csv,mean_scored_fraction × 100
+88,4,3,4/16,Mean recall@5,88.4%,88.44,0.03999999999999204,0.050000100000000006,matched,026/do026_compact_router.csv,mean_recall_at5 × 100
+88,4,4,4/16,Exact top-5 set,58.2%,58.199999999999996,7.105427357601002e-15,0.050000100000000006,matched,026/do026_compact_router.csv,exact_top5_set_rate × 100
+88,5,2,8/16,Body scored,47.1%,47.055913978494615,0.044086021505385986,0.050000100000000006,matched,026/do026_compact_router.csv,mean_scored_fraction × 100
+88,5,3,8/16,Mean recall@5,98.4%,98.4,0.0,0.050000100000000006,matched,026/do026_compact_router.csv,mean_recall_at5 × 100
+88,5,4,8/16,Exact top-5 set,92.2%,92.2,0.0,0.050000100000000006,matched,026/do026_compact_router.csv,exact_top5_set_rate × 100
+89,2,2,Centralized best,Workers,1,1.0,0.0,0.500001,matched,026/do026_process_benchmark.csv,centralized; batch_size=256; workers
+89,2,3,Centralized best,Dispatch batch,256,256.0,0.0,0.500001,matched,026/do026_process_benchmark.csv,centralized; batch_size=256; batch_size
+89,2,4,Centralized best,Queries/s,7667,7666.9937979702945,0.006202029705491441,0.500001,matched,026/do026_process_benchmark.csv,centralized; batch_size=256; qps
+89,3,2,8-worker broadcast,Workers,8,8.0,0.0,0.500001,matched,026/do026_process_benchmark.csv,distributed_broadcast; batch_size=256; workers
+89,3,3,8-worker broadcast,Dispatch batch,256,256.0,0.0,0.500001,matched,026/do026_process_benchmark.csv,distributed_broadcast; batch_size=256; batch_size
+89,3,4,8-worker broadcast,Queries/s,2853,2852.5536125403746,0.4463874596253845,0.500001,matched,026/do026_process_benchmark.csv,distributed_broadcast; batch_size=256; qps
+89,4,2,8-worker routed top-2,Workers,8,8.0,0.0,0.500001,matched,026/do026_routed_process_benchmark.csv,routed_top2; workers
+89,4,4,8-worker routed top-2,Queries/s,3694,3693.894621847465,0.10537815253519511,0.500001,matched,026/do026_routed_process_benchmark.csv,routed_top2; qps
+89,5,2,8-worker routed top-4,Workers,8,8.0,0.0,0.500001,matched,026/do026_routed_process_benchmark.csv,routed_top4; workers
+89,5,4,8-worker routed top-4,Queries/s,2805,2804.7571579279547,0.24284207204527775,0.500001,matched,026/do026_routed_process_benchmark.csv,routed_top4; qps
+89,6,2,8-worker routed top-8,Workers,8,8.0,0.0,0.500001,matched,026/do026_routed_process_benchmark.csv,routed_top8; workers
+89,6,4,8-worker routed top-8,Queries/s,2089,2088.64497055645,0.35502944354993815,0.500001,matched,026/do026_routed_process_benchmark.csv,routed_top8; qps
+90,2,2,No replica,Sparse-state overhead,0.0%,0.0,0.0,0.050000100000000006,matched,027/do027_failure_policy_summary.csv,storage_overhead_ratio × 100
+90,2,3,No replica,Mean failure recall@5,87.50%,87.5,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_recall × 100
+90,2,4,No replica,Worst recall@5,81.60%,81.6,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,worst_recall × 100
+90,2,5,No replica,Mean routed-top4 recall,82.57%,82.57,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_routed4_recall × 100
+90,3,2,Hot 25%,Sparse-state overhead,35.7%,35.73477433795599,0.03477433795598728,0.050000100000000006,matched,027/do027_failure_policy_summary.csv,storage_overhead_ratio × 100
+90,3,3,Hot 25%,Mean failure recall@5,94.62%,94.61500000000001,0.0049999999999954525,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_recall × 100
+90,3,4,Hot 25%,Worst recall@5,91.84%,91.84,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,worst_recall × 100
+90,3,5,Hot 25%,Mean routed-top4 recall,91.00%,91.005,0.0049999999999954525,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_routed4_recall × 100
+90,4,2,Boundary 25%,Sparse-state overhead,36.0%,35.96790744285688,0.0320925571431232,0.050000100000000006,matched,027/do027_failure_policy_summary.csv,storage_overhead_ratio × 100
+90,4,3,Boundary 25%,Mean failure recall@5,94.62%,94.61500000000001,0.0049999999999954525,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_recall × 100
+90,4,4,Boundary 25%,Worst recall@5,92.20%,92.2,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,worst_recall × 100
+90,4,5,Boundary 25%,Mean routed-top4 recall,91.31%,91.305,0.0049999999999954525,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_routed4_recall × 100
+90,5,2,One backup/object,Sparse-state overhead,100.0%,100.0,0.0,0.050000100000000006,matched,027/do027_failure_policy_summary.csv,storage_overhead_ratio × 100
+90,5,3,One backup/object,Mean failure recall@5,100.00%,100.0,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_recall × 100
+90,5,4,One backup/object,Worst recall@5,100.00%,100.0,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,worst_recall × 100
+90,5,5,One backup/object,Mean routed-top4 recall,98.49%,98.49,0.0,0.00500001,matched,027/do027_failure_policy_summary.csv,mean_routed4_recall × 100
+91,2,3,No replica,Median orchestration wait,351.58 ms,351.5797720001501,0.00022799984986932031,0.00500001,matched,027/do027_straggler_timeout.csv,median_wall_s × 1000
+91,2,4,No replica,Recall@5,100.00%,100.0,0.0,0.00500001,matched,027/do027_straggler_timeout.csv,mean_recall_at5 × 100
+91,2,5,No replica,Exact top-5,100.0%,100.0,0.0,0.050000100000000006,matched,027/do027_straggler_timeout.csv,mean_exact_top5 × 100
+91,3,3,No replica,Median orchestration wait,1.19 ms,1.1920570000256,0.002057000025600164,0.00500001,matched,027/do027_straggler_timeout.csv,median_wall_s × 1000
+91,3,4,No replica,Recall@5,81.60%,81.6,0.0,0.00500001,matched,027/do027_straggler_timeout.csv,mean_recall_at5 × 100
+91,3,5,No replica,Exact top-5,49.0%,49.0,0.0,0.050000100000000006,matched,027/do027_straggler_timeout.csv,mean_exact_top5 × 100
+91,4,3,Hot 25%,Median orchestration wait,351.02 ms,351.0245050001686,0.0045050001685922325,0.00500001,matched,027/do027_straggler_timeout.csv,median_wall_s × 1000
+91,4,4,Hot 25%,Recall@5,100.00%,100.0,0.0,0.00500001,matched,027/do027_straggler_timeout.csv,mean_recall_at5 × 100
+91,4,5,Hot 25%,Exact top-5,100.0%,100.0,0.0,0.050000100000000006,matched,027/do027_straggler_timeout.csv,mean_exact_top5 × 100
+91,5,3,Hot 25%,Median orchestration wait,1.25 ms,1.2463309999474999,0.0036690000525001487,0.00500001,matched,027/do027_straggler_timeout.csv,median_wall_s × 1000
+91,5,4,Hot 25%,Recall@5,91.84%,91.84,0.0,0.00500001,matched,027/do027_straggler_timeout.csv,mean_recall_at5 × 100
+91,5,5,Hot 25%,Exact top-5,73.0%,73.0,0.0,0.050000100000000006,matched,027/do027_straggler_timeout.csv,mean_exact_top5 × 100
+91,6,3,One backup/object,Median orchestration wait,351.25 ms,351.2472509996769,0.002749000323092332,0.00500001,matched,027/do027_straggler_timeout.csv,median_wall_s × 1000
+91,6,4,One backup/object,Recall@5,100.00%,100.0,0.0,0.00500001,matched,027/do027_straggler_timeout.csv,mean_recall_at5 × 100
+91,6,5,One backup/object,Exact top-5,100.0%,100.0,0.0,0.050000100000000006,matched,027/do027_straggler_timeout.csv,mean_exact_top5 × 100
+91,7,3,One backup/object,Median orchestration wait,1.23 ms,1.2256280001564999,0.004371999843500118,0.00500001,matched,027/do027_straggler_timeout.csv,median_wall_s × 1000
+91,7,4,One backup/object,Recall@5,100.00%,100.0,0.0,0.00500001,matched,027/do027_straggler_timeout.csv,mean_recall_at5 × 100
+91,7,5,One backup/object,Exact top-5,100.0%,100.0,0.0,0.050000100000000006,matched,027/do027_straggler_timeout.csv,mean_exact_top5 × 100
+92,2,2,Naive shared RMW,Median updates/s,"633,027",633026.6526690654,0.3473309346009046,0.500001,matched,027/do027_update_summary.csv,median_updates_per_s
+92,2,3,Naive shared RMW,Mean lost updates,1.354%,1.3544999999999898,0.0004999999999897309,0.000500001,matched,027/do027_update_summary.csv,mean_lost_fraction × 100
+92,2,4,Naive shared RMW,Objects with count error,183.8,183.8,0.0,0.050000100000000006,matched,027/do027_update_summary.csv,mean_error_objects
+92,3,2,One global lock,Median updates/s,"411,215",411214.9065127375,0.09348726249299943,0.500001,matched,027/do027_update_summary.csv,median_updates_per_s
+92,3,3,One global lock,Mean lost updates,0.000%,0.0,0.0,0.000500001,matched,027/do027_update_summary.csv,mean_lost_fraction × 100
+92,3,4,One global lock,Objects with count error,0.0,0.0,0.0,0.050000100000000006,matched,027/do027_update_summary.csv,mean_error_objects
+92,4,2,Ownership-scoped shard locks,Median updates/s,"668,856",668856.46557734,0.4655773399863392,0.500001,matched,027/do027_update_summary.csv,median_updates_per_s
+92,4,3,Ownership-scoped shard locks,Mean lost updates,0.000%,0.0,0.0,0.000500001,matched,027/do027_update_summary.csv,mean_lost_fraction × 100
+92,4,4,Ownership-scoped shard locks,Objects with count error,0.0,0.0,0.0,0.050000100000000006,matched,027/do027_update_summary.csv,mean_error_objects
+94,2,2,Static / none,Accepted,88.75%,88.75,0.0,0.00500001,matched,028/do028_policy_summary.csv,accepted_rate × 100
+94,2,3,Static / none,Mean recall@5,0.824,0.8241666666666667,0.00016666666666675933,0.000500001,matched,028/do028_policy_summary.csv,mean_recall_at5
+94,2,4,Static / none,Internal state error,1.846%,1.8455560951918402,0.00044390480815992284,0.000500001,matched,028/do028_policy_summary.csv,internal_state_error_fraction × 100
+94,2,5,Static / none,Final L1 error vs reference,19.31%,19.30798803929944,0.0020119607005604223,0.00500001,matched,028/do028_policy_summary.csv,reference_oracle_error_fraction × 100
+94,2,6,Static / none,Objects exact vs reference,49.19%,49.19354838709677,0.0035483870967709663,0.00500001,matched,028/do028_policy_summary.csv,final_exact_object_fraction_vs_reference × 100
+94,3,2,Adaptive hot25 / unsafe,Accepted,100.00%,100.0,0.0,0.00500001,matched,028/do028_policy_summary.csv,accepted_rate × 100
+94,3,3,Adaptive hot25 / unsafe,Mean recall@5,0.905,0.905,0.0,0.000500001,matched,028/do028_policy_summary.csv,mean_recall_at5
+94,3,4,Adaptive hot25 / unsafe,Internal state error,1.595%,1.5946286193873198,0.0003713806126801611,0.000500001,matched,028/do028_policy_summary.csv,internal_state_error_fraction × 100
+94,3,5,Adaptive hot25 / unsafe,Final L1 error vs reference,14.35%,14.35284066638188,0.002840666381880297,0.00500001,matched,028/do028_policy_summary.csv,reference_oracle_error_fraction × 100
+94,3,6,Adaptive hot25 / unsafe,Objects exact vs reference,51.88%,51.88172043010753,0.001720430107525317,0.00500001,matched,028/do028_policy_summary.csv,final_exact_object_fraction_vs_reference × 100
+94,4,2,Adaptive hot25 / versioned,Accepted,100.00%,100.0,0.0,0.00500001,matched,028/do028_policy_summary.csv,accepted_rate × 100
+94,4,3,Adaptive hot25 / versioned,Mean recall@5,0.905,0.905,0.0,0.000500001,matched,028/do028_policy_summary.csv,mean_recall_at5
+94,4,4,Adaptive hot25 / versioned,Internal state error,0.000%,0.0,0.0,0.000500001,matched,028/do028_policy_summary.csv,internal_state_error_fraction × 100
+94,4,5,Adaptive hot25 / versioned,Final L1 error vs reference,13.33%,13.327637761640322,0.0023622383596784147,0.00500001,matched,028/do028_policy_summary.csv,reference_oracle_error_fraction × 100
+94,4,6,Adaptive hot25 / versioned,Objects exact vs reference,57.80%,57.795698924731184,0.0043010752688132925,0.00500001,matched,028/do028_policy_summary.csv,final_exact_object_fraction_vs_reference × 100
+94,5,2,Adaptive full1 / versioned,Accepted,100.00%,100.0,0.0,0.00500001,matched,028/do028_policy_summary.csv,accepted_rate × 100
+94,5,3,Adaptive full1 / versioned,Mean recall@5,0.992,0.9916666666666668,0.0003333333333331856,0.000500001,matched,028/do028_policy_summary.csv,mean_recall_at5
+94,5,4,Adaptive full1 / versioned,Internal state error,0.000%,0.0,0.0,0.000500001,matched,028/do028_policy_summary.csv,internal_state_error_fraction × 100
+94,5,5,Adaptive full1 / versioned,Final L1 error vs reference,1.50%,1.49508756941478,0.004912430585219951,0.00500001,matched,028/do028_policy_summary.csv,reference_oracle_error_fraction × 100
+94,5,6,Adaptive full1 / versioned,Objects exact vs reference,93.55%,93.5483870967742,0.0016129032257907738,0.00500001,matched,028/do028_policy_summary.csv,final_exact_object_fraction_vs_reference × 100

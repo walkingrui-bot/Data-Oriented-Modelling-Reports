@@ -1,0 +1,4 @@
+Model,Shared-only rollout MSE
+BodyAwareWorld,0.5868
+ComputationalBody,0.5530
+StaticWorldMoE,0.5917

@@ -1,0 +1,6 @@
+Dataset,Mean degree,Degree CV,Degree Gini,Degree assortativity,Clustering*
+Dolphins,5.13,0.572,0.325,-0.044,0.303
+Email-Eu-core,32.58,1.136,0.544,0.032,0.452
+ca-GrQc,5.53,1.433,0.555,0.703,0.687
+Facebook Combined,43.69,1.200,0.541,0.125,0.608
+Cora,3.90,1.341,0.405,-0.058,0.288

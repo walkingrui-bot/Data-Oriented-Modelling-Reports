@@ -1,0 +1,5 @@
+Condition,Adaptive route,Replica budget,Commit discipline,Failure handling
+Static barrier / none,No,None,Unsafe set,Wait/fail
+Adaptive hot25 / unsafe,Yes,Hot 25%,Unsafe set,Health-aware + deferred log
+Adaptive hot25 / versioned,Yes,Hot 25%,CAS + retry,Health-aware + deferred log
+Adaptive full1 / versioned,Yes,One backup/object,CAS + retry,Health-aware + deferred log

@@ -1,0 +1,4 @@
+model,seed,shared_only_MSE
+BodyAwareWorld,29.0,0.5868426561355591
+ComputationalBody,29.0,0.553028404712677
+StaticWorldMoE,29.0,0.591703861951828

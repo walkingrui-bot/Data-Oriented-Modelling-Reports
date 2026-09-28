@@ -1,0 +1,9 @@
+{
+  "dataset": "Email-Eu-core-temporal",
+  "official_page": "https://snap.stanford.edu/data/email-Eu-core-temporal.html",
+  "validated_public_mirror": "SteveHuntsman/PathHomologyDataAndScripts",
+  "mirror_path": "email-Eu-core-temporal.txt",
+  "git_blob_sha": "6d864f3a7d511359c8fc19c6a83b4e2302741669",
+  "mirror_file_size_bytes": 5517753,
+  "validation_note": "GitHub repository contents metadata directly reports this path, size and blob SHA; the same SHA is recorded in the archived 024 provenance."
+}

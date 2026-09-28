@@ -1,0 +1,5 @@
+Metric,Direct predictor,Rule Generator
+One-step MSE,5.06e-4,5.39e-6
+3-step rollout MSE,0.00753,0.000353
+5-step rollout MSE,0.0368,0.00385
+9-step rollout MSE,0.2577,0.0672

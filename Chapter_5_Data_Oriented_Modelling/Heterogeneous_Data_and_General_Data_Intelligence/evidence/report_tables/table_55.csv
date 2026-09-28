@@ -1,0 +1,7 @@
+Model,Params,Intact MSE,Single-lesion MSE,Single penalty (%),Dual-lesion MSE,Dual penalty (%)
+SharedResidual,5124,0.0728,0.0918,26.0713,0.1266,73.9364
+CoordinatedEffectors,5124,0.0755,0.0850,12.5645,0.1041,37.8860
+SoftMixture,4614,0.0882,0.1323,50.2527,0.2145,143.6064
+SoftMixture_Perturb,4614,0.0927,0.1152,24.2196,0.1605,73.0586
+HardTop1,4614,0.1164,0.1501,28.9738,0.2124,82.5305
+HardTop1_Perturb,4614,0.1200,0.1336,11.3216,0.1641,36.7217

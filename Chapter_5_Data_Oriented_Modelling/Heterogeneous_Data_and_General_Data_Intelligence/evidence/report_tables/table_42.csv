@@ -1,0 +1,5 @@
+Condition,Snapshot rollout,GlobalGRU,CompartmentGRU,SourceTracker,Best latent R²,Slot→source R²
+K0_O0,1.049,1.264,1.349,1.284,0.979,0.957
+K1_O0,1.100,1.360,1.543,1.233,0.979,0.954
+K0_O1,0.660,0.672,0.707,0.750,0.860,0.762
+K1_O1,0.810,0.769,0.802,0.844,0.878,0.774

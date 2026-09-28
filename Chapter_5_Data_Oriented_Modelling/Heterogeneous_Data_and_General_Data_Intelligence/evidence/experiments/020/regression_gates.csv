@@ -1,0 +1,13 @@
+world,model,healthy_pass,lesion_pass
+smooth,Baseline,True,True
+smooth,Dual,True,True
+smooth,AdaptiveDual,True,True
+switch,Baseline,True,True
+switch,Dual,True,True
+switch,AdaptiveDual,True,True
+curved,Baseline,True,True
+curved,Dual,True,True
+curved,AdaptiveDual,True,True
+hidden_memory,Baseline,True,True
+hidden_memory,Dual,True,True
+hidden_memory,AdaptiveDual,True,True

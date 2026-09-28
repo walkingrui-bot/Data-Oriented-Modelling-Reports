@@ -1,0 +1,4 @@
+Model,One-step MSE,8-step rollout MSE
+Direct,0.04735,0.67512
+GeneratedRule,0.01363,0.35012
+MoE-Rule,0.01416,0.34874

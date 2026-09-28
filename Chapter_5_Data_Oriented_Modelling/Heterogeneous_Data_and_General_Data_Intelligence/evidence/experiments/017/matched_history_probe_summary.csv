@@ -1,0 +1,3 @@
+model,seed,final_weight_eff0_after_heavy_history,final_weight_eff0_after_balanced_history,history_avoidance_eff0,final_distribution_L1_change
+AnticipatoryCoordinator,29.0,0.24598445743322372,0.24927815794944763,0.0032937005162239075,0.025353051722049713
+HistoryAware,29.0,0.2906592935323715,0.2896469235420227,-0.001012369990348816,0.018408323638141155

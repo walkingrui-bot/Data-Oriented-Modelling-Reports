@@ -1,0 +1,185 @@
+{
+  "workload": {
+    "objects": 372,
+    "queries": 500,
+    "shards": 8,
+    "topk": 5,
+    "dependency_directed_edges": 1860,
+    "concurrent_update_ops": 120000
+  },
+  "critical_shard": {
+    "id": 6,
+    "reference_hit_share": 0.184,
+    "objects": 52
+  },
+  "failure_summary": [
+    {
+      "replication": "boundary25",
+      "mean_recall": 0.94615,
+      "worst_recall": 0.922,
+      "mean_routed4": 0.91305,
+      "worst_routed4": 0.8932
+    },
+    {
+      "replication": "full1",
+      "mean_recall": 1.0,
+      "worst_recall": 1.0,
+      "mean_routed4": 0.9849,
+      "worst_routed4": 0.9656
+    },
+    {
+      "replication": "hot25",
+      "mean_recall": 0.94615,
+      "worst_recall": 0.9184000000000001,
+      "mean_routed4": 0.91005,
+      "worst_routed4": 0.8876000000000001
+    },
+    {
+      "replication": "none",
+      "mean_recall": 0.875,
+      "worst_recall": 0.816,
+      "mean_routed4": 0.8257,
+      "worst_routed4": 0.78
+    }
+  ],
+  "replication_storage": [
+    {
+      "policy": "none",
+      "replicated_objects": 0,
+      "object_fraction": 0.0,
+      "sparse_state_extra_bytes": 0,
+      "storage_overhead_ratio": 0.0
+    },
+    {
+      "policy": "hot25",
+      "replicated_objects": 93,
+      "object_fraction": 0.25,
+      "sparse_state_extra_bytes": 1429188,
+      "storage_overhead_ratio": 0.3573477433795599
+    },
+    {
+      "policy": "boundary25",
+      "replicated_objects": 93,
+      "object_fraction": 0.25,
+      "sparse_state_extra_bytes": 1438512,
+      "storage_overhead_ratio": 0.35967907442856883
+    },
+    {
+      "policy": "full1",
+      "replicated_objects": 372,
+      "object_fraction": 1.0,
+      "sparse_state_extra_bytes": 3999432,
+      "storage_overhead_ratio": 1.0
+    }
+  ],
+  "straggler": [
+    {
+      "replication": "none",
+      "mode": "barrier",
+      "critical_shard": 6,
+      "critical_reference_hit_share": 0.184,
+      "injected_delay_s": 0.35,
+      "deadline_s": 0.08,
+      "repetitions": 9,
+      "median_wall_s": 0.3515797720001501,
+      "mean_wall_s": 0.3520962598888925,
+      "mean_recall_at5": 1.0,
+      "mean_exact_top5": 1.0,
+      "mean_shards_received": 8.0
+    },
+    {
+      "replication": "none",
+      "mode": "quorum7",
+      "critical_shard": 6,
+      "critical_reference_hit_share": 0.184,
+      "injected_delay_s": 0.35,
+      "deadline_s": 0.08,
+      "repetitions": 9,
+      "median_wall_s": 0.0011920570000256,
+      "mean_wall_s": 0.0013131035555286,
+      "mean_recall_at5": 0.816,
+      "mean_exact_top5": 0.49,
+      "mean_shards_received": 7.0
+    },
+    {
+      "replication": "hot25",
+      "mode": "barrier",
+      "critical_shard": 6,
+      "critical_reference_hit_share": 0.184,
+      "injected_delay_s": 0.35,
+      "deadline_s": 0.08,
+      "repetitions": 9,
+      "median_wall_s": 0.3510245050001686,
+      "mean_wall_s": 0.3510834135555443,
+      "mean_recall_at5": 1.0,
+      "mean_exact_top5": 1.0,
+      "mean_shards_received": 8.0
+    },
+    {
+      "replication": "hot25",
+      "mode": "quorum7",
+      "critical_shard": 6,
+      "critical_reference_hit_share": 0.184,
+      "injected_delay_s": 0.35,
+      "deadline_s": 0.08,
+      "repetitions": 9,
+      "median_wall_s": 0.0012463309999475,
+      "mean_wall_s": 0.0012480479999794,
+      "mean_recall_at5": 0.9184,
+      "mean_exact_top5": 0.73,
+      "mean_shards_received": 7.0
+    },
+    {
+      "replication": "full1",
+      "mode": "barrier",
+      "critical_shard": 6,
+      "critical_reference_hit_share": 0.184,
+      "injected_delay_s": 0.35,
+      "deadline_s": 0.08,
+      "repetitions": 9,
+      "median_wall_s": 0.3512472509996769,
+      "mean_wall_s": 0.3512158042221927,
+      "mean_recall_at5": 1.0,
+      "mean_exact_top5": 1.0,
+      "mean_shards_received": 8.0
+    },
+    {
+      "replication": "full1",
+      "mode": "quorum7",
+      "critical_shard": 6,
+      "critical_reference_hit_share": 0.184,
+      "injected_delay_s": 0.35,
+      "deadline_s": 0.08,
+      "repetitions": 9,
+      "median_wall_s": 0.0012256280001565,
+      "mean_wall_s": 0.00119181055556,
+      "mean_recall_at5": 1.0,
+      "mean_exact_top5": 1.0,
+      "mean_shards_received": 7.0
+    }
+  ],
+  "concurrent_updates": [
+    {
+      "mode": "global_lock",
+      "median_qps": 411214.9065127375,
+      "mean_lost_fraction": 0.0,
+      "max_lost_fraction": 0.0,
+      "mean_error_objects": 0.0
+    },
+    {
+      "mode": "naive_rmw",
+      "median_qps": 633026.6526690654,
+      "mean_lost_fraction": 0.013545000000000001,
+      "max_lost_fraction": 0.015683333333333334,
+      "mean_error_objects": 183.8
+    },
+    {
+      "mode": "shard_locks",
+      "median_qps": 668856.46557734,
+      "mean_lost_fraction": 0.0,
+      "max_lost_fraction": 0.0,
+      "mean_error_objects": 0.0
+    }
+  ],
+  "evidence_statement": "All retrieval/state objects and queries are the frozen real ontology workload saved by DISTRIBUTED-ONTOLOGY-COORDINATION-026. Faults, delay, and concurrency are controlled stress injections; no synthetic document content is introduced."
+}

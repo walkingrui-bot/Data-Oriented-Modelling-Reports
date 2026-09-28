@@ -1,0 +1,9 @@
+Model,"Same latent world, policy swap",Prediction disagreement
+JointPolicy_A,A_vs_B_weak,0.1869
+JointPolicy_A,A_vs_C_dense,0.1147
+MaskDelta_A,A_vs_B_weak,0.1849
+MaskDelta_A,A_vs_C_dense,0.1179
+MultiPolicy_MaskDelta,A_vs_B_weak,0.1343
+MultiPolicy_MaskDelta,A_vs_C_dense,0.1396
+ValueOnly_A,A_vs_B_weak,0.1374
+ValueOnly_A,A_vs_C_dense,0.1062

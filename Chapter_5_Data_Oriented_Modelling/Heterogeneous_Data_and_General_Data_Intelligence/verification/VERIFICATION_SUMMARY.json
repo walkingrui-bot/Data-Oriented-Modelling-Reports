@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-28",
+  "supplied_archives": 28,
+  "archive_crc_checks_passed": 28,
+  "report_figures": 84,
+  "byte_identical_archive_figures": 75,
+  "report_tables": 94,
+  "tables_with_numeric_reconciliation": 73,
+  "numeric_cells_checked": 1301,
+  "within_direct_rounding_tolerance": 1299,
+  "annotated_rounding_differences": 2,
+  "method": "Row- and metric-specific lookup; documented means across seeds, percentages and unit conversions; tolerance is half of one unit in the last displayed digit. This is reconciliation of recorded results, rather than retraining or a new empirical estimate.",
+  "rounding_annotations": [
+    {
+      "table": 42,
+      "row": 4,
+      "column": 2,
+      "row_label": "K0_O1",
+      "column_label": "Snapshot rollout",
+      "reported": "0.660",
+      "evidence_value": 0.6594661474227905,
+      "absolute_difference": 0.0005338525772095037,
+      "rounding_tolerance": 0.000500001,
+      "status": "review",
+      "source": "010/model_summary.csv",
+      "calculation": "K0_O1; Snapshot; rollout_last_MSE"
+    },
+    {
+      "table": 42,
+      "row": 5,
+      "column": 5,
+      "row_label": "K1_O1",
+      "column_label": "SourceTracker",
+      "reported": "0.844",
+      "evidence_value": 0.8434720039367676,
+      "absolute_difference": 0.0005279960632323943,
+      "rounding_tolerance": 0.000500001,
+      "status": "review",
+      "source": "010/model_summary.csv",
+      "calculation": "K1_O1; SourceTracker; rollout_last_MSE"
+    }
+  ],
+  "external_provider_raw_files_in_release": 0,
+  "frozen_authored_corpus_arrays": 3,
+  "report_docx_sha256": "6fa3e855f8864d768836c3b68ac6a636a8688d82c637ae00f8d7795bb1d4983d",
+  "internal_manifest_hashes_verified": 80,
+  "recalculated_study_025_numeric_cells": 140,
+  "recalculated_study_025_exact_matches": 140
+}

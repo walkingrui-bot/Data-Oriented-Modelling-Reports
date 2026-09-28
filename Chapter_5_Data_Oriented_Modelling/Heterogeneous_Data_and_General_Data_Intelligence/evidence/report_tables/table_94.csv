@@ -1,0 +1,5 @@
+Condition,Accepted,Mean recall@5,Internal state error,Final L1 error vs reference,Objects exact vs reference
+Static / none,88.75%,0.824,1.846%,19.31%,49.19%
+Adaptive hot25 / unsafe,100.00%,0.905,1.595%,14.35%,51.88%
+Adaptive hot25 / versioned,100.00%,0.905,0.000%,13.33%,57.80%
+Adaptive full1 / versioned,100.00%,0.992,0.000%,1.50%,93.55%

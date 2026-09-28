@@ -1,0 +1,12 @@
+Measured quantity,Value
+Repeated-event fraction,92.50%
+Events per unique directed dyad,13.33
+Dyad event-count Gini,0.777
+Top 10% dyads' share of events,69.80%
+Top 1% dyads' share of events,26.56%
+Median sender burstiness,0.569
+Median dyad burstiness,0.216
+Median repeat-dyad gap,27.53 h
+Consecutive 30-day edge-set Jaccard,0.211
+Prior-window edge retention,32.61%
+Current-window new-edge fraction,36.40%

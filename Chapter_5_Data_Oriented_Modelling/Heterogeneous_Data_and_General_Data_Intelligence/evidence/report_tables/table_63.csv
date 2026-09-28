@@ -1,0 +1,4 @@
+Model,Mean maximum wear,Late maximum wear,Mean wear SD across modules,Time above q>0.34,Time above q>0.38,Mean router entropy
+AnticipatoryCoordinator,0.2063,0.3141,0.0801,0.0331,0.0087,1.3277
+CurrentAvailability,0.3476,0.4044,0.1447,0.1998,0.1728,1.1568
+HistoryAware,0.3292,0.4012,0.1399,0.2271,0.1812,1.1521

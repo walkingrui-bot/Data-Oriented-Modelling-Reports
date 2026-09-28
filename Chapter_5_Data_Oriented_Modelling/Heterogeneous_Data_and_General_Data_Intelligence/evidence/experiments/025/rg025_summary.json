@@ -1,0 +1,55 @@
+{
+  "fits": {
+    "median_active_neighbour_coverage": {
+      "exponent": 0.5449019322157247,
+      "prefactor": 0.034964383651743744,
+      "r2_logspace": 0.9996010410441474
+    },
+    "median_active_partners": {
+      "exponent": 0.4612833044889685,
+      "prefactor": 1.3513568043138697,
+      "r2_logspace": 0.9689899919051882
+    },
+    "median_effective_partners": {
+      "exponent": 0.20600970207814298,
+      "prefactor": 1.8068705409047172,
+      "r2_logspace": 0.9956814736410814
+    },
+    "median_effective_static_coverage": {
+      "exponent": 0.32866075277520396,
+      "prefactor": 0.040870968915959295,
+      "r2_logspace": 0.9985460492265157
+    },
+    "node_minus_dyad_continuity_gap": {
+      "exponent": -0.2515233585099227,
+      "prefactor": 0.6203031374594005,
+      "r2_logspace": 0.9943662226526465
+    }
+  },
+  "contrasts": {
+    "window_range_days": [
+      7,
+      90
+    ],
+    "raw_coverage_fold": 4.0,
+    "effective_coverage_fold": 2.315659553815038,
+    "active_partners_fold": 3.3333333333333335,
+    "effective_partners_fold": 1.6828706345583202,
+    "effective_to_raw_coverage_ratio_start": 0.763790664780763,
+    "effective_to_raw_coverage_ratio_end": 0.4421697875035782,
+    "node_dyad_continuity_gap_start": 0.37161644666881893,
+    "node_dyad_continuity_gap_end": 0.19815626053967172,
+    "dyad_to_node_entropy_rank_ratio_start": 2.2287186428936385,
+    "dyad_to_node_entropy_rank_ratio_end": 1.1846067727442122,
+    "edge_retention_start": 0.3958853359796824,
+    "edge_retention_end": 0.5516592895107062,
+    "new_edge_fraction_start": 0.6074664446341395,
+    "new_edge_fraction_end": 0.460188082984383
+  },
+  "source_files": [
+    "active_neighbour_scale.csv",
+    "temporal_state_geometry.csv"
+  ],
+  "source_experiment": "REAL-GRAPH-ACTIVE-FIELD-GEOMETRY-024",
+  "note": "Fits are descriptive across five measured window scales (7,14,30,60,90 days), not universal power laws."
+}

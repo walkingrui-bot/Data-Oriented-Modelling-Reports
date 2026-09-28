@@ -1,0 +1,7 @@
+sampling,model,full MSE,event MSE,latent-state R²
+Regular,MaskDeltaGRU,0.3331,0.3712,0.8029
+Regular,FixedSlots,0.4095,0.4535,0.8291
+Regular,DynamicSlots,0.5652,0.6108,0.8307
+Irregular,MaskDeltaGRU,0.4322,0.4914,0.6066
+Irregular,FixedSlots,0.5931,0.6599,0.6295
+Irregular,DynamicSlots,0.6992,0.7595,0.6335

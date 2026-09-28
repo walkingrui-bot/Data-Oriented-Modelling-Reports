@@ -1,0 +1,3 @@
+model,seed,hidden_wear_R2_from_history_state,hidden_wear_R2_from_current_availability
+AnticipatoryCoordinator,29.0,0.4231853112578392,0.17862681299448013
+HistoryAware,29.0,0.3706550896167755,0.3613913580775261

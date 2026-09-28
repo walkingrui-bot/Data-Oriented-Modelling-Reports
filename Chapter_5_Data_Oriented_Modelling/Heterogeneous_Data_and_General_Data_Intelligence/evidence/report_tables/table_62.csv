@@ -1,0 +1,4 @@
+Model,Parameters,Mean MSE,Early MSE,Late MSE,Worst MSE,Final availability,Final wear
+AnticipatoryCoordinator,7114,0.0889,0.1153,0.0797,0.1629,0.9844,0.1737
+CurrentAvailability,3540,0.1165,0.1328,0.1114,0.1675,0.8986,0.1528
+HistoryAware,7114,0.1031,0.1235,0.0972,0.1646,0.8899,0.1936

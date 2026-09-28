@@ -1,0 +1,7 @@
+Model,A MSE,B MSE,C MSE,Mean shifted MSE
+MultiPolicy,0.255,0.307,0.251,0.279
+PermutedMaskAug,0.254,0.326,0.268,0.297
+RepeatedA,0.293,0.425,0.351,0.388
+ValueOnly_A,0.514,0.626,0.514,0.570
+MaskDelta_A,0.505,0.678,0.578,0.628
+JointPolicy_A,0.521,0.698,0.595,0.647

@@ -1,0 +1,4 @@
+Axis,Operational measure,Prediction requirement
+Local curvature,Change in the transition Jacobian within a small neighbourhood,Complexity of the local rule representation
+Conditional innovation,Manipulated additive noise with known noise entropy,Unpredictable part of the future given inputs
+Anisotropy,Uneven singular-value spectrum of the transition Jacobian,Retention of high-sensitivity directions

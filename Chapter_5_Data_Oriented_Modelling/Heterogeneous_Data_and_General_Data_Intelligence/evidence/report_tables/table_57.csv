@@ -1,0 +1,5 @@
+Model,Expert effect cosine,Max router weight,Router entropy
+HardTop1,0.7412,1.0000,0.0000
+SoftMixture,0.6153,0.3980,1.2772
+SharedResidual,0.4537,0.4017,1.2773
+CoordinatedEffectors,0.5979,0.3963,1.2848

@@ -1,0 +1,7 @@
+Redundancy,Coordinator rule,Median orchestration wait,Recall@5,Exact top-5
+No replica,Wait all 8,351.58 ms,100.00%,100.0%
+No replica,Continue at 7/8,1.19 ms,81.60%,49.0%
+Hot 25%,Wait all 8,351.02 ms,100.00%,100.0%
+Hot 25%,Continue at 7/8,1.25 ms,91.84%,73.0%
+One backup/object,Wait all 8,351.25 ms,100.00%,100.0%
+One backup/object,Continue at 7/8,1.23 ms,100.00%,100.0%

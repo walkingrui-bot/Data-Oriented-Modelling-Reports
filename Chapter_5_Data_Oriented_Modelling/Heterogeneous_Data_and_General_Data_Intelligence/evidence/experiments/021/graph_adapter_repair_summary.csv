@@ -1,0 +1,4 @@
+model,scenario,seed,rollout_metric,late_metric,params
+ComputationalBody_IDGraph,healthy,29.0,0.01978402699089863,0.027544256610174976,22766.0
+ComputationalBody_IDGraph,lesion1,29.0,0.019001416438682514,0.025648255211611588,22766.0
+DenseCore_IDGraph,healthy,29.0,0.015272154853763906,0.015889734805872042,10500.0

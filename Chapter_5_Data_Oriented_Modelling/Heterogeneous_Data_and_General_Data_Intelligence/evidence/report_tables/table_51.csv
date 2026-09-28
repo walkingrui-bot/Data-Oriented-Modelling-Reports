@@ -1,0 +1,4 @@
+Measurement policy,Observed fraction,"corr(observation rate, latent severity)"
+A_informative,0.333,0.973
+B_weak,0.219,0.658
+C_dense,0.365,0.415

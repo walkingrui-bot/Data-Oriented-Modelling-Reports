@@ -1,0 +1,5 @@
+Partition map,ARI vs hidden phase,NMI vs hidden phase
+RawGeometry,0.533,0.570
+PredictiveJacobian,0.798,0.796
+CompatibilityGraph,0.247,0.344
+RandomLocal,0.096,0.172

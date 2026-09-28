@@ -1,0 +1,5 @@
+Source,Dense,Body healthy,Body lesion,Healthy gain vs Dense (%),Lesion degradation (%)
+continuous,0.057,0.047,0.048,17.014,1.079
+event,2.929,3.041,3.036,-3.813,-0.182
+set,0.663,0.667,0.669,-0.709,0.248
+graph,0.019,0.034,0.035,-78.448,4.667

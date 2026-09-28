@@ -1,0 +1,5 @@
+Model,Healthy,Chronic fatigue,Weak effector,Outages
+StateOnly,0.0855,0.1029,0.0963,0.0992
+AvailabilityAware,0.0797,0.0953,0.0860,0.0910
+FatigueAware_NoCurriculum,0.0847,0.1030,0.0920,0.0926
+CoordinatedBody,0.0834,0.1007,0.0905,0.0947

@@ -1,0 +1,7 @@
+sampling,model,birth,branch,death,merge
+Regular,MaskDeltaGRU,0.220,0.316,0.443,0.515
+Regular,FixedSlots,0.244,0.318,0.504,0.766
+Regular,DynamicSlots,0.360,0.401,0.618,1.077
+Irregular,MaskDeltaGRU,0.366,0.466,0.526,0.600
+Irregular,FixedSlots,0.516,0.523,0.592,1.007
+Irregular,DynamicSlots,0.612,0.582,0.652,1.186

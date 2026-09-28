@@ -1,0 +1,15 @@
+Term,Meaning in this chapter
+Predictive state / GMS,Information retained from observations and history to answer specified future-response queries
+MoE,Mixture of experts; local prediction modules combined by a router
+MSE / R²,Mean squared error / coefficient of determination; lower MSE and higher R² are generally preferable within the same task
+d95 / r95,Reported dimension or rank capturing 95% of the relevant spectrum under the experiment’s stated convention
+Stable rank,A spectral measure of effective response complexity; distinct from parameter count
+NMI / ARI,Normalized mutual information / adjusted Rand index for comparing partitions
+Observability,Information about hidden state recoverable from the specified observations and history
+Conditional innovation,Variation random given the model’s specified state or history
+Rollout,Multi-step prediction using the model’s previous outputs as later inputs
+Computational body,"Operational metaphor for available modules, capacities, load history and their coordination; also retained in model identifiers"
+Owner / shard,The authority holding a state object / a physical partition of the corpus
+CAS / DAG,Compare-and-set version check / directed acyclic graph of task dependencies
+Recall@5 / exact set,Fraction of centralized top-5 items recovered / whether the entire top-5 set matches
+LCC / CV,Largest connected component / coefficient of variation

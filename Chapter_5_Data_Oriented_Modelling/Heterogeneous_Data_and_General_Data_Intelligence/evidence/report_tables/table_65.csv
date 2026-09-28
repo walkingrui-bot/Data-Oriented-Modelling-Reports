@@ -1,0 +1,3 @@
+Model,Module 0 weight after heavy history,Module 0 weight after balanced history,Avoidance of module 0,Routing L1 change
+AnticipatoryCoordinator,0.2460,0.2493,0.0033,0.0254
+HistoryAware,0.2907,0.2896,-0.0010,0.0184

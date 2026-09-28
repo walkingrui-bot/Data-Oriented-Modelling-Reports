@@ -1,0 +1,6 @@
+Sampling,Model,Full MSE,Event MSE,Latent R²
+Regular,MaskDeltaGRU,0.2454,0.2833,0.8365
+Regular,FixedSlots,0.2815,0.3228,0.8744
+Regular,GraphSlots,0.3129,0.3545,0.8645
+Regular,GraphResidual,0.2093,0.2443,0.8790
+Regular,ClockedGraphResidual,0.2172,0.2501,0.8762

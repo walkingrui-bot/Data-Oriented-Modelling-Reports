@@ -1,0 +1,2 @@
+ego_network,alter_nodes,alter_edges,feature_dimensions,mean_active_features_per_node,social_circles,edge_feature_cosine,random_nonedge_feature_cosine,edge_feature_cosine_lift,edge_feature_jaccard,random_nonedge_feature_jaccard,edge_shared_circle_fraction,random_nonedge_shared_circle_fraction,shared_circle_lift
+0,347,2519,224,9.56196,24,0.386222,0.354655,1.089009,0.228709,0.206187,0.484716,0.149341,3.245692

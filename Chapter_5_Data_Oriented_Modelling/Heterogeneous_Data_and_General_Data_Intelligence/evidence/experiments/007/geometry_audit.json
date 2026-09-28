@@ -1,0 +1,6 @@
+{
+  "mean_same_phase_cross_turn_raw_distance": 3.692220687866211,
+  "mean_same_phase_cross_turn_predictive_signature_distance": 0.3230867385864258,
+  "ratio_predictive_to_raw": 0.08750472030236493,
+  "pilot_test_MSE": 0.016818463802337646
+}

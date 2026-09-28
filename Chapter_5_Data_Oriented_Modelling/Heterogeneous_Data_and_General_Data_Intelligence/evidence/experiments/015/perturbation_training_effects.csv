@@ -1,0 +1,4 @@
+architecture_family,base_model,perturb_trained_model,normal_MSE_change_pct,single_lesion_penalty_reduction_pctpoints,dual_lesion_penalty_reduction_pctpoints
+Hard,HardTop1,HardTop1_Perturb,3.151615609224864,17.652206379687748,45.80884347838112
+Soft,SoftMixture,SoftMixture_Perturb,5.2031632457588195,26.03305700304291,70.54783155007038
+Shared,SharedResidual,CoordinatedEffectors,3.7219575821239403,13.506797703154866,36.05035060243548

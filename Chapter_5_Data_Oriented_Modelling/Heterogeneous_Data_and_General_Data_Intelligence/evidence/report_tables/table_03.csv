@@ -1,0 +1,5 @@
+Aspect,Task-oriented AutoML,General data intelligence in this chapter
+Starting point,"Specified task, features, targets and metrics",Observed data and their generating and observation processes
+Emphasis,"Model selection, combination and tuning",Predictive-state construction and mechanism-informed modelling
+Computation,Search over task-specific candidates,"Allocate memory, modules and native representations from measured structure"
+Local prediction,An element of the defined task,A scoring interface for evaluating a longer process

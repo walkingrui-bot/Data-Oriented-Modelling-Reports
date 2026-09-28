@@ -1,0 +1,7 @@
+Quantity,Value
+QS gene/function entries,134
+Signal families,7
+Functional roles,Synthesis / Receptor / Quenching
+H(role),1.389 bit
+H(role | signal family),0.982 bit
+I(signal family; role),0.408 bit

@@ -1,0 +1,2 @@
+dataset,attribute,directed_edges_evaluated,same_attribute_edge_fraction,random_pair_same_attribute,topology_semantic_lift
+Email-Eu-core,department (42 classes),24929,0.346785,0.047616,7.283
