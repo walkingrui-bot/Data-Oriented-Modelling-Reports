@@ -1,0 +1,16 @@
+table,title,path,source_block
+A,Table A. Terminology and abbreviations,evidence/report_tables/table_A.csv,reader annotation
+01,Table 1. Experiment map,evidence/report_tables/table_01.csv,14
+02,Table 2. Reference geometry,evidence/report_tables/table_02.csv,26
+03,Table 3. Task-conditioned ALC disfluency summaries,evidence/report_tables/table_03.csv,33
+B,Table B. Verified ALC cell mapping,evidence/report_tables/table_B.csv,reader annotation
+04,Table 4. Pooled KAISD state and movement geometry,evidence/report_tables/table_04.csv,42
+05,Table 5. KAISD segment-level trajectory medians,evidence/report_tables/table_05.csv,49
+06,Table 6. Standardized gait-displacement matrix,evidence/report_tables/table_06.csv,67
+07,Table 7. Pairwise gait-displacement cosines,evidence/report_tables/table_07.csv,77
+C,Table C. Original results and public-matrix reproduction,evidence/report_tables/table_C.csv,reader annotation
+08,Table 8. Leave-one-feature-out gait geometry,evidence/report_tables/table_08.csv,90
+09,Table 9. Leave-one-subgroup-out gait geometry,evidence/report_tables/table_09.csv,94
+10,Table 10. Gait scaling controls,evidence/report_tables/table_10.csv,99
+11,Table 11. Orthogonal gait-energy decomposition,evidence/report_tables/table_11.csv,105
+12,Table 12. Evidence ledger,evidence/report_tables/table_12.csv,132

@@ -1,0 +1,12 @@
+ref,source,identifier,used_for
+1,Data-Oriented Modelling. Chapter 3 – The Language Edition. Living Language Record v1.6. 27 Sep 2026.,user-supplied working/public record,LM-BASE-001
+2,"Data-Oriented Modelling. Human Learning and Sensorimotor Geometry. Chapter 4 Data Zoo, Subreport 2, English edition v1.0, 27 Sep 2026.",walkingrui-bot/Data-Oriented-Modelling-Reports,LM-BASE-001
+3,"Elvevåg B, Foltz PW, Rosenstein M, DeLisi LE. J Neurolinguistics. 2010;23(3):270–284.",doi:10.1016/j.jneuroling.2009.05.002,scoping observation
+4,"Hinzen W, Rosselló J. Front Psychol. 2015;6:971.",doi:10.3389/fpsyg.2015.00971,scoping observation
+5,"Xu W, Pakhomov S, Heagerty P, et al. J Biomed Inform. 2025;170:104899.",doi:10.1016/j.jbi.2025.104899,scoping observation
+6,"Schiel F, Heinrich C, Barfüßer S, Gilg T. ALC – Alcohol Language Corpus. Proc LREC. 2008.",ALC corpus,INTOX-SPEECH-CAL-002
+7,"Schiel F, Heinrich C. Disfluencies in the speech of intoxicated speakers. Int J Speech Lang Law. 2015.",published ALC analysis,INTOX-SPEECH-CAL-002
+8,"KAISD (Korean language Alcohol Intoxicated Speech Detector), vilotgit/kaisd, 2020.",github:vilotgit/kaisd + linked held-out object,INTOX-SPEECH-GEO-003
+9,"Gimunová M, Bozděch M, Novák J, Vojtíšek T. Sci Rep. 2022;12:18773.",doi:10.1038/s41598-022-23621-y,INTOX-GAIT-GEO-004 / 005
+10,"Suffoletto B, et al. Detection of Alcohol Intoxication Using Voice Features: A Controlled Laboratory Study. J Stud Alcohol Drugs. 2023.",controlled laboratory voice study,discussion context
+11,"Uche C, et al. DUI Detection From Gait Using a Multichannel 1DCNN-Attention-BiLSTM Framework. 2025.",Butler Hospital AlcoGait analysis,discussion context

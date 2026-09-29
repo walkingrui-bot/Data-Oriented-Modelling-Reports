@@ -1,0 +1,6 @@
+﻿quantity,value,unit
+"cosine(mean displacement, SVD PC1)",0.982,cosine
+shared-factor feature-jackknife range,51.33–64.43,percent total displacement energy
+stride-length share of shared-vector squared energy,58.9,percent
+step-width share of shared-vector squared energy,18.2,percent
+velocity share of shared-vector squared energy,12.3,percent

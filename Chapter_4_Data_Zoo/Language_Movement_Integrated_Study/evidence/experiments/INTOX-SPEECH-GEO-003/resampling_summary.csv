@@ -1,0 +1,5 @@
+﻿metric,condition,replicates,subsample_fraction,p10,p90
+stable_rank,Sober,250,0.8,3.491,3.601
+stable_rank,Intoxicated,250,0.8,3.946,4.174
+participation_rank,Sober,250,0.8,9.949,10.439
+participation_rank,Intoxicated,250,0.8,13.209,14.471

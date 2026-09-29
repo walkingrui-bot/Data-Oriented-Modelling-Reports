@@ -1,0 +1,6 @@
+﻿pair,cosine
+Female forward | Female backward,0.832
+Female forward | Male forward,0.874
+Male forward | Male backward,0.129
+Female forward | Male backward,0.321
+Female backward | Male backward,0.179

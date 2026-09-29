@@ -1,0 +1,6 @@
+Pair of intoxication vectors,Cosine
+Female forward vs. Female backward,0.832
+Female forward vs. Male forward,0.874
+Male forward vs. Male backward,0.129
+Female forward vs. Male backward,0.321
+Female backward vs. Male backward,0.179

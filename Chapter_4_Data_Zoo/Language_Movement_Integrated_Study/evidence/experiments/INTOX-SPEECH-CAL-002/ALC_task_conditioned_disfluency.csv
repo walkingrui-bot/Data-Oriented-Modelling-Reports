@@ -1,0 +1,22 @@
+﻿measure,unit,task,sober,intoxicated,significance_note
+Filled pauses,percent,Read speech,0.28,0.42,reported change
+Filled pauses,percent,Spontaneous speech,2.23,2.50,reported change
+Filled pauses,percent,Command & control,0.50,0.60,n.s.
+Unfilled pauses >50 ms,percent,Read speech,21.44,27.46,reported change
+Unfilled pauses >50 ms,percent,Spontaneous speech,22.81,24.00,reported change
+Unfilled pauses >50 ms,percent,Command & control,18.12,18.24,n.s.
+False starts,percent,Read speech,0.31,0.38,reported change
+False starts,percent,Spontaneous speech,1.19,1.15,n.s.
+False starts,percent,Command & control,0.59,0.82,reported change
+Repetitions,percent,Read speech,0.31,0.33,n.s.
+Repetitions,percent,Spontaneous speech,0.72,0.46,reported change
+Repetitions,percent,Command & control,0.028,0.029,n.s.
+Word interruptions,percent,Read speech,0.33,0.55,reported change
+Word interruptions,percent,Spontaneous speech,0.065,0.064,n.s.
+Word interruptions,percent,Command & control,0.09,0.15,n.s.
+Phone lengthening,percent,Read speech,0.13,0.25,reported change
+Phone lengthening,percent,Spontaneous speech,0.31,0.47,reported change
+Phone lengthening,percent,Command & control,0.06,0.10,n.s.
+Unfilled-pause duration,ms,Read speech,172,205,reported change
+Unfilled-pause duration,ms,Spontaneous speech,367,402,reported change
+Unfilled-pause duration,ms,Command & control,256,265,n.s.

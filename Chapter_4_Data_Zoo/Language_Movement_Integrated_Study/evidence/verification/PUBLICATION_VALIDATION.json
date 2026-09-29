@@ -1,0 +1,16 @@
+{
+  "pages": 26,
+  "blank_pages": 0,
+  "word_header_footer_parts": 0,
+  "figures": 13,
+  "all_image_hashes_match_supplied_evidence": true,
+  "retained_source_tables": 12,
+  "added_reader_tables": 3,
+  "scientific_table_numeric_cells_preserved": true,
+  "native_math_objects": 6,
+  "source_checksum_entries_verified": 53,
+  "rounded_matrix_reference_comparisons": 9,
+  "ALC_cell_mapping_annotations": 3,
+  "permutation_replicates": 200000,
+  "external_provider_observations_included": false
+}

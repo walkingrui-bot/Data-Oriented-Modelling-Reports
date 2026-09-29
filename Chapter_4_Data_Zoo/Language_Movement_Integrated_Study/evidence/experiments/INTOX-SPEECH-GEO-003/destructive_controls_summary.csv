@@ -1,0 +1,9 @@
+﻿control,condition,metric,value,replicates
+Real sequence,Sober,movement stable rank,3.538,pooled
+Real sequence,Intoxicated,movement stable rank,4.054,pooled
+Frame-order shuffled,Sober,median movement stable rank,2.004,30
+Frame-order shuffled,Intoxicated,median movement stable rank,2.19,30
+Frame-order shuffled,Both,stable-rank gap reduction (%),64.0,30
+Frame-order shuffled,Both,participation-rank gap reduction (%),80.0,30
+Independent band circular shift,Sober,median movement stable rank,85.37,report-recorded
+Independent band circular shift,Intoxicated,median movement stable rank,83.25,report-recorded

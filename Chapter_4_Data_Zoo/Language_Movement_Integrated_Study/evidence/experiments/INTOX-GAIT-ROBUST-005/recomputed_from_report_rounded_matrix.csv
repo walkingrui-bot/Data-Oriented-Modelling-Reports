@@ -1,0 +1,10 @@
+﻿quantity,value
+PC1 energy from printed matrix,77.7307674386458
+Top-2 energy from printed matrix,90.76193639282698
+Stable rank from printed matrix,1.2864918653856297
+Participation rank from printed matrix,1.5921526357412588
+"cosine(mean, PC1) from printed matrix",0.9815954445442161
+Hadamard Shared energy from printed matrix,61.40389439331526
+Hadamard Sex energy from printed matrix,21.833519299982385
+Hadamard Direction energy from printed matrix,8.47714288111278
+Hadamard Sex×Direction energy from printed matrix,8.285443425589571

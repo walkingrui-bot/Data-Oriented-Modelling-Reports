@@ -1,0 +1,5 @@
+Domain,Representation,Stable rank,PR,d95,Top-4
+Human motion,"Angular-velocity movement, raw",4.04,8.06,20,62.4%
+Human motion,"Angular-velocity movement, 5-frame smooth",3.29,7.01,18,64.4%
+Natural language,Character bigram teacher field,2.48,4.34,13,77.4%
+Natural language,L3 predictive-state movement,4.08,9.24,20,55.1%

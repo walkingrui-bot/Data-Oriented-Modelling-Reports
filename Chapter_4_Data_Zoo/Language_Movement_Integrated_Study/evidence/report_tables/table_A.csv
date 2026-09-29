@@ -1,0 +1,11 @@
+Term,Meaning in this report
+State / movement,A state is a represented observation. Movement is the difference between consecutive states within one sequence.
+Perturbation / realization,A perturbation is a condition-related displacement. Realization is how change appears in a particular output system and context.
+Stable rank / PR,Stable rank summarizes energy relative to the leading mode. Participation rank (PR) summarizes how broadly energy is distributed.
+d95 / Top-4,d95 counts modes needed for 95% energy. Top-4 is the energy fraction in the leading four modes.
+SVD / PC1,Singular value decomposition; PC1 names the leading singular direction here. Gait SVD is uncentered about the zero-displacement origin.
+SD / RMS,Standard deviation; root mean square. Each refers to the scaling operation specified in the methods.
+ALC / KAISD,Alcohol Language Corpus; Korean language Alcohol Intoxicated Speech Detector source project.
+BrAC / BAC,Breath alcohol concentration / blood alcohol concentration. Gait exposure is labelled BrAC as in the source article.
+Jackknife / permutation,Removing one feature or subgroup; randomizing feature identities or timing under a defined reference construction.
+Recruitment breadth / tortuosity,Effective number of channels carrying movement energy; trajectory path length relative to endpoint displacement.

@@ -1,0 +1,6 @@
+Record,Data object,Calculation,Evidence role
+LM-BASE-001,Prior natural-language and human-motion records,"Stable/participation rank, d95, Top-k",Normal cross-domain reference
+INTOX-SPEECH-CAL-002,"ALC, 150-speaker disfluency analysis",Task-conditioned sober→intoxicated changes,External calibration of task dependence
+INTOX-SPEECH-GEO-003,KAISD held-out 103 mel segments,State and Δ-frame geometry + controls,Direct raw-matrix intoxicated-speech evidence
+INTOX-GAIT-GEO-004,100-participant 0.00→0.11% BrAC gait summaries,Standardized displacement vectors + uncentered SVD,Controlled-drinking movement perturbation geometry
+INTOX-GAIT-ROBUST-005,004 4×6 gait-displacement matrix,Jackknives + scaling controls + 200k permutations + 2×2 factorization,Robustness of shared perturbation backbone

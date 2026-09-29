@@ -1,0 +1,21 @@
+{
+  "dataset": "KAISD held-out DataLoader object",
+  "source_recordings": 2,
+  "segments_total": 103,
+  "segments_sober": 52,
+  "segments_intoxicated": 51,
+  "segment_shape": {
+    "mel_bands": 128,
+    "time_frames": 345
+  },
+  "audio_preprocessing": {
+    "sample_rate_hz": 22050,
+    "mel_bands": 128,
+    "fft_points": 2048,
+    "hop_samples": 512,
+    "saved_object_normalization": "per-segment image normalization in project preprocessing"
+  },
+  "analysis_scaler": "one shared band-wise mean/SD estimated after pooling frames from both conditions",
+  "state_object": "standardized frames",
+  "movement_object": "within-segment first differences only; no transition inserted between segments"
+}

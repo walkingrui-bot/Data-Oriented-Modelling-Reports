@@ -1,0 +1,4 @@
+﻿test,replicates,observed,null_mean,null_tail_quantile_label,null_tail_quantile,empirical_one_sided_p,unit
+Feature identity permutation — PC1 concentration,200000,77.73,60.51,95th percentile,75.82,0.0275,percent energy
+Feature identity permutation — stable rank,200000,1.286,1.69,5th percentile,1.319,0.0275,stable rank
+Feature identity permutation — shared Hadamard factor,200000,61.37,,95th percentile,60.35,0.0409,percent energy
