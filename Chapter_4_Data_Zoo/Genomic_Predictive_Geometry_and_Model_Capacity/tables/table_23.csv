@@ -1,0 +1,5 @@
+Real structure,Zero fraction,PR / d,Predictive r90 / q,Predictive effective rank / q,Split effective support / q
+1000G genotype,0.685,0.283,0.556,0.329,0.320
+WDBC tabular,0.0046,0.133,0.333,0.228,0.731
+Sunspots time windows,0.0090,0.247,0.667,0.514,0.899
+Karate graph adjacency,0.865,0.225,0.375,0.304,0.160

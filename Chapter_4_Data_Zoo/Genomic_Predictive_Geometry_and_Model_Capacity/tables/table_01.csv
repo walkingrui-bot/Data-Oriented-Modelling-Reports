@@ -1,0 +1,17 @@
+Term,Meaning in this report
+SNP; genotype dosage,"Single-nucleotide polymorphism; diploid alternate-allele count 0, 1, or 2."
+n; p; q; N,Number of observations; input variables; target variables; N = p + q in the capacity tasks.
+Rank; DOF,"Number of retained mapping directions; independently variable mapping degrees of freedom, r(p + q − r)."
+PR dimension,"Participation-ratio dimension of covariance: (Σλ)² / Σλ², where λ are eigenvalues."
+TWO-NN,Local intrinsic-dimension estimate based on the first two nearest-neighbour distances.
+Predictive operator,Observed-to-target cross-covariance matrix for a specified task and preprocessing.
+r90,"Directions required to account for 90% of the stated spectrum: covariance variance or squared-singular-value energy, as labelled."
+Effective / entropy rank,"A continuous spectral-breadth summary. The report distinguishes covariance PR, predictive participation rank, and entropy/energy summaries."
+stable50; effective support,Count of directions with estimated reliability ≥ 0.5; sum of continuous direction reliabilities.
+Near-optimal rank,"Smallest tested rank within the stated tolerance, usually 0.005 validation R², of the best score."
+R²; MAE; CV,Coefficient of determination; mean absolute error; coefficient of variation. Units depend on the quantity measured.
+LOO / LOOCV,Leave-one-out cross-validation; the held-out unit is specified for each experiment.
+MAF; LD; cis; trans,Minor allele frequency; linkage disequilibrium; local or same-region relationship; relationship across chromosomes in the registered decomposition.
+Data Passport,"A common record of data geometry, task geometry, sample support, and estimator state."
+Mechanism-aligned,Variables and pairings follow a specified biological relationship. Cross-covariance and shuffles remain descriptive association measurements; they alone do not identify causal effects.
+Locked / blind / post hoc,Locked records fix a rule before the relevant outcome is revealed; post hoc analyses follow a reveal. Chronology is as recorded in the supplied archive.

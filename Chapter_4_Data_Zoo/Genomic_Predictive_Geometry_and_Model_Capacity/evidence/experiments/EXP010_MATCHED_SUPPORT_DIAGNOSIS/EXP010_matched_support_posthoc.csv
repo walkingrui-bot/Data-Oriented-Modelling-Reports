@@ -1,0 +1,5 @@
+window,actual_rank,original_rule_prediction,matched_support_prediction,original_abs_error,matched_abs_error
+chr22_ext_1,24,48,32,24,8
+chr22_ext_2,40,48,24,8,16
+chr22_ext_3,32,48,40,16,8
+chr22_ext_4,24,40,24,16,0

@@ -1,0 +1,22 @@
+experiment,status,path,files,csv_files,png_files
+EXP001,Measured data-cloud geometry,evidence/experiments/EXP001_GENOME_GEOMETRY,2,0,1
+EXP002,Held-out prediction capacity scan,evidence/experiments/EXP002_GENOME_CAPACITY,3,1,1
+EXP003,Exploratory and fixed-output scale controls,evidence/experiments/EXP003_SCALE_SCANS,4,2,1
+EXP004,Fixed-N counterexample,evidence/experiments/EXP004_FIXED_N_COUNTEREXAMPLE,3,1,1
+EXP005,Task-conditioned spectrum,evidence/experiments/EXP005_PREDICTIVE_GEOMETRY,3,1,1
+EXP006,"Internal capacity rule, exact permutation and block controls",evidence/experiments/EXP006_CAPACITY_PREDICTION,3,1,1
+EXP007,External chr22 blind test,evidence/experiments/EXP007_EXTERNAL_CHR22_BLIND_TRANSFER,3,1,1
+EXP008,Same-data sample-support control,evidence/experiments/EXP008_SAMPLE_SUPPORT_CONTROL,3,1,1
+EXP009,Sample-size capacity scan,evidence/experiments/EXP009_SAMPLE_SUPPORT_SWEEP,4,2,1
+EXP010,Post hoc matched-support diagnosis,evidence/experiments/EXP010_MATCHED_SUPPORT_DIAGNOSIS,3,1,1
+EXP011,"Direction reliability, near-optimal capacity and pairing controls",evidence/experiments/EXP011_PREDICTIVE_DIRECTION_STABILITY,12,6,4
+EXP012,External small-sample blind negative result,evidence/experiments/EXP012_SMALL_EXTERNAL_BLIND,8,3,2
+EXP013A,Post hoc scalar calibration and split-resolution diagnostic,evidence/experiments/EXP013A_SMALL_N_SCALAR_CALIBRATION,10,5,2
+EXP013B,Within-source raw-operator resampling and grouped calibration,evidence/experiments/EXP013B_RAW_OPERATOR_CALIBRATION,13,7,3
+EXP013C,Cross-species external estimator blind test,evidence/experiments/EXP013C_CROSS_SPECIES_BLIND,11,6,2
+EXP013D,Post hoc fixed-task sample-support diagnostic,evidence/experiments/EXP013D_SAMPLE_SUPPORT_DIAGNOSTIC,4,1,1
+EXP014A,Four-structure Passport pilot,evidence/experiments/EXP014A_CROSS_STRUCTURE_DATA_PASSPORT,7,4,1
+EXP014B,Unexecuted atlas design,evidence/experiments/EXP014B_ATLAS_DESIGN,1,0,0
+EXP015A,Matched-width omics layer geometry,evidence/experiments/EXP015A_OMICS_LAYER_GEOMETRY,5,3,2
+EXP015B,Matched-cell RNA–protein operator and controls,evidence/experiments/EXP015B_RNA_TO_PROTEIN_OPERATOR,7,3,3
+EXP015C,Locked protocol only; no numerical results,evidence/experiments/EXP015C_GENOME_TO_TRANSCRIPTOME_PROTOCOL,2,0,0

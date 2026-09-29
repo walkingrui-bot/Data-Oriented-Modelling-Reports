@@ -1,0 +1,37 @@
+{
+  "EXP006A": {
+    "design": "19 overlapping real chr21 windows; N=240; q=24; train/val/test=1505/501/498; rank grid capped at 24",
+    "best_rank_counts": {
+      "20": 5,
+      "24": 14
+    },
+    "baseline_exact": "14/19",
+    "two_feature_exact": "15/19",
+    "two_feature_MAE": 0.842105,
+    "two_feature_corr": 0.457143,
+    "evidence_status": "capacity grid saturation observed; experiment used to redesign the rank grid, not as final capacity law"
+  },
+  "EXP006B_metrics": {
+    "baseline_exact": "11/19",
+    "baseline_MAE": 3.368421,
+    "two_feature_LOOCV_exact": "18/19",
+    "two_feature_LOOCV_MAE": 0.421053,
+    "two_feature_LOOCV_corr": 0.895591,
+    "energy_only_exact": "15/19",
+    "energy_only_MAE": 1.684211,
+    "r90_only_exact": "9/19"
+  },
+  "EXP006C": {
+    "exact_label_allocations": 75582,
+    "loocv_hits": 18,
+    "loocv_MAE": 0.421053,
+    "exact_p_hits": 3.969199e-05,
+    "exact_p_MAE": 3.969199e-05,
+    "blocked_design": "4 contiguous genomic blocks (5,5,5,4 windows)",
+    "blocked_hits": 15,
+    "blocked_MAE": 1.684211,
+    "blocked_corr": 0.567295,
+    "blocked_exact_p_hits": 0.007620862,
+    "blocked_exact_p_MAE": 0.007515017
+  }
+}

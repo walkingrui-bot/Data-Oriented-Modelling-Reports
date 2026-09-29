@@ -1,0 +1,6 @@
+Subset,r90,Entropy rank,Predictive PR,Best rank,Best R²
+window_1,3.0,2.63,1.59,16,0.301
+window_2,7.5,4.54,2.40,24,0.373
+window_3,7.5,4.87,2.59,24,0.332
+window_4,6.5,4.22,2.22,16,0.309
+spread,2.0,2.52,1.64,4,0.134

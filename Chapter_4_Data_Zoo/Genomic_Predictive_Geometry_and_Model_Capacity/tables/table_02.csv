@@ -1,0 +1,18 @@
+Finding,Result
+Initial real-data geometry,"2,504 people × 162 SNPs: global participation-ratio dimension 119.03; local TWO-NN approximately 54.74."
+960-SNP capacity peak,"Rank 24; mapping DOF 22,464; mean held-out R² 0.280."
+Fixed-output scale scan,"From 120 to 960 SNPs, best DOF rises through 464, 944, 3,776, and 15,104."
+Fixed N = 240 counterexample,The spread subset has the highest local dimension but requires only rank 4; dimension alone is not a capacity law.
+Predictive geometry,Cross-covariance breadth r90 correlates 0.873 with best rank across five fixed-N subsets.
+Internal chr21 capacity prediction,"At q = 48, two-feature LOOCV gives 18/19 matches; exact label-permutation p = 3.97 × 10⁻⁵."
+External chr22 blind test,Locked predictions 48/48/48/40 versus observed selections 24/40/32/24: systematic overestimation.
+Sample-support control,"Reducing training individuals from 1,505 to 657 in the same chr21 tasks lowers mean best rank from 43.37 to 35.37."
+"Stable directions, EXP011",stable50 versus minimum near-optimal rank: chr21 r = 0.993; chr22 r = 0.683; eight windows pooled r = 0.929. Within-population pairing shuffles reduce mean stable50 by approximately 85%.
+"Very small external sample, EXP012","30 training individuals and 38 common SNPs. stable50 = 1 locks band [1, 1]; observed minimum near-optimal validation rank is 5. The primary endpoint fails and identifies an estimator-resolution boundary."
+"Scalar calibration, EXP013A",Threshold and soft-count recalibration on eight moderate-sample tasks do not recover EXP012 rank 5. Mean effective-support split gap rises from 1.22% in chr21 to 20.48% in EXP012.
+"Raw-operator calibration, EXP013B","128 × 2 real-data resampled tasks. Bootstrap raw direction-ordering Spearman = 0.768 and grouped-LOO calibrated direction MAE = 0.127. Power-debiased stable-count MAE is lowest, at 0.941."
+"Cross-species estimator blind test, EXP013C",Four locked 38-marker maize HapMap tasks. Bootstrap direction MAE 0.1466 is below split mean 0.1728. Ordering transfers with a shift in absolute reliability calibration.
+"Sample-support diagnostic, EXP013D",Fixed maize tasks at n = 30/60/120: power Spearman 0.517/0.673/0.903; bootstrap 0.584/0.700/0.882.
+"Cross-structure Data Passport, EXP014A","The same interface is calculated on real genotype, tabular, time-series, and graph structures, yielding comparable but distinct geometric and predictive fingerprints."
+"Omics layer geometry, EXP015A","At matched n = 59, d = 162: genome PR/TWO-NN = 40.00/49.87; RNA = 10.53/7.55; protein = 15.44/13.16. Fixed 81-to-81 predictive r90 = 25/4/7."
+"RNA-to-protein mapping, EXP015B","59 common NCI-60 cell lines and 92 symbol pairs. Mean same-gene correlation 0.396, with 92.4% positive; gene-label permutation p = 2.00 × 10⁻⁴. Operator effective rank 5.01 and r90 = 11; within-tissue pairing shuffles reduce correlation and energy."

@@ -1,0 +1,356 @@
+{
+  "scope": "Checks of released derived outputs; no provider observations downloaded and no original model fitting rerun.",
+  "checks": [
+    {
+      "check": "EXP002_capacity_scan_960snp.csv mapping DOF maximum error",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP004_fixedN_window_vs_spread.csv mapping DOF maximum error",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP003A_scale_scan_variable_targets.csv mapping DOF maximum error",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP003B_scale_scan_fixed24_targets.csv mapping DOF maximum error",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP005 r90 correlation",
+      "actual": 0.8731837445438193,
+      "expected": 0.873,
+      "absolute_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "check": "EXP006 LOO exact",
+      "actual": 18.0,
+      "expected": 18.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP006 block exact",
+      "actual": 15.0,
+      "expected": 15.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP006 label combinations",
+      "actual": 75582.0,
+      "expected": 75582.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP006 exact LOO p",
+      "actual": 3.9691990156386444e-05,
+      "expected": 3.9691990156386444e-05,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP006 exact block p",
+      "actual": 0.0076208621100261964,
+      "expected": 0.0076208621100261964,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP007 rank MAE",
+      "actual": 16.0,
+      "expected": 16.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP007 mean test regret",
+      "actual": 0.01128325,
+      "expected": 0.0113,
+      "absolute_tolerance": 5e-05,
+      "pass": true
+    },
+    {
+      "check": "EXP008 changed windows",
+      "actual": 16.0,
+      "expected": 16.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP008 mean rank shift",
+      "actual": -8.0,
+      "expected": -8.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP010 original MAE",
+      "actual": 16.0,
+      "expected": 16.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP010 matched MAE",
+      "actual": 8.0,
+      "expected": 8.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP011 pooled stability correlation",
+      "actual": 0.9290467606507776,
+      "expected": 0.929,
+      "absolute_tolerance": 0.0005,
+      "pass": true
+    },
+    {
+      "check": "EXP011 ratio mean",
+      "actual": 1.2908524555153091,
+      "expected": 1.2908524555153091,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP011 ratio min",
+      "actual": 0.9411764705882353,
+      "expected": 0.9411764705882353,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP011 ratio max",
+      "actual": 1.6,
+      "expected": 1.6,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP011 true_stable50",
+      "actual": 28.25,
+      "expected": 28.25,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP011 within_superpop_stable50",
+      "actual": 4.25,
+      "expected": 4.25,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP011 global_stable50",
+      "actual": 1.5,
+      "expected": 1.5,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP012 near-optimal rank",
+      "actual": 5.0,
+      "expected": 5.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP012 best validation rank",
+      "actual": 5.0,
+      "expected": 5.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_one raw Spearman",
+      "actual": 0.4315143754843608,
+      "expected": 0.4315143754843608,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_one calibrated MAE",
+      "actual": 0.18901653476952104,
+      "expected": 0.189016534769521,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_one count MAE",
+      "actual": 1.5546875,
+      "expected": 1.5546875,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_mean raw Spearman",
+      "actual": 0.518308964646912,
+      "expected": 0.518308964646912,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_mean calibrated MAE",
+      "actual": 0.18071155145869544,
+      "expected": 0.1807115514586954,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_mean count MAE",
+      "actual": 1.5546875,
+      "expected": 1.5546875,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_median raw Spearman",
+      "actual": 0.5035989690426267,
+      "expected": 0.5035989690426267,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_median calibrated MAE",
+      "actual": 0.17942500637071246,
+      "expected": 0.1794250063707124,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_median count MAE",
+      "actual": 1.5546875,
+      "expected": 1.5546875,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_power_rel raw Spearman",
+      "actual": 0.7154532948744666,
+      "expected": 0.7154532948744666,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_power_rel calibrated MAE",
+      "actual": 0.13563632979826507,
+      "expected": 0.135636329798265,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B split_power_rel count MAE",
+      "actual": 0.94140625,
+      "expected": 0.94140625,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B bootstrap raw Spearman",
+      "actual": 0.7676898239129254,
+      "expected": 0.7676898239129254,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B bootstrap calibrated MAE",
+      "actual": 0.12696619569312595,
+      "expected": 0.1269661956931259,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013B bootstrap count MAE",
+      "actual": 1.0390625,
+      "expected": 1.0390625,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013C split_mean MAE",
+      "actual": 0.17281535128259512,
+      "expected": 0.1728153512825951,
+      "absolute_tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013C split_mean ordering",
+      "actual": 0.5412711617894204,
+      "expected": 0.5412711617894204,
+      "absolute_tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013C split_power_rel MAE",
+      "actual": 0.15890220528617133,
+      "expected": 0.1589022052861713,
+      "absolute_tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013C split_power_rel ordering",
+      "actual": 0.5188854010229753,
+      "expected": 0.5188854010229753,
+      "absolute_tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013C bootstrap MAE",
+      "actual": 0.14659777150652079,
+      "expected": 0.1465977715065207,
+      "absolute_tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP013C bootstrap ordering",
+      "actual": 0.5453141272399766,
+      "expected": 0.5453141272399766,
+      "absolute_tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP015B symbols",
+      "actual": 92.0,
+      "expected": 92.0,
+      "absolute_tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "check": "EXP015B mean same-gene correlation",
+      "actual": 0.39588018112391304,
+      "expected": 0.3958801811,
+      "absolute_tolerance": 1e-09,
+      "pass": true
+    },
+    {
+      "check": "EXP015B median same-gene correlation",
+      "actual": 0.3806424474,
+      "expected": 0.3806424474,
+      "absolute_tolerance": 1e-09,
+      "pass": true
+    },
+    {
+      "check": "EXP015B positive fraction",
+      "actual": 0.9239130434782609,
+      "expected": 0.9239130435,
+      "absolute_tolerance": 1e-09,
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

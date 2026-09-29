@@ -1,0 +1,4 @@
+Layer (59 × 162),PR dimension,TWO-NN,Covariance r90,Top eigen share,Distance CV
+Genome (1000G subset),40.00,49.87,42,0.058,0.061
+RNA top-variance 162,10.53,7.55,27,0.211,0.169
+Protein lysate array,15.44,13.16,30,0.168,0.153

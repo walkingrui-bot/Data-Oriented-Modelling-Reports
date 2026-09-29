@@ -1,0 +1,4 @@
+control,same_gene_mean_corr,operator_energy,permutation_p_same_gene,permutation_p_energy
+true matched cells,0.3958801811,313.8477922,,
+within-tissue cell shuffle,0.1703737876,249.5164763,0.0003332223,0.0003332223
+global cell shuffle,-0.0003669149,146.070595,0.0003332223,0.0003332223

@@ -1,0 +1,9 @@
+Measure,Result
+Matched gene symbols,92
+Mean same-gene correlation,0.3959
+Median same-gene correlation,0.3806
+Positive fraction,92.4%
+Gene-label permutation p,2.00×10⁻⁴
+RNA→protein effective rank,5.01
+RNA→protein r90,11
+Top direction energy share,0.373

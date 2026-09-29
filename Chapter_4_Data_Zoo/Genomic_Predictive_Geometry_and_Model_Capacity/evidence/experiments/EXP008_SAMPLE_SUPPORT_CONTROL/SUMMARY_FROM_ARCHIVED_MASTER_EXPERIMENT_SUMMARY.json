@@ -1,0 +1,14 @@
+{
+  "EXP008_meta": {
+    "changed_windows": "16/19",
+    "mean_rank_n1505": 43.368421,
+    "mean_rank_n657": 35.368421,
+    "mean_shift": -8,
+    "reduced_distribution": {
+      "24": 2,
+      "32": 10,
+      "40": 4,
+      "48": 3
+    }
+  }
+}

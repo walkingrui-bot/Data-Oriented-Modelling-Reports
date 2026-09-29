@@ -1,0 +1,5 @@
+Quantity,Status,Rank,DOF
+Preregistered centre,Locked,1,37
+Preregistered band,Locked,1–1,37
+Validation argmax,Revealed,5,165
+Minimum near-optimal validation rank,Revealed,5,165

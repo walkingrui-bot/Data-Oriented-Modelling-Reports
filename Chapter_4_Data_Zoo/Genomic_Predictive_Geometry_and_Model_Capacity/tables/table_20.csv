@@ -1,0 +1,6 @@
+Estimator,Raw Spearman,Calibrated direction MAE,stable50 accuracy,Stable-count MAE
+15/15 one split,0.432,0.189,73.4%,1.555
+15/15 mean ×30,0.518,0.181,73.4%,1.555
+15/15 median ×30,0.504,0.179,73.4%,1.555
+Power debias,0.715,0.136,87.2%,0.941
+Full-n bootstrap,0.768,0.127,87.8%,1.039

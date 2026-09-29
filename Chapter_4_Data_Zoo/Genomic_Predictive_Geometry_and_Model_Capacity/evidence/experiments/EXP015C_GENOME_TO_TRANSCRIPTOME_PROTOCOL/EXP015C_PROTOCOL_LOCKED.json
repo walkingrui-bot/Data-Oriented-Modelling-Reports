@@ -1,0 +1,52 @@
+{
+  "experiment_id": "EXP015C",
+  "title": "Paired Whole-Genome ↔ Whole-Transcriptome Geometry",
+  "date": "2026-09-28",
+  "data_source": {
+    "record": "Zenodo 15596289 / Geuvadis Lappalainen et al. 2013",
+    "files": [
+      "geuvadis.pgen",
+      "geuvadis.pvar.zst",
+      "geuvadis.psam",
+      "GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz"
+    ]
+  },
+  "C1": [
+    "PR dimension",
+    "TWO-NN",
+    "covariance r90",
+    "entropy rank",
+    "top eigen share",
+    "spectral decay",
+    "distance concentration",
+    "10^2→10^3→10^4→full scale scan"
+  ],
+  "C2": [
+    "sample-space genome→RNA transition spectrum",
+    "effective rank",
+    "r90",
+    "kernel alignment",
+    "regularized whitening sensitivity",
+    "within-population pairing shuffle",
+    "global pairing shuffle"
+  ],
+  "C2B": [
+    "sample-size scan",
+    "direction-level shuffle noise floor",
+    "supported transition freedom"
+  ],
+  "C3": [
+    "22x22 chromosome transition energy matrix",
+    "chromosome-label permutation",
+    "cis ±1Mb",
+    "same-chromosome distant >=5Mb",
+    "trans",
+    "population-residualized control"
+  ],
+  "hypotheses": [
+    "D_genome >> D_genome_to_RNA",
+    "D_genome_to_RNA <= D_RNA",
+    "D_genome_to_RNA_supported(n) increases with sample support"
+  ],
+  "result_status": "protocol locked; no numerical EXP015C result registered yet"
+}

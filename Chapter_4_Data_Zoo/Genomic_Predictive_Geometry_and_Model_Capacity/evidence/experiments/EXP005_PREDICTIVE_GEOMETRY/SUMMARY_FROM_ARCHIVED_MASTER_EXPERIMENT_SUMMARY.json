@@ -1,0 +1,9 @@
+{
+  "EXP005_corr": {
+    "prank_vs_best_rank": 0.80273,
+    "entropy_vs_best_rank": 0.83034,
+    "r90_vs_best_rank": 0.873184,
+    "stable_vs_best_rank": 0.791836,
+    "prank_vs_R2": 0.690642
+  }
+}

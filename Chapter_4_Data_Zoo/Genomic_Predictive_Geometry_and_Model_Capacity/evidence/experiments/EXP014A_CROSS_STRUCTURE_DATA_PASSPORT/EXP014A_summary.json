@@ -1,0 +1,25 @@
+{
+  "experiment": "CROSS-STRUCTURE-DATA-PASSPORT-PILOT-014A",
+  "status": "descriptive real-data pilot across four structures; no architecture-routing claim",
+  "datasets": {
+    "genotype": "BioNumPy/1000 Genomes fixed 50x38 panel archived in EXP013B",
+    "tabular": "scikit-learn Wisconsin Diagnostic Breast Cancer, 569x30 features",
+    "time_series": "statsmodels annual sunspots 1700-2008, converted to 12-lag -> 3-future windows",
+    "graph": "NetworkX Zachary karate club, 34x34 binary adjacency profiles"
+  },
+  "shared_passport_fields": [
+    "raw_zero_fraction",
+    "pr_dimension_fraction",
+    "top_cov_eigen_share",
+    "twonn_fraction",
+    "pairwise_distance_cv",
+    "predictive_r90_fraction",
+    "predictive_effective_rank_fraction",
+    "predictive_top_direction_share",
+    "predictive_energy_per_entry",
+    "row_split_effective_fraction",
+    "row_split_support_cv"
+  ],
+  "finding": "The same structure-agnostic passport calculation runs on genotype, ordinary tabular measurements, lagged time-series windows and graph adjacency profiles, and produces markedly different observed/predictive spectra, sparsity and stability profiles. This establishes a common measurement interface, not a universal clustering law.",
+  "evidence_boundary": "One real dataset represents each structure in this pilot. The next atlas stage needs multiple datasets per structure before testing whether geometry predicts model-family routing better than type labels."
+}

@@ -14,7 +14,7 @@ Read the chapters in order. Each folder contains its report and the supporting e
 
 [Chapters 1 and 2 — DOI](https://doi.org/10.5281/zenodo.22974937) · [Chapter 3, both editions — DOI](https://doi.org/10.5281/zenodo.22983593)
 
-This is a self-directed personal-interest research project. It is maintained as a living research record. Chapter 4 collects independently versioned subreports: [Language Structure and Control Geometry](Chapter_4_Data_Zoo/Language_Structure_and_Control_Geometry/README.md) is Subreport 1, and [Human Learning and Sensorimotor Geometry](Chapter_4_Data_Zoo/Human_Learning_and_Sensorimotor_Geometry/README.md) is Subreport 2. Both are available in English edition v1.0.
+This is a self-directed personal-interest research project. It is maintained as a living research record. Chapter 4 collects independently versioned subreports: [Language Structure and Control Geometry](Chapter_4_Data_Zoo/Language_Structure_and_Control_Geometry/README.md) is Subreport 1, and [Human Learning and Sensorimotor Geometry](Chapter_4_Data_Zoo/Human_Learning_and_Sensorimotor_Geometry/README.md) is Subreport 2. [Genomic Predictive Geometry and Model Capacity](Chapter_4_Data_Zoo/Genomic_Predictive_Geometry_and_Model_Capacity/README.md) is Subreport 4. These reports are available in English edition v1.0.
 
 [About the project](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/PROJECT_INFORMATION.md) · [Citation](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/CITATION.md) · [Source and reuse terms](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/SOURCE_NOTES.md)
 

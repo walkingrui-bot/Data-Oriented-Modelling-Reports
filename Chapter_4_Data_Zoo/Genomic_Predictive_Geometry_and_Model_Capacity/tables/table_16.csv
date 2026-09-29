@@ -1,0 +1,4 @@
+Training n,Mean stable50,Mean effective stable rank,Mean argmax rank
+300,11.25,11.70,22.0
+657,19.00,18.00,38.0
+1505,28.00,25.32,44.0

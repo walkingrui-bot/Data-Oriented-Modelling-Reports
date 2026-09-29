@@ -1,0 +1,28 @@
+{
+  "experiment": "SMALL-EXTERNAL-STABILITY-BLIND-012",
+  "status": "LOCKED BEFORE CAPACITY SCAN",
+  "source": "bionumpy/bionumpy example_data/thousand_genomes.vcf",
+  "source_sha": "5faa223e61eb3b301ebc397eab1df22e4f105f8d",
+  "raw_samples": 50,
+  "raw_variants": 74,
+  "common_train_maf_ge_0.05": 38,
+  "selected_N": 38,
+  "targets_q": 9,
+  "split": {"train": 30, "validation": 10, "test": 10},
+  "stability_protocol": "2 target grids x 2 fixed 15/15 split-half partitions; rel_k=clip(1-||N v_k||^2/||S v_k||^2,0,1); stable50=count(rel_k>=0.5)",
+  "stable50_mean": 1.0,
+  "effective_stable_rank_mean": 1.4738528655967933,
+  "capacity_rule_source": "PREDICTIVE-DIRECTION-STABILITY-011 only",
+  "center_rule": "round(1.2908524555153091 * stable50)",
+  "band_rule": "ceil(0.9411764705882353 * stable50) to floor(1.6 * stable50), clipped to rank 1..q",
+  "predicted_center_rank": 1,
+  "predicted_rank_band": [1,1],
+  "primary_endpoint": "validation minimal rank within 0.005 R2 of the validation argmax lies inside preregistered rank band",
+  "secondary_endpoints": [
+    "validation argmax rank",
+    "test R2 at preregistered center rank",
+    "test R2 at validation minimal-near-optimal rank",
+    "test regret of preregistered center"
+  ],
+  "test_set_policy": "test set is not used for capacity selection"
+}

@@ -1,0 +1,40 @@
+{
+  "EXP011": {
+    "experiment": "PREDICTIVE-DIRECTION-STABILITY-011",
+    "operator_reliability": "rel_k = clip(1 - ||N v_k||^2 / ||S v_k||^2, 0, 1), S=(C_A+C_B)/2, N=(C_A-C_B)/2",
+    "stable50_definition": "count of predictive singular directions with split-half reliability >= 0.5",
+    "chr21_stable50_vs_min_rank_005_r": 0.9931043567629827,
+    "chr22_stable50_vs_min_rank_005_r": 0.6831300510639733,
+    "combined_stable50_vs_min_rank_005_r": 0.9290467606507776,
+    "combined_mean_minrank005_over_stable50": 1.2908524555153091,
+    "sample_support_stable50_vs_argmax_rank_r": 0.8725587073223594,
+    "sample_support_effective_vs_argmax_rank_r": 0.8999256979640013,
+    "sample_support_means": {
+      "300": {
+        "stable50": 11.25,
+        "effective": 11.695230571160279,
+        "best_rank": 22.0
+      },
+      "657": {
+        "stable50": 19.0,
+        "effective": 17.998933502919684,
+        "best_rank": 38.0
+      },
+      "1505": {
+        "stable50": 28.0,
+        "effective": 25.316218374838805,
+        "best_rank": 44.0
+      }
+    },
+    "shuffle_control_means": {
+      "true_stable50": 28.25,
+      "within_superpop_stable50": 4.25,
+      "global_stable50": 1.5,
+      "true_effective": 25.69866048938364,
+      "within_superpop_effective": 6.571288203681753,
+      "global_effective": 4.745577030799103
+    },
+    "shuffle_within_superpop_stable50_drop_fraction": 0.8495575221238938,
+    "shuffle_global_stable50_drop_fraction": 0.9469026548672567
+  }
+}

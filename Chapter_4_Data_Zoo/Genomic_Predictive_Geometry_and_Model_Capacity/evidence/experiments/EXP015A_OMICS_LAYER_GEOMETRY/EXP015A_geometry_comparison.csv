@@ -1,0 +1,5 @@
+layer,n,features,pr_dimension,pr_fraction_sample_rank,cov_r90,r90_fraction_sample_rank,top_eigen_share,twonn_dimension,pairwise_distance_cv,raw_zero_fraction,selection
+Genome (1000G subset),59,162,40.0036393468,0.6897179198,42,0.724137931,0.058385464,49.8720499698,0.061227146,0.3721489851,"59 deterministic individuals (seed 15015), all 162 SNPs"
+RNA top-variance 162,59,162,10.5302194029,0.1815555069,27,0.4655172414,0.2111588691,7.5539429043,0.1690629617,,"top 162 raw-variance HG-U133A probes among 22,283"
+RNA all U133A,59,22283,11.8432013437,0.2041931266,41,0.7068965517,0.2633174925,14.9325763347,0.255164366,,"all 22,283 U133A probes"
+Protein lysate array,59,162,15.4432545897,0.2662630102,30,0.5172413793,0.1681216849,13.1645346626,0.1526883701,,all 162 protein-array probes

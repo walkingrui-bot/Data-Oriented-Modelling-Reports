@@ -1,0 +1,5 @@
+Window,Predicted rank,Selected rank,Test R² at prediction,Test R² at selection,R² regret
+chr22_ext_1,48,24,0.269,0.294,0.025
+chr22_ext_2,48,40,0.241,0.247,0.006
+chr22_ext_3,48,32,0.385,0.389,0.005
+chr22_ext_4,40,24,0.195,0.205,0.009

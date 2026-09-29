@@ -1,0 +1,6 @@
+Subset,Local dimension,PR estimate,Best rank,Best DOF,Best R²
+window_1,40.3,56.9,16,3584,0.301
+window_2,34.9,37.6,24,5184,0.373
+window_3,42.8,77.3,24,5184,0.332
+window_4,38.3,63.5,16,3584,0.309
+spread,56.0,63.0,4,944,0.134

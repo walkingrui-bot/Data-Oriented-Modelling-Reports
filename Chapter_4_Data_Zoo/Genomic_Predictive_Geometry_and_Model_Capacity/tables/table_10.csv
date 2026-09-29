@@ -1,0 +1,6 @@
+Measure,Result
+Observed best ranks,40: 11/19; 48: 8/19
+No-geometry baseline,11/19; MAE 3.37
+Energy-only LOOCV,15/19; MAE 1.68
+r90-only LOOCV,9/19
+r90 + log(Epred) LOOCV,18/19; MAE 0.42; r = 0.896

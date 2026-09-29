@@ -1,0 +1,9 @@
+Measure,Result
+Global effective dimension,119.03 / 162
+Local TWO-NN,54.74
+Variance in first three PCs,8.35%
+Variance in first 12 PCs,16.09%
+Super-population variance share,6.08%
+Label-permutation p,0.0099
+Five-fold ancestry recovery from 12 PCs,87.18%
+Mean between-/within-group distance ratio,1.0375

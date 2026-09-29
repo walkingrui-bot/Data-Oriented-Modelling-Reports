@@ -1,0 +1,34 @@
+{
+  "EXP012": {
+    "experiment": "SMALL-EXTERNAL-STABILITY-BLIND-012",
+    "source": "bionumpy/bionumpy example_data/thousand_genomes.vcf",
+    "source_sha": "5faa223e61eb3b301ebc397eab1df22e4f105f8d",
+    "raw_samples": 50,
+    "raw_variants": 74,
+    "common_train_MAF_ge_0.05": 38,
+    "selected_N": 38,
+    "q": 9,
+    "split": {
+      "train": 30,
+      "validation": 10,
+      "test": 10
+    },
+    "stable50_mean": 1.0,
+    "effective_stable_rank_mean": 1.4738528655967933,
+    "preregistered_center_rank": 1,
+    "preregistered_rank_band": [
+      1,
+      1
+    ],
+    "validation_argmax_rank": 5,
+    "validation_argmax_R2": 0.36965357656224623,
+    "validation_min_rank_within_0.005": 5,
+    "validation_nearoptimal_R2": 0.36965357656224623,
+    "primary_band_hit": false,
+    "test_R2_at_preregistered_center": 0.0998227630424513,
+    "test_R2_at_validation_nearoptimal": 0.21549563289695428,
+    "test_regret": 0.11567286985450298,
+    "evidence_status": "prospectively locked blind test; primary endpoint failed",
+    "interpretation": "At n_train=30, 15/15 split-half reliability collapses stable50 to one direction and underestimates the validation-supported near-optimal rank. This identifies a small-sample failure regime for raw stable50."
+  }
+}

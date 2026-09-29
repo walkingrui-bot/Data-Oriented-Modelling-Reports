@@ -1,0 +1,4 @@
+Training n,Power Spearman,Bootstrap Spearman,Locked power MAE,Locked bootstrap MAE,Mean reference reliability
+30,0.517,0.584,0.149,0.137,0.318
+60,0.673,0.700,0.138,0.137,0.414
+120,0.903,0.882,0.098,0.128,0.460

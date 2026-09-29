@@ -1,0 +1,25 @@
+ID,Question,Evidence status,Scope
+001,Geometry of a real data cloud,Direct matrix calculation,"2,504 × 162 real 1000 Genomes"
+002,Capacity peak and coarse/fine structure,Direct prediction experiment,"2,504 × 960 real chr21"
+003A,Capacity trend with scale,Exploratory; target-count confounding,Original results retained
+003B,Scale trend with fixed targets,Controlled experiment,q = 24
+004,Dimension-only capacity rule,Fixed-N counterexample,N = 240
+005,Predictive spectrum and capacity,Fixed-N calculation,Cross-covariance spectrum
+006A,Capacity-grid truncation at q = 24,Design diagnostic,Basis for expanded grid
+006B,Internal chr21 geometry-to-rank rule,LOOCV 18/19,q = 48
+006C,Permutation and neighbouring-window effects,Exact permutation and block CV,p ≈ 3.97 × 10⁻⁵ and 0.0076
+007,Overestimation on external chr22,External blind test,0/4 exact; small R² regret
+008,Effect of sample support on optimal rank,Same-data control,"1,505 → 657 training individuals"
+009,Capacity growth and plateau with n,Sample-size scan,"300 → 1,505"
+010,Support matching and transfer error,Post hoc mechanism diagnostic,Rank MAE 16 → 8
+011,Direction stability and near-optimal capacity,Direct calculations and shuffles,chr21/chr22 split-half operator reliability
+012,Small-sample transfer of a stable50 capacity band,Preregistered external blind negative result,"Band [1, 1] misses near-optimal rank 5; resolution boundary"
+013A,Scalar reliability recalibration at small n,Post hoc calibration and split-sensitivity diagnostic,Threshold/soft counts do not recover rank 5; resolution warning
+013B,Power debiasing and whole-training bootstrap,Raw-operator resampling with 20-person holdout per split,Bootstrap best ordering; power best count MAE; external test in 013C
+013C,Cross-species transfer of a locked estimator,Preregistered external maize operator blind test,Bootstrap MAE 0.1466; ordering transfers more strongly than absolute scale
+013D,Sample resolution and calibration regime,Post hoc fixed-maize-task control at n = 30/60/120,Ordering sharpens with n; affine calibration also changes
+014A,Common Data Passport across structures,Four-real-dataset pilot,"Genotype, tabular, time series, graph"
+014B,Passport neighbourhoods within data structures,Unexecuted design,Protocol concept only
+015A,Layer geometry and fixed-width predictive spectra,Direct real-matrix calculation,NCI-60 expression; 1000 Genomes comparator matched on n and d
+015B,Mechanism-aligned RNA-to-protein operator,"Same-cell, same-gene measurements and shuffle controls",92 matched symbols; gene labels and within-tissue/global pairing
+015C,Paired whole-genome/transcriptome geometry,Locked protocol only; no numerical result,GEUVADIS/1000 Genomes design

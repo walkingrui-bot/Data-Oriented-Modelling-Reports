@@ -1,0 +1,13 @@
+{
+  "EXP002_meta": {
+    "n_individuals": 2504,
+    "n_snps": 960,
+    "train_n": 2002,
+    "test_n": 502,
+    "target_panels": 3,
+    "targets_per_panel": 32,
+    "pr_dim_estimate": 98.185,
+    "local_twonn": 73.056,
+    "distance_cv": 0.07141
+  }
+}

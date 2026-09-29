@@ -1,0 +1,11 @@
+{
+  "EXP003A_corr": {
+    "localdim_vs_rank": 0.91465,
+    "log_localdim_vs_log_dof": 0.968295,
+    "N_vs_dof": 0.980127
+  },
+  "EXP003B_corr": {
+    "localdim_vs_rank": 0.881739,
+    "log_localdim_vs_log_dof": 0.963301
+  }
+}

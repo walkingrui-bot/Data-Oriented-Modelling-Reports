@@ -1,0 +1,32 @@
+{
+  "experiment": "EXP013A",
+  "scope": "Execution of the path-adapted supplied script using only released derived EXP011/EXP012 tables. No provider observations used.",
+  "tables": [
+    {
+      "file": "EXP013A_threshold_sweep_medium_only.csv",
+      "maximum_numeric_difference": 0,
+      "pass": true
+    },
+    {
+      "file": "EXP013A_medium_task_features.csv",
+      "maximum_numeric_difference": 0,
+      "pass": true
+    },
+    {
+      "file": "EXP013A_estimator_calibration.csv",
+      "maximum_numeric_difference": 0,
+      "pass": true
+    },
+    {
+      "file": "EXP013A_exp012_repeated_split_features.csv",
+      "maximum_numeric_difference": 0,
+      "pass": true
+    },
+    {
+      "file": "EXP013A_split_instability.csv",
+      "maximum_numeric_difference": 0,
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

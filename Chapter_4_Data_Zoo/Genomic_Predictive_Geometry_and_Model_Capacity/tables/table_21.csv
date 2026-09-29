@@ -1,0 +1,4 @@
+Estimator,Direction MAE,Raw Spearman,stable50 accuracy
+Split mean ×30,0.1728,0.541,75.0%
+Power debias,0.1589,0.519,83.3%
+Full-n bootstrap,0.1466,0.545,77.8%

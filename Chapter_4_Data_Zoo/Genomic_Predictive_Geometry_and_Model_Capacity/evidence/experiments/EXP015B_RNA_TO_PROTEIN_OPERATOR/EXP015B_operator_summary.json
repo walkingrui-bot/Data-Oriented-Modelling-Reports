@@ -1,0 +1,17 @@
+{
+  "common_gene_symbols": 92,
+  "same_gene_corr_mean": 0.3958801811,
+  "same_gene_corr_median": 0.3806424474,
+  "same_gene_corr_q25": 0.1870991063,
+  "same_gene_corr_q75": 0.6494881145,
+  "same_gene_positive_fraction": 0.9239130435,
+  "gene_label_permutation_p": 0.00019996,
+  "gene_label_null_mean": 0.0029318697,
+  "gene_label_null_sd": 0.0194727927,
+  "gene_label_null_q95": 0.0353025039,
+  "gene_label_null_q99": 0.0471105881,
+  "operator_energy": 313.8477922267,
+  "operator_effective_rank_energy": 5.0086041161,
+  "operator_r90_energy": 11,
+  "operator_top_energy_share": 0.3732994799
+}

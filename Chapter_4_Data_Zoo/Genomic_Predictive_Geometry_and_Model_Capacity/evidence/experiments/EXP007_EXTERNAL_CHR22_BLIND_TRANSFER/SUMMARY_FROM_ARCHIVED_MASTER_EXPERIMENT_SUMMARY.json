@@ -1,0 +1,14 @@
+{
+  "EXP007_meta": {
+    "dataset": "1000 Genomes Phase 1 chr22 external matrix",
+    "n_individuals": 1092,
+    "raw_snp_cols": 4943,
+    "common_snps_train_MAF_ge_0.05": 1012,
+    "train_n": 657,
+    "val_n": 218,
+    "test_n": 217,
+    "exact_hits": "0/4",
+    "MAE_rank": 16,
+    "mean_test_regret": 0.01128337
+  }
+}

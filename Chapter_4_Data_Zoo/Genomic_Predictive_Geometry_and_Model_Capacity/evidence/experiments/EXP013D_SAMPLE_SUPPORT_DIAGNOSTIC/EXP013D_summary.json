@@ -1,0 +1,57 @@
+{
+  "experiment": "CROSS-SPECIES-SAMPLE-SUPPORT-DIAGNOSTIC-013D",
+  "status": "post-hoc mechanism diagnostic after EXP013C reveal",
+  "design": "same four locked maize 38-marker tasks; nested n=30/60/120 training subsets; fixed disjoint 100-person independent operator reference; markers and q=9 target grid held fixed",
+  "key_results": [
+    {
+      "n_train": 30,
+      "raw_power_spearman": 0.5172719120417447,
+      "raw_bootstrap_spearman": 0.5843361875797828,
+      "locked_power_MAE": 0.1486247867011784,
+      "locked_bootstrap_MAE": 0.1372550139084245,
+      "locked_power_count_MAE": 1.0,
+      "locked_bootstrap_count_MAE": 1.25,
+      "posthoc_power_intercept": 0.2240895356991262,
+      "posthoc_power_slope": 0.5054701820104022,
+      "posthoc_bootstrap_intercept": -0.061763307042338456,
+      "posthoc_bootstrap_slope": 0.7749119678780129,
+      "posthoc_power_MAE": 0.14133785766791485,
+      "posthoc_bootstrap_MAE": 0.13881873333694997,
+      "mean_independent_reliability": 0.31839732783848157
+    },
+    {
+      "n_train": 60,
+      "raw_power_spearman": 0.6734024072706616,
+      "raw_bootstrap_spearman": 0.7003024662162111,
+      "locked_power_MAE": 0.1383443409128112,
+      "locked_bootstrap_MAE": 0.13685729849123068,
+      "locked_power_count_MAE": 1.0,
+      "locked_bootstrap_count_MAE": 1.5,
+      "posthoc_power_intercept": 0.2554595278236722,
+      "posthoc_power_slope": 0.5583585519006771,
+      "posthoc_bootstrap_intercept": -0.13243566880350666,
+      "posthoc_bootstrap_slope": 0.9682334419631371,
+      "posthoc_power_MAE": 0.12727956185455264,
+      "posthoc_bootstrap_MAE": 0.122680055302194,
+      "mean_independent_reliability": 0.41404292849320345
+    },
+    {
+      "n_train": 120,
+      "raw_power_spearman": 0.9027040480383353,
+      "raw_bootstrap_spearman": 0.8818532818532818,
+      "locked_power_MAE": 0.09784355603167597,
+      "locked_bootstrap_MAE": 0.1283443852821484,
+      "locked_power_count_MAE": 0.75,
+      "locked_bootstrap_count_MAE": 1.0,
+      "posthoc_power_intercept": 0.1909113807052213,
+      "posthoc_power_slope": 0.6972158915823595,
+      "posthoc_bootstrap_intercept": -0.2939055332757838,
+      "posthoc_bootstrap_slope": 1.211456667805686,
+      "posthoc_power_MAE": 0.09007190192150935,
+      "posthoc_bootstrap_MAE": 0.10469058297990316,
+      "mean_independent_reliability": 0.46016525993139773
+    }
+  ],
+  "finding": "Within the same maize tasks, increasing estimator sample support sharply improves raw direction ordering. Power-debias Spearman rises 0.517\u21920.673\u21920.903 and bootstrap 0.584\u21920.700\u21920.882. At the same time, the affine calibration needed to map raw estimator output onto independent reproducibility changes with n, so EXP013C's cross-species discrepancy contains both resolution and calibration components.",
+  "evidence_boundary": "013D is a mechanism diagnostic on the already revealed maize panel. It does not count as a new blind validation."
+}

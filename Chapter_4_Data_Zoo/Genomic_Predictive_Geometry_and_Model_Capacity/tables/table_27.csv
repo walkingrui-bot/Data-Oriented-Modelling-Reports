@@ -1,0 +1,4 @@
+Cell pairing,Mean same-gene r,Operator energy
+True matched cells,0.3959,313.85
+Within-tissue cell shuffle,0.1704,249.52
+Global cell shuffle,-0.0004,146.07

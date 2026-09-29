@@ -1,0 +1,5 @@
+Measure,Result
+Selected-rank distribution,Rank 24: 14/19; rank 20: 5/19
+Always predict rank 24,14/19
+Two-feature LOOCV,15/19; MAE 0.84
+Interpretation,Capacity-grid truncation is evident; this diagnostic motivates the expanded grid.

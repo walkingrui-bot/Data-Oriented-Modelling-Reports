@@ -1,0 +1,29 @@
+{
+  "EXP001": {
+    "dataset": "1000 Genomes subset via AEHRC/PEPS input-small.csv",
+    "n_individuals": 2504,
+    "n_snps": 162,
+    "global_pr_dim": 119.03,
+    "pc1": 0.0443,
+    "pc2": 0.0239,
+    "pc3": 0.0153,
+    "top12": 0.1609,
+    "superpop_variance_fraction": 0.0608,
+    "perm_null_mean": 0.00161,
+    "perm_p": 0.009900990099009901,
+    "top12_centroid_cv_accuracy": 0.8718,
+    "distance_mean": 17.97,
+    "distance_sd": 1.01,
+    "within_mean": 17.452,
+    "between_mean": 18.106,
+    "between_over_within": 1.0375,
+    "local_twonn_global": 54.74,
+    "local_by_superpop": {
+      "AFR": 54.25,
+      "AMR": 51.37,
+      "EAS": 50.55,
+      "EUR": 50.91,
+      "SAS": 52.65
+    }
+  }
+}

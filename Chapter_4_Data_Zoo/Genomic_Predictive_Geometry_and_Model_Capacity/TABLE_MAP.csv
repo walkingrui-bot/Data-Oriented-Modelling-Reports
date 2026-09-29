@@ -1,0 +1,29 @@
+table,source_block,title,file,rows
+1,,Terms and abbreviations,tables/table_01.csv,16
+2,8,Findings across the experimental series,tables/table_02.csv,17
+3,23,EXP001 genomic geometry,tables/table_03.csv,8
+4,34,EXP002 capacity scan,tables/table_04.csv,8
+5,43,EXP003A exploratory scale scan,tables/table_05.csv,4
+6,48,EXP003B fixed-output scale scan,tables/table_06.csv,4
+7,56,EXP004 fixed-N subsets,tables/table_07.csv,5
+8,65,EXP005 predictive spectral summaries,tables/table_08.csv,5
+9,74,EXP006A truncated-grid diagnostic,tables/table_09.csv,4
+10,79,EXP006B internal capacity prediction,tables/table_10.csv,5
+11,91,EXP007 external blind transfer,tables/table_11.csv,4
+12,100,EXP008 paired sample-support control,tables/table_12.csv,4
+13,108,EXP009 sample-size scan,tables/table_13.csv,6
+14,117,EXP010 matched-support diagnosis,tables/table_14.csv,4
+15,130,EXP011 stability and near-optimal capacity,tables/table_15.csv,8
+16,144,EXP011 sample support and stable directions,tables/table_16.csv,3
+17,151,EXP011 pairing-shuffle controls,tables/table_17.csv,4
+18,169,EXP012 locked prediction and revealed capacity,tables/table_18.csv,4
+19,211,EXP013A scalar calibration,tables/table_19.csv,4
+20,235,EXP013B estimator comparison,tables/table_20.csv,5
+21,244,EXP013C cross-species blind test,tables/table_21.csv,3
+22,255,EXP013D sample support and calibration,tables/table_22.csv,3
+23,264,EXP014A common Data Passport fields,tables/table_23.csv,4
+24,274,EXP015A matched-width layer geometry,tables/table_24.csv,3
+25,279,EXP015A fixed within-layer predictive task,tables/table_25.csv,3
+26,286,EXP015B RNA–protein operator summary,tables/table_26.csv,8
+27,291,EXP015B cell-pair controls,tables/table_27.csv,3
+28,185,Experiment map and evidence status,tables/table_28.csv,24
