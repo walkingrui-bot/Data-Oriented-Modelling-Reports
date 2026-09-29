@@ -1,0 +1,35 @@
+{
+  "source_document": "面向数据建模_语言模型的散光矫正_v1.0_20260929.docx",
+  "real_models": [
+    "GPT-5-mini",
+    "DeepSeek-v4-flash",
+    "Qwen-2.5-7B"
+  ],
+  "matched_tasks": 10,
+  "qwen_strong_loop_trajectories": 8,
+  "submitted_control_trajectories": 22,
+  "submitted_control_states": 430,
+  "qwen_strong_loop_states": 300,
+  "h4_cooldown_interception": 0.97,
+  "h4_gated_collateral_on_submitted": 0,
+  "local_candidate_availability": {
+    "k2": 0.43666666666666665,
+    "k4": 0.47333333333333333,
+    "k8": 0.5933333333333334
+  },
+  "external_unseen_exact_command_availability": 1.0,
+  "external_progression_exit_availability": 1.0,
+  "phase_counts": {
+    "PRE_EDIT": 112,
+    "POST_EDIT_UNVERIFIED": 113,
+    "POST_EDIT_VALIDATED": 75
+  },
+  "stage_blind_role_counts": {
+    "Edit": 139,
+    "Test": 64,
+    "Submit": 97
+  },
+  "guaranteed_premature_stage_blind_submit": 76,
+  "guaranteed_premature_fraction_among_submit": 0.7835051546391752,
+  "evidence_boundary": "Real trajectory control-plane validation only. Candidate availability, edge interception, and phase eligibility are measured on actually executed agent trajectories, but phase-aware commands were not live-injected and rolled out here."
+}

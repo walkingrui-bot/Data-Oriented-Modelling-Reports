@@ -1,0 +1,5 @@
+cooldown_h,observed_recurrence_edges_intercepted,coverage
+1,141,0.47
+2,250,0.8333333333333334
+4,291,0.97
+8,293,0.9766666666666667

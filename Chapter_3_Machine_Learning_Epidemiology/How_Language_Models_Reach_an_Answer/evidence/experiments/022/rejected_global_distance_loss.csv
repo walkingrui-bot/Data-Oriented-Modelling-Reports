@@ -1,0 +1,2 @@
+model,states,candidate_loss,selected_beta,predicted_Q_chosen,predicted_Q_alternatives,interpretation
+GPT-5-mini,124,normalized remaining steps to observed completion,0.0,0.4830498713373798,0.3200901286339458,The observed local choice rule did not favor actions with shorter empirical remaining distance.

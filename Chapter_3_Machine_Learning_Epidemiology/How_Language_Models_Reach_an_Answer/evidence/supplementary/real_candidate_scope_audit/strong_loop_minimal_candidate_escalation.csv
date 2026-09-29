@@ -1,0 +1,5 @@
+minimal_candidate_scope,incremental_states,incremental_fraction,cumulative_states
+Local history k=2,131,0.43666666666666665,131
+Escalate local k=4,11,0.03666666666666667,142
+Escalate local k=8,36,0.12,178
+External same-task successful pool,122,0.4066666666666667,300

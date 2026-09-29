@@ -1,0 +1,17 @@
+{
+  "states": 545,
+  "acc_language": 0.3743119266055046,
+  "acc_observation": 0.5688073394495413,
+  "acc_agent": 0.5064220183486239,
+  "nll_language": 8.696498111615494,
+  "nll_observation": 5.131746549757544,
+  "nll_agent": 3.200861639906387,
+  "actual_prob_gain": 0.10919574440471512,
+  "alpha": 0.08862385321100917,
+  "beta": 0.16137614678899084,
+  "surface_states": 423,
+  "frame_action_only": 0.6619385342789598,
+  "frame_action_plus_obs": 0.6122931442080378,
+  "length_action_only": 0.7044917257683215,
+  "length_action_plus_obs": 0.6997635933806147
+}

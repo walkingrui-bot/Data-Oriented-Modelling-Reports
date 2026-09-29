@@ -1,0 +1,40 @@
+{
+  "experiment": "REASONING-LOWRANK-PROJECTION-026G",
+  "qualified_foundations": 17,
+  "rank1_eta_0.02": {
+    "survival": 0.9851393188854489,
+    "endpoint": 0.9852941176470589,
+    "B_gain": 0.036531250148851405
+  },
+  "rank2_eta_0.02": {
+    "survival": 1.0,
+    "endpoint": 0.9852941176470589,
+    "B_gain": 0.02270810051593569
+  },
+  "rank1_eta_0.05": {
+    "survival": 0.9645510835913313,
+    "endpoint": 0.9117647058823529,
+    "B_gain": 0.09216494674454474
+  },
+  "rank2_eta_0.05": {
+    "survival": 1.0,
+    "endpoint": 0.9558823529411765,
+    "B_gain": 0.05038937165762359
+  },
+  "frozen_rank2_eta_0.10": {
+    "survival": 1.0,
+    "endpoint": 0.9558823529411765,
+    "B_gain": 0.04754144719888755
+  },
+  "rank2_eta_0.20": {
+    "survival": 0.9627602743883931,
+    "endpoint": 0.8970588235294118,
+    "B_gain": 0.03746802446193543
+  },
+  "exact_all_eta_0.20": {
+    "survival": 1.0,
+    "endpoint": 0.9411764705882353,
+    "B_gain": -0.024194446099659313
+  },
+  "main_conclusion": "Two functional anchor directions are sufficient throughout the local/moderate update regime, but not after a large nonlinear drift. Full top-energy SVD modes are inferior to functionally selected boundary anchors."
+}

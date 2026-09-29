@@ -1,0 +1,6 @@
+variant,n,success,mean_margin,robustness,signature_rms
+commitment_projection,2,1.0,3.904869553365321,0.0,0.0
+contaminated,2,0.0,-5.253973233678096,0.0,4.875221717870211
+last_pair_projection,2,1.0,6.1963514179768175,0.4,6.875540892197506
+last_safe_rollback,2,1.0,3.904869553365321,0.0,0.0
+prompt_restart,2,1.0,5.969215424573811,0.7,7.7184600962416

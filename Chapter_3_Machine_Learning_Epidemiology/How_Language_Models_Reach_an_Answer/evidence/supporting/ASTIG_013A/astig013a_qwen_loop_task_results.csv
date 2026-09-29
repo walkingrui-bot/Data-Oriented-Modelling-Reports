@@ -1,0 +1,9 @@
+task,first_strong_alert_step,strong_loop_states,h4_intercepted,h4_interception_pct,first_h4_intercept_step,delay_after_strong_steps,median_repeat_gap,p90_repeat_gap
+sympy__sympy-20154,13,37,32,86.49,14,1,1,1
+sympy__sympy-24562,14,36,35,97.22,16,2,3,3
+sympy__sympy-13757,14,36,36,100.0,15,1,1,1
+sympy__sympy-23950,14,36,33,91.67,15,1,2,2
+sympy__sympy-24661,9,41,41,100.0,10,1,2,2
+sympy__sympy-13551,14,36,36,100.0,15,1,1,1
+sympy__sympy-22914,12,38,38,100.0,13,1,1,1
+sympy__sympy-19346,10,40,40,100.0,11,1,2,2

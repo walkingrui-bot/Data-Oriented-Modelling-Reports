@@ -1,0 +1,25 @@
+{
+  "model": "GPT-5-mini",
+  "matched_tasks": 10,
+  "states": 124,
+  "action_accuracy_from_022_controller": 0.6774193548387096,
+  "broad_shell_slot_action_consistency": 0.967741935483871,
+  "broad_shell_slot_grounding_fraction": 0.36041661343264064,
+  "broad_shell_nll": 9.737426146486076,
+  "broad_slot_nll": 4.510372394307863,
+  "refined_slot_nll": 2.4657085761031885,
+  "slot_nll_reduction": 0.45332483428309855,
+  "free_full_nll": 9.793310074177615,
+  "refined_oracle_action_full_nll": 9.886743945651968,
+  "remaining_full_nll_gap": 0.09343387147435323,
+  "tasks_beating_free": 5,
+  "states_with_highconf_slots": 73,
+  "selected_slot_variant": "PATH / SYMBOL / VALUE only",
+  "refined_pointer_weights": {
+    "history_presence": 0.5,
+    "observation_presence": 1.0,
+    "history_recency": 1.0,
+    "observation_recency": 3.0,
+    "action_prior": 0.25
+  }
+}

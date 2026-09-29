@@ -1,0 +1,14 @@
+{
+  "experiment": "REASONING-RISK-EDGE-027A",
+  "n_correct_states": 408,
+  "n_candidate_edges": 2040,
+  "overall_risky_edge_rate": 0.39362745098039215,
+  "states_with_safe_action": 0.6617647058823529,
+  "states_all_actions_dangerous": 0.3382352941176471,
+  "canonical_edges": 352,
+  "canonical_exit_rate": 0.35511363636363635,
+  "canonical_exit_events": 125,
+  "canonical_exit_with_one_step_safe_alternative": 0.12,
+  "immediate_exit_rate_after_local_bypass": 0.3125,
+  "relative_exit_reduction": 0.12
+}

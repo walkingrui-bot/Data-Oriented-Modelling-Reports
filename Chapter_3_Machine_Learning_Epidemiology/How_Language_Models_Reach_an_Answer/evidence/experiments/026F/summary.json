@@ -1,0 +1,40 @@
+{
+  "experiment": "REASONING-OBSERVABLE-LOSS-026F",
+  "qualified_foundations": 17,
+  "acceptance_gate": {
+    "survival_threshold": 0.99,
+    "endpoint_threshold": 0.98,
+    "requires_positive_new_task_learning": true,
+    "n_static_settings": 29,
+    "n_static_pass": 0,
+    "n_primal_dual_settings": 6,
+    "n_primal_dual_pass": 0
+  },
+  "hard_projection_reference_eta_0.02": {
+    "B_loss_gain": 0.022708108910500797,
+    "survival": 1.0,
+    "endpoint_accuracy": 0.9852941176470589,
+    "delta_ready_frac": 0.0032679738562091517
+  },
+  "best_positive_learning_static": {
+    "kind": "answer_replay",
+    "lambda": 0.5,
+    "B_loss_gain": 0.047379019733285385,
+    "survival": 0.9792569659442725,
+    "endpoint_accuracy": 0.9411764705882353
+  },
+  "best_survival_static": {
+    "kind": "response_distill",
+    "lambda": 0.4,
+    "B_loss_gain": -0.05010438568337633,
+    "survival": 0.9844290657439446,
+    "endpoint_accuracy": 0.9705882352941176
+  },
+  "best_primal_dual": {
+    "rho": 1.0,
+    "B_loss_gain": -0.7364937930357981,
+    "survival": 0.9838321293429653,
+    "endpoint_accuracy": 0.9558823529411765
+  },
+  "conclusion": "No tested ordinary static auxiliary loss or primal-dual soft constraint met the predeclared 99% survival / 98% endpoint / positive-learning gate. Hard projection with the same observable anchors did."
+}

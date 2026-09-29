@@ -1,0 +1,13 @@
+{
+  "experiment": "REASONING-FAST-TRAVERSAL-027B",
+  "canonical_exit_events": 125,
+  "canonical_eventual_return_rate": 0.904,
+  "canonical_mean_return_steps_conditional": 1.0442477876106195,
+  "active_recovery_within_1": 0.92,
+  "active_recovery_within_2": 0.984,
+  "active_recovery_within_3": 0.984,
+  "greedy_recovery_within_3": 0.984,
+  "canonical_nonreturn_events": 12,
+  "canonical_nonreturn_rescued_by_active": 0.8333333333333334,
+  "unrecoverable_within_3": 2
+}

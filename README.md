@@ -10,9 +10,9 @@ Read the chapters in order. Each folder contains its report and the supporting e
 | **4** | **Data Zoo** | [Read Chapter 4](Chapter_4_Data_Zoo/README.md) |
 | **5** | **Data-Oriented Modelling** | [Read Chapter 5](Chapter_5_Data_Oriented_Modelling/README.md) |
 
-**Chapter 3 includes both the research report and The Engineer’s Edition.** Open Chapter 3 to read either edition and browse their evidence together.
+**Chapter 3 contains two reports.** Report 01 brings together the research report and The Engineer’s Edition. Report 02, **[How Language Models Reach an Answer](Chapter_3_Machine_Learning_Epidemiology/How_Language_Models_Reach_an_Answer/README.md)**, connects language dynamics, protected training and answer-recovery control across 18 experiments. It is also listed as Chapter 2, Report 02.
 
-[Chapters 1 and 2 — DOI](https://doi.org/10.5281/zenodo.22974937) · [Chapter 3, both editions — DOI](https://doi.org/10.5281/zenodo.22983593)
+[Chapters 1 and 2, original reports — DOI](https://doi.org/10.5281/zenodo.22974937) · [Chapter 3, Report 01, both editions — DOI](https://doi.org/10.5281/zenodo.22983593)
 
 This is a self-directed personal-interest research project. It is maintained as a living research record. Chapter 4 collects independently versioned subreports: [Language Structure and Control Geometry](Chapter_4_Data_Zoo/Language_Structure_and_Control_Geometry/README.md) is Subreport 1, and [Human Learning and Sensorimotor Geometry](Chapter_4_Data_Zoo/Human_Learning_and_Sensorimotor_Geometry/README.md) is Subreport 2. [Language–Movement Integrated Study](Chapter_4_Data_Zoo/Language_Movement_Integrated_Study/README.md) is Subreport 3. [Genomic Predictive Geometry and Model Capacity](Chapter_4_Data_Zoo/Genomic_Predictive_Geometry_and_Model_Capacity/README.md) is Subreport 4. These reports are available in English edition v1.0.
 

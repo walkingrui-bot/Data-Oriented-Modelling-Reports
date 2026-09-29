@@ -1,0 +1,40 @@
+{
+  "experiment": "REASONING-HIERARCHICAL-CONTROLLER-027E",
+  "canonical_exit_events": 125,
+  "controller_uses_hidden_state": false,
+  "controller_form": "sequential readiness/probe-gated escalation",
+  "route_counts": {
+    "L1": 15,
+    "L2": 108,
+    "L3": 2,
+    "L4": 0
+  },
+  "route_fractions": {
+    "L1": 0.12,
+    "L2": 0.864,
+    "L3": 0.016,
+    "L4": 0.0
+  },
+  "end_to_end_success": 1.0,
+  "heldout_027D_exit_events": 60,
+  "heldout_route_counts": {
+    "L1": 6,
+    "L2": 54,
+    "L3": 0,
+    "L4": 0
+  },
+  "heldout_end_to_end_success": 1.0,
+  "l1_bypass_success_routed": 1.0,
+  "l2_greedy_success_routed": 1.0,
+  "l2_mean_control_steps_routed": 1.037037037037037,
+  "l3_success_routed": 1.0,
+  "operational_l4_calls": 0,
+  "flat_baselines": {
+    "canonical_eventual_return": 0.904,
+    "greedy_L2_within_3": 0.984,
+    "commitment_projection_all_exits": 0.952,
+    "prompt_restart_all_exits": 0.864
+  },
+  "hierarchy_note": "Level 4 remains armed as fallback but is not invoked because Level 3 rescues both Level-2 failures.",
+  "stop_gate_note": "If ANSWER_NOW is already validated and task completion is allowed, STOP dominates continuation. L1 is evaluated only under forced-continuation / continuation-required conditions."
+}

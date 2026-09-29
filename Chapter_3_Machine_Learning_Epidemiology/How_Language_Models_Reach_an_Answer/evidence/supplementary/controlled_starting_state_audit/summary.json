@@ -1,0 +1,20 @@
+{
+  "n_events": 125,
+  "overall_success": 1.0,
+  "mean_intervention_cost": 1.08,
+  "level_counts": {
+    "L2": 123,
+    "L3_restart": 2
+  },
+  "failures": 0,
+  "l1_audit": {
+    "eligible_cases": 15,
+    "success_rate": 1.0,
+    "mean_future_safe_fraction": 0.7733333333333334
+  },
+  "full_scenario_counts": {
+    "STOP": 352,
+    "L2": 123,
+    "L3": 2
+  }
+}

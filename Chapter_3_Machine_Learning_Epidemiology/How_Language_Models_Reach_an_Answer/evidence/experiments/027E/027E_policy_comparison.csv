@@ -1,0 +1,6 @@
+policy,success_rate
+Integrated sequential controller,1.0
+Greedy L2 only (<=3),0.984
+Commitment projection on all exits,0.952
+Canonical continuation,0.904
+Prompt restart on all exits,0.864

@@ -1,0 +1,15 @@
+{
+  "experiment": "REASONING-CURRICULUM-026A",
+  "n_histories": 24,
+  "control_field_dim": 112,
+  "eta_main": 0.002,
+  "pairwise_order_energy_fraction": 0.9879210562328649,
+  "reversal_raw_mean_distance": 0.18804665173751556,
+  "reversal_midpoint_mean_distance": 0.018920209288809085,
+  "reversal_reduction_fraction": 0.8993855561160493,
+  "random_pairing_mean_midpoint": 0.11146447905144362,
+  "random_pairing_q01": 0.05937152598417988,
+  "random_pairing_monte_carlo_p": 4.999750012499375e-05,
+  "last_pairwise_safe_eta": 0.006,
+  "first_signature_split_eta": 0.012
+}

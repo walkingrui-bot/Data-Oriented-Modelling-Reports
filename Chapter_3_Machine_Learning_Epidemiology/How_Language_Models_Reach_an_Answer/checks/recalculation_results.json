@@ -1,0 +1,611 @@
+{
+  "scope": "Numerical recalculation of included tables; no training, provider-data retrieval or live agent execution.",
+  "checks": 100,
+  "passed": 100,
+  "results": [
+    {
+      "check": "021: held-out JS at D=3,10,16,24",
+      "passed": true,
+      "max_absolute_difference": 2.6889627081971845e-05,
+      "tolerance": 5e-05
+    },
+    {
+      "check": "021: D=24 MSE reduction",
+      "passed": true,
+      "max_absolute_difference": 9.00965705957768e-07,
+      "tolerance": 5e-05
+    },
+    {
+      "check": "021: D=10 movement spectrum",
+      "passed": true,
+      "max_absolute_difference": 0.0003143252181252443,
+      "tolerance": [
+        0.0005,
+        5e-05,
+        0
+      ]
+    },
+    {
+      "check": "021: observed-action rollout JS",
+      "passed": true,
+      "max_absolute_difference": 4.439884680845774e-05,
+      "tolerance": 5e-05
+    },
+    {
+      "check": "022: pooled states",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "022: state-weighted acc_language",
+      "passed": true,
+      "max_absolute_difference": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted acc_observation",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted acc_agent",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted nll_language",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted nll_observation",
+      "passed": true,
+      "max_absolute_difference": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted nll_agent",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted alpha",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted beta",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: state-weighted actual_prob_gain",
+      "passed": true,
+      "max_absolute_difference": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: surface-state denominator",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "022: surface weighted frame_action_only",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: surface weighted frame_action_plus_obs",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: surface weighted length_action_only",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "022: surface weighted length_action_plus_obs",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "023: action consistency percentage-point gain",
+      "passed": true,
+      "max_absolute_difference": 0.00032258064516099694,
+      "tolerance": 0.005
+    },
+    {
+      "check": "023: relative grounding gain",
+      "passed": true,
+      "max_absolute_difference": 1.6928882594302586e-05,
+      "tolerance": 0.0005
+    },
+    {
+      "check": "024: slot NLL reduction",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "024: full NLL gap",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "024: task wins",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "025: retrieved mentions by source",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "025: retrievable fraction",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "025: held-out states",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "025: end-to-end task wins",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "025: end-to-end NLL improvement",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026A: reverse-pair mean displacement",
+      "passed": true,
+      "max_absolute_difference": 5.204170427930421e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026A: reversal reduction",
+      "passed": true,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026A: main pair-order energy",
+      "passed": true,
+      "max_absolute_difference": 5.62328648090471e-08,
+      "tolerance": 5e-07
+    },
+    {
+      "check": "026B: qualified foundations",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026B: endpoint means eta=0.002",
+      "passed": true,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: order-penalty recovery eta=0.002",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: endpoint means eta=0.005",
+      "passed": true,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: order-penalty recovery eta=0.005",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: endpoint means eta=0.01",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: order-penalty recovery eta=0.01",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: endpoint means eta=0.02",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: order-penalty recovery eta=0.02",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: endpoint means eta=0.05",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026B: order-penalty recovery eta=0.05",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026C: stability_100_microsteps.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026C: stability_100_microsteps_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026C: mechanism n_protected",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026C: mechanism protected_gradient_rank",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026C: mechanism threatened_fraction",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026C: mechanism first_order_B_learning_retained",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026D: confirm_raw.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026D: confirm_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 1.3183898417423734e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026D: stable rank mean",
+      "passed": true,
+      "max_absolute_difference": 0.0004683086833510153,
+      "tolerance": 0.0005
+    },
+    {
+      "check": "026D: anchor count",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026E: intervention_eta002_raw.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026E: intervention_eta002_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026E: intervention_eta005_raw.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026E: intervention_eta005_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026E: two-step gradient energy",
+      "passed": true,
+      "max_absolute_difference": 0.00022590933195321128,
+      "tolerance": 0.0005
+    },
+    {
+      "check": "026F: all_static_loss_summary.csv settings",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026F: all_static_loss_summary.csv gate passes",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026F: primal_dual_summary.csv settings",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026F: primal_dual_summary.csv gate passes",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026G: eta002_raw.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026G: eta002_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026G: eta005_raw.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026G: eta005_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026G: eta010_stress_raw.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026G: eta010_stress_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 8.881784197001252e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026G: eta020_stress_raw.csv grouping coverage",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "026G: eta020_stress_summary.csv from run-level means",
+      "passed": true,
+      "max_absolute_difference": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "026G: rank-two/all-prefix learning ratio",
+      "passed": true,
+      "max_absolute_difference": 0.001181352435112526,
+      "tolerance": 0.005
+    },
+    {
+      "check": "027A: candidate edges",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027A: pooled exit fraction",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027A: canonical transitions and exits",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027A: bypass opportunities",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027B: canonical_returns",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027B: recoverable_exact1",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027B: probe_recoverable_3",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027B: greedy_recovers_3",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027B: unrecoverable cases",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027C: reset success",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027C: true escalation robustness",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027D: blind repeat success",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027D: 10101 patterns",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027D: mean correctness flips",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027D: first recovery counts",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027D: gated cap-two attempts",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "027E: route counts",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027E: routed recovery",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027E: held-out success",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027E: held-out routes",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "027E: routed L2 mean actions",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "check": "028A: candidate totals",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "028A: phase totals",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "028A: external scope increment",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "028A: premature Submit lower bound",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "ASTIG-013A: cooldown counts",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "ASTIG-013A: gated control interventions",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "ASTIG-013C: calibration trajectories",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    {
+      "check": "ASTIG-013C: edit/verification/formal-test counts",
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    }
+  ]
+}

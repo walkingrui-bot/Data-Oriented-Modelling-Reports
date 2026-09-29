@@ -1,0 +1,53 @@
+{
+  "experiment": "ASTIG-013C Phase-aware Progression Routing",
+  "matched_submitted_calibration": {
+    "trajectories": 20,
+    "models": [
+      "gpt-5-mini",
+      "deepseek-v4-flash"
+    ],
+    "final_submit_with_prior_edit": 20,
+    "final_submit_with_post_edit_validation": 20,
+    "final_submit_with_post_edit_test": 12,
+    "final_submit_with_post_edit_test_returncode_0": 11,
+    "strict_progression_eligibility_retained": 147,
+    "strict_progression_events_total": 150,
+    "strict_retention_pct": 98.0
+  },
+  "qwen_strong_loop_states": {
+    "total": 300,
+    "pre_edit": 112,
+    "post_edit_unverified": 113,
+    "post_edit_validated": 75,
+    "test_failed": 0
+  },
+  "same_task_external_role_availability": {
+    "edit": 300,
+    "test": 300,
+    "submit": 300,
+    "phase_primary_role": 300,
+    "denominator": 300
+  },
+  "role_only_selection_from_ASTIG_013B": {
+    "edit": 139,
+    "test": 64,
+    "submit": 97
+  },
+  "phase_aware_primary_role_selection": {
+    "edit": 112,
+    "test": 113,
+    "submit": 75
+  },
+  "role_only_submit_prematurity_bound": {
+    "role_only_submits": 97,
+    "minimum_premature": 76,
+    "maximum_premature": 97,
+    "minimum_fraction_of_role_only_submits_pct": 78.35
+  },
+  "normal_submitted_branch_intervention": {
+    "source": "ASTIG-013A gate result",
+    "submitted_states": 430,
+    "gate_triggered_interventions": 0
+  },
+  "interpretation": "Phase eligibility can be inserted before similarity without candidate starvation: each of the 300 strong-loop states has an unseen same-task external edit, test, and submit candidate. The stage-blind role-only exits from ASTIG-013B contain at least 76 premature submit selections by task-level lower bound. Phase-conditioned role eligibility reallocates the 300 states to 112 edit, 113 test, and 75 submit slots, with submit reserved for post-edit validated states."
+}

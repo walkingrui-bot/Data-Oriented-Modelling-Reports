@@ -1,0 +1,3 @@
+route_level,n,success,mean_cost,mean_final_margin
+L2,123,1.0,1.065040650406504,2.8094329958186837
+L3_restart,2,1.0,2.0,5.969215424573811

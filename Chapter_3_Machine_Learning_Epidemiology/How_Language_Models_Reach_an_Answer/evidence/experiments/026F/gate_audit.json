@@ -1,0 +1,9 @@
+{
+  "survival_threshold": 0.99,
+  "endpoint_threshold": 0.98,
+  "requires_positive_new_task_learning": true,
+  "n_static_settings": 29,
+  "n_static_pass": 0,
+  "n_primal_dual_settings": 6,
+  "n_primal_dual_pass": 0
+}

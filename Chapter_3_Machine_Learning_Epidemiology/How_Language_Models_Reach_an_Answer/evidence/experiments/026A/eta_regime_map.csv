@@ -1,0 +1,12 @@
+eta,pairwise_field_energy_fraction,second_order_cosine,chain_signatures,answer_signatures,regime
+0.0005,0.999109,0.998777,1,1,pairwise-safe
+0.001,0.996612,0.99489,1,1,pairwise-safe
+0.0015,0.992788,0.987967,1,1,pairwise-safe
+0.002,0.987921,0.977626,1,1,pairwise-safe
+0.003,0.976221,0.945697,1,1,pairwise-safe
+0.004,0.964145,0.899553,1,1,pairwise-safe
+0.006,0.952063,0.788305,1,1,pairwise-safe
+0.012,0.280042,0.610363,4,1,signature-split
+0.024,0.313,0.519612,4,1,signature-split
+0.048,0.291558,-0.056004,8,4,signature-split
+0.072,0.26941,0.100477,11,4,signature-split

@@ -1,0 +1,30 @@
+{
+  "experiment": "REASONING-PROTECTED-UPDATE-026C",
+  "qualified_foundations": 17,
+  "n_protected_prefixes_mean": 24.0,
+  "protected_gradient_rank_mean": 15.647058823529411,
+  "threatened_fraction_raw_B_update": 0.5659124659036538,
+  "projected_direction_cosine": 0.2589762236305858,
+  "projected_norm_fraction": 0.4646073474765779,
+  "first_order_B_learning_retained": 0.23229101008225492,
+  "eta_0.02": {
+    "plain_B_loss_gain": 0.057522744575871115,
+    "hard_all_B_loss_gain": 0.01343979868493023,
+    "plain_protected_survival": 0.951221190230478,
+    "hard_all_protected_survival": 1.0,
+    "plain_endpoint_accuracy": 0.9411764705882353,
+    "hard_all_endpoint_accuracy": 1.0,
+    "plain_delta_ready_frac": -0.004901960784313728,
+    "hard_all_delta_ready_frac": 0.0032679738562091517
+  },
+  "eta_0.05": {
+    "plain_B_loss_gain": 0.05729237535247546,
+    "hard_all_B_loss_gain": 0.02539178850830772,
+    "plain_protected_survival": 0.8940488476092191,
+    "hard_all_protected_survival": 1.0,
+    "plain_endpoint_accuracy": 0.8529411764705882,
+    "hard_all_endpoint_accuracy": 0.9558823529411765,
+    "plain_delta_ready_frac": -0.017973856209150322,
+    "hard_all_delta_ready_frac": -0.004901960784313718
+  }
+}

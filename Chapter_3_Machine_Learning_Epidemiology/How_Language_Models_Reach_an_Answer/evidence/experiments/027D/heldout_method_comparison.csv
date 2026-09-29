@@ -1,0 +1,8 @@
+method,success
+Generic prompt x1,0.8666666666666667
+Depth-mapped prompt x1,0.8666666666666667
+31D risk-mapped prompt x1,0.9
+"Stop-on-first, cap 2",0.9666666666666667
+Prompt restart,0.8666666666666667
+Commitment projection,0.9333333333333333
+Last-safe rollback,1.0

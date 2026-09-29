@@ -1,0 +1,34 @@
+{
+  "experiment": "REASONING-STATE-PROJECTION-027C",
+  "canonical_exit_events": 125,
+  "all_exits": {
+    "prompt_restart_success": 0.864,
+    "last_pair_success": 0.872,
+    "commitment_projection_success": 0.952,
+    "rollback_success": 1.0,
+    "commitment_signature_rms": 0.4413102627097581,
+    "prompt_signature_rms": 1.3674641071480227,
+    "commitment_robustness": 0.0816,
+    "prompt_robustness": 0.16
+  },
+  "hard_recovery_subset_n": 10,
+  "hard_recovery_subset": {
+    "commitment_projection_success": 0.8,
+    "prompt_restart_success": 0.2,
+    "rollback_success": 1.0
+  },
+  "true_level3_n": 2,
+  "true_level3": {
+    "commitment_projection_success": 1.0,
+    "prompt_restart_success": 1.0,
+    "prompt_restart_robustness": 0.7,
+    "commitment_projection_robustness": 0.0
+  },
+  "deep_contamination_no_reset_success": [
+    0.0,
+    0.88,
+    0.024,
+    0.872
+  ],
+  "interpretation": "State projection should optimize safe re-entry, not merely reconstruct the last correct state. Commitment-preserving projection is usually more faithful and successful, but the hardest local traps may require a deeper prompt-level restart."
+}

@@ -1,0 +1,4 @@
+observed_phase,phase_primary_role,states
+PRE_EDIT,Edit,112
+POST_EDIT_UNVERIFIED,Test,113
+POST_EDIT_VALIDATED,Submit,75

@@ -1,0 +1,29 @@
+{
+  "model": "GPT-5-mini",
+  "matched_tasks": 10,
+  "states": 124,
+  "technical_object_mentions": 203,
+  "retrievable_object_mentions": 164,
+  "retrievable_fraction": 0.8078817733990148,
+  "pointer_eligible_states": 93,
+  "pointer_top1": 0.3655913978494624,
+  "pointer_top3": 0.7204301075268817,
+  "pointer_mrr": 0.5549793349642652,
+  "pointer_cross_entropy": 2.282210279458835,
+  "pointer_positive_probability_mass": 0.22550882458315705,
+  "pointer_mean_candidates": 67.70967741935483,
+  "pointer_weights": {
+    "task": 0.5,
+    "previous_thought": 1.1,
+    "previous_command": 0.74,
+    "observation": 0.8,
+    "temperature": 0.5
+  },
+  "free_full_nll": 10.738957275519342,
+  "oracle_action_object_field_nll": 9.792752678170373,
+  "end_to_end_action_accuracy": 0.6532258064516129,
+  "end_to_end_nll": 10.197792851138937,
+  "end_to_end_improvement_nats": 0.5411644243804048,
+  "tasks_end_to_end_beating_free": 9,
+  "end_to_end_slot_nll": 2.240574048781902
+}

@@ -1,0 +1,22 @@
+{
+  "model": "GPT-5-mini",
+  "trajectories": 10,
+  "states": 124,
+  "action_accuracy": 0.6854838709677419,
+  "nll_free": 8.735771115633197,
+  "nll_controlled": 8.753258672829892,
+  "nll_oracle_action_controlled": 8.728103170724978,
+  "grounded_nll_free": 11.214788237420661,
+  "grounded_nll_controlled": 10.98749358378159,
+  "shell_nll_free": 7.98578502848843,
+  "shell_nll_controlled": 8.071448196135192,
+  "generated_action_consistency_free": 0.3790322580645161,
+  "generated_action_consistency_controlled": 0.7661290322580645,
+  "generated_grounding_fraction_free": 0.20482190421184115,
+  "generated_grounding_fraction_controlled": 0.2769226819003784,
+  "length_mae_free": 18.782258064516128,
+  "length_mae_controlled": 21.419354838709676,
+  "lambda_action": 0.75,
+  "lambda_history": 1.0,
+  "lambda_observation": 0.5
+}

@@ -1,0 +1,197 @@
+{
+  "qualified_foundations": 17,
+  "target_group": "B=(0,1)",
+  "protected_definition": "all foundation prefixes with immediate-answer signed margin > 0",
+  "update_methods": [
+    "plain",
+    "hard_boundary",
+    "hard_all",
+    "soft"
+  ],
+  "focus_eta": 0.02,
+  "focus_table": [
+    {
+      "eta": 0.02,
+      "mode": "hard_all",
+      "B_loss_gain": 0.01435865710053588,
+      "protected_survival": 1.0,
+      "protected_margin_change": 0.05451854805300678,
+      "endpoint_accuracy": 1.0,
+      "delta_ready_frac": 0.0032679738562091517,
+      "delta_early": 0.006891145126503978,
+      "delta_flips": -0.029411764705882353,
+      "delta_exits": 0.0,
+      "delta_components": -0.014705882352941176,
+      "delta_mean_margin": 0.028256670162903844,
+      "learning_fraction_vs_plain": -0.10771155313884867
+    },
+    {
+      "eta": 0.02,
+      "mode": "hard_boundary",
+      "B_loss_gain": 0.0028039775812989175,
+      "protected_survival": 1.0,
+      "protected_margin_change": 0.042532860081084506,
+      "endpoint_accuracy": 0.9705882352941176,
+      "delta_ready_frac": 0.0032679738562091517,
+      "delta_early": 0.006056823663782305,
+      "delta_flips": 0.014705882352941176,
+      "delta_exits": 0.014705882352941176,
+      "delta_components": 0.014705882352941176,
+      "delta_mean_margin": 0.013004236792501057,
+      "learning_fraction_vs_plain": -0.021034054795900585
+    },
+    {
+      "eta": 0.02,
+      "mode": "plain",
+      "B_loss_gain": -0.1333065644502075,
+      "protected_survival": 0.9212175479066755,
+      "protected_margin_change": -0.22328745227406452,
+      "endpoint_accuracy": 0.9117647058823529,
+      "delta_ready_frac": -0.04738562091503268,
+      "delta_early": -0.046100811374192155,
+      "delta_flips": 0.0,
+      "delta_exits": 0.014705882352941176,
+      "delta_components": -0.07352941176470588,
+      "delta_mean_margin": -0.16199240288303796,
+      "learning_fraction_vs_plain": 1.0
+    },
+    {
+      "eta": 0.02,
+      "mode": "soft",
+      "B_loss_gain": -0.6562037057791656,
+      "protected_survival": 0.9287305587703306,
+      "protected_margin_change": -0.4245417302665641,
+      "endpoint_accuracy": 0.8970588235294118,
+      "delta_ready_frac": -0.05392156862745097,
+      "delta_early": -0.043860849779045405,
+      "delta_flips": 0.0,
+      "delta_exits": 0.029411764705882353,
+      "delta_components": -0.04411764705882353,
+      "delta_mean_margin": -0.4155749104307396,
+      "learning_fraction_vs_plain": 4.9225160702740185
+    }
+  ],
+  "all_eta_tradeoffs": {
+    "0.005": {
+      "plain": {
+        "B_learning_fraction_vs_plain": 1.0,
+        "protected_survival": 0.9969040247678018,
+        "delta_ready_frac": 0.0,
+        "delta_early": -0.0010418030253054027,
+        "endpoint_accuracy": 1.0
+      },
+      "hard_boundary": {
+        "B_learning_fraction_vs_plain": 0.36886252543334785,
+        "protected_survival": 1.0,
+        "delta_ready_frac": 0.0032679738562091517,
+        "delta_early": 0.005318410804397894,
+        "endpoint_accuracy": 1.0
+      },
+      "hard_all": {
+        "B_learning_fraction_vs_plain": 0.3619335639347664,
+        "protected_survival": 1.0,
+        "delta_ready_frac": 0.0032679738562091517,
+        "delta_early": 0.005318410804397894,
+        "endpoint_accuracy": 1.0
+      },
+      "soft": {
+        "B_learning_fraction_vs_plain": -0.12496214524371099,
+        "protected_survival": 0.9969040247678018,
+        "delta_ready_frac": 0.0016339869281045759,
+        "delta_early": 0.0017368048924163012,
+        "endpoint_accuracy": 0.9852941176470589
+      }
+    },
+    "0.01": {
+      "plain": {
+        "B_learning_fraction_vs_plain": 1.0,
+        "protected_survival": 0.9876160990712075,
+        "delta_ready_frac": 0.0,
+        "delta_early": -0.0010418030253054027,
+        "endpoint_accuracy": 1.0
+      },
+      "hard_boundary": {
+        "B_learning_fraction_vs_plain": -0.49644617250690565,
+        "protected_survival": 1.0,
+        "delta_ready_frac": 0.004901960784313728,
+        "delta_early": 0.00792609847457625,
+        "endpoint_accuracy": 1.0
+      },
+      "hard_all": {
+        "B_learning_fraction_vs_plain": -0.6985243972726549,
+        "protected_survival": 1.0,
+        "delta_ready_frac": 0.004901960784313728,
+        "delta_early": 0.00792609847457625,
+        "endpoint_accuracy": 1.0
+      },
+      "soft": {
+        "B_learning_fraction_vs_plain": 9.977001751879104,
+        "protected_survival": 0.9723183391003462,
+        "delta_ready_frac": -0.029411764705882346,
+        "delta_early": -0.025215559266860806,
+        "endpoint_accuracy": 0.9411764705882353
+      }
+    },
+    "0.02": {
+      "plain": {
+        "B_learning_fraction_vs_plain": 1.0,
+        "protected_survival": 0.9212175479066755,
+        "delta_ready_frac": -0.04738562091503268,
+        "delta_early": -0.046100811374192155,
+        "endpoint_accuracy": 0.9117647058823529
+      },
+      "hard_boundary": {
+        "B_learning_fraction_vs_plain": -0.021034054795900585,
+        "protected_survival": 1.0,
+        "delta_ready_frac": 0.0032679738562091517,
+        "delta_early": 0.006056823663782305,
+        "endpoint_accuracy": 0.9705882352941176
+      },
+      "hard_all": {
+        "B_learning_fraction_vs_plain": -0.10771155313884867,
+        "protected_survival": 1.0,
+        "delta_ready_frac": 0.0032679738562091517,
+        "delta_early": 0.006891145126503978,
+        "endpoint_accuracy": 1.0
+      },
+      "soft": {
+        "B_learning_fraction_vs_plain": 4.9225160702740185,
+        "protected_survival": 0.9287305587703306,
+        "delta_ready_frac": -0.05392156862745097,
+        "delta_early": -0.043860849779045405,
+        "endpoint_accuracy": 0.8970588235294118
+      }
+    },
+    "0.05": {
+      "plain": {
+        "B_learning_fraction_vs_plain": 1.0,
+        "protected_survival": 0.8555312733968716,
+        "delta_ready_frac": -0.0718954248366013,
+        "delta_early": -0.06389988873736406,
+        "endpoint_accuracy": 0.8088235294117647
+      },
+      "hard_boundary": {
+        "B_learning_fraction_vs_plain": 0.06946525117654843,
+        "protected_survival": 1.0,
+        "delta_ready_frac": -0.00816993464052287,
+        "delta_early": -0.0045481082160408375,
+        "endpoint_accuracy": 0.9411764705882353
+      },
+      "hard_all": {
+        "B_learning_fraction_vs_plain": -0.10971891783699825,
+        "protected_survival": 1.0,
+        "delta_ready_frac": -0.004901960784313718,
+        "delta_early": 0.001641185366119105,
+        "endpoint_accuracy": 0.9558823529411765
+      },
+      "soft": {
+        "B_learning_fraction_vs_plain": 2.2350017484244606,
+        "protected_survival": 0.9481353325643984,
+        "delta_ready_frac": -0.04738562091503268,
+        "delta_early": -0.04009740736615138,
+        "endpoint_accuracy": 0.8823529411764706
+      }
+    }
+  },
+  "runtime_seconds": 56.22856521606445
+}

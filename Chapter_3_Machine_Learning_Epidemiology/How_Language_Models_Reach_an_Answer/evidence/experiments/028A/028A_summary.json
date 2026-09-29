@@ -1,0 +1,34 @@
+{
+  "experiment": "REASONING-REAL-MODEL-ROUTER-028A",
+  "evidence_type": "real recorded mini-SWE-agent trajectories; offline controller replay",
+  "qwen_strong_loop_states": 300,
+  "h4_repeat_intercepted": 291,
+  "h4_repeat_interception_pct": 97.0,
+  "submitted_control_states": 430,
+  "gated_control_blocks": 0,
+  "local_candidate_availability": {
+    "k2": 131,
+    "k4": 142,
+    "k8": 178
+  },
+  "local_L2_fraction_k8": 0.5933333333333334,
+  "external_L3_fallback_needed": 122,
+  "external_candidate_available_all_states": 300,
+  "phase_primary_role_available": 300,
+  "phase_counts": {
+    "PRE_EDIT": 112,
+    "POST_EDIT_UNVERIFIED": 113,
+    "POST_EDIT_VALIDATED": 75,
+    "TEST_FAILED": 0
+  },
+  "phase_aware_primary_role_counts": {
+    "Edit": 112,
+    "Test": 113,
+    "Submit": 75
+  },
+  "stage_blind_role_only_submit": 97,
+  "premature_submit_lower_bound": 76,
+  "premature_submit_lower_bound_fraction_of_role_only_submits": 0.7835051546391752,
+  "candidate_assignment_coverage_after_external_expansion": 1.0,
+  "task_success_after_intervention_measured": false
+}

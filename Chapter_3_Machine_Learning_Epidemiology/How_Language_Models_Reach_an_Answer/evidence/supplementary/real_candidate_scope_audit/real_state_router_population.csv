@@ -1,0 +1,3 @@
+population,router_branch,n_states,coverage,evidence_note
+Normal submitted control states,NORMAL / no intervention,430,1.0,22 Submitted trajectories; strong-loop gate causes zero gated interventions
+Qwen gate-positive strong-loop states,Strong-loop branch,300,1.0,8 LimitsExceeded trajectories

@@ -1,0 +1,100 @@
+{
+  "chars": 432030,
+  "char_vocab_coverage": 0.9900446728236465,
+  "contexts": 29055,
+  "unique_transitions": 58567,
+  "supported_actions": 64,
+  "selected_D": 24,
+  "selected": {
+    "D": 24.0,
+    "alpha": 0.1,
+    "pca_energy": 0.9244760920220146,
+    "mse": 0.021682333118067016,
+    "mse_reset": 0.025732300634435327,
+    "r2": 0.31716232256104526,
+    "js_bits": 0.42641800041388805,
+    "projection_floor_js": 0.05637480520915204,
+    "top1": 0.44056394631370877
+  },
+  "movement": {
+    "D": 24,
+    "stable_rank": 4.452777064744054,
+    "participation_rank": 10.457914147260063,
+    "d95": 19,
+    "top2": 0.3548008764273287,
+    "top3": 0.434579958870327,
+    "top6": 0.6148051153529597
+  },
+  "rollout": [
+    {
+      "horizon": 1,
+      "n": 5000,
+      "mse": 0.022124148737675202,
+      "r2": 0.30577893145506707,
+      "js_bits": 0.4347356477166124,
+      "top1": 0.432
+    },
+    {
+      "horizon": 2,
+      "n": 5000,
+      "mse": 0.02303629645556286,
+      "r2": 0.27123956566680796,
+      "js_bits": 0.46105548271914304,
+      "top1": 0.3702
+    },
+    {
+      "horizon": 4,
+      "n": 5000,
+      "mse": 0.024190255698827615,
+      "r2": 0.24430076741954365,
+      "js_bits": 0.47329701237609134,
+      "top1": 0.3626
+    },
+    {
+      "horizon": 8,
+      "n": 5000,
+      "mse": 0.024423887515939303,
+      "r2": 0.23541305100080756,
+      "js_bits": 0.47981866175785653,
+      "top1": 0.3596
+    },
+    {
+      "horizon": 12,
+      "n": 5000,
+      "mse": 0.02437344033480037,
+      "r2": 0.2358907846317555,
+      "js_bits": 0.47824696981667947,
+      "top1": 0.3644
+    },
+    {
+      "horizon": 16,
+      "n": 5000,
+      "mse": 0.024697641493230206,
+      "r2": 0.22620239526021046,
+      "js_bits": 0.48645261425270453,
+      "top1": 0.345
+    }
+  ],
+  "samples": [
+    {
+      "start": " type",
+      "sample": 0,
+      "text": " types explo intergandered / = the 0x, thacoredex theall arelelin therextedathecof fint indina rat intefokerelalelaterorty ast are gity arrathem / . in fut the is allores a chaloperay thachandedecan ex. T witorer, toren an repo stanusy sint of the \ufffdevan ares to intes the tan that trintererex. \" valler an"
+    },
+    {
+      "start": " type",
+      "sample": 1,
+      "text": " type seacan an thocof blorestro serer an thed atistithecther mus allin inderereserablingothat in the sund therrat is allededs as andegun thareratedevintinengtallethe a slinit ind foratorestrerecaser to sevatrin \ufffd aclinthex as typeledembegedemberere teracoun = the is ret infecto cof strerer thet eatereri"
+    },
+    {
+      "start": "type ",
+      "sample": 0,
+      "text": "type are, in sy staty the contrun foredsinenopp gede le the forer ind or se, linst intestin ininor as igalosellis is thed or as / , inin the then indin . arercandedisumporineare calinteranecancand an a flores is the stedis thes prepo or trempran andiallor in an inty mat is a streterintecacerenores typere"
+    },
+    {
+      "start": "type ",
+      "sample": 1,
+      "text": "type \ufffdeninvotander for f inten suresuchatelootre thato is (presucthevindedestererest inteddigis ands is funded arc ared arintral constoredempre isedex \ufffdS0x0]intited s f thed shallenandef funtenderes A in type int as of expto fun thantrechanoranenindeserele, reppelurind the evatit [ / an p to carin at is "
+    }
+  ]
+}
