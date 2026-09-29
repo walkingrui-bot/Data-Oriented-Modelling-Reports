@@ -1,0 +1,8 @@
+quantity,value
+unique_targets,5
+unique_target_node_pairs,50
+unique_direct_children,12
+intervention_node_rows,60
+child_rows,17
+far_descendant_rows,5
+nondescendant_rows,38

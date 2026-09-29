@@ -1,0 +1,11 @@
+pair_id,source,known_direction,n,point_margin_true_minus_reverse,point_correct,bootstrap_true_direction_rate,bootstrap_median_margin,stability_status
+0001,DWD,Altitude → Temperature,349,0.7428493208,True,1.0,0.9899703104,stable_correct
+0005,Abalone,Age → Length,4177,2.1018359291,True,1.0,2.1128043312,stable_correct
+0013,auto-mpg,Displacement → Fuel consumption,392,-1.0499943776,False,0.0,-1.0390611103,stable_reversed
+0019,geyser,Current duration → Next interval,194,-0.9820560277,False,0.0,-0.9657911306,stable_reversed
+0025,concrete,Cement → Compressive strength,1030,-0.0910612665,False,0.8,0.1430691986,point_bootstrap_discordant
+0033,liver,Alcohol consumption → Mean corpuscular volume,345,0.9031744691,True,1.0,0.7689808581,stable_correct
+0047,traffic,Type of day → Number of cars,254,1.1623482164,True,0.95,1.0632181715,stable_correct
+0064,UNdata,Drinking-water access → Infant mortality,162,-0.9970797066,False,0.35,-1.1392356928,unstable
+0086,housing,Apartment size → Monthly rent,666,0.1772050016,True,0.85,0.3140448271,stable_correct
+0093,MOPEX,Precipitation → Runoff,432,-0.4330015771,False,0.3,-0.048195015,unstable

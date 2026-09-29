@@ -1,0 +1,10 @@
+{
+  "experiment": "CAUSAL-GEOMETRY-019",
+  "date": "2026-09-27",
+  "training": "none; frozen CG-018 checkpoints",
+  "seeds": [11, 22, 33],
+  "test_parameter_groups": 100,
+  "synthetic_test_instances": 600,
+  "double_do_queries_per_checkpoint": 7200,
+  "requested_edge_delete_queries_per_checkpoint": 1200
+}

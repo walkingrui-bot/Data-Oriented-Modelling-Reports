@@ -1,0 +1,7 @@
+Route,Synthetic NLL,Synthetic mean MSE,Real MSE
+Direct,-0.7761,0.04186,1.7087
+Blank,-1.0740,0.03859,1.6371
+Continuous,-1.0875,0.03741,1.6329
+Numerical candidates,-1.2082,0.03812,1.6313
+Mechanism Blank,-1.7701,0.04001,1.6528
+Mechanism Feedback,-1.7557,0.03977,1.6605

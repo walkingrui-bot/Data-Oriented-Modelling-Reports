@@ -1,0 +1,63 @@
+{
+  "source_tables": 55,
+  "cells_checked": 1280,
+  "numeric_value_mismatches": [],
+  "manually_verified_digit_to_word_count_labels": [
+    {
+      "table": 1,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "table": 28,
+      "row": 2,
+      "column": 0
+    },
+    {
+      "table": 28,
+      "row": 3,
+      "column": 0
+    },
+    {
+      "table": 28,
+      "row": 4,
+      "column": 0
+    },
+    {
+      "table": 28,
+      "row": 5,
+      "column": 0
+    },
+    {
+      "table": 28,
+      "row": 6,
+      "column": 0
+    },
+    {
+      "table": 28,
+      "row": 7,
+      "column": 0
+    },
+    {
+      "table": 44,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "table": 44,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "table": 44,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "table": 44,
+      "row": 4,
+      "column": 2
+    }
+  ],
+  "normalisation": "English number words are equivalent to digits; \u201cthe same block\u201d and \u201cone block\u201d denote the same block count."
+}

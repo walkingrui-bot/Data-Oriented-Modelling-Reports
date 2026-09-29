@@ -1,0 +1,40 @@
+{
+  "checkpoint_checks": [
+    {
+      "model": "world_program",
+      "seed": 11,
+      "reload_trajectory_max_abs": 0.0
+    },
+    {
+      "model": "world_program",
+      "seed": 22,
+      "reload_trajectory_max_abs": 0.0
+    },
+    {
+      "model": "balanced",
+      "seed": 11,
+      "reload_trajectory_max_abs": 0.0
+    },
+    {
+      "model": "balanced",
+      "seed": 22,
+      "reload_trajectory_max_abs": 0.0
+    },
+    {
+      "model": "evidence_coupled",
+      "seed": 11,
+      "reload_trajectory_max_abs": 0.0
+    },
+    {
+      "model": "evidence_coupled",
+      "seed": 22,
+      "reload_trajectory_max_abs": 0.0
+    }
+  ],
+  "max_reload_trajectory_error": 0.0,
+  "max_diagonal_error": 0.0,
+  "max_row_abs_sum": 0.8889335989952087,
+  "final_state_replay_max_abs": 0.0,
+  "n_new_checkpoints": 6,
+  "status": "PASS"
+}

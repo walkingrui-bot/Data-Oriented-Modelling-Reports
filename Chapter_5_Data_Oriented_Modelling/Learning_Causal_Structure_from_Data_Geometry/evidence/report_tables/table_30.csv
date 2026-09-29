@@ -1,0 +1,7 @@
+Feature set,LOTO AUC
+Baseline relation texture,0.721
+One-intervention node response,0.711
+Relation change,0.726
+Baseline + response,0.884
+Baseline + relation change,0.807
+All features,0.763

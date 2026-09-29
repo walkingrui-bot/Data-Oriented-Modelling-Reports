@@ -1,0 +1,19 @@
+metric,value,unit
+Tuebingen scalar pairs used for external atlas,99,
+Sachs observational samples (cd3cd28),853,
+Sachs real experimental environments,9,
+Sachs variables,11,
+All unordered Sachs pairs,55,
+Ground-truth direct edges,17,
+Tuebingen observational transfer direction accuracy,70.5882352941,%
+Sachs multi-environment coefficient-drift direction accuracy,64.7058823529,%
+Point dual-channel agreement coverage on direct edges,35.2941176471,%
+Point direction accuracy when both channels agree,100.0,%
+Point+bootstrap agreement>=0.70 coverage on direct edges,17.6470588235,%
+Point+bootstrap selected direction accuracy,100.0,%
+AUC: observational margin for direct-vs-other,0.3521671827,
+AUC: environment asymmetry for direct-vs-other,0.6470588235,
+AUC: dual-consensus score for direct-vs-other,0.5518575851,
+Top-5 direct-edge precision by dual-consensus score,60.0,%
+Direct-edge base rate among all pairs,30.9090909091,%
+Top-5 direction accuracy among selected true direct edges,100.0,%

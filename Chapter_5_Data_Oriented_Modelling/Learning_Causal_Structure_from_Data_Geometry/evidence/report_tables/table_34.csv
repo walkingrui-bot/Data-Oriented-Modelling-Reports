@@ -1,0 +1,5 @@
+Route,Test NLL,Mean MSE,Consequence coverage
+Direct,-0.7761,0.04186,73.78%
+Blank,-1.0740,0.03859,79.11%
+Continuous,-1.0875,0.03741,77.22%
+Structured,-1.2082,0.03812,80.89%

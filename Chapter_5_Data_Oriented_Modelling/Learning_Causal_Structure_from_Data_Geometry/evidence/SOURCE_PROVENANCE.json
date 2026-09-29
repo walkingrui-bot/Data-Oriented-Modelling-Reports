@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "file": "Causal_Geometry_Report_v2.7_20260928(1).docx",
+      "bytes": 6996398,
+      "sha256": "1f44628c0fe12b207aa3b8bea2c1c74b41e139b88dfd7f1567f5fb7c95718839"
+    },
+    {
+      "file": "CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928(2).zip",
+      "bytes": 100401000,
+      "sha256": "c79ef3ae7707066befb16082b4feb6273809c35fad4aa914e1fc60f324690ef7"
+    }
+  ],
+  "edition": "English publication v1.0",
+  "date": "2026-09-28",
+  "external_provider_raw_data_included": false,
+  "source_report_blocks": 1249,
+  "retained_drawings": 89,
+  "source_tables": 55,
+  "native_display_equations": 52
+}

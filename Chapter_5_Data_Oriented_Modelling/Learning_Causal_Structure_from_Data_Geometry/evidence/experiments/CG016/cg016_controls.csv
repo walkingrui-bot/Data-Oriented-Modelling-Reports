@@ -1,0 +1,8 @@
+control,value,secondary_value,n_or_repetitions
+Escalated subset: baseline,0.5952380952,0.6666666667,27
+Escalated subset: after matched response,0.873015873,0.8148148148,27
+Random same-budget escalation mean,0.8237888158,,10000
+Random same-budget escalation median,0.8223684211,,10000
+Random same-budget escalation 95th percentile,0.8662280702,,10000
+P(random AUC >= uncertainty policy AUC),0.1145885411,,10000
+Target-level interventions avoided,0.0,,5

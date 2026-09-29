@@ -1,0 +1,11 @@
+metric,value
+Sachs unique targets,5.0
+Sachs unique target-node relations,50.0
+Sachs direct-child relations,12.0
+External real pairs,10.0
+Point direction accuracy,0.5
+Stable-concordant pairs,7.0
+Stable-concordant correct,5.0
+Stable-concordant reversed,2.0
+Point-bootstrap discordant,1.0
+Unstable,2.0

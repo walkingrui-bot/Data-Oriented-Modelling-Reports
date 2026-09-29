@@ -1,0 +1,6 @@
+Tangent regime,λmin,λmax,condition no.,max |off-diag|
+none,1.000,1.000,1.00,0.000
+common mean,0.491,1.705,3.47,0.501
+correlation,0.618,1.474,2.38,0.367
+radial scale,0.622,2.005,3.23,0.323
+combined,0.731,1.728,2.36,0.375

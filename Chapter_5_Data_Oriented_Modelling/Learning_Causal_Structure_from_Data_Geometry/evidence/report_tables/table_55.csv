@@ -1,0 +1,9 @@
+Term,Operational meaning
+Reversal-breaking information,"Generating constraints or structures not simultaneously preserved under reversal, within the stated assumptions."
+Shape geometry,"Higher-order shape, curvature, conditional noise fibres and residual dependence within a distribution."
+Change geometry,"Distribution shifts and mechanism invariance across environments, time or domains."
+Response geometry,"Propagation of location, scale and shape changes across variables after perturbation; measured in Sachs from CG-009 onward."
+Geometry-conditioned causal operator,The causal readout depends on generating geometry: C = C(G(D)).
+Reversal-compatible manifold 𝓡,Distributions compatible with both directions under a specified mechanism family.
+Structural stochasticity,Stochasticity within the generating mechanism whose amplitude or shape can carry mechanism information.
+Measurement noise,Observational perturbation independent of the target mechanism that reduces detectable geometric SNR.

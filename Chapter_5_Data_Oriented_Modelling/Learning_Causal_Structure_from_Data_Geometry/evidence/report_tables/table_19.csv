@@ -1,0 +1,6 @@
+Policy,Direction accuracy,Coverage
+Panel A all calls,58.62%,100%
+Panel A：support gate,62.98%,85.34%
+Panel B all calls,71.01%,100%
+Panel B：support gate,75.15%,58.33%
+Panel B：support + margin≥0.10,85.81%,51.08%

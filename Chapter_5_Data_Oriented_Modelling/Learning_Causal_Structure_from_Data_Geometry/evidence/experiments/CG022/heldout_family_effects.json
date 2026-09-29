@@ -1,0 +1,38 @@
+[
+  {
+    "improvement":0.1657137907,
+    "ci95":[
+      0.1167831367,
+      0.2156246724
+    ],
+    "group_improved_rate":0.79,
+    "family":"single-do"
+  },
+  {
+    "improvement":0.2744172312,
+    "ci95":[
+      0.229787551,
+      0.3206871489
+    ],
+    "group_improved_rate":0.93,
+    "family":"double-do"
+  },
+  {
+    "improvement":0.1138839541,
+    "ci95":[
+      0.0920258413,
+      0.1370172183
+    ],
+    "group_improved_rate":0.83,
+    "family":"edge half"
+  },
+  {
+    "improvement":0.4124530461,
+    "ci95":[
+      0.3167145405,
+      0.512918826
+    ],
+    "group_improved_rate":0.81,
+    "family":"edge flip"
+  }
+]

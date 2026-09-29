@@ -1,0 +1,6 @@
+Readout,G0076,PMA
+Direct-child AUC,0.880,0.880
+Child − nonchild mean score gap,1.046,1.073
+Top-1 precision,1/1,1/1
+Top-3 precision,3/3,3/3
+Top-5 precision,4/5,4/5

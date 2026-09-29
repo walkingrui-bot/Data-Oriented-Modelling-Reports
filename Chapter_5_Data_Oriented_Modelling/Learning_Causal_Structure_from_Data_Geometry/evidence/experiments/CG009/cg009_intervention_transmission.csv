@@ -1,0 +1,5 @@
+condition,target,condition_type,desc_auc,child_auc,top3_descendants,top3_expected,top3_enrichment
+cd3cd28_g0076.csv,PKC,matched inhibitor,0.6666666667,0.7333333333,2,1.9090909091,1.0476190476
+cd3cd28_u0126.csv,Mek+Erk,matched inhibitor,0.625,0.625,0,0.2727272727,0.0
+pma.csv,PKC,alternate activator,0.6666666667,0.6666666667,2,1.9090909091,1.0476190476
+b2camp.csv,PKA,alternate activator,0.75,0.75,2,1.6363636364,1.2222222222

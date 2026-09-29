@@ -1,0 +1,13 @@
+test,mode,contrast,metric,mean,bootstrap_95_lo,bootstrap_95_hi,group_fraction_positive,n_groups
+double_do,mechanism_blank,superposition_minus_mechanism,nll_improvement,0.3566106681666528,0.2977178822250655,0.4196712292651414,0.94,100
+double_do,mechanism_blank,superposition_minus_mechanism,mse_improvement,0.0032606859978964726,0.0027219630117966986,0.0038255108913255974,0.93,100
+edge_delete,mechanism_blank,ignore_edge_delete_minus_true_edit,nll_improvement,1.6124831513495124,1.4902966653505738,1.7359622474081358,1.0,100
+edge_delete,mechanism_blank,ignore_edge_delete_minus_true_edit,mse_improvement,0.03876286638787763,0.03604558376734152,0.04142967309374273,1.0,100
+edge_delete,mechanism_blank,wrong_edge_delete_minus_true_edit,nll_improvement,1.3133438197988136,1.2159873707517692,1.4106020045222605,1.0,100
+edge_delete,mechanism_blank,wrong_edge_delete_minus_true_edit,mse_improvement,0.03286731188893843,0.030639279725156964,0.03504181109673354,1.0,100
+double_do,mechanism_feedback,superposition_minus_mechanism,nll_improvement,0.2462405701012033,0.20499681616736315,0.2899443277079227,0.95,100
+double_do,mechanism_feedback,superposition_minus_mechanism,mse_improvement,0.0018958753707211653,0.0014099329035715399,0.002424093437923256,0.8,100
+edge_delete,mechanism_feedback,ignore_edge_delete_minus_true_edit,nll_improvement,1.390868797995865,1.2757421144422914,1.511318034885238,1.0,100
+edge_delete,mechanism_feedback,ignore_edge_delete_minus_true_edit,mse_improvement,0.03493485481892794,0.032457240397202804,0.03749875794132563,1.0,100
+edge_delete,mechanism_feedback,wrong_edge_delete_minus_true_edit,nll_improvement,1.144101219310949,1.0531415902530752,1.240759866185288,1.0,100
+edge_delete,mechanism_feedback,wrong_edge_delete_minus_true_edit,mse_improvement,0.02969422363799994,0.02757526508171402,0.03185433997665866,1.0,100

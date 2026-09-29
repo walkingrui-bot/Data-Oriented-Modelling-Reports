@@ -1,0 +1,7 @@
+{
+  "checkpoints_verified": 36,
+  "max_prediction_error": 0.0,
+  "max_loss_error": 4.440892098500626e-16,
+  "max_query_switch_relation_change": 0.0,
+  "max_do_clamp_error": 0.0
+}

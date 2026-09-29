@@ -1,0 +1,4 @@
+metric,value,permutation_p
+rank-normalized descendant vs non-descendant AUC,0.6878306878,0.0171965607
+rank-normalized direct-child vs non-descendant AUC,0.7091503268,0.0139972006
+mean top-3 descendant enrichment,0.8293650794,1.0

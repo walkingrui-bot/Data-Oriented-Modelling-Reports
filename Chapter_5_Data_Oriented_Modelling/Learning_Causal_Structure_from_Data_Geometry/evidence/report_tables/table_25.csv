@@ -1,0 +1,6 @@
+Feature block,LOTO descendant AUC,LOTO direct-child AUC,Interpretation
+Node response only,0.611,0.642,Single-node response after perturbation
+Baseline relation,0.642,0.769,Pre-intervention target–node geometry
+Relation change,0.713,0.665,Intervention-induced target–node relation change
+Node + change,0.722,0.714,response cone + relation deformation
+Full relation + global,0.719,0.583,Shared responses can obscure direct adjacency

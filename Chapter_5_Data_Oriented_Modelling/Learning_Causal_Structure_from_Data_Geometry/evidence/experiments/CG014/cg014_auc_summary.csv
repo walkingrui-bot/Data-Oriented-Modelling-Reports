@@ -1,0 +1,7 @@
+feature_set,leave_one_target_out_auc
+baseline_relation,0.7214912281
+one_intervention_response,0.7105263158
+relation_change,0.725877193
+baseline_plus_response,0.8837719298
+baseline_plus_change,0.8070175439
+all_features,0.7631578947

@@ -1,0 +1,5 @@
+Representation,Mean MAE for exact causal JS,Gain vs origin quadratic
+Single-origin quadratic,0.004690,1.00×
+Single-origin cubic,0.002716,1.73×
+Atlas quadratic,0.000855,5.49×
+Atlas cubic,0.000355,13.20×

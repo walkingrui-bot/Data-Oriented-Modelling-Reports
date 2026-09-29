@@ -1,0 +1,9 @@
+Baseline relation feature,Discrimination AUC,Direction in children,Interpretation
+Heteroscedastic direction gap,0.667,Higher,Greater directional conditional-width asymmetry
+Forward heteroscedasticity,0.656,Higher,Target-dependent forward residual scale
+Residual skew,0.643,Lower,Less skewed forward residuals in children
+Nonlinearity direction gap,0.638,Higher,Greater directional nonlinear-gain asymmetry
+Cubic-MSE direction gap,0.636,Lower,Systematic directional fit-error differences
+Forward nonlinearity gain,0.621,Higher,Greater forward nonlinear improvement
+Fibre-width variation,0.603,Higher,More variable conditional fibre width
+Raw correlation,0.526,Slightly higher,Near-chance discrimination

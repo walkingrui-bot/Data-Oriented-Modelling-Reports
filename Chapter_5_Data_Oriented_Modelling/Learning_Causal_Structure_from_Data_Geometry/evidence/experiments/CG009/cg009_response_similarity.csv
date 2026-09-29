@@ -1,0 +1,16 @@
+condition_a,condition_b,absolute_response_cosine
+cd3cd28_aktinhib.csv,cd3cd28_ly.csv,0.8874715663
+cd3cd28_ly.csv,cd3cd28_g0076.csv,0.8207658782
+cd3cd28_u0126.csv,b2camp.csv,0.8183776591
+cd3cd28_ly.csv,pma.csv,0.7931583186
+pma.csv,cd3cd28_u0126.csv,0.7806022572
+cd3cd28_aktinhib.csv,pma.csv,0.7717772465
+cd3cd28_g0076.csv,cd3cd28_u0126.csv,0.7534366443
+cd3cd28_g0076.csv,pma.csv,0.7481854075
+cd3cd28_aktinhib.csv,cd3cd28_g0076.csv,0.7310184474
+cd3cd28_g0076.csv,b2camp.csv,0.6562687115
+pma.csv,b2camp.csv,0.6372550109
+cd3cd28_aktinhib.csv,b2camp.csv,0.5971361876
+cd3cd28_ly.csv,cd3cd28_u0126.csv,0.5632451327
+cd3cd28_ly.csv,b2camp.csv,0.5630193715
+cd3cd28_aktinhib.csv,cd3cd28_u0126.csv,0.4863718052

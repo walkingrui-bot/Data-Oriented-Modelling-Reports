@@ -1,0 +1,5 @@
+Held-out family,CG-021 Pool8 NLL,Evidence-coupled NLL,Mean improvement,95% bootstrap CI
+New single-do values,−1.2251,−1.3908,0.1657,0.1168–0.2156
+Held-out double-do,−1.3502,−1.6246,0.2744,0.2298–0.3207
+Edge half,−1.5710,−1.6849,0.1139,0.0920–0.1370
+Edge sign-flip,−0.3685,−0.7809,0.4125,0.3167–0.5129

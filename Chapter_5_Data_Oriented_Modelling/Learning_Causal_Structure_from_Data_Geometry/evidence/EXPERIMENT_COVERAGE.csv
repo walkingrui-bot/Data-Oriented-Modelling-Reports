@@ -1,0 +1,25 @@
+experiment,report_section,title,availability,csv,py,checkpoints,directory
+CG-001,3,CG-001 Sources of direction-breaking geometry,Report record only; separate execution assets were not recovered.,0,0,0,evidence/experiments/CG001_002
+CG-002,4,CG-002 Mechanism conflict,Report record only; separate execution assets were not recovered.,0,0,0,evidence/experiments/CG001_002
+CG-003,5,CG-003 The identifiability boundary,Partial recovered results and scripts.,2,1,0,evidence/experiments/CG003
+CG-004,6,CG-004 Multiple normal directions and nuisance variation,Partial recovered results and scripts.,3,1,0,evidence/experiments/CG004
+CG-005,7,CG-005 Curvature and mixed mechanisms in structural models,Partial recovered results and scripts.,4,1,0,evidence/experiments/CG005
+CG-006,9,"CG-006: Causal atlas, connection proxy and geometry-first triage",Partial recovered results and scripts.,3,3,0,evidence/experiments/CG006
+CG-007,12,CG-007: Source transfer and atlas-support stress tests,Partial recovered results; original execution scripts are not included.,3,0,0,evidence/experiments/CG007
+CG-008,13,CG-008: Cross-dataset atlas transfer and dual-geometry consensus,Partial recovered results; original execution scripts are not included.,4,0,0,evidence/experiments/CG008
+CG-009,14,CG-009: Response geometry and causal transmission,Analysis script and result tables; external observations must be acquired separately.,4,1,0,evidence/experiments/CG009
+CG-010,15,"CG-010: Variable decomposition, shared response programmes and local causal roles",Analysis script and result tables; external observations must be acquired separately.,7,1,0,evidence/experiments/CG010
+CG-011,16,CG-011: Relational response operators—adjacency and downstream propagation,Analysis script and result tables; external observations must be acquired separately.,6,1,0,evidence/experiments/CG011
+CG-012,17,CG-012: A small cross-system transfer test,Analysis script and result tables; external observations must be acquired separately.,2,1,0,evidence/experiments/CG012
+CG-013,18,CG-013: Two-anchor chart calibration,Analysis script and result tables; external observations must be acquired separately.,4,1,0,evidence/experiments/CG013
+CG-014,19,CG-014: One-intervention edge confirmation,Protocol and result summaries; original execution script is not included.,3,0,0,evidence/experiments/CG014
+CG-015,20,"CG-015: Same target, different perturbations",Protocol and result summaries; original execution script is not included.,2,0,0,evidence/experiments/CG015
+CG-016,22,CG-016: Selective computation in a restricted execution prototype,Protocol and result summaries; original execution script is not included.,3,0,0,evidence/experiments/CG016
+CG-017,23,CG-017: Generated intermediate objects in iterative data models,"Code, checkpoints, synthetic records and aggregate real-data outputs; per-cell real predictions excluded.",7,4,72,evidence/experiments/CG017
+CG-018,24,CG-018: Generated relations and internal mechanism simulation,"Code, checkpoints, synthetic records and aggregate real-data outputs; per-cell real predictions excluded.",12,5,48,evidence/experiments/CG018
+CG-019,25,CG-019: Cross-question reuse of generated mechanisms,"Synthetic code, checkpoints and results; exact execution requires the recorded dependencies and configured archive paths.",5,5,6,evidence/experiments/CG019
+CG-020,26,CG-020: Explicit object-state iteration,"Synthetic code, checkpoints and results; exact execution requires the recorded dependencies and configured archive paths.",9,5,8,evidence/experiments/CG020
+CG-021,27,CG-021: An unpruned hypothesis pool,"Synthetic code, checkpoints and results; exact execution requires the recorded dependencies and configured archive paths.",10,4,4,evidence/experiments/CG021
+CG-022,28,CG-022: Consequence-supervised executable mechanism models,"Synthetic code, checkpoints and results; exact execution requires the recorded dependencies and configured archive paths.",21,9,8,evidence/experiments/CG022
+CG-023,29,CG-023: Observation coordinates and executable dynamics,"Synthetic code, checkpoints and results; exact execution requires the recorded dependencies and configured archive paths.",15,3,2,evidence/experiments/CG023
+CG-024,30,CG-024: Sequential intervention execution,"Synthetic code, checkpoints and results; exact execution requires the recorded dependencies and configured archive paths.",15,6,6,evidence/experiments/CG024

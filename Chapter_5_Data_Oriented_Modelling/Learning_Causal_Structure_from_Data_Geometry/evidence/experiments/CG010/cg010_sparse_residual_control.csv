@@ -1,0 +1,3 @@
+group,n,mean_rank2_svd_residual_fraction,difference_nondesc_minus_desc,within_intervention_permutation_p
+high_response_descendants,8,0.1282419194,0.175420822,1.0
+high_response_nondescendants,10,0.3036627414,0.175420822,1.0

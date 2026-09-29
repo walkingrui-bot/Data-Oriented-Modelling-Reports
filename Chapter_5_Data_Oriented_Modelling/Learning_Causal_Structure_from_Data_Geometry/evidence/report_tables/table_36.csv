@@ -1,0 +1,5 @@
+Panel and route,Cut Δloss,Transplant Δloss,Edit Δloss
+Synthetic Continuous,+0.28859,+0.00759,+0.00227
+Synthetic Structured,+0.40504,+0.00232,+0.00702
+Real Continuous,-0.00706,-0.00383,-0.00060
+Real Structured,-0.01272,-0.00256,+0.00615

@@ -1,0 +1,6 @@
+Evidence channel,Task,Observed result,Supported use
+Tübingen observational geometry → Sachs,Orientation of 17 known direct edges,12/17 = 70.6%,Cross-dataset orientation screening
+Sachs coefficient-drift change geometry,Orientation of 17 known direct edges,11/17 = 64.7%,Within-dataset environment evidence
+Sachs coefficient-drift asymmetry,Direct edge versus other pair,AUC = 0.647,Relationship prioritisation
+Observational margin,Direct edge versus other pair,AUC = 0.352,Unsuitable as a standalone adjacency score
+Dual-consensus score,Direct edge versus other pair,AUC = 0.552,Orientation gate rather than adjacency replacement

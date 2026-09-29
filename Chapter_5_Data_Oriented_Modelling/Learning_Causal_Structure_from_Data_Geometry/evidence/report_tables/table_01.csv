@@ -1,0 +1,6 @@
+Study,Question,Manipulations,Outputs
+CG-001,Which features break direction symmetry?,"Non-Gaussianity, nonlinearity and environment shifts",Directional geometry and mechanism fingerprints
+CG-002,Does one statistic transfer across mechanisms?,Six X→Y mechanisms with conflicting signs,Shared head versus geometry routing/experts
+CG-003,When does information emerge from a nonidentifiable point?,"α, n, structural noise σ, measurement noise τ","Transition surface, SNR and 1/√n scaling"
+CG-004,Can normal directions share a local information scale?,Multiple normal directions and tangent nuisance,Local normal Fisher tensor and direction-matched readout
+CG-005,When does local Fisher geometry require higher-order correction?,"Explicit M/H/S/E SCM, mixtures and tangent regimes ρ",finite-radius curvature、higher-order interaction、metric transport

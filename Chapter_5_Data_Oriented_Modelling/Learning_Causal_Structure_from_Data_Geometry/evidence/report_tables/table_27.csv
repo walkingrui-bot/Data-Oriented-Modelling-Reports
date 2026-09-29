@@ -1,0 +1,11 @@
+Pair,Source,Benchmark known direction,Sachs score margin,Bootstrap known-dir
+0001,DWD,Altitude → Temperature,+0.743,1.00
+0005,Abalone,Age → Length,+2.102,1.00
+0013,auto-mpg,Displacement → Fuel use,−1.050,0.00
+0019,geyser,Duration → Next interval,−0.982,0.00
+0025,concrete,Cement → Strength,−0.091,0.80
+0033,liver,Alcohol → MCV,+0.903,1.00
+0047,traffic,Day type → Car count,+1.162,0.95
+0064,UNdata,Water access → Infant mortality,−0.997,0.35
+0086,housing,Apartment size → Rent,+0.177,0.85
+0093,MOPEX,Precipitation → Runoff,−0.433,0.30

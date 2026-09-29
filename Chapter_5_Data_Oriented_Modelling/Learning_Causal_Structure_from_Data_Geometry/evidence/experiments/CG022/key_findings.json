@@ -1,0 +1,97 @@
+{
+  "baseline_to_evidence_original": {
+    "improvement": 0.049204015663514546,
+    "ci95": [
+      -0.013388077803421765,
+      0.10721072200142465
+    ],
+    "group_improved_rate": 0.64
+  },
+  "baseline_to_evidence_train_bank": {
+    "improvement": 0.19051905896100732,
+    "ci95": [
+      0.1639049446625591,
+      0.2184412671657434
+    ],
+    "group_improved_rate": 0.95
+  },
+  "baseline_to_evidence_heldout_bank": {
+    "improvement": 0.22643636254738603,
+    "ci95": [
+      0.19228154099847958,
+      0.2640101323362362
+    ],
+    "group_improved_rate": 0.95
+  },
+  "balanced_to_evidence_original": {
+    "improvement": -0.005256847484658164,
+    "ci95": [
+      -0.0562543521282884,
+      0.04301033802966897
+    ],
+    "group_improved_rate": 0.59
+  },
+  "balanced_to_evidence_heldout_bank": {
+    "improvement": 0.003935365910150321,
+    "ci95": [
+      -0.02398824145630545,
+      0.030611493903747778
+    ],
+    "group_improved_rate": 0.57
+  },
+  "heldout_family_effects": [
+    {
+      "improvement": 0.1657137906989859,
+      "ci95": [
+        0.11678313673787567,
+        0.21562467238102304
+      ],
+      "group_improved_rate": 0.79,
+      "family": "single-do"
+    },
+    {
+      "improvement": 0.2744172312055404,
+      "ci95": [
+        0.22978755102044024,
+        0.32068714891666444
+      ],
+      "group_improved_rate": 0.93,
+      "family": "double-do"
+    },
+    {
+      "improvement": 0.11388395406422205,
+      "ci95": [
+        0.09202584127571833,
+        0.13701721829664243
+      ],
+      "group_improved_rate": 0.83,
+      "family": "edge half"
+    },
+    {
+      "improvement": 0.4124530460691959,
+      "ci95": [
+        0.31671454052480275,
+        0.5129188259768254
+      ],
+      "group_improved_rate": 0.81,
+      "family": "edge flip"
+    }
+  ],
+  "evidence_heldout_support_improvement_mean": 0.02726470795475565,
+  "evidence_support_observation_nll_gain_mean": 0.13593959808349604,
+  "evidence_support_operator_bank_gain_mean": 0.027264475822448703,
+  "evidence_wrong_support_own_degradation_mean": 0.0022206306457519497,
+  "evidence_wrong_support_donor_preferred_mean": 0.38666665554046625,
+  "evidence_effective_worlds_mean": 7.541611433029175,
+  "state_replay_max_abs": 0.0,
+  "wrong_support_discriminative_n": 188,
+  "wrong_support_discriminative_degradation": 0.0036166770027038853,
+  "wrong_support_discriminative_donor_preferred": 0.5372340425531915,
+  "rollout_step4_nll": -1.3334073424339294,
+  "rollout_step20_nll": -1.3302804827690125,
+  "rollout_step20_B_step_rms": 1.7010832777941687e-06,
+  "baseline_weighted_B_dist": 0.25492013450635154,
+  "baseline_best_B_dist": 0.17686941031408876,
+  "evidence_weighted_B_dist": 0.2535939514636993,
+  "evidence_best_B_dist": 0.166348360478878
+}

@@ -1,0 +1,14 @@
+comparison,horizon,mean_difference,ci95_low,ci95_high,world_lower_rate_or_improved_rate
+world_minus_direct_mixed,4,-0.000065,-0.003753,0.003923,0.56
+world_minus_direct_mixed,8,-0.003962,-0.007055,-0.000936,0.66
+world_minus_direct_mixed,16,-0.000717,-0.003803,0.002472,0.55
+world_minus_direct_mixed,32,-0.000656,-0.004546,0.003526,0.52
+world_minus_direct_mixed,64,-0.037526,-0.044707,-0.030286,0.90
+world_minus_direct_mixed,128,-0.557802,-0.586315,-0.529983,1.00
+world_mixed_minus_temporal,8,-0.0070267,-0.010804,-0.003428,0.66
+world_mixed_minus_temporal,16,-0.0074034,-0.011212,-0.003740,0.67
+world_mixed_minus_temporal,32,-0.0073842,-0.011136,-0.003777,0.67
+world_mixed_minus_temporal,64,-0.0073780,-0.011111,-0.003691,0.67
+world_mixed_minus_temporal,128,-0.0073780,-0.011061,-0.003770,0.67
+world_mixed_minus_eq_in,0,-0.021457,-0.051021,0.007451,
+direct_mixed_minus_eq_in,0,0.139860,0.110886,0.170418,

@@ -1,0 +1,5 @@
+geometry_block,stable_hard_coverage,stable_hard_accuracy,stable_weighted_accuracy,same_polarity_mean_distance,opposite_polarity_mean_distance
+full,0.5,0.8,0.5,2.1014451824,2.0693797062
+marginal,0.4,0.75,0.8,2.1762807779,2.1269594975
+edge_texture,0.8,0.5,0.4,1.769185761,1.6825793467
+residual_shape,0.7,0.4285714286,0.3,2.0364264634,2.0989459457

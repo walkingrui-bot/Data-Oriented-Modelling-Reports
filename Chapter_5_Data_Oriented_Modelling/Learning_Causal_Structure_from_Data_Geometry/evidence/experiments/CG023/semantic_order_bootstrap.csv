@@ -1,0 +1,5 @@
+comparison,horizons,mean_mse_increase,ci95_low,ci95_high,worlds_worse_fraction
+world_mixed_pair_reverse,"8,16,32",0.046932,0.039417,0.054665,0.96
+world_temporal_pair_reverse,"8,16,32",0.074304,0.063655,0.085281,0.99
+direct_mixed_pair_reverse,"8,16,32",0.065041,,,
+direct_temporal_pair_reverse,"8,16,32",0.065738,,,

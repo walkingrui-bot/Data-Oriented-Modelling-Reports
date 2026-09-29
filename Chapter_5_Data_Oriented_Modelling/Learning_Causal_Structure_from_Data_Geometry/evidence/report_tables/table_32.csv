@@ -1,0 +1,6 @@
+Policy,LOTO AUC,Balanced acc.,Mean operator calls,A1 response fraction
+Baseline only,0.721,0.645,1.00,0%
+Always add matched response,0.884,0.783,2.00,100%
+Always go deeper (+ relation change),0.811,0.629,3.00,100%
+Nested adaptive Data Action Chain,0.855,0.754,1.54,54%
+Reverse control: escalate confident pairs,0.779,0.658,1.54,54%

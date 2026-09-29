@@ -1,8 +1,9 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "chapter": 5,
   "reports": [
     1,
+    2,
     3
   ],
   "downloads": [
@@ -15,6 +16,102 @@
       "file": "Data_Oriented_Modelling_01_Publication_v1.0_20260928.zip",
       "bytes": 22499404,
       "sha256": "3a01d461b687c6c10e7ff82c353d5c6d081e7dc8b0da3d839792e1da284dd3fe"
+    },
+    {
+      "bytes": 59436567,
+      "sha256": "63f076932269e8b739f0143e7f284fb5f2a4b180743191a888f1f6f26212e6a7",
+      "assembled_file": "Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip",
+      "parts": [
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part001",
+          "bytes": 8388608,
+          "sha256": "3d804a343eebbedf73841d8cbbe8fe2bd126b50d333a4c1b9c53a446015e838d"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part002",
+          "bytes": 8388608,
+          "sha256": "2989bcde75606efc59876c1674002273c4edd956c89577562b854dfcfb37e86d"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part003",
+          "bytes": 8388608,
+          "sha256": "c6fefa0d0e2783ff064d6de26cc183219221a866eb03810ce5213abee85018c1"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part004",
+          "bytes": 8388608,
+          "sha256": "7d2cef215e751c9d15f140049caeca9490d5c268349e0b8d949e0f4a4b809687"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part005",
+          "bytes": 8388608,
+          "sha256": "798fb68aee28499e07acc9a31fac5f22d789a98f6b67af4c99305f28400c2f50"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part006",
+          "bytes": 8388608,
+          "sha256": "45f1c4f57754abbe972fbcf482bac5d00e5d0fd727718e8dad8709ad178297d5"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part007",
+          "bytes": 8388608,
+          "sha256": "5b8272c064a42ce99a2afeb2d4760d773eba8618222324c27f1afefe8de63d4d"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Evidence_v1.0_20260928.zip.part008",
+          "bytes": 716311,
+          "sha256": "2ca2599d9c35e1a737c7983266b540ca0dc7a82095eb3b9a6724002c6fef3791"
+        }
+      ],
+      "download_guide": "REPORT_02_DOWNLOADS.md"
+    },
+    {
+      "bytes": 66349794,
+      "sha256": "da2229b4c7e7ca3e67f9ab37c1fe0f3dfcebdb4977ebfd65934a55e6631f69df",
+      "assembled_file": "Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip",
+      "parts": [
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part001",
+          "bytes": 8388608,
+          "sha256": "eaafce1c075ee0129e6eb21603c8ba0a3a13de3882c6209c46d2e3b1131ba83b"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part002",
+          "bytes": 8388608,
+          "sha256": "5cfb17c3e3d8ce284d3515ffb5a5649b22734479250b7ebf069f1db0361624e6"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part003",
+          "bytes": 8388608,
+          "sha256": "000990e741bc73b70c227b0e2881310a2961e6a2e92bf4aa479ddd5d685c1ede"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part004",
+          "bytes": 8388608,
+          "sha256": "163f97d59c9cf41c27f4a9eb367c5371e64e0f4dfa6ae51b0c403dac39628d41"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part005",
+          "bytes": 8388608,
+          "sha256": "cb802547a1b71cb61a62812479068bdbda87ba17791708ec740565e21ae94502"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part006",
+          "bytes": 8388608,
+          "sha256": "e496e5b7d3b77999a79e44d1e7ddaababa828500131b953f29f9f81adda705e5"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part007",
+          "bytes": 8388608,
+          "sha256": "5555bfa06f629149ca088868f9c2e8b72d931af063d9ad9beea22b13719bc6ac"
+        },
+        {
+          "file": "report_02_parts/Data_Oriented_Modelling_02_Publication_v1.0_20260928.zip.part008",
+          "bytes": 7629538,
+          "sha256": "9b13c8dbadab5b27b26bc3c6d381739e69f5b524cc27adc3760905e745fb4c66"
+        }
+      ],
+      "download_guide": "REPORT_02_DOWNLOADS.md"
     },
     {
       "file": "Data_Oriented_Modelling_03_Evidence_v1.0_20260928.zip",

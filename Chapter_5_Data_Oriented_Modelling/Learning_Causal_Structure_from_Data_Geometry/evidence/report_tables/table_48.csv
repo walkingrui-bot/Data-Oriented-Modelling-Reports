@@ -1,0 +1,3 @@
+Route,Two-seed mean test NLL,Mean MSE,Effective count before/after evidence
+Pool3,−1.1443,0.04622,2.848 → 2.938
+Pool8,−1.3220,0.04520,7.436 → 7.444

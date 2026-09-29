@@ -1,0 +1,218 @@
+{
+  "checksum_files": [
+    {
+      "path": "00_MASTER_REPORT/Causal_Geometry_Report_v2.7_20260928.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG001-002_REPORT_EMBEDDED/Causal_Geometry_Report_v0.1_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG001-002_REPORT_EMBEDDED/README.md",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG003/Causal_Geometry_Report_v0.2_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG003/cg003_normal_grid.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG003/cg003_tangent_controls.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG003/run_cg003_math.py",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG004/Causal_Geometry_Report_v0.3_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG004/cg004_expert_transfer.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG004/cg004_fisher_tensors.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG004/cg004_main_grid.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG004/run_cg004.py",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG005/Causal_Geometry_Report_v0.4_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG005/cg005_local_fisher.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG005/cg005_main_grid_exact.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG005/cg005_metric_transfer_exact.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG005/cg005_mixed_interactions_exact.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG005/run_cg005_exact.py",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG006/Causal_Geometry_Report_v0.5_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG006/cg006_atlas_grid.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG006/cg006_bootstrap_stability.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG006/cg006_practical_benchmark.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG006/run_cg006_atlas.py",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG006/run_cg006_bootstrap.py",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG006/run_cg006_practical.py",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG007/Causal_Geometry_Report_v0.7_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG007/cg007_by_source.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG007/cg007_nested_calibration_control.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG007/cg007_source_transfer_summary.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG008/Causal_Geometry_Report_v0.8_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG008/cg008_bootstrap_stability.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG008/cg008_cross_dataset_summary.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG008/cg008_dual_consensus_operating_points.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG008/cg008_sachs_direct_edges.csv",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/CG008/image(20260927-121433).png",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/PRE_CG007_REAL_DATA_PILOT_v0.6/Causal_Geometry_Report_v0.6_20260927.docx",
+      "pass": true
+    },
+    {
+      "path": "01_EARLY_RECOVERED_ASSETS/PRE_CG007_REAL_DATA_PILOT_v0.6/README.md",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_009_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_010_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_011_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_012_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_013_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_014_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_015_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_016_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_017_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_018_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_019_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_020_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_021_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_022_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_023_Evidence.zip",
+      "pass": true
+    },
+    {
+      "path": "02_ORIGINAL_EVIDENCE_ZIPS_CG009-024/CAUSAL_GEOMETRY_024_Evidence.zip",
+      "pass": true
+    }
+  ],
+  "zip_crc_pass": 16,
+  "parsed_python_files": 54
+}

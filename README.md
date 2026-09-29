@@ -20,4 +20,6 @@ This is a self-directed personal-interest research project. It is maintained as 
 
 Chapter 5, **Data-Oriented Modelling**, is a series of independently versioned reports. Its first report, **Heterogeneous Data and General Data Intelligence**, connects generating mechanisms, observation processes and source-native structures with modelling and distributed coordination.
 
+Chapter 5, Report 02, **[Learning Causal Structure from Data Geometry](Chapter_5_Data_Oriented_Modelling/Learning_Causal_Structure_from_Data_Geometry/README.md)**, examines where causal information occurs in data geometry, how learning preserves or distorts it, and how retained structure is tested through transfer and interventions.
+
 Chapter 5, Report 03, **[Modelling Hypothesized Mechanisms Underlying Data](Chapter_5_Data_Oriented_Modelling/Modelling_Hypothesized_Mechanisms_Underlying_Data/README.md)**, connects data geometry, training coverage and valid state transformations with candidate operations tested through validation.

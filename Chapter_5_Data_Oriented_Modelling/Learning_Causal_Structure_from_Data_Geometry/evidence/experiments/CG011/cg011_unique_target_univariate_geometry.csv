@@ -1,0 +1,12 @@
+baseline_relation_feature,discrimination_auc,child_direction
+heteroscedastic_direction_gap,0.6666666667,higher_in_child
+forward_heteroscedasticity,0.6557017544,higher_in_child
+residual_skew,0.6425438596,lower_in_child
+nonlinearity_direction_gap,0.6381578947,higher_in_child
+cubic_MSE_direction_gap,0.6359649123,lower_in_child
+forward_nonlinearity_gain,0.6206140351,higher_in_child
+fibre_width_variation,0.6030701754,higher_in_child
+residual_kurtosis,0.576754386,higher_in_child
+input_absres_dependence,0.5657894737,higher_in_child
+fibre_direction_gap,0.5394736842,lower_in_child
+raw_correlation,0.5263157895,higher_in_child

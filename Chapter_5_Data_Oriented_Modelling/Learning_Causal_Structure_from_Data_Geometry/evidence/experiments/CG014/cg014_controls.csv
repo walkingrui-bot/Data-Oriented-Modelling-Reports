@@ -1,0 +1,3 @@
+control,observed_auc,baseline_auc,observed_delta_vs_baseline,permutation_p,permutations
+baseline_plus_response_vs_within_target_response_node_shuffle,0.8837719298,0.7214912281,0.1622807018,0.016983017,1000
+baseline_plus_response_vs_within_target_label_shuffle,0.8837719298,,,0.00999001,1000

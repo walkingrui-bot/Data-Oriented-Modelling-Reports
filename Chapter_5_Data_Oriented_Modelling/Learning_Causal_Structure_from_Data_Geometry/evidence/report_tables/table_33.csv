@@ -1,0 +1,5 @@
+Route,Intermediate object,Feedback and computation
+Direct,Final prediction,Direct encoder-to-output path; low-computation reference
+Blank,Zero vector,Four recurrent updates with zero feedback
+Continuous,16-dimensional continuous state,Tanh readout fed into the next update
+Structured,Numerical prediction candidates,Three consequence vectors and weights in synthetic tasks; hidden-variable predictions in real tasks

@@ -1,0 +1,6 @@
+Method,Weighted direction accuracy,Coverage,Interpretation
+Unified directional gaps,61.82%,100%,Fixed interpretation of all directional evidence
+Geometry-conditioned,84.90%,100%,Context-dependent interpretation of directional evidence
+"Selective, margin ≥ 0.10",98.88%,80.12%,Abstain on low-confidence pairs
+"Selective, margin ≥ 0.20",98.86%,78.78%,Stricter screening
+"Selective, margin ≥ 0.30",100.00%,45.92%,High-confidence pilot subset

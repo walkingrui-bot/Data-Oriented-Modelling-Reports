@@ -1,0 +1,15 @@
+metric,value
+G0076 AUC direct-child vs nonchild,0.88
+PMA AUC direct-child vs nonchild,0.88
+Score Spearman across 10 nodes,0.4909090909
+Score Kendall tau across 10 nodes,0.3333333333
+Raw total-response Spearman,-0.4787878788
+Top-1 overlap,1.0
+Top-3 overlap,0.6666666666666666
+Top-5 overlap,0.6
+G0076 child-minus-nonchild mean score gap,1.0464107068
+PMA child-minus-nonchild mean score gap,1.0731487531
+Exact p: both AUC >= observed,0.0079051383
+Exact p: both Top-3 sets entirely children,0.023809523809523808
+Node-alignment p: score Spearman,0.0719928007
+Node-alignment p: Top-3 overlap,0.1851814819

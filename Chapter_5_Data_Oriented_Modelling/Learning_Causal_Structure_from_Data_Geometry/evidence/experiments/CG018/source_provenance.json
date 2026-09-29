@@ -1,0 +1,27 @@
+{
+  "retrieved_utc": "2026-09-27",
+  "files": [
+    {
+      "local_name": "measurements.tsv",
+      "url": "https://raw.githubusercontent.com/saezlab/corneto/main/datasets/sachs/v1/measurements.tsv",
+      "sha256": "a40650c0fe6aa6581dca556202cd4e94fb0dfa1e6d121c710123bbc164509bcd",
+      "bytes": 1423354
+    },
+    {
+      "local_name": "condition_manifest.csv",
+      "url": "https://raw.githubusercontent.com/saezlab/corneto/main/datasets/sachs/v1/condition_manifest.csv",
+      "sha256": "9f3083b5a2b20b8b2d4cbfab1f00153765c400fd76c94c5392c81b004ebf6fcb",
+      "bytes": 348
+    },
+    {
+      "local_name": "SACHS_README.md",
+      "url": "https://raw.githubusercontent.com/saezlab/corneto/main/datasets/sachs/v1/README.md",
+      "sha256": "979d829cbc105873c38b00d99733d0563c190bbb44f873b4697f13d8acccd777",
+      "bytes": 2833
+    }
+  ],
+  "chapter3_repository": "https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports",
+  "chapter3_commit": "c4be597eea26c1f70e941b0357a513f56edef9c1",
+  "chapter3_report": "Chapter_3_Machine_Learning_Epidemiology/Research_Report/REPORT_EN.md",
+  "chapter3_report_sha256": "4b6bab35531c54ae72425619db8b8f2647b82c6b236cfa6a4edc9b99690a8ebe"
+}

@@ -1,0 +1,12 @@
+{
+  "models": 72,
+  "controls": 144,
+  "real_structured_vs_blank_relative_improvement": 0.0035107229782912475,
+  "real_continuous_vs_blank_relative_improvement": 0.002523356982296554,
+  "synthetic_structured_minus_blank_nll": -0.13417422771453857,
+  "synthetic_structured_wins": 3,
+  "real_structured_target_wins": 3,
+  "noop_max_shift": 0.0,
+  "real_structured_cut_mse": 1.6186165372530619,
+  "synth_structured_cut_nll": -0.803164005279541
+}

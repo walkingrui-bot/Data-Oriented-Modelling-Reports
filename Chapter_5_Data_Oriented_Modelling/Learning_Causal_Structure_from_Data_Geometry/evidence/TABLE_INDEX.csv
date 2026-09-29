@@ -1,0 +1,56 @@
+number,source_block,rows,columns,title,file
+1,61,6,4,Table 1. Overview. Experimental programme and common measurements,evidence/report_tables/table_01.csv
+2,75,9,4,Table 2. CG-001. Results,evidence/report_tables/table_02.csv
+3,91,7,2,Table 3. CG-002. Sign reversal of the same statistic,evidence/report_tables/table_03.csv
+4,100,7,2,Table 4. CG-002. Architecture comparisons,evidence/report_tables/table_04.csv
+5,121,6,3,Table 5. CG-003. Mechanism strength and sample size,evidence/report_tables/table_05.csv
+6,162,5,5,Table 6. CG-003. Matched KL tangent and normal controls,evidence/report_tables/table_06.csv
+7,195,6,5,Table 7. CG-004. Nuisance variation reshapes the normal metric,evidence/report_tables/table_07.csv
+8,248,5,5,Table 8. CG-005. Local normal Fisher geometry,evidence/report_tables/table_08.csv
+9,256,7,4,Table 9. CG-005. Fisher normalization and finite-radius departure,evidence/report_tables/table_09.csv
+10,270,6,3,Table 10. CG-005. Higher-order synergy and cancellation,evidence/report_tables/table_10.csv
+11,276,5,3,Table 11. CG-005. Transfer between tangent regimes,evidence/report_tables/table_11.csv
+12,334,5,3,Table 12. CG-006. CG-006 causal-atlas reconstruction error. All methods predict the same exact swap-direction JS divergence; they differ in the use of one origin or multiple local charts and in polynomial order.,evidence/report_tables/table_12.csv
+13,350,8,3,Table 13. CG-006. Initial geometry-triage dictionary. Feature patterns inform the chart/router; their directional meaning is interpreted by a local operator. No individual feature is equated with causality.,evidence/report_tables/table_13.csv
+14,352,13,5,Table 14. CG-006. A geometry-first causal triage prototype,evidence/report_tables/table_14.csv
+15,362,8,3,Table 15. CG-006. Bootstrap stability and abstention,evidence/report_tables/table_15.csv
+16,392,6,4,Table 16. External pilot. Results on real data,evidence/report_tables/table_16.csv
+17,410,4,4,Table 17. CG-007. Source-held-out performance,evidence/report_tables/table_17.csv
+18,416,13,2,Table 18. CG-007. Source heterogeneity,evidence/report_tables/table_18.csv
+19,422,6,3,Table 19. CG-007. Atlas-support gating,evidence/report_tables/table_19.csv
+20,447,6,4,Table 20. CG-008. Within-Sachs multi-environment change geometry,evidence/report_tables/table_20.csv
+21,460,6,5,Table 21. CG-008. Candidate screening across all 55 pairs,evidence/report_tables/table_21.csv
+22,493,5,6,Table 22. CG-009. CG-009 transmission discrimination by response component.,evidence/report_tables/table_22.csv
+23,515,3,5,Table 23. CG-010. Low-rank decomposition of the response tensor. SVD reports cumulative energy; NMF reports relative Frobenius reconstruction error.,evidence/report_tables/table_23.csv
+24,523,7,5,Table 24. CG-010. Leave-one-intervention-out classification. The graph is absent from input features; graph-derived labels supervise and evaluate the role readout.,evidence/report_tables/table_24.csv
+25,560,6,4,Table 25. CG-011. Relation-role learning under strict target holdout. The strongest input blocks differ for direct children and downstream membership.,evidence/report_tables/table_25.csv
+26,568,9,4,Table 26. CG-011. Deduplicated direct-child validation,evidence/report_tables/table_26.csv
+27,602,11,5,Table 27. CG-012. CG-012 cross-system transfer. Margin is the Sachs child-likeness score in the benchmark direction minus that in reverse. Bootstrap known-direction rate is the fraction of 20 resamples selecting the benchmark direction.,evidence/report_tables/table_27.csv
+28,632,8,3,Table 28. CG-013. Selective improvement with stable agreeing anchors,evidence/report_tables/table_28.csv
+29,642,5,6,Table 29. CG-013. Prespecified direction-free distance-block comparison. The marginal weighted result of 8/10 is exploratory because n = 10 and several blocks are compared. No block shows clear same-polarity clustering.,evidence/report_tables/table_29.csv
+30,667,7,2,Table 30. CG-014. One-intervention confirmation under target holdout. All candidates for the test target are withheld together.,evidence/report_tables/table_30.csv
+31,699,6,3,"Table 31. CG-015. Same-target, different-perturbation results. Raw responses differ, while child-class discrimination remains similar.",evidence/report_tables/table_31.csv
+32,781,6,5,Table 32. CG-016. Fixed and adaptive computation under LOTO. The adaptive policy retains much of the response gain while reducing pair-level operator calls.,evidence/report_tables/table_32.csv
+33,820,5,3,Table 33. CG-017. Four routes and shared training conditions,evidence/report_tables/table_33.csv
+34,831,5,4,Table 34. CG-017. Numerical candidates improve synthetic consequence distributions,evidence/report_tables/table_34.csv
+35,841,7,5,Table 35. CG-017. Variable completion in unseen real perturbation environments,evidence/report_tables/table_35.csv
+36,850,5,4,"Table 36. CG-017. Cutting, transplanting and editing intermediate objects",evidence/report_tables/table_36.csv
+37,885,3,3,Table 37. CG-018. Mechanism routes and training,evidence/report_tables/table_37.csv
+38,891,7,4,Table 38. CG-018. Synthetic consequence distributions,evidence/report_tables/table_38.csv
+39,900,7,2,Table 39. CG-018. Reusing a candidate across three intervention queries,evidence/report_tables/table_39.csv
+40,914,5,3,Table 40. CG-018. Feedback of relations and simulated consequences,evidence/report_tables/table_40.csv
+41,929,6,4,Table 41. CG-018. Local equations and real environment differences,evidence/report_tables/table_41.csv
+42,950,3,5,Table 42. CG-019. Double-do: solving relations versus combining answers,evidence/report_tables/table_42.csv
+43,956,3,6,Table 43. CG-019. Requested versus incorrect edge coordinates,evidence/report_tables/table_43.csv
+44,981,5,4,Table 44. CG-020. Attention controls for depth and persistent objects,evidence/report_tables/table_44.csv
+45,984,5,4,Table 45. CG-020. Matched-parameter comparison,evidence/report_tables/table_45.csv
+46,994,5,4,"Table 46. CG-020. Erasure, transplantation and editing",evidence/report_tables/table_46.csv
+47,1027,3,5,Table 47. CG-021. Candidate capacity without discrete selection,evidence/report_tables/table_47.csv
+48,1029,3,4,Table 48. CG-021. Use of the wider candidate pool,evidence/report_tables/table_48.csv
+49,1078,8,4,Table 49. CG-022. Training and held-out operation banks,evidence/report_tables/table_49.csv
+50,1083,5,4,Table 50. CG-022. Three objective variants,evidence/report_tables/table_50.csv
+51,1090,5,5,Table 51. CG-022. Generalisation to untrained operations,evidence/report_tables/table_51.csv
+52,1127,7,3,Table 52. CG-023. Frozen rollout to 128 steps,evidence/report_tables/table_52.csv
+53,1177,5,4,Table 53. CG-024. Negative differences mean lower error under correct execution. Intervals are paired-bootstrap 95% CIs across 100 independent test worlds.,evidence/report_tables/table_53.csv
+54,1189,4,5,Table 54. CG-024. Passive capability retention. CG-024 final and CG-023 checkpoints are compared on the same frozen test panel.,evidence/report_tables/table_54.csv
+55,1246,9,2,Table 55. Terminology. Appendix A Terminology,evidence/report_tables/table_55.csv

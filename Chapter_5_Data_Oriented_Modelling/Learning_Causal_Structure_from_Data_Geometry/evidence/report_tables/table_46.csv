@@ -1,0 +1,5 @@
+Condition,seed 11 NLL,seed 22 NLL,Change from own baseline
+Baseline,−1.0894,−1.1591,—
+Erase at step 2,−1.0603,−1.1572,+0.0292 / +0.0019
+Transplant at step 2,−1.0116,−1.1430,+0.0779 / +0.0161
+"Flip one edge, then continue",−1.0650,−1.1532,+0.0244 / +0.0058

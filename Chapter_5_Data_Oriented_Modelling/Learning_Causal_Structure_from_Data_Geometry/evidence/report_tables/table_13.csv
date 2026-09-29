@@ -1,0 +1,8 @@
+Observed geometry,Initial interpretation,Candidate operator or action
+Residual mean dependence,Greater conditional-mean residual independence in one direction,ANM / nonlinear mean
+Residual width / |residual| dependence,Input-dependent conditional-noise width,heteroscedastic mechanisms
+Residual skew / kurtosis,Independent residuals and higher-order marginal shape,non-Gaussian / LiNGAM-like
+Nonlinear gain,Linear-model inadequacy and conditional-mean curvature,nonlinear / post-nonlinear
+Cross-environment coefficient stability,Stability of P(Y|X) across batches,environment / change geometry
+Cross-environment residual variance,Stability of mechanism noise across environments,environment / change geometry
+Symmetric reversibility profile,Both directions compatible with a reversible chart,abstain / request more structure

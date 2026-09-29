@@ -1,0 +1,3 @@
+test,observed_auc,permutation_p,permutations
+raw_components_binary_loio,0.6710526316,0.0244877561,2000
+components_rank_binary_loio,0.6710526316,0.0615640599,600

@@ -1,0 +1,16 @@
+feature_set,top_k,mean_precision_across_positive_targets,mean_recall_across_positive_targets
+baseline_relation,1,0.6666666667,0.1222222222
+baseline_relation,2,0.8333333333,0.5777777778
+baseline_relation,3,0.7777777778,0.7
+one_intervention_response,1,0.6666666667,0.1222222222
+one_intervention_response,2,0.6666666667,0.2444444444
+one_intervention_response,3,0.6666666667,0.6333333333
+relation_change,1,0.6666666667,0.1222222222
+relation_change,2,0.5,0.1888888889
+relation_change,3,0.5555555556,0.5777777778
+baseline_plus_response,1,1.0,0.4555555556
+baseline_plus_response,2,0.8333333333,0.5777777778
+baseline_plus_response,3,0.7777777778,0.7
+baseline_plus_change,1,1.0,0.4555555556
+baseline_plus_change,2,0.8333333333,0.5777777778
+baseline_plus_change,3,0.7777777778,0.7

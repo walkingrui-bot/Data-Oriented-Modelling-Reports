@@ -1,0 +1,5 @@
+Geometry block,Stable hard coverage,Stable hard accuracy,Stable weighted accuracy,Same-pol. dist.,Opp.-pol. dist.
+Full,50%,80%,50%,2.101,2.069
+Marginal,40%,75%,80%,2.176,2.127
+Edge texture,80%,50%,40%,1.769,1.683
+Residual shape,70%,42.9%,30%,2.036,2.099

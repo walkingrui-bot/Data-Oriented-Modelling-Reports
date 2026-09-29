@@ -1,0 +1,50 @@
+{
+  "checkpoints": [
+    {
+      "seed": 11,
+      "state_replay_max_abs": 0.0,
+      "max_row_abs_sum": 0.9055311679840088,
+      "max_diagonal_abs": 0.3733367621898651,
+      "selected_step": 450
+    },
+    {
+      "seed": 22,
+      "state_replay_max_abs": 0.0,
+      "max_row_abs_sum": 0.9384565353393555,
+      "max_diagonal_abs": 0.44238710403442383,
+      "selected_step": 400
+    }
+  ],
+  "primary_acceptance": [
+    {
+      "operation": "impulse",
+      "comparison": "correct_minus_ignore",
+      "mean": -0.0012010297710075,
+      "ci95_high": -0.0002535472608797,
+      "primary_pass": true
+    },
+    {
+      "operation": "clamp",
+      "comparison": "correct_minus_ignore",
+      "mean": -0.0011555473338812,
+      "ci95_high": -0.0004089631796057,
+      "primary_pass": true
+    },
+    {
+      "operation": "persistent_force",
+      "comparison": "correct_minus_ignore",
+      "mean": -0.1952545446941803,
+      "ci95_high": -0.1742103545288636,
+      "primary_pass": true
+    },
+    {
+      "operation": "compound_force_plus_impulse",
+      "comparison": "correct_minus_omit_second",
+      "mean": -0.0018530099346389,
+      "ci95_high": -0.0006697771730232,
+      "primary_pass": true
+    }
+  ],
+  "all_primary_pass": true,
+  "n_eval_rows": 13600
+}

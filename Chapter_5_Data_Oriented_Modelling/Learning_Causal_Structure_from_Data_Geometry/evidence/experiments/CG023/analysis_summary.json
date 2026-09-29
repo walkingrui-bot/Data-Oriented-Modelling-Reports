@@ -1,0 +1,11 @@
+{
+  "base_eval_rows": 19200,
+  "test_worlds": 100,
+  "seeds": [
+    11,
+    22
+  ],
+  "world_update20_mean_M_step_rms": 2.1721780818495517e-08,
+  "mixed_h32_world_mse": 0.03304942325165025,
+  "mixed_h32_direct_mse": 0.033705800059833514
+}

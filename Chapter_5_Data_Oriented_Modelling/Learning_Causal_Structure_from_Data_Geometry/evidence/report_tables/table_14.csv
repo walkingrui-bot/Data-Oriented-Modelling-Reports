@@ -1,0 +1,13 @@
+Test set,Method,Direction accuracy,Coverage,REV abstain
+validation,unified_linear,80.4%,,
+validation,unified_nonlinear,89.1%,,
+validation,soft_geometry_atlas,89.9%,,
+validation,atlas_selective_p80,97.7%,63.0%,95.5%
+external_pure,unified_linear,83.1%,,
+external_pure,unified_nonlinear,92.4%,,
+external_pure,soft_geometry_atlas,94.7%,,
+external_pure,atlas_selective_p80,98.8%,75.1%,100.0%
+external_mixed,unified_linear,98.9%,,
+external_mixed,unified_nonlinear,100.0%,,
+external_mixed,soft_geometry_atlas,100.0%,,
+external_mixed,atlas_selective_p80,100.0%,97.8%,

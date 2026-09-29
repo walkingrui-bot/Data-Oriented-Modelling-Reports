@@ -1,0 +1,5 @@
+Route,Parameters,Attention organisation,Explicit updates
+OnePass-1,"9,286",One block,1
+OnePass-3,"26,374",Three untied blocks,1
+Tied6,"9,286",One block repeated six times within one generation,1
+World4-3,"26,374",Three untied blocks as shared transition core,4

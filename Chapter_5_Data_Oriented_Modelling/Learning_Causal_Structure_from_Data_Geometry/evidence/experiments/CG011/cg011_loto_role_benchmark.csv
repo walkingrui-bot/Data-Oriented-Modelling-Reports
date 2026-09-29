@@ -1,0 +1,6 @@
+feature_set,LOTO_descendant_auc,LOTO_direct_child_auc
+node_only,0.6112440191,0.6415868673
+baseline_relation,0.6423444976,0.7688098495
+relational_change,0.7129186603,0.6648426813
+node_plus_change,0.7224880383,0.7140902873
+all_relational,0.7188995215,0.5827633379

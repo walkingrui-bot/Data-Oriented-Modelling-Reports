@@ -1,0 +1,43 @@
+{
+  "experiment": "CAUSAL-GEOMETRY-020",
+  "title": "Explicit Object-State Iteration",
+  "main_comparison": {
+    "onepass3_mean_nll": -1.010621,
+    "world4_3_mean_nll": -1.124247,
+    "mean_nll_improvement": 0.113626,
+    "bootstrap_95": [0.051668, 0.179500],
+    "onepass3_mean_mse": 0.048899,
+    "world4_3_mean_mse": 0.045226,
+    "mse_relative_reduction": 0.0751,
+    "mse_group_fraction_improved": 0.74
+  },
+  "state_sufficiency": {
+    "serialized_state": "B plus candidate logits only",
+    "replay_max_abs_error_seed11": 0.0,
+    "replay_max_abs_error_seed22": 0.0
+  },
+  "object_interventions": {
+    "erase_step2_delta_nll": [0.029163, 0.001909],
+    "transplant_step2_delta_nll": [0.077867, 0.016079],
+    "flip_step2_then_continue_delta_nll": [0.024444, 0.005826],
+    "flip_prediction_rms_stage2": [0.115827, 0.095658],
+    "flip_prediction_rms_stage3": [0.029673, 0.011054],
+    "flip_prediction_rms_stage4": [0.011911, 0.002519]
+  },
+  "cross_question": {
+    "onepass3_mean_double_do_nll": -1.060670,
+    "world4_3_mean_double_do_nll": -1.065542,
+    "onepass3_mean_edge_delete_nll": -1.694469,
+    "world4_3_mean_edge_delete_nll": -1.852443,
+    "world4_3_edge_delta_corr": 0.961288,
+    "world4_3_edge_delta_sign_accuracy": 0.9975
+  },
+  "rollout": {
+    "trained_horizon": 4,
+    "evaluated_horizon": 20,
+    "mean_B_step_rms_step2": 0.060159,
+    "mean_B_step_rms_step20": 0.003359,
+    "seed22_step20_B_step_rms": 7.77e-08,
+    "description": "one seed converged nearly to a fixed point; the other retained a damped small two-step oscillation"
+  }
+}

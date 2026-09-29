@@ -1,0 +1,13 @@
+{
+  "pages": 130,
+  "page_images_reviewed": 130,
+  "figures": 89,
+  "source_tables": 55,
+  "additional_abbreviation_tables": 1,
+  "native_display_equations": 52,
+  "headers_and_footers": false,
+  "layout": "Plain English report; consecutive figure/table numbering; repeated table headings; original figures retained or numerically redrawn.",
+  "visual_check": "All pages were visually inspected across the render-and-revision cycle; affected pages were rechecked.",
+  "automated_text_bounds_pass": true,
+  "docx_sha256": "3f9456cd47538d2a8c58e21f0c692427e2aeb7e6d41ac8942cedbbe4fd34f542"
+}

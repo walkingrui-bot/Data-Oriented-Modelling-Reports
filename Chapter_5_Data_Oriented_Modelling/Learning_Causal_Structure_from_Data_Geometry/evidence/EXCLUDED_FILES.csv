@@ -1,0 +1,164 @@
+source,reason
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG001-002_REPORT_EMBEDDED/Causal_Geometry_Report_v0.1_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG001-002_REPORT_EMBEDDED/README.md,Replaced by release navigation or release checksum manifest.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG008/Causal_Geometry_Report_v0.8_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG003/Causal_Geometry_Report_v0.2_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG004/Causal_Geometry_Report_v0.3_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG006/Causal_Geometry_Report_v0.5_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG005/Causal_Geometry_Report_v0.4_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/CG007/Causal_Geometry_Report_v0.7_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/PRE_CG007_REAL_DATA_PILOT_v0.6/README.md,Replaced by release navigation or release checksum manifest.
+original_assets/CAUSAL_GEOMETRY_001-024_COMPLETE_EXPERIMENT_ASSETS_20260928/01_EARLY_RECOVERED_ASSETS/PRE_CG007_REAL_DATA_PILOT_v0.6/Causal_Geometry_Report_v0.6_20260927.docx,Draft report or original archive; scientific content is represented in the English report and extracted evidence.
+expanded_evidence/CAUSAL_GEOMETRY_012_Evidence/update_report_v12.py,Report assembly material.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/README.md,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/update_report.py,Report assembly material.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/packaging_notes.json,Report assembly material.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/MANIFEST_SHA256.json,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_continuous_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_continuous_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_continuous_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_continuous_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_direct_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_structured_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_continuous_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_direct_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_structured_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_direct_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_direct_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_continuous_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_continuous_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_continuous_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_continuous_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_structured_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_structured_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_direct_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_continuous_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_direct_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_direct_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_continuous_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_continuous_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_structured_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_structured_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_continuous_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_structured_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_structured_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_continuous_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_structured_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_structured_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_structured_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_continuous_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_structured_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_continuous_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_continuous_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_structured_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_structured_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_structured_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_structured_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_continuous_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_continuous_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_continuous_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_structured_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_structured_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_direct_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_direct_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_structured_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_structured_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_continuous_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_continuous_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_structured_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_continuous_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_structured_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_continuous_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_direct_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_structured_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_direct_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_continuous_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_structured_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_continuous_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_structured_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_continuous_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_structured_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_structured_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pip2_direct_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_akt_continuous_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_structured_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_direct_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pkc_continuous_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_continuous_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_structured_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_mek_direct_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_structured_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_017_Evidence/CAUSAL_GEOMETRY_017/predictions/real_pka_direct_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/README.md,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/MANIFEST.sha256,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_feedback_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_feedback_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_feedback_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_feedback_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_feedback_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_feedback_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_feedback_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_feedback_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_feedback_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_feedback_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_feedback_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_feedback_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_feedback_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_feedback_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_feedback_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_feedback_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_feedback_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_feedback_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_blank_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_feedback_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_feedback_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_feedback_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_feedback_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_feedback_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pkc_mechanism_feedback_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_feedback_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_akt_mechanism_feedback_22_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_feedback_33_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_blank_33.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_feedback_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_mek_mechanism_feedback_11_trace.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pip2_mechanism_feedback_11.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_018_Evidence/CAUSAL_GEOMETRY_018/predictions/real_pka_mechanism_blank_22.npz,Per-cell completion or trace arrays may include observed external measurements; not released.
+expanded_evidence/CAUSAL_GEOMETRY_019_Evidence/CAUSAL_GEOMETRY_019/README.md,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_019_Evidence/CAUSAL_GEOMETRY_019/MANIFEST.sha256,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_020_Evidence/CAUSAL_GEOMETRY_020_Evidence/README.md,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_020_Evidence/CAUSAL_GEOMETRY_020_Evidence/MANIFEST.sha256,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_021_Evidence/CAUSAL_GEOMETRY_021/README.md,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_021_Evidence/CAUSAL_GEOMETRY_021/MANIFEST.sha256,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_022_Evidence/CAUSAL_GEOMETRY_022_Evidence/README.md,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_022_Evidence/CAUSAL_GEOMETRY_022_Evidence/MANIFEST.sha256,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_023_Evidence/CAUSAL_GEOMETRY_023/README.md,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_023_Evidence/CAUSAL_GEOMETRY_023/artifact_manifest.json,Replaced by release navigation or release checksum manifest.
+expanded_evidence/CAUSAL_GEOMETRY_024_Evidence/CAUSAL_GEOMETRY_024/README.md,Replaced by release navigation or release checksum manifest.

@@ -1,0 +1,6 @@
+Consensus threshold,Selected pairs,Direct precision,Orientation accuracy of selected direct edges,Direct recall
+≥ 0.02,17,35.3%,100%,35.3%
+≥ 0.05,15,40.0%,100%,35.3%
+≥ 0.10,10,40.0%,100%,23.5%
+≥ 0.15,8,50.0%,100%,23.5%
+≥ 0.20,6,66.7%,100%,23.5%

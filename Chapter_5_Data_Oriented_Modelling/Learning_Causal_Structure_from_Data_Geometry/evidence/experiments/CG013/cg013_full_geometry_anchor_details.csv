@@ -1,0 +1,11 @@
+test_pair,nearest_stable_anchor,anchor1_polarity,second_stable_anchor,anchor2_polarity,two_anchor_decision,outcome
+0001,0025,+,0047,+,keep,correct
+0005,0019,-,0086,+,abstain,-
+0013,0019,-,0047,+,abstain,-
+0019,0025,+,0005,+,keep,wrong
+0025,0047,+,0019,-,abstain,-
+0033,0047,+,0025,+,keep,correct
+0047,0025,+,0033,+,keep,correct
+0064,0047,+,0013,-,abstain,-
+0086,0005,+,0033,+,keep,correct
+0093,0001,+,0013,-,abstain,-

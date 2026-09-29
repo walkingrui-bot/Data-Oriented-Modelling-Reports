@@ -1,0 +1,25 @@
+check,recomputed,reported_rounded,tolerance,pass
+CG017 synthetic blank NLL,-1.0740321079889934,-1.074,6e-05,True
+CG017 synthetic structured NLL,-1.208206335703532,-1.2082,6e-05,True
+CG017 real equal-target blank MSE,1.6370793739954632,1.6371,6e-05,True
+CG017 real equal-target structured MSE,1.6313320418198907,1.6313,6e-05,True
+CG018 synthetic mechanism_blank NLL,-1.7701247533162434,-1.7701,6e-05,True
+CG018 synthetic mechanism_feedback NLL,-1.755667249361674,-1.7557,6e-05,True
+CG018 real equal-target mechanism_blank MSE,1.6527816116809846,1.6528,6e-05,True
+CG018 real equal-target mechanism_feedback MSE,1.6605482618014018,1.6605,6e-05,True
+CG019 mechanism_blank double-do NLL gain,0.35661066816665277,0.3566,6e-05,True
+CG019 mechanism_feedback double-do NLL gain,0.24624057010120337,0.2462,6e-05,True
+CG020 onepass3 NLL,-1.0106212894413837,-1.0106,6e-05,True
+CG020 world4_3 NLL,-1.1242470813496122,-1.1242,6e-05,True
+CG021 Pool3 NLL,-1.144331932067871,-1.1443,6e-05,True
+CG021 Pool8 NLL,-1.3220007419586182,-1.322,6e-05,True
+CG021 Top3 pruning penalty,1.256383714243087,1.256,0.0006,True
+CG022 heldout bank NLL gain,0.22643636254738603,0.2264,6e-05,True
+CG024 impulse correct minus ignore,-0.0012010297710075995,-0.0012,6e-06,True
+CG024 clamp correct minus ignore,-0.0011555473338812606,-0.00116,6e-06,True
+CG024 persistent_force correct minus ignore,-0.19525454469418035,-0.19525,6e-06,True
+CG024 compound_force_plus_impulse correct minus omit_second,-0.0018530099346389772,-0.00185,6e-06,True
+CG024 operation rows,13600.0,13600,0,True
+CG024 passive h32 MSE difference,-0.01914054477616446,-0.01914,6e-06,True
+CG024 passive h64 MSE difference,-0.018011675447633026,-0.01801,6e-06,True
+CG024 passive h128 MSE difference,-0.017930553243204486,-0.01793,6e-06,True

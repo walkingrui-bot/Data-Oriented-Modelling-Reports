@@ -1,0 +1,5 @@
+Variant,Original query NLL,Training bank NLL,Held-out bank NLL
+CG-021 Pool8,−1.3220,−1.4652,−1.1480
+Broad operator training,−1.2195,−1.5801,−1.2426
+Balanced,−1.3765,−1.6428,−1.3705
+Evidence-coupled,−1.3712,−1.6557,−1.3744

@@ -1,0 +1,210 @@
+[
+  {
+    "source_block": 50,
+    "latex": "P(X,Y)=P(X)P(Y\\mid X)=P(Y)P(X\\mid Y)"
+  },
+  {
+    "source_block": 52,
+    "latex": "X=N_x,\\qquad Y=f(X)+N_y,\\qquad N_x\\perp N_y"
+  },
+  {
+    "source_block": 68,
+    "latex": "Y=0.9X+\\frac{\\beta}{3}X^3+\\varepsilon"
+  },
+  {
+    "source_block": 72,
+    "latex": "G=(I_{\\mathrm{res}},\\mathrm{CV}_{\\mathrm{fibre}},D_{\\mathrm{res,env}},D_{\\mathrm{mech,env}})"
+  },
+  {
+    "source_block": 89,
+    "latex": "\\Delta I=I(X;\\varepsilon_{X\\to Y})-I(Y;\\varepsilon_{Y\\to X})"
+  },
+  {
+    "source_block": 106,
+    "latex": "P(X\\to Y\\mid G)=\\sum_m P(M_m\\mid G)P(X\\to Y\\mid M_m,G)"
+  },
+  {
+    "source_block": 112,
+    "latex": "X\\sim\\mathcal N(0,1)"
+  },
+  {
+    "source_block": 113,
+    "latex": "Y=X+\\sigma\\exp(\\alpha\\tanh X)\\varepsilon,\\qquad\\varepsilon\\sim\\mathcal N(0,1)"
+  },
+  {
+    "source_block": 115,
+    "latex": "\\operatorname{Var}(Y\\mid X=x)=\\sigma^2\\exp(2\\alpha\\tanh x)"
+  },
+  {
+    "source_block": 128,
+    "latex": "\\mathrm{SNR}=\\frac{\\mathbb E[S]}{\\mathrm{SD}(S)}"
+  },
+  {
+    "source_block": 130,
+    "latex": "P(\\mathrm{correct})\\approx\\Phi(\\mathrm{SNR})"
+  },
+  {
+    "source_block": 132,
+    "latex": "\\mathrm{SNR}\\approx\\kappa(\\sigma)\\alpha\\sqrt n,\\qquad R^2\\approx0.987\\text{\u2013}0.994"
+  },
+  {
+    "source_block": 142,
+    "latex": "X\\sim\\mathcal N(0,1),\\quad Y=aX+\\sigma\\varepsilon,\\quad\\varepsilon\\sim\\mathcal N(0,1),\\quad\\varepsilon\\perp X"
+  },
+  {
+    "source_block": 145,
+    "latex": "Y=aX+\\sigma\\exp[\\alpha h(X)]\\varepsilon,\\qquad h(X)=\\tanh X"
+  },
+  {
+    "source_block": 147,
+    "latex": "D(P_\\alpha,\\mathcal R_G)=D_{\\mathrm{KL}}(P_\\alpha\\Vert Q^*)=\\tfrac12\\log\\mathbb E\\{\\exp[2\\alpha h(X)]\\}"
+  },
+  {
+    "source_block": 149,
+    "latex": "D(P_\\alpha,\\mathcal R_G)=\\alpha^2\\operatorname{Var}[h(X)]+O(\\alpha^4)"
+  },
+  {
+    "source_block": 155,
+    "latex": "Y=(a+\\delta)X+\\sigma\\varepsilon"
+  },
+  {
+    "source_block": 157,
+    "latex": "D_{\\mathrm{KL}}(P_\\delta\\Vert P_0)=\\frac{\\delta^2}{2\\sigma^2}"
+  },
+  {
+    "source_block": 159,
+    "latex": "D_{\\mathrm{KL}}(P_\\alpha\\Vert P_0)=\\tfrac12\\{\\mathbb E[\\exp(2\\alpha h(X))]-1\\}"
+  },
+  {
+    "source_block": 168,
+    "latex": "\\mathrm{SNR}(S)\\approx0.812\\sqrt{nD(P_\\alpha,\\mathcal R_G)},\\qquad R^2=0.9938"
+  },
+  {
+    "source_block": 179,
+    "latex": "\\mathcal R_{\\leftrightarrow}=\\{P:\\mathcal S_{\\#}P=P\\}"
+  },
+  {
+    "source_block": 182,
+    "latex": "\\mathbb E_0[s(X,Y)q(X,Y)]=0"
+  },
+  {
+    "source_block": 187,
+    "latex": "p_\\eta(z)\\propto p_0(z)\\exp\\{\\eta^T s(z)\\}"
+  },
+  {
+    "source_block": 189,
+    "latex": "p_{d,\\theta,u,\\eta}(z)\\propto p_\\eta(z)\\exp\\{d\\theta u^Tq(z)\\},\\qquad d\\in\\{+1,-1\\}"
+  },
+  {
+    "source_block": 193,
+    "latex": "G_N(\\eta)=\\mathbb E_{p_\\eta}[qq^T]"
+  },
+  {
+    "source_block": 201,
+    "latex": "M(z)=\\tfrac12[p_+(z)+p_-(z)]"
+  },
+  {
+    "source_block": 203,
+    "latex": "D_R=D_{\\mathrm{KL}}(P_+\\Vert M)=\\mathbb E_{P_+}[\\log2-\\log(1+\\exp(-2\\theta\\psi_u))]"
+  },
+  {
+    "source_block": 205,
+    "latex": "D_R=\\tfrac12\\theta^2u^TG_N(\\eta)u+O(\\theta^4)"
+  },
+  {
+    "source_block": 207,
+    "latex": "P(\\mathrm{correct})\\approx\\Phi\\!\\left(\\theta\\sqrt{nu^TG_Nu}\\right)\\approx\\Phi\\!\\left(\\sqrt{2nD_R}\\right)"
+  },
+  {
+    "source_block": 222,
+    "latex": "\\Lambda_C(\\beta;\\eta)\\approx\\frac n2\\beta^TG_N(\\eta)\\beta"
+  },
+  {
+    "source_block": 233,
+    "latex": "X=\\beta_E E+U,\\qquad U\\sim\\mathcal N(0,1)"
+  },
+  {
+    "source_block": 234,
+    "latex": "Y=\\rho X+\\beta_M\\tanh(X^2-1)+\\sqrt{1-\\rho^2}\\exp\\{\\beta_H\\tanh X\\}\\varepsilon_{\\beta_S}"
+  },
+  {
+    "source_block": 236,
+    "latex": "p_{\\beta_S}(\\varepsilon)\\propto\\phi(\\varepsilon)\\exp\\{\\beta_S\\tanh(\\varepsilon^2-1)\\}"
+  },
+  {
+    "source_block": 239,
+    "latex": "\\ell_\\beta(z)=\\log p_\\beta(E,X,Y)-\\log p_\\beta(E,Y,X)"
+  },
+  {
+    "source_block": 242,
+    "latex": "a_M=f_M(X)Z_f/s_0-f_M(Y)Z_r/s_0"
+  },
+  {
+    "source_block": 243,
+    "latex": "a_H=f_H(X)(Z_f^2-1)-f_H(Y)(Z_r^2-1)"
+  },
+  {
+    "source_block": 244,
+    "latex": "a_S=q(Z_f)-q(Z_r),\\qquad a_E=E(X-Y)"
+  },
+  {
+    "source_block": 246,
+    "latex": "G(\\rho)=\\mathbb E_0[aa^T]"
+  },
+  {
+    "source_block": 252,
+    "latex": "\\beta(r,d,\\rho)=\\frac{rd}{\\sqrt{d^TG(\\rho)d}}"
+  },
+  {
+    "source_block": 254,
+    "latex": "D_{\\mathrm{JS}}(P_\\beta,\\mathcal S_{\\#}P_\\beta)=r^2/8+\\text{higher-order terms}"
+  },
+  {
+    "source_block": 262,
+    "latex": "\\operatorname{mean}|D_{\\mathrm{JS}}-D_{\\mathrm{JS}}^{(2)}|\\approx0.0245r^{3.18}"
+  },
+  {
+    "source_block": 268,
+    "latex": "I_{\\mathrm{HO}}=\\left[D_{\\mathrm{mix}}-\\sum_j D_j\\right]-\\left[D_{\\mathrm{mix}}^{(2)}-\\sum_jD_j^{(2)}\\right]"
+  },
+  {
+    "source_block": 282,
+    "latex": "C(P,\\mathcal S_{\\#}P)=-\\log\\int\\sqrt{p(z)p(\\mathcal Sz)}\\,dz=-\\log\\mathbb E_P\\exp(-\\ell/2)"
+  },
+  {
+    "source_block": 294,
+    "latex": "P_\\alpha=P_0+\\alpha v+\\cdots"
+  },
+  {
+    "source_block": 301,
+    "latex": "D_{\\mathrm{KL}}(P_\\alpha\\Vert P_0)\\approx\\tfrac12\\alpha^2\\mathcal I"
+  },
+  {
+    "source_block": 303,
+    "latex": "D_n\\approx\\tfrac n2\\alpha^2\\mathcal I"
+  },
+  {
+    "source_block": 305,
+    "latex": "\\alpha_c\\sim\\frac1{\\sqrt{n\\mathcal I}}"
+  },
+  {
+    "source_block": 309,
+    "latex": "\\Lambda_C=nD(P,\\mathcal R),\\qquad D(P,\\mathcal R)=\\inf_{Q\\in\\mathcal R}D(P,Q)"
+  },
+  {
+    "source_block": 313,
+    "latex": "D\\to G(D)\\to P(M\\mid G)\\to\\{\\mathcal C_1,\\mathcal C_2,\\ldots\\}\\to P(\\mathrm{causal\\ structure})"
+  },
+  {
+    "source_block": 322,
+    "latex": "D(P,\\mathcal R)\\approx\\tfrac12\\langle v_\\perp,v_\\perp\\rangle_F,\\qquad\\Lambda_C\\approx\\tfrac n2\\langle v_\\perp,v_\\perp\\rangle_F"
+  },
+  {
+    "source_block": 818,
+    "latex": "z_t=G_\\theta(h_t,D),\\qquad h_{t+1}=\\mathrm{GRU}_\\theta([E(D),z_t],h_t)"
+  },
+  {
+    "source_block": 881,
+    "latex": "B_t,b_t,w_t=G_\\theta(h_t),\\qquad s_t=S(B_t,b_t,D)"
+  }
+]

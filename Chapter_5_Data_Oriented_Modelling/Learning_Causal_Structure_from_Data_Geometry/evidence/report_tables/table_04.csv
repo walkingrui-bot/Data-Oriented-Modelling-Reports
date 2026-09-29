@@ -1,0 +1,7 @@
+Architecture,Direction accuracy
+Single MI rule,51.2 ± 0.8%
+Unified linear（4 geometry）,62.6 ± 2.7%
+Unified nonlinear（4 geometry）,85.8 ± 2.1%
+Hard geometry-router + experts,96.6 ± 1.4%
+Soft mixture of experts,97.5 ± 1.0%
+Oracle mechanism + experts,99.45 ± 0.39%

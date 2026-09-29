@@ -1,0 +1,8 @@
+Stage,Operation type,Count,Used in training
+Training,single-do：±1,6,Yes
+Training,Double-do with three value patterns,9,Yes
+Training,edge delete + source do,6,Yes
+Frozen test,single-do：±0.5 / ±1.5,12,No
+Frozen test,held-out double-do values,6,No
+Frozen test,edge half + source do,6,No
+Frozen test,edge sign-flip + source do,6,No

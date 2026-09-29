@@ -1,0 +1,6 @@
+feature_set,LOIO_child_vs_far_auc,LOTO_child_vs_far_auc
+node_only,0.4,0.5058823529
+baseline_relation,0.8,0.3058823529
+relational_change,0.8235294118,0.6470588235
+node_plus_change,0.8,0.6823529412
+all_relational,0.8235294118,0.7176470588

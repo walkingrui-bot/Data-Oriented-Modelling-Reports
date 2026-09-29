@@ -1,0 +1,5 @@
+Route,Two-seed mean NLL,Mean MSE,No-support consequence coverage
+OnePass-1,−0.9427,0.04741,90.17%
+OnePass-3,−1.0106,0.04890,91.17%
+Tied6,−0.8149,0.04831,86.67%
+World4-3,−1.1242,0.04523,92.67%

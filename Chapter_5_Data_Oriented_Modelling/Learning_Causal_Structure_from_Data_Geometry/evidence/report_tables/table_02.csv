@@ -1,0 +1,9 @@
+Information introduced,Strength,Most informative directional feature,Direction accuracy
+Non-Gaussianity,p = 1.0,Residual MI,91.7%
+Non-Gaussianity,p = 1.0,Fibre geometry,95.8%
+Nonlinearity,β = 0.30,Residual MI,95.8%
+Nonlinearity,β = 0.30,Fibre geometry,95.8%
+Nonlinearity,β = 0.60,Residual + fibre,100%
+Environment shift,γ = 0.25,Residual shift,100%
+Environment shift,γ = 0.25,Mechanism stability,91.7%
+Environment shift,γ ≥ 0.50,Two forms of change geometry,100%

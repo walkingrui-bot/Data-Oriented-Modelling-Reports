@@ -1,0 +1,46 @@
+{
+  "new_fits": 36,
+  "internal_interventions": 72,
+  "joint_coverage": {
+    "mechanism_blank": 0.6666666666666666,
+    "mechanism_feedback": 0.55
+  },
+  "relation_rmse": {
+    "mechanism_blank": 0.17038192234406438,
+    "mechanism_feedback": 0.19547026464465134
+  },
+  "all_query_nll": {
+    "blank": -0.5842635894918607,
+    "continuous": -0.44571097360716927,
+    "direct": -0.31845708346615237,
+    "mechanism_blank": -1.6298012998369005,
+    "mechanism_feedback": -1.5457184977001615,
+    "structured": -0.608190173904101
+  },
+  "new_synthetic_nll": {
+    "blank": -1.0740321079889934,
+    "continuous": -1.0874525904655457,
+    "direct": -0.7760894298553467,
+    "mechanism_blank": -1.7701247533162434,
+    "mechanism_feedback": -1.755667249361674,
+    "structured": -1.208206335703532
+  },
+  "new_real_mse": {
+    "blank": 1.637079373995463,
+    "continuous": 1.6329484383265178,
+    "direct": 1.7086675743261972,
+    "mechanism_blank": 1.6527816116809846,
+    "mechanism_feedback": 1.6605482618014018,
+    "structured": 1.6313320418198904
+  },
+  "edited_next_relation_rms": {
+    "('real', 'cut')": 0.0632186596592267,
+    "('real', 'edge_flip')": 0.0027044201036914664,
+    "('real', 'noop')": 0.0,
+    "('real', 'zero_effect')": 0.04891847521066661,
+    "('synthetic', 'cut')": 0.0406084557374318,
+    "('synthetic', 'edge_flip')": 0.01656649323801193,
+    "('synthetic', 'noop')": 0.0,
+    "('synthetic', 'zero_effect')": 0.0265261406699816
+  }
+}

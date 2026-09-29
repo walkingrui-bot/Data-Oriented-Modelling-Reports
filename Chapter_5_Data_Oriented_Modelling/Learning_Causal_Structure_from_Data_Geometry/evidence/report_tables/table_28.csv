@@ -1,0 +1,8 @@
+Method,Coverage,Accuracy
+Sachs zero-shot,100%,50%
+One nearest point anchor,100%,40%
+Two nearest point anchors with polarity consensus,40%,50%
+Two nearest point anchors with distance weights,100%,40%
+Two nearest stable anchors with polarity consensus,50%,80%
+Two nearest stable anchors with distance weights,100%,50%
+Two random stable anchors with polarity consensus,57.1%,41.4%

@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "checkpoints": [
+    {
+      "seed": 11,
+      "replay_max_abs": 0.0,
+      "diag_max_abs": 0.0,
+      "row_abs_sum_max": 0.8918551802635193,
+      "nll": -1.0894230604171753
+    },
+    {
+      "seed": 22,
+      "replay_max_abs": 0.0,
+      "diag_max_abs": 0.0,
+      "row_abs_sum_max": 0.8892759084701538,
+      "nll": -1.1590712070465088
+    }
+  ],
+  "n_result_rows": 8
+}
