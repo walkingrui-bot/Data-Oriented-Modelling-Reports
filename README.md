@@ -2,10 +2,15 @@
 
 Intelligence takes shape within the sensory world. A model never sees the world itself. It lives inside the world created by its observations. Tokens, variables, scales, and architectures are not merely ways of feeding data into a model; they form its sensory system. How do humans observe this world? What kind of observer could see it faithfully? 
 
-Read the chapters in order. Each folder contains its report and the supporting experiments and evidence.
+**[不想看／看不懂报告，就看过来。](Chapter_0_The_Story_Version/README.md)**
+
+**[Don't feel like reading the reports? Getting lost in them? Start with Chapter 0 — The Story Version.](Chapter_0_The_Story_Version/README.md)** A moving finger, a cloud of data, a stack of burgers and a detective explain why we are doing this research. The story grows with the project.
+
+Chapters 1–5 contain the research reports, supporting experiments and evidence.
 
 | Chapter | Title | Open |
 | --- | --- | --- |
+| **0** | **The Story Version — 不严肃小故事版** | [Read the story](Chapter_0_The_Story_Version/README.md) |
 | **1** | **Language Models Fit the Function That Generates the Answer** | [Read Chapter 1](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/README.md) |
 | **2** | **Language Models: Motor Control and Deep-Space Drift** | [Read Chapter 2](Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) |
 | **3** | **Machine Learning Epidemiology** | [Read Chapter 3](Chapter_3_Machine_Learning_Epidemiology/README.md) |
