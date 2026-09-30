@@ -12,8 +12,9 @@ This is the informal entrance to the project. Read it like a conversation. The s
 
 [Download Word](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/raw/refs/heads/main/Chapter_0_The_Story_Version/Data_Oriented_Modelling_Living_Narrative_EN_v0.8_20260930.docx) · [Download the story bundle](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/raw/refs/heads/main/Chapter_0_The_Story_Version/releases/Chapter_0_The_Story_Version_EN_v0.8_20260930.zip)
 
-English version 0.8 · 30 September 2026 · A living story in 21 sections
+English version 0.8 · 30 September 2026 · A living story in 23 sections
 
 [All chapters](../README.md) · [Chapter 1](../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/README.md)
 
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
+

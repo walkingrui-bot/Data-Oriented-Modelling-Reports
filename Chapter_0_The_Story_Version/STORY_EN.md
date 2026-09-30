@@ -4,584 +4,544 @@
 
 [Chapter 0](README.md) · [All chapters](../README.md) · [Download Word](Data_Oriented_Modelling_Living_Narrative_EN_v0.8_20260930.docx)
 
-## Data-Oriented Modelling
+## Data Oriented Modelling
 
 *A Living Explanatory Narrative*
 
-*From the shape of data to the world a model learns*
+*From why data takes this shape to what a model treats as its world*
 
 English version 0.8 · 30 September 2026
 
-This is the story behind Data-Oriented Modelling. It keeps the intuitions, examples and arguments that help explain why we run these experiments, and grows alongside the research.
+This is the explanatory companion to Data-Oriented Modelling. It keeps the intuitions, stories, metaphors, distinctions and sequence of explanations behind the research together. It is a living account for readers of the reports, talks and teaching materials.
 
 ## How to read this story
 
-Let us start with a story that almost anyone can follow, then see how far it takes us. Along the way, an ordinary moving body will lead us into statistics, machine learning, generative models, general data intelligence and chain-of-thought. A research paper might introduce some of these ideas with an equation. Here, we begin by asking what a model is doing when it observes, compares and tries to work out where it is.
+This is not a conversation dressed up as a paper. It deliberately keeps the part of our conversations that was most useful: start with a story anyone can understand, then gradually discover that the story contains the underlying structure of statistics, machine learning, generative models, general data intelligence and chains of thought. A paper might introduce many of these ideas with equations. Here we first ask: if we imagine data as a person, and a model as something that keeps observing, comparing and finding its bearings again, what is it actually doing?
 
-The story begins with familiar statistics and follows the thread through training history, possible future responses and the changing course of a generated answer. The comparisons are there to make the structure visible. We can then connect each idea to an experiment, a mathematical definition or a question worth testing.
+The story starts with the most ordinary statistics and travels all the way to training history, future-response fields and the unfolding of a chain of thought one point at a time. None of the metaphors is a final mathematical definition. They are ways of making the structure visible. Once we can see it, we can decide which parts need formal definitions and which need experimental tests.
 
-First make the world understandable. Then use the equations to pin down the structure we have understood.
+The most important principle is simple: explain the world first, then introduce the equations. Equations should pin down a structure we already understand, rather than hide it.
 
-### A few words we will use
+### A few conventions for this story
 
-- Time is the forward-running clock in this story. Causal relationships concern how changes affect what follows; we describe those relationships within the changing world.
+- The “time axis” is the directed axis along which the state of the world moves forward. We do not invent a separate “causal axis”.
 
-- Degrees of freedom describe relatively independent ways a system can vary. We will distinguish them from the number of recorded variables, the dimension of a particular representation and the extent of the places the system can reach.
+- “Degrees of freedom” means the number of relatively independent ways a system can currently change. It is neither the number of variables nor the volume of the reachable space.
 
-- A generating mechanism is our name for a pattern of constraints and changes supported by repeated, compatible evidence. Physical and biological processes act in the world; our descriptions of those processes develop as we investigate them.
+- In this story, a “generating mechanism” is not a label handed to us in advance. It is a concept we arrive at after observing many stable, repeated and mutually compatible constraints and changes.
 
-- Motor control is the analogy we use for a language model repeatedly locating its current position in context and choosing how to continue. The language experiments give this analogy its specific meaning here.
+- “Motor control” has a specific meaning in this project: the continuous process, familiar from language models, of locating the current state from the preceding context and then deciding what comes next. The term does not automatically include robot policies or other systems here.
 
-- The language-model pattern we borrow is generation conditioned on a preceding context. Natural language is its most familiar example. General data intelligence can use related predictive ideas while keeping the native structures of other kinds of data.
+- A “language model” is first of all a computational pattern here: generate what follows from what came before. Natural language is its most familiar example; general data intelligence can use a similar structure.
 
-- A Data Passport describes the data presented to a model. Data Geometry is one of its main eye tests: it measures shape, neighbourhoods, compression and mixing under a specified way of observing the data.
+- The Data Passport is broader than Data Geometry. Data Geometry is one of its most important eyesight tests: has the model's view of the world been stretched, flattened, bent or blurred together by its lenses?
 
-- Chain-of-thought is a visible generated path. Our experiments also examine how the distribution of possible future responses changes along that path.
+- Chain-of-thought text is not a word-for-word transcript of a model's internal “thoughts”. What we want to study is how the probabilities of possible future responses change at each point in generation.
 
-- A state is the statistical or functional situation at a particular point, described at a chosen observation scale. Scale sets the window through which we look. In the predictive-state experiments, future-response probes tell us which situations behave differently, including situations with the same visible text or location.
+- “State” does not introduce a mysterious extra entity here. It means the statistical state that the same data or language presents at a particular observation scale. Change the scale, and the state you can see changes too.
 
-- Architecture makes some structures easier to represent and learn. The training data, their order and grouping, the sampling scheme and the learning objective jointly shape what the trained model comes to treat as its world.
+- Architecture is not the sole protagonist of the second half. Architecture makes some structures easier to implement and learn. How training data is laid out, ordered, grouped, sampled and mixed, and the history of those experiences, shapes which structures the model eventually treats as its world.
 
-## 1 Why data form a cloud
+## 1 Understanding the data cloud before discussing models
 
-Our first move was very simple: take the data out of the spreadsheet. A table is a convenient way for us to look at something much richer. Imagine a changing body, or a piece of moving matter. As time passes, its state changes. We choose an observation method, measure some parts of that state and arrange the readings into rows and columns. That is how we end up with the familiar table.
+At the beginning, we did just one thing: take “data” out of the table. A table is what we get when we lay out a more complicated, higher-dimensional state along a few chosen axes so that humans can read it. The data itself is more like a moving mass of material. As the world moves forward in time, that material keeps changing state. Humans choose a way to observe it, cut those states into rows and columns, and end up with the familiar data table.
 
 t → Z(t)
 
-Time has a special role in this picture. You can sit perfectly still and the clock will keep going. We use it as the axis along which the state develops. The freedoms we want to count belong to the state itself: as the clock advances, how many relatively independent ways can it change?
+Time is special here. You can sit completely still, and time still moves on. You cannot stop it or make the world run backwards in the same sense. We do not count time as “one more degree of freedom for the body”. We treat it as the advancing axis to which all state changes are tied. What is worth counting is how many relatively independent ways the state Z can change as time moves forward.
 
-### 1.1 A fingertip makes dimension easier to understand
+### 1.1 One finger can explain dimensions and degrees of freedom
 
-Imagine watching just one fingertip. Its position lies in three-dimensional space, so we can give it three coordinates: x, y and z. Now fix the shoulder, elbow and wrist, and allow only one finger joint to rotate. The fingertip still lives in three-dimensional space, but it travels along an arc. One angle describes its movement.
+Suppose we look only at a fingertip. Its position lives in three-dimensional space, so we can write it as (x, y, z). But if we fix the shoulder, elbow and wrist and allow just one finger joint to turn, the fingertip can only move along an arc. It still lives in three-dimensional space. That does not give it three degrees of freedom.
 
-Ambient dimension = 3; local movement dimension ≈ 1
+Ambient dimension = 3; effective movement dimension ≈ 1.
 
-Release a second independent joint and the tip may begin to sweep out a surface. Release the wrist, then the elbow and shoulder, and its reachable region can grow. Let the waist turn, the legs walk and the whole person jump, and the hand can reach much farther. Add stairs, a lift or a train and the person can travel farther still. The body's joints have stayed the same; the available actions and environment have changed where they can take it.
+Now release a second joint. The fingertip may begin to sweep out a surface instead of following a single line. Release the wrist, and its reachable region expands again. Release the elbow and shoulder, bring the whole arm into the movement, and the fingertip can reach more places. Let the waist join in, let the legs walk, let the whole person jump, and the reachable space grows further. Finally, add stairs, lifts or vehicles. The body has not suddenly acquired dozens of new joint degrees of freedom, but the person can now reach a much larger space.
 
-Degrees of freedom tell us how many independent choices of movement are available. Reachability tells us where those choices can take us.
+Degrees of freedom asks, “How many independent ways can you move?” Reachable space asks, “Where can those movements ultimately take you?” We must not confuse the two.
 
-An arm can have many internal joint freedoms while the task of placing its fingertip at a location has only three positional coordinates. A complicated internal system can therefore produce a simple-looking observation. Watching the fingertip alone may leave several explanations open: the shoulder moved, the elbow moved, the wrist moved, or the person took a step.
+There is another important detail. The arm can have many internal joint degrees of freedom, while the endpoint task, “put the fingertip at a position in three-dimensional space”, has at most three position directions. A system with many internal degrees of freedom can therefore produce a low-dimensional observation. Conversely, looking only at the fingertip may tell us nothing about whether the shoulder moved, the elbow bent, the wrist turned or the whole person took an extra step.
 
-Internal configuration q → endpoint p = f(q)
+Internal state q → endpoint p = f(q)
 
-That is our first, very ordinary example of the same observed output arising from different internal configurations.
+This is the simplest version of a distinction we will keep meeting: the same output can come from different internal states.
 
-### 1.2 Many simple parts can produce a complicated whole
+### 1.2 High dimension can come from things moving together
 
-Now replace the body with data. Suppose we have many simple components, each with only one or two ways of changing. Together they can supply many partially independent patterns of variation. Their connections coordinate some movements and constrain others. The useful question is how many joint patterns we need to describe the variation we actually observe.
+Now replace the body with data. Imagine many simple little objects, each with only one or two ways to change. If their movements are partly independent and partly coupled, the whole system can have many joint directions of variation. The key question is not whether every variable is independent. It is how many relatively independent joint patterns of movement we need to describe what the whole system actually does.
 
-This is a helpful way to think about the high effective dimensions in our genomic work. Picture a body with many joints, some moving together and some retaining considerable freedom. The report measures that variation in several ways and at several scales. A covariance-based dimension, a local geometric dimension and the number of directions useful for a prediction task each describe a different part of the picture. [1]
+So a high effective dimension in genomic data should not be imagined as “192 completely independent switches, making the number of combinations explode”. Think instead of a body with many joints. The joints are neither completely independent nor welded into a single rigid stick. They form many partly coupled patterns of movement. We need many directions to describe the variation, but those directions are not all unrelated.
 
-Many simple components can supply many directions of variation. Coupling shapes their joint movement and can tie some directions together. Nonlinear relationships can also spread the observed variation across several coordinate directions.
+Many simple objects, partly independent and partly moving together, can produce many degrees of freedom. Coordinated changes across objects can be part of what gives the combined system its directions of variation.
 
-### 1.3 Stack the observations and a cloud appears
+### 1.3 Remove the order in time and a trajectory becomes a data cloud
 
-Record the state at successive times and we obtain a trajectory. Put the observations on the same plot and temporarily set aside their order, and we obtain a cloud. We can also make a cloud by observing many different people or systems. The Passport records which of these sampling stories produced the points.
+Lay out the states frame by frame in time, and we get a trajectory: Z(t₁), Z(t₂), Z(t₃), and so on. Temporarily forget which came first and pile those states together, and we get a data cloud. The cloud is not the world itself. It is the visible trail the world has left behind.
 
-Z(t₁), Z(t₂), …, Z(tₙ) → a cloud of observed states
+{Z(t₁), Z(t₂), …, Z(tₙ)} → observed data cloud
 
-Several intimidating geometric words now become quite approachable. Shape describes the region occupied by the observations. Boundaries describe the edges we can see. Density reflects where the system spends time, which people or states we sample, and how often we measure them. Anisotropy means that the cloud spreads farther in some directions than others. Curvature describes how its local orientation bends as we move through it. The body's possible movement helps us imagine these properties; measurements and sampling help determine the cloud we actually get.
+At this point, many impressive-sounding terms in data geometry become ordinary descriptions of a moving body. Shape is the shape the generating system can sweep out. A boundary marks how far it can go. Density shows where it tends to spend its time. Anisotropy means it moves easily in some directions and reluctantly in others. Curvature describes how quickly the allowed directions of movement change as its position changes.
 
-Data Geometry measures those properties systematically. It gives us part of the description of the world presented to the model. The wider Data Passport also records how that presentation came about.
+In a formal treatment, Data Geometry systematically measures these shapes as the model sees them. But Data Geometry is only one part of the Data Passport.
 
-### 1.4 Statistical transformations change the map
+### 1.4 Statistical transformations change the viewing axes
 
-We can look at the same observations through different coordinates. A relationship may look awkward along x, so a statistician tries log(x), adds x², or uses a spline basis. It is rather like bending the ruler and laying the observations out again.
+There are many ways for humans to lay out this mass of data. A simple statistical transformation does not create another world. It puts a different ruler or coordinate system in front of the same one. Perhaps a relationship looks very curved along x. A statistician uses prior knowledge to look at log(x), x² or a spline basis instead. It is as if we have bent the viewing axis, then laid out the same states again.
 
-Observed data x → coordinate map φ(x) → a new visible geometry
+Same underlying states → new coordinate map φ(x) → different visible geometry
 
-A polynomial term or basis expansion may appear to be just another column in the spreadsheet. It also changes the coordinates available to the model. Nearby observations can move farther apart, and a curved relationship can become easier to represent. The choice of map matters: keeping x alongside x² preserves the sign information, whereas replacing x entirely by x² folds positive and negative values together. A new map can reveal a relationship, stretch it or merge distinctions.
+Polynomial terms, log transformations and basis expansions can look like “adding a few more columns”. More fundamentally, they redefine the coordinates the model sees. Two states that were close can be pulled farther apart in the new coordinates. A curved relationship can look straighter. We have not secretly replaced the points or changed the world. We have changed the map.
 
-A statistical transformation gives the same observations a different arrangement. We choose the arrangement for the distinctions the task needs.
+At its simplest, a statistical transformation takes the same data and lays it out in a way a human thinks will be more meaningful.
 
-That is one reason traditional statistics often feels so well motivated. There is usually a reason for bending the ruler: a logarithm for a particular distributional relationship, a spline for local nonlinearity, a periodic term for seasonality, an interaction for a suspected change in an effect. Someone can explain why that new view might help.
+This helps explain why traditional statistics often feels so reasoned. Statisticians do not usually bend an axis for no reason: a log for skewness, a spline for local nonlinearity, periodic terms for seasonality, an interaction for suspected effect modification. Each new view comes with a reason someone can put into words.
 
-In this sense, much of statistical modelling is representation design guided by human knowledge. We inspect the data, choose a view, examine the residuals and decide whether another view is needed. There can be several layers of this process, with a statistician making decisions between them.
+Traditional statistics can therefore be understood as representation design guided by human prior knowledge. A person looks at the data, decides which angle to try next, inspects the residuals and decides whether another ruler is needed. There can even be many layers. There is simply a statistician sitting between each pair.
 
-Think of a person taking a photograph, interpreting it and deciding where to point the camera next. In a deep model, some of the decisions about the next view are themselves learned.
+Traditional statistics is like “look at a photograph → understand it → decide how to take the next one”. Many deep models also learn how the next photograph should be taken.
 
-### 1.5 From a path to a surface to a cloud
+### 1.5 From a line to a cloud as more directions become free
 
-Start with an idealized world in which the state has one freely varying coordinate, u. Under a smooth map, its observations trace a one-dimensional path, even if that path sits in a much larger space. The path can bend. What matters is that one free parameter moves us along it.
+Begin with an ideal world whose state has only one freely varying coordinate, u. However high-dimensional the surrounding space is, all the data must lie along a one-dimensional path. It can be a straight line or an arc. What matters is the single free parameter, not whether the path is straight.
 
-Z = g(u) → a one-dimensional path
+Z = g(u) → one-dimensional reachable path
 
-Allow a second independent coordinate that produces a distinct observed change, and the path can open into a surface. A third can open it into a volume. Further independent changes make the possible states richer. Put samples from those states together and the cloud becomes thicker and more varied.
+Release a second genuinely independent coordinate, u₂, and that path may spread into a surface. Release a third, and it can form a volume. Release more joint directions of variation, and the reachable state space expands further. Finally, remove the time order, and the cloud we see becomes thicker and richer.
 
-This is why counting columns is only a beginning. We want to know which changes those columns permit us to see, how the changes depend on one another, and what our observation has compressed or left out.
+That is why dimension is best understood as something more than the number of columns in a table. What matters is how many relatively independent directions of change those columns allow, and how those directions are constrained, coupled, compressed or opened up.
 
-## 2 Correlations, modes and unusual observations
+## 2 Correlation multiple modes and outliers are not mysterious either
 
-### 2.1 Two measurements moving together
+### 2.1 Correlation when the same movement carries two measurements along
 
-Watch a person squat. Their knees usually bend more as their body moves down. Plot repeated observations and those measurements will vary together. A correlation can arise because two coordinates share part of the same movement.
+Stay with the human body. When someone squats normally, their knees bend more and their body usually gets lower. Plot many such movements, and the two measurements often change together. At its simplest, correlation means that as the system follows its allowed paths, two observation coordinates share part of the movement.
 
-Shared variation can leave a statistical correlation.
+Shared movement → statistical correlation
 
-There are plenty of other ways for a person to become lower, though. They can sit, kneel, bend at the waist or fall. The ground can move too. Bent knees and reduced height can be strongly associated in one familiar movement while other routes lead to a similar endpoint.
+But squatting is not the only way to get lower. You can sit, kneel, bend over, fall, or even stand on ground that moves. Bent knees and a low body can be strongly correlated within one common mechanism without being the only route to that outcome.
 
-A strong correlation tells us about shared variation. To explain the route that produced it, we need the rest of the evidence.
+A strong correlation tells us that two observed directions often move together. It does not guarantee that only one generating path can produce the result.
 
-### 2.2 A system can have several favourite postures
+### 2.2 Multiple modes when a system has several favourite postures
 
-People spend a lot of time standing, sitting, crouching or lying down. They spend very little time in many other physically possible postures. Stack enough observations and the cloud may contain several dense regions, rather than one evenly filled mist.
+People do not use every theoretically reachable posture equally often. Standing, sitting, squatting and lying down are common. Many extreme joint positions are physically possible, but people rarely stay in them. Pile many states into a data cloud, and we often get several dense regions rather than a uniform mist.
 
-That gives us one intuitive source of multimodality: several commonly occupied regions. A fall has a different role in this picture. It may be a brief transition from standing to lying down. Where a system tends to stay and how it travels between those places answer different questions.
+This is one simple source of multiple modes: the same system has several places where it commonly settles. Falling is different. It may be a brief path from standing to lying down, rather than a mode where the system stays. A mode and a transition path must therefore be kept separate.
 
-A mode is a commonly occupied region. A transition path connects regions through a sequence of states.
+A mode is where the system often stays. A transition path is where it passes on its way between common states.
 
-### 2.3 An unusual point may have a story of its own
+### 2.3 Outliers as bad measurements or rare but real paths
 
-Suppose most low body positions in our sample come with bent knees. Then we see someone very low down with their knees almost straight. A statistical rule might flag the observation as an outlier. The interesting question is what happened: did the instrument misread, or did the person arrive there by another route, perhaps a fall?
+Suppose most people bend their knees when they get lower. Then we find someone whose body is low but whose knees have hardly bent. The simplest statistical description calls this an outlier. From the perspective of generating mechanisms, a better question is whether the measurement is wrong or whether the person followed another legitimate path, such as falling. That is the distinction between an error and another generating regime.
 
-The first question in data-oriented modelling is therefore quite concrete: how did this point come to be here? Its answer helps us decide how to use the observation.
+The first response in data-oriented modelling should not be “delete that point”. First ask why it could appear there. Is it a measurement error, or does it belong to another reachable mechanism?
 
-## 3 Causal inference and the question of identity
+## 3 Causal inference becomes a detective story about whether it is still you
 
-Imagine someone travelling from city A to city B. Time passes, and there has to be a physically possible route between the two locations. We may observe parts of the journey, or use other evidence to reconstruct how the journey could have happened. That gives us a starting point for thinking about causal investigation.
+In our conversations, we almost gave causality an extra “causal axis”, before bringing the explanation back to time. There is only the time axis here. What matters is that if a state moves from A to B, an allowed path must exist in this world. You cannot simply jump from city A to city B. If you really arrive in B three days later, either we have observed some intermediate states or an existing account at least tells us that the journey is possible.
 
-State A → a possible sequence of changes over time → state B
+A → admissible path over time → B
 
-We also want to know whether the person arriving at B is the person who left A. A detective would compare several traces. An identity card is useful, but the face, height, movements and other evidence should fit together. Equally, a change of clothes or haircut during the journey is perfectly compatible with the same person arriving.
+Reachability alone is not enough. We also need to establish that the person who arrived in B is still you. Think of a police investigation. Someone may be holding your identity card, but if the height, face, movements and other traces do not match, perhaps someone was substituted along the way. Conversely, a person can travel for three days, change clothes, get a haircut and look different in a photograph without becoming a different person. What we need is compatibility across several kinds of evidence.
 
-A mechanism becomes more convincing when its different traces fit together across the changes we observe.
+We do not recognise a causal mechanism from one photograph. We recognise it from a trail of clues that continue to fit together.
 
-This is why epidemiology can feel like detective work. We examine possible substitutions: an instrument change masquerading as a disease effect, a difference in age structure appearing as an exposure effect, or a shared cause producing both observations. Repeated evidence helps us build and name a candidate account of what happened.
+This is why epidemiology can feel so much like detective work. Researchers have to rule out substitutions. Has a laboratory effect quietly taken the place of a disease effect? Has the measurement system changed? Is the age distribution impersonating the exposure? Has a common cause produced both A and B? We see the traces. “Mechanism” is the name we give them after enough of those traces fit together.
 
-To attribute the change to a particular factor, we also need a credible comparison: what happens when that factor changes, and what happens under the relevant alternative? Randomized interventions, suitable natural experiments and observational designs with explicit assumptions provide different ways to make that comparison. Timing, identity, measurement, selection and common causes all enter the case. The travel story helps organize the clues; the study design gives those clues their causal force. This is the distinction developed in our causal-geometry report. [2]
+For this story, we can begin with three questions about establishing causality. First, is the path from A to B possible in time and in theory? Second, does the evidence along the way show that it is still the same system, with no substitution halfway through? Third, when the factor we claim matters changes, do the later traces change in the corresponding way?
 
-## 4 Traditional statistics and the tidy fan
+*Reading note: These clues organise a causal investigation; they are not an identification rule by themselves. A causal claim still needs a defensible comparison or intervention and assumptions about confounding and measurement. See research record [2].*
 
-### 4.1 Hold the body still and turn one joint
+## 4 Traditional statistics draws an ideal fan and looks at how reality departs from it
 
-Imagine an ideal mechanical person standing perfectly still. Only one shoulder angle can change, and the arm has a fixed length. The arm sweeps out a tidy fan-shaped sector, while its tip follows the outer arc. We can begin with a mathematical description of that main movement.
+### 4.1 The lovely ideal of a person who can move only one joint
+
+Return to ordinary statistics. Suppose a person really does stand like an ideal robot, perfectly upright, with every other body part fixed. Only one shoulder joint can rotate, and the arm has a fixed length. The region swept by the arm can be beautifully regular, like a fan. A statistician can start by proposing that this is the main generating mechanism.
 
 Y = f(θ) + ε
 
-A real person adds texture to the picture. There is a little shaking, a shifting joint centre, soft-tissue movement and small contributions from the wrist, elbow and trunk. The instrument adds measurement error. Our clean outline becomes fuzzy.
+Reality is never quite so tidy. The person trembles a little. The centre of joint rotation is not as perfectly fixed as a mathematical hinge. Soft tissue moves. The wrist, elbow and torso cannot remain absolutely still. The instrument adds measurement error. Our ideal thin fan acquires a fuzzy edge.
 
-A useful statistical approach is to fit the main structure and inspect what remains. Small fluctuations may be handled by a noise model. Repeated, directional residual patterns invite another question: did we fix a joint that was actually moving, or miss some other systematic part of the process?
+One lovely feature of traditional statistics is that it does not immediately declare every bit of fuzz a new law of nature. It first says: perhaps the main skeleton is still this fan, and the rest can go into the residuals. If the residuals are small jitters with no pattern, we can provisionally treat them as noise. If they show stable structure, the statistician asks whether we mistakenly held one of the joints fixed.
 
-Start with an intelligible movement, examine its residuals, then add the part of the structure that the evidence calls for.
+A typical statistical refinement goes like this: propose an ideal mechanism → inspect the residuals → find a patterned departure → release another joint we can explain.
 
-### 4.2 Three reasons a cloud can spread out
+### 4.2 Noise extra freedom and another mechanism spread data in different ways
 
-Random disturbance or measurement error can thicken a path into a fuzzy tube. Another independently varying input can open a curve into a surface. Several operating conditions can produce separate branches or clusters. All three can look like greater scatter, so the explanation depends on how the observations were generated and measured.
+An ideal path can become a fuzzy tube because of random disturbances or measurement error. A curve can spread into a surface because another independent degree of freedom has genuinely been released. A cloud can split into quite different regions because several generating regimes have been mixed together. All three can look like “the data spread out” on a plot, but they mean very different things.
 
-Noise can thicken a path. Another independent variation can open it out. A change of operating regime can create another branch.
+Noise thickens; a new degree of freedom expands; a new mechanism branches.
 
-The attractive ideal of an interpretable statistical model is that, when we add a new component, we can explain which part of the movement it represents.
+This also helps explain the interpretability of traditional statistics. Ideally, whenever it adds another degree of freedom, it wants to tell you which joint it has just released.
 
-## 5 A model can learn one person very thoroughly
+## 5 Simple machine learning also learns how this particular person shakes
 
-Now give the observations to a flexible predictor. It sees a slightly jagged trajectory and can learn the jaggedness when it is predictable. It can do that without ever naming the shoulder joint.
+Now things get interesting. A flexible model concerned only with prediction error does not need to know what a shoulder joint is. It sees that the real trajectory has little jagged edges instead of being a smooth arc. If those edges are predictable, it has a reason to learn them too.
 
-Imagine that person A's arm movement has a characteristic tremble. A model trained only on A may learn both the broad movement and A's particular zigzags. It predicts another movement by A very well. Then person B raises an unusually steady arm, while the model keeps predicting A's zigzags. The model has learned one person's movement in considerable detail. The question is how much of that detail transfers to another person.
+Person A shakes a lot when raising an arm. A model trained only on A may learn both the smooth overall structure and A's personal jagged pattern beautifully. Test it on A again, and its predictions are almost perfect. Move to person B, whose arm rises steadily, and the model still insists on predicting A's jagged movements. It fails because it has learned A too specifically.
 
-Some learned detail is shared structure. Some belongs to the particular person or setting in which it was observed.
+Learning more detail does not necessarily mean learning more structure that transfers.
 
-A hierarchical statistical model might represent a common movement with person-specific departures around it. A predictor trained in a single setting can instead incorporate the person's, laboratory's or instrument's particularities into its main function. Flexible models can also be designed to separate those components; training data and objectives determine what evidence they have for doing so.
+Traditional statistics often tries to separate the shared skeleton from individual departures: everyone shares an overall structure, and each person has their own variation around it. Simple machine learning in a single training environment may instead weld the patterns of this individual, this laboratory or this instrument into the main function.
 
-This explains why two laboratories running the same named experiment can still present different worlds to a model. Their variable names and protocols may match while instrument texture, recruitment or local conditions differ. A model can faithfully learn those differences. We then need to establish which parts belong to the structure we want to carry between laboratories.
+That is why “Laboratory A and Laboratory B did the same experiment” does not guarantee that the model saw the same world. The variable names, procedures and tasks can all match. But if the laboratories have different jitters, instrument textures or recruited populations, a model can faithfully learn those details. It learns the actual training data, which need not be the shared structure that transfers.
 
-## 6 How learned probabilities can produce mechanism-like behaviour
+## 6 Generative learning builds a denser web of conditional probabilities
 
-### 6.1 Looking at relationships creates more ways to observe
+### 6.1 More dimensions can mean more relationships to look at
 
-Another observation coordinate need not mean another physical object. We can look at the top, bottom, left and right of something. We can also examine how the top relates to the bottom, or how three parts fit together. A relationship can itself become a feature we measure.
+Adding a dimension of observation does not always mean photographing another object. We can look from above, below, left and right. We can also look at the relationship between above and below, between left and right, or among above, below and left together. Relationships themselves can become observation coordinates.
 
-Return to the body. We can record the shoulder, elbow, wrist and fingers separately, and also describe their combinations. Pairwise and higher-order comparisons enrich the representation. They give us more ways to describe the same body, while its underlying movement freedoms are determined by the body and its constraints.
+Bring back the body. We can look at the shoulder, elbow, wrist and fingers separately. We can also look at shoulder–elbow combinations, elbow–wrist combinations, or the shoulder, elbow and wrist together. As we add comparisons of pairs, triples and higher-order combinations, the model's space of relationships becomes richer. These are additional representation coordinates or relational features. They do not mean that the world has acquired the same number of independent degrees of freedom.
 
-### 6.2 Learning probabilities can capture the effect of constraints
+### 6.2 Why calculating probabilities can begin to look like a mechanism
 
-Suppose a model has seen many human postures. It might learn that certain elbow positions commonly accompany a particular shoulder position, that some wrist positions fit a particular shoulder-and-elbow combination, and that adding the fingers narrows the compatible possibilities further. It can learn these relationships through the observations.
+Suppose a model has seen many human postures. It need not contain an explicit statement that the shoulder is a ball-and-socket joint and the elbow a hinge. It can gradually acquire statistical facts such as these: in one shoulder state, certain elbow states are more common; given a shoulder–elbow combination, certain wrist states are more common; include the fingers, and the set of compatible combinations narrows further.
 
 P(wrist | shoulder, elbow), P(finger | shoulder, elbow, wrist), …
 
-When those conditional relationships fit together as a coherent joint model, generation can assemble a plausible whole posture. Each new choice respects the context already in place and the relevant constraints. Rich, coordinated probability relationships can therefore reproduce important aspects of a mechanism's observable behaviour.
+When generating a posture, it can favour states that fit the current context at each step and end up with something that looks like a real human body overall. It does not first have to explicitly discover a “human-body generating mechanism”. It can learn a sufficiently dense network of local and higher-order compatibility relationships.
 
-The pieces have to fit together. Compatible local and higher-order relationships can then support a coherent whole.
+Local compatibility, followed by more local compatibility, can accumulate into global consistency. Rich enough probabilistic constraints can begin to behave like mechanism constraints.
 
-This makes the phrase “it is only calculating probabilities” rather interesting. Physical constraints, biology, habits, tasks and environments all shape what can happen together. A learned distribution can capture some of that shape. A mechanism may involve many interacting constraints, and probability models give us one way to describe their combined observable effects.
+This makes the criticism “it is only calculating probabilities” rather interesting. If visible behaviour in the real world is itself shaped by layers of physical constraints, biological constraints, individual habits, tasks and environments, perhaps a mechanism does not have to be one central engine. It may be a landscape of reachable possibilities shaped by many constraints.
 
-## 7 How we come to call something a mechanism
+## 7 A surprising reversal when mechanism is the name we arrive at afterwards
 
-How do we arrive at a mechanism for arm movement? We observe many things: joints changing together, postures that rarely occur, and disturbances that reliably alter what follows. We compare observations across people, times and viewpoints. Eventually we compress a substantial body of compatible evidence into a useful explanation.
+How do we know that an arm has a generating mechanism? Nobody handed the mechanism to us to look at. We first observed many things: certain joint changes often occurred together; certain postures almost never occurred; certain disturbances reliably changed later states. These relationships kept recurring across times, people and viewing angles. Only then did we compress that stable structure into a sentence: there is a mechanism here.
 
-Observations → recurring constraints → stable relationships → a mechanism description
+Observations → recurring constraints → stable regularities → “mechanism”
 
-That is the sense in which “mechanism” is a concept we form after observing. Physical and biological processes are already happening. Our statements that “this is the same mechanism” or “this is a particular pathway” are descriptions developed through investigation.
+In this story, then, a generating mechanism is a concept reached after the evidence, in the sense of how we come to know something. The world certainly contains physical and biological processes. But “this is the same mechanism” and “this is a particular pathway” are researchers' ways of condensing and naming repeated evidence.
 
-We see changes that recur, fit together and help predict or explain what follows. We give their organized account a name.
+We never directly see the word “mechanism”. We see changes that recur, fit together and constrain what can happen next. Afterwards, we call them a mechanism.
 
-### 7.1 A resemblance in how knowledge is built
+### 7.1 People and models can share a pattern of learning without being the same kind of thing
 
-Human bodies, nervous systems and social experience give people a very different starting point from an engineered model. Yet there is an interesting resemblance in one pattern of learning: observe relationships, retain recurring structure, form expectations, and revise those expectations when new observations arrive.
+People and language models are obviously different things. Human bodies, nervous systems, consciousness and social experience are not parameters, attention or other engineering components. Yet the way observations lead us to expect how the world will continue may share a striking pattern: observe → find recurring relationships → compress the constraints → form expectations about the future → revise them with new observations.
 
-A scientist may name the structure an inflammatory mechanism, a feedback pathway or joint dynamics. A model may encode useful parts of it in its response to context. We can examine what it has learned by asking which combinations it preserves, which histories it distinguishes and how its predictions change after specified perturbations. Those are concrete pieces of the structure that make a mechanism description useful.
+Scientists give stable structures names such as “inflammatory mechanism”, “feedback pathway” or “joint dynamics”. A model need not name them. At its current observation scale, it needs statistical constraints that make some futures more probable and others less probable. If it preserves which states are compatible, which are unreachable, which histories change the future and which disturbances change the next step, it has captured some of the observable structure that makes us describe reality as having mechanisms.
 
-The interesting question is what those learned probabilities preserve about the world, and how we can test it.
+“It is only calculating probabilities” need not be a demotion. The deeper question is how science itself arrives at the concept of mechanism from stable probabilistic traces.
 
-## 8 Why epidemiology feels at home here
+## 8 Why epidemiology suddenly fits this story so well
 
-Some of the small departures that complicate prediction are exactly what epidemiology wants to investigate. An exposure, a disease or an environmental condition may slightly shift a state distribution, change how a group of measurements varies together, or alter the probability of a particular transition.
+In ordinary prediction, we often worry about a model mistaking one person's small shake for a rule about everyone. Epidemiology often deliberately pursues just such small but recurring shifts. An exposure, disease or environmental factor may not turn someone into an entirely different person. It may slightly tilt the existing state cloud, change how a few variables move together, or produce a small but stable shift in a transition probability.
 
-Imagine building a stack of burgers. Someone checking whether the stack will fall might be happy to ignore a tiny sideways lean. An epidemiologist asks, “Why does the exposed group lean a little farther left at every layer?”
+An engineer might say, “The burger stack hasn't fallen over. Don't worry about two millimetres to the left or right.” An epidemiologist might say, “Hang on. Why is every layer in the exposed group shifted a little to the left on average?”
 
-A small shift becomes interesting when it recurs in a population under a meaningful comparison.
+Epidemiology often searches for deviations that are small, recurring and visible at the population level.
 
-A generative model gives us a way to study the joint pattern: means, variances, relationships, modes and trajectories can be learned together. A well-designed shared learning system can compare traces across laboratories and populations, accumulating evidence for common structure while representing environment-specific differences separately.
+This is where generative models can help. They can retain the joint structure of a data cloud instead of squeezing everything into one label. They can try to learn how means, variances, covariances, multiple modes, trajectories and local relationships change together. A tiny trace that recurs across laboratories, populations and batches can accumulate. A trace that appears only in Laboratory A, and not in B or C, has a harder time becoming part of the shared mechanism in a well-designed shared-learning system. It is more likely to be assigned to an environment-specific or noise component.
 
-The detective work continues. A recurring trace might belong to the exposure of interest, a common age distribution, a shared instrument or a recruitment practice. Generative modelling can help locate the trace. Epidemiological design and causal analysis help determine whose trace it is. [2]
+Of course, “it occurs across laboratories” is evidence of stability, not automatic proof of the target mechanism. Epidemiology still has detective work to do. Who left the trace? Could a shared age distribution, the same instrument or similar recruitment have produced it? The generative model helps find stable small traces. Epidemiology still has to check identities, exclude stand-ins and work out attribution.
 
-## 9 A Data Passport for the world presented to a model
+## 9 The Data Passport asks what world the model actually sees
 
-The Passport now has a natural place in the story. Before learning begins, we describe how the model's data came into being. The physical world passes through an experiment or observation process, a sampling scheme and an encoding. The result is the data available to the model.
+The role of the Data Passport should now be clear. It is more than a table with a few extra descriptive statistics. Before learning starts, it gives the currently visible world an identity card. The real world passes through experiments, measurement, sampling and variable encoding before becoming the data D available to the model. The model does not meet the world directly. It meets D.
 
-World → observation → sampling → encoding → data → model
+World → observation → sampling → encoding → D → model
 
-The Passport therefore records more than geometric shape. Where did the data come from? How many distinct people or systems contributed? Which environments were observed? How were the measurements made? What are the time structure, missingness, noise, labels and batch differences? How much history may matter for the task? These properties help define the statistical world the model is being shown.
+The Data Passport therefore records more than geometry. Where did the data come from? How many generating individuals and environments are involved? How was it measured? What is its time structure? What is missing? What noise is present? Where did the labels come from? Are batches consistent? How far back might memory matter? All of this belongs to the world the model can see.
 
-### 9.1 Geometry as an eye test
+### 9.1 Data Geometry is the eyesight test inside the Passport
 
-Geometry asks what our view has done to the relationships between states. Are meaningful neighbours still neighbours? Has a direction been compressed, stretched or bent? Have distinct situations been merged? We answer these questions relative to a specified representation, comparison or task. A second view or a controlled intervention can supply a useful reference.
+Data Geometry is an especially important part because it asks whether the lenses have distorted the model's world. Variable names cannot answer this. Are states that were close still close in the observation space? Has a continuous direction been bent? Have different states been squeezed together? Have some directions been exaggerated while others were flattened?
 
-The Passport asks what world we have presented. Geometry helps us examine how that world looks through the chosen lens.
+The Data Passport asks, “What world did you show the model?” Data Geometry asks, “Did a funhouse mirror or an astigmatic lens distort its view?”
 
-This is the starting point for the Corrective Optics line of research. A geometric change can alter which observations count as neighbours, what gets compared or mixed, and which action or local function is selected. A small change in the lens can therefore matter farther down the chain.
+This is also the foundation of the later work on corrective optics. A small geometric distortion can change neighbourhoods, comparisons, routing and states, eventually changing future responses. Tilt the lens, and judgments about similarity, distance and which local function to call can all tilt with it.
 
-### 9.2 Writing down the statistical world we have measured
+### 9.2 The Passport describes the statistical world the model can actually see
 
-The model receives observations through its actual input and encoding. The Passport is our measured description of that observable world: it makes properties of the data available for inspection and, where the system is designed that way, for conditioning the model or selecting an operation. The measurements and the data have connected roles.
+One more distinction matters. The Data Passport is not just an instruction card that we stand beside the model and hand to it. The model has no direct route around the statistical properties of its observations to some unmediated real world. What it faces is the statistical world produced by observation, sampling and encoding. Giving that data an identity card means measuring that visible world again and writing its properties down for humans to inspect.
 
-For data, this description can include the distribution, dependence and history visible at a particular scale. For language, we can describe the current context through a token, a phrase, a sentence or a wider history. In our functional experiments, we also ask what future responses the trained model produces from that situation. Training history and retained computational information can make two apparently similar situations behave differently. [3]
+“State” need not become a mysterious extra entity here either. For data, the Passport describes the state of the currently visible statistical world. For language, a state is the statistical picture presented by the same language at a particular observation scale. A model generates language sequentially, but it can use statistical structure formed at different scales, rather than only the linear sentence a human sees.
 
-The Passport translates properties of the model's observable world into a form people can inspect. The encoder and later computation then determine how that information is represented and used. Both stages belong in the investigation. [1, 4]
+In other words: real world → observable data → statistical world. The Passport translates what the model actually sees into an identity card humans can examine. Engineering funhouse mirrors may distort that visible world further, but that is another layer of the story.
 
-## 10 The assistant we actually want
+## 10 A real language assistant cannot simply be the most common human
 
-Suppose a collection of worked examples contains a common mistake in seven out of ten solutions to a particular problem. Those frequencies describe that collection. When we ask an assistant to solve the problem, our target is a correct solution. We want it to learn enough of the relevant structure to select that solution reliably, even if the correct examples were rarer.
+If a generative model's ideal were simply to reproduce empirical probabilities faithfully, a language assistant would face a strange demand from the start. We do not want it to have the average competence of all humanity. If seven out of ten people solve an equation incorrectly, should the model get it wrong with probability 0.7? Obviously not. We want it to depart selectively from the empirical distribution: reliably choose a rare but correct answer, while suppressing frequent answers that are wrong or unhelpful.
 
-Data selection, cleaning, task construction and preference training already shape this objective. The model encounters a selected and weighted version of human records. Its learned behaviour reflects both the records and the way they were used.
+This bias does not suddenly appear at deployment. Data selection, cleaning, task construction and preference training have already shaped the world the model sees. From the beginning, it faces an empirical world that has been selected, reweighted and bent towards engineering goals.
 
-We use the world recorded in data to teach a system, then define the responses we want it to produce for a task.
+It learns as much as it can of the probabilistic world humans have left behind, then is asked to betray parts of that world when a task demands it.
 
-## 11 Language generation as a moving rendezvous
+## 11 Why this project calls language modelling motor control
 
-Each user brings a local situation. The useful definitions, assumptions and destination of this conversation may differ from the most familiar setting in training. A helpful model has to keep using the context to locate the task: what is being discussed, which conditions matter here, and where are we trying to go?
+By the definition used here, a language model generates what follows from what came before. Its particular difficulty is that each user brings a local world, and that local world never matches the training world exactly. From the context, the model must keep locating itself again: what are we discussing, which definitions apply here, which defaults should be suppressed, and where does the user want to go?
 
-A conversation makes the movement particularly visible. The model responds, the user adds something, and the local target becomes clearer or changes. The model then has to locate the task again. It is rather like a continuing rendezvous with a destination specified and revised through the conversation.
+A conversation is therefore more than “given these conditions, generate one sample”. It is a continuing attempt to line things up. The model estimates where you are and takes a step. You say more, and the local target changes. The model finds its bearings again. It is chasing a target that the preceding conversation keeps specifying and revising.
 
-Context → a current view of the task → response → updated context → locate the task again
+Context → current statistical view → next response → new context → find your bearings again → …
 
-We can observe this at several scales. One token, a short phrase, a larger passage and the whole context reveal different statistical relationships. A relation among words can itself be treated as a larger unit of comparison. The observation scale tells us which relationships we are examining; the state describes the particular situation and its possible responses within that examination.
+Here, “state” refers to the statistical view of language at an observation scale, rather than an extra internal object we simply assume exists. A token, five to ten words, a larger chunk, a sentence and a whole stretch of context are progressively wider windows onto the same language. A “relation” can be thought of as a bigger word formed at a wider scale. Part of the model's complexity comes from the different statistical directions the same language presents through these windows.
 
-A local cue may strongly influence a continuation and then acquire a different role in the wider context. We read a linear sequence of words. The model's computation can use relationships across that sequence and across several levels of representation. The language is generated in order, while its statistical relationships can have a much richer shape.
+*Reading note: The window is the observation scale; the statistical view through it is the state. Similar visible summaries can conceal different retained histories and different futures. The controlled examples in research record [3] make this distinction measurable.*
 
-This is why we use motor control as a guiding analogy. A generated step changes the context for the next step, and the system continually adjusts its response within that changing context. Our language-control experiments examine specific versions of that process. [5]
+A particular code or cue can pull a sentence strongly at a local scale, while a wider scale gives it another interpretation. We see a linear text. The model can use the clouds of relationships formed by that same text at several scales. Language is generated in sequence, but its observable statistical structure need not have the shape of a sequence.
 
-## 12 General data intelligence has to locate the current case
+That is why this project describes language modelling as motor control. Whether robots also exercise control is not the point of this particular definition. Here it means repeatedly finding the current position from the context already formed, then generating the next step.
 
-The same idea gives us a way into general data intelligence. Imagine a training collection in which most examples with a particular broad pattern come from one condition. That history provides a prior expectation. The measurements in the current dataset then provide evidence about which condition best explains this case.
+## 12 General data intelligence should not let the training majority overrule the data in front of it
 
-Training prior P(M) → current data D → updated P(M | D)
+Once we think of a language model as something that finds its bearings from what came before and then generates what comes next, general data intelligence fits naturally into the story. Suppose 90% of similar symptom patterns in the training set came from obesity. An ordinary predictor following frequent patterns could easily say, “This new data is probably obesity again.” But an ideal data intelligence cannot simply do that. Training history tells it what kinds of worlds are common. The data in front of it must help determine which local world it is in now.
 
-Suppose the current data's variation, dependence, time structure and measured responses fit a rarer condition much better. Strong enough evidence can move the prediction towards that condition. How far it should move depends on the evidence, its reliability and the prior. That is the relocalization we want a data-intelligence system to perform.
+Training prior P(M) → current data D → updated location P(M | D)
 
-Learn what kinds of worlds are possible, then use the current observations to work out which world best fits the case at hand.
+Suppose the current Data Passport shows degrees of freedom, coupling, time structure, distribution shape and response patterns that do not look like obesity. They look more like a mechanism that was rare in training. The system has to let that evidence outweigh the majority vote and locate itself again.
 
-In this design, Passport measurements provide useful coordinates for locating the case. When the output is an occurrence probability, the relevant population frequencies also belong in its calibration. Learning a structural response and estimating how often it occurs are related tasks with different targets. [6]
+General data intelligence should first learn the different shapes a world can take, then use the current data to ask, “Which kind of world am I in now?” It should not merely retrieve the most common answer in training.
 
-## 13 Training history leaves familiar routes
+That is why the Data Passport is more than a peripheral tool. Its measurements provide coordinates for finding the current position. A natural-language model locates itself through the preceding context. Data intelligence locates itself through the identity of the data currently before it.
 
-Imagine learning first that your legs can carry you close to a target, then learning that your arm can reach the remaining distance. The arm is being learned in a world where the leg route is already familiar. New learning can use that route and concentrate on what remains.
+## 13 Training history can decide which familiar route comes first
 
-Reverse the order and a different habit may develop. Reaching with the arm becomes the familiar starting point, while the legs learn to make up the shortfall. Both routes can put the fingertip in the same place. Their organization can still differ.
+Return to training history. Suppose a model first learns that legs can move a person close to a target, then learns that an arm can reach the remaining distance. The later training does not happen on an empty map. The leg route is already well built. When arm data arrives, the model can use the old road to remove most of the error and let the new ability handle what remains.
 
-What is learned early can shape the route that later learning finds easiest to use.
+Reverse the order: arms first, legs afterwards. The model may make the arm's reach its default route, then mainly use the legs to cover what the arm cannot reach. Both models can eventually put a hand at the same target. Their internal probability landscapes can still be different.
 
-Our training-history experiments give this story a concrete counterpart. Reordering the same training records can change the learned parameters and later response trajectories. In those comparisons, the training set is more than a bag of examples: the sequence of updates is part of how the model takes shape. [3]
+What is learned first can shape what later becomes the default explanatory route, and which remaining errors the later ability is mainly used to repair. It changes more than the order in which knowledge arrives.
 
-First training experience → a changed model → later experience processed through that model → further change
+So a training set should not be understood only as an unordered collection. Identical contents in D₁, D₂ and D₃ do not guarantee that D₁ → D₂ → D₃ and D₃ → D₂ → D₁ will produce the same function. Early training grinds a lens. Later data is seen through that lens.
 
-## 14 How a sentence takes shape
+D₁ → geometry G₁ → D₂ seen through G₁ → geometry G₂ → …
 
-A useful way to study a generated chain is to ask what the model could produce next from each prefix. Its conditional behaviour defines a distribution over possible continuations. We use future-response measurements to map selected parts of that distribution and how they change along the chain.
+## 14 A chain of thought is the surface path that was actually taken
 
-At any prefix, we can continue generation and observe a possible future. Repeating that process, or using a defined set of probes, shows how responses are distributed. Ordinary generation realizes one next step. That step becomes part of the context from which the next conditional distribution is defined.
+We need to settle an easy misunderstanding. A chain of thought is not an exposed list of the model's internal function calls. Nor must the model first form a whole sentence in its head and then copy it out. What we are describing is a changing field of probabilities over future responses.
 
-Current possible continuations → one realized step → updated possible continuations → another step
+At a particular point in generation, imagine letting the model continue all the way to the end. It has a whole range of possible futures, each with a probability. Ordinary generation does not write all those futures out. It realises one small step. The next step is then conditioned on the original user input plus the prefix already written, giving a new distribution over what can follow.
 
-Think of a future-response map as an answer to “If we continued from here, what kinds of outcomes would we get?” We redraw the measured map as the prefix changes.
+F₀ → choose one local continuation → F₁ → choose one → F₂ → …
 
-### 14.1 A burger can lean smoothly before the visible choice flips
+Think of each Fₜ as answering, “If I continued from here to the end, what might I write?” Each step changes the picture of the future.
 
-Picture a burger-stacking game. The target centre line is straight. Lean too far left and you move the next layer right; lean right and you correct left. Human accounts of reasoning often contain just such movements: a proposal, an objection, a correction and another adjustment. One hypothesis is that repeated exposure to these patterns can make turning back part of a model's learned continuation habits.
+### 14.1 A burger explains how a smooth change can look like a sudden reversal
 
-Now imagine a readout with two choices, A and B. As the state changes, the probability of A moves through 0.80, 0.60, 0.51 and 0.49, while B moves through 0.20, 0.40, 0.49 and 0.51. The values are an illustration. A decoder that selects the higher-probability choice switches abruptly at the crossing, even though the underlying scores changed gradually. A sampling decoder expresses those changing probabilities through the frequencies of its choices.
+Our most intuitive example is Papa's burger shop. The ideal burger stack has a centre line at x = 0. A person stacking it has that target in mind: if it leans left, correct to the right; if it leans right, correct to the left. But the training text is never one perfectly straight burger stack. Human texts already contain trajectories that lean left, correct right, lean left again and correct right again. A model may learn those swings as part of the normal probability structure of generation.
 
-A sudden change in the visible choice can be the surface effect of a gradual change in the competing response scores.
+The model can also assign different probabilities to futures that go towards A and futures that go towards B. Imagine A's probability gradually falling from 0.80 to 0.60, 0.51 and 0.49, while B rises from 0.20 to 0.40, 0.49 and 0.51. The underlying change is smooth, but the current output can take only one direction. As B overtakes A, the visible wording might suddenly switch from “carry on” to “do not do it”.
 
-### 14.2 One sentence can emerge from a changing series of choices
+A human sees a sudden change of mind. What happened in the probability picture was that another future gradually won the one output position available at that moment.
 
-Read a sentence such as “We should continue ... although, after checking that condition, stopping would be better.” It is easy to imagine that the whole sentence was prepared in advance and then copied out. Autoregressive generation also gives us another, very concrete account of how it can take shape.
+### 14.2 Why a whole reasoning sentence may never have existed as one fixed plan
 
-After the first token, the favoured continuations may mostly lead towards A. After another token, continuations towards B become more likely. A later prefix may strongly favour B. Grammar can join those successive choices into one fluent sentence, although the preferred continuation changes along the way.
+This is the counterintuitive part. We end up reading a complete sentence such as, “Therefore we should continue ... although, on closer consideration, we should actually stop ...” It is natural to imagine that the model first had that entire thought and then wrote it down. Generation need not work that way.
 
-Each chosen token joins the prefix that conditions the next choice. Their realized sequence is the sentence we read.
+At the first token, continuations may predominantly head towards A. After the second, B may appear in more of the possible futures. After the third, B may dominate. After the fourth, almost everything may head towards B. Grammar smoothly stitches together the local choices realised at these different moments, producing what looks to a human like one complete sentence.
 
-The model's initial conditional probabilities already define probabilities for complete continuations through their successive token probabilities. The sentence that eventually appears is one such possible path. What can change repeatedly is the preferred continuation conditional on the prefix reached so far. The useful story is therefore about a sentence assembled through changing conditional choices, rather than a sentence held throughout as one fixed plan.
+Sentence = first(F₀) + first(F₁) + first(F₂) + …
 
-A sentence can be a single linguistic unit while taking shape across a succession of different functional states.
+The sentence certainly exists as language. Yet there need never have been a single moment when a stable plan for that whole sentence was held in place throughout generation. It can be assembled from local choices made under successively changing pictures of the future.
 
-## 15 Why we examine every prefix
+A chain-of-thought sentence can be one sentence linguistically without ever being one fixed functional state.
 
-The final text records the choices that were realized. To understand the alternatives around those choices, we pause at successive prefixes and run the declared response probes or continuation samples. This lets us compare how the measured future changes from one point to the next.
+## 15 Why each reasoning point needs its own continuation
 
-Prefix x₁ … xₜ → specified future probes or rollout samples → a measured response map
+If we see only the tokens actually written in an ordinary chain of thought, we know only what the model realised at each step. We want to know where its possible futures pointed at that moment. So we take each prefix separately and let the model continue from there. This is a rollout: allowing a partial sequence to run forward so that we can examine its possible continuations.
 
-Imagine an apparently uneventful phrase such as “Let us consider this condition more carefully.” Across its prefixes, a response probe could favour A, then B, then A again. The ordinary wording may reveal little of that change. We record reversals, their locations and their sizes, then compare them across controlled training histories.
+Prefix x₁ … xₜ → unfold the future-response field Fₜ
 
-The text records the step taken. Prefix-by-prefix probing measures the alternatives visible from the points along that path.
+A perfectly smooth short phrase such as “Next, let us consider this condition further” could sit above a future-response field that has already switched A → B → A → B, reversing three times. Reading the phrase alone gives us almost none of that information. “Next”, “further” and “consider” are not independent complete thoughts. The three reversals in future responses are what may connect to the training history.
 
-Tokens give us convenient checkpoints in an autoregressive sequence. Meaning can span several of them, and the computation inside a token step can itself have many layers. We specify the probe set, horizon and observation scale so that the response maps being compared answer the same question. In our finite reasoning worlds, a bounded set of continuations can be enumerated; in larger models, declared probes and sampled continuations provide the measured view. [3, 7]
+The chain-of-thought text tells us which step the model actually took. Rollouts at each point tell us where its possible futures headed when it took that step.
 
-## 16 Chain-of-thought as a shadow of training history
+Tokens matter for measurement because they provide the finest step of the generation process. But in interpretation, a token cannot simply be treated as one thought: language does not acquire its meaning one isolated character at a time. We want to compare F₁, F₂, F₃ and so on across successive prefixes, watching how future responses change as the available view of the language changes.
 
-Training changes a model's function. A new question then sets a trajectory through that function as the prefix grows. The visible chain records one realized path. Our third chapter studies how controlled changes in training history alter the responses along such paths, including cases with matching final answers.
+*Reading note: Conditional probabilities already assign probabilities to complete continuations. The story does not mean that the eventual sentence was impossible from the starting prefix; it means that no single fixed plan need remain preferred throughout generation. In experiments, we sample or enumerate a defined set of continuations, rather than observe every possible future. The burger probabilities are illustrative; sampling need not switch exactly at 0.5.*
 
-Training history → learned function → future-response trajectory → visible generated chain
+## 16 Why a chain of thought looks like the shadow of training history
 
-This makes the shadow a useful image. The response trajectory carries traces of how the model was shaped. By comparing known histories and applying interventions, we can identify which features of those histories leave which measurable traces. Different histories can also share a trace, so the experimental comparison is part of interpreting it.
+The Chapter 3 research does not simply claim that a chain of thought remembers training text. Training history first shapes the model's current functional landscape. Then a new question arrives. As the prefix grows, the same language presents different views at different scales, and the distribution of future responses keeps changing. On the surface, we see only the chain that was actually generated.
 
-That is one reason the name Machine Learning Epidemiology felt so natural. We inspect an already trained system, measure its responses and perturb selected parts of it. The aim is to connect present functional behaviour with the history that produced it.
+Training history → functional geometry → trajectory of future responses → visible chain of thought
 
-The generated chain is a present observation through which we investigate the model's training history.
+The chain is therefore more like a shadow cast by training history. A shadow is not the original object, and a symptom is not the medical record itself. The task is to use the response trajectory we can measure now to work backwards towards how past experience shaped the machine.
 
-### 16.1 What correction-heavy examples might teach
+This gives “machine learning epidemiology” one of its most vivid meanings. We receive a model that has already been formed. We do not have to imagine human thoughts inside its head. As in a case dissection, we examine states, disturbances, future responses and rollouts at successive points for lasting structural traces of the training history.
 
-Here is a hypothesis I find rather funny, and worth testing. People often write “good reasoning” by showing all their corrections: propose A, say “wait, that is wrong,” change to B, check again and perhaps revise once more. To a reader, it can look careful and transparent.
+The chain of thought is not the medical record. It is a symptom that training history has left in present function.
 
-The training record also contains a sequence of actual textual moves. Repeated examples of A, an objection to A and a turn towards B make that pattern part of the learning material. They could influence how often a model changes direction during its own generation.
+### 16.1 High quality reasoning text might teach the model to keep reversing
 
-We can therefore compare the style of an explanation with its functional trajectory. One chain might sound reflective while its measured responses oscillate. Another might sound abrupt while making one useful transition. Which behaviour helps depends on the task and on whether the turns improve the answer.
+Here is a rather funny hypothesis that deserves an experiment. When humans write “high-quality reasoning”, they often show the whole correction process: propose A, say “wait, that is wrong”, and switch to B. They may then check, reject and correct again. To a human reader, this looks careful, transparent and like a demonstration of thought.
 
-The testable question is how different kinds of training paths affect later response geometry. Direct solutions, one correction, repeated corrections and gradual transitions give us candidate training conditions. Reversal counts, turning points, oscillation size and time to a verified answer provide possible outcomes. This passage is a hypothesis about training design.
+The training model does not see what the person was really thinking. It sees a trajectory that actually occurs in the training set: A → reject A → B. If this pattern recurs, going some distance and then turning becomes a frequent conditional structure in its own right. Frequent reversals in later reasoning do not necessarily mean the model has acquired more layers of human reflection. Some may reflect a training history that made turning around part of a normal reasoning path.
 
-A polished account of correction and a useful course of computation are both worth examining. The experiments tell us how they relate.
+Training text that looks like excellent human reasoning need not be the best functional training trajectory. One model can sound wonderfully reflective while its future responses swing repeatedly from side to side. Another can produce a chain that sounds abrupt, yet move smoothly out of region A, cross a transition zone and enter B just once. Its functional path may be cleaner.
 
-### 16.2 Continued reasoning can create opportunities to relocate
+The useful comparison is therefore broader than “with a chain of thought” versus “without one”. What kinds of reasoning paths do different training histories create? Going directly to the right answer, correcting once, correcting repeatedly and turning smoothly might leave different numbers of reversals, turning positions, swing sizes and speeds of finding the right location again. This remains a hypothesis to test, not an established result.
 
-A new question may lie between several familiar routes. The first response can favour one of them before all relevant consequences have been worked through. Requiring an immediate answer makes that early position especially important.
+Humans may see “make a mistake, reflect, then correct it” as excellent reasoning. A model may learn “go some way, then reverse” as a high-probability path. An attractive chain of thought need not have better reasoning geometry.
 
-Generating intermediate steps can expose consequences of a candidate route. A proposed step may clash with a condition in the question; a calculation may reveal a mismatch. That can reorganize the next response. A tool call or other fresh observation can bring additional information into the process as well.
+### 16.2 A chain of thought gives the model more chances to find its bearings
 
-This is the relocalization interpretation: continued computation gives the model opportunities to change its functional situation using the original conditions, consequences it has derived and observations it has obtained. A generated assertion gains evidential value through its relation to those checks. The usefulness of each step is something we can measure.
+A new question often does not land in the middle of a familiar training route. On first reading the user input, the model must make an initial judgment: is this more like A or B? If it has to answer immediately, that first location can become its final commitment. It looks like A, so off it goes towards A.
 
-For an easy case, a reliable answer may already be available at the start. For another case, useful intermediate operations may lead to one later. The required path depends on the question, what the model has learned and which operations are available. That is why our experiments compare action types and resulting states as well as the number of steps.
+A chain of thought stretches the process out. The model follows A for a while, turning a vague candidate into a concrete path. As that path is written out, its mismatch with the user's original conditions can become apparent. This part does not fit. That constraint cannot be satisfied. The probabilities of future responses rearrange, and B or another route becomes more likely.
 
-Take a step, check where it has brought you, and use that information to choose the next move.
+On this account, the chain helps a fixed model take several more steps through a probability landscape it has already learned. Every step conditions the next one again, giving it more evidence about where it currently is. The valuable part is the opportunity to find its bearings again, rather than how closely the visible text resembles human thought.
 
-### 16.3 Choosing the steps and knowing when to stop
+This also explains why an easy question may need no long chain at all: the first location was already accurate. Difficult questions, unfamiliar distributions and questions near the junction of several old routes may benefit more from travelling a little way so that a mistaken match can expose itself.
 
-This brings us to a very practical control problem: what sequence of useful operations reaches an acceptable answer, and when should we stop? Length is one part of the budget. The identity and order of the operations determine where that budget takes us.
+The value is not simply “think a few more sentences”. It is turning one initial placement into repeated checks: walk a little, then ask whether this route still fits the world the user described.
 
-Stopping too early can commit to a route before a relevant condition has been worked through. A well-chosen continuation may move the model into a state from which the answer can be read reliably.
+### 16.3 The practical question of length and when to stop
 
-Continuing also changes the state. Self-generated context can reinforce a route, and even a meaningful additional operation can move the immediate answer from correct to incorrect. Our controlled experiments measure such exits directly. Their occurrence depends on the state and action, not simply on reaching a universally excessive number of tokens.
+Following this explanation, one very simple thing deserves attention: the length of the chain. Give the model enough steps to find the right location, then stop promptly, rather than merely training it to imitate a style of “high-quality reasoning”.
 
-The stopping target is task-specific: a verified acceptable answer, or valid completion of the current work. In a question-answering task, a correct answer can be worth returning as soon as the completion rule is satisfied, even if further generation would move away from it. When work must continue, safe continuation and recovery become separate control decisions.
+Too short, and the first resemblance to A becomes the answer. The model has not travelled far enough to expose where the A route conflicts with the user's conditions. The failure is not necessarily a lack of deep thought. There was too little trajectory for a mistaken location to become visible.
 
-We can express the aim as reaching acceptable completion at an appropriate cost. The cost includes generated steps and, where relevant, probes, verification and tool use. Accuracy and verified task progress determine whether a shorter route is useful.
+Too long, and the opposite problem can appear. The generated text keeps entering the context and developing its own momentum. The user's original conditions remain, but as the self-generated prefix grows, the model may spend more effort explaining what it has just written than approaching the original target. A long chain can turn from a tool for finding the right position into a path that reinforces the wrong one.
 
-The practical aim is a useful path to a verified result, with stopping at the right moment. Our experiments treat the answer-ready state and the choice of action as the objects of control. [3, 7]
+The ideal length is therefore not a fixed 100 tokens, 500 tokens or one universal budget. It is more like a stopping moment: when future responses have reached a stable region compatible with the user's goal, and further continuation no longer helps the model find a better position, it should stop. An easy question may reach that point almost immediately. A difficult one may need longer.
 
-## 17 How training teaches a model what its world is
+One way to formalise this is to treat length as a control budget: minimise the number of generation steps needed to reach the stable target region, while penalising continuation that achieves nothing. The question becomes how long it takes to complete the positioning, rather than how complete the thinking looks on the page.
 
-At this point, it is tempting to ask which architecture should be assigned to each kind of data. Our experiments lead to a richer question. Several architectures may represent a useful set of relationships when capacity and training are suitable. How, then, are we repeatedly presenting those relationships during learning?
+In this picture, the best chain is just long enough for the model to find the right place, then stops. Length is the budget for doing that.
 
-Consider the same dataset under different orders, groups, sampling rates and task mixtures. Some relationships will appear again and again; others may be rare or disappear between batches. A convenient presentation habit can become one of the most reliable patterns the model encounters. Learning it may reduce the training loss very effectively.
+*Reading note: A correct answer can occur in a narrow, unstable window, and a stable answer can be wrong. Stopping therefore needs a task-specific check of whether the answer is ready and correct. Which actions are taken matters as well as their number. See research records [3] and [7].*
 
-Architecture helps determine which structures are easy to learn. The data, objective and course of training shape which of them the model actually learns.
+If we keep only one everyday sentence from this part, let it be this: before asking whether a model can answer, ask what world it saw, which lenses it saw that world through, and where in that world it is starting from now.
 
-### 17.1 Representation, learning bias and training experience
+## 17 How we fed the model became more interesting than choosing its architecture
 
-Three questions help organize the discussion. What functions can the architecture represent? Which relationships does it make easy to express and optimize? And what pattern of examples and updates does training actually provide? These questions concern representational capacity, learning bias and training history respectively. Keeping them separate makes an observed success or failure easier to explain.
+At this point, we thought the second half would finally turn to architecture. What should we use for language, for population statistics, for genomic data? But the more we worked, the less it looked like choosing from a toolbox. Often a model learned a distorted picture because we arranged the data in one fixed way, showed it that arrangement ten thousand times, and then acted surprised when it treated the arrangement as part of the world.
 
-The history matters because a model experiences updates in a sequence. Earlier changes affect the model through which later observations are processed. Two procedures can use the same observations and still differ in their order, repetition, grouping and optimization path. Training is a process of shaping a function.
+Imagine a collection of population observations with no meaningful order. For convenient storage, we always put young people first, middle-aged people next and older people last. Or Laboratory A first, then B, then C. A human calls that formatting. The model does not know the word “formatting”. It sees one recurring fact: every time, A is followed by B, and B by C.
 
-### 17.2 When presentation order becomes a learned relationship
+Now suppose we choose a model particularly inclined to pass information from one item to the next. What will it learn? That A is followed by B, and B by C, of course. We merely laid the data out along an axis so it could be read. The model took that axis to be the direction in which the world moves.
 
-A gated recurrent unit, or GRU, provides a clear example. It updates a carried state as inputs arrive. That is useful when order contains information. If records are always displayed in an arbitrary A–B–C order, however, the model also receives repeated evidence that this order is reliable. A training procedure has to establish which order relationships belong to the task.
+> “You show it to me this way every time. Of course I think this is how the world goes.”
 
-Repeated presentation can make “after A comes B, then C” an easy route to lower loss. A storage convention may then become part of the learned transition pattern. We were arranging the material for convenience; the model was learning the arrangement it repeatedly saw.
+### 17.1 The GRU may have taken your formatting a little too seriously
 
-One way to investigate this is to vary presentations that are genuinely equivalent for the task while preserving the relationships we want to learn. Recurrence is then evaluated on whether it retains the meaningful structure across those views. Appropriate encodings, explicit labels and symmetry-aware designs provide other ways to express the intended invariance. The cost and coverage required by each approach are experimental questions.
+That is why, when we looked again at the GRU, or gated recurrent unit, it began to seem a little unfairly blamed. It is easy to say that a GRU is unsuitable for this kind of statistical data and cannot learn its real structure. A simpler possibility is that it readily uses the route from the previous item to the next, and our training really did hand it the same order again and again.
 
-That gives us a practical criterion for selecting an architecture and training scheme together: how much data and computation are needed to learn the useful relationships while remaining stable under irrelevant presentation changes? The answer is specific to the task and the available observations.
+If we could show the same data forwards today, backwards tomorrow, randomly the day after, and then demonstrate every equivalent arrangement, a fixed order would stop being reliable. The model would have to find what remains unchanged across those arrangements. But real high-dimensional data does not make this cheap. We cannot demonstrate every possible way of laying it out equally often.
 
-### 17.3 Experts make conditional allocation explicit
+This leads to a practical engineering conclusion. It is not a claim that a GRU is theoretically unable to learn. If a model readily mistakes our presentation habits for reality, and we cannot afford to wash every presentation bias out of its experience, perhaps we should spare ourselves the struggle and choose a computation that is less easily fooled by this particular trick.
 
-A mixture-of-experts system, or MoE, routes work among modules. It provides an explicit way to allocate different computations to different situations. A sufficiently capable dense model can also learn different responses in different input regions. The useful comparison concerns the resulting functions, the routing information and the resources each design uses.
+That is also why, when we choose some attention-based models, their appeal need not be magical language ability. Often it is simply that they do not force us to make “previous item to next item” the only route. We want observations to compare with one another without first inventing a false itinerary for their world.
 
-Training matters in either case. A router supplied with indistinguishable inputs and experts trained on nearly identical distributions may develop very similar functions. A dense model with informative conditions may develop useful specialization within its shared network. Our routing interventions establish that learned expert allocation can affect prediction, while the useful partition can differ substantially from the labels assigned by the simulator. [4]
+### 17.2 What keeps being taught as real matters more than an architecture contest
 
-The architecture provides ways to share or allocate computation. Training determines how those possibilities are used.
+The training set can no longer be imagined as a bag of samples. It is more like a history of growing up. The first data builds a road. Later data arrives beside a road that is already there. Whichever direction was reinforced first is more likely to become a shortcut later.
 
-### 17.4 Keep meaningful structure stable and vary incidental presentation
+Expanding a training set therefore means more than increasing N. What really helps may be filling regions the model has never seen, filling the gaps between them, adding different environments and showing the same world through different legitimate views. What we want the model to learn should remain present through those changes. Presentation habits we do not want it to learn should vary.
 
-Suppose a relationship is part of the structure we want to preserve. We would like it to remain available across batches, task slices and equivalent presentations. Suppose another feature is merely an accident of storage or display. Varying it can help expose which useful relationships persist.
+The simplest training principle in this half of the story is this: let the real structure recur reliably. Do not keep tying an artificial presentation habit to the answer.
 
-The word “equivalent” matters. A person's recorded temporal order, a graph's connectivity and the identity of a repeated measurement can carry precisely the information the task needs. We can change the order in which independent people are presented while keeping each person's longitudinal history intact. The Passport helps us specify which changes preserve the object of interest.
+## 18 Mixtures of experts appear when two villages have no village in between
 
-Increasing a training collection is valuable when it improves coverage of relevant states, environments, transitions and conditions. Additional examples near a difficult boundary can teach something that repeated endpoints do not. For a genuine continuous transition, intermediate observations help describe the route. For a discrete switch, examples should make the switching condition and the valid responses clear. Coverage follows the structure of the task.
+Then we meet another kind of troublesome data. Suppose people in Village A usually turn left when something happens, while people in Village B turn right in the same situation. The difficulty is not merely that the villages look different. Their local rules for this question really differ.
 
-### 17.5 Architecture remains part of the explanation
+If the model is small and both villages must use the same patch of parameters, we can get a rather comic result. Today there are more samples from A, so the model is pulled towards “left”. Tomorrow there are more from B, and it is pulled towards “right”. It can be wonderfully right across A and systematically wrong across B. Change the sample ratio slightly, and the whole model tips the other way.
 
-An architecture can make the desired invariance or relationship easier to represent. That can change the amount of data and computation needed to learn it. A design that already respects an irrelevant ordering symmetry may need less training to achieve the corresponding stability.
+If there really are many natural states between A and B, half like one and half like the other, a larger model has a chance to lay a route through them. Language offers familiar examples. Real text contains many intermediate contexts that add a condition, gradually change direction or partly resemble two different situations. With enough capacity, a model can lay those connections out in fine detail.
 
-We therefore examine more than accuracy under one fixed presentation. What happens when an irrelevant order, batch composition, study mixture or task adjacency changes? Does the model retain the relationships and future responses that matter? These comparisons help reveal which parts of the learned behaviour depend on the presentation chosen by the researcher.
+Some statistical data does not have that kind of middle ground. Under condition A, the rule is A's. Under B, it is B's. There may be no real “halfway mechanism”. Force shared parameters to blend them into a smooth route, and the model may invent a compromise that does not exist in reality.
 
-### 17.6 Designing the learning setting from the data
+> “If there is no road, do not force the model to build an imaginary highway between two worlds.”
 
-The practical sequence is now fairly clear. Describe the observable data with a Passport. Specify the target structure and the presentation choices. Design the ordering, sampling, grouping, task mixture and sharing used in training. Then choose and revise the architecture in light of what it must preserve and compute efficiently.
+A mixture of experts, or MoE, now looks much less mysterious. The plainest solution is to work out whether we are in Village A or Village B, then let the people in the appropriate room do the job. Keep sharing what genuinely benefits from sharing. Where rules conflict and there is no legitimate intermediate state, do not make them fight over the same steering wheel.
 
-Passport → target structure and presentation choices → training design → architectural support → robustness checks
+We are not interested in MoE merely because the word “expert” sounds clever. Some data worlds demand conditioning: change the condition, and the local rule changes. Giving them separate rooms is one way to implement that fact.
 
-Our starting question is what learning experience will help the model retain the structure we care about.
+*Reading note: The villages illustrate a modelling hypothesis, not a rule that separated data always requires MoE. A shared model with suitable conditioning and capacity can also keep local rules separate. Research record [4] tests sharing and partitioning under specified conditions, including continuously varying mechanisms.*
 
-### 17.7 When conditional rules compete for shared parameters
+## 19 First find out whom you sampled then how they respond then what the disease changes
 
-Capacity gives us one possible explanation for conflict between tasks. Conditional structure gives us another. Under condition A, a particular response may be useful; under condition B, another response may be required. The model needs enough representational and computational capacity, informative condition cues and training that makes their relevance learnable.
+Population data pushes the problem another level deeper. Each population sample is not the same fixed brick. Today's sample may be slightly younger, tomorrow's slightly heavier, and the day after may include more people in the tail of an exposure distribution. The underlying population might not have changed at all. Sampling still makes the population base in front of us wobble a little.
 
-Sometimes the conditions vary continuously. Observations between them can describe a useful transition. Sometimes the task changes through a discrete switch. Both situations can be represented by a conditional model. A valid response at A and a valid response at B can coexist in the same model when the inputs distinguish which response is called for.
+The first layer is relatively easy to picture: what kinds of people tend to look like what? People of different ages, sexes, body types and lifestyles recur over long periods, allowing a model to build a population map. This base resembles the recurring statistical structures of language. See a region often enough, and you learn what it usually looks like.
 
-Population context, disease state, experimental setting or a change in a generating rule may alter a local response function. We should preserve the condition under which that function applies. A discrete output requirement can call for a definite choice even when the model's representations vary smoothly. The requirement on the output and the organization of the internal representation are separate things to measure.
+The second layer is trickier. The same event can produce different responses on different population bases. Younger people respond one way and older people another. An exposure has a weak effect in one region and a stronger effect in another. The model therefore has to ask where it is standing in the population before it can explain what happened overall.
 
-Shared training can still create interference. An update that improves one region can worsen predictions in another. Limited capacity, the way features are shared, the loss, the sampling balance and the optimization path can all contribute. Our experiments measure this directly by making an update in one region and evaluating its effect in others. That turns the image of two rules “pulling against each other” into an observable training comparison. [4]
+Only at the third layer do we reach the disease, exposure or target mechanism we really care about. Given how this group would respond anyway, how much further has the target factor tilted its world?
 
-A larger dense model can sometimes allocate useful distinctions more effectively. Informative conditions tell it which local response is needed. If the observable input leaves two conditions indistinguishable, prediction has to represent the remaining uncertainty or obtain another informative observation. Making the condition measurable changes that problem more directly than simply adding parameters.
+The ideal order is easy to describe: recognise the population base, examine the usual response on that base, then look for the extra shift left by disease.
 
-This is where explicit conditional modules can help. The decisive question is which regions benefit from shared learning and which interfere. In our continuous-world experiments, soft sharing can work well across a broad transition, while sharper changes can favour a harder partition under the tested capacity settings. Local transfer measurements help explain that difference. Both continuous and discrete settings can therefore give useful reasons to evaluate modularity. [4]
+> “First recognise the person. Then watch how they normally move. Only then ask how the illness has pushed them off course.”
 
-For population modelling, a candidate design is to infer the relevant context, retain uncertainty about that context, and condition the response on it. Features that transfer usefully across conditions can be shared. More local components can represent condition-specific responses. The partition and the balance of sharing are then selected through appropriate held-out and intervention comparisons.
+### 19.1 Why the three levels should not all vote at once
 
-We decide what to share by examining the predictive task and the effects of shared training. Differences in file format, visible gaps and familiar labels are clues to investigate; training compatibility tells us more directly what a proposed partition achieves.
+If we throw all three into one big pool and let them compete for weight, the densely populated middle tends to win. But being common does not mean being the best place to expose the disease mechanism. The important change might lie in a tail, a subgroup or a very narrow response region.
 
-## 18 How the later research questions grow from the story
+This is another reason we keep returning to the Data Passport. We need to know how the sampled population is distributed, where it is dense or sparse, where variation is merely sampling fluctuation and where the response rule really changes. Otherwise, the model can mistake “there are more people here” for “this is the place to trust most”.
 
-Two connected directions now emerge. Training-history experiments show that changing the course of learning can alter later response trajectories. That gives us a way to investigate how training presents different data structures. Population modelling supplies another design question: how should we represent background context, responses conditional on that context and the particular exposure or disease relationship of interest? Together these questions motivate testable hypotheses about how to organize learning.
+### 19.2 Why separating layers of mechanism can make training easier
 
-### 18.1 Following the traces of training through a generated answer
+Seen this way, experiments in which separating components of a mechanism improves training need not seem mysterious. Perhaps the model did not gain some magical new knowledge. Perhaps we finally turned three problems fighting over the steering wheel into questions it could address one after another.
 
-Prefix-by-prefix examination gives us measurements to compare across known training histories. Two models can produce the same final answer, and equally fluent chains, while their intermediate response probabilities follow different routes. In the controlled studies, training interventions and state interventions connect those differences to particular computational changes.
+First answer A: what kind of population base is this? Once A is established, answer B: how does this kind of population normally respond? Once B is established, answer C: what has the target disease changed on that background?
 
-This suggests an experimental strategy for other data structures as well. Vary how relevant examples are ordered, grouped or covered, then measure how the trained response changes. The language experiments establish specific instances of this relationship; the wider programme applies the same style of comparison to new modelling problems.
+A → B → C.
 
-### 18.2 Training design is part of modelling the data
+The model no longer has to guess which ground it is standing on, how people normally move on that ground and where the disease pushes them, all at once. Arranging the computation in an appropriate order can remove a lot of the fighting.
 
-The Passport describes the statistical world presented to the model. The next question is how learning repeatedly exposes the model to that world: which relationships remain available, which cases dominate, and which conditions distinguish one response from another?
+*Reading note: Population → response → disease is a proposed way to organise this problem. Related controlled experiments motivate the explanation; they do not establish that this exact three-stage population system has already been validated. See research records [4] and [6].*
 
-Consider a dataset whose order across independent records is arbitrary. Repeatedly presenting it in one arrangement can make that arrangement predictive during training. Comparing equivalent arrangements can help test whether the model has retained the intended structure. Within a time series or another order-sensitive object, the meaningful order remains part of what we preserve.
+## 20 The later research questions grew out of the story by themselves
 
-Training specifies which patterns recur, which observations become neighbours in computation, and which regions receive enough examples to support learning. It therefore participates in the modelling assumptions. We can inspect and test those assumptions just as we inspect the choice of variables or loss.
+At first, we just wanted to know why two models could answer the same question correctly while producing completely different chains of thought. So we began taking those chains apart. As we did, we found that the sentence was not a transcript of the model's thoughts. The useful information was in where the possible futures leaned when we let the model continue from each point.
 
-### 18.3 A candidate hierarchy for population modelling
+Following that trail led us to training history. Whichever road had been built first helped shape where later abilities grew. The question then arose naturally: if training order can shape language reasoning, it can also shape how a model later sees ordinary data.
 
-Population statistics makes the question especially tangible. A target response may depend on background population characteristics, a physiological or behavioural state, and an exposure or disease process. A common group can dominate a pooled objective simply through its frequency. We want a design that represents the relevant conditions and still measures the target effect or response accurately.
+The second half of Data-Oriented Modelling grew out of that question. We stopped rushing to invent a special architecture for every kind of data and began by examining how data is laid out, grouped and sampled; which examples appear first; which regions receive coverage; and which artificial orders are mistaken for reality.
 
-One candidate is to organize learning around background context, then conditional response, then the target departure of interest. This changes the statistical factorization, the information available at each step and the way errors propagate. Uncertainty in an earlier layer should travel forward. Joint models and other factorizations provide meaningful comparisons. The benefit of this proposed hierarchy is something to assess through calibration, transfer and the target outcome.
+Population statistics then reminded us that some data already has layers. First recognise the base, then the response, then the target mechanism. Mix those layers together, and the model has to infer the right order of conditioning from a muddle. Of course that can be harder.
 
-### 18.4 Modelling hypothesized mechanisms underlying data
+That is how Modelling Hypothesized Mechanisms Underlying Data appeared as well. We needed a testable suggestion that perhaps the data should be conditioned in a particular order. Then we could ask experimentally whether training that way made the model more stable and less easily led astray by sampling or presentation. The point was to test a proposed organisation of the data, rather than simply tell an attractive mechanism story.
 
-This is the motivation for Modelling Hypothesized Mechanisms Underlying Data. We use observations and scientific knowledge to propose an account of how data, relations and valid responses are organized. That account then suggests a concrete modelling operation which can be tested.
+> “We started by taking a chain of thought apart. Along the way, training history, the geometry of training data and hypothesised mechanism modelling all grew out of it.”
 
-The published report already tests this principle through local-scale relations, coverage-aware learning and operators that respect valid graph states. The population hierarchy just described is a further design proposal along the same line. Its value would be assessed by the stability and accuracy it achieves across the relevant samples, studies and observation changes. [6]
+## 21 Bringing the story together
 
-A hypothesized mechanism earns its place as a modelling coordinate through those comparisons. It gives us a reason to choose an operation and an observable consequence by which to judge the choice.
+Looking back, Data-Oriented Modelling can begin with a person raising an arm and continue all the way to training a general data model. We do not first need to memorise a list of neural-network names.
 
-### 18.5 The questions meet in one research programme
+How a person can move determines the shapes their data can sweep out. Joints moving together give us degrees of freedom and correlations. Familiar resting postures become multiple modes. Change a viewing axis, and the shape changes again. Traditional statistics draws an ideal fan, then looks at where reality departs from it. Machine learning readily learns what keeps recurring in front of it. Generative models incorporate more and more joint probabilities into their statistical world, until they can generate things that look as though they came from a mechanism.
 
-We begin by describing the observable statistical world. Controlled training-history studies show how learning can leave measurable traces in current responses. We then investigate how presentation, sampling, grouping and coverage shape those responses in other data settings. Hypothesized mechanisms provide further candidate ways to organize and test that learning. Each connection supplies the next experimental question.
+Then we find that “mechanism” is itself a name humans give after observing many stable phenomena. The Data Passport measures the statistical world actually available to the model and tells us what terrain lies before it.
 
-The common thread is simple enough to ask out loud: what has the model learned to treat as its world? Data Passports, training history, chain-of-thought measurements and mechanism-guided modelling all give us different ways to pursue the answer.
+Language models bring training history into the picture. Only one output step is realised at a time, while the possible futures change with the prefix. The visible chain of thought is the surface written by those successive changes. Let the model continue from each position, and we can begin to see the shadow of its training history.
 
-## 19 Bringing the story together
+The final turn is that this reasoning does not belong only to language. How a trainer arranges, orders, groups and repeats data is itself teaching the model what to treat as real. Data-oriented modelling begins by understanding the data world and designing a training experience that misleads as little as possible.
 
-We have reached the main explanatory thread of Data-Oriented Modelling by starting with a moving person. From that simple picture, the research questions follow one another.
+Architecture still matters. Some structures are easier to implement with particular computations, and some models are especially vulnerable to particular presentation biases. We choose an architecture because we understand where this data is most likely to be seen wrongly, rather than because the name sounds advanced.
 
-1. The clock advances while a system changes through its available degrees of freedom.
+## 22 The engineering funhouse mirrors we have not fully understood
 
-2. Constraints and interactions shape the possible changes. Observation and sampling turn some of them into a cloud of recorded states.
+The story now reaches the funhouse mirrors. So far, we have mainly asked what statistical world humans give the model and how training teaches that world to it. But after the model receives the picture, its own engineering structure continues to change it.
 
-3. The cloud's shape, density, modes and correlations carry traces of both the changing system and the way it was observed.
+We have already seen some suspicious effects. Some directions are amplified and others flattened. Different things may be squeezed together. A small local word can suddenly pull the future off course. Routing and attention can give certain regions extra weight. We call these effects funhouse mirrors or astigmatic lenses.
 
-4. An interpretable statistical model offers an explicit account of the main structure, then uses residual patterns to guide refinement.
+But I cannot pretend to understand this whole part yet. I have not fully figured out the funhouse mirror myself, hahaha. We have caught hold of some of the lenses and even begun correction experiments. How they combine into a complete account of engineering distortion still needs to be taken apart experimentally, piece by piece.
 
-5. A flexible learner can capture fine detail. Comparisons across people and settings help identify which details transfer.
+So let us leave a little suspense here. Why does the same Data Passport become a different-looking world in different implementations? Which shapes belong to the data, and which were added by the model's lenses? The story can continue as those experiments make the picture clearer.
 
-6. A coherent generative model combines conditional relationships into a joint account of possible observations and responses.
+## 23 A story that grows with the research
 
-7. Repeated, compatible and attributable evidence allows us to develop useful descriptions of mechanisms.
+This remains a living explanatory account. As new experiments clarify a part of the story, that part can grow with the evidence. The explanation stays together, rather than being scattered across separate technical supplements.
 
-8. The Data Passport records the data's relevant properties and provenance. Geometry measures the relationships visible through a specified representation.
-
-9. General data intelligence should use the current observations to locate the case, combining learned experience with evidence and appropriate calibration.
-
-10. Training history can alter the function we end up with and the response paths it makes available.
-
-11. Architecture, objective and training design work together. Ordering, grouping, sampling, sharing and coverage all deserve examination.
-
-12. The generated chain records a realized path. Defined future-response probes measure how the alternatives change along it.
-
-13. Useful inference control chooses operations, checks the result and stops when the task's completion criterion is satisfied at an appropriate cost.
-
-What world did we show the model? Through which lens did it see that world? Where is it now, and what would help it reach the result we want?
-
-## 20 The funhouse mirrors inside the engineering
-
-The story now reaches another layer. Once observations enter a model, tokenization, attention weights, residual updates, routing and optimization help determine what happens to their relationships. These are the lenses we have been calling funhouse mirrors or corrective optics.
-
-The experiments already give us several things to point at. Measured corrections to repetition, local geometry and relation eligibility improve particular predictive comparisons. Recorded agent studies separate the availability of a candidate action from its suitability at the current task phase. The Corrective Optics record also brings process status, output content, repository changes and tests together when examining executed commands. Perception and action each have their own measurable parts. [6–8]
-
-The larger engineering picture is still developing, which is part of the fun. My view of the mirror gets clearer one experiment at a time. Which directions are amplified? Which neighbourhoods change? Which connections deserve to influence the next response, and which actions have become appropriate after the world changes? Those questions keep this chapter growing.
-
-## 21 Keeping the narrative alive
-
-This is a living explanatory record. As an experiment changes our understanding, the relevant part of the story changes with it. The examples, results and explanations remain together so that a reader can follow how the account develops.
-
-The continuing themes are the Passport's measurements, the native structure of different data, the design of training experience, conditional sharing, and the measurement and control of future responses. The engineering lenses connect those themes to the operations performed by an actual model.
-
-Throughout the narrative, experiments provide measured examples, design proposals describe operations to evaluate, and analogies make the questions easier to see. The research records below give the definitions and evidence behind the corresponding passages.
-
-## Version history
-
-Version 0.8 · 30 September 2026. English edition, with the story aligned to the current reports on predictive states, training compatibility, causal attribution, conditional modelling and inference control. The body retains the original narrative sequence and central examples.
-
-Versions 0.6 and 0.7 · 29 September 2026. Extended the explanatory record across the whole research programme, introduced the engineering-optics chapter, and developed the discussion of conditional responses, capacity and parameter sharing.
-
-Version 0.5 · 29 September 2026. Connected the training-history investigations with training design for different data structures and with the motivation for modelling hypothesized mechanisms.
-
-Versions 0.1 to 0.4 · 29 September 2026. Established the body, burger, lens and detective examples; developed the discussion of chain-of-thought, relocalization and stopping; expanded the Passport and observation-scale explanation; and connected presentation, training history and architecture.
+The formal papers distinguish measured findings, hypotheses still to be tested and metaphors that help us understand. This story has one task: explain how we arrived at these questions, step by step, so that someone who knows nothing about models can still follow along.
 
 ## Research records behind the story
 
-[1] Genomic Predictive Geometry and Model Capacity. Chapter 4, Report 04, English edition 1.0. The effective-dimension comparisons, task-conditioned predictive dimensions and Data Passport experiments inform Sections 1 and 9. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/e49d085ff9112a8c02ef3ac1a6ff3914bf74dc32/Chapter_4_Data_Zoo/Genomic_Predictive_Geometry_and_Model_Capacity/REPORT_EN.md)
+[1] **Genomic Predictive Geometry and Model Capacity.** Chapter 4, Report 04. Effective dimensions and the Data Passport provide background for Sections 1 and 9. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/main/Chapter_4_Data_Zoo/Genomic_Predictive_Geometry_and_Model_Capacity/REPORT_EN.md)
 
-[2] Learning Causal Structure from Data Geometry. Chapter 5, Report 02, English edition 1.0. Experiments CG-001–006 and the later transfer and intervention studies inform Sections 3 and 8. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/e49d085ff9112a8c02ef3ac1a6ff3914bf74dc32/Chapter_5_Data_Oriented_Modelling/Learning_Causal_Structure_from_Data_Geometry/REPORT_EN.md)
+[2] **Learning Causal Structure from Data Geometry.** Chapter 5, Report 02. Causal structure, transfer and intervention studies provide background for Sections 3 and 8. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/main/Chapter_5_Data_Oriented_Modelling/Learning_Causal_Structure_from_Data_Geometry/REPORT_EN.md)
 
-[3] Machine Learning Epidemiology and Case Dissection. Chapter 3, Report 01, version 1.9. The training-order interventions, CHAIN-SEMANTICS-007, REASONING-STATE-020, the CoT budget studies and STOPPING-GEOMETRY-029 inform Sections 9 and 13–18. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/e49d085ff9112a8c02ef3ac1a6ff3914bf74dc32/Chapter_3_Machine_Learning_Epidemiology/Research_Report/REPORT_EN.md)
+[3] **Machine Learning Epidemiology and Case Dissection.** Chapter 3, Report 01. Training order, future-response states, chain-of-thought measurements and stopping provide background for Sections 11 and 13–16. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/main/Chapter_3_Machine_Learning_Epidemiology/Research_Report/REPORT_EN.md)
 
-[4] Heterogeneous Data and General Data Intelligence. Chapter 5, Report 01, English edition 1.0. WORLD-MOE-002, WORLD-DATA-MICROSTRUCTURE-004 and DATA-FUSION-PARTITION-006 provide the main comparisons behind Sections 9 and 17. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/e49d085ff9112a8c02ef3ac1a6ff3914bf74dc32/Chapter_5_Data_Oriented_Modelling/Heterogeneous_Data_and_General_Data_Intelligence/REPORT_EN.md)
+[4] **Heterogeneous Data and General Data Intelligence.** Chapter 5, Report 01. Native data structures, capacity, routing and parameter sharing provide background for Sections 9 and 17–19. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/main/Chapter_5_Data_Oriented_Modelling/Heterogeneous_Data_and_General_Data_Intelligence/REPORT_EN.md)
 
-[5] Language Models Motor Control and Deep-Space Drift. Chapter 2, Report 01. The state, response and control comparisons supply the connection used in Section 11. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/e49d085ff9112a8c02ef3ac1a6ff3914bf74dc32/Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/report_text/Dynamic_Generative_Rule_Fitting_Phase2_EN.md)
+[5] **Language Models Motor Control and Deep Space Drift.** Chapter 2, Report 01. State, response and control comparisons provide background for Section 11. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/main/Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/report_text/Dynamic_Generative_Rule_Fitting_Phase2_EN.md)
 
-[6] Modelling Hypothesized Mechanisms Underlying Data. Chapter 5, Report 03, English edition 1.0. Coverage, prevalence calibration, local-scale relations and valid state operators inform Sections 12, 18 and 20. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/e49d085ff9112a8c02ef3ac1a6ff3914bf74dc32/Chapter_5_Data_Oriented_Modelling/Modelling_Hypothesized_Mechanisms_Underlying_Data/REPORT_EN.md)
+[6] **Modelling Hypothesized Mechanisms Underlying Data.** Chapter 5, Report 03. Tested hypotheses about geometry, coverage, calibration and valid operations provide background for Sections 12 and 19–22. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/main/Chapter_5_Data_Oriented_Modelling/Modelling_Hypothesized_Mechanisms_Underlying_Data/REPORT_EN.md)
 
-[7] How Language Models Reach an Answer. Chapter 3, Report 02, English edition 1.0. Experiments 026–027 measure readiness protection and recovery; 028A studies recorded-agent routing and candidate coverage. These inform Sections 15, 16 and 20. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/e49d085ff9112a8c02ef3ac1a6ff3914bf74dc32/Chapter_3_Machine_Learning_Epidemiology/How_Language_Models_Reach_an_Answer/REPORT_EN.md)
-
-[8] Data-Oriented Modeling Corrective Optics for Language Models. Living Engineering Report, version 1.4, 29 September 2026. The research overview and current evidence summary, including ASTIG-013D and ASTIG-013E, inform Section 20.
-
-Public research records were checked on 30 September 2026. This narrative follows the evolving experimental record.
+[7] **How Language Models Reach an Answer.** Chapter 3, Report 02, also listed under Chapter 2. Answer readiness, protection, recovery and action routing provide background for Sections 15–16 and 22. [Open research record](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/main/Chapter_3_Machine_Learning_Epidemiology/How_Language_Models_Reach_an_Answer/REPORT_EN.md)
 
 [Back to Chapter 0](README.md) · [All chapters](../README.md)
