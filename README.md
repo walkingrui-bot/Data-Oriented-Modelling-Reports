@@ -1,5 +1,7 @@
 # Data-Oriented Modelling — Reports
 
+# Intelligence takes shape within the sensory world. A model never sees the world itself. It lives inside the world created by its observations. Tokens, variables, scales, and architectures are not merely ways of feeding data into a model; they form its sensory system. How do humans observe this world? What kind of observer could see it faithfully? 
+
 Read the chapters in order. Each folder contains its report and the supporting experiments and evidence.
 
 | Chapter | Title | Open |
