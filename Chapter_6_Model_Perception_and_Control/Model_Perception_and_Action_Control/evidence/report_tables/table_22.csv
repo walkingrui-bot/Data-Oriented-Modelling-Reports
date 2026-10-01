@@ -1,0 +1,5 @@
+Parameter,Coarse grid,Meaning
+γ_content,0.25 / 0.50,Evidential growth from repeated ordinary content
+γ_role,γ_content or γ_content + 0.25,Additional gain for functional or operational roles
+k_topology,0 / 2 / 3,Number of relevant historical states in the working neighbourhood
+λ_geometry,0 / 1,Local-scale correction strength

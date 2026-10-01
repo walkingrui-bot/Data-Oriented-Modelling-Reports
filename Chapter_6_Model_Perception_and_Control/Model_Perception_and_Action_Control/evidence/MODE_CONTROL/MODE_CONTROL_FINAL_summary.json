@@ -1,0 +1,218 @@
+{
+  "research_id": "MODE-CONTROL-FINAL-20260930-001",
+  "scientific_scope": "exploratory; frozen Qwen2.5-1.5B-Instruct revision, original 70-pair cohort and first-action task only",
+  "verdict": "CONTROL INTERFACE FOUND",
+  "qualifying_single_blocks": [
+    23,
+    22,
+    21
+  ],
+  "distributed_fallback_triggered": false,
+  "top_three_blocks_selected_before_generation": [
+    23,
+    22,
+    21
+  ],
+  "block_gates": {
+    "23": {
+      "passes": true,
+      "gates": {
+        "text_to_act_mean_positive_ci_excludes_zero": true,
+        "act_to_text_mean_negative_ci_excludes_zero": true,
+        "both_pair_direction_fractions_at_least_0_70": true,
+        "above_orthogonal_95th": true,
+        "above_label_swap_95th": true,
+        "actual_overaction_first_action_rescue": true,
+        "collateral_preserved": true
+      },
+      "C_raw": 1.8570980344499861,
+      "C_ci95": [
+        1.7978583092348916,
+        1.9125736912659235
+      ],
+      "text_plus1_mean_ci95": [
+        1.8732637132917132,
+        1.8062321696962629,
+        1.9471172387259346
+      ],
+      "act_minus1_mean_ci95": [
+        -1.8409323556082589,
+        -1.898806234768459,
+        -1.7871740232195175
+      ],
+      "intended_pair_fraction": [
+        1.0,
+        1.0
+      ],
+      "control_C_95th": [
+        0.026178815024239677,
+        0.18243071692330515
+      ],
+      "rescued_alpha_minus1_count": 9,
+      "rescued_alpha_minus1_ids": [
+        "MC001-002",
+        "MC001-004",
+        "MC001-005",
+        "MC001-020",
+        "MC001-043",
+        "MC001-045",
+        "MC001-046",
+        "MC001-049",
+        "MC001-067"
+      ]
+    },
+    "22": {
+      "passes": true,
+      "gates": {
+        "text_to_act_mean_positive_ci_excludes_zero": true,
+        "act_to_text_mean_negative_ci_excludes_zero": true,
+        "both_pair_direction_fractions_at_least_0_70": true,
+        "above_orthogonal_95th": true,
+        "above_label_swap_95th": true,
+        "actual_overaction_first_action_rescue": true,
+        "collateral_preserved": true
+      },
+      "C_raw": 1.8508623940604074,
+      "C_ci95": [
+        1.7898106529031481,
+        1.9111791016374315
+      ],
+      "text_plus1_mean_ci95": [
+        1.8448196547372,
+        1.777373834337507,
+        1.9094104191235133
+      ],
+      "act_minus1_mean_ci95": [
+        -1.8569051333836146,
+        -1.9151272061892919,
+        -1.798018753187997
+      ],
+      "intended_pair_fraction": [
+        1.0,
+        1.0
+      ],
+      "control_C_95th": [
+        0.03761685643877303,
+        0.2764611986705236
+      ],
+      "rescued_alpha_minus1_count": 9,
+      "rescued_alpha_minus1_ids": [
+        "MC001-002",
+        "MC001-004",
+        "MC001-005",
+        "MC001-020",
+        "MC001-043",
+        "MC001-045",
+        "MC001-046",
+        "MC001-049",
+        "MC001-067"
+      ]
+    },
+    "21": {
+      "passes": true,
+      "gates": {
+        "text_to_act_mean_positive_ci_excludes_zero": true,
+        "act_to_text_mean_negative_ci_excludes_zero": true,
+        "both_pair_direction_fractions_at_least_0_70": true,
+        "above_orthogonal_95th": true,
+        "above_label_swap_95th": true,
+        "actual_overaction_first_action_rescue": true,
+        "collateral_preserved": true
+      },
+      "C_raw": 1.81099408694676,
+      "C_ci95": [
+        1.7503997678416114,
+        1.8738183064120155
+      ],
+      "text_plus1_mean_ci95": [
+        1.8007503645760672,
+        1.7331898999214173,
+        1.8672230352674213
+      ],
+      "act_minus1_mean_ci95": [
+        -1.8212378093174526,
+        -1.8779194685391016,
+        -1.7671797258513315
+      ],
+      "intended_pair_fraction": [
+        1.0,
+        1.0
+      ],
+      "control_C_95th": [
+        0.051831946032387874,
+        0.13801271063940868
+      ],
+      "rescued_alpha_minus1_count": 7,
+      "rescued_alpha_minus1_ids": [
+        "MC001-002",
+        "MC001-005",
+        "MC001-020",
+        "MC001-043",
+        "MC001-046",
+        "MC001-049",
+        "MC001-067"
+      ]
+    }
+  },
+  "collateral": {
+    "max_orthogonal_relative_error": 1.0913070980222983e-07,
+    "median_delta_over_hidden_norm_all_nonzero_conditions": 0.03420311212539673,
+    "max_delta_over_hidden_norm_all_nonzero_conditions": 0.2049049735069275,
+    "other_outputs": 0,
+    "true_malformed_outputs": 0,
+    "cap_truncated_undetermined_outputs": 2256,
+    "tool_name_changed_while_remain_act": 0,
+    "prompt_and_schema_unchanged": true
+  },
+  "arbitration": {
+    "native_first_token_reproduced": 140,
+    "raw_argmax_vs_selected_divergences": 7,
+    "processor": "RepetitionPenaltyLogitsProcessor(1.1)",
+    "processed_score_max_abs_difference_from_native": 0.0
+  },
+  "reversal": {
+    "attempt_id": "FINAL-REVERSAL-20260930-001",
+    "completed_at": "2026-09-30T23:48:28+01:00",
+    "elapsed_seconds": 235.804,
+    "initial_block": 23,
+    "over_action_pairs": 59,
+    "matrix_cells": 236,
+    "reverse_blocks": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "max_first_edit_logit_diff_vs_original": 4.1961669921875e-05,
+    "all_first_edit_tokens_equal_original": true,
+    "by_reverse_block": {
+      "24": {
+        "initial_rescued_text": 9,
+        "restored_act_from_initial_rescue": 9,
+        "reversed_act_all_59": 59,
+        "reversed_other_all_59": 0
+      },
+      "25": {
+        "initial_rescued_text": 9,
+        "restored_act_from_initial_rescue": 9,
+        "reversed_act_all_59": 59,
+        "reversed_other_all_59": 0
+      },
+      "26": {
+        "initial_rescued_text": 9,
+        "restored_act_from_initial_rescue": 9,
+        "reversed_act_all_59": 59,
+        "reversed_other_all_59": 0
+      },
+      "27": {
+        "initial_rescued_text": 9,
+        "restored_act_from_initial_rescue": 5,
+        "reversed_act_all_59": 55,
+        "reversed_other_all_59": 0
+      }
+    }
+  },
+  "actual_text_first_action_does_not_prove_completed_clarification": true,
+  "act_tool_calls_truncated_at_16_tokens_not_certified_executable": true,
+  "provenance": "Publication projection of the recovered final summary. Numeric results are unchanged. Row-level intervention records are not included in this edition."
+}

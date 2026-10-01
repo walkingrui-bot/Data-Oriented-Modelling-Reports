@@ -1,0 +1,6 @@
+Measure,Early,Mid,Late
+Mean reasoning-chunk length in words,77,102,129
+First-person density,6.00%,5.38%,5.20%
+Social or conversational filler density,0.337%,0.320%,0.222%
+Repeated bigrams,5.19%,8.00%,7.81%
+Repeated trigrams,0.81%,1.41%,1.69%

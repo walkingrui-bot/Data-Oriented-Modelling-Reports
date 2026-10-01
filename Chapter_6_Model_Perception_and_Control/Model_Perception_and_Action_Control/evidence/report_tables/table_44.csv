@@ -1,0 +1,3 @@
+Verification pipeline,Shell rc,Output semantics
+Ordinary pipeline,0,ImportError: hypothesis is a required dependency
+Pipeline with pipefail,4,The same ImportError

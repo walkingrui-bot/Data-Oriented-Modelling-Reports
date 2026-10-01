@@ -1,0 +1,6 @@
+Stage,Fixed prescription,Pooled LOOCV accuracy
+Raw,γ = 1; all history; no Geometry,50.00%
++ Exposure,γ_content = γ_role = 0.50; all history,52.34%
++ Topology,γ = 0.50; k = 2,58.59%
++ Geometry,γ = 0.50; k = 2; λ = 1,59.38%
++ Role,γ_content = 0.50; γ_role = 0.70; k = 2; λ = 1,61.72%

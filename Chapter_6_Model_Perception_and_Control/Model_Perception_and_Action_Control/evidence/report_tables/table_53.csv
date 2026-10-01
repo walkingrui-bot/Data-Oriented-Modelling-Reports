@@ -1,0 +1,3 @@
+Diagnostic,TEXT mean,ACT mean,ACT−TEXT mean,Median shift,Positive pairs
+Reference mean-logprob margin M_ref,+0.862,+1.436,+0.574,+0.516,60/70 (85.7%)
+Start-token margin,+8.935,+12.155,+3.220,+2.119,58/70 (82.9%)

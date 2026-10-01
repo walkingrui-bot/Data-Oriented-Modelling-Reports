@@ -1,0 +1,24 @@
+{
+  "experiment": "ASTIG-012A",
+  "validation_design": "Independent 10-task matched mini-SWE-agent cohort; same tasks across GPT-5-mini, DeepSeek-v4-flash, Qwen-2.5-7B.",
+  "primary_gate": {
+    "window": 8,
+    "minimum_steps": 6,
+    "warning_repeat_mass": 0.25,
+    "strong_repeat_mass": 0.5,
+    "persistence_windows": 2,
+    "immediate_strong_repeat_mass": 0.75
+  },
+  "qwen_loop_tasks_detected": "8/8",
+  "qwen_submitted_strong_alerts": "0/2",
+  "gpt_submitted_strong_alerts": "0/10",
+  "deepseek_submitted_strong_alerts": "0/10",
+  "first_strong_loop_step_mean": 12.5,
+  "first_strong_loop_step_range": [
+    9,
+    14
+  ],
+  "mean_steps_before_50_step_limit": 37.5,
+  "first_warning_step_mean": 8.5,
+  "threshold_sweep": "All 9 W x threshold settings detected 8/8 Qwen loop tasks; default W=8 gave 0/22 strong-loop alerts among submitted controls for thresholds 0.4, 0.5, and 0.6."
+}

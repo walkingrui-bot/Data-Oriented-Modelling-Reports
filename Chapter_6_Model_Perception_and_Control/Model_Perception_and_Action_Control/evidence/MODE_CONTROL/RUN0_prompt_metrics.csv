@@ -1,0 +1,5 @@
+pair_id,variant,prompt_tokens,hidden_state_count,hidden_state_shape_json,hook_shape_json,hook_vs_hidden1_max_abs_error,final_logits_shape_json,tentative_first_action,greedy_repeat_equal
+451cb5bb-8d71-47ae-acd3-220d1db9a969,TEXT,706,29,"[29, 1536]","[1, 706, 1536]",0.0,"[1, 706, 151936]",ACT,True
+451cb5bb-8d71-47ae-acd3-220d1db9a969,ACT,708,29,"[29, 1536]","[1, 708, 1536]",0.0,"[1, 708, 151936]",ACT,NOT_REPEATED
+03741490-fd7f-4cd2-94bb-e9d75306ebf3,TEXT,1252,29,"[29, 1536]","[1, 1252, 1536]",0.0,"[1, 1252, 151936]",ACT,NOT_REPEATED
+03741490-fd7f-4cd2-94bb-e9d75306ebf3,ACT,1262,29,"[29, 1536]","[1, 1262, 1536]",0.0,"[1, 1262, 151936]",ACT,NOT_REPEATED

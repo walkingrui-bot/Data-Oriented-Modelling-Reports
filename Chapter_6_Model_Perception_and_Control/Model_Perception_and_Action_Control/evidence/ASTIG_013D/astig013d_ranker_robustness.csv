@@ -1,0 +1,4 @@
+policy,edit,test,submit,primary_role_match,premature_submit,note
+ASTIG-013B stage-blind 512D hashed role→similarity,139,64,97,not reidentified,>=76/97 (>=78.35%),prior archived result
+ASTIG-013D stage-blind exact sparse BoW cosine,236,21,43,74/300 (24.67%),42/43 (97.67%),fresh robustness rerun; ranking implementation deliberately un-hashed
+ASTIG-013D phase→role→exact sparse BoW cosine,112,113,75,300/300 (100%),0 by eligibility,phase-primary role available in 300/300 states

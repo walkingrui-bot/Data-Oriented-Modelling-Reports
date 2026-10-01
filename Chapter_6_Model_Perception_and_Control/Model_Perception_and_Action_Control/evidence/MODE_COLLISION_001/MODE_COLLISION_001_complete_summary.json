@@ -1,0 +1,226 @@
+{
+  "dataset": "70 real request-for-info / original executable minimal pairs from When2Call MCQ",
+  "surface_pair_similarity": {
+    "pair_similarity_mean": 0.8490813973494912,
+    "median": 0.8514837819185646,
+    "min": 0.6802721088435374,
+    "max": 0.9724770642201835
+  },
+  "tokencode_distribution": [
+    {
+      "n": 1,
+      "total_variation": 0.04018091843948962,
+      "js_divergence_bits": 0.006035438443701191,
+      "support_jaccard": 0.907563025210084,
+      "probability_mass_overlap": 0.9598190815605102,
+      "unique_text": 110,
+      "unique_act": 117
+    },
+    {
+      "n": 2,
+      "total_variation": 0.0949310726175269,
+      "js_divergence_bits": 0.026261951295224857,
+      "support_jaccard": 0.797634691195795,
+      "probability_mass_overlap": 0.9050689273824731,
+      "unique_text": 624,
+      "unique_act": 744
+    },
+    {
+      "n": 3,
+      "total_variation": 0.15756190952058768,
+      "js_divergence_bits": 0.06991587601690674,
+      "support_jaccard": 0.7487852283770651,
+      "probability_mass_overlap": 0.8424380904794123,
+      "unique_text": 1645,
+      "unique_act": 1954
+    },
+    {
+      "n": 4,
+      "total_variation": 0.200906438772236,
+      "js_divergence_bits": 0.11097717263182127,
+      "support_jaccard": 0.7025135221126313,
+      "probability_mass_overlap": 0.7990935612277641,
+      "unique_text": 2438,
+      "unique_act": 2913
+    }
+  ],
+  "surrogate": "8-layer 24D causal Transformer trained only on UTF-8 byte tokencodes; pair-grouped held-out evaluation; 3 seeds for layerwise readability check",
+  "seed7_final_train_acc": 1.0,
+  "seed7_final_heldout_acc": 0.5714285969734192,
+  "three_seed_decision": [
+    {
+      "layer": 0,
+      "probe_mean": 0.6071428571428571,
+      "probe_sd": 0.03571428571428577,
+      "fisher_mean": 0.05127440749654457,
+      "fisher_sd": 0.01300427255714268,
+      "mix_mean": 0.5499999999999999,
+      "mix_sd": 0.031134992453861976
+    },
+    {
+      "layer": 1,
+      "probe_mean": 0.5952380952380952,
+      "probe_sd": 0.05455447255899812,
+      "fisher_mean": 0.0533998907725154,
+      "fisher_sd": 0.01420732310067802,
+      "mix_mean": 0.5523809523809523,
+      "mix_sd": 0.04755948656056706
+    },
+    {
+      "layer": 2,
+      "probe_mean": 0.6190476190476191,
+      "probe_sd": 0.020619652471058125,
+      "fisher_mean": 0.0580095874739992,
+      "fisher_sd": 0.014904200561770237,
+      "mix_mean": 0.530952380952381,
+      "mix_sd": 0.06636838030841119
+    },
+    {
+      "layer": 3,
+      "probe_mean": 0.5714285714285714,
+      "probe_sd": 0.0357142857142857,
+      "fisher_mean": 0.064027104178678,
+      "fisher_sd": 0.013959108055123928,
+      "mix_mean": 0.5452380952380952,
+      "mix_sd": 0.0693752489730165
+    },
+    {
+      "layer": 4,
+      "probe_mean": 0.6190476190476191,
+      "probe_sd": 0.020619652471058125,
+      "fisher_mean": 0.0719977939189984,
+      "fisher_sd": 0.011356502041898722,
+      "mix_mean": 0.5380952380952381,
+      "mix_sd": 0.06074928962939554
+    },
+    {
+      "layer": 5,
+      "probe_mean": 0.6190476190476191,
+      "probe_sd": 0.04123930494211614,
+      "fisher_mean": 0.08499022305317394,
+      "fisher_sd": 0.013932943778988927,
+      "mix_mean": 0.5142857142857142,
+      "mix_sd": 0.014285714285714318
+    },
+    {
+      "layer": 6,
+      "probe_mean": 0.6309523809523809,
+      "probe_sd": 0.05455447255899813,
+      "fisher_mean": 0.11037167256900567,
+      "fisher_sd": 0.03762038228805355,
+      "mix_mean": 0.5190476190476191,
+      "mix_sd": 0.064020617427375
+    },
+    {
+      "layer": 7,
+      "probe_mean": 0.6309523809523809,
+      "probe_sd": 0.05455447255899813,
+      "fisher_mean": 0.13369658675672857,
+      "fisher_sd": 0.07894516646064943,
+      "mix_mean": 0.5047619047619047,
+      "mix_sd": 0.04592214648091886
+    },
+    {
+      "layer": 8,
+      "probe_mean": 0.6547619047619048,
+      "probe_sd": 0.05455447255899812,
+      "fisher_mean": 0.15080636589214483,
+      "fisher_sd": 0.11709082466110794,
+      "mix_mean": 0.5071428571428571,
+      "mix_sd": 0.025753937681885632
+    }
+  ],
+  "three_seed_mean": [
+    {
+      "layer": 0,
+      "probe_mean": 0.6309523809523809,
+      "probe_sd": 0.08247860988423224,
+      "fisher_mean": 0.04043399279181944,
+      "fisher_sd": 0.009033627702626551,
+      "mix_mean": 0.5833333333333334,
+      "mix_sd": 0.02061965247105807
+    },
+    {
+      "layer": 1,
+      "probe_mean": 0.6309523809523809,
+      "probe_sd": 0.05455447255899813,
+      "fisher_mean": 0.03881553660687627,
+      "fisher_sd": 0.0090317799059331,
+      "mix_mean": 0.5880952380952381,
+      "mix_sd": 0.017975796274454187
+    },
+    {
+      "layer": 2,
+      "probe_mean": 0.6428571428571429,
+      "probe_sd": 0.03571428571428578,
+      "fisher_mean": 0.039614372762461735,
+      "fisher_sd": 0.007717135724669308,
+      "mix_mean": 0.5738095238095239,
+      "mix_sd": 0.00412393049421167
+    },
+    {
+      "layer": 3,
+      "probe_mean": 0.6428571428571429,
+      "probe_sd": 0.03571428571428574,
+      "fisher_mean": 0.0437588842999746,
+      "fisher_sd": 0.018481483701334525,
+      "mix_mean": 0.580952380952381,
+      "mix_sd": 0.014869042853329545
+    },
+    {
+      "layer": 4,
+      "probe_mean": 0.6785714285714285,
+      "probe_sd": 0.0357142857142857,
+      "fisher_mean": 0.0507754582320332,
+      "fisher_sd": 0.03337485988575831,
+      "mix_mean": 0.5666666666666667,
+      "mix_sd": 0.008247860988423195
+    },
+    {
+      "layer": 5,
+      "probe_mean": 0.6785714285714285,
+      "probe_sd": 0.0357142857142857,
+      "fisher_mean": 0.06138053601884726,
+      "fisher_sd": 0.0479721647164503,
+      "mix_mean": 0.5571428571428572,
+      "mix_sd": 0.021428571428571463
+    },
+    {
+      "layer": 6,
+      "probe_mean": 0.7023809523809524,
+      "probe_sd": 0.054554472558998056,
+      "fisher_mean": 0.07618116555208963,
+      "fisher_sd": 0.06085216403328724,
+      "mix_mean": 0.557142857142857,
+      "mix_sd": 0.02474358296526967
+    },
+    {
+      "layer": 7,
+      "probe_mean": 0.6547619047619048,
+      "probe_sd": 0.02061965247105807,
+      "fisher_mean": 0.09340566051458343,
+      "fisher_sd": 0.07108428677879425,
+      "mix_mean": 0.5499999999999999,
+      "mix_sd": 0.025753937681885684
+    },
+    {
+      "layer": 8,
+      "probe_mean": 0.6309523809523809,
+      "probe_sd": 0.041239304942116174,
+      "fisher_mean": 0.10841613448895142,
+      "fisher_sd": 0.07704388375951102,
+      "mix_mean": 0.5476190476190476,
+      "mix_sd": 0.029738085706659045
+    }
+  ],
+  "observations": {
+    "surface_absolute_exclusion": false,
+    "surface_reason": "all n-gram distributions retain non-zero mass overlap; held-out raw tokencode linear probe is near chance",
+    "any_layer_absolute_exclusion": false,
+    "best_mean_probe_layer": 6,
+    "best_mean_probe_acc": 0.7023809523809524,
+    "final_mean_probe_acc": 0.6309523809523809,
+    "decision_fisher_trend": "increases with depth on 3-seed mean, but local cross-mode mixing remains near 0.5 rather than collapsing toward 0",
+    "interpretation": "controlled surrogate shows learned layerwise reshaping and a mid-layer readability peak for sequence-mean state, but no near-disjoint mode geometry."
+  }
+}

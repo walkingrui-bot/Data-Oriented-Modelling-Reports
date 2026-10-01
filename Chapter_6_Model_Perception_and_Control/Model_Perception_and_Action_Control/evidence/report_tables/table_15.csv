@@ -1,0 +1,5 @@
+Stage,Mean task accuracy,Far-field Attention mass,Incoming-mass Gini
+Raw,83.45%,77.99%,0.329
++ Exposure,88.61%,76.68%,0.147
++ Topology,93.90%,0%,0.245
++ Geometry,94.15%,0%,0.202

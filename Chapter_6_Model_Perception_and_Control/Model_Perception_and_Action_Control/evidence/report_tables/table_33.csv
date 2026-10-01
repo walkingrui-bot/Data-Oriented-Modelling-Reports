@@ -1,0 +1,5 @@
+Candidate search,Strong-loop states with an admissible candidate,Coverage,States whose nearest candidate is Edit Test or Submit
+Qwen own-history · k=2,131 / 300,43.67%,6 / 300 (2.00%)
+Qwen own-history · k=4,142 / 300,47.33%,8 / 300 (2.67%)
+Qwen own-history · k=8,178 / 300,59.33%,13 / 300 (4.33%)
+Same-task GPT/DeepSeek · unseen exact command,300 / 300,100%,31 / 300 (10.33%)

@@ -1,0 +1,4 @@
+Task,Recorded verification action,Execution observation,Subsequent smoke check
+sympy-20154,pytest partition-related tests,Missing hypothesis dependency; output reports ImportError,PASS
+sympy-23950,Read the relevant test file,Command completes with source unchanged,PASS
+sympy-22914,Run /tmp/test_min_max.py,Temporary script absent; equivalent inline verification subsequently passes,PASS

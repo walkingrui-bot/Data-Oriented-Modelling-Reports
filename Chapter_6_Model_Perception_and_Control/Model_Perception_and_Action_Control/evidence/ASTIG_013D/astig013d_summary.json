@@ -1,0 +1,96 @@
+{
+  "experiment": "ASTIG-013D Phase-aware Escape Rollout / takeover-horizon replay",
+  "data": {
+    "qwen_strong_loop_states": 300,
+    "loop_tasks": 8,
+    "external_submitted_sources": [
+      "GPT-5-mini",
+      "DeepSeek-v4-flash"
+    ]
+  },
+  "replay_selector": {
+    "role_order": "phase -> primary progression role -> exact sparse bag-of-words cosine",
+    "reason_for_unhashed_cosine": "remove 512D hash-collision dependence in the rollout layer",
+    "selected_source_counts": {
+      "GPT": 151,
+      "DeepSeek": 149
+    }
+  },
+  "ranker_robustness": {
+    "stage_blind_sparse_role_counts": {
+      "edit": 236,
+      "test": 21,
+      "submit": 43
+    },
+    "stage_blind_primary_role_match": {
+      "n": 74,
+      "pct": 24.67
+    },
+    "stage_blind_premature_submit": {
+      "n": 42,
+      "denominator": 43,
+      "pct": 97.67
+    },
+    "phase_aware_primary_role_match": {
+      "n": 300,
+      "pct": 100.0
+    }
+  },
+  "successful_continuation_replay": {
+    "phase_milestone_within_3_steps": {
+      "n": 300,
+      "pct": 100.0
+    },
+    "h5_recent_cooldown_collision_free": {
+      "n": 300,
+      "pct": 100.0
+    },
+    "mean_exact_command_novelty_h5_pct": 100.0,
+    "mean_progression_density_h3_pct": 79.89,
+    "mean_progression_density_h5_pct": 80.56,
+    "submit_within_5_steps": {
+      "n": 174,
+      "pct": 58.0
+    }
+  },
+  "one_shot_return_to_original_qwen_future": {
+    "next_gate_clear": {
+      "n": 8,
+      "pct": 2.67
+    },
+    "clear_for_4_decisions": {
+      "n": 2,
+      "pct": 0.67
+    },
+    "clear_for_8_decisions": {
+      "n": 0,
+      "pct": 0.0
+    },
+    "mean_strong_loop_fraction_next5_pct": 98.13,
+    "mean_repeat_mass_at_injection_pct": 83.5
+  },
+  "takeover_horizon": {
+    "minimal_steps_distribution": {
+      "1": 80,
+      "2": 22,
+      "3": 48,
+      "4": 39,
+      "5": 111,
+      ">5": 0
+    },
+    "cumulative_completion": {
+      "1": 80,
+      "2": 102,
+      "3": 150,
+      "4": 189,
+      "5": 300
+    },
+    "five_step_decomposition": {
+      "terminal_submit": 174,
+      "gate_clear_nonterminal": 126,
+      "total": 300
+    }
+  },
+  "engineering_interpretation": "A single novel escape command usually does not erase an already saturated W=8 recurrence state. The strong-loop branch should remain latched after the first escape and continue phase-aware routing until either Submit terminates the task or the recurrence gate clears. In controlled replay, every state reached one of those release conditions within at most five injected successful-path commands.",
+  "evidence_boundary": "Controlled multistep replay over recorded Qwen/GPT/DeepSeek trajectories. Recorded donor continuation segments supply the injected command sequence; this experiment does not re-execute them in the original Qwen repository state."
+}

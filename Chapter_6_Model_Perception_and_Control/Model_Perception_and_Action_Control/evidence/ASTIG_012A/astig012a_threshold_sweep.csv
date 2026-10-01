@@ -1,0 +1,10 @@
+window,strong_threshold,qwen_loop_alerted,qwen_loop_total,qwen_submitted_alerted,qwen_submitted_total,gpt_submitted_alerted,gpt_total,deepseek_submitted_alerted,deepseek_total,all_control_alerted,all_control_total
+6,0.4,8,8,0,2,1,10,0,10,1,22
+6,0.5,8,8,0,2,1,10,0,10,1,22
+6,0.6,8,8,0,2,0,10,0,10,0,22
+8,0.4,8,8,0,2,0,10,0,10,0,22
+8,0.5,8,8,0,2,0,10,0,10,0,22
+8,0.6,8,8,0,2,0,10,0,10,0,22
+10,0.4,8,8,0,2,1,10,0,10,1,22
+10,0.5,8,8,0,2,0,10,0,10,0,22
+10,0.6,8,8,0,2,0,10,0,10,0,22

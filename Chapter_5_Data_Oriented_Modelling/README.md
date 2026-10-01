@@ -18,4 +18,6 @@ Report 03 develops mechanism-guided modelling through local-scale relations, tra
 
 [Back to Data-Oriented Modelling — Reports](../README.md)
 
+Related study: [Chapter 6, Report 01 — Model Perception and Action Control](../Chapter_6_Model_Perception_and_Control/Model_Perception_and_Action_Control/README.md) connects these questions to calibrated observation, action eligibility and targeted first-action intervention.
+
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.

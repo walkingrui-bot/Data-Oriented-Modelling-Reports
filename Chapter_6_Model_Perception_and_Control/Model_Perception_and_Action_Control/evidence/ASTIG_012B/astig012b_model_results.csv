@@ -1,0 +1,4 @@
+model,states,raw_accuracy,local_corrected_accuracy,naive_regime_gated_accuracy,strong_loop_states
+GPT-5-mini,153,52.29,66.01,66.01,0
+DeepSeek-v4-flash,267,57.3,63.67,63.67,0
+Qwen-2.5-7B,410,26.1,53.17,29.76,300

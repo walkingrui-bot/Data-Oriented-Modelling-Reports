@@ -1,0 +1,9 @@
+task,strong_states,pre_edit,post_edit_unverified,post_edit_validated,test_failed
+sympy__sympy-20154,37,0,36,1,0
+sympy__sympy-24562,36,36,0,0,0
+sympy__sympy-13757,36,36,0,0,0
+sympy__sympy-23950,36,0,18,18,0
+sympy__sympy-24661,41,0,21,20,0
+sympy__sympy-13551,36,0,0,36,0
+sympy__sympy-22914,38,0,38,0,0
+sympy__sympy-19346,40,40,0,0,0

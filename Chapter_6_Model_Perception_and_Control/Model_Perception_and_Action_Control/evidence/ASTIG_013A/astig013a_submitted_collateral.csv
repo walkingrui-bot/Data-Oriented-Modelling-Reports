@@ -1,0 +1,4 @@
+model,trajectories,states,strong_gate_states,always_h1_blocks,always_h2_blocks,always_h4_blocks,always_h8_blocks,gated_h1_blocks,gated_h2_blocks,gated_h4_blocks,gated_h8_blocks
+GPT-5-mini,10,153,0,3,3,6,7,0,0,0,0
+DeepSeek-v4-flash,10,267,0,0,1,3,4,0,0,0,0
+Qwen-2.5-7B Submitted,2,10,0,0,0,0,0,0,0,0,0

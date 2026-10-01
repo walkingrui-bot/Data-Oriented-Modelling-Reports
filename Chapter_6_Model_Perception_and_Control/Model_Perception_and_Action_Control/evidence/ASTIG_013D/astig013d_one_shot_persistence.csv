@@ -1,0 +1,6 @@
+metric,value,pct
+next decision gate clear after one injected command,8/300,2.67
+four-decision sustained clear after one injected command,2/300,0.67
+eight-decision sustained clear after one injected command,0/300,0.0
+mean strong-loop fraction over next 5 decisions if original Qwen future resumes,98.13%,98.13
+mean repeat-mass at injected step,83.50%,83.5

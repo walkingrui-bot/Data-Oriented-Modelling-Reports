@@ -54,4 +54,6 @@ This report follows language and agent working states through four experimental 
 
 The same report is cross-listed as [Chapter 2, Report 02](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md#report-02--how-language-models-reach-an-answer). The canonical report and evidence are maintained here.
 
+Related study: [Chapter 6, Report 01 — Model Perception and Action Control](../Chapter_6_Model_Perception_and_Control/Model_Perception_and_Action_Control/README.md) connects these questions to calibrated observation, action eligibility and targeted first-action intervention.
+
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.

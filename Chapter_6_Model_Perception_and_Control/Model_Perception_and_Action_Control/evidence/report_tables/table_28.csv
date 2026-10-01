@@ -1,0 +1,5 @@
+Cohort,Tasks,Strong-loop alerts,Observed regime
+Qwen-2.5-7B · LimitsExceeded,8,8 / 8,All alerted at steps 9–14
+Qwen-2.5-7B · Submitted,2,0 / 2,Remained normal
+GPT-5-mini · Submitted,10,0 / 10,Includes a 42-step Submitted trace
+DeepSeek-v4-flash · Submitted,10,0 / 10,Includes a 44-step Submitted trace

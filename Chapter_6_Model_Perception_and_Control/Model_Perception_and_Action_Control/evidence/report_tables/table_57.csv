@@ -1,0 +1,14 @@
+Source,Use in this study
+Research-conversation code samples,"ASTIG-001–003 surface distributions, permutations, exposure and control roles"
+SWE-bench experiments verified/20250522_sweagent_claude-4-sonnet-20250514,ASTIG-004 Claude 4 Sonnet action trajectories
+SWE-Xplorer-Experiments GPT-5-mini OpenCode trajectories,"ASTIG-005–006 and 008–010 recorded reasoning, messages, tool actions, cumulative context, calibration and stress tests"
+"scikit-learn Iris, Wine, Breast Cancer Wisconsin and Digits",ASTIG-007 numerical Geometry/Topology relation probes
+ASTIG-010 analysis records,"Sequential results, stress curves and summary; Figures 16–19"
+ASTIG-012A independent matched cohort,"Ten tasks × three models; gate outcomes, threshold sweep and summary; Figures 23–25"
+ASTIG-012B independent action-state decoder,"The same cohort; 512-dimensional hashed states and task-held-out weighted kNN; model results, Qwen parameter sweep and summary; Figures 26–28"
+ASTIG-013A records,"Cooldown sweep, task interception, Submitted controls and summary; Figures 29–31"
+ASTIG-013B records,"Candidate expansion, unseen commands and progression-role availability; task results and summary; Figures 32–34"
+ASTIG-013C records,"Phase calibration, phase counts, role availability and premature-submit bounds; summary and reproduction script; Figures 35–38"
+ASTIG-013D records,"Sparse-cosine ranking, one-step persistence and one- through five-step replay; task results, robustness, horizon tables and summary; Figures 39–42"
+ASTIG-013E records,"Eight-command compatibility execution; execution matrix, summary and observer results; Figures 43–45"
+MODE-COLLISION-001 records,"Seventy When2Call minimal pairs; byte distributions and eight-layer Transformer geometry; layerwise tables, spectra, three-seed summaries and analysis scripts; Figures 46–49"

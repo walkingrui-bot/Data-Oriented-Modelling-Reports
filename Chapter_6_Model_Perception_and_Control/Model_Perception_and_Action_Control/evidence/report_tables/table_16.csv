@@ -1,0 +1,7 @@
+Long-task correction stage,Accuracy across 135 steps,Difference from raw
+Raw cumulative context,36.30%,—
++ Exposure,45.93%,+9.63 pp
++ Role/Intent on the full history,42.96%,+6.66 pp
++ Topology without Role,47.41%,+11.11 pp
++ Topology + Role/Intent,48.15%,+11.85 pp
++ Geometry completing the stack,50.37%,+14.07 pp

@@ -1,0 +1,7 @@
+Engineering measure,Valid result,Interpretation
+Model,Qwen2.5-1.5B-Instruct · 1.5437B params,Complete forward evaluation of the pretrained model
+Internal structure,28 blocks · 1536D · 29 hidden-state positions,Layerwise decision states are available
+Numerical finiteness,Hidden states and final logits finite for all four prompts,A valid numerical baseline for geometry and intervention
+Hook agreement,first-block hook vs hidden_state[1] max abs error = 0,The intervention hook matches the reported hidden-state position
+Greedy repeatability,Repeated generation gives identical token IDs,Behaviour can be compared under fixed decoding
+Runtime after caching,16.162 s,Measured runtime of the bounded valid preliminary run

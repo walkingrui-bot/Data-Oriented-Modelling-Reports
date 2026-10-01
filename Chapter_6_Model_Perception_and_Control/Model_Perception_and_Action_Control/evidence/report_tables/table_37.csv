@@ -1,0 +1,10 @@
+Task,Role-only Submit,Submit-ready states,Guaranteed premature Submit
+sympy-20154,35,1,≥34
+sympy-24562,0,0,0
+sympy-13757,0,0,0
+sympy-23950,0,18,0
+sympy-24661,21,20,≥1
+sympy-13551,0,36,0
+sympy-22914,38,0,38
+sympy-19346,3,0,3
+Total,97,75,≥76

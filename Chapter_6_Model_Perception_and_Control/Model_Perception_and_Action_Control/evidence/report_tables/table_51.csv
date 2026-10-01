@@ -1,0 +1,6 @@
+Input variant,Expected first action,Observed first action,Result
+ACT · pair 1,Tool/ACT,"Tool call · Shanghai, China",Correct
+TEXT · pair 1,Request info/TEXT,"Tool call · invented New York, USA",Incorrect
+ACT · pair 2,Tool/ACT,"Tool call · Big Sur, CA",Correct
+TEXT · pair 2,Request info/TEXT,"Tool call · invented Denver, United States",Incorrect
+Pair-level hard switch,Both variants follow their respective modes,0 / 2 pairs,No correct pair-level switch in the two-pair check

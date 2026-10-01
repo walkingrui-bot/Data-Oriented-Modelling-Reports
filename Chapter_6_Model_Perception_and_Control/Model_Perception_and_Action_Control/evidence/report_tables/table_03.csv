@@ -1,0 +1,6 @@
+Statistic,Observed sequence,Permutation reference,Result
+Window Fano statistic,1.163,0.928 ± 0.061,About +3.86 SD
+Repeated bigram types,109,20.6,About 5.3×
+Repeated trigram types,44,0.23,About 191×
+Repeated four-gram types,17,0,Essentially absent in the permutations
+Median return distance of repeated codes,31,38.6,Shorter spacing in the observed sequence

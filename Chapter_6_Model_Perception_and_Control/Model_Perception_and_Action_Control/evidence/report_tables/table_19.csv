@@ -1,0 +1,5 @@
+Batch,Best fixed prescription,Ungated adaptive,State oracle,Interpretation
+Batch A · 43 states,51.16%,46.51%,53.49%,Little switching opportunity; routing introduces error
+Batch B · 43 states,55.81%,55.81%,58.14%,Routing preserves performance with limited available gain
+Batch C · 42 states,38.10%,40.48%,47.62%,More prescription heterogeneity
+Pooled · 128 states,47.66%,47.66%,53.12%,Ungated adaptation matches the pooled fixed comparison

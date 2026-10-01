@@ -6,7 +6,7 @@ Intelligence takes shape within the sensory world. A model never sees the world 
 
 **[Don't feel like reading the reports? Getting lost in them? Start with Chapter 0 — The Story Version.](Chapter_0_The_Story_Version/README.md)** A moving finger, a cloud of data, a stack of burgers and a detective explain why we are doing this research. The story grows with the project.
 
-Chapters 1–5 contain the research reports, supporting experiments and evidence.
+Chapters 1–6 contain the research reports, supporting experiments and evidence.
 
 | Chapter | Title | Open |
 | --- | --- | --- |
@@ -16,6 +16,7 @@ Chapters 1–5 contain the research reports, supporting experiments and evidence
 | **3** | **Machine Learning Epidemiology** | [Read Chapter 3](Chapter_3_Machine_Learning_Epidemiology/README.md) |
 | **4** | **Data Zoo** | [Read Chapter 4](Chapter_4_Data_Zoo/README.md) |
 | **5** | **Data-Oriented Modelling** | [Read Chapter 5](Chapter_5_Data_Oriented_Modelling/README.md) |
+| **6** | **Model Perception and Control** | [Read Chapter 6](Chapter_6_Model_Perception_and_Control/README.md) |
 
 **Chapter 3 contains two reports.** Report 01 brings together the research report and The Engineer’s Edition. Report 02, **[How Language Models Reach an Answer](Chapter_3_Machine_Learning_Epidemiology/How_Language_Models_Reach_an_Answer/README.md)**, connects language dynamics, protected training and answer-recovery control across 18 experiments. It is also listed as Chapter 2, Report 02.
 
@@ -30,3 +31,7 @@ Chapter 5, **Data-Oriented Modelling**, is a series of independently versioned r
 Chapter 5, Report 02, **[Learning Causal Structure from Data Geometry](Chapter_5_Data_Oriented_Modelling/Learning_Causal_Structure_from_Data_Geometry/README.md)**, examines where causal information occurs in data geometry, how learning preserves or distorts it, and how retained structure is tested through transfer and interventions.
 
 Chapter 5, Report 03, **[Modelling Hypothesized Mechanisms Underlying Data](Chapter_5_Data_Oriented_Modelling/Modelling_Hypothesized_Mechanisms_Underlying_Data/README.md)**, connects data geometry, training coverage and valid state transformations with candidate operations tested through validation.
+
+Chapter 6, **Model Perception and Control**, studies decision-making agents. Report 01, **[Model Perception and Action Control](Chapter_6_Model_Perception_and_Control/Model_Perception_and_Action_Control/README.md)**, connects calibrated observation, action eligibility and execution feedback with layerwise measurements and targeted first-action intervention.
+
+Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.

@@ -1,0 +1,6 @@
+Diagnostic after one inserted command,Result
+Strong-loop gate clears at the next decision,8/300 = 2.67%
+Gate stays clear for four consecutive decisions,2/300 = 0.67%
+Gate stays clear for eight consecutive decisions,0/300
+Mean strong-loop occupancy over the next five decisions,98.13%
+Mean repeat mass in the W = 8 window at insertion,83.50%

@@ -1,0 +1,4 @@
+Phase,Tasks,Expected side effect,Observed source mutations
+PRE_EDIT,3,Edit may modify target source,3/3
+POST_EDIT_UNVERIFIED,3,Test or inspection verifies without modifying source,0/3
+POST_EDIT_VALIDATED,2,Submit preserves source,0/2

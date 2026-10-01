@@ -1,0 +1,5 @@
+Measure,Fixed default Geometry+Role,Evidence-gated adaptation
+Batch A,51.16%,51.16% with the default retained
+Batch B,53.49%,53.49% with the default retained
+Batch C,38.10%,40.48% with 73.81% of states routed
+Pooled · 128 states,47.66%,48.44%

@@ -1,0 +1,6 @@
+Takeover horizon,Cumulative states reaching release,Submitted,Nonterminal with gate clear,First release at this horizon
+One step,80/300 = 26.67%,75,5,80
+Two steps,102/300 = 34.00%,95,7,22
+Three steps,150/300 = 50.00%,141,9,48
+Four steps,189/300 = 63.00%,141,48,39
+Five steps,300/300 = 100%,174,126,111

@@ -1,0 +1,9 @@
+Qwen loop task,First strong alert,Strong states,h=4 intercepted,Coverage,First intercept
+sympy-20154,13,37,32,86.49%,14
+sympy-24562,14,36,35,97.22%,16
+sympy-13757,14,36,36,100%,15
+sympy-23950,14,36,33,91.67%,15
+sympy-24661,9,41,41,100%,10
+sympy-13551,14,36,36,100%,15
+sympy-22914,12,38,38,100%,13
+sympy-19346,10,40,40,100%,11

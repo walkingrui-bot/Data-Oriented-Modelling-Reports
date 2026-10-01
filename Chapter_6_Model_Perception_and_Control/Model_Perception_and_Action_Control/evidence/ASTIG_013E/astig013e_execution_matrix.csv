@@ -1,0 +1,9 @@
+task,phase,expected_action,candidate_rc,source_changed,post_smoke_rc,fallback_verify_rc,verify_class,observation
+sympy__sympy-13551,POST_EDIT_VALIDATED,Submit / no source mutation,0,False,0,,SUBMIT_SHELL_ONLY,submit command executed; smoke passed; compatibility snapshot contains no reconstructed prior diff
+sympy__sympy-13757,PRE_EDIT,Edit / mutate source,0,True,0,,PASS_COMPAT,source changed and post-command smoke passed
+sympy__sympy-19346,PRE_EDIT,Edit / mutate source,0,True,1,,CAUGHT_BAD_EDIT,edit command returned rc=0 but introduced syntax/indentation error in current compatibility snapshot; smoke caught failure
+sympy__sympy-20154,POST_EDIT_UNVERIFIED,"Verify / inspect, no source mutation",0,False,0,,BLOCKED_ENV,pytest blocked by missing hypothesis; pipeline shell rc=0; pipefail rc=4; smoke remains green
+sympy__sympy-22914,POST_EDIT_UNVERIFIED,"Verify / inspect, no source mutation",2,False,0,0,RECOVERED_FALLBACK,recorded temporary test script absent; original rc=2; equivalent fallback verification and smoke both pass
+sympy__sympy-23950,POST_EDIT_UNVERIFIED,"Verify / inspect, no source mutation",0,False,0,,PASS_COMPAT,non-mutating verification/inspection command executed; smoke passed
+sympy__sympy-24562,PRE_EDIT,Edit / mutate source,0,True,0,,PASS_COMPAT,source changed and post-command smoke passed
+sympy__sympy-24661,POST_EDIT_VALIDATED,Submit / no source mutation,0,False,0,,SUBMIT_SHELL_ONLY,submit command executed; smoke passed; compatibility snapshot contains no reconstructed prior diff

@@ -1,0 +1,6 @@
+horizon_steps,minimal_horizon_states,cumulative_success,cumulative_success_pct,terminal_submit,terminal_submit_pct,gate_clear_nonterminal,gate_clear_nonterminal_pct
+1,80,80,26.67,75,25.0,5,1.67
+2,22,102,34.0,95,31.67,7,2.33
+3,48,150,50.0,141,47.0,9,3.0
+4,39,189,63.0,141,47.0,48,16.0
+5,111,300,100.0,174,58.0,126,42.0

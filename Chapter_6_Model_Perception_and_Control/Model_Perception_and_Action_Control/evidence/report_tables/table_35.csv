@@ -1,0 +1,5 @@
+Phase,First-priority progression role,Subsequent priority order
+PRE_EDIT,Edit,Test → Submit
+POST_EDIT_UNVERIFIED,Test,Edit → Submit
+TEST_FAILED,Edit,Test → Submit
+POST_EDIT_VALIDATED,Submit,Test → Edit

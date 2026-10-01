@@ -1,0 +1,886 @@
+{
+  "source_archives": [
+    {
+      "name": "ASTIG_012A_012B_evidence_20260929.zip",
+      "sha256": "4419efaa263da5199dd51d2d01fc0f9ae203c286f2c619572cc2b3915a188dbb",
+      "bytes": 431034,
+      "redistributed": false
+    },
+    {
+      "name": "ASTIG_013A_013B_evidence_20260929.zip",
+      "sha256": "a46b1e69966e24b3a97f8cf9e7576005d132cba3b2faa733df88035bcc31825e",
+      "bytes": 310877,
+      "redistributed": false
+    },
+    {
+      "name": "ASTIG_013A_COMPLETE_EVIDENCE_20260929.zip",
+      "sha256": "6ada05f106fa19afe2e8f3da4834905a2184f340e91dad6416d02100158ded36",
+      "bytes": 159541,
+      "redistributed": false
+    },
+    {
+      "name": "ASTIG_013C_COMPLETE_EVIDENCE_20260929.zip",
+      "sha256": "b88dd69f235dd0fa4d09cfb4b57e8561c5753cec59aacc688ee4efdc9ccc41ee",
+      "bytes": 207262,
+      "redistributed": false
+    },
+    {
+      "name": "ASTIG_013D_COMPLETE_EVIDENCE_20260929.zip",
+      "sha256": "ac9acab3841373d3b5c3843910895ee5613a2affc76bed80f6f950eb279a03fd",
+      "bytes": 213120,
+      "redistributed": false
+    },
+    {
+      "name": "ASTIG_013E_COMPLETE_EVIDENCE_20260929.zip",
+      "sha256": "d913de885d9c121cb5ca2498abc9a8cb20b68d16b521687fe4cb77ad5eb418c9",
+      "bytes": 144797,
+      "redistributed": false
+    },
+    {
+      "name": "MODE_COLLISION_001_COMPLETE_EVIDENCE_20260929.zip",
+      "sha256": "3d71961001a2cb995d2624c4f7ba6e3164dc23b2be71e1ab3ee509881af22621",
+      "bytes": 417962,
+      "redistributed": false
+    }
+  ],
+  "source_pair_file": {
+    "name": "mode_collision_pairs.json",
+    "sha256": "f4b4a11e6db8b75ab1d95157a7a1859d80d86a87ff7b6c0c7719613c87d20ffd",
+    "redistributed": false
+  },
+  "files": [
+    {
+      "file": "evidence/ASTIG_012A/astig012a_gate_outcomes.csv",
+      "source_file": "astig012a_gate_outcomes.csv",
+      "source_sha256": "8c9a9797980e230605a8257dc0006caaac21e3e289f429c32f8cdd822d3fbcd3",
+      "publication_sha256": "8c9a9797980e230605a8257dc0006caaac21e3e289f429c32f8cdd822d3fbcd3",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_012A/astig012a_threshold_sweep.csv",
+      "source_file": "astig012a_threshold_sweep.csv",
+      "source_sha256": "453ef119f8bf6283e3e92bffd0a8499c931aa1ccfad762183ada28b95a5043d2",
+      "publication_sha256": "453ef119f8bf6283e3e92bffd0a8499c931aa1ccfad762183ada28b95a5043d2",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_012A/astig012a_summary.json",
+      "source_file": "astig012a_summary.json",
+      "source_sha256": "6670a98c21a72b59789855766e4e451d2680c0addd964dc4dca4304f67e8a7c9",
+      "publication_sha256": "6670a98c21a72b59789855766e4e451d2680c0addd964dc4dca4304f67e8a7c9",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_012B/astig012b_qwen_parameter_sweep.csv",
+      "source_file": "astig012b_qwen_parameter_sweep.csv",
+      "source_sha256": "f8caccbe1e325833027c612d8684eeeec56e2aeac8e490aad90e786aa5a1dc54",
+      "publication_sha256": "f8caccbe1e325833027c612d8684eeeec56e2aeac8e490aad90e786aa5a1dc54",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_012B/astig012b_model_results.csv",
+      "source_file": "astig012b_model_results.csv",
+      "source_sha256": "1f320433a1e22bc82b94581699d5cc07f887692791c21ff3222092357dd2e9f7",
+      "publication_sha256": "1f320433a1e22bc82b94581699d5cc07f887692791c21ff3222092357dd2e9f7",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_012B/astig012b_summary.json",
+      "source_file": "astig012b_summary.json",
+      "source_sha256": "fa4b8036890664e8c89819d0accad0d1407d305d3623d6bcae8b1394fb9ec4ad",
+      "publication_sha256": "fa4b8036890664e8c89819d0accad0d1407d305d3623d6bcae8b1394fb9ec4ad",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013A/astig013a_source_manifest.csv",
+      "source_file": "astig013a_source_manifest.csv",
+      "source_sha256": "de24ab3f5414e634cfa1e4101b21a745ad611415eaed0db0d149add4beedd8a7",
+      "publication_sha256": "de24ab3f5414e634cfa1e4101b21a745ad611415eaed0db0d149add4beedd8a7",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013A/astig013a_cooldown_sweep.csv",
+      "source_file": "astig013a_cooldown_sweep.csv",
+      "source_sha256": "3e33994d9062b64b26f92c16fe1c8258f7705f70b20fe396d80b4e57028da280",
+      "publication_sha256": "3e33994d9062b64b26f92c16fe1c8258f7705f70b20fe396d80b4e57028da280",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013A/astig013a_qwen_loop_task_results.csv",
+      "source_file": "astig013a_qwen_loop_task_results.csv",
+      "source_sha256": "da0b1f322a301f5ece39dab36e54f7695935c8bb5c341aee10605ff9dd6db337",
+      "publication_sha256": "da0b1f322a301f5ece39dab36e54f7695935c8bb5c341aee10605ff9dd6db337",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013A/astig013a_submitted_collateral.csv",
+      "source_file": "astig013a_submitted_collateral.csv",
+      "source_sha256": "2ecd019165caa93b64325580ce37d6cd6420786e3a2fe50c481b3961afb05c9a",
+      "publication_sha256": "2ecd019165caa93b64325580ce37d6cd6420786e3a2fe50c481b3961afb05c9a",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013A/astig013a_summary.json",
+      "source_file": "astig013a_summary.json",
+      "source_sha256": "85fc43fb674e100fe7637a633ea16c959cb07bb5ad7802fdb2ee163deaedaf73",
+      "publication_sha256": "8e3add3d322c19f93c5a959a4f8870bcc5b49f6cf0df9c1a1216dcb592571da7",
+      "treatment": "Replace obsolete next-experiment sentence with the measured scope; numeric fields unchanged"
+    },
+    {
+      "file": "evidence/ASTIG_013A/astig013a_reproduce.py",
+      "source_file": "astig013a_reproduce.py",
+      "source_sha256": "89bf260573f864c31d5878da985ecaf7b9e86ae0587548133ba694606a56f829",
+      "publication_sha256": "89bf260573f864c31d5878da985ecaf7b9e86ae0587548133ba694606a56f829",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013B/astig013b_task_results.csv",
+      "source_file": "astig013b_task_results.csv",
+      "source_sha256": "79cdfc73d6965b9133a501d3974d640ae2511fc5e61b90826862073abc2b1105",
+      "publication_sha256": "79cdfc73d6965b9133a501d3974d640ae2511fc5e61b90826862073abc2b1105",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013B/astig013b_summary.json",
+      "source_file": "astig013b_summary.json",
+      "source_sha256": "dac2ed9615649660b2f8a8c1dcf9d1bdafe0a814aca8b70fde530d5becf71891",
+      "publication_sha256": "dac2ed9615649660b2f8a8c1dcf9d1bdafe0a814aca8b70fde530d5becf71891",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013c_source_manifest.csv",
+      "source_file": "astig013c_source_manifest.csv",
+      "source_sha256": "de24ab3f5414e634cfa1e4101b21a745ad611415eaed0db0d149add4beedd8a7",
+      "publication_sha256": "de24ab3f5414e634cfa1e4101b21a745ad611415eaed0db0d149add4beedd8a7",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013c_candidate_role_availability.csv",
+      "source_file": "astig013c_candidate_role_availability.csv",
+      "source_sha256": "a3a80408281d772c91298be7e5c259dc746f529c50f6ca70383fdd452f221822",
+      "publication_sha256": "a3a80408281d772c91298be7e5c259dc746f529c50f6ca70383fdd452f221822",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013c_premature_submit_bounds.csv",
+      "source_file": "astig013c_premature_submit_bounds.csv",
+      "source_sha256": "b754f13e9bbcd58c73d3673318bc920ff4fd8fa2b2dd43219379451e76a19934",
+      "publication_sha256": "b754f13e9bbcd58c73d3673318bc920ff4fd8fa2b2dd43219379451e76a19934",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013c_successful_phase_calibration.csv",
+      "source_file": "astig013c_successful_phase_calibration.csv",
+      "source_sha256": "9697e975956406a135688f7b6d2b9f42aae2855aec330bec754e66861723c9c3",
+      "publication_sha256": "9697e975956406a135688f7b6d2b9f42aae2855aec330bec754e66861723c9c3",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013b_task_results_prior.csv",
+      "source_file": "astig013b_task_results_prior.csv",
+      "source_sha256": "d5ce51a79b4cd84b634341b76afd22d1848cc7841c6f4bd82e40d2cde03ab726",
+      "publication_sha256": "d5ce51a79b4cd84b634341b76afd22d1848cc7841c6f4bd82e40d2cde03ab726",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013c_qwen_phase_counts.csv",
+      "source_file": "astig013c_qwen_phase_counts.csv",
+      "source_sha256": "d3efc319c67726c7a3c7bd3a143c125355e3bb38a5591d002421c119be777d32",
+      "publication_sha256": "d3efc319c67726c7a3c7bd3a143c125355e3bb38a5591d002421c119be777d32",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013c_summary.json",
+      "source_file": "astig013c_summary.json",
+      "source_sha256": "68e721734cfa847c38839c5f0fe8e333ca999c958854b09a1727317d891e9351",
+      "publication_sha256": "68e721734cfa847c38839c5f0fe8e333ca999c958854b09a1727317d891e9351",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013C/astig013c_reproduce.py",
+      "source_file": "astig013c_reproduce.py",
+      "source_sha256": "1b1820d390989996418f4c987638930d1023bffcfea00729c1b0beb7858bca06",
+      "publication_sha256": "1b1820d390989996418f4c987638930d1023bffcfea00729c1b0beb7858bca06",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013D/astig013d_one_shot_persistence.csv",
+      "source_file": "astig013d_one_shot_persistence.csv",
+      "source_sha256": "7ee7ccf3acee327c4823b06f7d30fa9cb6224a51935bf33ae1d4e31a9de74c50",
+      "publication_sha256": "7ee7ccf3acee327c4823b06f7d30fa9cb6224a51935bf33ae1d4e31a9de74c50",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013D/astig013d_takeover_horizon.csv",
+      "source_file": "astig013d_takeover_horizon.csv",
+      "source_sha256": "acab36753b021e7ca5b9bebe82a6ea34dcd77763d402461121707a342175b178",
+      "publication_sha256": "acab36753b021e7ca5b9bebe82a6ea34dcd77763d402461121707a342175b178",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013D/astig013d_source_manifest.csv",
+      "source_file": "astig013d_source_manifest.csv",
+      "source_sha256": "df686c3058788fee268728690790e5a7218f68dfe973d1a89f715db2149241c0",
+      "publication_sha256": "df686c3058788fee268728690790e5a7218f68dfe973d1a89f715db2149241c0",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013D/astig013d_ranker_robustness.csv",
+      "source_file": "astig013d_ranker_robustness.csv",
+      "source_sha256": "f33d9b0a66659e6a90b58419f751ffcf17e2f394733e975bf172e1c3ea912b08",
+      "publication_sha256": "f33d9b0a66659e6a90b58419f751ffcf17e2f394733e975bf172e1c3ea912b08",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013D/astig013d_task_results.csv",
+      "source_file": "astig013d_task_results.csv",
+      "source_sha256": "d77bec4fc8337490edcfcd4c953848b52c3fe1780360b5873b31e82f39b2e3a1",
+      "publication_sha256": "d77bec4fc8337490edcfcd4c953848b52c3fe1780360b5873b31e82f39b2e3a1",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013D/astig013d_summary.json",
+      "source_file": "astig013d_summary.json",
+      "source_sha256": "7400cb63c949d2731caaac7f6e767a224b63e379cdbdc7261812fbb3e99940cd",
+      "publication_sha256": "c3ecbc0875f995e915941538af964c6f095ddebc4c11c39456417b905ca4c7ce",
+      "treatment": "Remove obsolete live-handoff sentence; preserve replay design and every numeric measurement"
+    },
+    {
+      "file": "evidence/ASTIG_013D/astig013d_reproduce.py",
+      "source_file": "astig013d_reproduce.py",
+      "source_sha256": "a7314f2fa276e1612beedd345a870fa016f46873cc998fa723ea6a9973d411a6",
+      "publication_sha256": "a7314f2fa276e1612beedd345a870fa016f46873cc998fa723ea6a9973d411a6",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013E/astig013e_execution_matrix.csv",
+      "source_file": "astig013e_execution_matrix.csv",
+      "source_sha256": "520077d98428f64a7c842500c0023966ff48707d0aca1d9052678a39dfbd84a8",
+      "publication_sha256": "520077d98428f64a7c842500c0023966ff48707d0aca1d9052678a39dfbd84a8",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/ASTIG_013E/astig013e_summary.json",
+      "source_file": "astig013e_summary.json",
+      "source_sha256": "b15becba80a166662b49011ff9be6173b2003a530bc0186ecc13c1befb221e75",
+      "publication_sha256": "80261b28378f59160699f6d5e1f6886702e8ef4a0240f8268e41d6346d9809f6",
+      "treatment": "Remove construction-environment availability inventory; retain execution measurements and scope"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_three_seed_decision_geometry.csv",
+      "source_file": "MODE_COLLISION_001_three_seed_decision_geometry.csv",
+      "source_sha256": "e8fe8765746aa754af289c3789d0533c6dcb15689dcbb8b77c8bec309a1ec27f",
+      "publication_sha256": "e8fe8765746aa754af289c3789d0533c6dcb15689dcbb8b77c8bec309a1ec27f",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_three_seed_mean_geometry.csv",
+      "source_file": "MODE_COLLISION_001_three_seed_mean_geometry.csv",
+      "source_sha256": "a4738156fb631bfea7f1b744b7cb532abff54d16d742e6cab83335dc4596f74e",
+      "publication_sha256": "a4738156fb631bfea7f1b744b7cb532abff54d16d742e6cab83335dc4596f74e",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_three_seed_decision_summary.csv",
+      "source_file": "MODE_COLLISION_001_three_seed_decision_summary.csv",
+      "source_sha256": "9934a40adca8699564224bc180a87c7766bb3b464f3f9ef5f5c3dacdd5b2cf9c",
+      "publication_sha256": "9934a40adca8699564224bc180a87c7766bb3b464f3f9ef5f5c3dacdd5b2cf9c",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_layerwise_geometry.csv",
+      "source_file": "MODE_COLLISION_001_layerwise_geometry.csv",
+      "source_sha256": "335eefec83b1bfcb6ec359062c62db07dd5b3556c5ae563a17f693141a139e7c",
+      "publication_sha256": "335eefec83b1bfcb6ec359062c62db07dd5b3556c5ae563a17f693141a139e7c",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_layerwise_spectra.csv",
+      "source_file": "MODE_COLLISION_001_layerwise_spectra.csv",
+      "source_sha256": "aa7237eeccc3c09667b19357306f7b2df27f61b3dc1ee0d8a8355119b380556e",
+      "publication_sha256": "aa7237eeccc3c09667b19357306f7b2df27f61b3dc1ee0d8a8355119b380556e",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_tokencode_distribution.csv",
+      "source_file": "MODE_COLLISION_001_tokencode_distribution.csv",
+      "source_sha256": "469713adcf30c586652f7f6caf2d8614b68fab1c7830bf472e49cf643fbe3593",
+      "publication_sha256": "469713adcf30c586652f7f6caf2d8614b68fab1c7830bf472e49cf643fbe3593",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_training_curve.csv",
+      "source_file": "MODE_COLLISION_001_training_curve.csv",
+      "source_sha256": "bc97ba5e16b96525b741e7a8dc568b81f4c6afbbe461ac28c0504f3c63b8818f",
+      "publication_sha256": "bc97ba5e16b96525b741e7a8dc568b81f4c6afbbe461ac28c0504f3c63b8818f",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_three_seed_mean_summary.csv",
+      "source_file": "MODE_COLLISION_001_three_seed_mean_summary.csv",
+      "source_sha256": "51a57225f2dc85ef98ed02040d710ef0602d53ae4f1e090b9881bae18c04e68d",
+      "publication_sha256": "51a57225f2dc85ef98ed02040d710ef0602d53ae4f1e090b9881bae18c04e68d",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_pair_surface_summary.json",
+      "source_file": "MODE_COLLISION_001_pair_surface_summary.json",
+      "source_sha256": "96861f691a6b57b4c04e303627f86292b6d55d19140ea68e434b5f295b773a69",
+      "publication_sha256": "96861f691a6b57b4c04e303627f86292b6d55d19140ea68e434b5f295b773a69",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/MODE_COLLISION_001_complete_summary.json",
+      "source_file": "MODE_COLLISION_001_complete_summary.json",
+      "source_sha256": "812179efc31bf2fd15a48fffd966f99dc485562242620aff9b29046c2e7f7ce0",
+      "publication_sha256": "812179efc31bf2fd15a48fffd966f99dc485562242620aff9b29046c2e7f7ce0",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/mode_collision_finalize.py",
+      "source_file": "mode_collision_finalize.py",
+      "source_sha256": "52b47ec5dea004b90c5928f05ce69324d193736bee90d0a811362140bd42dcd1",
+      "publication_sha256": "efe8b7f60871430a650e57a1615a099b574c7e11f44c37df5f5ab4388d8c6c8f",
+      "treatment": "Make working-directory paths portable; for seed 19 align output filename with the finalization script. Algorithm and measurements unchanged"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/run_mode_geometry_seed11.py",
+      "source_file": "run_mode_geometry_seed11.py",
+      "source_sha256": "2766e68812ba0a88101396dfadd18ee87f333ada3d7eee6155c9a56cd5c6df7e",
+      "publication_sha256": "1a79b0b954c3c9b47fd7115613b5c23d5c10caccb942fc90f725ba3ac4b3df9f",
+      "treatment": "Make working-directory paths portable; for seed 19 align output filename with the finalization script. Algorithm and measurements unchanged"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/run_mode_geometry.py",
+      "source_file": "run_mode_geometry.py",
+      "source_sha256": "c1f2f131bd23707ac50d5b7f36a8ca913e13ea582459e570cd29475f50c770fe",
+      "publication_sha256": "fd5d11f0083f56a542855950d60e0e2556adb41b703f01beb5bfe05317b06f89",
+      "treatment": "Make working-directory paths portable; for seed 19 align output filename with the finalization script. Algorithm and measurements unchanged"
+    },
+    {
+      "file": "evidence/MODE_COLLISION_001/run_mode_geometry_seed19.py",
+      "source_file": "run_mode_geometry_seed19.py",
+      "source_sha256": "2c9ef65b02d227d10c352c2e0c985800be82a64ff49cc742bc0e95867bf7b660",
+      "publication_sha256": "8847a095061540573dee1074a3184b189a1b53a16d7de88216a9dd44fcc7faf2",
+      "treatment": "Make working-directory paths portable; for seed 19 align output filename with the finalization script. Algorithm and measurements unchanged"
+    },
+    {
+      "file": "evidence/MODE_CONTROL/RUN1_baseline_metrics.csv",
+      "source_file": "MODE_CONTROL_002_baseline_behavior.csv",
+      "source_sha256": "e1e715948007f207be4e73163962337b458e24168e953746d0bedd870accf678",
+      "publication_sha256": "c0e595b009202a9941c59809229e4f4443f83b7b9a784818c51a0b8f78e19116",
+      "treatment": "Column projection retaining identifiers, scalar measurements, shapes and outcome labels; generated text and encoded text arrays excluded"
+    },
+    {
+      "file": "evidence/MODE_CONTROL/RUN0_prompt_metrics.csv",
+      "source_file": "RUN0_prompt_results.csv",
+      "source_sha256": "20ce048409011c56ccc57db0f200d6818bd24fd9bd6995b6d0b79b8e0c08418f",
+      "publication_sha256": "ab205d23ca300ba85fc87cd5e646b403184e486a04bdadbd3715b9b7fc3688d2",
+      "treatment": "Column projection retaining identifiers, scalar measurements, shapes and outcome labels; generated text and encoded text arrays excluded"
+    },
+    {
+      "file": "evidence/MODE_CONTROL/RUN0_summary.json",
+      "source_file": "RUN0_summary.json",
+      "source_sha256": "6efc80b882352fc8ab8c0a444b8906b4601378a7d18df0acb8aadd082eaa0b20",
+      "publication_sha256": "6c6c6a9d1de5dea835c20a9632bc40e4cbd5a3e26223842a1f57cece3ade9adf",
+      "treatment": "Remove local paths and workflow status; preserve hardware, model, protocol and numeric checks"
+    },
+    {
+      "file": "evidence/MODE_CONTROL/MODE_CONTROL_FINAL_summary.json",
+      "source_file": "MODE_CONTROL_FINAL_summary.json",
+      "source_sha256": "196d74e1bed47097b9488bbb7a9d13d9ef70ec0856510e154061c41a51b620a9",
+      "publication_sha256": "801a27f5c9070453b30cb287b2eabcd38d074175fb4658d7474dae8e88d88f06",
+      "treatment": "Remove local paths and workflow status including a superseded pending-gate label; preserve every final numeric result and scientific scope"
+    },
+    {
+      "file": "evidence/original_figures/figure_01_source.png",
+      "source_file": "image1.png",
+      "source_sha256": "9c28099963ba15f8100a63b7084e81b61dde8a92f2606d3864de7b12e4712729",
+      "publication_sha256": "9c28099963ba15f8100a63b7084e81b61dde8a92f2606d3864de7b12e4712729",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_02_source.png",
+      "source_file": "image2.png",
+      "source_sha256": "a0193b231a5dea65aa9a59a0d4e1afc1ed2fc23119a0eb90aea5554d25297164",
+      "publication_sha256": "a0193b231a5dea65aa9a59a0d4e1afc1ed2fc23119a0eb90aea5554d25297164",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_03_source.png",
+      "source_file": "image3.png",
+      "source_sha256": "46e6ca3d173cb1fd8d65255746fcec76beb8c1ed97665276bd5b1f75a1dd4095",
+      "publication_sha256": "46e6ca3d173cb1fd8d65255746fcec76beb8c1ed97665276bd5b1f75a1dd4095",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_04_source.png",
+      "source_file": "image4.png",
+      "source_sha256": "53e0dcb3a88728695613c51537bc4d9f837afd6d015feaa3670fa39c89e6ba1f",
+      "publication_sha256": "53e0dcb3a88728695613c51537bc4d9f837afd6d015feaa3670fa39c89e6ba1f",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_05_source.png",
+      "source_file": "image5.png",
+      "source_sha256": "720d06c4af17c1e996131b6cc2c5cc9efb3940fc2852bfc8e92694e2613e0ae1",
+      "publication_sha256": "720d06c4af17c1e996131b6cc2c5cc9efb3940fc2852bfc8e92694e2613e0ae1",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_06_source.png",
+      "source_file": "image6.png",
+      "source_sha256": "b8e0a56a3677172447d44b656e06602a3ca882bac40a2222f76a07fc12c3cd30",
+      "publication_sha256": "b8e0a56a3677172447d44b656e06602a3ca882bac40a2222f76a07fc12c3cd30",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_07_source.png",
+      "source_file": "image7.png",
+      "source_sha256": "c95d167a7b3b0b63c03df3dc2c9ab4bd3cd124b139baabe5c4922b86fa908005",
+      "publication_sha256": "c95d167a7b3b0b63c03df3dc2c9ab4bd3cd124b139baabe5c4922b86fa908005",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_08_source.png",
+      "source_file": "image8.png",
+      "source_sha256": "522132716c04dc1db5ea19315907033974a6bd2717e687cd4440e7f21227b675",
+      "publication_sha256": "522132716c04dc1db5ea19315907033974a6bd2717e687cd4440e7f21227b675",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_09_source.png",
+      "source_file": "image9.png",
+      "source_sha256": "3628176b928c31ce16f985db3bf551c6f6c63c25e6d52b776e505fd2c4f71287",
+      "publication_sha256": "3628176b928c31ce16f985db3bf551c6f6c63c25e6d52b776e505fd2c4f71287",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_10_source.png",
+      "source_file": "image10.png",
+      "source_sha256": "af74856cb7c19962a2a5fa553e78bb2248d2557d8d6072b6455c517ab678ca08",
+      "publication_sha256": "af74856cb7c19962a2a5fa553e78bb2248d2557d8d6072b6455c517ab678ca08",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_15_source.png",
+      "source_file": "image15.png",
+      "source_sha256": "9511e01168aca47aed5b120edb439e245d229cfbe8572510f99969e55ae1984b",
+      "publication_sha256": "9511e01168aca47aed5b120edb439e245d229cfbe8572510f99969e55ae1984b",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_35_source.png",
+      "source_file": "image35.png",
+      "source_sha256": "b7f88ed3e408a27622f866fe0906422f04374516c7d8bf44ed4f2810d5adc23a",
+      "publication_sha256": "b7f88ed3e408a27622f866fe0906422f04374516c7d8bf44ed4f2810d5adc23a",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_47_source.png",
+      "source_file": "image47.png",
+      "source_sha256": "ced94ed0175fc4f461b6d9dd7c2b7d4c2b983253edbe1bbc9358891c2729e913",
+      "publication_sha256": "ced94ed0175fc4f461b6d9dd7c2b7d4c2b983253edbe1bbc9358891c2729e913",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "evidence/original_figures/figure_54_source.png",
+      "source_file": "image54.png",
+      "source_sha256": "69be2f107c8a86ec2956a7d3516e10c7f3e186faef41cbedc174ea32832b5b09",
+      "publication_sha256": "69be2f107c8a86ec2956a7d3516e10c7f3e186faef41cbedc174ea32832b5b09",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_01.png",
+      "source_file": "image1.png",
+      "source_sha256": "9c28099963ba15f8100a63b7084e81b61dde8a92f2606d3864de7b12e4712729",
+      "publication_sha256": "29273456a8523457a457b36594a457015f5e9309225e431cf3a50e6d5a403909",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_02.png",
+      "source_file": "image2.png",
+      "source_sha256": "a0193b231a5dea65aa9a59a0d4e1afc1ed2fc23119a0eb90aea5554d25297164",
+      "publication_sha256": "7819cf5cfef2d16c08d096aa5db029eddc8410737f4a9f04475b49196bf23cab",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_03.png",
+      "source_file": "image3.png",
+      "source_sha256": "46e6ca3d173cb1fd8d65255746fcec76beb8c1ed97665276bd5b1f75a1dd4095",
+      "publication_sha256": "503b42302f9c720fe16205fb10f52382ce9b80ec6b71a41eb9b6eb62997d4dee",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_04.png",
+      "source_file": "image4.png",
+      "source_sha256": "53e0dcb3a88728695613c51537bc4d9f837afd6d015feaa3670fa39c89e6ba1f",
+      "publication_sha256": "dc7fa205a038df3cef226ff982259f7f1d0f3ed733f31a45f4b1e1d9cc282613",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_05.png",
+      "source_file": "image5.png",
+      "source_sha256": "720d06c4af17c1e996131b6cc2c5cc9efb3940fc2852bfc8e92694e2613e0ae1",
+      "publication_sha256": "334ffd9222ee2671f152da1cb5b282e5fd867ced93911aeae462f43b71165605",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_06.png",
+      "source_file": "image6.png",
+      "source_sha256": "b8e0a56a3677172447d44b656e06602a3ca882bac40a2222f76a07fc12c3cd30",
+      "publication_sha256": "591dbbcb121c3efacb923110c41f9fd52a655114ff309afcac98b9287b20a26e",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_07.png",
+      "source_file": "image7.png",
+      "source_sha256": "c95d167a7b3b0b63c03df3dc2c9ab4bd3cd124b139baabe5c4922b86fa908005",
+      "publication_sha256": "446767100180eb07eece6fb9ae361cd1b077dc101d82a09318e7869daf902734",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_08.png",
+      "source_file": "image8.png",
+      "source_sha256": "522132716c04dc1db5ea19315907033974a6bd2717e687cd4440e7f21227b675",
+      "publication_sha256": "be7bd3a8bb5e3b3330f4f766b8ed1335f93319205b6624a4662ff2f9d516382c",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_09.png",
+      "source_file": "image9.png",
+      "source_sha256": "3628176b928c31ce16f985db3bf551c6f6c63c25e6d52b776e505fd2c4f71287",
+      "publication_sha256": "6721f28a24938265d3db64fe4b4bd33dc651da7617878a846c307527de52ffdb",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_10.png",
+      "source_file": "image10.png",
+      "source_sha256": "af74856cb7c19962a2a5fa553e78bb2248d2557d8d6072b6455c517ab678ca08",
+      "publication_sha256": "99938aac202a3ca7bed0749fe785ce4566810d683e7ae94cea0664608b6ffd3a",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_11.png",
+      "source_file": "image11.png",
+      "source_sha256": "5ebd255847396abd36fddd0c4faef88104c854d414d5e49f3bd848d606be18da",
+      "publication_sha256": "5ebd255847396abd36fddd0c4faef88104c854d414d5e49f3bd848d606be18da",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_12.png",
+      "source_file": "image12.png",
+      "source_sha256": "e4c3dfc98fa281434b2428b6dfab7e195b320137e03ecc1612e1e8db986cac05",
+      "publication_sha256": "e4c3dfc98fa281434b2428b6dfab7e195b320137e03ecc1612e1e8db986cac05",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_13.png",
+      "source_file": "image13.png",
+      "source_sha256": "09ac0482b9afe50f0580f3bd09b5d711cb9183296b7a5b4f1f6e8718e5100103",
+      "publication_sha256": "09ac0482b9afe50f0580f3bd09b5d711cb9183296b7a5b4f1f6e8718e5100103",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_14.png",
+      "source_file": "image14.png",
+      "source_sha256": "46a9243b74885071c318a4f96a25de155bb8d74d11d78008242f6644ce708c4c",
+      "publication_sha256": "46a9243b74885071c318a4f96a25de155bb8d74d11d78008242f6644ce708c4c",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_15.png",
+      "source_file": "image15.png",
+      "source_sha256": "9511e01168aca47aed5b120edb439e245d229cfbe8572510f99969e55ae1984b",
+      "publication_sha256": "97bd329f6f261705a3055e3ae9b25f12974e88cc51e591dde2b8fbcc066d2114",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_16.png",
+      "source_file": "image16.png",
+      "source_sha256": "e49f5ac14813dd07cbbe0ab39b850999bafcdfb7e7ad5dbcef88e71c4a028ac1",
+      "publication_sha256": "e49f5ac14813dd07cbbe0ab39b850999bafcdfb7e7ad5dbcef88e71c4a028ac1",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_17.png",
+      "source_file": "image17.png",
+      "source_sha256": "efcef19a108c3b35fc638da45a0d5aca7dad4705e6c91879d6f39f6562894178",
+      "publication_sha256": "efcef19a108c3b35fc638da45a0d5aca7dad4705e6c91879d6f39f6562894178",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_18.png",
+      "source_file": "image18.png",
+      "source_sha256": "91486893f44eb0d7f6fc4e151d701badcf775fa6124b58a49576e349e5ae03db",
+      "publication_sha256": "91486893f44eb0d7f6fc4e151d701badcf775fa6124b58a49576e349e5ae03db",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_19.png",
+      "source_file": "image19.png",
+      "source_sha256": "1bfed04cc9aa09fce67a7f2169ba18649200b45aa8ab397359b5987cf9cbf823",
+      "publication_sha256": "1bfed04cc9aa09fce67a7f2169ba18649200b45aa8ab397359b5987cf9cbf823",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_20.png",
+      "source_file": "image20.png",
+      "source_sha256": "17938c46f0a3d34ebc48ef4e558004645e19e631101e6ccca28bf65aab25fa26",
+      "publication_sha256": "17938c46f0a3d34ebc48ef4e558004645e19e631101e6ccca28bf65aab25fa26",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_21.png",
+      "source_file": "image21.png",
+      "source_sha256": "fd00dc7152120867260c436de17635ec1924a8d10e0165c55be26c1fac15e4e0",
+      "publication_sha256": "fd00dc7152120867260c436de17635ec1924a8d10e0165c55be26c1fac15e4e0",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_22.png",
+      "source_file": "image22.png",
+      "source_sha256": "5ddc9792f3f14b7b8dc9a09798efd5d10177672e250c321c2f911a87d9bbd146",
+      "publication_sha256": "5ddc9792f3f14b7b8dc9a09798efd5d10177672e250c321c2f911a87d9bbd146",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_23.png",
+      "source_file": "image23.png",
+      "source_sha256": "d6dc3ef8d0d341eaf13b21064bf66d72fbdb0a9f294b728849e4b3bc074b0ef5",
+      "publication_sha256": "d6dc3ef8d0d341eaf13b21064bf66d72fbdb0a9f294b728849e4b3bc074b0ef5",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_24.png",
+      "source_file": "image24.png",
+      "source_sha256": "11a7efd74ac480e84f1f7208f26dba212d326a793ea2a0c69d8abe794b2d3c19",
+      "publication_sha256": "11a7efd74ac480e84f1f7208f26dba212d326a793ea2a0c69d8abe794b2d3c19",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_25.png",
+      "source_file": "image25.png",
+      "source_sha256": "1f5cc6fc4781746d8bb80b4df1c463b6aee09bab827118b34286b050beb7425a",
+      "publication_sha256": "1f5cc6fc4781746d8bb80b4df1c463b6aee09bab827118b34286b050beb7425a",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_26.png",
+      "source_file": "image26.png",
+      "source_sha256": "6cf618aba103e2f5fd4209cccae5b373065dc2fbbfbf205c085309c497460486",
+      "publication_sha256": "6cf618aba103e2f5fd4209cccae5b373065dc2fbbfbf205c085309c497460486",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_27.png",
+      "source_file": "image27.png",
+      "source_sha256": "2206c497dbe00b2ad4a4a6f1808341d9a89fa45d0d93240768a0535c32cb53ab",
+      "publication_sha256": "2206c497dbe00b2ad4a4a6f1808341d9a89fa45d0d93240768a0535c32cb53ab",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_28.png",
+      "source_file": "image28.png",
+      "source_sha256": "3fd21526e509f6f8347a0c6f362380a37528403e1eb4e9c58e8dd03e414bd239",
+      "publication_sha256": "3fd21526e509f6f8347a0c6f362380a37528403e1eb4e9c58e8dd03e414bd239",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_29.png",
+      "source_file": "image29.png",
+      "source_sha256": "8c2de93a0bfef8711b891366ee2d6d1fe7060e1a2153a89e316c57d70d645710",
+      "publication_sha256": "8c2de93a0bfef8711b891366ee2d6d1fe7060e1a2153a89e316c57d70d645710",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_30.png",
+      "source_file": "image30.png",
+      "source_sha256": "3ba7b460e54020368ebd2632d49a79a869a8d46ce031c32024e411e17d90789b",
+      "publication_sha256": "3ba7b460e54020368ebd2632d49a79a869a8d46ce031c32024e411e17d90789b",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_31.png",
+      "source_file": "image31.png",
+      "source_sha256": "4aadef1a4fbebf7bdc337030ceaeb942af6797c85bf27130bf0747f37660ee69",
+      "publication_sha256": "4aadef1a4fbebf7bdc337030ceaeb942af6797c85bf27130bf0747f37660ee69",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_32.png",
+      "source_file": "image32.png",
+      "source_sha256": "127d02059315435941ca803547961124b3c22484e9aa162cd518b3f9495da115",
+      "publication_sha256": "127d02059315435941ca803547961124b3c22484e9aa162cd518b3f9495da115",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_33.png",
+      "source_file": "image33.png",
+      "source_sha256": "9e6c2a46e4d873807b1c9637ef22f66df94ae7daf7c3ed1706364115a8ecb952",
+      "publication_sha256": "9e6c2a46e4d873807b1c9637ef22f66df94ae7daf7c3ed1706364115a8ecb952",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_34.png",
+      "source_file": "image34.png",
+      "source_sha256": "f274f471c3850299e9c0866a64b029b7ea7087d0d35489b66ace2a4dd91a3ca4",
+      "publication_sha256": "f274f471c3850299e9c0866a64b029b7ea7087d0d35489b66ace2a4dd91a3ca4",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_35.png",
+      "source_file": "image35.png",
+      "source_sha256": "b7f88ed3e408a27622f866fe0906422f04374516c7d8bf44ed4f2810d5adc23a",
+      "publication_sha256": "5561c2956a126f997dccaada4dd5318080e3f3d84a2f361ae40be0205a20a6db",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_36.png",
+      "source_file": "image36.png",
+      "source_sha256": "78438c6c3e17c06af1b102981da3d401ad72f014deaa7dce6730c63d908cd85c",
+      "publication_sha256": "78438c6c3e17c06af1b102981da3d401ad72f014deaa7dce6730c63d908cd85c",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_37.png",
+      "source_file": "image37.png",
+      "source_sha256": "2140e18c804fde81a51ff6c3e00a1b3ee787a214a4a18d676323ca6b4347b755",
+      "publication_sha256": "2140e18c804fde81a51ff6c3e00a1b3ee787a214a4a18d676323ca6b4347b755",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_38.png",
+      "source_file": "image38.png",
+      "source_sha256": "94e68ebd5a29e1fb947c89f61ad6573b490581099b6ece28050e3a43dcca7cd8",
+      "publication_sha256": "94e68ebd5a29e1fb947c89f61ad6573b490581099b6ece28050e3a43dcca7cd8",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_39.png",
+      "source_file": "image39.png",
+      "source_sha256": "13e16b95fb249871f3e2ecbc4350ae3f3664210fc1ac8122dd5e3e22a9232d31",
+      "publication_sha256": "13e16b95fb249871f3e2ecbc4350ae3f3664210fc1ac8122dd5e3e22a9232d31",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_40.png",
+      "source_file": "image40.png",
+      "source_sha256": "09ef7e08df6a4c2306721ee67b3d43e2fde9149bd2f076fc303ea0f91d2c8b36",
+      "publication_sha256": "09ef7e08df6a4c2306721ee67b3d43e2fde9149bd2f076fc303ea0f91d2c8b36",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_41.png",
+      "source_file": "image41.png",
+      "source_sha256": "f4dfe7a99d0780c005476946d005c84b8f3a0c67d3ed326d987d036e3a743559",
+      "publication_sha256": "f4dfe7a99d0780c005476946d005c84b8f3a0c67d3ed326d987d036e3a743559",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_42.png",
+      "source_file": "image42.png",
+      "source_sha256": "9360492c80d9a173e0650f94d7ff413c27ff2d7a07a5edece9a5ba9af477c4dc",
+      "publication_sha256": "9360492c80d9a173e0650f94d7ff413c27ff2d7a07a5edece9a5ba9af477c4dc",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_43.png",
+      "source_file": "image43.png",
+      "source_sha256": "3007413752de965eb13b2d4c75090612955086cec94af83364d4ee97600fae10",
+      "publication_sha256": "3007413752de965eb13b2d4c75090612955086cec94af83364d4ee97600fae10",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_44.png",
+      "source_file": "image44.png",
+      "source_sha256": "1b3fdb064f61c389f32a7a76cef821d83e16f0b8f26f8163340b5ffb6113ba1a",
+      "publication_sha256": "1b3fdb064f61c389f32a7a76cef821d83e16f0b8f26f8163340b5ffb6113ba1a",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_45.png",
+      "source_file": "image45.png",
+      "source_sha256": "92191b2bd406d96a2b305e38a5025301f6b45fd72d9c928524217c79c8f2220e",
+      "publication_sha256": "92191b2bd406d96a2b305e38a5025301f6b45fd72d9c928524217c79c8f2220e",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_46.png",
+      "source_file": "image46.png",
+      "source_sha256": "fd93b16396d59cf71997437c0708ad5e8f88e478d8abea404204174db7d56fa9",
+      "publication_sha256": "fd93b16396d59cf71997437c0708ad5e8f88e478d8abea404204174db7d56fa9",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_47.png",
+      "source_file": "image47.png",
+      "source_sha256": "ced94ed0175fc4f461b6d9dd7c2b7d4c2b983253edbe1bbc9358891c2729e913",
+      "publication_sha256": "8f459c72809c0d7e33f07ccdfef55f7d1b067cd9285450ec6217227dd82fc408",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_48.png",
+      "source_file": "image48.png",
+      "source_sha256": "ff1de2df6c1fc1c17b30aa0a83f9fc0e8f5d8821a58552a9cbb7d9179739089d",
+      "publication_sha256": "ff1de2df6c1fc1c17b30aa0a83f9fc0e8f5d8821a58552a9cbb7d9179739089d",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_49.png",
+      "source_file": "image49.png",
+      "source_sha256": "5a6a06475cd2134a01f6e5437cacc1b455f5b9f2ee348b81c2155767ef5f8ad0",
+      "publication_sha256": "5a6a06475cd2134a01f6e5437cacc1b455f5b9f2ee348b81c2155767ef5f8ad0",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_50.png",
+      "source_file": "image50.png",
+      "source_sha256": "9a864148410fff6d1ed07ba98e62ccba409e5f4b9cc13fac2ed0a7391907c461",
+      "publication_sha256": "9a864148410fff6d1ed07ba98e62ccba409e5f4b9cc13fac2ed0a7391907c461",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_51.png",
+      "source_file": "image51.png",
+      "source_sha256": "5f7300ba02f5b0cf8a6f3abd12a5abda8f8b9c034f693f1dd4d976da8362b599",
+      "publication_sha256": "5f7300ba02f5b0cf8a6f3abd12a5abda8f8b9c034f693f1dd4d976da8362b599",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_52.png",
+      "source_file": "image52.png",
+      "source_sha256": "2489bdaa51654c26260a929a1bf5113ddf5f95b3ca3e45f45cbe33ee76082e4e",
+      "publication_sha256": "2489bdaa51654c26260a929a1bf5113ddf5f95b3ca3e45f45cbe33ee76082e4e",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_53.png",
+      "source_file": "image53.png",
+      "source_sha256": "1518942d5549c14c3e8302a6eb7dfeb7658e8e6c004b42b638ed57c3db50aeb6",
+      "publication_sha256": "1518942d5549c14c3e8302a6eb7dfeb7658e8e6c004b42b638ed57c3db50aeb6",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_54.png",
+      "source_file": "image54.png",
+      "source_sha256": "69be2f107c8a86ec2956a7d3516e10c7f3e186faef41cbedc174ea32832b5b09",
+      "publication_sha256": "4be5c47ef4baca7bc27210615b101d1b3a5fc084134907314b2106bd84cdbd96",
+      "treatment": "English chart reconstruction using reported table values; Figure 3 uses the table value −0.031 for repeated bigrams; Figures 15, 47 and 54 have separated legends; Figure 35 explicitly labels Submitted status"
+    },
+    {
+      "file": "figures/figure_55.png",
+      "source_file": "image55.png",
+      "source_sha256": "49118a2a0147a3813846ad0f26d342e81b71b7ed46fcae32fc0e2b7d9e9f5393",
+      "publication_sha256": "49118a2a0147a3813846ad0f26d342e81b71b7ed46fcae32fc0e2b7d9e9f5393",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    },
+    {
+      "file": "figures/figure_56.png",
+      "source_file": "image56.png",
+      "source_sha256": "d1d57731b28173d6729cede342a3738da174e914f133dd93f7481d9141ff0736",
+      "publication_sha256": "d1d57731b28173d6729cede342a3738da174e914f133dd93f7481d9141ff0736",
+      "treatment": "Byte-for-byte copy of a recovered research output"
+    }
+  ]
+}

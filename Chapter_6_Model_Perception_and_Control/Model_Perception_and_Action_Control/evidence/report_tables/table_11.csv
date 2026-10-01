@@ -1,0 +1,6 @@
+Evidence function,Accuracy,NLL
+Raw: c,46.15%,7.449
+sqrt: c^0.5,46.15%,5.963
+quarter: c^0.25,47.01%,5.555
+Role-aware: ordinary c^0.25 / control c^0.5,47.86%,5.512
+Presence-only: 1(c>0),42.74%,5.326

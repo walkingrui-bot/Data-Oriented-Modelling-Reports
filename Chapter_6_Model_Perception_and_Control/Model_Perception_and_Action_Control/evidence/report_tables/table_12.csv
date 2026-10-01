@@ -1,0 +1,5 @@
+Dataset,Raw global Attention,Geometry Lens,Topology Lens
+Iris,80.3%,18.5%,0%
+Wine,84.2%,52.2%,0%
+Breast Cancer,94.9%,71.0%,0%
+Digits,98.1%,66.6%,0%

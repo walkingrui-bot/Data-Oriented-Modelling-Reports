@@ -1,0 +1,38 @@
+{
+  "experiment": "ASTIG-012B",
+  "decoder": "512D deterministic hashed bag-of-words on assistant work prose; weighted cosine kNN K=7; leave-one-task-out; action classes inspect/edit/test/execute/vcs_submit.",
+  "raw_representation": "linear cumulative sum of all work-state vectors up to current state",
+  "local_corrected_representation": "current + previous + top-2 cosine-similar earlier work states with geometry weight exp(-(1-cos)^2)",
+  "gate_timing": "Loop-Regime Gate uses executed command history strictly before the action being predicted.",
+  "main_results": {
+    "GPT-5-mini": {
+      "n": 153,
+      "raw": 52.29,
+      "local_corrected": 66.01,
+      "naive_gated": 66.01,
+      "strong_loop_states": 0
+    },
+    "DeepSeek-v4-flash": {
+      "n": 267,
+      "raw": 57.3,
+      "local_corrected": 63.67,
+      "naive_gated": 63.67,
+      "strong_loop_states": 0
+    },
+    "Qwen-2.5-7B": {
+      "n": 410,
+      "raw": 26.1,
+      "local_corrected": 53.17,
+      "naive_gated": 29.76,
+      "strong_loop_states": 300
+    }
+  },
+  "qwen_strong_loop_subset": {
+    "n": 300,
+    "raw": 21.67,
+    "local_corrected": 53.67,
+    "naive_gated": 21.67
+  },
+  "robustness": "Across 12 combinations of history_k in {1,2,3} and kNN_K in {3,5,7,11}, Qwen local-corrected accuracy exceeded Raw in 12/12 combinations; same direction held in the 300 strong-loop states in 12/12 combinations.",
+  "engineering_result": "Strong-loop diagnosis and representation utility are separate variables. The gate should route to a loop-specific breaker while retaining useful local state, rather than automatically reverting to Raw cumulative history."
+}

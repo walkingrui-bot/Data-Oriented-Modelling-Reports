@@ -1,0 +1,23 @@
+{
+  "experiment_id": "ASTIG-013A",
+  "title": "Gate-triggered exact-command cooldown",
+  "cohort": "same independent matched cohort as ASTIG-012A/B: 10 SWE-bench tasks x 3 models",
+  "normalization": "lowercase + whitespace normalization only; command arguments/paths/content retained",
+  "gate": "ASTIG-012A default: W=8, warning R_cmd>=0.25, strong if R_cmd>=0.50 for 2 consecutive windows or >=0.75 once, minimum 6 observed commands",
+  "cooldown_rule": "after strong-loop gate is active, current exact normalized command loses execution eligibility if it appeared in previous h commands",
+  "main_result": {
+    "recommended_h": 4,
+    "qwen_strong_loop_states": 300,
+    "h4_intercepted": 291,
+    "h4_interception_pct": 97.0,
+    "submitted_states": 430,
+    "h4_gated_submitted_interventions": 0,
+    "h4_gated_submitted_collateral_pct": 0.0,
+    "h4_always_on_submitted_blocks": 9,
+    "h4_always_on_submitted_collateral_pct": 2.09,
+    "median_first_intercept_delay_after_strong_alert_steps": 1,
+    "h8_incremental_coverage_pp": 0.67
+  },
+  "interpretation": "short-cycle command recurrence, not generic action repetition, is the target; h=4 captures immediate and ABAB/ABCABC-style loops while the regime gate prevents normal-work interference",
+  "evidence_scope": "Recorded-edge interception diagnostic on observed trajectories; the measured outcome is recurrence-edge interception."
+}

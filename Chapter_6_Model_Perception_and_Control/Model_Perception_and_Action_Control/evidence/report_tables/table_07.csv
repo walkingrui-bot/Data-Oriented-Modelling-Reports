@@ -1,0 +1,6 @@
+Measure,Resolved trajectories,Unresolved trajectories
+Mean steps,58.27,68.54
+normalized action entropy,0.8057,0.8039
+transition entropy,1.434,1.475
+Repeated bigram fraction,0.785,0.832
+Repeated trigram fraction,0.555,0.617

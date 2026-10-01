@@ -1,0 +1,4 @@
+Separate batch,Exposure,Topology without Role,Topology + Role,Geometry + Role
+Batch A · 46 steps,43.48%,43.48%,52.17%,54.35%
+Batch B · 48 steps,54.17%,60.42%,56.25%,56.25%
+Batch C · 41 steps,39.02%,36.59%,34.15%,39.02%

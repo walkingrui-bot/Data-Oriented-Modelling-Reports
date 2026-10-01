@@ -1,0 +1,7 @@
+Replay measure,Result,Interpretation
+Current phase milestone reached within three steps,300/300,Edit proceeds to verification; unverified states receive Test; validated states can Submit
+Encounter with the prior four-command cooldown within five steps,0/300,The continuation avoids the recently blocked recurrence edges
+Five-step exact-command novelty against Qwen history,Mean 100%,Novel operations continue beyond the first command
+Progression-role density over three steps,79.89%,Most continuation actions occupy the Edit/Test/Submit chain
+Progression-role density over five steps,80.56%,The donor segment retains progression-role content
+Submit reached within five steps,174/300 = 58.00%,Other states are assessed by recurrence-gate clearance

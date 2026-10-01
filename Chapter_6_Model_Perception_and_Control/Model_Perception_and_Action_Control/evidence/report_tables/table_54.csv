@@ -1,0 +1,5 @@
+Behavior group,Prompts,Raw argmax = generated first token,Raw argmax tool but generation TEXT
+ACT prompt → ACT,70,70,0
+TEXT prompt → ACT,59,59,0
+TEXT prompt → TEXT,11,4,7
+Total,140,133,7

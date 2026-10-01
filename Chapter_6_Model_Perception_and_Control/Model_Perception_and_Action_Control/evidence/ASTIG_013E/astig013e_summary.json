@@ -1,0 +1,25 @@
+{
+  "n_tasks": 8,
+  "phase_counts": {
+    "PRE_EDIT": 3,
+    "POST_EDIT_UNVERIFIED": 3,
+    "POST_EDIT_VALIDATED": 2
+  },
+  "phase_side_effect_congruence": "8/8",
+  "pre_edit_source_mutation": "3/3",
+  "pre_edit_verified_smoke": "2/3",
+  "non_edit_source_mutation": "0/5",
+  "post_smoke_pass_initial": "7/8",
+  "observer_detected_events": {
+    "environment_dependency_block": 1,
+    "ephemeral_test_artifact_missing": 1,
+    "code_syntax_failure_after_rc0_edit": 1
+  },
+  "pipefail_probe": {
+    "task": "sympy__sympy-20154",
+    "original_pipeline_rc": 0,
+    "pipefail_rc": 4,
+    "failure": "missing hypothesis"
+  },
+  "evidence_scope": "local compatibility execution of real recorded commands on installed SymPy source snapshot; not fresh SWE-bench task-success scoring"
+}

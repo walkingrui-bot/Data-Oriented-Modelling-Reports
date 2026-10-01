@@ -1,0 +1,344 @@
+[
+  {
+    "table": 1,
+    "source_paragraph": 40,
+    "caption": "Table 1. Study overview.",
+    "note": "Source: the research record described in this section. Values are descriptive unless an evidence status is explicitly stated."
+  },
+  {
+    "table": 2,
+    "source_paragraph": 111,
+    "caption": "Table 2. Encoding and sample.",
+    "note": "Source: the research record described in this section. Values are descriptive unless an evidence status is explicitly stated."
+  },
+  {
+    "table": 3,
+    "source_paragraph": 135,
+    "caption": "Table 3. A frequency preserving positional control.",
+    "note": "Source: the 857-code sequence and 400 frequency-preserving permutations. ± denotes the reported permutation standard deviation; ratios use the permutation mean."
+  },
+  {
+    "table": 4,
+    "source_paragraph": 173,
+    "caption": "Table 4. Redistribution of effective statistical mass.",
+    "note": "Source: the sample and protocol in this section. Percentages retain their stated denominators; NLL is unitless and lower is better. Values are the reported descriptive aggregates."
+  },
+  {
+    "table": 5,
+    "source_paragraph": 193,
+    "caption": "Table 5. Interference from repeated historical content.",
+    "note": "Source: the sample and protocol in this section. Percentages retain their stated denominators; NLL is unitless and lower is better. Values are the reported descriptive aggregates."
+  },
+  {
+    "table": 6,
+    "source_paragraph": 208,
+    "caption": "Table 6. ASTIG 003 Protecting functional roles.",
+    "note": "Source: the sample and protocol in this section. Percentages retain their stated denominators; NLL is unitless and lower is better. Values are the reported descriptive aggregates."
+  },
+  {
+    "table": 7,
+    "source_paragraph": 225,
+    "caption": "Table 7. The 479 trajectory cohort.",
+    "note": "Source: the sample and protocol in this section. Percentages retain their stated denominators; NLL is unitless and lower is better. Values are the reported descriptive aggregates."
+  },
+  {
+    "table": 8,
+    "source_paragraph": 246,
+    "caption": "Table 8. Results after length matching.",
+    "note": "Source: length-matched public trajectories. Differences are resolved minus unresolved; the remaining length difference is measured in steps."
+  },
+  {
+    "table": 9,
+    "source_paragraph": 267,
+    "caption": "Table 9. Changes across a long task.",
+    "note": "Source: the sample and protocol in this section. Percentages retain their stated denominators; NLL is unitless and lower is better. Values are the reported descriptive aggregates."
+  },
+  {
+    "table": 10,
+    "source_paragraph": 298,
+    "caption": "Table 10. Two recorded channels in the same model.",
+    "note": "Source: the sample and protocol in this section. Percentages retain their stated denominators; NLL is unitless and lower is better. Values are the reported descriptive aggregates."
+  },
+  {
+    "table": 11,
+    "source_paragraph": 323,
+    "caption": "Table 11. Prediction task.",
+    "note": "Source: the sample and protocol in this section. Percentages retain their stated denominators; NLL is unitless and lower is better. Values are the reported descriptive aggregates."
+  },
+  {
+    "table": 12,
+    "source_paragraph": 353,
+    "caption": "Table 12. Similarity and permitted connections.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 13,
+    "source_paragraph": 383,
+    "caption": "Table 13. Label propagation with the same attention kernel.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 14,
+    "source_paragraph": 401,
+    "caption": "Table 14. The first corrective optics stack.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 15,
+    "source_paragraph": 435,
+    "caption": "Table 15. Sequential correction on numerical data.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 16,
+    "source_paragraph": 461,
+    "caption": "Table 16. Cumulative reasoning context in long tasks.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 17,
+    "source_paragraph": 486,
+    "caption": "Table 17. Gains in the later task phases.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 18,
+    "source_paragraph": 511,
+    "caption": "Table 18. Role protection depends on the working state.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 19,
+    "source_paragraph": 549,
+    "caption": "Table 19. The initial case based router.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 20,
+    "source_paragraph": 579,
+    "caption": "Table 20. The switchability gate.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 21,
+    "source_paragraph": 600,
+    "caption": "Table 21. Retaining the established default.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 22,
+    "source_paragraph": 630,
+    "caption": "Table 22. Calibration design.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 23,
+    "source_paragraph": 647,
+    "caption": "Table 23. A broad calibration region.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 24,
+    "source_paragraph": 669,
+    "caption": "Table 24. Sequential installation at calibrated strengths.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 25,
+    "source_paragraph": 692,
+    "caption": "Table 25. Repeating irrelevant old history.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 26,
+    "source_paragraph": 729,
+    "caption": "Table 26. Repeating current content and functional words.",
+    "note": "Source: the numerical-data or recorded-trajectory experiment specified in this section. Accuracy is a percentage unless marked otherwise; pp means percentage points. Results retain the stated folds and correction settings."
+  },
+  {
+    "table": 27,
+    "source_paragraph": 779,
+    "caption": "Table 27. Matched tasks and evaluation.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 28,
+    "source_paragraph": 834,
+    "caption": "Table 28. Rolling command recurrence.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 29,
+    "source_paragraph": 856,
+    "caption": "Table 29. Alert timing before the step limit.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 30,
+    "source_paragraph": 918,
+    "caption": "Table 30. Results across the three models.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 31,
+    "source_paragraph": 960,
+    "caption": "Table 31. Four commands cover most observed recurrence.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 32,
+    "source_paragraph": 991,
+    "caption": "Table 32. Coverage in individual loop trajectories.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 33,
+    "source_paragraph": 1074,
+    "caption": "Table 33. Expanding local history.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 34,
+    "source_paragraph": 1130,
+    "caption": "Table 34. Calibration from Submitted trajectories.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 35,
+    "source_paragraph": 1152,
+    "caption": "Table 35. Phase from already observed history.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 36,
+    "source_paragraph": 1173,
+    "caption": "Table 36. Candidate availability after applying phase.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 37,
+    "source_paragraph": 1190,
+    "caption": "Table 37. A lower bound on premature submission.",
+    "note": "Source: recorded coding-agent trajectories under the stated sampling and routing protocol. Counts and percentages use the displayed denominators. Submitted denotes exit status; the measured quantities are defined in the column headings."
+  },
+  {
+    "table": 38,
+    "source_paragraph": 1255,
+    "caption": "Table 38. Robustness to an uncompressed representation.",
+    "note": "Source: controlled replay on 300 strong-loop states. Horizons are command steps. Release and phase progression are replay outcomes under the stated donor-continuation protocol."
+  },
+  {
+    "table": 39,
+    "source_paragraph": 1276,
+    "caption": "Table 39. Continuation along recorded donor paths.",
+    "note": "Source: controlled replay on 300 strong-loop states. Horizons are command steps. Release and phase progression are replay outcomes under the stated donor-continuation protocol."
+  },
+  {
+    "table": 40,
+    "source_paragraph": 1300,
+    "caption": "Table 40. A single new command followed by the recorded Qwen future.",
+    "note": "Source: controlled replay on 300 strong-loop states. Horizons are command steps. Release and phase progression are replay outcomes under the stated donor-continuation protocol."
+  },
+  {
+    "table": 41,
+    "source_paragraph": 1317,
+    "caption": "Table 41. One through five takeover steps.",
+    "note": "Source: controlled replay on 300 strong-loop states. Horizons are command steps. Release and phase progression are replay outcomes under the stated donor-continuation protocol."
+  },
+  {
+    "table": 42,
+    "source_paragraph": 1375,
+    "caption": "Table 42. Phase selected execution.",
+    "note": "Source: real shell-command execution on compatible SymPy snapshots. rc is the process return code. Source mutation, test output and smoke verification are separate observation channels."
+  },
+  {
+    "table": 43,
+    "source_paragraph": 1398,
+    "caption": "Table 43. Verification and environmental dependencies.",
+    "note": "Source: real shell-command execution on compatible SymPy snapshots. rc is the process return code. Source mutation, test output and smoke verification are separate observation channels."
+  },
+  {
+    "table": 44,
+    "source_paragraph": 1417,
+    "caption": "Table 44. Pipeline status as an observation channel.",
+    "note": "Source: real shell-command execution on compatible SymPy snapshots. rc is the process return code. Source mutation, test output and smoke verification are separate observation channels."
+  },
+  {
+    "table": 45,
+    "source_paragraph": 1433,
+    "caption": "Table 45. Eight task execution matrix.",
+    "note": "Source: real shell-command execution on compatible SymPy snapshots. rc is the process return code. Source mutation, test output and smoke verification are separate observation channels."
+  },
+  {
+    "table": 46,
+    "source_paragraph": 1494,
+    "caption": "Table 46. Surface code distributions.",
+    "note": "Source: the 70-pair controlled model experiment. Values are descriptive measurements; layerwise probe and Fisher tables use three-seed means, while the spectral-rank table uses seed 7. Probability measures and ranks are unitless."
+  },
+  {
+    "table": 47,
+    "source_paragraph": 1525,
+    "caption": "Table 47. Final token decision state.",
+    "note": "Source: the 70-pair controlled model experiment. Values are descriptive measurements; layerwise probe and Fisher tables use three-seed means, while the spectral-rank table uses seed 7. Probability measures and ranks are unitless."
+  },
+  {
+    "table": 48,
+    "source_paragraph": 1569,
+    "caption": "Table 48. Whole sequence representation.",
+    "note": "Source: the 70-pair controlled model experiment. Values are descriptive measurements; layerwise probe and Fisher tables use three-seed means, while the spectral-rank table uses seed 7. Probability measures and ranks are unitless."
+  },
+  {
+    "table": 49,
+    "source_paragraph": 1613,
+    "caption": "Table 49. Layerwise dimensions and compression.",
+    "note": "Source: the 70-pair controlled model experiment. Values are descriptive measurements; layerwise probe and Fisher tables use three-seed means, while the spectral-rank table uses seed 7. Probability measures and ranks are unitless."
+  },
+  {
+    "table": 50,
+    "source_paragraph": 1675,
+    "caption": "Table 50. Pretrained model and measurement interface.",
+    "note": "Source: the fixed pretrained-model cohort and intervention protocol in this section. Margins and control effects use the stated log-probability units; block indices are zero-based. Counts concern first-action behaviour."
+  },
+  {
+    "table": 51,
+    "source_paragraph": 1700,
+    "caption": "Table 51. Missing locations in the preliminary examples.",
+    "note": "Source: the fixed pretrained-model cohort and intervention protocol in this section. Margins and control effects use the stated log-probability units; block indices are zero-based. Counts concern first-action behaviour."
+  },
+  {
+    "table": 52,
+    "source_paragraph": 1734,
+    "caption": "Table 52. Original cohort first action baseline.",
+    "note": "Source: the fixed pretrained-model cohort and intervention protocol in this section. Margins and control effects use the stated log-probability units; block indices are zero-based. Counts concern first-action behaviour."
+  },
+  {
+    "table": 53,
+    "source_paragraph": 1754,
+    "caption": "Table 53. Paired preference changes after restoring information.",
+    "note": "Source: the fixed pretrained-model cohort and intervention protocol in this section. Margins and control effects use the stated log-probability units; block indices are zero-based. Counts concern first-action behaviour."
+  },
+  {
+    "table": 54,
+    "source_paragraph": 1778,
+    "caption": "Table 54. Raw logits and the generated first token.",
+    "note": "Source: the fixed pretrained-model cohort and intervention protocol in this section. Margins and control effects use the stated log-probability units; block indices are zero-based. Counts concern first-action behaviour."
+  },
+  {
+    "table": 55,
+    "source_paragraph": 1820,
+    "caption": "Table 55. Direction specificity and collateral measurements.",
+    "note": "Source: the fixed pretrained-model cohort and intervention protocol in this section. Margins and control effects use the stated log-probability units; block indices are zero-based. Counts concern first-action behaviour."
+  },
+  {
+    "table": 56,
+    "source_paragraph": 1894,
+    "caption": "Table 56. Evidence across the study.",
+    "note": "Source: the experiment-specific records identified in the table and Appendix A. Evidence types and sample sizes remain separate."
+  },
+  {
+    "table": 57,
+    "source_paragraph": 1927,
+    "caption": "Table 57. Appendix A Data sources and experiment records.",
+    "note": "Source: the experiment-specific records identified in the table and Appendix A. Evidence types and sample sizes remain separate."
+  }
+]

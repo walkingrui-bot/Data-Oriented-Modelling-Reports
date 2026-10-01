@@ -1,0 +1,5 @@
+Measure,Before correction,After correction
+Normalized entropy,0.912,0.983
+Gini,0.485,0.220
+Mass in the top 5% of codes,29.85%,13.49%
+Mass in the top 10% of codes,40.31%,21.21%

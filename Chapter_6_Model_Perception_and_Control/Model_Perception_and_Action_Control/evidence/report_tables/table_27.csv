@@ -1,0 +1,4 @@
+Model,Tasks and states,Submission status,Raw,"GPT calibration 0.5/0.7, k = 2, λ = 1",Best tested prescription
+GPT-5-mini,10 / 76,10/10 Submitted,64.47%,69.74%,72.37%
+DeepSeek-v4-flash,10 / 156,10/10 Submitted,38.46%,54.49%,57.69%
+Qwen-2.5-7B,10 / 435,2/10 Submitted,27.13%,21.84%,27.13% with Raw

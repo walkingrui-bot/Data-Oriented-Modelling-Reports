@@ -1,0 +1,5 @@
+Comparison,Outer-fold accuracy,Difference from previous default,Interpretation
+"Previous default γc = 0.25, γr = 0.50, k = 2, λ = 1",59.38%,—,Stronger exposure compression from the earlier small-sample setting
+Nested coarse-grid selection,61.72%,+2.34 pp,Three additional correct states out of 128
+Fine scan of the strongest region,61.72%,+2.34 pp,The same accuracy across a finer parameter region
+"Fixed calibration γc = 0.50, γr = 0.70, k = 2, λ = 1",61.72%,+2.34 pp,A simple fixed prescription matches nested selection

@@ -1,0 +1,6 @@
+Calibration measure,Observed value,Interpretation
+Edit precedes final Submit,20 / 20,Implementation occurred before submission
+Verification follows Edit,20 / 20,The changed state was inspected again
+A formal Test follows Edit,12 / 20,Submitted paths use several verification channels
+Latest post-edit Test has return code 0,11 / 20,A formal test pass is one strong verification channel
+Progression actions retained under stricter phase eligibility,147 / 150 (98.0%),High compatibility with observed progression grammar

@@ -1,0 +1,9 @@
+Task,Phase,Command side effect,Verification outcome
+sympy-20154,POST_EDIT_UNVERIFIED,Source unchanged,Test dependency blocked; smoke green; pipefail exposes rc = 4
+sympy-24562,PRE_EDIT,Modifies numbers.py,Edit completed; smoke green
+sympy-13757,PRE_EDIT,Modifies polytools.py,Edit completed; smoke green
+sympy-23950,POST_EDIT_UNVERIFIED,Source unchanged,Inspection completed; smoke green
+sympy-24661,POST_EDIT_VALIDATED,Source unchanged,Submit shell completed; snapshot has no prior diff
+sympy-13551,POST_EDIT_VALIDATED,Source unchanged,Submit shell completed; snapshot has no prior diff
+sympy-22914,POST_EDIT_UNVERIFIED,Source unchanged,Temporary test artifact absent; equivalent fallback verification green
+sympy-19346,PRE_EDIT,Modifies repr.py,rc = 0 followed by failed import/smoke; verifier retains control

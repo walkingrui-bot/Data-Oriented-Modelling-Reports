@@ -1,0 +1,7 @@
+Measure,Observed value,Interpretation
+Normalized entropy,0.912,Moderate overall entropy with concentrated frequency mass
+Gini,0.485,Unequal exposure across codes
+Mass in the top 5% of codes,29.85%,A small fraction carries almost 30% of the surface mass
+Mass in the top 10% of codes,40.31%,The highest-frequency tenth carries about 40%
+95th percentile of local overrepresentation,About 13.2×,Local concentration substantially exceeds global-frequency expectation
+Maximum local overrepresentation,About 53.6×,An extreme local burst

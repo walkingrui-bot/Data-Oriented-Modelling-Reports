@@ -1,0 +1,5 @@
+Relation operator,Mean accuracy with 10% labels across four datasets
+Raw global Attention,65.80%
++ Geometry Lens,92.20%
++ Topology Lens,93.65%
++ Geometry + Topology,93.92%
