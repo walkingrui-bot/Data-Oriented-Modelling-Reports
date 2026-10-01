@@ -2,29 +2,7 @@
 
 ## What Data-Oriented Modelling means
 
-We study how data can tell us what kind of model to build. The starting point is the process that produced the observations. We then investigate which relationships stay stable, which change with the situation, and how those changes unfold. These findings guide the model's structure, what it learns and how it is evaluated. This is the central idea of **Data-Oriented Modelling: model design itself becomes an outcome of data analysis.**
-
-Every observation has a source, a time and a way of being measured. We begin by establishing what was recorded and how the recording process shaped it. This gives us a basis for separating changes in the underlying system from changes in how it was observed. It also lets us bring different sources together while preserving what each observation means.
-
-Next we study how the data is organised. By *data geometry*, we mean how observations are arranged and related: their distances, neighbourhoods, patterns of variation and paths through time. Statistics and mathematical modelling help us find which differences carry useful information, which relationships repeat, and how several influences work together. This analysis gives model design its first set of requirements.
-
-A central question is where that structure carries information about cause and effect. We develop hypotheses about what generates the observations, work out what those hypotheses predict, and compare those predictions with measured responses. A hypothesis gains support where its expected relationships and responses hold under the conditions tested. The process continues as new observations help us refine the account of how the system works.
-
-We also follow what happens when something changes. The size, direction and timing of the response tell us where information matters and how its effects travel through the system. This connects the description of a state with an explanation of what happens next. It gives us a concrete basis for deciding which information a model should retain.
-
-That question follows the information through learning. As a model transforms and combines its inputs, we examine what happens to the relationships we have measured. We want the distinctions that support prediction, explanation or action to remain useful throughout the computation. Designing a representation and a training objective therefore includes deciding which relationships they should preserve, and measuring how well they do so.
-
-Some relationships remain stable across the conditions studied. Others depend on the current situation or on what happened earlier. We investigate both the relationships and the rules governing their change. Stable structure can support a direct mathematical mapping. Useful information from the past gives a model a reason to keep memory. Measurable changes in the governing relationships give it a reason to update its account of the mechanism. The evidence determines which of these roles the model needs.
-
-**Complexity is something the data has to ask for.** We look for repeatable patterns that the current model leaves unexplained, then test whether additional computation captures them. Each addition earns its place through a measurable contribution. This makes both the amount of computation and where it is used part of the research.
-
-When several sources describe a shared system, we first establish the meaning and structure of each source. Their models can then be coordinated by asking whether they support a common account that explains their observations. Information about the same moment is brought together according to what it describes; changes through real time retain their chronology. The aim is to learn what is shared while preserving the contributions of the different observations.
-
-For systems that act, this extends into a continuing cycle: evidence informs the model's account of the current state, that state supports a decision, and the observed result informs the next decision. We study both the individual operation and its contribution to the complete sequence of behaviour. Perception, decision and execution each become parts of the same measurable process.
-
-Precision comes from fitting the computation to the particular data and the question being asked. Generality comes from identifying which principles and learned relationships can carry across tasks, sources and settings. We test these possibilities through repeated measurements, appropriate comparisons and targeted interventions.
-
-Our aim is to reach model design with an experimental reason for each part of the computation. **Study how the world produces data → identify stable and changing mechanisms → build the model those findings call for.** In this way, *when to build which model* becomes a research question in its own right.
+Data-Oriented Modelling means **measuring how the world produces data, finding which mechanisms stay stable and which change, and turning those findings into a model.** We begin by understanding what each kind of data records and how its information is organised. We then study how local changes affect what happens next. Those results guide what the model learns, what it preserves and where it needs more computation. Complexity earns its place through repeatable evidence. The aim is for the model to grow out of the experiments: **model design itself becomes an outcome of data analysis.**
 
 ## Research lines and evidence
 
