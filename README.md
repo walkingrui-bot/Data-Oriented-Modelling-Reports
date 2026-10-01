@@ -2,7 +2,29 @@
 
 ## What Data-Oriented Modelling means
 
-Data-Oriented Modelling means **measuring how the world produces data, finding which mechanisms stay stable and which change, and turning those findings into a model.** We begin by understanding what each kind of data records and how its information is organised. We then study how local changes affect what happens next. Those results guide what the model learns, what it preserves and where it needs more computation. Complexity earns its place through repeatable evidence. The aim is for the model to grow out of the experiments: **model design itself becomes an outcome of data analysis.**
+# Data-Oriented Modelling
+
+The core of data-oriented modelling is to determine the modelling approach from the structure of the data itself.
+
+For problems in which the mechanisms, relationships between variables, and constraints are already relatively well understood, mathematical modelling can directly incorporate these known structures and often achieve high interpretability and computational precision. Neural networks, by contrast, are well suited to learning complex mappings from large numbers of samples and extracting general statistical patterns through shared parameters. These two approaches have different strengths and correspond to different data conditions.
+
+The first step in modelling is therefore to study the data.
+
+This involves identifying the statistical structure of the data, its temporal relationships, dependencies between variables, patterns of change across different states, and the stability of these structures across samples and conditions. As these properties become clearer, it also becomes clearer what the model needs to learn, which relationships can be calculated directly, and which components need to be learned from data.
+
+Different types of data correspond to substantially different learning tasks. Some problems are dominated by stable mappings; in others, the mapping changes with the state of the system. Some data exhibit deeper generative regularities, while other datasets contain multiple observations of the same underlying object from different perspectives. Different statistical structures require different forms of representation and different computational structures.
+
+How the data are presented to the model is equally important. Static variables, temporal trajectories, state transitions, and multi-source observations define different learning problems. The representation of the data determines which structures the model can directly use and is therefore itself part of model design.
+
+Within this framework, mathematical methods, statistical models, and neural networks are combined according to the structure of the data. Relationships that are already well characterised can be incorporated directly into mathematical models. Complex regularities that need to be estimated from samples can be handled by learning models. Relationships that vary with state can be represented using computational structures capable of expressing such variation. Model complexity, architecture, and training strategy are therefore determined by the characteristics of the specific data.
+
+This approach applies both to general modelling across different data types and to high-precision modelling for a specific dataset. The former focuses on modelling principles that can be reused across different data structures, while the latter focuses on making full use of structures already identified within a particular dataset.
+
+Data-oriented modelling ultimately addresses a practical question:
+
+**For the data at hand, what combination of representation, mathematical structure, and learning method produces the most appropriate model?**
+
+Mathematics, statistics, and machine learning already provide a large collection of mature tools. The essential task is to identify the structure of the data accurately and apply the appropriate methods in the appropriate places.
 
 ## Research lines and evidence
 
