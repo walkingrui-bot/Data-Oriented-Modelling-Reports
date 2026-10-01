@@ -8,9 +8,7 @@ The core of data-oriented modelling is to determine the modelling approach from 
 
 For problems in which the mechanisms, relationships between variables, and constraints are already relatively well understood, mathematical modelling can directly incorporate these known structures and often achieve high interpretability and computational precision. Neural networks, by contrast, are well suited to learning complex mappings from large numbers of samples and extracting general statistical patterns through shared parameters. These two approaches have different strengths and correspond to different data conditions.
 
-The first step in modelling is therefore to study the data.
-
-This involves identifying the statistical structure of the data, its temporal relationships, dependencies between variables, patterns of change across different states, and the stability of these structures across samples and conditions. As these properties become clearer, it also becomes clearer what the model needs to learn, which relationships can be calculated directly, and which components need to be learned from data.
+The first step in modelling is therefore to study the data. This involves identifying the statistical structure of the data, its temporal relationships, dependencies between variables, patterns of change across different states, and the stability of these structures across samples and conditions. As these properties become clearer, it also becomes clearer what the model needs to learn, which relationships can be calculated directly, and which components need to be learned from data.
 
 Different types of data correspond to substantially different learning tasks. Some problems are dominated by stable mappings; in others, the mapping changes with the state of the system. Some data exhibit deeper generative regularities, while other datasets contain multiple observations of the same underlying object from different perspectives. Different statistical structures require different forms of representation and different computational structures.
 
@@ -22,7 +20,7 @@ This approach applies both to general modelling across different data types and 
 
 Data-oriented modelling ultimately addresses a practical question:
 
-**For the data at hand, what combination of representation, mathematical structure, and learning method produces the most appropriate model?**
+For the data at hand, what combination of representation, mathematical structure, and learning method produces the most appropriate model?
 
 Mathematics, statistics, and machine learning already provide a large collection of mature tools. The essential task is to identify the structure of the data accurately and apply the appropriate methods in the appropriate places.
 
