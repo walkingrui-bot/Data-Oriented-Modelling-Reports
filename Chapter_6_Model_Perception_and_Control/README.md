@@ -1,6 +1,10 @@
-# Chapter 6 — Model Perception and Control
+# Chapter 6 — Model Perception and Control: Continuing Chapters 2, 3 and 5
 
 [All chapters](../README.md) · [Previous: Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md)
+
+This chapter directly continues Chapters 2, 3 and 5, bringing together generative-state control, experimental measurement and mechanism-guided modelling.
+
+**Recommended reading order:** [Chapter 2](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) → [Chapter 3](../Chapter_3_Machine_Learning_Epidemiology/README.md) → [Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md) → [Chapter 6](../Chapter_6_Model_Perception_and_Control/README.md).
 
 This chapter studies decision-making agents: how a model interprets observations, assigns action eligibility, changes the environment and verifies the result. Its reports connect representation measurements with explicit control experiments.
 

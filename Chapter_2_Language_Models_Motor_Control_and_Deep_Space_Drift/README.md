@@ -25,4 +25,8 @@ This report follows how a useful answer becomes available, how continued generat
 
 The canonical publication is **Chapter 3, Report 02**, English edition 1.0, dated 29 September 2026. This entry links to the same report and evidence. The earlier Chapters 1 and 2 DOI above identifies the original reports.
 
+**Direct continuation:** [Chapter 6 — Model Perception and Control: Continuing Chapters 2, 3 and 5](../Chapter_6_Model_Perception_and_Control/README.md).
+
+**Recommended reading order:** [Chapter 2](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) → [Chapter 3](../Chapter_3_Machine_Learning_Epidemiology/README.md) → [Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md) → [Chapter 6](../Chapter_6_Model_Perception_and_Control/README.md).
+
 The [shared project and original path map](../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/REPOSITORY_ORGANIZATION.md) are kept once under Chapter 1. [Original reproduction instructions](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/v0.1.0/docs/REPRODUCTION.md) belong to the preserved v0.1.0 layout.

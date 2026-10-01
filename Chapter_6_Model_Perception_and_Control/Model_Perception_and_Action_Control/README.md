@@ -2,9 +2,13 @@
 
 **Corrective Optics for Language Models**
 
-Chapter 6, Report 01 · English edition 1.0 · 1 October 2026
+Chapter 6 — Continuing Chapters 2, 3 and 5 · Report 01 · English edition 1.0 · 1 October 2026
 
-[Chapter 6](../README.md) · [All chapters](../../README.md)
+[Chapter 6 — Continuing Chapters 2, 3 and 5](../README.md) · [All chapters](../../README.md)
+
+This chapter directly continues Chapters 2, 3 and 5, bringing together generative-state control, experimental measurement and mechanism-guided modelling.
+
+**Recommended reading order:** [Chapter 2](../../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) → [Chapter 3](../../Chapter_3_Machine_Learning_Epidemiology/README.md) → [Chapter 5](../../Chapter_5_Data_Oriented_Modelling/README.md) → [Chapter 6](../../Chapter_6_Model_Perception_and_Control/README.md).
 
 A decision-making agent needs a calibrated view of its task, a rule for choosing an eligible action and an observation of what changed after execution. This report follows those requirements from language statistics through recorded coding-agent loops to targeted intervention inside a pretrained language model.
 

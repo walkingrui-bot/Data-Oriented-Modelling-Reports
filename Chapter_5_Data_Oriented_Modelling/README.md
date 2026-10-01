@@ -18,6 +18,10 @@ Report 03 develops mechanism-guided modelling through local-scale relations, tra
 
 [Back to Data-Oriented Modelling — Reports](../README.md)
 
-Related study: [Chapter 6, Report 01 — Model Perception and Action Control](../Chapter_6_Model_Perception_and_Control/Model_Perception_and_Action_Control/README.md) connects these questions to calibrated observation, action eligibility and targeted first-action intervention.
+**Direct continuation:** [Chapter 6 — Model Perception and Control: Continuing Chapters 2, 3 and 5](../Chapter_6_Model_Perception_and_Control/README.md).
+
+**Recommended reading order:** [Chapter 2](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) → [Chapter 3](../Chapter_3_Machine_Learning_Epidemiology/README.md) → [Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md) → [Chapter 6](../Chapter_6_Model_Perception_and_Control/README.md).
+
+Its first report, [Model Perception and Action Control](../Chapter_6_Model_Perception_and_Control/Model_Perception_and_Action_Control/README.md), connects these questions to calibrated observation, action eligibility and targeted first-action intervention.
 
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
