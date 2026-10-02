@@ -60,7 +60,6 @@ jobs:
           python3 - <<'PY'
           import json, csv, re, time, urllib.request, statistics, random
           from pathlib import Path
-          import numpy as np
 
           random.seed(20261002)
 
