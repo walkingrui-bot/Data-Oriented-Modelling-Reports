@@ -107,11 +107,13 @@ Primary text: `Chapter_4_Data_Zoo/Language_Structure_and_Control_Geometry/REPORT
 
 The report’s distinction between broad sentence state space and narrow local movement remains compatible with later work. The later multiscale generation series adds an important qualification: low-dimensional local movement does not by itself identify a unique privileged set of observation scales or determine the generator architecture.
 
-EXP015 finds weak association between token position and ten-token future loss change (Spearman 0.067); simple hidden-state and confidence/entropy readouts do not recover the gain field. EXP016 shows that cumulative gain is highly concentrated only when horizons are pooled (PC1 92.39%); after splitting into non-overlapping future intervals, PC1 falls to 30.49%, the first two components explain 53.06%, and participation ratio is 4.59/5. The top-decile overlap between 1-token and 7–10-token horizons is only 9.05%.
+Later loss-design experiments show that future consequence and useful training intervention are state- and horizon-dependent. EXP019 gives a positive late-training intervention: held-out high-gain improvements across future bands 1 / 2 / 3–4 / 5–6 / 7–10 are +0.03575 / +0.02990 / +0.03551 / +0.01452 / +0.00422, with the first four confidence intervals excluding zero. EXP021 supplies a preregistered null: all three intervention windows are vetoed and the run exactly matches baseline (NLL 4.6071796417; maximum targeted held-out loss delta 0).
 
-**Current interpretation:** language contains multiple future-relevant scales whose importance depends on prediction horizon. Descriptive low-rank transition geometry is a measurement target, not a fixed architecture prescription.
+EXP022 then measures cross-band interactions at step 350 and α = 0.03125. Across three panels, 15/50, 15/50 and 17/50 interaction cells are significant. The full response remains almost additive (additive-control correlation 0.9973–0.9991; 95.8–98.1% response energy retained), while the interaction residual is concentrated: its top two SVD axes explain 92.93% and its participation ratio is 1.79. Eight of fifteen stable interactions spill outside their source pair.
 
-The multiscale line is now complete through **EXP021**; EXP022 is the next unresolved experiment.
+**Current interpretation:** language contains multiple future-relevant scales whose useful interventions and cross-scale interactions depend on prediction horizon and training state. Descriptive low-rank transition geometry is a measurement target, not a fixed architecture prescription.
+
+The multiscale line is complete through **EXP022**; EXP023 is in progress as of this audit.
 
 ### 4.2 Subreport 02 — Human Learning and Sensorimotor Geometry
 
@@ -211,7 +213,7 @@ The numerical findings on attention geometry, local scales, coverage, graph-stat
 
 The root `README.md` currently under-reports two active research lines:
 
-1. **Multiscale Language Generation** is listed as EXP001–EXP015. The living record has now completed through **EXP021**.
+1. **Multiscale Language Generation** is listed as EXP001–EXP015. The living record has now completed through **EXP022**; EXP023 is in progress.
 2. **Chemical Structure Changes and Odor Responses** is listed as 001–007. The line has now completed through **EXP015**.
 
 The later chemical–odor campaign materially narrows the early “shared operator / transport” interpretation. In EXP012, one observed early-frame re-anchor raises future pooled cosine from 0.08134 to 0.27230, while persistent tangent continuation is negative in the final campaign (−0.05075). In EXP013, a no-shift frame reaches 0.38383, a global tangent 0.23227, chemical-nearest-neighbour transfer −0.15889, chemical ridge 0.06246, and the best chemistry-inferred later frame only 0.02060 versus 0.27230 for the observed re-anchor.
