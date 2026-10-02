@@ -2617,3 +2617,22 @@ External corpora used in the topical extension. MCTS: Chong et al., 2024, Multi-
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
 
 In this report, the directly demonstrated construction is RELATIONAL-ROUTER-008, within the reconstruction task and controls described in Section 21.
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: local low-dimensionality retained; scale interpretation revised by later multiscale experiments.**
+
+The report's central distinction between a broad sentence state space and narrower local movement remains supported. The later Multiscale Language Computation series adds a second distinction: low-dimensional local movement does not imply one fixed future-relevant scale or one fixed control axis.
+
+EXP015 measures sentence-level future consequences at 1,988 intervention sites across 19,926 sentences. Token position is only weakly associated with ten-token future loss change (Spearman ρ = 0.067), simple local probes remain near chance (AUC approximately 0.51–0.52; the strongest recorded S10 probe is 0.560), and entropy/confidence do not recover the gain field (ρ approximately −0.031 and 0.005). Future consequence is therefore not reducible to a simple positional or confidence score.
+
+EXP016 separates cumulative future gain from non-overlapping future bands. The pooled cumulative geometry is highly concentrated (PC1 92.39%), while the disjoint-band geometry is much broader: PC1 30.49%, PC1–2 53.06%, participation ratio 4.59. The top-decile overlap between the 1-token and 7–10-token bands is 9.05%, and the union of the five band-specific top deciles covers 36.72% of sites. Different future horizons therefore emphasize different locations.
+
+EXP017–019 then distinguish future-consequence geometry from training-response geometry. Gain weighting from initialization reverses the desired effect in all five high-gain tails, while a late curriculum applied after the response field has matured improves all five measured bands. The evidence supports a state-dependent response field: a location can matter for future loss without being an immediately useful training target at every developmental stage.
+
+EXP022–023 extend this result to cross-band interactions. In EXP022, 15–17 of 50 interaction cells are significant across the three tested conditions; additive controls retain 95.8–98.1% of response energy with correlations 0.9973–0.9991, while the interaction residual itself is low-dimensional: its top two axes explain 92.93% and its participation ratio is 1.79. Eight of fifteen stable interactions spill outside their source bands. EXP023 shows that this low-dimensional interaction geometry persists across developmental checkpoints and dose scans, while its axes rotate with training state and intervention dose.
+
+The current interpretation is therefore: language can contain narrow local operations and low-dimensional response structure, while the active axes and relevant scales remain horizon- and state-dependent. The measured geometry is a target for model design rather than a fixed architecture prescription.
+
+See [Evidence Supersession Audit — 2026-10-02](../../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
