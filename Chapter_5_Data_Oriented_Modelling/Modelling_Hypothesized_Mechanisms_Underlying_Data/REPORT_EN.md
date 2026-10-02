@@ -991,3 +991,24 @@ The additional-dataset validation gives complementary evidence. Les Misérables 
 The resulting method links data geometry, observation mechanisms, target mechanisms and state legality to a candidate operation family, then uses a training-only probe to select an unchanged model, correction, replacement or abstention.
 
 The final validation uses the public Travel Mode Choice, Engel and RAND HIE datasets distributed with statsmodels, and the Les Misérables coappearance network distributed with NetworkX from Knuth's Stanford GraphBase. The archived validation scripts generate the reported per-split results from these sources.
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: the procedure remains supported as a constrained branch of Data-Oriented Modelling; its universal interpretation is superseded.**
+
+The experiments in this report support a specific and useful procedure: when geometry, sampling assumptions, state legality or a scientific mechanism hypothesis already supplies meaningful constraints, those constraints can define admissible candidate operations and a validation probe can choose among them. The reported attention, local-scale, coverage, graph-state and operator-selection results remain unchanged.
+
+Later Data-Oriented Modelling work broadens the entry point for cases in which the generating mechanism is not already known. In those settings, the model is not organized around a prespecified mechanism label. Instead, measurements of state, history, change, cross-view consequences and intervention response are used to learn candidate mechanism states and compare what those candidates generate.
+
+The current distinction is:
+
+**Known or deliberately hypothesized constraints:** use them to exclude inadmissible operations and construct testable candidates.
+
+**Unknown generating mechanism:** infer candidate mechanism states from the data, execute or simulate their consequences, compare them with later observations, and revise the candidates.
+
+Accordingly, a hypothesized mechanism is now one modelling object among several possible candidate worlds rather than the required starting point for every Data-Oriented Modelling problem. The principle that remains common to both regimes is empirical consequence: an operation or mechanism earns its role by the observations and future behavior it accounts for under the stated task.
+
+This update narrows the generality of the Executive Summary and Sections 1, 13, 19–22 while preserving their executed findings as a special-case procedure for mechanism-constrained problems.
+
+See [Evidence Supersession Audit — 2026-10-02](../../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
