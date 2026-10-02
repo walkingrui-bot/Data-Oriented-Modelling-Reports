@@ -423,3 +423,18 @@ Notation: D/C denotes diffuse and concentrated movement regimes; K/V denotes att
 [8] nostalgebraist. The void. Sections 2–3. 2025. https://github.com/nostalgebraist/the-void/blob/main/the-void.md . The continuation appears in sections 2–3; the recurrence measurement appears in Original Synthesis section 12.5.
 
 [Experiment dossiers](../experiments/README.md) · [Evidence index](../EXPERIMENT_INDEX.csv)
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: scope updated by later experiments.**
+
+The original measurements in this report remain part of the experimental record. Subsequent stopping and recovery experiments refine the interpretation of reasoning time and self-written history.
+
+Experiments STOPPING-GEOMETRY-029 and REASONING-HIERARCHICAL-CONTROLLER-027A–027E show that additional computation is a state transition whose value depends on the current predictive state and the selected operation. Answer readiness can already be present at the prompt state, can be lost after a further step, and can reappear later. Readiness sets are frequently disconnected. Passive continuation and repeated generic rescue therefore do not define a monotonic improvement process.
+
+The current interpretation is that explicit chain-of-thought is one observable and reinjectable control trajectory through predictive state. Additional reasoning is useful when the chosen transition moves the system toward an answer-ready region; once readiness is reached, further transitions can have negative value under the same task criterion.
+
+The later recovery hierarchy makes this operational. Across 125 canonical correct-to-wrong exits, the assembled controller assigns 15 events to preventive bypass, 108 to bounded local recovery and 2 to state reconstruction, with immediate readiness recovery in all 125. The corresponding held-out foundation subset contains 60 events and recovers all 60. Append-only rescue remains a verified fallback because repeated rescue is strongly non-monotonic.
+
+This update refines the interpretation of Sections 6–7 and 16 while preserving their executed results. See [Evidence Supersession Audit — 2026-10-02](../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
