@@ -1,0 +1,126 @@
+name: real-deepseek-moe-001
+
+on:
+  push:
+    branches:
+      - exp/real-deepseek-moe-001
+  workflow_dispatch:
+
+jobs:
+  baseline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Runner info
+        run: |
+          mkdir -p results
+          {
+            echo "date=$(date -u +%FT%TZ)"
+            uname -a
+            nproc
+            free -h
+            df -h /
+          } | tee results/runner_info.txt
+
+      - name: Download llama.cpp binary
+        run: |
+          set -euxo pipefail
+          curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
+          mkdir -p /tmp/llama
+          tar -xzf /tmp/llama.tar.gz -C /tmp/llama
+          LLAMA_CLI=$(find /tmp/llama -type f -name llama-cli | head -1)
+          test -n "$LLAMA_CLI"
+          chmod +x "$LLAMA_CLI"
+          echo "LLAMA_CLI=$LLAMA_CLI" >> "$GITHUB_ENV"
+          "$LLAMA_CLI" --version | tee results/llama_version.txt
+
+      - name: Download real DeepSeekMoE-16B Chat IQ1_S
+        run: |
+          set -euxo pipefail
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ1_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ1_S.gguf?download=true"
+          echo "MODEL=$MODEL" >> "$GITHUB_ENV"
+          ls -lh "$MODEL" | tee results/model_file.txt
+          sha256sum "$MODEL" | tee results/model_sha256.txt
+          free -h | tee results/memory_before_inference.txt
+          df -h / | tee results/disk_before_inference.txt
+
+      - name: Run deterministic ASK vs DECL baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p results/ask results/decl
+          cat > /tmp/tasks.tsv <<'EOF'
+arithmetic	A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?	391
+composition	Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?	46
+logic	All zargs are melps. No melps are nords. Can any zarg be a nord?	No
+sequence	What is the next number in the sequence 3, 7, 15, 31, 63?	127
+constraint	A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?	483
+comparison	Alice has 14 marbles, Bob has 9 more than Alice, and Chen has 5 fewer than Bob. How many marbles does Chen have?	18
+EOF
+
+          run_one () {
+            mode="$1"
+            id="$2"
+            q="$3"
+            answer="$4"
+            out="results/$mode/$id.txt"
+            if [[ "$mode" == "ask" ]]; then
+              instruction="Solve the problem by using a short chain of self-questions. Each reasoning step should be phrased as a question followed by a brief answer. End with exactly one line beginning FINAL:."
+            else
+              instruction="Solve the problem using short declarative reasoning statements. Do not ask yourself questions. End with exactly one line beginning FINAL:."
+            fi
+            prompt=$(printf 'User: %s\n\nProblem: %s\n\nAssistant:' "$instruction" "$q")
+            {
+              echo "ID=$id"
+              echo "MODE=$mode"
+              echo "EXPECTED=$answer"
+              echo "PROMPT=$prompt"
+              echo "---OUTPUT---"
+              /usr/bin/time -v "$LLAMA_CLI" -m "$MODEL" -p "$prompt" -n 128 -c 512 -t 4 --temp 0 --seed 1234 --no-display-prompt 2>&1
+            } | tee "$out"
+          }
+
+          while IFS=$'\t' read -r id q answer; do
+            run_one ask "$id" "$q" "$answer"
+            run_one decl "$id" "$q" "$answer"
+          done < /tmp/tasks.tsv
+
+      - name: Summarize outputs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re, csv
+          expected = {
+              "arithmetic":"391","composition":"46","logic":"No",
+              "sequence":"127","constraint":"483","comparison":"18"
+          }
+          rows=[]
+          for mode in ["ask","decl"]:
+              for p in sorted((Path("results")/mode).glob("*.txt")):
+                  txt=p.read_text(errors="replace")
+                  body=txt.split("---OUTPUT---",1)[-1]
+                  m=re.findall(r"(?im)^\s*FINAL:\s*(.+?)\s*$", body)
+                  final=m[-1].strip() if m else ""
+                  exp=expected[p.stem]
+                  rows.append({
+                      "id":p.stem,"mode":mode,"expected":exp,
+                      "final":final,"correct":bool(final and exp.lower() in final.lower()),
+                      "question_marks":body.count("?"),"chars":len(body),
+                  })
+          Path("results/summary.json").write_text(json.dumps(rows,indent=2))
+          with open("results/summary.csv","w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
+          for mode in ["ask","decl"]:
+              rr=[x for x in rows if x["mode"]==mode]
+              print(mode, "accuracy", sum(x["correct"] for x in rr),"/",len(rr),
+                    "mean_question_marks", sum(x["question_marks"] for x in rr)/len(rr))
+          PY
+          cat results/summary.csv
+
+      - name: Upload real DeepSeek baseline
+        uses: actions/upload-artifact@v4
+        with:
+          name: real-deepseek-moe-001-baseline
+          path: results/
+          retention-days: 7
