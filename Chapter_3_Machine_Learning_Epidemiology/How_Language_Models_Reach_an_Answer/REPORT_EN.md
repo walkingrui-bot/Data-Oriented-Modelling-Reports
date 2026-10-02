@@ -3025,3 +3025,18 @@ The publication contains the integrated English report, 18 canonical experiment 
 The scientific progression is supported at three levels: statistical predictive modelling of language and recorded work, controlled interventions in an explicitly enumerable recurrent task, and candidate/phase measurements on recorded coding-agent trajectories. Reading the results at their measured level keeps the operational controller, its empirical basis and its evaluation protocol connected.
 
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: current controller interpretation clarified.**
+
+The 027A–027E results in this report remain the current controlled-system evidence for recovery of answer readiness. Their most important engineering implication is now stated explicitly: the hierarchy should not be read as a license to keep appending corrective prompts.
+
+Repeated generic append-only rescue is strongly non-monotonic. The controller therefore uses the weakest verified intervention that restores readiness, checks the resulting state immediately, and escalates only when the previous level does not recover the target state.
+
+The controlled hierarchy recovers all 125 canonical exits, allocating 15 to L1 preventive bypass, 108 to L2 local traversal and 2 to L3 reconstruction; L4 append-only rescue is not required by those routed canonical cases. The held-out foundation subset contains 60 events and recovers all 60; it exercises L1 and L2 rather than the two development-only L3 cases.
+
+The result supports a bounded, verification-driven controller. It does not support unrestricted repeated prompting as a long-term conversational strategy.
+
+See [Evidence Supersession Audit — 2026-10-02](../../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
