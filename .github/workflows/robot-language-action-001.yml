@@ -1,0 +1,396 @@
+name: robot-language-action-001
+
+on:
+  push:
+    branches:
+      - exp/robot-language-action-001
+  workflow_dispatch:
+
+jobs:
+  language-direct-action:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 110
+
+    steps:
+      - name: Runner info
+        run: |
+          mkdir -p results
+          uname -a | tee results/runner_info.txt
+          nproc | tee -a results/runner_info.txt
+          free -h | tee -a results/runner_info.txt
+
+      - name: Download llama.cpp
+        run: |
+          set -euxo pipefail
+          curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
+          mkdir -p /tmp/llama
+          tar -xzf /tmp/llama.tar.gz -C /tmp/llama
+          LLAMA_SERVER=$(find /tmp/llama -type f -name llama-server | head -1)
+          test -n "$LLAMA_SERVER"
+          chmod +x "$LLAMA_SERVER"
+          echo "LLAMA_SERVER=$LLAMA_SERVER" >> "$GITHUB_ENV"
+
+      - name: Download DeepSeekMoE-16B Chat IQ3_S
+        run: |
+          set -euxo pipefail
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ3_S.gguf?download=true"
+          echo "MODEL=$MODEL" >> "$GITHUB_ENV"
+          sha256sum "$MODEL" | tee results/model_sha256.txt
+
+      - name: Start server
+        run: |
+          set -euxo pipefail
+          "$LLAMA_SERVER" -m "$MODEL" -c 3072 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
+          echo $! > /tmp/llama_server.pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
+              cat /tmp/health.json
+              exit 0
+            fi
+            sleep 2
+          done
+          tail -200 results/server.log
+          exit 1
+
+      - name: Run direct language-to-action benchmark
+        run: |
+          python3 - <<'PY'
+          import csv, json, random, re, time, urllib.request, urllib.error
+          from collections import deque, Counter
+          from pathlib import Path
+
+          OUT=Path("results")
+          OUT.mkdir(exist_ok=True)
+
+          N=6
+          MAX_STEPS=18
+          MODES=["full_map","local_sensor"]
+          ACTIONS=("FORWARD","LEFT","RIGHT","STOP")
+          DIRS=[(0,-1),(1,0),(0,1),(-1,0)]
+          DN=["north","east","south","west"]
+          ARROW=["^",">","v","<"]
+
+          def blocked(grid,x,y,d):
+              dx,dy=DIRS[d]
+              nx,ny=x+dx,y+dy
+              return nx<0 or ny<0 or nx>=N or ny>=N or grid[ny][nx]==1
+
+          def apply_action(grid,state,a):
+              x,y,d=state
+              if a=="LEFT":
+                  return (x,y,(d-1)%4),"turned_left",False
+              if a=="RIGHT":
+                  return (x,y,(d+1)%4),"turned_right",False
+              if a=="STOP":
+                  return state,"stopped",False
+              if a=="FORWARD":
+                  if blocked(grid,x,y,d):
+                      return state,"collision_blocked",True
+                  dx,dy=DIRS[d]
+                  return (x+dx,y+dy,d),"moved_forward",False
+              return state,"invalid_noop",False
+
+          def bfs_first_and_len(grid,state,goal):
+              x,y,d=state
+              if (x,y)==goal:
+                  return "STOP",0
+              q=deque([(state,0,None)])
+              seen={state}
+              while q:
+                  (cx,cy,cd),dist,first=q.popleft()
+                  for a in ("FORWARD","LEFT","RIGHT"):
+                      ns,event,col=apply_action(grid,(cx,cy,cd),a)
+                      if col:
+                          continue
+                      nf=a if first is None else first
+                      if ns[:2]==goal:
+                          return nf,dist+1
+                      if ns not in seen:
+                          seen.add(ns)
+                          q.append((ns,dist+1,nf))
+              return None,None
+
+          def make_world(seed):
+              r=random.Random(seed)
+              while True:
+                  grid=[[1 if r.random()<0.12 else 0 for _ in range(N)] for _ in range(N)]
+                  sx,sy=r.randrange(N),r.randrange(N)
+                  gx,gy=r.randrange(N),r.randrange(N)
+                  if (sx,sy)==(gx,gy):
+                      continue
+                  grid[sy][sx]=0
+                  grid[gy][gx]=0
+                  d=r.randrange(4)
+                  _,L=bfs_first_and_len(grid,(sx,sy,d),(gx,gy))
+                  if L is not None and 4 <= L <= 12:
+                      return grid,(sx,sy,d),(gx,gy),L
+
+          def map_text(grid,state,goal):
+              x,y,d=state
+              rows=[]
+              for yy in range(N):
+                  row=[]
+                  for xx in range(N):
+                      ch="#" if grid[yy][xx] else "."
+                      if (xx,yy)==goal:
+                          ch="G"
+                      if (xx,yy)==(x,y):
+                          ch=ARROW[d]
+                      row.append(ch)
+                  rows.append("".join(row))
+              return "\n".join(rows)
+
+          def sensor_text(grid,state):
+              x,y,d=state
+              vals={}
+              for name,dd in [
+                  ("front",d),
+                  ("left",(d-1)%4),
+                  ("right",(d+1)%4),
+                  ("back",(d+2)%4),
+              ]:
+                  vals[name]="blocked" if blocked(grid,x,y,dd) else "clear"
+              return "; ".join(f"{k}={v}" for k,v in vals.items())
+
+          def build_prompt(mode,grid,state,goal,last_event,history):
+              x,y,d=state
+              gx,gy=goal
+              shared=(
+                  "You are the motor controller of a small wheeled robot in a 6x6 grid. "
+                  "Your goal is to reach the target cell and then stop. "
+                  "Coordinates use x increasing to the right and y increasing downward. "
+                  "Actions are FORWARD (move one cell in the facing direction), LEFT (turn 90 degrees left in place), "
+                  "RIGHT (turn 90 degrees right in place), and STOP. "
+                  "Walls, obstacles, and grid boundaries cannot be crossed. "
+                  "OUTPUT PROTOCOL: reply with exactly one action word from FORWARD, LEFT, RIGHT, STOP and nothing else.\n\n"
+                  f"Current position=({x},{y}); facing={DN[d]}; target=({gx},{gy}); "
+                  f"target_delta=(dx={gx-x},dy={gy-y}); last_event={last_event}.\n"
+              )
+              if mode=="full_map":
+                  obs="Full current map (# obstacle, . empty, G goal, ^ > v < robot orientation):\n"+map_text(grid,state,goal)+"\n"
+              else:
+                  obs="Local collision sensors: "+sensor_text(grid,state)+"\n"
+              hist="Recent executed trajectory:\n"+("\n".join(history[-4:]) if history else "(none)")+"\n"
+              return shared+obs+hist+"Next action:"
+
+          def request_action(prompt):
+              payload={
+                  "messages":[
+                      {"role":"system","content":"You are a deterministic robot motor controller. Obey the one-action output protocol exactly."},
+                      {"role":"user","content":prompt},
+                  ],
+                  "temperature":0.0,
+                  "seed":1234,
+                  "max_tokens":8,
+                  "stream":False,
+              }
+              data=json.dumps(payload).encode()
+              req=urllib.request.Request(
+                  "http://127.0.0.1:8080/v1/chat/completions",
+                  data=data,
+                  headers={"Content-Type":"application/json"},
+                  method="POST",
+              )
+              t0=time.time()
+              with urllib.request.urlopen(req,timeout=300) as r:
+                  obj=json.loads(r.read().decode())
+              text=obj["choices"][0]["message"]["content"]
+              return text,time.time()-t0
+
+          def parse_strict(text):
+              s=text.strip().upper()
+              s=re.sub(r"[.!]+$","",s).strip()
+              return s if s in ACTIONS else None
+
+          worlds=[]
+          for seed in range(4101,4109):
+              grid,start,goal,opt=bfs_world=make_world(seed)
+              worlds.append({
+                  "seed":seed,
+                  "grid":grid,
+                  "start":start,
+                  "goal":goal,
+                  "optimal_move_turn_steps":opt,
+              })
+          OUT.joinpath("worlds.json").write_text(json.dumps(worlds,indent=2))
+
+          episodes=[]
+          traces=[]
+          total_requests=0
+
+          for mode in MODES:
+              for w in worlds:
+                  grid=w["grid"]
+                  state=tuple(w["start"])
+                  goal=tuple(w["goal"])
+                  history=[]
+                  last_event="start"
+                  visits=Counter([state])
+                  invalids=collisions=premature=goal_missed=0
+                  oracle_matches=valid_actions=0
+                  raw_actions=[]
+                  success=False
+                  stopped=False
+                  elapsed_total=0.0
+
+                  for step_idx in range(MAX_STEPS):
+                      prompt=build_prompt(mode,grid,state,goal,last_event,history)
+                      try:
+                          raw,elapsed=request_action(prompt)
+                      except Exception as ex:
+                          time.sleep(2)
+                          try:
+                              raw,elapsed=request_action(prompt)
+                          except Exception as ex2:
+                              raw=f"__ERROR__ {ex2!r}"
+                              elapsed=0.0
+                      total_requests+=1
+                      elapsed_total+=elapsed
+                      action=parse_strict(raw)
+                      oracle,_=bfs_first_and_len(grid,state,goal)
+                      if action is not None:
+                          valid_actions+=1
+                          if action==oracle:
+                              oracle_matches+=1
+                      else:
+                          invalids+=1
+
+                      before=state
+                      at_goal_before=(state[:2]==goal)
+                      if action=="STOP":
+                          stopped=True
+                          if at_goal_before:
+                              success=True
+                              event="stopped_on_goal"
+                          else:
+                              premature+=1
+                              event="premature_stop"
+                          traces.append({
+                              "mode":mode,"seed":w["seed"],"step":step_idx,
+                              "state_before":before,"goal":goal,"oracle":oracle,
+                              "raw_response":raw,"parsed_action":action,
+                              "event":event,"elapsed_s":elapsed,
+                          })
+                          raw_actions.append(action)
+                          break
+
+                      exec_action=action if action in ACTIONS else "__INVALID__"
+                      if exec_action=="__INVALID__":
+                          new_state=state
+                          event="invalid_noop"
+                          collision=False
+                      else:
+                          new_state,event,collision=apply_action(grid,state,exec_action)
+                      if collision:
+                          collisions+=1
+                      if at_goal_before and action!="STOP":
+                          goal_missed+=1
+
+                      traces.append({
+                          "mode":mode,"seed":w["seed"],"step":step_idx,
+                          "state_before":before,"state_after":new_state,"goal":goal,
+                          "oracle":oracle,"raw_response":raw,"parsed_action":action,
+                          "event":event,"elapsed_s":elapsed,
+                      })
+                      raw_actions.append(action if action else "INVALID")
+                      history.append(
+                          f"step {step_idx}: ({before[0]},{before[1]}) facing {DN[before[2]]} -> "
+                          f"{action if action else 'INVALID'} -> {event}"
+                      )
+                      state=new_state
+                      last_event=event
+                      visits[state]+=1
+
+                  steps=len(raw_actions)
+                  optimal_total=w["optimal_move_turn_steps"]+1
+                  efficiency=(optimal_total/steps) if success and steps else 0.0
+                  repeated_events=sum(max(0,c-2) for c in visits.values())
+                  ep={
+                      "mode":mode,
+                      "seed":w["seed"],
+                      "start":list(w["start"]),
+                      "goal":list(goal),
+                      "optimal_total_actions":optimal_total,
+                      "steps":steps,
+                      "success":int(success),
+                      "stopped":int(stopped),
+                      "efficiency":round(efficiency,4),
+                      "invalid_outputs":invalids,
+                      "collisions":collisions,
+                      "premature_stops":premature,
+                      "goal_missed_events":goal_missed,
+                      "repeated_state_events":repeated_events,
+                      "oracle_matches":oracle_matches,
+                      "valid_actions":valid_actions,
+                      "oracle_agreement":round(oracle_matches/max(valid_actions,1),4),
+                      "elapsed_s":round(elapsed_total,3),
+                      "action_trace":"|".join(raw_actions),
+                      "final_state":list(state),
+                  }
+                  episodes.append(ep)
+                  print("EPISODE",json.dumps(ep),flush=True)
+
+          with open(OUT/"episodes.csv","w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=episodes[0].keys())
+              w.writeheader()
+              w.writerows(episodes)
+
+          with open(OUT/"raw_traces.jsonl","w") as f:
+              for rec in traces:
+                  f.write(json.dumps(rec)+"\n")
+
+          summary={"model":"DeepSeekMoE-16B-Chat IQ3_S GGUF","n_worlds":len(worlds),"max_steps":MAX_STEPS,"modes":{}}
+          for mode in MODES:
+              xs=[e for e in episodes if e["mode"]==mode]
+              total_steps=sum(e["steps"] for e in xs)
+              valids=sum(e["valid_actions"] for e in xs)
+              matches=sum(e["oracle_matches"] for e in xs)
+              successes=sum(e["success"] for e in xs)
+              succ_eff=[e["efficiency"] for e in xs if e["success"]]
+              summary["modes"][mode]={
+                  "episodes":len(xs),
+                  "successes":successes,
+                  "success_rate":successes/len(xs),
+                  "mean_steps":sum(e["steps"] for e in xs)/len(xs),
+                  "invalid_output_rate":sum(e["invalid_outputs"] for e in xs)/max(total_steps,1),
+                  "collision_rate_per_step":sum(e["collisions"] for e in xs)/max(total_steps,1),
+                  "premature_stops":sum(e["premature_stops"] for e in xs),
+                  "goal_missed_events":sum(e["goal_missed_events"] for e in xs),
+                  "repeated_state_events":sum(e["repeated_state_events"] for e in xs),
+                  "oracle_agreement_valid_actions":matches/max(valids,1),
+                  "mean_efficiency_success_only":sum(succ_eff)/len(succ_eff) if succ_eff else 0.0,
+                  "mean_inference_seconds_per_episode":sum(e["elapsed_s"] for e in xs)/len(xs),
+              }
+
+          OUT.joinpath("summary.json").write_text(json.dumps(summary,indent=2))
+          OUT.joinpath("benchmark_spec.json").write_text(json.dumps({
+              "task":"closed-loop discrete robot navigation from language observations",
+              "actions":ACTIONS,
+              "modes":{
+                  "full_map":"complete 6x6 ASCII map + exact state + recent trajectory",
+                  "local_sensor":"exact state + target delta + four local collision sensors + recent trajectory",
+              },
+              "policy":"unmodified pretrained model; temperature=0; strict one-word action interface",
+              "terminal_condition":"model must emit STOP while on target",
+              "evidence_note":"No parameter training or adapter in ROBOT-LANGUAGE-ACTION-001."
+          },indent=2))
+
+          print("SUMMARY",json.dumps(summary,indent=2),flush=True)
+          PY
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/llama_server.pid ]; then
+            kill $(cat /tmp/llama_server.pid) || true
+          fi
+          tail -120 results/server.log > results/server_tail.log || true
+
+      - name: Upload ROBOT-LANGUAGE-ACTION-001
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-language-action-001
+          path: results/
+          retention-days: 7
