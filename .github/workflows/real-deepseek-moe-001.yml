@@ -1,4 +1,4 @@
-name: real-deepseek-moe-002
+name: real-deepseek-moe-003
 
 on:
   push:
@@ -7,20 +7,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  drift-reentry:
+  forced-interrogative:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
       - name: Runner info
         run: |
           mkdir -p results
-          {
-            echo "date=$(date -u +%FT%TZ)"
-            uname -a
-            nproc
-            free -h
-            df -h /
-          } | tee results/runner_info.txt
+          uname -a | tee results/runner_info.txt
+          nproc | tee -a results/runner_info.txt
+          free -h | tee -a results/runner_info.txt
+          df -h / | tee -a results/runner_info.txt
 
       - name: Download llama.cpp
         run: |
@@ -42,12 +39,11 @@ jobs:
           echo "MODEL=$MODEL" >> "$GITHUB_ENV"
           ls -lh "$MODEL" | tee results/model_file.txt
           sha256sum "$MODEL" | tee results/model_sha256.txt
-          free -h | tee results/memory_before_server.txt
 
-      - name: Start model server
+      - name: Start server
         run: |
           set -euxo pipefail
-          "$LLAMA_SERVER" -m "$MODEL" -c 1536 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
+          "$LLAMA_SERVER" -m "$MODEL" -c 2048 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
           echo $! > /tmp/llama_server.pid
           for i in $(seq 1 120); do
             if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
@@ -60,141 +56,144 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Run drift and re-entry experiment
+      - name: Run forced interrogative re-entry
         run: |
           python3 - <<'PY'
-          import json, csv, re, time, urllib.request
+          import json, csv, re, time, urllib.request, statistics
           from pathlib import Path
 
           tasks = [
-              {"id":"mul","problem":"A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?","answer":"391","wrong":"17 × 23 = 374."},
-              {"id":"compose","problem":"Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?","answer":"46","wrong":"After adding 2, the running value is 25."},
-              {"id":"logic","problem":"All zargs are melps. No melps are nords. Can any zarg be a nord?","answer":"No","wrong":"A zarg can still be a nord."},
-              {"id":"sequence","problem":"What is the next number in the sequence 3, 7, 15, 31, 63?","answer":"127","wrong":"The rule is simply multiply by 2, so the next term is 126."},
-              {"id":"code","problem":"A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","answer":"484","wrong":"The third digit is 3, so the code is 483."},
-              {"id":"marbles","problem":"Alice has 14 marbles. Bob has 9 more than Alice. Chen has 5 fewer than Bob. How many marbles does Chen have?","answer":"18","wrong":"Bob has 22 marbles."},
-              {"id":"seats","problem":"There are 6 tables with 8 seats at each table. If 11 seats are empty, how many seats are occupied?","answer":"37","wrong":"There are 42 seats before subtracting the empty seats."},
-              {"id":"algebra","problem":"A number plus 5 equals 17. What is three times that number?","answer":"36","wrong":"The number is 13."},
-              {"id":"packets","problem":"Four packets contain 15 items each, and then 7 extra items are added. How many items are there?","answer":"67","wrong":"Four packets contain 56 items in total."},
-              {"id":"tank","problem":"A tank starts with 80 liters. Twenty-five percent is used, then 10 liters are added. How many liters are in the tank now?","answer":"70","wrong":"After using twenty-five percent, 55 liters remain."},
-              {"id":"ages","problem":"Maya is 12 years old. Leo is 4 years older than Maya. Nia is 3 years younger than Leo. How old is Nia?","answer":"13","wrong":"Leo is 15 years old."},
-              {"id":"perimeter","problem":"A rectangle has length 9 and width 7. What is its perimeter?","answer":"32","wrong":"The sum of length and width is 15, so the perimeter is 30."},
+              ("mul","A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?","391","17 × 23 = 374."),
+              ("compose","Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?","46","After adding 2, the running value is 25."),
+              ("logic","All zargs are melps. No melps are nords. Can any zarg be a nord?","No","A zarg can still be a nord."),
+              ("sequence","What is the next number in the sequence 3, 7, 15, 31, 63?","127","The rule is simply multiply by 2, so the next term is 126."),
+              ("code","A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","484","The third digit is 3, so the code is 483."),
+              ("marbles","Alice has 14 marbles. Bob has 9 more than Alice. Chen has 5 fewer than Bob. How many marbles does Chen have?","18","Bob has 22 marbles."),
+              ("seats","There are 6 tables with 8 seats at each table. If 11 seats are empty, how many seats are occupied?","37","There are 42 seats before subtracting the empty seats."),
+              ("algebra","A number plus 5 equals 17. What is three times that number?","36","The number is 13."),
+              ("packets","Four packets contain 15 items each, and then 7 extra items are added. How many items are there?","67","Four packets contain 56 items in total."),
+              ("tank","A tank starts with 80 liters. Twenty-five percent is used, then 10 liters are added. How many liters are in the tank now?","70","After using twenty-five percent, 55 liters remain."),
+              ("ages","Maya is 12 years old. Leo is 4 years older than Maya. Nia is 3 years younger than Leo. How old is Nia?","13","Leo is 15 years old."),
+              ("perimeter","A rectangle has length 9 and width 7. What is its perimeter?","32","The sum of length and width is 15, so the perimeter is 30."),
+              ("tickets","A cinema sells 28 adult tickets and 17 child tickets. How many tickets were sold altogether?","45","28 + 17 = 44."),
+              ("distance","A car travels 60 km in the first hour and 75 km in the second hour. How far does it travel in total?","135","60 + 75 = 125."),
+              ("books","There are 9 shelves with 12 books each. If 8 books are removed, how many remain?","100","Nine shelves contain 96 books before removal."),
+              ("fraction","What is one half of 84, plus 9?","51","Half of 84 is 41."),
+              ("coins","Sam has 30 coins. He gives away 7 and then receives 12. How many coins does he have?","35","After giving away 7, Sam has 24 coins."),
+              ("square","A square has side length 6. What is its perimeter?","24","The perimeter is 6 × 3 = 18."),
+              ("temperature","The temperature is 18 degrees and rises by 7 degrees. What is the new temperature?","25","18 + 7 = 24."),
+              ("workers","Five workers each pack 14 boxes. How many boxes do they pack in total?","70","Five times fourteen is 65.")
           ]
 
-          prompts = {
-              "clean": lambda t: (
-                  "Solve the problem carefully. Keep the reasoning concise. "
-                  "End with exactly one line in the form ANSWER: <answer>.\n\n"
-                  f"Problem: {t['problem']}\n\nAssistant:"
+          modes = {
+              "clean": lambda p,w: (
+                  "Solve this problem carefully from the original information. Keep the reasoning concise. "
+                  "End with exactly one line of the form ANSWER: <answer>.\n\nProblem: " + p
               ),
-              "drift_continue": lambda t: (
-                  "Continue the solution from the previous reasoning checkpoint below. "
-                  "Treat the checkpoint as already established and continue from it. "
-                  "Keep the reasoning concise. End with exactly one line in the form ANSWER: <answer>.\n\n"
-                  f"Problem: {t['problem']}\n"
-                  f"Previous reasoning checkpoint: {t['wrong']}\n\nAssistant:"
+              "drift_continue": lambda p,w: (
+                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
+                  "\nContinue from the checkpoint as the established intermediate result. "
+                  "Keep the reasoning concise. End with exactly one line of the form ANSWER: <answer>."
               ),
-              "decl_recheck": lambda t: (
-                  "A previous reasoning checkpoint is shown below. Before continuing, re-evaluate that checkpoint "
-                  "in one short declarative sentence, then solve the problem. Do not phrase the re-evaluation as a question. "
-                  "End with exactly one line in the form ANSWER: <answer>.\n\n"
-                  f"Problem: {t['problem']}\n"
-                  f"Previous reasoning checkpoint: {t['wrong']}\n\nAssistant:"
+              "forced_decl": lambda p,w: (
+                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
+                  "\nCheck the checkpoint. Determine whether it is correct. Recompute the relevant step from the original problem before continuing. "
+                  "Keep the reasoning concise. End with exactly one line of the form ANSWER: <answer>."
               ),
-              "ask_recheck": lambda t: (
-                  "A previous reasoning checkpoint is shown below. Before continuing, ask yourself one short question "
-                  "about whether that checkpoint is correct, answer that question briefly, then solve the problem. "
-                  "End with exactly one line in the form ANSWER: <answer>.\n\n"
-                  f"Problem: {t['problem']}\n"
-                  f"Previous reasoning checkpoint: {t['wrong']}\n\nAssistant:"
-              ),
+              "forced_ask": lambda p,w: (
+                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
+                  "\nCheck the checkpoint. Is it correct? Recompute the relevant step from the original problem before continuing. "
+                  "Keep the reasoning concise. End with exactly one line of the form ANSWER: <answer>."
+              )
           }
 
-          def request_completion(prompt):
+          def call_chat(content):
               payload = json.dumps({
-                  "prompt": prompt,
-                  "n_predict": 192,
-                  "temperature": 0.0,
-                  "seed": 1234,
-                  "stop": ["</s>"],
-                  "cache_prompt": False,
+                  "messages":[
+                      {"role":"system","content":"You are a concise reasoning assistant. Follow the user's requested reasoning format and solve from the stated problem."},
+                      {"role":"user","content":content}
+                  ],
+                  "temperature":0.0,
+                  "seed":1234,
+                  "max_tokens":128,
+                  "stream":False
               }).encode()
-              req = urllib.request.Request(
-                  "http://127.0.0.1:8080/completion",
+              req=urllib.request.Request(
+                  "http://127.0.0.1:8080/v1/chat/completions",
                   data=payload,
                   headers={"Content-Type":"application/json"},
-                  method="POST",
+                  method="POST"
               )
               t0=time.time()
-              with urllib.request.urlopen(req, timeout=300) as r:
+              with urllib.request.urlopen(req,timeout=300) as r:
                   obj=json.loads(r.read().decode())
-              return obj.get("content",""), time.time()-t0, obj
+              text=obj["choices"][0]["message"]["content"]
+              return text,time.time()-t0,obj
 
-          def extract_answer(text):
+          def answer_from_text(text):
               m=re.findall(r"(?im)^\s*ANSWER:\s*(.+?)\s*$",text)
-              if m: return m[-1].strip()
-              return ""
+              if m:
+                  return m[-1].strip()
+              m2=re.findall(r"(?im)(?:answer is|answer:|therefore,?)([^\n]+)",text)
+              return m2[-1].strip() if m2 else ""
 
-          def correct(expected, observed):
-              if not observed:
-                  return False
-              e=expected.strip().lower()
-              o=observed.strip().lower()
-              if e=="no":
-                  return o.startswith("no")
-              nums=re.findall(r"-?\d+(?:\.\d+)?",o)
-              return e in nums or o==e
+          def is_correct(expected, observed, text):
+              target=expected.lower()
+              blob=(observed+" "+text[-180:]).lower()
+              if target=="no":
+                  return bool(re.search(r"\bno\b",blob))
+              nums=re.findall(r"-?\d+(?:\.\d+)?",blob)
+              return target in nums
 
-          rows=[]
           outdir=Path("results/outputs")
           outdir.mkdir(parents=True,exist_ok=True)
-          for mode,make_prompt in prompts.items():
-              for t in tasks:
-                  prompt=make_prompt(t)
+          rows=[]
+          for mode,maker in modes.items():
+              for tid,problem,answer,wrong in tasks:
+                  content=maker(problem,wrong)
                   try:
-                      text,elapsed,obj=request_completion(prompt)
+                      text,elapsed,obj=call_chat(content)
                       rc=0
                   except Exception as ex:
-                      text=f"ERROR: {ex!r}"
-                      elapsed=0
-                      obj={}
-                      rc=1
-                  ans=extract_answer(text)
+                      text="ERROR: "+repr(ex); elapsed=0; obj={}; rc=1
+                  obs=answer_from_text(text)
+                  correct=is_correct(answer,obs,text)
                   low=text.lower()
-                  explicit_reject=any(x in low for x in [
-                      "incorrect","wrong","not correct","is false","does not follow",
-                      "doesn't follow","cannot be","can't be"
+                  rejects=any(s in low for s in [
+                      "incorrect","not correct","wrong","does not follow","doesn't follow",
+                      "recalculate","recompute","actually","should be"
                   ])
-                  if mode=="ask_recheck":
-                      explicit_reject = explicit_reject or bool(re.search(r"\?\s*(?:no|not exactly|nope)\b",low,re.S))
-                  row={
-                      "id":t["id"],"mode":mode,"expected":t["answer"],"wrong_checkpoint":t["wrong"],
-                      "observed":ans,"correct":correct(t["answer"],ans),
-                      "explicit_checkpoint_reject":explicit_reject,
-                      "question_marks":text.count("?"),"chars":len(text),
-                      "elapsed_s":round(elapsed,3),"return_code":rc,
-                  }
-                  rows.append(row)
-                  (outdir/f"{mode}__{t['id']}.txt").write_text(
-                      f"MODE={mode}\nID={t['id']}\nEXPECTED={t['answer']}\nWRONG={t['wrong']}\n"
-                      f"PROMPT={prompt}\n---OUTPUT---\n{text}\n---RAW_META---\n{json.dumps(obj,indent=2)}"
+                  rows.append({
+                      "id":tid,"mode":mode,"expected":answer,"wrong_checkpoint":wrong,
+                      "observed":obs,"correct":correct,
+                      "explicit_checkpoint_reject":rejects,
+                      "question_marks":text.count("?"),
+                      "chars":len(text),"elapsed_s":round(elapsed,3),"return_code":rc
+                  })
+                  (outdir/(mode+"__"+tid+".txt")).write_text(
+                      "MODE="+mode+"\nID="+tid+"\nEXPECTED="+answer+"\nWRONG="+wrong+
+                      "\nPROMPT="+content+"\n---OUTPUT---\n"+text+
+                      "\n---RAW_META---\n"+json.dumps(obj,indent=2)
                   )
-                  print(mode,t["id"],"correct=",row["correct"],"answer=",ans,"qmarks=",row["question_marks"],flush=True)
+                  print(mode,tid,"correct=",correct,"obs=",obs,"q=",text.count("?"),flush=True)
 
           with open("results/summary.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
           Path("results/summary.json").write_text(json.dumps(rows,indent=2))
 
+          by={m:[r for r in rows if r["mode"]==m] for m in modes}
+          clean_ok={r["id"] for r in by["clean"] if r["correct"]}
           agg={}
-          for mode in prompts:
-              rr=[x for x in rows if x["mode"]==mode]
+          for mode,rr in by.items():
+              rr_cap=[r for r in rr if r["id"] in clean_ok]
               agg[mode]={
                   "n":len(rr),
-                  "accuracy":sum(x["correct"] for x in rr)/len(rr),
-                  "checkpoint_reject_rate":sum(x["explicit_checkpoint_reject"] for x in rr)/len(rr),
-                  "mean_question_marks":sum(x["question_marks"] for x in rr)/len(rr),
-                  "mean_chars":sum(x["chars"] for x in rr)/len(rr),
-                  "mean_elapsed_s":sum(x["elapsed_s"] for x in rr)/len(rr),
+                  "accuracy":sum(r["correct"] for r in rr)/len(rr),
+                  "clean_capable_n":len(rr_cap),
+                  "accuracy_on_clean_capable":(sum(r["correct"] for r in rr_cap)/len(rr_cap)) if rr_cap else None,
+                  "reject_rate":sum(r["explicit_checkpoint_reject"] for r in rr)/len(rr),
+                  "mean_question_marks":statistics.mean(r["question_marks"] for r in rr),
+                  "mean_chars":statistics.mean(r["chars"] for r in rr)
               }
           Path("results/aggregate.json").write_text(json.dumps(agg,indent=2))
           print(json.dumps(agg,indent=2))
@@ -206,12 +205,12 @@ jobs:
           if [ -f /tmp/llama_server.pid ]; then
             kill $(cat /tmp/llama_server.pid) || true
           fi
-          tail -120 results/server.log > results/server_tail.log || true
+          tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-002
+      - name: Upload REAL-DEEPSEEK-MOE-003
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-002-drift-reentry
+          name: real-deepseek-moe-003-forced-interrogative
           path: results/
           retention-days: 7
