@@ -50,14 +50,18 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p results/ask results/decl
-          cat > /tmp/tasks.tsv <<'EOF'
-arithmetic	A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?	391
-composition	Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?	46
-logic	All zargs are melps. No melps are nords. Can any zarg be a nord?	No
-sequence	What is the next number in the sequence 3, 7, 15, 31, 63?	127
-constraint	A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?	483
-comparison	Alice has 14 marbles, Bob has 9 more than Alice, and Chen has 5 fewer than Bob. How many marbles does Chen have?	18
-EOF
+          python3 - <<'PY'
+          from pathlib import Path
+          rows = [
+              ("arithmetic","A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?","391"),
+              ("composition","Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?","46"),
+              ("logic","All zargs are melps. No melps are nords. Can any zarg be a nord?","No"),
+              ("sequence","What is the next number in the sequence 3, 7, 15, 31, 63?","127"),
+              ("constraint","A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","483"),
+              ("comparison","Alice has 14 marbles, Bob has 9 more than Alice, and Chen has 5 fewer than Bob. How many marbles does Chen have?","18"),
+          ]
+          Path("/tmp/tasks.tsv").write_text("\n".join("\t".join(r) for r in rows))
+          PY
 
           run_one () {
             mode="$1"
