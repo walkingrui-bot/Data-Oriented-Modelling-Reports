@@ -234,11 +234,11 @@ jobs:
 
           emb_head=make_pipeline(
               StandardScaler(with_mean=True,with_std=True),
-              LogisticRegression(max_iter=2500,class_weight="balanced",C=1.0,multi_class="auto")
+              LogisticRegression(max_iter=2500,class_weight="balanced",C=1.0)
           )
           raw_head=make_pipeline(
               StandardScaler(with_mean=True,with_std=True),
-              LogisticRegression(max_iter=2500,class_weight="balanced",C=1.0,multi_class="auto")
+              LogisticRegression(max_iter=2500,class_weight="balanced",C=1.0)
           )
           emb_head.fit(Xe_tr,y_tr)
           raw_head.fit(Xr_tr,y_tr)
