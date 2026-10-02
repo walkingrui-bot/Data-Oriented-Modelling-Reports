@@ -1,0 +1,383 @@
+name: robot-language-action-004
+
+on:
+  push:
+    branches:
+      - exp/robot-language-action-004
+  workflow_dispatch:
+
+jobs:
+  hidden-state-motor-head:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 110
+
+    steps:
+      - name: Runner info
+        run: |
+          mkdir -p results
+          uname -a | tee results/runner_info.txt
+          nproc | tee -a results/runner_info.txt
+          free -h | tee -a results/runner_info.txt
+
+      - name: Download llama.cpp
+        run: |
+          set -euxo pipefail
+          curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
+          mkdir -p /tmp/llama
+          tar -xzf /tmp/llama.tar.gz -C /tmp/llama
+          LLAMA_SERVER=$(find /tmp/llama -type f -name llama-server | head -1)
+          test -n "$LLAMA_SERVER"
+          chmod +x "$LLAMA_SERVER"
+          echo "LLAMA_SERVER=$LLAMA_SERVER" >> "$GITHUB_ENV"
+
+      - name: Download DeepSeekMoE-16B Chat IQ3_S
+        run: |
+          set -euxo pipefail
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ3_S.gguf?download=true"
+          echo "MODEL=$MODEL" >> "$GITHUB_ENV"
+          sha256sum "$MODEL" | tee results/model_sha256.txt
+
+      - name: Start embedding server
+        run: |
+          set -euxo pipefail
+          "$LLAMA_SERVER" -m "$MODEL" -c 2048 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 --embedding --pooling last > results/server.log 2>&1 &
+          echo $! > /tmp/llama_server.pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
+              cat /tmp/health.json
+              exit 0
+            fi
+            sleep 2
+          done
+          tail -200 results/server.log
+          exit 1
+
+      - name: Train frozen-backbone motor head
+        run: |
+          python3 -m pip install --quiet numpy scikit-learn
+          python3 - <<'PY'
+          import csv, json, random, time, urllib.request
+          from collections import Counter, deque
+          from pathlib import Path
+
+          import numpy as np
+          from sklearn.linear_model import LogisticRegression
+          from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
+          from sklearn.pipeline import make_pipeline
+          from sklearn.preprocessing import StandardScaler
+
+          OUT=Path("results"); OUT.mkdir(exist_ok=True)
+          N=6
+          DIRS=[(0,-1),(1,0),(0,1),(-1,0)]
+          DN=["north","east","south","west"]
+          ARROW=["^",">","v","<"]
+          CLASSES=["FORWARD","LEFT","RIGHT"]
+
+          def blocked(grid,x,y,d):
+              dx,dy=DIRS[d]
+              nx,ny=x+dx,y+dy
+              return nx<0 or ny<0 or nx>=N or ny>=N or grid[ny][nx]==1
+
+          def apply(grid,state,a):
+              x,y,d=state
+              if a=="LEFT":
+                  return (x,y,(d-1)%4),False
+              if a=="RIGHT":
+                  return (x,y,(d+1)%4),False
+              if a=="FORWARD":
+                  if blocked(grid,x,y,d):
+                      return state,True
+                  dx,dy=DIRS[d]
+                  return (x+dx,y+dy,d),False
+              return state,False
+
+          def oracle(grid,start,goal):
+              start=tuple(start); goal=tuple(goal)
+              if start[:2]==goal:
+                  return "STOP",0
+              q=deque([(start,0,None)])
+              seen={start}
+              while q:
+                  s,dist,first=q.popleft()
+                  for a in CLASSES:
+                      ns,col=apply(grid,s,a)
+                      if col:
+                          continue
+                      nf=a if first is None else first
+                      if ns[:2]==goal:
+                          return nf,dist+1
+                      if ns not in seen:
+                          seen.add(ns)
+                          q.append((ns,dist+1,nf))
+              return None,None
+
+          def make_world(seed,p=.15):
+              r=random.Random(seed)
+              while True:
+                  grid=[[1 if r.random()<p else 0 for _ in range(N)] for _ in range(N)]
+                  sx,sy=r.randrange(N),r.randrange(N)
+                  gx,gy=r.randrange(N),r.randrange(N)
+                  if (sx,sy)==(gx,gy):
+                      continue
+                  grid[sy][sx]=0; grid[gy][gx]=0
+                  d=r.randrange(4)
+                  a,L=oracle(grid,(sx,sy,d),(gx,gy))
+                  if a in CLASSES and L is not None and 3<=L<=12:
+                      return grid,(sx,sy,d),(gx,gy),a,L
+
+          def map_text(grid,state,goal):
+              x,y,d=state
+              rows=[]
+              for yy in range(N):
+                  row=[]
+                  for xx in range(N):
+                      ch="#" if grid[yy][xx] else "."
+                      if (xx,yy)==goal:
+                          ch="G"
+                      if (xx,yy)==(x,y):
+                          ch=ARROW[d]
+                      row.append(ch)
+                  rows.append("".join(row))
+              return "\n".join(rows)
+
+          def prompt(grid,state,goal,last_event="start",history=None):
+              x,y,d=state; gx,gy=goal
+              h="(none)" if not history else "\n".join(history[-4:])
+              return (
+                  "Robot motor-state observation. Coordinates: x increases right, y increases down. "
+                  "The robot can move FORWARD one cell, TURN LEFT 90 degrees, or TURN RIGHT 90 degrees. "
+                  "The target is a desired future position.\n"
+                  f"position=({x},{y}); facing={DN[d]}; target=({gx},{gy}); "
+                  f"target_delta=(dx={gx-x},dy={gy-y}); last_event={last_event}.\n"
+                  "Map (# obstacle, . empty, G goal, robot arrow is orientation):\n"
+                  +map_text(grid,state,goal)+"\n"
+                  "Recent executed trajectory:\n"+h+"\n"
+                  "Internal motor state:"
+              )
+
+          def raw_features(grid,state,goal):
+              x,y,d=state; gx,gy=goal
+              onehot=[1.0 if d==k else 0.0 for k in range(4)]
+              local=[float(blocked(grid,x,y,k)) for k in range(4)]
+              return np.array([
+                  x/(N-1), y/(N-1), gx/(N-1), gy/(N-1),
+                  (gx-x)/(N-1), (gy-y)/(N-1),
+                  *onehot, *local
+              ],dtype=np.float32)
+
+          def get_embedding(text,retries=3):
+              payload=json.dumps({"content":text}).encode()
+              last=None
+              for _ in range(retries):
+                  try:
+                      req=urllib.request.Request(
+                          "http://127.0.0.1:8080/embedding",
+                          data=payload,
+                          headers={"Content-Type":"application/json"},
+                          method="POST")
+                      with urllib.request.urlopen(req,timeout=300) as r:
+                          obj=json.loads(r.read().decode())
+                      # pooled response: [{"index":0,"embedding":[...]}]
+                      emb=obj[0]["embedding"]
+                      if emb and isinstance(emb[0],list):
+                          emb=emb[-1]
+                      return np.asarray(emb,dtype=np.float32)
+                  except Exception as ex:
+                      last=ex
+                      time.sleep(1)
+              raise RuntimeError(f"embedding failed: {last!r}")
+
+          # Smoke test and record representation dimension.
+          smoke=get_embedding("Robot state smoke test.")
+          OUT.joinpath("embedding_smoke.json").write_text(json.dumps({
+              "dim":int(smoke.shape[0]),
+              "norm":float(np.linalg.norm(smoke)),
+              "first8":[float(x) for x in smoke[:8]]
+          },indent=2))
+          print("embedding dim",smoke.shape,flush=True)
+
+          def collect_balanced(seed_start,per_class):
+              counts=Counter()
+              rows=[]
+              seed=seed_start
+              while min([counts[c] for c in CLASSES]) < per_class:
+                  grid,state,goal,a,L=make_world(seed)
+                  seed+=1
+                  if counts[a] >= per_class:
+                      continue
+                  rows.append((grid,state,goal,a,L,seed-1))
+                  counts[a]+=1
+              return rows
+
+          train_states=collect_balanced(5000,45)   # 135
+          test_states=collect_balanced(9000,20)    # 60
+
+          def featurize(states,label):
+              Xe=[]; Xr=[]; y=[]; meta=[]
+              for i,(grid,state,goal,a,L,seed) in enumerate(states):
+                  text=prompt(grid,state,goal)
+                  e=get_embedding(text)
+                  Xe.append(e)
+                  Xr.append(raw_features(grid,state,goal))
+                  y.append(a)
+                  meta.append({
+                      "split":label,"seed":seed,"state":list(state),"goal":list(goal),
+                      "oracle":a,"optimal_len":L
+                  })
+                  if (i+1)%15==0:
+                      print(label,i+1,"/",len(states),flush=True)
+              return np.vstack(Xe),np.vstack(Xr),np.array(y),meta
+
+          Xe_tr,Xr_tr,y_tr,meta_tr=featurize(train_states,"train")
+          Xe_te,Xr_te,y_te,meta_te=featurize(test_states,"test")
+
+          emb_head=make_pipeline(
+              StandardScaler(with_mean=True,with_std=True),
+              LogisticRegression(max_iter=2500,class_weight="balanced",C=1.0,multi_class="auto")
+          )
+          raw_head=make_pipeline(
+              StandardScaler(with_mean=True,with_std=True),
+              LogisticRegression(max_iter=2500,class_weight="balanced",C=1.0,multi_class="auto")
+          )
+          emb_head.fit(Xe_tr,y_tr)
+          raw_head.fit(Xr_tr,y_tr)
+
+          pe=emb_head.predict(Xe_te)
+          pr=raw_head.predict(Xr_te)
+          majority=Counter(y_tr).most_common(1)[0][0]
+          pm=np.array([majority]*len(y_te))
+
+          def metrics(y,p):
+              return {
+                  "accuracy":float(accuracy_score(y,p)),
+                  "macro_f1":float(f1_score(y,p,average="macro")),
+                  "confusion_matrix":confusion_matrix(y,p,labels=CLASSES).tolist()
+              }
+
+          summary={
+              "model":"DeepSeekMoE-16B-Chat IQ3_S",
+              "representation":"llama.cpp pooled last hidden representation; frozen backbone",
+              "train_n":len(y_tr),
+              "test_n":len(y_te),
+              "class_order":CLASSES,
+              "heldout":{
+                  "deepseek_embedding_linear_head":metrics(y_te,pe),
+                  "raw_geometry_linear_head":metrics(y_te,pr),
+                  "majority_baseline":metrics(y_te,pm)
+              }
+          }
+
+          pred_rows=[]
+          for m,truth,a,b in zip(meta_te,y_te,pe,pr):
+              pred_rows.append({
+                  **m,
+                  "embedding_head":a,
+                  "raw_head":b,
+                  "embedding_correct":int(a==truth),
+                  "raw_correct":int(b==truth)
+              })
+          with open(OUT/"heldout_predictions.csv","w",newline="") as f:
+              wr=csv.DictWriter(f,fieldnames=pred_rows[0].keys())
+              wr.writeheader(); wr.writerows(pred_rows)
+
+          # Closed-loop held-out worlds: motor head controls movement; environment emits STOP only on target.
+          def rollout(head,feature_kind,seeds):
+              episodes=[]; traces=[]
+              for seed in seeds:
+                  grid,state,goal,_,opt=make_world(seed,p=.15)
+                  start=state
+                  history=[]; last_event="start"
+                  collisions=0; actions=[]; success=False
+                  start_dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                  best_dist=start_dist
+
+                  for t in range(20):
+                      if state[:2]==goal:
+                          actions.append("STOP")
+                          success=True
+                          traces.append({
+                              "controller":feature_kind,"seed":seed,"step":t,
+                              "state":list(state),"goal":list(goal),
+                              "action":"STOP","oracle":"STOP","event":"stopped_on_goal"
+                          })
+                          break
+
+                      oa,_=oracle(grid,state,goal)
+                      if feature_kind=="embedding":
+                          x=get_embedding(prompt(grid,state,goal,last_event,history))[None,:]
+                      else:
+                          x=raw_features(grid,state,goal)[None,:]
+                      a=head.predict(x)[0]
+                      before=state
+                      state,col=apply(grid,state,a)
+                      collisions+=int(col)
+                      event="collision_blocked" if col else ("moved_forward" if a=="FORWARD" else ("turned_left" if a=="LEFT" else "turned_right"))
+                      dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                      best_dist=min(best_dist,dist)
+                      actions.append(a)
+                      traces.append({
+                          "controller":feature_kind,"seed":seed,"step":t,
+                          "state_before":list(before),"state_after":list(state),"goal":list(goal),
+                          "action":a,"oracle":oa,"event":event,"distance":dist
+                      })
+                      history.append(f"step {t}: {before} -> {a} -> {event}")
+                      last_event=event
+
+                  final_dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                  episodes.append({
+                      "controller":feature_kind,"seed":seed,"success":int(success),
+                      "steps":len(actions),"start":list(start),"goal":list(goal),
+                      "final_state":list(state),"start_distance":start_dist,
+                      "best_distance":best_dist,"final_distance":final_dist,
+                      "distance_reduction":start_dist-final_dist,
+                      "collisions":collisions,"action_trace":"|".join(actions),
+                      "optimal_move_turn_steps":opt
+                  })
+              return episodes,traces
+
+          roll_seeds=list(range(12000,12012))
+          eps_e,tr_e=rollout(emb_head,"embedding",roll_seeds)
+          eps_r,tr_r=rollout(raw_head,"raw_geometry",roll_seeds)
+          all_eps=eps_e+eps_r
+          all_tr=tr_e+tr_r
+
+          with open(OUT/"closed_loop_episodes.csv","w",newline="") as f:
+              wr=csv.DictWriter(f,fieldnames=all_eps[0].keys())
+              wr.writeheader(); wr.writerows(all_eps)
+          with open(OUT/"closed_loop_traces.jsonl","w") as f:
+              for r in all_tr:
+                  f.write(json.dumps(r)+"\n")
+
+          for ctrl in ("embedding","raw_geometry"):
+              xs=[e for e in all_eps if e["controller"]==ctrl]
+              summary.setdefault("closed_loop",{})[ctrl]={
+                  "episodes":len(xs),
+                  "successes":sum(e["success"] for e in xs),
+                  "success_rate":sum(e["success"] for e in xs)/len(xs),
+                  "episodes_improving_distance":sum(e["best_distance"]<e["start_distance"] for e in xs),
+                  "mean_distance_reduction":float(np.mean([e["distance_reduction"] for e in xs])),
+                  "mean_final_distance":float(np.mean([e["final_distance"] for e in xs])),
+                  "collision_rate_per_episode":float(np.mean([e["collisions"] for e in xs]))
+              }
+
+          OUT.joinpath("summary.json").write_text(json.dumps(summary,indent=2))
+          OUT.joinpath("dataset_manifest.json").write_text(json.dumps(meta_tr+meta_te,indent=2))
+          print("SUMMARY",json.dumps(summary,indent=2),flush=True)
+          PY
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/llama_server.pid ]; then
+            kill $(cat /tmp/llama_server.pid) || true
+          fi
+          tail -160 results/server.log > results/server_tail.log || true
+
+      - name: Upload ROBOT-LANGUAGE-ACTION-004
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-language-action-004
+          path: results/
+          retention-days: 7
