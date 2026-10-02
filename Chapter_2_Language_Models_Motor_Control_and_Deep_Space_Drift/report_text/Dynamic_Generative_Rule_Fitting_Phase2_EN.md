@@ -251,3 +251,16 @@ Notation: TV is total variation, usually half the sum of absolute probability di
 [6] Google DeepMind (2026). Towards Structural Understanding of LLM Overthinking. https://deepmind.google/research/publications/203490/
 
 [Experiment dossiers](../../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/experiments/README.md) · [Evidence index](../../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/EXPERIMENT_INDEX.csv)
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: scope updated and natural-model evidence advanced.**
+
+The mirror, center-estimation and dose-control experiments in this report remain constructive demonstrations in their specified systems. Later experiments directly tested a related control question in a fixed pretrained language model.
+
+MODE-CONTROL uses 70 paired requests in Qwen2.5-1.5B-Instruct. Selective residual-stream axes in blocks 21–23 causally change first-action preference. At block 23, the measured control effect is C = 1.8571. A TEXT-directed intervention changes 9 of 59 baseline over-action cases at dose −1 and 18 of 59 at dose −2. The original 11 ASK cases remain TEXT under the negative-dose intervention.
+
+A downstream counter-intervention measures commitment strength separately from local controllability. An equal-norm opposite intervention at blocks 24, 25 or 26 returns all nine dose −1 corrections to ACT; block 27 returns five. The current interpretation is therefore two-part: a useful local first-action control interface exists in the tested pretrained model, and the induced correction remains weakly committed against later opposing intervention.
+
+This result advances the proposed natural-LLM programme in Section 14 and places the long-run stabilizers of Sections 8–12 in their correct evidence class: demonstrated control mechanisms in constructed systems, with natural-model transfer tested separately. See [Evidence Supersession Audit — 2026-10-02](../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
