@@ -1,4 +1,4 @@
-name: real-deepseek-moe-006
+name: real-deepseek-moe-007
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  response-signature-value-router:
+  two-step-continuation-signature:
     runs-on: ubuntu-24.04
     timeout-minutes: 70
     steps:
@@ -52,7 +52,7 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Generate compute-matched rescue probes
+      - name: Generate two-step continuation signatures
         run: |
           python3 - <<'PY'
           import json, csv, re, time, urllib.request
@@ -87,59 +87,73 @@ jobs:
           protocols = {
               "local": lambda p,w: (
                   "Problem: "+p+"\nWrong checkpoint: "+w+
-                  "\nCandidate rescue action: LOCAL. Recompute only the original relation that produced the checkpoint. "
-                  "Do not solve the whole problem. Output exactly one line: PROBE: <corrected local relation or value>."
+                  "\nCandidate rescue action: LOCAL. First recompute only the relation that produced the checkpoint. "
+                  "Then take exactly one additional reasoning step toward the final solution using the corrected state. "
+                  "Do not finish the whole problem unless that single next step necessarily is the final operation. "
+                  "Output exactly two lines:\nSTATE: <corrected local relation or value>\nNEXT: <one immediate next reasoning step>."
               ),
               "decl3": lambda p,w: (
                   "Problem: "+p+"\nWrong checkpoint: "+w+
-                  "\nCandidate rescue action: DECL3. Internally perform: checkpoint validity -> original relation -> corrected state. "
-                  "Do not solve the whole problem. Output exactly one line: PROBE: <corrected local relation or value>."
+                  "\nCandidate rescue action: DECL3. Use the declarative verification sequence to reconstruct the corrected state, "
+                  "then take exactly one additional declarative reasoning step toward the final solution. "
+                  "Do not continue beyond that one next step. "
+                  "Output exactly two lines:\nSTATE: <corrected local relation or value>\nNEXT: <one immediate next reasoning step>."
               ),
               "qa3": lambda p,w: (
                   "Problem: "+p+"\nWrong checkpoint: "+w+
-                  "\nCandidate rescue action: QA3. Internally perform Q1: is it correct; Q2: what relation must be recomputed; "
-                  "Q3: what is the corrected state. Do not solve the whole problem. Output exactly one line: PROBE: <corrected local relation or value>."
+                  "\nCandidate rescue action: QA3. Use Q1/Q2/Q3 internally to reconstruct the corrected state, "
+                  "then take exactly one additional Q/A-style reasoning step toward the final solution. "
+                  "Do not continue beyond that one next step. "
+                  "Output exactly two lines:\nSTATE: <corrected local relation or value>\nNEXT: <one immediate next reasoning step>."
               ),
           }
 
           def call_chat(content):
               payload=json.dumps({
                   "messages":[
-                      {"role":"system","content":"You are a concise reasoning controller. Perform only the requested local probe and stop."},
+                      {"role":"system","content":"You are a concise reasoning controller. Perform exactly the requested two-step probe and stop."},
                       {"role":"user","content":content}
                   ],
                   "temperature":0.0,
                   "seed":1234,
-                  "max_tokens":48,
+                  "max_tokens":72,
                   "stream":False
               }).encode()
-              req=urllib.request.Request("http://127.0.0.1:8080/v1/chat/completions",data=payload,headers={"Content-Type":"application/json"},method="POST")
+              req=urllib.request.Request(
+                  "http://127.0.0.1:8080/v1/chat/completions",
+                  data=payload,
+                  headers={"Content-Type":"application/json"},
+                  method="POST"
+              )
               t0=time.time()
               with urllib.request.urlopen(req,timeout=300) as r:
                   obj=json.loads(r.read().decode())
               return obj["choices"][0]["message"]["content"], time.time()-t0
 
-          outdir=Path("results/probes"); outdir.mkdir(parents=True,exist_ok=True)
+          outdir=Path("results/signatures"); outdir.mkdir(parents=True,exist_ok=True)
           rows=[]
           for tid,fam,problem,expected,wrong in tasks:
               for action,maker in protocols.items():
                   text,elapsed=call_chat(maker(problem,wrong))
-                  m=re.findall(r"(?im)^\s*PROBE:\s*(.+?)\s*$",text)
-                  parsed=m[-1].strip() if m else ""
-                  nums=re.findall(r"-?\d+(?:\.\d+)?", parsed if parsed else text)
+                  sm=re.findall(r"(?im)^\s*STATE:\s*(.+?)\s*$",text)
+                  nm=re.findall(r"(?im)^\s*NEXT:\s*(.+?)\s*$",text)
+                  state=sm[-1].strip() if sm else ""
+                  nxt=nm[-1].strip() if nm else ""
                   rows.append({
-                      "id":tid,"family":fam,"action":action,
-                      "expected":expected,"wrong_checkpoint":wrong,
-                      "probe":parsed,"raw_text":text.replace("\n","\\n"),
-                      "numbers":"|".join(nums),
+                      "id":tid,"family":fam,"action":action,"expected":expected,
+                      "wrong_checkpoint":wrong,
+                      "state":state,"next":nxt,
+                      "state_present":int(bool(state)),
+                      "next_present":int(bool(nxt)),
+                      "raw_text":text.replace("\n","\\n"),
                       "chars":len(text),"elapsed_s":round(elapsed,3)
                   })
                   (outdir/f"{action}__{tid}.txt").write_text(text)
-                  print(action,tid,"probe=",parsed[:90],flush=True)
+                  print(action,tid,"STATE=",state[:60],"NEXT=",nxt[:60],flush=True)
 
-          with open("results/probes.csv","w",newline="") as f:
+          with open("results/two_step_signatures.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-          Path("results/probes.json").write_text(json.dumps(rows,indent=2))
+          Path("results/two_step_signatures.json").write_text(json.dumps(rows,indent=2))
           PY
 
       - name: Stop server
@@ -150,10 +164,10 @@ jobs:
           fi
           tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-006
+      - name: Upload REAL-DEEPSEEK-MOE-007
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-006-response-signature-probes
+          name: real-deepseek-moe-007-two-step-continuation-signatures
           path: results/
           retention-days: 7
