@@ -34,11 +34,11 @@ jobs:
           echo "LLAMA_CLI=$LLAMA_CLI" >> "$GITHUB_ENV"
           "$LLAMA_CLI" --version | tee results/llama_version.txt
 
-      - name: Download real DeepSeekMoE-16B Chat IQ1_S
+      - name: Download real DeepSeekMoE-16B Chat IQ3_S
         run: |
           set -euxo pipefail
-          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ1_S.gguf
-          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ1_S.gguf?download=true"
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ3_S.gguf?download=true"
           echo "MODEL=$MODEL" >> "$GITHUB_ENV"
           ls -lh "$MODEL" | tee results/model_file.txt
           sha256sum "$MODEL" | tee results/model_sha256.txt
@@ -52,79 +52,72 @@ jobs:
           mkdir -p results/ask results/decl
           python3 - <<'PY'
           from pathlib import Path
-          rows = [
+          import subprocess, json, csv, re, os, time
+
+          tasks = [
               ("arithmetic","A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?","391"),
               ("composition","Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?","46"),
               ("logic","All zargs are melps. No melps are nords. Can any zarg be a nord?","No"),
               ("sequence","What is the next number in the sequence 3, 7, 15, 31, 63?","127"),
-              ("constraint","A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","483"),
+              ("constraint","A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","488"),
               ("comparison","Alice has 14 marbles, Bob has 9 more than Alice, and Chen has 5 fewer than Bob. How many marbles does Chen have?","18"),
           ]
-          Path("/tmp/tasks.tsv").write_text("\n".join("\t".join(r) for r in rows))
-          PY
-
-          run_one () {
-            mode="$1"
-            id="$2"
-            q="$3"
-            answer="$4"
-            out="results/$mode/$id.txt"
-            if [[ "$mode" == "ask" ]]; then
-              instruction="Solve the problem by using a short chain of self-questions. Each reasoning step should be phrased as a question followed by a brief answer. End with exactly one line beginning FINAL:."
-            else
-              instruction="Solve the problem using short declarative reasoning statements. Do not ask yourself questions. End with exactly one line beginning FINAL:."
-            fi
-            prompt=$(printf 'User: %s\n\nProblem: %s\n\nAssistant:' "$instruction" "$q")
-            {
-              echo "ID=$id"
-              echo "MODE=$mode"
-              echo "EXPECTED=$answer"
-              echo "PROMPT=$prompt"
-              echo "---OUTPUT---"
-              /usr/bin/time -v "$LLAMA_CLI" -m "$MODEL" -p "$prompt" -n 128 -c 512 -t 4 --temp 0 --seed 1234 --no-display-prompt 2>&1
-            } | tee "$out"
+          modes = {
+              "ask":"Solve the problem using a short chain of self-questions. Phrase each reasoning step as a question followed by a brief answer. End with exactly one line beginning FINAL:.",
+              "decl":"Solve the problem using short declarative reasoning statements. Do not ask yourself questions. End with exactly one line beginning FINAL:.",
           }
-
-          while IFS=$'\t' read -r id q answer; do
-            run_one ask "$id" "$q" "$answer"
-            run_one decl "$id" "$q" "$answer"
-          done < /tmp/tasks.tsv
-
-      - name: Summarize outputs
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import json, re, csv
-          expected = {
-              "arithmetic":"391","composition":"46","logic":"No",
-              "sequence":"127","constraint":"483","comparison":"18"
-          }
+          llama=os.environ["LLAMA_CLI"]
+          model=os.environ["MODEL"]
           rows=[]
-          for mode in ["ask","decl"]:
-              for p in sorted((Path("results")/mode).glob("*.txt")):
-                  txt=p.read_text(errors="replace")
-                  body=txt.split("---OUTPUT---",1)[-1]
+          for mode,instruction in modes.items():
+              for tid,q,expected in tasks:
+                  prompt=f"{instruction}\n\nProblem: {q}"
+                  cmd=[
+                      "/usr/bin/time","-v",llama,
+                      "-m",model,
+                      "-p",prompt,
+                      "-n","160",
+                      "-c","1024",
+                      "-t","4",
+                      "--temp","0",
+                      "--seed","1234",
+                      "--single-turn",
+                      "--no-display-prompt",
+                      "--no-show-timings",
+                  ]
+                  t0=time.time()
+                  cp=subprocess.run(cmd,input="",text=True,capture_output=True,timeout=240)
+                  elapsed=time.time()-t0
+                  body=cp.stdout
+                  stderr=cp.stderr
+                  out=Path("results")/mode/f"{tid}.txt"
+                  out.write_text(
+                      f"ID={tid}\nMODE={mode}\nEXPECTED={expected}\nPROMPT={prompt}\nRETURN_CODE={cp.returncode}\nELAPSED_S={elapsed:.3f}\n---STDOUT---\n{body}\n---STDERR---\n{stderr}"
+                  )
                   m=re.findall(r"(?im)^\s*FINAL:\s*(.+?)\s*$", body)
                   final=m[-1].strip() if m else ""
-                  exp=expected[p.stem]
+                  correct=bool(final and expected.lower() in final.lower())
                   rows.append({
-                      "id":p.stem,"mode":mode,"expected":exp,
-                      "final":final,"correct":bool(final and exp.lower() in final.lower()),
-                      "question_marks":body.count("?"),"chars":len(body),
+                      "id":tid,"mode":mode,"expected":expected,"final":final,
+                      "correct":correct,"question_marks":body.count("?"),
+                      "chars":len(body),"elapsed_s":round(elapsed,3),
+                      "return_code":cp.returncode
                   })
+
           Path("results/summary.json").write_text(json.dumps(rows,indent=2))
           with open("results/summary.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
           for mode in ["ask","decl"]:
               rr=[x for x in rows if x["mode"]==mode]
               print(mode, "accuracy", sum(x["correct"] for x in rr),"/",len(rr),
-                    "mean_question_marks", sum(x["question_marks"] for x in rr)/len(rr))
+                    "mean_question_marks", sum(x["question_marks"] for x in rr)/len(rr),
+                    "mean_elapsed_s", sum(x["elapsed_s"] for x in rr)/len(rr))
           PY
           cat results/summary.csv
 
       - name: Upload real DeepSeek baseline
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-001-baseline
+          name: real-deepseek-moe-001-iq3s-baseline
           path: results/
           retention-days: 7
