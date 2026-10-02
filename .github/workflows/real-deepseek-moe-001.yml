@@ -1,4 +1,4 @@
-name: real-deepseek-moe-008
+name: real-deepseek-moe-010
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  passive-trajectory-readout:
+  closed-loop-acceptance:
     runs-on: ubuntu-24.04
     timeout-minutes: 110
     steps:
@@ -52,231 +52,235 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Collect passive natural trajectories
+      - name: Run frozen live controller on unseen tasks
         run: |
           python3 - <<'PY'
-          import json, csv, re, time, urllib.request, urllib.error, math
+          import json, csv, re, time, urllib.request, math
           from pathlib import Path
 
+          # Frozen REAL-009 controller. These values were fit only on REAL-008
+          # training states (indices 0-7) before any REAL-010 task existed.
+          FEATURES=[
+              "mean_logprob_first_8","mean_entropy_first_8","mean_margin_first_8",
+              "mean_logprob_first_16","mean_entropy_first_16","mean_margin_first_16"
+          ]
+          MEAN=[-0.312450421613148,0.5949900401984474,4.0944511746760694,
+                -0.29567704633573166,0.5690190423239011,4.218605408112102]
+          SCALE=[0.1408434432246444,0.18951495731986873,0.893305682409221,
+                 0.14049769783825064,0.19133190778419143,0.8554253650564544]
+          COEF=[-0.6787061162384517,0.1650531905489121,0.12955945761135346,
+                0.31512371676918305,-1.2859387465148733,0.45680314600068156,
+                -0.31373413435340575,0.5354507166583777,-0.22516239843802097]
+          INTERCEPT=-0.4228510137165381
+          ACTIONS=["decl3","local","qa3"]
+          THRESHOLD=0.605
+
+          Path("results/frozen_controller.json").write_text(json.dumps({
+              "features":FEATURES,"mean":MEAN,"scale":SCALE,"coef":COEF,
+              "intercept":INTERCEPT,"actions":ACTIONS,"reset_threshold":THRESHOLD,
+              "source":"REAL-009 frozen before REAL-010"
+          },indent=2))
+
+          # 48 entirely new states: 8 families x 6 unseen parameterizations.
           tasks=[]
-
-          # 8 families x 12 instances = 96 states.
-          for i in range(12):
-              a=12+i
-              b=13+((3*i)%11)
-              ans=a*b
-              wrong=ans-(2+(i%4))
-              tasks.append((f"mul_{i}","mul",f"A warehouse has {a} shelves with {b} boxes on each shelf. How many boxes are there in total?",str(ans),f"{a} × {b} = {wrong}."))
-
-          for i in range(12):
-              s=24+3*i; add=7+(i%8); sub=4+((2*i)%7)
+          for i,(a,b) in enumerate([(29,17),(31,14),(26,21),(33,16),(28,19),(35,13)]):
+              ans=a*b; wrong=ans-(3+(i%3))
+              tasks.append((f"mul_new_{i}","mul",f"A warehouse has {a} shelves with {b} boxes on each shelf. How many boxes are there in total?",str(ans),f"{a} × {b} = {wrong}."))
+          for i,(s,add,sub) in enumerate([(61,14,9),(47,18,11),(72,13,8),(55,17,12),(68,16,7),(79,12,15)]):
               mid=s+add; ans=mid-sub
-              tasks.append((f"twostep_{i}","twostep",f"Start with {s}. Add {add}, then subtract {sub}. What number do you get?",str(ans),f"After adding {add}, the running value is {mid-1}."))
-
-          for i in range(12):
-              x=6+i; c=4+(i%7); k=2+(i%4); d=x+c; ans=k*x
-              tasks.append((f"algebra_{i}","algebra",f"A number plus {c} equals {d}. What is {k} times that number?",str(ans),f"The number is {x+1}."))
-
-          for i in range(12):
-              n=64+8*i; add=5+(i%10); ans=int(n*0.75+add)
-              wrong=int(n*0.75-5-(i%3))
-              tasks.append((f"percent_{i}","percent",f"A tank starts with {n} liters. Twenty-five percent is used, then {add} liters are added. How many liters are in the tank now?",str(ans),f"After using twenty-five percent, {wrong} liters remain."))
-
-          for i in range(12):
-              a=11+i; more=5+(i%9); fewer=3+((2*i)%6)
+              tasks.append((f"twostep_new_{i}","twostep",f"Start with {s}. Add {add}, then subtract {sub}. What number do you get?",str(ans),f"After adding {add}, the running value is {mid-2}."))
+          for i,(x,c,k) in enumerate([(19,7,3),(17,9,4),(22,6,2),(16,11,5),(21,8,3),(18,12,4)]):
+              d=x+c; ans=k*x
+              tasks.append((f"algebra_new_{i}","algebra",f"A number plus {c} equals {d}. What is {k} times that number?",str(ans),f"The number is {x+2}."))
+          for i,(n,add) in enumerate([(176,13),(192,17),(208,9),(224,15),(240,11),(256,19)]):
+              ans=int(n*0.75+add); wrong=int(n*0.75-7-(i%3))
+              tasks.append((f"percent_new_{i}","percent",f"A tank starts with {n} liters. Twenty-five percent is used, then {add} liters are added. How many liters are in the tank now?",str(ans),f"After using twenty-five percent, {wrong} liters remain."))
+          for i,(a,more,fewer) in enumerate([(27,8,6),(31,7,5),(29,11,4),(34,6,9),(26,13,7),(32,9,8)]):
               bob=a+more; ans=bob-fewer
-              tasks.append((f"compare_{i}","compare",f"Alice has {a} marbles. Bob has {more} more than Alice. Chen has {fewer} fewer than Bob. How many marbles does Chen have?",str(ans),f"Bob has {bob-1} marbles."))
-
-          for i in range(12):
-              l=7+i; w=4+(i%7); ans=2*(l+w)
-              wrongsum=l+w-1
-              tasks.append((f"perim_{i}","perim",f"A rectangle has length {l} and width {w}. What is its perimeter?",str(ans),f"The sum of length and width is {wrongsum}, so the perimeter is {2*wrongsum}."))
-
-          for i in range(12):
-              tables=4+(i%6); seats=6+(i%5); empty=3+(i%8)
-              total=tables*seats; ans=total-empty
-              wrong_total=total-(2+(i%3))
-              tasks.append((f"seats_{i}","seats",f"There are {tables} tables with {seats} seats at each table. If {empty} seats are empty, how many seats are occupied?",str(ans),f"There are {wrong_total} seats before subtracting the empty seats."))
-
+              tasks.append((f"compare_new_{i}","compare",f"Alice has {a} marbles. Bob has {more} more than Alice. Chen has {fewer} fewer than Bob. How many marbles does Chen have?",str(ans),f"Bob has {bob-2} marbles."))
+          for i,(l,w) in enumerate([(21,8),(18,11),(23,7),(19,13),(24,9),(22,12)]):
+              ans=2*(l+w); wrongsum=l+w-2
+              tasks.append((f"perim_new_{i}","perim",f"A rectangle has length {l} and width {w}. What is its perimeter?",str(ans),f"The sum of length and width is {wrongsum}, so the perimeter is {2*wrongsum}."))
+          for i,(tables,seats,empty) in enumerate([(9,11,8),(8,13,7),(10,9,11),(12,8,9),(11,12,10),(13,7,6)]):
+              total=tables*seats; ans=total-empty; wrong_total=total-(3+(i%2))
+              tasks.append((f"seats_new_{i}","seats",f"There are {tables} tables with {seats} seats at each table. If {empty} seats are empty, how many seats are occupied?",str(ans),f"There are {wrong_total} seats before subtracting the empty seats."))
           logic_words=[
-              ("zargs","melps","nords"),("flims","daxes","vorps"),("taves","lunds","keps"),
-              ("marns","sopes","rids"),("quels","bims","naks"),("pells","vards","toks"),
-              ("sarns","gells","mips"),("naves","ruks","dols"),("wels","farns","pivs"),
-              ("kels","jors","vems"),("harns","lops","sivs"),("dars","peks","mols")
+              ("braks","tels","mors"),("vins","pards","leks"),("suls","nems","gors"),
+              ("trens","baks","wids"),("jels","rams","feks"),("dovs","kins","pals")
           ]
           for i,(a,b,c) in enumerate(logic_words):
-              tasks.append((f"logic_{i}","logic",f"All {a} are {b}. No {b} are {c}. Can any {a} be a {c}?","No",f"A {a[:-1]} can still be a {c[:-1]}."))
+              tasks.append((f"logic_new_{i}","logic",f"All {a} are {b}. No {b} are {c}. Can any {a} be a {c}?","No",f"A {a[:-1]} can still be a {c[:-1]}."))
 
           def clean_prompt(problem):
-              return (
-                  "Solve the problem carefully and naturally from the original information. "
-                  "Reason however you normally would. At the very end, write exactly one line: ANSWER: <answer>.\n\nProblem: "+problem
-              )
-
+              return "Solve the problem carefully and naturally from the original information. Reason however you normally would. At the very end, write exactly one line: ANSWER: <answer>.\n\nProblem: "+problem
           def local_prompt(problem,wrong):
-              return (
-                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
-                  "\nThe checkpoint may be wrong. Recompute the original relation that produced it, then continue solving naturally. "
-                  "At the very end, write exactly one line: ANSWER: <answer>."
-              )
-
+              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nThe checkpoint may be wrong. Recompute the original relation that produced it, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
           def decl_prompt(problem,wrong):
-              return (
-                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
-                  "\nVerify the checkpoint, recompute the original relation that produced it, correct the intermediate state if needed, "
-                  "then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
-              )
-
+              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nVerify the checkpoint, recompute the original relation that produced it, correct the intermediate state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
           def qa_prompt(problem,wrong):
-              return (
-                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
-                  "\nAsk yourself whether the checkpoint is correct, identify what original relation must be recomputed, correct the state if needed, "
-                  "then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
-              )
+              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nAsk yourself whether the checkpoint is correct, identify what original relation must be recomputed, correct the state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
+          prompts={"local":local_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
 
-          prompts={"clean":lambda p,w:clean_prompt(p),"local":local_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
-
-          def request_chat(content, want_logprobs):
+          def call_chat(content,want_logprobs=True):
               payload={
                   "messages":[
                       {"role":"system","content":"You are a concise reasoning assistant. Solve the user's problem accurately."},
                       {"role":"user","content":content}
                   ],
-                  "temperature":0.0,
-                  "seed":1234,
-                  "max_tokens":160,
-                  "stream":False
+                  "temperature":0.0,"seed":1234,"max_tokens":160,"stream":False
               }
               if want_logprobs:
                   payload["logprobs"]=True
                   payload["top_logprobs"]=5
-              data=json.dumps(payload).encode()
-              req=urllib.request.Request(
-                  "http://127.0.0.1:8080/v1/chat/completions",
-                  data=data,
-                  headers={"Content-Type":"application/json"},
-                  method="POST"
-              )
+              req=urllib.request.Request("http://127.0.0.1:8080/v1/chat/completions",
+                  data=json.dumps(payload).encode(),headers={"Content-Type":"application/json"},method="POST")
               t0=time.time()
               with urllib.request.urlopen(req,timeout=300) as r:
                   obj=json.loads(r.read().decode())
               return obj,time.time()-t0
 
-          # Capability detection: never let telemetry failure kill inference.
-          logprobs_supported=False
-          capability_error=None
-          try:
-              obj,_=request_chat("Reply with ANSWER: 2 for 1+1.",True)
-              lp=obj.get("choices",[{}])[0].get("logprobs")
-              logprobs_supported=bool(lp)
-          except Exception as ex:
-              capability_error=repr(ex)
-          Path("results/telemetry_capability.json").write_text(json.dumps({
-              "logprobs_supported":logprobs_supported,
-              "capability_error":capability_error
-          },indent=2))
-          print("logprobs_supported",logprobs_supported,capability_error,flush=True)
-
           def final_answer(text):
               m=re.findall(r"(?im)^\s*ANSWER:\s*(.+?)\s*$",text)
               return m[-1].strip() if m else ""
 
-          def correct(expected, observed):
-              if not observed:
-                  return False
-              e=expected.strip().lower()
-              o=observed.strip().lower()
-              if e=="no":
-                  return bool(re.match(r"^no\b",o))
+          def correct(expected,observed):
+              if not observed: return False
+              e=expected.strip().lower(); o=observed.strip().lower()
+              if e=="no": return bool(re.match(r"^no\b",o))
               nums=re.findall(r"-?\d+(?:\.\d+)?",o)
               return e in nums
 
-          def token_stats(choice):
-              lp=choice.get("logprobs")
-              if not lp:
-                  return {},[]
-              content=lp.get("content") or []
-              chosen=[]
-              entropy=[]
-              margins=[]
-              toks=[]
+          def telemetry(choice):
+              content=(choice.get("logprobs") or {}).get("content") or []
+              chosen=[]; entropy=[]; margins=[]
               for item in content:
-                  tok=item.get("token","")
                   l=item.get("logprob")
-                  if isinstance(l,(int,float)):
-                      chosen.append(float(l))
+                  if isinstance(l,(int,float)): chosen.append(float(l))
                   tops=item.get("top_logprobs") or []
                   vals=[float(x.get("logprob")) for x in tops if isinstance(x.get("logprob"),(int,float))]
                   if vals:
                       probs=[math.exp(v) for v in vals]
                       residual=max(0.0,1.0-sum(probs))
                       h=-sum(p*math.log(max(p,1e-12)) for p in probs)
-                      if residual>0:
-                          h-=residual*math.log(max(residual,1e-12))
+                      if residual>0: h-=residual*math.log(max(residual,1e-12))
                       entropy.append(h)
                       sv=sorted(vals,reverse=True)
-                      if len(sv)>=2:
-                          margins.append(sv[0]-sv[1])
-                  toks.append({
-                      "token":tok,
-                      "logprob":l,
-                      "top_logprobs":tops
-                  })
-              stats={
-                  "n_tokens":len(content),
-                  "mean_logprob":sum(chosen)/len(chosen) if chosen else None,
-                  "min_logprob":min(chosen) if chosen else None,
-                  "mean_entropy_top5":sum(entropy)/len(entropy) if entropy else None,
-                  "mean_top1_top2_logprob_margin":sum(margins)/len(margins) if margins else None,
+                      if len(sv)>=2: margins.append(sv[0]-sv[1])
+              def meanfirst(xs,n):
+                  ys=xs[:n]
+                  return sum(ys)/len(ys) if ys else None
+              return {
+                  "mean_logprob_first_8":meanfirst(chosen,8),
+                  "mean_entropy_first_8":meanfirst(entropy,8),
+                  "mean_margin_first_8":meanfirst(margins,8),
+                  "mean_logprob_first_16":meanfirst(chosen,16),
+                  "mean_entropy_first_16":meanfirst(entropy,16),
+                  "mean_margin_first_16":meanfirst(margins,16),
+                  "n_tokens":len(content)
               }
-              for n in [8,16,32,64]:
-                  xs=chosen[:n]
-                  stats[f"mean_logprob_first_{n}"]=sum(xs)/len(xs) if xs else None
-                  hs=entropy[:n]
-                  stats[f"mean_entropy_first_{n}"]=sum(hs)/len(hs) if hs else None
-                  ms=margins[:n]
-                  stats[f"mean_margin_first_{n}"]=sum(ms)/len(ms) if ms else None
-              return stats,toks
 
-          outdir=Path("results/trajectories"); outdir.mkdir(parents=True,exist_ok=True)
-          rows=[]
-          token_records=[]
+          def score(action,stats):
+              vals=[stats[k] for k in FEATURES]
+              if any(v is None for v in vals):
+                  return None
+              z=INTERCEPT
+              for i,v in enumerate(vals):
+                  z += COEF[i]*((v-MEAN[i])/SCALE[i])
+              # one-hot action coefficients occupy final three slots.
+              aidx=ACTIONS.index(action)
+              z += COEF[6+aidx]
+              return 1.0/(1.0+math.exp(-z))
+
+          rows=[]; outdir=Path("results/outputs"); outdir.mkdir(parents=True,exist_ok=True)
           for tid,fam,problem,expected,wrong in tasks:
-              for mode,maker in prompts.items():
-                  content=maker(problem,wrong)
-                  try:
-                      obj,elapsed=request_chat(content,logprobs_supported)
-                  except Exception as ex:
-                      # Retry without telemetry if one response path rejects logprobs.
-                      obj,elapsed=request_chat(content,False)
+              candidates={}
+              # Controller sees only these candidate texts + telemetry, never expected answer.
+              for action,maker in prompts.items():
+                  obj,elapsed=call_chat(maker(problem,wrong),True)
                   choice=obj["choices"][0]
                   text=choice["message"]["content"]
-                  observed=final_answer(text)
-                  ok=correct(expected,observed)
-                  stats,toks=token_stats(choice)
-                  row={
-                      "id":tid,"family":fam,"mode":mode,"expected":expected,
-                      "wrong_checkpoint":wrong,"observed":observed,"correct":int(ok),
-                      "chars":len(text),"elapsed_s":round(elapsed,3),
-                      "prefix16":text[:16].replace("\n","\\n"),
-                      "prefix32":text[:32].replace("\n","\\n"),
-                      "prefix64":text[:64].replace("\n","\\n"),
-                      "prefix128":text[:128].replace("\n","\\n"),
-                      "prefix256":text[:256].replace("\n","\\n"),
-                      **stats
+                  stats=telemetry(choice)
+                  p=score(action,stats)
+                  if p is None:
+                      raise RuntimeError("Missing telemetry for "+tid+" "+action)
+                  candidates[action]={
+                      "text":text,"observed":final_answer(text),"p_recovery":p,
+                      "elapsed_s":round(elapsed,3),**stats
                   }
-                  rows.append(row)
-                  token_records.append({"id":tid,"family":fam,"mode":mode,"tokens":toks})
-                  (outdir/f"{mode}__{tid}.txt").write_text(text)
-                  print(mode,tid,"ok=",ok,"ans=",observed[:40],"tokens=",stats.get("n_tokens"),flush=True)
+                  (outdir/f"{tid}__{action}.txt").write_text(text)
 
-          with open("results/trajectories.csv","w",newline="") as f:
+              best_action=max(candidates,key=lambda a:candidates[a]["p_recovery"])
+              best=candidates[best_action]
+              use_reset=best["p_recovery"]<THRESHOLD
+
+              reset_text=None; reset_observed=None; reset_elapsed=None
+              if use_reset:
+                  robj,relapsed=call_chat(clean_prompt(problem),False)
+                  reset_text=robj["choices"][0]["message"]["content"]
+                  reset_observed=final_answer(reset_text)
+                  reset_elapsed=round(relapsed,3)
+                  (outdir/f"{tid}__RESET.txt").write_text(reset_text)
+                  final_mode="reset"
+                  final_observed=reset_observed
+              else:
+                  final_mode=best_action
+                  final_observed=best["observed"]
+
+              # Evaluation-only clean baseline. Generated after controller decision.
+              if reset_text is None:
+                  bobj,belapsed=call_chat(clean_prompt(problem),False)
+                  baseline_text=bobj["choices"][0]["message"]["content"]
+                  baseline_observed=final_answer(baseline_text)
+                  baseline_elapsed=round(belapsed,3)
+                  (outdir/f"{tid}__always_reset_baseline.txt").write_text(baseline_text)
+              else:
+                  baseline_text=reset_text; baseline_observed=reset_observed; baseline_elapsed=reset_elapsed
+
+              row={
+                  "id":tid,"family":fam,"expected":expected,
+                  "selected_cheap_action":best_action,
+                  "selected_cheap_p":best["p_recovery"],
+                  "use_reset":int(use_reset),
+                  "final_mode":final_mode,
+                  "final_observed":final_observed,
+                  "policy_correct":int(correct(expected,final_observed)),
+                  "always_reset_observed":baseline_observed,
+                  "always_reset_correct":int(correct(expected,baseline_observed)),
+              }
+              for action,c in candidates.items():
+                  row[f"{action}_observed"]=c["observed"]
+                  row[f"{action}_correct"]=int(correct(expected,c["observed"]))
+                  row[f"{action}_p"]=c["p_recovery"]
+                  row[f"{action}_margin16"]=c["mean_margin_first_16"]
+              row["cheap_oracle"]=max(row["local_correct"],row["decl3_correct"],row["qa3_correct"])
+              row["expanded_oracle"]=max(row["cheap_oracle"],row["always_reset_correct"])
+              rows.append(row)
+              print(tid,"best=",best_action,round(best["p_recovery"],3),"reset=",use_reset,
+                    "policy=",row["policy_correct"],"baseline=",row["always_reset_correct"],flush=True)
+
+          with open("results/closed_loop_results.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-          Path("results/token_logprobs.json").write_text(json.dumps(token_records))
-          Path("results/task_manifest.json").write_text(json.dumps([
-              {"id":tid,"family":fam,"problem":p,"expected":e,"wrong_checkpoint":w}
-              for tid,fam,p,e,w in tasks
-          ],indent=2))
+          Path("results/closed_loop_results.json").write_text(json.dumps(rows,indent=2))
+
+          n=len(rows)
+          summary={
+              "n":n,
+              "policy_success":sum(r["policy_correct"] for r in rows),
+              "policy_rate":sum(r["policy_correct"] for r in rows)/n,
+              "always_reset_success":sum(r["always_reset_correct"] for r in rows),
+              "always_reset_rate":sum(r["always_reset_correct"] for r in rows)/n,
+              "fixed_local_success":sum(r["local_correct"] for r in rows),
+              "fixed_decl3_success":sum(r["decl3_correct"] for r in rows),
+              "fixed_qa3_success":sum(r["qa3_correct"] for r in rows),
+              "cheap_oracle_success":sum(r["cheap_oracle"] for r in rows),
+              "expanded_oracle_success":sum(r["expanded_oracle"] for r in rows),
+              "reset_calls":sum(r["use_reset"] for r in rows),
+              "reset_rate":sum(r["use_reset"] for r in rows)/n,
+              "paired_policy_wins_vs_reset":sum(r["policy_correct"]>r["always_reset_correct"] for r in rows),
+              "paired_policy_losses_vs_reset":sum(r["policy_correct"]<r["always_reset_correct"] for r in rows),
+          }
+          Path("results/summary.json").write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
           PY
 
       - name: Stop server
@@ -287,10 +291,10 @@ jobs:
           fi
           tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-008
+      - name: Upload REAL-DEEPSEEK-MOE-010
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-008-passive-trajectory-readout
+          name: real-deepseek-moe-010-closed-loop-acceptance
           path: results/
           retention-days: 7
