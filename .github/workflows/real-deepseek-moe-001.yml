@@ -1,4 +1,4 @@
-name: real-deepseek-moe-004
+name: real-deepseek-moe-005
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  qa-microprotocol:
+  learned-protocol-router:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
@@ -17,7 +17,6 @@ jobs:
           uname -a | tee results/runner_info.txt
           nproc | tee -a results/runner_info.txt
           free -h | tee -a results/runner_info.txt
-          df -h / | tee -a results/runner_info.txt
 
       - name: Download llama.cpp
         run: |
@@ -56,79 +55,86 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Run Q-A microprotocol experiment
+      - name: Generate labels and train protocol router
         run: |
           python3 - <<'PY'
-          import json, csv, re, time, urllib.request, statistics
+          import json, csv, re, time, urllib.request, statistics, random
           from pathlib import Path
+          import numpy as np
 
-          tasks = [
-              ("mul","A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?","391","17 × 23 = 374."),
-              ("compose","Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?","46","After adding 2, the running value is 25."),
-              ("logic","All zargs are melps. No melps are nords. Can any zarg be a nord?","No","A zarg can still be a nord."),
-              ("sequence","What is the next number in the sequence 3, 7, 15, 31, 63?","127","The rule is simply multiply by 2, so the next term is 126."),
-              ("code","A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","484","The third digit is 3, so the code is 483."),
-              ("marbles","Alice has 14 marbles. Bob has 9 more than Alice. Chen has 5 fewer than Bob. How many marbles does Chen have?","18","Bob has 22 marbles."),
-              ("seats","There are 6 tables with 8 seats at each table. If 11 seats are empty, how many seats are occupied?","37","There are 42 seats before subtracting the empty seats."),
-              ("algebra","A number plus 5 equals 17. What is three times that number?","36","The number is 13."),
-              ("packets","Four packets contain 15 items each, and then 7 extra items are added. How many items are there?","67","Four packets contain 56 items in total."),
-              ("tank","A tank starts with 80 liters. Twenty-five percent is used, then 10 liters are added. How many liters are in the tank now?","70","After using twenty-five percent, 55 liters remain."),
-              ("ages","Maya is 12 years old. Leo is 4 years older than Maya. Nia is 3 years younger than Leo. How old is Nia?","13","Leo is 15 years old."),
-              ("perimeter","A rectangle has length 9 and width 7. What is its perimeter?","32","The sum of length and width is 15, so the perimeter is 30."),
-              ("tickets","A cinema sells 28 adult tickets and 17 child tickets. How many tickets were sold altogether?","45","28 + 17 = 44."),
-              ("distance","A car travels 60 km in the first hour and 75 km in the second hour. How far does it travel in total?","135","60 + 75 = 125."),
-              ("books","There are 9 shelves with 12 books each. If 8 books are removed, how many remain?","100","Nine shelves contain 96 books before removal."),
-              ("fraction","What is one half of 84, plus 9?","51","Half of 84 is 41."),
-              ("coins","Sam has 30 coins. He gives away 7 and then receives 12. How many coins does he have?","35","After giving away 7, Sam has 24 coins."),
-              ("square","A square has side length 6. What is its perimeter?","24","The perimeter is 6 × 3 = 18."),
-              ("temperature","The temperature is 18 degrees and rises by 7 degrees. What is the new temperature?","25","18 + 7 = 24."),
-              ("workers","Five workers each pack 14 boxes. How many boxes do they pack in total?","70","Five times fourteen is 65.")
+          random.seed(20261002)
+
+          tasks=[]
+          # 8 families x 5 instances = 40 tasks.
+          for i,(a,b) in enumerate([(13,17),(16,19),(21,14),(24,18),(27,13)]):
+              ans=a*b
+              wrong=ans-(2+i)
+              tasks.append((f"mul_{i}","mul",f"A warehouse has {a} shelves with {b} boxes on each shelf. How many boxes are there in total?",str(ans),f"{a} × {b} = {wrong}."))
+          for i,(s,a,b) in enumerate([(30,11,7),(42,9,5),(25,14,6),(36,8,13),(50,12,9)]):
+              mid=s+a
+              ans=mid-b
+              tasks.append((f"twostep_{i}","twostep",f"Start with {s}. Add {a}, then subtract {b}. What number do you get?",str(ans),f"After adding {a}, the running value is {mid-1}."))
+          for i,(x,c,k) in enumerate([(8,5,3),(11,4,2),(7,9,4),(13,6,3),(9,8,5)]):
+              d=x+c
+              ans=k*x
+              tasks.append((f"algebra_{i}","algebra",f"A number plus {c} equals {d}. What is {k} times that number?",str(ans),f"The number is {x+1}."))
+          for i,(n,add) in enumerate([(80,10),(120,15),(64,8),(100,5),(160,20)]):
+              ans=int(n*0.75+add)
+              wrong=int(n*0.75-5)
+              tasks.append((f"percent_{i}","percent",f"A tank starts with {n} liters. Twenty-five percent is used, then {add} liters are added. How many liters are in the tank now?",str(ans),f"After using twenty-five percent, {wrong} liters remain."))
+          for i,(a,b,c) in enumerate([(14,9,5),(18,7,4),(20,6,8),(11,13,3),(25,5,7)]):
+              bob=a+b
+              ans=bob-c
+              tasks.append((f"compare_{i}","compare",f"Alice has {a} marbles. Bob has {b} more than Alice. Chen has {c} fewer than Bob. How many marbles does Chen have?",str(ans),f"Bob has {bob-1} marbles."))
+          for i,(l,w) in enumerate([(9,7),(12,5),(8,6),(14,4),(11,9)]):
+              ans=2*(l+w)
+              tasks.append((f"perim_{i}","perim",f"A rectangle has length {l} and width {w}. What is its perimeter?",str(ans),f"The sum of length and width is {l+w-1}, so the perimeter is {2*(l+w-1)}."))
+          for i,(n,e,extra) in enumerate([(4,15,7),(6,12,5),(5,18,4),(7,11,9),(3,24,6)]):
+              prod=n*e
+              ans=prod+extra
+              tasks.append((f"pack_{i}","pack",f"{n} packets contain {e} items each, and then {extra} extra items are added. How many items are there?",str(ans),f"{n} packets contain {prod-4} items in total."))
+          logic_sets=[
+              ("zargs","melps","nords"),
+              ("flims","daxes","vorps"),
+              ("taves","lunds","keps"),
+              ("marns","sopes","rids"),
+              ("quels","bims","naks"),
           ]
+          for i,(a,b,c) in enumerate(logic_sets):
+              tasks.append((f"logic_{i}","logic",f"All {a} are {b}. No {b} are {c}. Can any {a} be a {c}?","No",f"A {a[:-1]} can still be a {c[:-1]}."))
 
-          def clean_prompt(p,w):
-              return (
-                  "Solve the problem carefully from the original information. Keep the reasoning concise. "
-                  "End with exactly one line: ANSWER: <answer>.\n\nProblem: " + p
-              )
+          protocols = {
+              "local": lambda p,w: (
+                  "Problem: "+p+"\nPrevious reasoning checkpoint: "+w+
+                  "\nRecompute only the original relation that produced this checkpoint, replace the checkpoint with the corrected relation, then finish the problem. "
+                  "Keep the response short. End with exactly one line: ANSWER: <answer>."
+              ),
+              "decl3": lambda p,w: (
+                  "Problem: "+p+"\nPrevious reasoning checkpoint: "+w+
+                  "\nUse this verification protocol: (1) determine whether the checkpoint is correct; "
+                  "(2) recompute the original relation that produced it; (3) state the corrected intermediate value or logical relation; then finish the problem. "
+                  "Keep the response concise. End with exactly one line: ANSWER: <answer>."
+              ),
+              "qa3": lambda p,w: (
+                  "Problem: "+p+"\nPrevious reasoning checkpoint: "+w+
+                  "\nUse this three-question protocol: Q1: Is the checkpoint correct? Q2: What original relation should be recomputed? "
+                  "Q3: What is the corrected intermediate value or logical relation? Answer each briefly, then finish the problem. "
+                  "End with exactly one line: ANSWER: <answer>."
+              ),
+          }
 
-          def drift_prompt(p,w):
-              return (
-                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
-                  "\nContinue from this checkpoint as the established intermediate result. "
-                  "Keep the reasoning concise. End with exactly one line: ANSWER: <answer>."
-              )
+          def clean_prompt(p):
+              return "Solve carefully from the original information. Keep the response concise. End with exactly one line: ANSWER: <answer>.\n\nProblem: "+p
 
-          def decl_prompt(p,w):
-              return (
-                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
-                  "\nUse this three-step verification protocol before giving the final answer:\n"
-                  "Step 1 — Checkpoint validity: determine whether the checkpoint is correct.\n"
-                  "Step 2 — Original relation: recompute the relation in the original problem that produced the checkpoint.\n"
-                  "Step 3 — Corrected state: state the corrected intermediate value or logical relation.\n"
-                  "Then solve the problem. Keep each step brief. End with exactly one line: ANSWER: <answer>."
-              )
-
-          def qa_prompt(p,w):
-              return (
-                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
-                  "\nUse this three-question verification protocol before giving the final answer:\n"
-                  "Q1: Is the checkpoint correct? Answer Q1 briefly.\n"
-                  "Q2: What original relation in the problem should be recomputed? Answer Q2 briefly.\n"
-                  "Q3: What is the corrected intermediate value or logical relation? Answer Q3 briefly.\n"
-                  "Then solve the problem. Keep each answer brief. End with exactly one line: ANSWER: <answer>."
-              )
-
-          modes={"clean":clean_prompt,"drift":drift_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
-
-          def call_chat(content):
+          def call_chat(content,max_tokens=128):
               payload=json.dumps({
                   "messages":[
-                      {"role":"system","content":"You are a concise reasoning assistant. Follow the requested protocol exactly and solve from the original problem."},
+                      {"role":"system","content":"You are a concise reasoning assistant. Solve from the stated problem and follow the requested protocol."},
                       {"role":"user","content":content}
                   ],
                   "temperature":0.0,
                   "seed":1234,
-                  "max_tokens":192,
+                  "max_tokens":max_tokens,
                   "stream":False
               }).encode()
               req=urllib.request.Request("http://127.0.0.1:8080/v1/chat/completions",data=payload,headers={"Content-Type":"application/json"},method="POST")
@@ -144,8 +150,8 @@ jobs:
           def is_correct(expected, observed):
               if not observed:
                   return False
-              e=expected.strip().lower()
-              o=observed.strip().lower()
+              e=expected.lower().strip()
+              o=observed.lower().strip()
               if e=="no":
                   return bool(re.match(r"^no\b",o))
               nums=re.findall(r"-?\d+(?:\.\d+)?",o)
@@ -153,49 +159,119 @@ jobs:
 
           outdir=Path("results/outputs"); outdir.mkdir(parents=True,exist_ok=True)
           rows=[]
-          for mode,maker in modes.items():
-              for tid,problem,answer,wrong in tasks:
-                  content=maker(problem,wrong)
-                  try:
-                      text,elapsed,obj=call_chat(content); rc=0
-                  except Exception as ex:
-                      text="ERROR: "+repr(ex); elapsed=0; obj={}; rc=1
+          for tid,fam,problem,answer,wrong in tasks:
+              # Clean capability
+              text,elapsed,obj=call_chat(clean_prompt(problem),96)
+              obs=final_answer(text)
+              clean_ok=is_correct(answer,obs)
+              rows.append({
+                  "id":tid,"family":fam,"mode":"clean","expected":answer,"observed":obs,"correct":clean_ok,
+                  "chars":len(text),"elapsed_s":round(elapsed,3)
+              })
+              (outdir/f"clean__{tid}.txt").write_text(text)
+              print("clean",tid,clean_ok,obs,flush=True)
+
+              for mode,maker in protocols.items():
+                  text,elapsed,obj=call_chat(maker(problem,wrong),144)
                   obs=final_answer(text)
-                  q_labels=sum(1 for x in ["Q1:","Q2:","Q3:"] if x.lower() in text.lower())
-                  a_labels=sum(1 for x in ["A1:","A2:","A3:"] if x.lower() in text.lower())
+                  ok=is_correct(answer,obs)
                   rows.append({
-                      "id":tid,"mode":mode,"expected":answer,"wrong_checkpoint":wrong,
-                      "observed":obs,"correct":is_correct(answer,obs),
-                      "question_marks_output":text.count("?"),
-                      "qa_question_labels_output":q_labels,
-                      "qa_answer_labels_output":a_labels,
-                      "chars":len(text),"elapsed_s":round(elapsed,3),"return_code":rc
+                      "id":tid,"family":fam,"mode":mode,"expected":answer,"observed":obs,"correct":ok,
+                      "chars":len(text),"elapsed_s":round(elapsed,3)
                   })
-                  (outdir/(mode+"__"+tid+".txt")).write_text(
-                      "MODE="+mode+"\nID="+tid+"\nEXPECTED="+answer+"\nWRONG="+wrong+
-                      "\nPROMPT="+content+"\n---OUTPUT---\n"+text+"\n---RAW_META---\n"+json.dumps(obj,indent=2)
-                  )
-                  print(mode,tid,"correct=",rows[-1]["correct"],"obs=",obs,flush=True)
+                  (outdir/f"{mode}__{tid}.txt").write_text(text)
+                  print(mode,tid,ok,obs,flush=True)
 
-          with open("results/summary.csv","w",newline="") as f:
+          with open("results/raw_results.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-          Path("results/summary.json").write_text(json.dumps(rows,indent=2))
+          Path("results/raw_results.json").write_text(json.dumps(rows,indent=2))
 
-          by={m:[r for r in rows if r["mode"]==m] for m in modes}
-          clean_ok={r["id"] for r in by["clean"] if r["correct"]}
-          agg={}
-          for mode,rr in by.items():
-              cap=[r for r in rr if r["id"] in clean_ok]
-              agg[mode]={
-                  "n":len(rr),
-                  "accuracy":sum(r["correct"] for r in rr)/len(rr),
-                  "clean_capable_n":len(cap),
-                  "accuracy_on_clean_capable":sum(r["correct"] for r in cap)/len(cap) if cap else None,
-                  "mean_question_marks_output":statistics.mean(r["question_marks_output"] for r in rr),
-                  "mean_chars":statistics.mean(r["chars"] for r in rr),
-              }
-          Path("results/aggregate.json").write_text(json.dumps(agg,indent=2))
-          print(json.dumps(agg,indent=2))
+          # Build supervised protocol-routing dataset on clean-capable tasks.
+          byid={}
+          for r in rows:
+              byid.setdefault(r["id"],{})[r["mode"]]=r
+
+          examples=[]
+          for tid,fam,problem,answer,wrong in tasks:
+              rr=byid[tid]
+              if not rr["clean"]["correct"]:
+                  continue
+              rewards={m:int(rr[m]["correct"]) for m in protocols}
+              # Tie-break by shorter output among successful protocols; if none succeeds, choose shortest protocol output.
+              successful=[m for m,v in rewards.items() if v==1]
+              if successful:
+                  best=min(successful,key=lambda m: rr[m]["chars"])
+              else:
+                  best=min(protocols,key=lambda m: rr[m]["chars"])
+              idx=int(tid.rsplit("_",1)[1])
+              split="train" if idx<3 else "test"
+              examples.append({
+                  "id":tid,"family":fam,"problem":problem,"wrong_checkpoint":wrong,"split":split,
+                  "best_protocol":best,
+                  **{f"reward_{m}":rewards[m] for m in protocols},
+                  **{f"chars_{m}":rr[m]["chars"] for m in protocols},
+              })
+
+          # Tiny learned controller: multinomial logistic regression over character n-gram TF-IDF.
+          # Install sklearn lazily only if unavailable.
+          try:
+              from sklearn.feature_extraction.text import TfidfVectorizer
+              from sklearn.linear_model import LogisticRegression
+          except Exception:
+              import subprocess,sys
+              subprocess.run([sys.executable,"-m","pip","install","-q","scikit-learn"],check=True)
+              from sklearn.feature_extraction.text import TfidfVectorizer
+              from sklearn.linear_model import LogisticRegression
+
+          train=[e for e in examples if e["split"]=="train"]
+          test=[e for e in examples if e["split"]=="test"]
+          Xtrain=[e["problem"]+" [CHECKPOINT] "+e["wrong_checkpoint"] for e in train]
+          ytrain=[e["best_protocol"] for e in train]
+          Xtest=[e["problem"]+" [CHECKPOINT] "+e["wrong_checkpoint"] for e in test]
+
+          vec=TfidfVectorizer(analyzer="char_wb",ngram_range=(2,5),min_df=1,max_features=4000)
+          Xt=vec.fit_transform(Xtrain)
+          Xv=vec.transform(Xtest)
+          clf=LogisticRegression(max_iter=3000,C=2.0,multi_class="auto")
+          clf.fit(Xt,ytrain)
+          pred=clf.predict(Xv)
+
+          eval_rows=[]
+          protocols_list=list(protocols)
+          for e,predicted in zip(test,pred):
+              fixed={m:e[f"reward_{m}"] for m in protocols_list}
+              oracle=max(fixed.values())
+              random_exp=sum(fixed.values())/len(protocols_list)
+              selected=fixed[predicted]
+              eval_rows.append({
+                  "id":e["id"],"family":e["family"],"predicted_protocol":predicted,
+                  "best_protocol_label":e["best_protocol"],
+                  "selected_reward":selected,
+                  "oracle_reward":oracle,
+                  "random_expected_reward":random_exp,
+                  **fixed,
+              })
+
+          with open("results/router_train_examples.csv","w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=train[0].keys()); w.writeheader(); w.writerows(train)
+          with open("results/router_test_results.csv","w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=eval_rows[0].keys()); w.writeheader(); w.writerows(eval_rows)
+
+          n=len(eval_rows)
+          metrics={
+              "clean_capable_total":len(examples),
+              "train_n":len(train),"test_n":len(test),
+              "fixed_local_acc":sum(r["local"] for r in eval_rows)/n,
+              "fixed_decl3_acc":sum(r["decl3"] for r in eval_rows)/n,
+              "fixed_qa3_acc":sum(r["qa3"] for r in eval_rows)/n,
+              "random_expected_acc":sum(r["random_expected_reward"] for r in eval_rows)/n,
+              "learned_selector_acc":sum(r["selected_reward"] for r in eval_rows)/n,
+              "protocol_oracle_acc":sum(r["oracle_reward"] for r in eval_rows)/n,
+              "best_label_match":sum(r["predicted_protocol"]==r["best_protocol_label"] for r in eval_rows)/n,
+              "test_family_counts":{fam:sum(r["family"]==fam for r in eval_rows) for fam in sorted(set(r["family"] for r in eval_rows))}
+          }
+          Path("results/metrics.json").write_text(json.dumps(metrics,indent=2))
+          print(json.dumps(metrics,indent=2))
           PY
 
       - name: Stop server
@@ -206,10 +282,10 @@ jobs:
           fi
           tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-004
+      - name: Upload REAL-DEEPSEEK-MOE-005
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-004-qa-microprotocol
+          name: real-deepseek-moe-005-learned-protocol-router
           path: results/
           retention-days: 7
