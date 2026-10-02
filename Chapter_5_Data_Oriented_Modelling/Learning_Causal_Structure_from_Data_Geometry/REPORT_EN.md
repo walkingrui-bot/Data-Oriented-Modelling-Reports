@@ -3115,3 +3115,30 @@ External measurements and per-cell real-data prediction/trace arrays are exclude
 The verification directory records integrity checks and selected result reaggregations. These checks do not independently rerun training, original permutations or biological experiments.
 
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: causal-geometry measurements retained; project-level interpretation revised.**
+
+The numerical and experimental findings of CG-001–CG-024 remain at their stated evidence levels. In particular, the identifiability boundary, local Fisher geometry, chart-transition measurements, source-transfer failures, intervention-response geometry and executable mechanism tests remain part of the current evidence base.
+
+A higher-level interpretation has changed.
+
+Section 10.1 presents a practical historical sequence in which a geometry profile is followed by a reversibility/identifiability gate and geometry-conditioned orientation. That remains a useful **causal triage interface** for deciding how strongly a proposed directional interpretation is supported by the available observations.
+
+It is no longer the project-level role assigned to causal modelling.
+
+The current framework treats causal modelling as a generator and reviser of possible worlds:
+
+**observed data → multiple possible causal worlds → simulated, imagined or measured consequences → comparison with observations and constraints → revised worlds → further consequences**
+
+Under this interpretation, identifiability is a measurable property of a candidate world under specified assumptions and available evidence. It constrains confidence, transport and experiment design; it does not terminate the modelling process when a unique world is unavailable. Multiple compatible worlds can be retained and distinguished by subsequent observations, interventions or simulated consequences.
+
+This later framing is already anticipated by Section 21 of the original report:
+
+**Data ↔ representations ↔ hypotheses ↔ models/operators ↔ simulated or observed consequences ↔ revised representations.**
+
+The revision therefore changes the hierarchy of the report rather than its executed results. Sections 1–20 provide measurements and local operators for constructing and testing candidate worlds; Sections 21–30 point toward the current iterative world-generation view.
+
+See [Evidence Supersession Audit — 2026-10-02](../../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
