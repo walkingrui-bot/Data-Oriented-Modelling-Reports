@@ -1,0 +1,288 @@
+name: robot-language-action-003
+
+on:
+  push:
+    branches:
+      - exp/robot-language-action-003
+  workflow_dispatch:
+
+jobs:
+  constrained-motor-control:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 110
+
+    steps:
+      - name: Runner info
+        run: |
+          mkdir -p results
+          uname -a | tee results/runner_info.txt
+          nproc | tee -a results/runner_info.txt
+          free -h | tee -a results/runner_info.txt
+
+      - name: Download llama.cpp
+        run: |
+          set -euxo pipefail
+          curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
+          mkdir -p /tmp/llama
+          tar -xzf /tmp/llama.tar.gz -C /tmp/llama
+          LLAMA_SERVER=$(find /tmp/llama -type f -name llama-server | head -1)
+          test -n "$LLAMA_SERVER"
+          chmod +x "$LLAMA_SERVER"
+          echo "LLAMA_SERVER=$LLAMA_SERVER" >> "$GITHUB_ENV"
+
+      - name: Download DeepSeekMoE-16B Chat IQ3_S
+        run: |
+          set -euxo pipefail
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ3_S.gguf?download=true"
+          echo "MODEL=$MODEL" >> "$GITHUB_ENV"
+          sha256sum "$MODEL" | tee results/model_sha256.txt
+
+      - name: Start server
+        run: |
+          set -euxo pipefail
+          "$LLAMA_SERVER" -m "$MODEL" -c 3072 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
+          echo $! > /tmp/llama_server.pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
+              cat /tmp/health.json
+              exit 0
+            fi
+            sleep 2
+          done
+          tail -200 results/server.log
+          exit 1
+
+      - name: Run grammar-constrained closed-loop motor benchmark
+        run: |
+          python3 - <<'PY'
+          import csv, json, math, re, time, urllib.request
+          from collections import Counter, deque
+          from pathlib import Path
+
+          OUT=Path("results"); OUT.mkdir(exist_ok=True)
+          N=6
+          MAX_STEPS=14
+          DIRS=[(0,-1),(1,0),(0,1),(-1,0)]
+          DN=["north","east","south","west"]
+          ARROW=["^",">","v","<"]
+          A2N={"1":"FORWARD","2":"LEFT","3":"RIGHT","4":"STOP"}
+
+          worlds=json.loads(r'''[{"seed": 4101, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1]], "start": [5, 3, 1], "goal": [0, 0], "optimal_move_turn_steps": 10}, {"seed": 4102, "grid": [[0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [3, 5, 3], "goal": [1, 0], "optimal_move_turn_steps": 9}, {"seed": 4103, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0]], "start": [2, 4, 3], "goal": [4, 0], "optimal_move_turn_steps": 8}, {"seed": 4104, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [2, 0, 1], "goal": [0, 4], "optimal_move_turn_steps": 9}, {"seed": 4105, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 1, 1, 0, 0, 0]], "start": [0, 4, 1], "goal": [2, 0], "optimal_move_turn_steps": 7}, {"seed": 4106, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [5, 2, 0], "goal": [4, 3], "optimal_move_turn_steps": 4}, {"seed": 4107, "grid": [[0, 1, 0, 0, 0, 1], [0, 1, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [2, 4, 0], "goal": [3, 5], "optimal_move_turn_steps": 4}, {"seed": 4108, "grid": [[0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0]], "start": [0, 4, 1], "goal": [4, 5], "optimal_move_turn_steps": 6}]''')
+
+          def blocked(grid,x,y,d):
+              dx,dy=DIRS[d]; nx,ny=x+dx,y+dy
+              return nx<0 or ny<0 or nx>=N or ny>=N or grid[ny][nx]==1
+
+          def apply(grid,state,a):
+              x,y,d=state
+              if a=="LEFT":
+                  return (x,y,(d-1)%4),"turned_left",False
+              if a=="RIGHT":
+                  return (x,y,(d+1)%4),"turned_right",False
+              if a=="FORWARD":
+                  if blocked(grid,x,y,d):
+                      return state,"collision_blocked",True
+                  dx,dy=DIRS[d]
+                  return (x+dx,y+dy,d),"moved_forward",False
+              if a=="STOP":
+                  return state,"stopped",False
+              return state,"invalid",False
+
+          def oracle(grid,start,goal):
+              if tuple(start[:2])==tuple(goal): return "STOP",0
+              q=deque([(tuple(start),0,None)])
+              seen={tuple(start)}
+              while q:
+                  s,dist,first=q.popleft()
+                  for a in ("FORWARD","LEFT","RIGHT"):
+                      ns,event,col=apply(grid,s,a)
+                      if col: continue
+                      nf=a if first is None else first
+                      if ns[:2]==tuple(goal): return nf,dist+1
+                      if ns not in seen:
+                          seen.add(ns); q.append((ns,dist+1,nf))
+              return None,None
+
+          def map_text(grid,state,goal):
+              x,y,d=state; rows=[]
+              for yy in range(N):
+                  row=[]
+                  for xx in range(N):
+                      ch="#" if grid[yy][xx] else "."
+                      if (xx,yy)==tuple(goal): ch="G"
+                      if (xx,yy)==(x,y): ch=ARROW[d]
+                      row.append(ch)
+                  rows.append("".join(row))
+              return "\n".join(rows)
+
+          def sensors(grid,state):
+              x,y,d=state
+              vals=[]
+              for name,dd in [("front",d),("left",(d-1)%4),("right",(d+1)%4),("back",(d+2)%4)]:
+                  vals.append(f"{name}={'blocked' if blocked(grid,x,y,dd) else 'clear'}")
+              return "; ".join(vals)
+
+          def prompt_for(mode,grid,state,goal,last_event,history,at_goal):
+              x,y,d=state; gx,gy=goal
+              base=(
+                  "You control a robot on a 6x6 grid. Reach the target efficiently. "
+                  "Coordinates: x increases right, y increases down. "
+                  "Motor symbols: 1=FORWARD one cell, 2=TURN LEFT 90 degrees, 3=TURN RIGHT 90 degrees, 4=STOP. "
+                  "Do not attempt to cross obstacles or boundaries. "
+                  "The output channel is hardware-constrained: output exactly one motor symbol.\n"
+                  f"position=({x},{y}); facing={DN[d]}; target=({gx},{gy}); "
+                  f"target_delta=(dx={gx-x},dy={gy-y}); last_event={last_event}.\n"
+              )
+              if mode=="full_map":
+                  obs="Map (# obstacle, . empty, G goal, robot arrow shows orientation):\n"+map_text(grid,state,goal)+"\n"
+              else:
+                  obs="Local sensors: "+sensors(grid,state)+"\n"
+              hist="Recent executed trajectory:\n"+("\n".join(history[-5:]) if history else "(none)")+"\n"
+              gate=("You are on the target. The only legal motor symbol is 4." if at_goal
+                    else "You are not on the target. Legal motor symbols are 1, 2, or 3. Symbol 4 is unavailable.")
+              return base+obs+hist+gate+"\nNext motor symbol:"
+
+          def request(prompt,at_goal):
+              grammar='root ::= "4"' if at_goal else 'root ::= "1" | "2" | "3"'
+              payload={
+                  "messages":[
+                      {"role":"system","content":"Select the robot's next motor command from the hardware-constrained output set."},
+                      {"role":"user","content":prompt}
+                  ],
+                  "temperature":0.0,
+                  "seed":1234,
+                  "max_tokens":3,
+                  "stream":False,
+                  "grammar":grammar
+              }
+              req=urllib.request.Request(
+                  "http://127.0.0.1:8080/v1/chat/completions",
+                  data=json.dumps(payload).encode(),
+                  headers={"Content-Type":"application/json"},
+                  method="POST")
+              t=time.time()
+              with urllib.request.urlopen(req,timeout=300) as r:
+                  obj=json.loads(r.read().decode())
+              return obj["choices"][0]["message"]["content"],time.time()-t
+
+          # Grammar capability smoke test.
+          raw,_=request("You are not on the target. Legal motor symbols are 1, 2, or 3.\nNext motor symbol:",False)
+          smoke=raw.strip()
+          OUT.joinpath("grammar_smoke.txt").write_text(repr(raw))
+          if smoke not in ("1","2","3"):
+              raise RuntimeError(f"Grammar constraint failed: {raw!r}")
+
+          episodes=[]; traces=[]
+          for mode in ("full_map","local_sensor"):
+              for w in worlds:
+                  grid=w["grid"]; state=tuple(w["start"]); goal=tuple(w["goal"])
+                  history=[]; last_event="start"; visits=Counter([state])
+                  collisions=oracle_matches=0
+                  success=False; elapsed_total=0.0
+                  start_dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                  best_dist=start_dist
+                  actions=[]
+
+                  for t in range(MAX_STEPS):
+                      at_goal=(state[:2]==goal)
+                      p=prompt_for(mode,grid,state,goal,last_event,history,at_goal)
+                      raw,elapsed=request(p,at_goal)
+                      elapsed_total+=elapsed
+                      symbol=raw.strip()
+                      action=A2N.get(symbol)
+                      truth,_=oracle(grid,state,goal)
+                      if action==truth:
+                          oracle_matches+=1
+                      before=state
+
+                      if at_goal:
+                          success=(action=="STOP")
+                          event="stopped_on_goal" if success else "terminal_constraint_error"
+                          traces.append({
+                              "mode":mode,"seed":w["seed"],"step":t,"before":before,
+                              "goal":goal,"raw":raw,"symbol":symbol,"action":action,
+                              "oracle":truth,"event":event,"distance":0,"elapsed_s":elapsed
+                          })
+                          actions.append(symbol)
+                          break
+
+                      state,event,col=apply(grid,state,action)
+                      collisions+=int(col)
+                      dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                      best_dist=min(best_dist,dist)
+                      traces.append({
+                          "mode":mode,"seed":w["seed"],"step":t,"before":before,
+                          "after":state,"goal":goal,"raw":raw,"symbol":symbol,
+                          "action":action,"oracle":truth,"event":event,
+                          "distance":dist,"elapsed_s":elapsed
+                      })
+                      actions.append(symbol)
+                      history.append(
+                          f"step {t}: ({before[0]},{before[1]}) facing {DN[before[2]]} -> "
+                          f"{symbol}({action}) -> {event}"
+                      )
+                      last_event=event
+                      visits[state]+=1
+
+                  if state[:2]==goal and not success and len(actions)>=MAX_STEPS:
+                      success=False
+                  repeated=sum(max(0,c-2) for c in visits.values())
+                  ep={
+                      "mode":mode,"seed":w["seed"],"success":int(success),
+                      "steps":len(actions),"start_distance":start_dist,
+                      "best_distance":best_dist,"final_distance":abs(goal[0]-state[0])+abs(goal[1]-state[1]),
+                      "distance_reduction":start_dist-(abs(goal[0]-state[0])+abs(goal[1]-state[1])),
+                      "collisions":collisions,"repeated_state_events":repeated,
+                      "oracle_matches":oracle_matches,
+                      "oracle_agreement":round(oracle_matches/max(len(actions),1),4),
+                      "action_trace":"".join(actions),
+                      "elapsed_s":round(elapsed_total,3),
+                      "start":list(w["start"]),"goal":list(goal),"final_state":list(state),
+                      "optimal_move_turn_steps":w["optimal_move_turn_steps"]
+                  }
+                  episodes.append(ep)
+                  print("EP",json.dumps(ep),flush=True)
+
+          with open(OUT/"episodes.csv","w",newline="") as f:
+              wr=csv.DictWriter(f,fieldnames=episodes[0].keys()); wr.writeheader(); wr.writerows(episodes)
+          with open(OUT/"traces.jsonl","w") as f:
+              for r in traces: f.write(json.dumps(r)+"\n")
+
+          summary={"model":"DeepSeekMoE-16B-Chat IQ3_S","constraint":"hard grammar: non-goal {1,2,3}; goal {4}","modes":{}}
+          for mode in ("full_map","local_sensor"):
+              xs=[e for e in episodes if e["mode"]==mode]
+              ts=[r for r in traces if r["mode"]==mode and r["action"]!="STOP"]
+              ad=Counter(r["action"] for r in ts)
+              summary["modes"][mode]={
+                  "episodes":len(xs),
+                  "successes":sum(e["success"] for e in xs),
+                  "success_rate":sum(e["success"] for e in xs)/len(xs),
+                  "mean_final_distance":sum(e["final_distance"] for e in xs)/len(xs),
+                  "mean_distance_reduction":sum(e["distance_reduction"] for e in xs)/len(xs),
+                  "episodes_improving_distance":sum(e["best_distance"]<e["start_distance"] for e in xs),
+                  "collision_rate":sum(e["collisions"] for e in xs)/max(len(ts),1),
+                  "oracle_action_agreement":sum(e["oracle_matches"] for e in xs)/max(sum(e["steps"] for e in xs),1),
+                  "repeated_state_events":sum(e["repeated_state_events"] for e in xs),
+                  "action_distribution":dict(ad),
+              }
+          OUT.joinpath("summary.json").write_text(json.dumps(summary,indent=2))
+          OUT.joinpath("worlds.json").write_text(json.dumps(worlds,indent=2))
+          print("SUMMARY",json.dumps(summary,indent=2),flush=True)
+          PY
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/llama_server.pid ]; then
+            kill $(cat /tmp/llama_server.pid) || true
+          fi
+          tail -120 results/server.log > results/server_tail.log || true
+
+      - name: Upload ROBOT-LANGUAGE-ACTION-003
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-language-action-003
+          path: results/
+          retention-days: 7
