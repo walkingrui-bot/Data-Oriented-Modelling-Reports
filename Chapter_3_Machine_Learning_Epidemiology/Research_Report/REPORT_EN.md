@@ -4786,3 +4786,24 @@ The scale result makes the racetrack intuition precise: larger tested GRUs provi
 ### 50.4 Version history for this integrated edition
 
 Version 1.9, 26 September 2026. Merges the two v1.8 branches, preserves historical sections 0–45, places the scale branch in 46–47, adds the two completed replication campaigns in 48–49 and updates the synthesis in 50. Corrects the full-future state count, distinguishes the two phrase-improvement estimands, specifies relation-step savings, and applies sufficient-state, closure and coordinate-alignment qualifications at the relevant earlier passages. Original reports, figures, data and audit snapshots retain their source identities in the evidence collection.
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: stopping geometry advanced into a hierarchical recovery controller.**
+
+Sections 44–45 established that answer readiness is state dependent, can form disconnected sets and can be lost by continuing after entry into an acceptable region. Later experiments 027A–027E extend this state-space result into an explicit sequential controller.
+
+The current action hierarchy is:
+
+1. stop when the current state is answer-ready;
+2. bypass a risky outgoing edge when a safe local alternative is available;
+3. use bounded active traversal toward a nearby answer-ready region;
+4. reconstruct a compact working state when local traversal is insufficient;
+5. use append-only rescue under immediate verification and a fixed attempt cap.
+
+Across 125 canonical correct-to-wrong exits, the minimal routed controller assigns 15 to preventive bypass, 108 to local recovery, 2 to reconstruction and 0 to the final rescue level, with immediate readiness recovery in all 125. The corresponding held-out foundation subset contains 60 events and recovers all 60. Repeated generic rescue is strongly non-monotonic, reinforcing the earlier result that reasoning length is a projection of an action-conditioned state trajectory rather than a monotonic compute variable.
+
+The pretrained-model extension is now also partially measured: later Qwen experiments identify a selective late TEXT/ACT first-action control interface and quantify its susceptibility to downstream counter-intervention. The broader transfer of the complete multi-step controller remains a distinct experimental layer.
+
+This update preserves the numerical stopping results in Sections 44–50 and records their later engineering continuation. See [Evidence Supersession Audit — 2026-10-02](../../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
