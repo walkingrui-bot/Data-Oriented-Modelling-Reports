@@ -1,4 +1,4 @@
-name: real-deepseek-moe-001
+name: real-deepseek-moe-002
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  baseline:
+  drift-reentry:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
@@ -22,19 +22,19 @@ jobs:
             df -h /
           } | tee results/runner_info.txt
 
-      - name: Download llama.cpp binary
+      - name: Download llama.cpp
         run: |
           set -euxo pipefail
           curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
           mkdir -p /tmp/llama
           tar -xzf /tmp/llama.tar.gz -C /tmp/llama
-          LLAMA_CLI=$(find /tmp/llama -type f -name llama-cli | head -1)
-          test -n "$LLAMA_CLI"
-          chmod +x "$LLAMA_CLI"
-          echo "LLAMA_CLI=$LLAMA_CLI" >> "$GITHUB_ENV"
-          "$LLAMA_CLI" --version | tee results/llama_version.txt
+          LLAMA_SERVER=$(find /tmp/llama -type f -name llama-server | head -1)
+          test -n "$LLAMA_SERVER"
+          chmod +x "$LLAMA_SERVER"
+          echo "LLAMA_SERVER=$LLAMA_SERVER" >> "$GITHUB_ENV"
+          "$LLAMA_SERVER" --version | tee results/llama_server_version.txt
 
-      - name: Download real DeepSeekMoE-16B Chat IQ3_S
+      - name: Download DeepSeekMoE-16B Chat IQ3_S
         run: |
           set -euxo pipefail
           MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
@@ -42,82 +42,176 @@ jobs:
           echo "MODEL=$MODEL" >> "$GITHUB_ENV"
           ls -lh "$MODEL" | tee results/model_file.txt
           sha256sum "$MODEL" | tee results/model_sha256.txt
-          free -h | tee results/memory_before_inference.txt
-          df -h / | tee results/disk_before_inference.txt
+          free -h | tee results/memory_before_server.txt
 
-      - name: Run deterministic ASK vs DECL baseline
-        shell: bash
+      - name: Start model server
         run: |
-          set -euo pipefail
-          mkdir -p results/ask results/decl
+          set -euxo pipefail
+          "$LLAMA_SERVER" -m "$MODEL" -c 1536 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
+          echo $! > /tmp/llama_server.pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
+              cat /tmp/health.json
+              free -h | tee results/memory_after_server.txt
+              exit 0
+            fi
+            sleep 2
+          done
+          tail -200 results/server.log
+          exit 1
+
+      - name: Run drift and re-entry experiment
+        run: |
           python3 - <<'PY'
+          import json, csv, re, time, urllib.request
           from pathlib import Path
-          import subprocess, json, csv, re, os, time
 
           tasks = [
-              ("arithmetic","A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?","391"),
-              ("composition","Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?","46"),
-              ("logic","All zargs are melps. No melps are nords. Can any zarg be a nord?","No"),
-              ("sequence","What is the next number in the sequence 3, 7, 15, 31, 63?","127"),
-              ("constraint","A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","488"),
-              ("comparison","Alice has 14 marbles, Bob has 9 more than Alice, and Chen has 5 fewer than Bob. How many marbles does Chen have?","18"),
+              {"id":"mul","problem":"A warehouse has 17 shelves with 23 boxes on each shelf. How many boxes are there in total?","answer":"391","wrong":"17 × 23 = 374."},
+              {"id":"compose","problem":"Start with 7. Multiply by 3, add 2, then multiply the result by 2. What number do you get?","answer":"46","wrong":"After adding 2, the running value is 25."},
+              {"id":"logic","problem":"All zargs are melps. No melps are nords. Can any zarg be a nord?","answer":"No","wrong":"A zarg can still be a nord."},
+              {"id":"sequence","problem":"What is the next number in the sequence 3, 7, 15, 31, 63?","answer":"127","wrong":"The rule is simply multiply by 2, so the next term is 126."},
+              {"id":"code","problem":"A code has three digits. The first is 4. The second is twice the first. The third is the difference between the second and first. What is the code?","answer":"484","wrong":"The third digit is 3, so the code is 483."},
+              {"id":"marbles","problem":"Alice has 14 marbles. Bob has 9 more than Alice. Chen has 5 fewer than Bob. How many marbles does Chen have?","answer":"18","wrong":"Bob has 22 marbles."},
+              {"id":"seats","problem":"There are 6 tables with 8 seats at each table. If 11 seats are empty, how many seats are occupied?","answer":"37","wrong":"There are 42 seats before subtracting the empty seats."},
+              {"id":"algebra","problem":"A number plus 5 equals 17. What is three times that number?","answer":"36","wrong":"The number is 13."},
+              {"id":"packets","problem":"Four packets contain 15 items each, and then 7 extra items are added. How many items are there?","answer":"67","wrong":"Four packets contain 56 items in total."},
+              {"id":"tank","problem":"A tank starts with 80 liters. Twenty-five percent is used, then 10 liters are added. How many liters are in the tank now?","answer":"70","wrong":"After using twenty-five percent, 55 liters remain."},
+              {"id":"ages","problem":"Maya is 12 years old. Leo is 4 years older than Maya. Nia is 3 years younger than Leo. How old is Nia?","answer":"13","wrong":"Leo is 15 years old."},
+              {"id":"perimeter","problem":"A rectangle has length 9 and width 7. What is its perimeter?","answer":"32","wrong":"The sum of length and width is 15, so the perimeter is 30."},
           ]
-          modes = {
-              "ask":"Solve the problem using a short chain of self-questions. Phrase each reasoning step as a question followed by a brief answer. End with exactly one line beginning FINAL:.",
-              "decl":"Solve the problem using short declarative reasoning statements. Do not ask yourself questions. End with exactly one line beginning FINAL:.",
-          }
-          llama=os.environ["LLAMA_CLI"]
-          model=os.environ["MODEL"]
-          rows=[]
-          for mode,instruction in modes.items():
-              for tid,q,expected in tasks:
-                  prompt=f"{instruction}\n\nProblem: {q}"
-                  cmd=[
-                      "/usr/bin/time","-v",llama,
-                      "-m",model,
-                      "-p",prompt,
-                      "-n","160",
-                      "-c","1024",
-                      "-t","4",
-                      "--temp","0",
-                      "--seed","1234",
-                      "--single-turn",
-                      "--no-display-prompt",
-                      "--no-show-timings",
-                  ]
-                  t0=time.time()
-                  cp=subprocess.run(cmd,input="",text=True,capture_output=True,timeout=240)
-                  elapsed=time.time()-t0
-                  body=cp.stdout
-                  stderr=cp.stderr
-                  out=Path("results")/mode/f"{tid}.txt"
-                  out.write_text(
-                      f"ID={tid}\nMODE={mode}\nEXPECTED={expected}\nPROMPT={prompt}\nRETURN_CODE={cp.returncode}\nELAPSED_S={elapsed:.3f}\n---STDOUT---\n{body}\n---STDERR---\n{stderr}"
-                  )
-                  m=re.findall(r"(?im)^\s*FINAL:\s*(.+?)\s*$", body)
-                  final=m[-1].strip() if m else ""
-                  correct=bool(final and expected.lower() in final.lower())
-                  rows.append({
-                      "id":tid,"mode":mode,"expected":expected,"final":final,
-                      "correct":correct,"question_marks":body.count("?"),
-                      "chars":len(body),"elapsed_s":round(elapsed,3),
-                      "return_code":cp.returncode
-                  })
 
-          Path("results/summary.json").write_text(json.dumps(rows,indent=2))
+          prompts = {
+              "clean": lambda t: (
+                  "Solve the problem carefully. Keep the reasoning concise. "
+                  "End with exactly one line in the form ANSWER: <answer>.\n\n"
+                  f"Problem: {t['problem']}\n\nAssistant:"
+              ),
+              "drift_continue": lambda t: (
+                  "Continue the solution from the previous reasoning checkpoint below. "
+                  "Treat the checkpoint as already established and continue from it. "
+                  "Keep the reasoning concise. End with exactly one line in the form ANSWER: <answer>.\n\n"
+                  f"Problem: {t['problem']}\n"
+                  f"Previous reasoning checkpoint: {t['wrong']}\n\nAssistant:"
+              ),
+              "decl_recheck": lambda t: (
+                  "A previous reasoning checkpoint is shown below. Before continuing, re-evaluate that checkpoint "
+                  "in one short declarative sentence, then solve the problem. Do not phrase the re-evaluation as a question. "
+                  "End with exactly one line in the form ANSWER: <answer>.\n\n"
+                  f"Problem: {t['problem']}\n"
+                  f"Previous reasoning checkpoint: {t['wrong']}\n\nAssistant:"
+              ),
+              "ask_recheck": lambda t: (
+                  "A previous reasoning checkpoint is shown below. Before continuing, ask yourself one short question "
+                  "about whether that checkpoint is correct, answer that question briefly, then solve the problem. "
+                  "End with exactly one line in the form ANSWER: <answer>.\n\n"
+                  f"Problem: {t['problem']}\n"
+                  f"Previous reasoning checkpoint: {t['wrong']}\n\nAssistant:"
+              ),
+          }
+
+          def request_completion(prompt):
+              payload = json.dumps({
+                  "prompt": prompt,
+                  "n_predict": 192,
+                  "temperature": 0.0,
+                  "seed": 1234,
+                  "stop": ["</s>"],
+                  "cache_prompt": False,
+              }).encode()
+              req = urllib.request.Request(
+                  "http://127.0.0.1:8080/completion",
+                  data=payload,
+                  headers={"Content-Type":"application/json"},
+                  method="POST",
+              )
+              t0=time.time()
+              with urllib.request.urlopen(req, timeout=300) as r:
+                  obj=json.loads(r.read().decode())
+              return obj.get("content",""), time.time()-t0, obj
+
+          def extract_answer(text):
+              m=re.findall(r"(?im)^\s*ANSWER:\s*(.+?)\s*$",text)
+              if m: return m[-1].strip()
+              return ""
+
+          def correct(expected, observed):
+              if not observed:
+                  return False
+              e=expected.strip().lower()
+              o=observed.strip().lower()
+              if e=="no":
+                  return o.startswith("no")
+              nums=re.findall(r"-?\d+(?:\.\d+)?",o)
+              return e in nums or o==e
+
+          rows=[]
+          outdir=Path("results/outputs")
+          outdir.mkdir(parents=True,exist_ok=True)
+          for mode,make_prompt in prompts.items():
+              for t in tasks:
+                  prompt=make_prompt(t)
+                  try:
+                      text,elapsed,obj=request_completion(prompt)
+                      rc=0
+                  except Exception as ex:
+                      text=f"ERROR: {ex!r}"
+                      elapsed=0
+                      obj={}
+                      rc=1
+                  ans=extract_answer(text)
+                  low=text.lower()
+                  explicit_reject=any(x in low for x in [
+                      "incorrect","wrong","not correct","is false","does not follow",
+                      "doesn't follow","cannot be","can't be"
+                  ])
+                  if mode=="ask_recheck":
+                      explicit_reject = explicit_reject or bool(re.search(r"\?\s*(?:no|not exactly|nope)\b",low,re.S))
+                  row={
+                      "id":t["id"],"mode":mode,"expected":t["answer"],"wrong_checkpoint":t["wrong"],
+                      "observed":ans,"correct":correct(t["answer"],ans),
+                      "explicit_checkpoint_reject":explicit_reject,
+                      "question_marks":text.count("?"),"chars":len(text),
+                      "elapsed_s":round(elapsed,3),"return_code":rc,
+                  }
+                  rows.append(row)
+                  (outdir/f"{mode}__{t['id']}.txt").write_text(
+                      f"MODE={mode}\nID={t['id']}\nEXPECTED={t['answer']}\nWRONG={t['wrong']}\n"
+                      f"PROMPT={prompt}\n---OUTPUT---\n{text}\n---RAW_META---\n{json.dumps(obj,indent=2)}"
+                  )
+                  print(mode,t["id"],"correct=",row["correct"],"answer=",ans,"qmarks=",row["question_marks"],flush=True)
+
           with open("results/summary.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-          for mode in ["ask","decl"]:
-              rr=[x for x in rows if x["mode"]==mode]
-              print(mode, "accuracy", sum(x["correct"] for x in rr),"/",len(rr),
-                    "mean_question_marks", sum(x["question_marks"] for x in rr)/len(rr),
-                    "mean_elapsed_s", sum(x["elapsed_s"] for x in rr)/len(rr))
-          PY
-          cat results/summary.csv
+          Path("results/summary.json").write_text(json.dumps(rows,indent=2))
 
-      - name: Upload real DeepSeek baseline
+          agg={}
+          for mode in prompts:
+              rr=[x for x in rows if x["mode"]==mode]
+              agg[mode]={
+                  "n":len(rr),
+                  "accuracy":sum(x["correct"] for x in rr)/len(rr),
+                  "checkpoint_reject_rate":sum(x["explicit_checkpoint_reject"] for x in rr)/len(rr),
+                  "mean_question_marks":sum(x["question_marks"] for x in rr)/len(rr),
+                  "mean_chars":sum(x["chars"] for x in rr)/len(rr),
+                  "mean_elapsed_s":sum(x["elapsed_s"] for x in rr)/len(rr),
+              }
+          Path("results/aggregate.json").write_text(json.dumps(agg,indent=2))
+          print(json.dumps(agg,indent=2))
+          PY
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/llama_server.pid ]; then
+            kill $(cat /tmp/llama_server.pid) || true
+          fi
+          tail -120 results/server.log > results/server_tail.log || true
+
+      - name: Upload REAL-DEEPSEEK-MOE-002
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-001-iq3s-baseline
+          name: real-deepseek-moe-002-drift-reentry
           path: results/
           retention-days: 7
