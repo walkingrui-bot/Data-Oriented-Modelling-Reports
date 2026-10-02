@@ -1,0 +1,215 @@
+name: robot-language-action-002
+
+on:
+  push:
+    branches:
+      - exp/robot-language-action-002
+  workflow_dispatch:
+
+jobs:
+  stop-gate-diagnostic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 110
+    steps:
+      - name: Runner info
+        run: |
+          mkdir -p results
+          uname -a | tee results/runner_info.txt
+          nproc | tee -a results/runner_info.txt
+          free -h | tee -a results/runner_info.txt
+
+      - name: Download llama.cpp
+        run: |
+          set -euxo pipefail
+          curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
+          mkdir -p /tmp/llama
+          tar -xzf /tmp/llama.tar.gz -C /tmp/llama
+          LLAMA_SERVER=$(find /tmp/llama -type f -name llama-server | head -1)
+          test -n "$LLAMA_SERVER"
+          chmod +x "$LLAMA_SERVER"
+          echo "LLAMA_SERVER=$LLAMA_SERVER" >> "$GITHUB_ENV"
+
+      - name: Download DeepSeekMoE-16B Chat IQ3_S
+        run: |
+          set -euxo pipefail
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ3_S.gguf?download=true"
+          echo "MODEL=$MODEL" >> "$GITHUB_ENV"
+          sha256sum "$MODEL" | tee results/model_sha256.txt
+
+      - name: Start server
+        run: |
+          set -euxo pipefail
+          "$LLAMA_SERVER" -m "$MODEL" -c 3072 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
+          echo $! > /tmp/llama_server.pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
+              cat /tmp/health.json
+              exit 0
+            fi
+            sleep 2
+          done
+          tail -200 results/server.log
+          exit 1
+
+      - name: Run STOP-gate one-step diagnostic
+        run: |
+          python3 - <<'PY'
+          import csv, json, re, time, urllib.request
+          from collections import Counter, deque
+          from pathlib import Path
+
+          OUT=Path("results"); OUT.mkdir(exist_ok=True)
+          N=6
+          DIRS=[(0,-1),(1,0),(0,1),(-1,0)]
+          DN=["north","east","south","west"]
+          ARROW=["^",">","v","<"]
+
+          worlds=json.loads(r'''[{"seed": 4101, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1]], "start": [5, 3, 1], "goal": [0, 0], "optimal_move_turn_steps": 10}, {"seed": 4102, "grid": [[0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [3, 5, 3], "goal": [1, 0], "optimal_move_turn_steps": 9}, {"seed": 4103, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0]], "start": [2, 4, 3], "goal": [4, 0], "optimal_move_turn_steps": 8}, {"seed": 4104, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [2, 0, 1], "goal": [0, 4], "optimal_move_turn_steps": 9}, {"seed": 4105, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0], [0, 1, 1, 0, 0, 0]], "start": [0, 4, 1], "goal": [2, 0], "optimal_move_turn_steps": 7}, {"seed": 4106, "grid": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [5, 2, 0], "goal": [4, 3], "optimal_move_turn_steps": 4}, {"seed": 4107, "grid": [[0, 1, 0, 0, 0, 1], [0, 1, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], "start": [2, 4, 0], "goal": [3, 5], "optimal_move_turn_steps": 4}, {"seed": 4108, "grid": [[0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0]], "start": [0, 4, 1], "goal": [4, 5], "optimal_move_turn_steps": 6}]''')
+
+          def blocked(grid,x,y,d):
+              dx,dy=DIRS[d]; nx,ny=x+dx,y+dy
+              return nx<0 or ny<0 or nx>=N or ny>=N or grid[ny][nx]==1
+
+          def step(grid,s,a):
+              x,y,d=s
+              if a=="LEFT": return (x,y,(d-1)%4)
+              if a=="RIGHT": return (x,y,(d+1)%4)
+              if a=="FORWARD":
+                  if blocked(grid,x,y,d): return None
+                  dx,dy=DIRS[d]; return (x+dx,y+dy,d)
+              return s
+
+          def oracle(grid,start,goal):
+              if tuple(start[:2])==tuple(goal): return "STOP"
+              q=deque([(tuple(start),None)])
+              seen={tuple(start)}
+              while q:
+                  s,first=q.popleft()
+                  for a in ("FORWARD","LEFT","RIGHT"):
+                      ns=step(grid,s,a)
+                      if ns is None: continue
+                      nf=a if first is None else first
+                      if ns[:2]==tuple(goal): return nf
+                      if ns not in seen:
+                          seen.add(ns); q.append((ns,nf))
+              return None
+
+          def map_text(grid,state,goal):
+              x,y,d=state; rows=[]
+              for yy in range(N):
+                  row=[]
+                  for xx in range(N):
+                      ch="#" if grid[yy][xx] else "."
+                      if (xx,yy)==tuple(goal): ch="G"
+                      if (xx,yy)==(x,y): ch=ARROW[d]
+                      row.append(ch)
+                  rows.append("".join(row))
+              return "\n".join(rows)
+
+          def sensor_text(grid,state):
+              x,y,d=state
+              pairs=[]
+              for name,dd in [("front",d),("left",(d-1)%4),("right",(d+1)%4),("back",(d+2)%4)]:
+                  pairs.append(f"{name}={'blocked' if blocked(grid,x,y,dd) else 'clear'}")
+              return "; ".join(pairs)
+
+          def request(prompt):
+              payload={
+                  "messages":[
+                      {"role":"system","content":"Act only as the requested robot motor selector. Output exactly one allowed symbol and no explanation."},
+                      {"role":"user","content":prompt},
+                  ],
+                  "temperature":0.0,"seed":1234,"max_tokens":8,"stream":False
+              }
+              req=urllib.request.Request("http://127.0.0.1:8080/v1/chat/completions",
+                  data=json.dumps(payload).encode(),headers={"Content-Type":"application/json"},method="POST")
+              t=time.time()
+              with urllib.request.urlopen(req,timeout=300) as r:
+                  obj=json.loads(r.read().decode())
+              return obj["choices"][0]["message"]["content"],time.time()-t
+
+          interfaces={
+              "open_words":{
+                  "options":"Allowed actions: FORWARD, LEFT, RIGHT, STOP. STOP IS ILLEGAL because you are not at the target.",
+                  "parse":{"FORWARD":"FORWARD","LEFT":"LEFT","RIGHT":"RIGHT","STOP":"STOP"},
+              },
+              "gated_words":{
+                  "options":"Allowed actions: FORWARD, LEFT, RIGHT. STOP is not available.",
+                  "parse":{"FORWARD":"FORWARD","LEFT":"LEFT","RIGHT":"RIGHT"},
+              },
+              "open_digits":{
+                  "options":"Allowed symbols: 1=FORWARD, 2=LEFT, 3=RIGHT, 4=STOP. Symbol 4 is ILLEGAL because you are not at the target.",
+                  "parse":{"1":"FORWARD","2":"LEFT","3":"RIGHT","4":"STOP"},
+              },
+              "gated_digits":{
+                  "options":"Allowed symbols: 1=FORWARD, 2=LEFT, 3=RIGHT. No other symbol is available.",
+                  "parse":{"1":"FORWARD","2":"LEFT","3":"RIGHT"},
+              },
+          }
+
+          rows=[]
+          for obs_mode in ("full_map","local_sensor"):
+              for w in worlds:
+                  grid=w["grid"]; state=tuple(w["start"]); goal=tuple(w["goal"])
+                  x,y,d=state; gx,gy=goal
+                  obs=("Full map (# obstacle, . empty, G goal, ^ > v < robot):\n"+map_text(grid,state,goal)) if obs_mode=="full_map" else ("Local sensors: "+sensor_text(grid,state))
+                  truth=oracle(grid,state,goal)
+                  for name,cfg in interfaces.items():
+                      prompt=(
+                          "Choose the best FIRST motor action to move toward the target. "
+                          "The robot has not moved yet. Do not solve by stopping.\n"
+                          f"position=({x},{y}); facing={DN[d]}; target=({gx},{gy}); target_delta=(dx={gx-x},dy={gy-y}).\n"
+                          +obs+"\n"+cfg["options"]+"\n"
+                          "Reply with exactly one allowed action/symbol."
+                      )
+                      try:
+                          raw,elapsed=request(prompt)
+                      except Exception as ex:
+                          raw=f"__ERROR__{ex!r}"; elapsed=0.0
+                      s=raw.strip().upper().rstrip(".!").strip()
+                      action=cfg["parse"].get(s)
+                      rows.append({
+                          "obs_mode":obs_mode,"seed":w["seed"],"interface":name,
+                          "oracle":truth,"raw":raw,"parsed_action":action or "",
+                          "valid":int(action is not None),"stop":int(action=="STOP"),
+                          "oracle_match":int(action==truth),"elapsed_s":round(elapsed,3)
+                      })
+                      print(obs_mode,w["seed"],name,"oracle",truth,"raw",repr(raw),"action",action,flush=True)
+
+          with open(OUT/"diagnostic.csv","w",newline="") as f:
+              wr=csv.DictWriter(f,fieldnames=rows[0].keys()); wr.writeheader(); wr.writerows(rows)
+
+          summary={}
+          for obs in ("full_map","local_sensor"):
+              summary[obs]={}
+              for name in interfaces:
+                  xs=[r for r in rows if r["obs_mode"]==obs and r["interface"]==name]
+                  dist=Counter(r["parsed_action"] or "INVALID" for r in xs)
+                  summary[obs][name]={
+                      "n":len(xs),
+                      "valid_rate":sum(r["valid"] for r in xs)/len(xs),
+                      "stop_rate":sum(r["stop"] for r in xs)/len(xs),
+                      "oracle_first_action_accuracy":sum(r["oracle_match"] for r in xs)/len(xs),
+                      "action_distribution":dict(dist),
+                  }
+          OUT.joinpath("summary.json").write_text(json.dumps(summary,indent=2))
+          OUT.joinpath("worlds.json").write_text(json.dumps(worlds,indent=2))
+          print("SUMMARY",json.dumps(summary,indent=2),flush=True)
+          PY
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/llama_server.pid ]; then
+            kill $(cat /tmp/llama_server.pid) || true
+          fi
+          tail -120 results/server.log > results/server_tail.log || true
+
+      - name: Upload ROBOT-LANGUAGE-ACTION-002
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-language-action-002
+          path: results/
+          retention-days: 7
