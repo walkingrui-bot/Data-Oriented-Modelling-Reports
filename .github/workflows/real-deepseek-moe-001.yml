@@ -1,4 +1,4 @@
-name: real-deepseek-moe-003
+name: real-deepseek-moe-004
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  forced-interrogative:
+  qa-microprotocol:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
@@ -56,7 +56,7 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Run forced interrogative re-entry
+      - name: Run Q-A microprotocol experiment
         run: |
           python3 - <<'PY'
           import json, csv, re, time, urllib.request, statistics
@@ -85,97 +85,97 @@ jobs:
               ("workers","Five workers each pack 14 boxes. How many boxes do they pack in total?","70","Five times fourteen is 65.")
           ]
 
-          modes = {
-              "clean": lambda p,w: (
-                  "Solve this problem carefully from the original information. Keep the reasoning concise. "
-                  "End with exactly one line of the form ANSWER: <answer>.\n\nProblem: " + p
-              ),
-              "drift_continue": lambda p,w: (
-                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
-                  "\nContinue from the checkpoint as the established intermediate result. "
-                  "Keep the reasoning concise. End with exactly one line of the form ANSWER: <answer>."
-              ),
-              "forced_decl": lambda p,w: (
-                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
-                  "\nCheck the checkpoint. Determine whether it is correct. Recompute the relevant step from the original problem before continuing. "
-                  "Keep the reasoning concise. End with exactly one line of the form ANSWER: <answer>."
-              ),
-              "forced_ask": lambda p,w: (
-                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
-                  "\nCheck the checkpoint. Is it correct? Recompute the relevant step from the original problem before continuing. "
-                  "Keep the reasoning concise. End with exactly one line of the form ANSWER: <answer>."
+          def clean_prompt(p,w):
+              return (
+                  "Solve the problem carefully from the original information. Keep the reasoning concise. "
+                  "End with exactly one line: ANSWER: <answer>.\n\nProblem: " + p
               )
-          }
+
+          def drift_prompt(p,w):
+              return (
+                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
+                  "\nContinue from this checkpoint as the established intermediate result. "
+                  "Keep the reasoning concise. End with exactly one line: ANSWER: <answer>."
+              )
+
+          def decl_prompt(p,w):
+              return (
+                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
+                  "\nUse this three-step verification protocol before giving the final answer:\n"
+                  "Step 1 — Checkpoint validity: determine whether the checkpoint is correct.\n"
+                  "Step 2 — Original relation: recompute the relation in the original problem that produced the checkpoint.\n"
+                  "Step 3 — Corrected state: state the corrected intermediate value or logical relation.\n"
+                  "Then solve the problem. Keep each step brief. End with exactly one line: ANSWER: <answer>."
+              )
+
+          def qa_prompt(p,w):
+              return (
+                  "Problem: " + p + "\nPrevious reasoning checkpoint: " + w +
+                  "\nUse this three-question verification protocol before giving the final answer:\n"
+                  "Q1: Is the checkpoint correct? Answer Q1 briefly.\n"
+                  "Q2: What original relation in the problem should be recomputed? Answer Q2 briefly.\n"
+                  "Q3: What is the corrected intermediate value or logical relation? Answer Q3 briefly.\n"
+                  "Then solve the problem. Keep each answer brief. End with exactly one line: ANSWER: <answer>."
+              )
+
+          modes={"clean":clean_prompt,"drift":drift_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
 
           def call_chat(content):
-              payload = json.dumps({
+              payload=json.dumps({
                   "messages":[
-                      {"role":"system","content":"You are a concise reasoning assistant. Follow the user's requested reasoning format and solve from the stated problem."},
+                      {"role":"system","content":"You are a concise reasoning assistant. Follow the requested protocol exactly and solve from the original problem."},
                       {"role":"user","content":content}
                   ],
                   "temperature":0.0,
                   "seed":1234,
-                  "max_tokens":128,
+                  "max_tokens":192,
                   "stream":False
               }).encode()
-              req=urllib.request.Request(
-                  "http://127.0.0.1:8080/v1/chat/completions",
-                  data=payload,
-                  headers={"Content-Type":"application/json"},
-                  method="POST"
-              )
+              req=urllib.request.Request("http://127.0.0.1:8080/v1/chat/completions",data=payload,headers={"Content-Type":"application/json"},method="POST")
               t0=time.time()
               with urllib.request.urlopen(req,timeout=300) as r:
                   obj=json.loads(r.read().decode())
-              text=obj["choices"][0]["message"]["content"]
-              return text,time.time()-t0,obj
+              return obj["choices"][0]["message"]["content"],time.time()-t0,obj
 
-          def answer_from_text(text):
+          def final_answer(text):
               m=re.findall(r"(?im)^\s*ANSWER:\s*(.+?)\s*$",text)
-              if m:
-                  return m[-1].strip()
-              m2=re.findall(r"(?im)(?:answer is|answer:|therefore,?)([^\n]+)",text)
-              return m2[-1].strip() if m2 else ""
+              return m[-1].strip() if m else ""
 
-          def is_correct(expected, observed, text):
-              target=expected.lower()
-              blob=(observed+" "+text[-180:]).lower()
-              if target=="no":
-                  return bool(re.search(r"\bno\b",blob))
-              nums=re.findall(r"-?\d+(?:\.\d+)?",blob)
-              return target in nums
+          def is_correct(expected, observed):
+              if not observed:
+                  return False
+              e=expected.strip().lower()
+              o=observed.strip().lower()
+              if e=="no":
+                  return bool(re.match(r"^no\b",o))
+              nums=re.findall(r"-?\d+(?:\.\d+)?",o)
+              return e in nums
 
-          outdir=Path("results/outputs")
-          outdir.mkdir(parents=True,exist_ok=True)
+          outdir=Path("results/outputs"); outdir.mkdir(parents=True,exist_ok=True)
           rows=[]
           for mode,maker in modes.items():
               for tid,problem,answer,wrong in tasks:
                   content=maker(problem,wrong)
                   try:
-                      text,elapsed,obj=call_chat(content)
-                      rc=0
+                      text,elapsed,obj=call_chat(content); rc=0
                   except Exception as ex:
                       text="ERROR: "+repr(ex); elapsed=0; obj={}; rc=1
-                  obs=answer_from_text(text)
-                  correct=is_correct(answer,obs,text)
-                  low=text.lower()
-                  rejects=any(s in low for s in [
-                      "incorrect","not correct","wrong","does not follow","doesn't follow",
-                      "recalculate","recompute","actually","should be"
-                  ])
+                  obs=final_answer(text)
+                  q_labels=sum(1 for x in ["Q1:","Q2:","Q3:"] if x.lower() in text.lower())
+                  a_labels=sum(1 for x in ["A1:","A2:","A3:"] if x.lower() in text.lower())
                   rows.append({
                       "id":tid,"mode":mode,"expected":answer,"wrong_checkpoint":wrong,
-                      "observed":obs,"correct":correct,
-                      "explicit_checkpoint_reject":rejects,
-                      "question_marks":text.count("?"),
+                      "observed":obs,"correct":is_correct(answer,obs),
+                      "question_marks_output":text.count("?"),
+                      "qa_question_labels_output":q_labels,
+                      "qa_answer_labels_output":a_labels,
                       "chars":len(text),"elapsed_s":round(elapsed,3),"return_code":rc
                   })
                   (outdir/(mode+"__"+tid+".txt")).write_text(
                       "MODE="+mode+"\nID="+tid+"\nEXPECTED="+answer+"\nWRONG="+wrong+
-                      "\nPROMPT="+content+"\n---OUTPUT---\n"+text+
-                      "\n---RAW_META---\n"+json.dumps(obj,indent=2)
+                      "\nPROMPT="+content+"\n---OUTPUT---\n"+text+"\n---RAW_META---\n"+json.dumps(obj,indent=2)
                   )
-                  print(mode,tid,"correct=",correct,"obs=",obs,"q=",text.count("?"),flush=True)
+                  print(mode,tid,"correct=",rows[-1]["correct"],"obs=",obs,flush=True)
 
           with open("results/summary.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
@@ -185,15 +185,14 @@ jobs:
           clean_ok={r["id"] for r in by["clean"] if r["correct"]}
           agg={}
           for mode,rr in by.items():
-              rr_cap=[r for r in rr if r["id"] in clean_ok]
+              cap=[r for r in rr if r["id"] in clean_ok]
               agg[mode]={
                   "n":len(rr),
                   "accuracy":sum(r["correct"] for r in rr)/len(rr),
-                  "clean_capable_n":len(rr_cap),
-                  "accuracy_on_clean_capable":(sum(r["correct"] for r in rr_cap)/len(rr_cap)) if rr_cap else None,
-                  "reject_rate":sum(r["explicit_checkpoint_reject"] for r in rr)/len(rr),
-                  "mean_question_marks":statistics.mean(r["question_marks"] for r in rr),
-                  "mean_chars":statistics.mean(r["chars"] for r in rr)
+                  "clean_capable_n":len(cap),
+                  "accuracy_on_clean_capable":sum(r["correct"] for r in cap)/len(cap) if cap else None,
+                  "mean_question_marks_output":statistics.mean(r["question_marks_output"] for r in rr),
+                  "mean_chars":statistics.mean(r["chars"] for r in rr),
               }
           Path("results/aggregate.json").write_text(json.dumps(agg,indent=2))
           print(json.dumps(agg,indent=2))
@@ -207,10 +206,10 @@ jobs:
           fi
           tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-003
+      - name: Upload REAL-DEEPSEEK-MOE-004
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-003-forced-interrogative
+          name: real-deepseek-moe-004-qa-microprotocol
           path: results/
           retention-days: 7
