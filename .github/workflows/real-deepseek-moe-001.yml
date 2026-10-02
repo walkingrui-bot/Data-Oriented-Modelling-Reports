@@ -1,4 +1,4 @@
-name: real-deepseek-moe-007
+name: real-deepseek-moe-008
 
 on:
   push:
@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  two-step-continuation-signature:
+  passive-trajectory-readout:
     runs-on: ubuntu-24.04
-    timeout-minutes: 70
+    timeout-minutes: 110
     steps:
       - name: Runner info
         run: |
@@ -40,7 +40,7 @@ jobs:
       - name: Start server
         run: |
           set -euxo pipefail
-          "$LLAMA_SERVER" -m "$MODEL" -c 1536 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
+          "$LLAMA_SERVER" -m "$MODEL" -c 2048 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 > results/server.log 2>&1 &
           echo $! > /tmp/llama_server.pid
           for i in $(seq 1 120); do
             if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
@@ -52,108 +52,231 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Generate two-step continuation signatures
+      - name: Collect passive natural trajectories
         run: |
           python3 - <<'PY'
-          import json, csv, re, time, urllib.request
+          import json, csv, re, time, urllib.request, urllib.error, math
           from pathlib import Path
 
           tasks=[]
-          for i,(a,b) in enumerate([(13,17),(16,19),(21,14),(24,18),(27,13)]):
-              ans=a*b; wrong=ans-(2+i)
+
+          # 8 families x 12 instances = 96 states.
+          for i in range(12):
+              a=12+i
+              b=13+((3*i)%11)
+              ans=a*b
+              wrong=ans-(2+(i%4))
               tasks.append((f"mul_{i}","mul",f"A warehouse has {a} shelves with {b} boxes on each shelf. How many boxes are there in total?",str(ans),f"{a} × {b} = {wrong}."))
-          for i,(s,a,b) in enumerate([(30,11,7),(42,9,5),(25,14,6),(36,8,13),(50,12,9)]):
-              mid=s+a; ans=mid-b
-              tasks.append((f"twostep_{i}","twostep",f"Start with {s}. Add {a}, then subtract {b}. What number do you get?",str(ans),f"After adding {a}, the running value is {mid-1}."))
-          for i,(x,c,k) in enumerate([(8,5,3),(11,4,2),(7,9,4),(13,6,3),(9,8,5)]):
-              d=x+c; ans=k*x
+
+          for i in range(12):
+              s=24+3*i; add=7+(i%8); sub=4+((2*i)%7)
+              mid=s+add; ans=mid-sub
+              tasks.append((f"twostep_{i}","twostep",f"Start with {s}. Add {add}, then subtract {sub}. What number do you get?",str(ans),f"After adding {add}, the running value is {mid-1}."))
+
+          for i in range(12):
+              x=6+i; c=4+(i%7); k=2+(i%4); d=x+c; ans=k*x
               tasks.append((f"algebra_{i}","algebra",f"A number plus {c} equals {d}. What is {k} times that number?",str(ans),f"The number is {x+1}."))
-          for i,(n,add) in enumerate([(80,10),(120,15),(64,8),(100,5),(160,20)]):
-              ans=int(n*0.75+add); wrong=int(n*0.75-5)
+
+          for i in range(12):
+              n=64+8*i; add=5+(i%10); ans=int(n*0.75+add)
+              wrong=int(n*0.75-5-(i%3))
               tasks.append((f"percent_{i}","percent",f"A tank starts with {n} liters. Twenty-five percent is used, then {add} liters are added. How many liters are in the tank now?",str(ans),f"After using twenty-five percent, {wrong} liters remain."))
-          for i,(a,b,c) in enumerate([(14,9,5),(18,7,4),(20,6,8),(11,13,3),(25,5,7)]):
-              bob=a+b; ans=bob-c
-              tasks.append((f"compare_{i}","compare",f"Alice has {a} marbles. Bob has {b} more than Alice. Chen has {c} fewer than Bob. How many marbles does Chen have?",str(ans),f"Bob has {bob-1} marbles."))
-          for i,(l,w) in enumerate([(9,7),(12,5),(8,6),(14,4),(11,9)]):
-              ans=2*(l+w)
-              tasks.append((f"perim_{i}","perim",f"A rectangle has length {l} and width {w}. What is its perimeter?",str(ans),f"The sum of length and width is {l+w-1}, so the perimeter is {2*(l+w-1)}."))
-          for i,(n,e,extra) in enumerate([(4,15,7),(6,12,5),(5,18,4),(7,11,9),(3,24,6)]):
-              prod=n*e; ans=prod+extra
-              tasks.append((f"pack_{i}","pack",f"{n} packets contain {e} items each, and then {extra} extra items are added. How many items are there?",str(ans),f"{n} packets contain {prod-4} items in total."))
-          logic_sets=[("zargs","melps","nords"),("flims","daxes","vorps"),("taves","lunds","keps"),("marns","sopes","rids"),("quels","bims","naks")]
-          for i,(a,b,c) in enumerate(logic_sets):
+
+          for i in range(12):
+              a=11+i; more=5+(i%9); fewer=3+((2*i)%6)
+              bob=a+more; ans=bob-fewer
+              tasks.append((f"compare_{i}","compare",f"Alice has {a} marbles. Bob has {more} more than Alice. Chen has {fewer} fewer than Bob. How many marbles does Chen have?",str(ans),f"Bob has {bob-1} marbles."))
+
+          for i in range(12):
+              l=7+i; w=4+(i%7); ans=2*(l+w)
+              wrongsum=l+w-1
+              tasks.append((f"perim_{i}","perim",f"A rectangle has length {l} and width {w}. What is its perimeter?",str(ans),f"The sum of length and width is {wrongsum}, so the perimeter is {2*wrongsum}."))
+
+          for i in range(12):
+              tables=4+(i%6); seats=6+(i%5); empty=3+(i%8)
+              total=tables*seats; ans=total-empty
+              wrong_total=total-(2+(i%3))
+              tasks.append((f"seats_{i}","seats",f"There are {tables} tables with {seats} seats at each table. If {empty} seats are empty, how many seats are occupied?",str(ans),f"There are {wrong_total} seats before subtracting the empty seats."))
+
+          logic_words=[
+              ("zargs","melps","nords"),("flims","daxes","vorps"),("taves","lunds","keps"),
+              ("marns","sopes","rids"),("quels","bims","naks"),("pells","vards","toks"),
+              ("sarns","gells","mips"),("naves","ruks","dols"),("wels","farns","pivs"),
+              ("kels","jors","vems"),("harns","lops","sivs"),("dars","peks","mols")
+          ]
+          for i,(a,b,c) in enumerate(logic_words):
               tasks.append((f"logic_{i}","logic",f"All {a} are {b}. No {b} are {c}. Can any {a} be a {c}?","No",f"A {a[:-1]} can still be a {c[:-1]}."))
 
-          protocols = {
-              "local": lambda p,w: (
-                  "Problem: "+p+"\nWrong checkpoint: "+w+
-                  "\nCandidate rescue action: LOCAL. First recompute only the relation that produced the checkpoint. "
-                  "Then take exactly one additional reasoning step toward the final solution using the corrected state. "
-                  "Do not finish the whole problem unless that single next step necessarily is the final operation. "
-                  "Output exactly two lines:\nSTATE: <corrected local relation or value>\nNEXT: <one immediate next reasoning step>."
-              ),
-              "decl3": lambda p,w: (
-                  "Problem: "+p+"\nWrong checkpoint: "+w+
-                  "\nCandidate rescue action: DECL3. Use the declarative verification sequence to reconstruct the corrected state, "
-                  "then take exactly one additional declarative reasoning step toward the final solution. "
-                  "Do not continue beyond that one next step. "
-                  "Output exactly two lines:\nSTATE: <corrected local relation or value>\nNEXT: <one immediate next reasoning step>."
-              ),
-              "qa3": lambda p,w: (
-                  "Problem: "+p+"\nWrong checkpoint: "+w+
-                  "\nCandidate rescue action: QA3. Use Q1/Q2/Q3 internally to reconstruct the corrected state, "
-                  "then take exactly one additional Q/A-style reasoning step toward the final solution. "
-                  "Do not continue beyond that one next step. "
-                  "Output exactly two lines:\nSTATE: <corrected local relation or value>\nNEXT: <one immediate next reasoning step>."
-              ),
-          }
+          def clean_prompt(problem):
+              return (
+                  "Solve the problem carefully and naturally from the original information. "
+                  "Reason however you normally would. At the very end, write exactly one line: ANSWER: <answer>.\n\nProblem: "+problem
+              )
 
-          def call_chat(content):
-              payload=json.dumps({
+          def local_prompt(problem,wrong):
+              return (
+                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
+                  "\nThe checkpoint may be wrong. Recompute the original relation that produced it, then continue solving naturally. "
+                  "At the very end, write exactly one line: ANSWER: <answer>."
+              )
+
+          def decl_prompt(problem,wrong):
+              return (
+                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
+                  "\nVerify the checkpoint, recompute the original relation that produced it, correct the intermediate state if needed, "
+                  "then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
+              )
+
+          def qa_prompt(problem,wrong):
+              return (
+                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
+                  "\nAsk yourself whether the checkpoint is correct, identify what original relation must be recomputed, correct the state if needed, "
+                  "then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
+              )
+
+          prompts={"clean":lambda p,w:clean_prompt(p),"local":local_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
+
+          def request_chat(content, want_logprobs):
+              payload={
                   "messages":[
-                      {"role":"system","content":"You are a concise reasoning controller. Perform exactly the requested two-step probe and stop."},
+                      {"role":"system","content":"You are a concise reasoning assistant. Solve the user's problem accurately."},
                       {"role":"user","content":content}
                   ],
                   "temperature":0.0,
                   "seed":1234,
-                  "max_tokens":72,
+                  "max_tokens":160,
                   "stream":False
-              }).encode()
+              }
+              if want_logprobs:
+                  payload["logprobs"]=True
+                  payload["top_logprobs"]=5
+              data=json.dumps(payload).encode()
               req=urllib.request.Request(
                   "http://127.0.0.1:8080/v1/chat/completions",
-                  data=payload,
+                  data=data,
                   headers={"Content-Type":"application/json"},
                   method="POST"
               )
               t0=time.time()
               with urllib.request.urlopen(req,timeout=300) as r:
                   obj=json.loads(r.read().decode())
-              return obj["choices"][0]["message"]["content"], time.time()-t0
+              return obj,time.time()-t0
 
-          outdir=Path("results/signatures"); outdir.mkdir(parents=True,exist_ok=True)
-          rows=[]
-          for tid,fam,problem,expected,wrong in tasks:
-              for action,maker in protocols.items():
-                  text,elapsed=call_chat(maker(problem,wrong))
-                  sm=re.findall(r"(?im)^\s*STATE:\s*(.+?)\s*$",text)
-                  nm=re.findall(r"(?im)^\s*NEXT:\s*(.+?)\s*$",text)
-                  state=sm[-1].strip() if sm else ""
-                  nxt=nm[-1].strip() if nm else ""
-                  rows.append({
-                      "id":tid,"family":fam,"action":action,"expected":expected,
-                      "wrong_checkpoint":wrong,
-                      "state":state,"next":nxt,
-                      "state_present":int(bool(state)),
-                      "next_present":int(bool(nxt)),
-                      "raw_text":text.replace("\n","\\n"),
-                      "chars":len(text),"elapsed_s":round(elapsed,3)
+          # Capability detection: never let telemetry failure kill inference.
+          logprobs_supported=False
+          capability_error=None
+          try:
+              obj,_=request_chat("Reply with ANSWER: 2 for 1+1.",True)
+              lp=obj.get("choices",[{}])[0].get("logprobs")
+              logprobs_supported=bool(lp)
+          except Exception as ex:
+              capability_error=repr(ex)
+          Path("results/telemetry_capability.json").write_text(json.dumps({
+              "logprobs_supported":logprobs_supported,
+              "capability_error":capability_error
+          },indent=2))
+          print("logprobs_supported",logprobs_supported,capability_error,flush=True)
+
+          def final_answer(text):
+              m=re.findall(r"(?im)^\s*ANSWER:\s*(.+?)\s*$",text)
+              return m[-1].strip() if m else ""
+
+          def correct(expected, observed):
+              if not observed:
+                  return False
+              e=expected.strip().lower()
+              o=observed.strip().lower()
+              if e=="no":
+                  return bool(re.match(r"^no\b",o))
+              nums=re.findall(r"-?\d+(?:\.\d+)?",o)
+              return e in nums
+
+          def token_stats(choice):
+              lp=choice.get("logprobs")
+              if not lp:
+                  return {},[]
+              content=lp.get("content") or []
+              chosen=[]
+              entropy=[]
+              margins=[]
+              toks=[]
+              for item in content:
+                  tok=item.get("token","")
+                  l=item.get("logprob")
+                  if isinstance(l,(int,float)):
+                      chosen.append(float(l))
+                  tops=item.get("top_logprobs") or []
+                  vals=[float(x.get("logprob")) for x in tops if isinstance(x.get("logprob"),(int,float))]
+                  if vals:
+                      probs=[math.exp(v) for v in vals]
+                      residual=max(0.0,1.0-sum(probs))
+                      h=-sum(p*math.log(max(p,1e-12)) for p in probs)
+                      if residual>0:
+                          h-=residual*math.log(max(residual,1e-12))
+                      entropy.append(h)
+                      sv=sorted(vals,reverse=True)
+                      if len(sv)>=2:
+                          margins.append(sv[0]-sv[1])
+                  toks.append({
+                      "token":tok,
+                      "logprob":l,
+                      "top_logprobs":tops
                   })
-                  (outdir/f"{action}__{tid}.txt").write_text(text)
-                  print(action,tid,"STATE=",state[:60],"NEXT=",nxt[:60],flush=True)
+              stats={
+                  "n_tokens":len(content),
+                  "mean_logprob":sum(chosen)/len(chosen) if chosen else None,
+                  "min_logprob":min(chosen) if chosen else None,
+                  "mean_entropy_top5":sum(entropy)/len(entropy) if entropy else None,
+                  "mean_top1_top2_logprob_margin":sum(margins)/len(margins) if margins else None,
+              }
+              for n in [8,16,32,64]:
+                  xs=chosen[:n]
+                  stats[f"mean_logprob_first_{n}"]=sum(xs)/len(xs) if xs else None
+                  hs=entropy[:n]
+                  stats[f"mean_entropy_first_{n}"]=sum(hs)/len(hs) if hs else None
+                  ms=margins[:n]
+                  stats[f"mean_margin_first_{n}"]=sum(ms)/len(ms) if ms else None
+              return stats,toks
 
-          with open("results/two_step_signatures.csv","w",newline="") as f:
+          outdir=Path("results/trajectories"); outdir.mkdir(parents=True,exist_ok=True)
+          rows=[]
+          token_records=[]
+          for tid,fam,problem,expected,wrong in tasks:
+              for mode,maker in prompts.items():
+                  content=maker(problem,wrong)
+                  try:
+                      obj,elapsed=request_chat(content,logprobs_supported)
+                  except Exception as ex:
+                      # Retry without telemetry if one response path rejects logprobs.
+                      obj,elapsed=request_chat(content,False)
+                  choice=obj["choices"][0]
+                  text=choice["message"]["content"]
+                  observed=final_answer(text)
+                  ok=correct(expected,observed)
+                  stats,toks=token_stats(choice)
+                  row={
+                      "id":tid,"family":fam,"mode":mode,"expected":expected,
+                      "wrong_checkpoint":wrong,"observed":observed,"correct":int(ok),
+                      "chars":len(text),"elapsed_s":round(elapsed,3),
+                      "prefix16":text[:16].replace("\n","\\n"),
+                      "prefix32":text[:32].replace("\n","\\n"),
+                      "prefix64":text[:64].replace("\n","\\n"),
+                      "prefix128":text[:128].replace("\n","\\n"),
+                      "prefix256":text[:256].replace("\n","\\n"),
+                      **stats
+                  }
+                  rows.append(row)
+                  token_records.append({"id":tid,"family":fam,"mode":mode,"tokens":toks})
+                  (outdir/f"{mode}__{tid}.txt").write_text(text)
+                  print(mode,tid,"ok=",ok,"ans=",observed[:40],"tokens=",stats.get("n_tokens"),flush=True)
+
+          with open("results/trajectories.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-          Path("results/two_step_signatures.json").write_text(json.dumps(rows,indent=2))
+          Path("results/token_logprobs.json").write_text(json.dumps(token_records))
+          Path("results/task_manifest.json").write_text(json.dumps([
+              {"id":tid,"family":fam,"problem":p,"expected":e,"wrong_checkpoint":w}
+              for tid,fam,p,e,w in tasks
+          ],indent=2))
           PY
 
       - name: Stop server
@@ -164,10 +287,10 @@ jobs:
           fi
           tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-007
+      - name: Upload REAL-DEEPSEEK-MOE-008
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-007-two-step-continuation-signatures
+          name: real-deepseek-moe-008-passive-trajectory-readout
           path: results/
           retention-days: 7
