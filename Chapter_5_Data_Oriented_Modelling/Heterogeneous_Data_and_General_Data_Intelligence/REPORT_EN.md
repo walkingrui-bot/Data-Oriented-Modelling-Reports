@@ -3977,3 +3977,22 @@ The recurring result is that a model's input format does not determine the struc
 Data-oriented modelling turns those differences into explicit design variables. It preserves predictive information, assigns capacity where the measured response requires it, and evaluates both prediction and state continuity under changes in observation or computational resources.
 
 General data intelligence is developed here as a disciplined way to connect the structure of data with the organization and evaluation of computation.
+
+## Later evidence update — 2 October 2026
+
+**Evidence status: shared-state interpretation advanced by multi-source coordination experiments.**
+
+The original report argues that heterogeneous sources should retain their native structure and that a common modelling framework should compare representations through the future consequences they distinguish. Later INTERNAL-COORDINATION experiments make this proposal more specific.
+
+The new experiments use several local observers whose native formats and learned mechanisms remain separate. Coordination is imposed through compatibility of predicted consequences rather than through raw-modality concatenation or direct supervision of a common latent code. Under intact world correspondence, 30 directed cross-view retrieval tests recover the matching world in all 30 cases. Destroying world correspondence removes that executable equivalence.
+
+The temporal controls further separate two symmetries. Permuting the order of six observations that belong to the same time slice changes the coordinated output only at numerical precision (approximately 2.4 × 10⁻⁸), whereas reversing the real chronology increases pinball loss from 0.0557 to 0.0733 and moves the learned coordinated state. Presentation order within one simultaneous observation set is therefore treated as nuisance order; chronology remains part of the generating structure.
+
+The current architecture is consequently more specific than a generic shared embedding:
+
+**native/local mechanisms → consequence-compatible coordination → shared world/reality state**
+
+A shared state is justified when it supports mutually compatible consequences across observers. It is not defined by forcing heterogeneous measurements into one common raw representation.
+
+This update advances the proposed cross-modal test in Section 4.4 and preserves the original experiments on observability, routing, native structure and distributed coordination. See [Evidence Supersession Audit — 2026-10-02](../../EVIDENCE_SUPERSESSION_AUDIT_20261002.md).
+
