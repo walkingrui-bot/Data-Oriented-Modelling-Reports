@@ -1,0 +1,374 @@
+name: robot-language-action-006
+
+on:
+  push:
+    branches:
+      - exp/robot-language-action-006
+  workflow_dispatch:
+
+jobs:
+  canonical-state-motor-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 110
+
+    steps:
+      - name: Runner info
+        run: |
+          mkdir -p results
+          uname -a | tee results/runner_info.txt
+          nproc | tee -a results/runner_info.txt
+          free -h | tee -a results/runner_info.txt
+
+      - name: Download llama.cpp
+        run: |
+          set -euxo pipefail
+          curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
+          mkdir -p /tmp/llama
+          tar -xzf /tmp/llama.tar.gz -C /tmp/llama
+          LLAMA_SERVER=$(find /tmp/llama -type f -name llama-server | head -1)
+          test -n "$LLAMA_SERVER"
+          chmod +x "$LLAMA_SERVER"
+          echo "LLAMA_SERVER=$LLAMA_SERVER" >> "$GITHUB_ENV"
+
+      - name: Download DeepSeekMoE-16B Chat IQ3_S
+        run: |
+          set -euxo pipefail
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ3_S.gguf?download=true"
+          echo "MODEL=$MODEL" >> "$GITHUB_ENV"
+          sha256sum "$MODEL" | tee results/model_sha256.txt
+
+      - name: Start embedding server
+        run: |
+          set -euxo pipefail
+          "$LLAMA_SERVER" -m "$MODEL" -c 2048 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 --embedding --pooling mean > results/server.log 2>&1 &
+          echo $! > /tmp/llama_server.pid
+          for i in $(seq 1 120); do
+            if curl -fsS http://127.0.0.1:8080/health >/tmp/health.json 2>/dev/null; then
+              cat /tmp/health.json
+              exit 0
+            fi
+            sleep 2
+          done
+          tail -200 results/server.log
+          exit 1
+
+      - name: Run world-heldout canonical-state motor experiment
+        run: |
+          python3 -m pip install --quiet numpy scikit-learn
+          python3 - <<'PY'
+          import csv, json, random, time, urllib.request
+          from collections import Counter, deque
+          from pathlib import Path
+          import numpy as np
+          from sklearn.linear_model import LogisticRegression
+          from sklearn.ensemble import RandomForestClassifier
+          from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
+          from sklearn.pipeline import make_pipeline
+          from sklearn.preprocessing import StandardScaler
+
+          OUT=Path("results"); OUT.mkdir(exist_ok=True)
+          N=6
+          DIRS=[(0,-1),(1,0),(0,1),(-1,0)]
+          DN=["north","east","south","west"]
+          ARROW=["^",">","v","<"]
+          CLASSES=["FORWARD","LEFT","RIGHT"]
+
+          def blocked(grid,x,y,d):
+              dx,dy=DIRS[d]
+              nx,ny=x+dx,y+dy
+              return nx<0 or ny<0 or nx>=N or ny>=N or grid[ny][nx]==1
+
+          def apply(grid,state,a):
+              x,y,d=state
+              if a=="LEFT": return (x,y,(d-1)%4),False
+              if a=="RIGHT": return (x,y,(d+1)%4),False
+              if a=="FORWARD":
+                  if blocked(grid,x,y,d): return state,True
+                  dx,dy=DIRS[d]
+                  return (x+dx,y+dy,d),False
+              return state,False
+
+          def oracle(grid,start,goal):
+              start=tuple(start); goal=tuple(goal)
+              if start[:2]==goal: return "STOP",0
+              q=deque([(start,0,None)])
+              seen={start}
+              while q:
+                  s,dist,first=q.popleft()
+                  for a in CLASSES:
+                      ns,col=apply(grid,s,a)
+                      if col: continue
+                      nf=a if first is None else first
+                      if ns[:2]==goal: return nf,dist+1
+                      if ns not in seen:
+                          seen.add(ns)
+                          q.append((ns,dist+1,nf))
+              return None,None
+
+          def make_world(seed,p=.15):
+              r=random.Random(seed)
+              while True:
+                  grid=[[1 if r.random()<p else 0 for _ in range(N)] for _ in range(N)]
+                  gx,gy=r.randrange(N),r.randrange(N)
+                  grid[gy][gx]=0
+                  reachable=0
+                  for y in range(N):
+                      for x in range(N):
+                          if grid[y][x]: continue
+                          a,L=oracle(grid,(x,y,0),(gx,gy))
+                          if a is not None: reachable+=1
+                  if reachable>=24:
+                      return {"seed":seed,"grid":grid,"goal":(gx,gy)}
+
+          def map_text(grid,state,goal):
+              x,y,d=state
+              rows=[]
+              for yy in range(N):
+                  row=[]
+                  for xx in range(N):
+                      ch="#" if grid[yy][xx] else "."
+                      if (xx,yy)==goal: ch="G"
+                      if (xx,yy)==(x,y): ch=ARROW[d]
+                      row.append(ch)
+                  rows.append("".join(row))
+              return "\n".join(rows)
+
+          def canonical_prompt(grid,state,goal):
+              x,y,d=state; gx,gy=goal
+              return (
+                  "Robot motor-state observation. Choose between three possible motor transitions: "
+                  "FORWARD moves one free cell in the facing direction; LEFT and RIGHT rotate 90 degrees in place. "
+                  "The target is the desired future cell. Coordinates: x increases right and y increases down.\n"
+                  f"position=({x},{y}); facing={DN[d]}; target=({gx},{gy}); "
+                  f"target_delta=(dx={gx-x},dy={gy-y}).\n"
+                  "Map (# obstacle, . empty, G goal, robot arrow shows orientation):\n"
+                  +map_text(grid,state,goal)+"\n"
+                  "Motor-state representation:"
+              )
+
+          def structured_features(grid,state,goal):
+              x,y,d=state; gx,gy=goal
+              feat=[]
+              feat.extend(float(v) for row in grid for v in row)
+              pos=[0.0]*(N*N); pos[y*N+x]=1.0; feat.extend(pos)
+              go=[0.0]*(N*N); go[gy*N+gx]=1.0; feat.extend(go)
+              feat.extend([1.0 if d==k else 0.0 for k in range(4)])
+              feat.extend([(gx-x)/(N-1),(gy-y)/(N-1)])
+              feat.extend([float(blocked(grid,x,y,k)) for k in range(4)])
+              return np.asarray(feat,dtype=np.float32)
+
+          def get_embedding(text,retries=3):
+              payload=json.dumps({"content":text}).encode()
+              err=None
+              for _ in range(retries):
+                  try:
+                      req=urllib.request.Request(
+                          "http://127.0.0.1:8080/embedding",
+                          data=payload,
+                          headers={"Content-Type":"application/json"},
+                          method="POST")
+                      with urllib.request.urlopen(req,timeout=300) as r:
+                          obj=json.loads(r.read().decode())
+                      emb=obj[0]["embedding"]
+                      if emb and isinstance(emb[0],list): emb=emb[-1]
+                      return np.asarray(emb,dtype=np.float32)
+                  except Exception as ex:
+                      err=ex; time.sleep(1)
+              raise RuntimeError(repr(err))
+
+          smoke=get_embedding("robot state")
+          OUT.joinpath("embedding_smoke.json").write_text(json.dumps(
+              {"dim":int(smoke.shape[0]),"norm":float(np.linalg.norm(smoke))},indent=2))
+
+          train_worlds=[make_world(s) for s in range(15000,15018)]
+          test_worlds=[make_world(s) for s in range(16000,16008)]
+
+          def enumerate_states(worlds):
+              rows=[]
+              for wi,w in enumerate(worlds):
+                  grid=w["grid"]; goal=w["goal"]
+                  for y in range(N):
+                      for x in range(N):
+                          if grid[y][x] or (x,y)==goal: continue
+                          for d in range(4):
+                              a,L=oracle(grid,(x,y,d),goal)
+                              if a in CLASSES and L is not None:
+                                  rows.append((wi,w,(x,y,d),a,L))
+              return rows
+
+          def balanced_sample(rows,n_per_class,seed):
+              rng=random.Random(seed)
+              by={c:[] for c in CLASSES}
+              for r in rows: by[r[3]].append(r)
+              out=[]
+              for c in CLASSES:
+                  rng.shuffle(by[c])
+                  if len(by[c])<n_per_class:
+                      raise RuntimeError(f"insufficient {c}: {len(by[c])}")
+                  out.extend(by[c][:n_per_class])
+              rng.shuffle(out)
+              return out
+
+          train_rows=balanced_sample(enumerate_states(train_worlds),120,1) # 360
+          test_rows=balanced_sample(enumerate_states(test_worlds),40,2)    # 120
+
+          def featurize(rows,label):
+              Xe=[]; Xs=[]; y=[]; meta=[]
+              for i,(wi,w,state,a,L) in enumerate(rows):
+                  Xe.append(get_embedding(canonical_prompt(w["grid"],state,w["goal"])))
+                  Xs.append(structured_features(w["grid"],state,w["goal"]))
+                  y.append(a)
+                  meta.append({
+                      "split":label,"world_seed":w["seed"],"world_index":wi,
+                      "state":list(state),"goal":list(w["goal"]),"oracle":a,"optimal_len":L
+                  })
+                  if (i+1)%20==0: print(label,i+1,"/",len(rows),flush=True)
+              return np.vstack(Xe),np.vstack(Xs),np.asarray(y),meta
+
+          Xe_tr,Xs_tr,y_tr,mtr=featurize(train_rows,"train")
+          Xe_te,Xs_te,y_te,mte=featurize(test_rows,"test")
+          np.savez_compressed(OUT/"cached_features.npz",
+              Xe_train=Xe_tr,Xs_train=Xs_tr,y_train=y_tr,
+              Xe_test=Xe_te,Xs_test=Xs_te,y_test=y_te)
+
+          emb_head=make_pipeline(
+              StandardScaler(),
+              LogisticRegression(max_iter=3000,class_weight="balanced",C=1.0)
+          )
+          raw_rf=RandomForestClassifier(
+              n_estimators=400,max_depth=14,min_samples_leaf=2,
+              class_weight="balanced",random_state=0,n_jobs=-1
+          )
+          emb_head.fit(Xe_tr,y_tr)
+          raw_rf.fit(Xs_tr,y_tr)
+
+          pe=emb_head.predict(Xe_te)
+          pr=raw_rf.predict(Xs_te)
+          majority=Counter(y_tr).most_common(1)[0][0]
+          pm=np.asarray([majority]*len(y_te))
+
+          def met(y,p):
+              return {
+                  "accuracy":float(accuracy_score(y,p)),
+                  "macro_f1":float(f1_score(y,p,average="macro")),
+                  "confusion_matrix":confusion_matrix(y,p,labels=CLASSES).tolist()
+              }
+
+          summary={
+              "model":"DeepSeekMoE-16B-Chat IQ3_S",
+              "representation":"frozen mean-pooled hidden state, language logits bypassed",
+              "protocol":"world-heldout; canonical current-state prompt at train and rollout",
+              "train_worlds":[w["seed"] for w in train_worlds],
+              "test_worlds":[w["seed"] for w in test_worlds],
+              "train_n":len(y_tr),"test_n":len(y_te),
+              "heldout":{
+                  "deepseek_embedding_linear_head":met(y_te,pe),
+                  "structured_map_random_forest":met(y_te,pr),
+                  "majority_baseline":met(y_te,pm)
+              }
+          }
+
+          pred=[]
+          for m,t,a,b in zip(mte,y_te,pe,pr):
+              pred.append({**m,"embedding_head":a,"structured_rf":b,
+                           "embedding_correct":int(a==t),"structured_correct":int(b==t)})
+          with open(OUT/"heldout_predictions.csv","w",newline="") as f:
+              wr=csv.DictWriter(f,fieldnames=pred[0].keys()); wr.writeheader(); wr.writerows(pred)
+
+          # Closed loop on completely new worlds using EXACTLY the same canonical state prompt.
+          rollout_worlds=[make_world(s) for s in range(17000,17012)]
+          episodes=[]; traces=[]
+          for controller,head in [("embedding",emb_head),("structured_rf",raw_rf)]:
+              for w in rollout_worlds:
+                  grid=w["grid"]; goal=w["goal"]
+                  # choose deterministic non-goal start with path length 5..10
+                  candidates=[]
+                  for y in range(N):
+                      for x in range(N):
+                          if grid[y][x] or (x,y)==goal: continue
+                          for d in range(4):
+                              a,L=oracle(grid,(x,y,d),goal)
+                              if a in CLASSES and 5<=L<=10:
+                                  candidates.append(((x,y,d),L))
+                  rng=random.Random(w["seed"]+33)
+                  state,opt=rng.choice(candidates)
+                  start=state
+                  start_dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                  best_dist=start_dist; collisions=0; success=False; actions=[]
+
+                  for step_i in range(24):
+                      if state[:2]==goal:
+                          success=True; actions.append("STOP")
+                          traces.append({"controller":controller,"world_seed":w["seed"],"step":step_i,
+                                         "state":list(state),"goal":list(goal),"action":"STOP",
+                                         "oracle":"STOP","event":"stopped_on_goal"})
+                          break
+                      oa,_=oracle(grid,state,goal)
+                      if controller=="embedding":
+                          x=get_embedding(canonical_prompt(grid,state,goal))[None,:]
+                      else:
+                          x=structured_features(grid,state,goal)[None,:]
+                      a=head.predict(x)[0]
+                      before=state
+                      state,col=apply(grid,state,a)
+                      collisions+=int(col)
+                      event="collision_blocked" if col else ("moved_forward" if a=="FORWARD" else ("turned_left" if a=="LEFT" else "turned_right"))
+                      dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                      best_dist=min(best_dist,dist)
+                      actions.append(a)
+                      traces.append({"controller":controller,"world_seed":w["seed"],"step":step_i,
+                                     "state_before":list(before),"state_after":list(state),"goal":list(goal),
+                                     "action":a,"oracle":oa,"event":event,"distance":dist})
+
+                  final_dist=abs(goal[0]-state[0])+abs(goal[1]-state[1])
+                  episodes.append({
+                      "controller":controller,"world_seed":w["seed"],"success":int(success),
+                      "steps":len(actions),"start":list(start),"goal":list(goal),"final_state":list(state),
+                      "optimal_len":opt,"start_distance":start_dist,"best_distance":best_dist,
+                      "final_distance":final_dist,"distance_reduction":start_dist-final_dist,
+                      "collisions":collisions,"action_trace":"|".join(actions)
+                  })
+
+          with open(OUT/"closed_loop_episodes.csv","w",newline="") as f:
+              wr=csv.DictWriter(f,fieldnames=episodes[0].keys()); wr.writeheader(); wr.writerows(episodes)
+          with open(OUT/"closed_loop_traces.jsonl","w") as f:
+              for r in traces: f.write(json.dumps(r)+"\n")
+
+          for ctrl in ("embedding","structured_rf"):
+              xs=[e for e in episodes if e["controller"]==ctrl]
+              ts=[r for r in traces if r["controller"]==ctrl and r["action"]!="STOP"]
+              summary.setdefault("closed_loop",{})[ctrl]={
+                  "episodes":len(xs),
+                  "successes":sum(e["success"] for e in xs),
+                  "success_rate":sum(e["success"] for e in xs)/len(xs),
+                  "episodes_improving_distance":sum(e["best_distance"]<e["start_distance"] for e in xs),
+                  "mean_distance_reduction":float(np.mean([e["distance_reduction"] for e in xs])),
+                  "mean_final_distance":float(np.mean([e["final_distance"] for e in xs])),
+                  "collision_rate_per_step":sum(e["collisions"] for e in xs)/max(len(ts),1),
+                  "oracle_action_agreement":sum(r["action"]==r["oracle"] for r in ts)/max(len(ts),1),
+                  "action_distribution":dict(Counter(r["action"] for r in ts))
+              }
+
+          OUT.joinpath("summary.json").write_text(json.dumps(summary,indent=2))
+          OUT.joinpath("state_manifest.json").write_text(json.dumps(mtr+mte,indent=2))
+          OUT.joinpath("world_manifest.json").write_text(json.dumps(
+              {"train":train_worlds,"test":test_worlds,"rollout":rollout_worlds},indent=2))
+          print("SUMMARY",json.dumps(summary,indent=2),flush=True)
+          PY
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/llama_server.pid ]; then
+            kill $(cat /tmp/llama_server.pid) || true
+          fi
+          tail -160 results/server.log > results/server_tail.log || true
+
+      - name: Upload ROBOT-LANGUAGE-ACTION-006
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-language-action-006
+          path: results/
+          retention-days: 7
