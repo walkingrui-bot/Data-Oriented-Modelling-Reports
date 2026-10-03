@@ -1,4 +1,4 @@
-name: real-deepseek-moe-012
+name: real-deepseek-moe-013
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  frozen-advantage-gate-live:
+  scaffold-conditioned-gate:
     runs-on: ubuntu-24.04
     timeout-minutes: 110
     steps:
@@ -52,18 +52,14 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Run frozen advantage gate on untouched tasks
+      - name: Run frozen scaffold-conditioned gate
         run: |
           python3 - <<'PY'
           import json, csv, re, time, urllib.request, math
           from pathlib import Path
+          from collections import defaultdict, deque
 
-          # Frozen on REAL-011 only. No REAL-012 label is used here.
-          FEATURES=[
-              "cheap_margin8","cheap_margin16","cheap_margin32",
-              "reset_margin8","reset_margin16","reset_margin32",
-              "delta_margin8","delta_margin16","delta_margin32"
-          ]
+          # Frozen REAL-011 reset-relative advantage model.
           MEAN=[3.66506645,3.79506864,3.83416695,3.27161949,3.70434108,4.92017548,0.39344697,0.09072756,-1.08600853]
           SCALE=[0.85734903,0.86554829,0.79200918,1.22084926,1.21465805,1.08642669,1.25464422,1.36293031,1.16720512]
           COEF=[-0.411354891,-0.582587745,0.799368546,0.322557552,0.636039886,-0.798731049,-0.594964572,-0.936826182,1.28586650,-0.317277358,0.00127615535,0.315562092]
@@ -71,101 +67,136 @@ jobs:
           ACTIONS=["decl3","local","qa3"]
           THRESHOLD=0.878
 
-          Path("results/frozen_advantage_gate.json").write_text(json.dumps({
-              "features":FEATURES,"mean":MEAN,"scale":SCALE,"coef":COEF,
-              "intercept":INTERCEPT,"actions":ACTIONS,"threshold":THRESHOLD,
-              "training_source":"REAL-011 only",
-              "threshold_source":"REAL-011 5-fold state-wise OOF, maximize accuracy subject to zero harmful overrides"
+          def norm_word(x):
+              return re.sub(r"[^a-z]","",x.lower())
+
+          def parse_relation_scaffold(problem):
+              s=problem.lower()
+              edges=[]
+              for a,b in re.findall(r"\\ball\\s+([a-z]+)\\s+are\\s+([a-z]+)",s):
+                  edges.append((norm_word(a),norm_word(b)))
+              for a,b in re.findall(r"\\bevery\\s+([a-z]+)\\s+is\\s+(?:an?\\s+)?([a-z]+)",s):
+                  edges.append((norm_word(a),norm_word(b)))
+              forbidden=[]
+              for a,b in re.findall(r"\\bno\\s+([a-z]+)\\s+are\\s+([a-z]+)",s):
+                  forbidden.append((norm_word(a),norm_word(b)))
+              for a,b in re.findall(r"\\bno\\s+([a-z]+)\\s+is\\s+(?:an?\\s+)?([a-z]+)",s):
+                  forbidden.append((norm_word(a),norm_word(b)))
+              qm=re.search(r"can\\s+any\\s+([a-z]+)\\s+be\\s+(?:an?\\s+)?([a-z]+)",s)
+              if not qm:
+                  return {"has_scaffold":0,"closure_depth":0,"source":"","target":"",
+                          "n_edges":len(edges),"n_forbidden":len(forbidden)}
+              src,tgt=norm_word(qm.group(1)),norm_word(qm.group(2))
+              g=defaultdict(list)
+              for a,b in edges:
+                  g[a].append(b)
+              q=deque([(src,0)])
+              seen={src}
+              best=None
+              while q:
+                  u,d=q.popleft()
+                  for v in g[u]:
+                      nd=d+1
+                      if (v,tgt) in forbidden or (tgt,v) in forbidden:
+                          best=nd if best is None else min(best,nd)
+                      if v not in seen:
+                          seen.add(v)
+                          q.append((v,nd))
+              return {"has_scaffold":int(best is not None and best>=2),
+                      "closure_depth":int(best or 0),"source":src,"target":tgt,
+                      "n_edges":len(edges),"n_forbidden":len(forbidden)}
+
+          Path("results/frozen_scaffold_gate.json").write_text(json.dumps({
+              "advantage_threshold":THRESHOLD,
+              "rule":"allow cheap override only when a directed inclusion chain of depth >=2 closes into an explicit exclusion against the queried target",
+              "advantage_model_source":"REAL-011 only"
           },indent=2))
 
           tasks=[]
 
-          # Advantage-bearing structures.
-          logic2=[
-              ("fraks","dels","vors","meks"),("selds","pans","tirs","goks"),
-              ("nars","vems","luks","fids"),("brens","kods","sars","pels"),
-              ("tovs","mels","qars","daks"),("wens","girs","loms","baks")
+          # Relational chains, depth 2-4.
+          rel_sets=[
+              ("rals","bems","tovs","naks",2),("sivs","mors","pels","daks",2),
+              ("gans","wels","firs","boks",2),("tars","nems","vils","qops",2),
+              ("fens","laks","rims","dovs",3),("pirs","sels","moks","vans",3),
+              ("hars","dels","qins","zoks",3),("kels","tims","vors","paks",3),
+              ("jars","wems","nols","raks",4),("birs","fels","soks","gans",4),
+              ("lurs","pems","dins","taks",4),("mavs","kors","jels","nims",4)
           ]
-          for i,(a,b,c,d) in enumerate(logic2):
-              tasks.append((f"logic2_live_{i}","logic2",
-                  f"All {a} are {b}. All {b} are {c}. No {c} are {d}. Can any {a} be a {d}?",
-                  "No",f"Because all {a} are {b}, a {a[:-1]} can still be a {d[:-1]}."))
+          for i,(a,b,c,d,depth) in enumerate(rel_sets):
+              if depth==2:
+                  p=f"All {a} are {b}. All {b} are {c}. No {c} are {d}. Can any {a} be a {d}?"
+              elif depth==3:
+                  x=f"x{i}s"
+                  p=f"All {a} are {b}. All {b} are {x}. All {x} are {c}. No {c} are {d}. Can any {a} be a {d}?"
+              else:
+                  x=f"x{i}s"; y=f"y{i}s"
+                  p=f"All {a} are {b}. All {b} are {x}. All {x} are {y}. All {y} are {c}. No {c} are {d}. Can any {a} be a {d}?"
+              w=f"A {a[:-1]} can still be a {d[:-1]} because the last rule only mentions {c}."
+              tasks.append((f"rel_chain_{i}","rel_chain",p,"No",w))
 
-          costs=[(14,19,31),(11,23,27),(16,17,34),(13,21,29),(15,18,26),(12,25,33)]
-          for i,(qty,price,disc) in enumerate(costs):
-              total=qty*price; ans=total-disc; wrong=total-(4+(i%4))
-              tasks.append((f"cost_live_{i}","cost",
-                  f"A shop sells {qty} identical items at {price} pounds each, then applies a {disc}-pound discount to the whole purchase. What is the final cost?",
-                  str(ans),f"Before the discount, the purchase total is {wrong} pounds."))
-
-          p2=[(520,25,23,20),(440,25,17,10),(600,25,28,20),(360,25,19,10),(560,25,24,20),(480,25,21,10)]
-          for i,(start,pct,add,pct2) in enumerate(p2):
-              after=start*(1-pct/100)+add; ans=after*(1-pct2/100)
-              ans=str(int(round(ans))) if abs(ans-round(ans))<1e-9 else str(round(ans,2))
-              wrong=int(start*(1-pct/100))-6-(i%3)
-              tasks.append((f"percent2_live_{i}","percent2",
-                  f"A tank starts with {start} liters. Twenty-five percent is used, then {add} liters are added, then {pct2} percent of the new amount is used. How many liters remain?",
-                  ans,f"After the first twenty-five percent is used, {wrong} liters remain."))
-
-          # Adjacent new structure: three-hop logic.
-          logic3=[
-              ("farns","wels","nors","pims","taks"),("dels","rums","kels","vons","gats"),
-              ("mirs","saks","pels","jors","nems"),("tels","baks","wirs","fons","qaks"),
-              ("lors","dins","vems","raks","sops"),("gels","mors","pivs","naks","bels")
+          # Same graph, paraphrased surface.
+          para=[
+              ("varks","pels","noms","tids"),("daks","rims","sovs","bems"),
+              ("kirs","wans","fels","gops"),("mels","tars","pivs","loks"),
+              ("sars","nils","qems","dors"),("haks","vims","lers","pans"),
+              ("bors","kels","tims","rads"),("firs","mors","dels","zans"),
+              ("nars","gels","wims","toks"),("paks","sirs","loms","vens"),
+              ("qars","bims","nors","feks"),("tels","raks","poms","jins")
           ]
-          for i,(a,b,c,d,e) in enumerate(logic3):
-              tasks.append((f"logic3_live_{i}","logic3",
-                  f"All {a} are {b}. All {b} are {c}. All {c} are {d}. No {d} are {e}. Can any {a} be an {e}?",
-                  "No",f"A {a[:-1]} can still be an {e[:-1]} because the last rule only mentions {d}."))
+          for i,(a,b,c,d) in enumerate(para):
+              p=f"Every {a[:-1]} is a {b[:-1]}. Every {b[:-1]} is a {c[:-1]}. No {c[:-1]} is a {d[:-1]}. Can any {a[:-1]} be a {d[:-1]}?"
+              w=f"A {a[:-1]} might still be a {d[:-1]} because the exclusion only names {c[:-1]}."
+              tasks.append((f"rel_para_{i}","rel_para",p,"No",w))
 
-          # Controls where RESET should usually remain preferable.
-          muls=[(52,17),(47,23),(54,19),(49,22),(56,16),(51,21)]
-          for i,(a,b) in enumerate(muls):
-              ans=a*b; wrong=ans-(4+(i%4))
-              tasks.append((f"mul_control_{i}","mul_control",
-                  f"A warehouse has {a} shelves with {b} boxes on each shelf. How many boxes are there in total?",
-                  str(ans),f"{a} × {b} = {wrong}."))
+          # Branching relational graph with distractors.
+          branch=[
+              ("fars","mels","tovs","naks","rims"),("pels","gans","vors","daks","sims"),
+              ("hirs","wels","noms","beks","qars"),("kars","dels","pivs","loks","tims"),
+              ("mors","fels","saks","vins","nors"),("rals","bems","qins","toks","gels"),
+              ("sars","lums","dors","paks","fims"),("tirs","vems","kols","naks","wirs"),
+              ("jors","pems","rivs","baks","dels"),("girs","nems","sovs","feks","lars"),
+              ("vons","tels","mirs","qaks","pels"),("birs","kems","wors","daks","sals")
+          ]
+          for i,(a,b,c,d,x) in enumerate(branch):
+              p=(f"All {a} are {b}. All {b} are {c}. No {c} are {d}. "
+                 f"All {x} are {b}. No {x} are {d}. Can any {a} be a {d}?")
+              w=f"A {a[:-1]} can still be a {d[:-1]} because the separate rule about {x} is the only exclusion."
+              tasks.append((f"rel_branch_{i}","rel_branch",p,"No",w))
 
-          alg=[(7,9,128,3,8),(6,11,119,4,7),(8,5,141,2,9),(5,14,109,3,6),(9,7,169,2,11),(7,13,153,4,5)]
-          for i,(coef,c,rhs,k,sub) in enumerate(alg):
-              x=(rhs-c)//coef; ans=k*x-sub; wrong_rhs=rhs-c-2
-              tasks.append((f"algebra_control_{i}","algebra_control",
-                  f"A number x satisfies {coef}x + {c} = {rhs}. What is {k}x - {sub}?",
-                  str(ans),f"Subtracting {c} gives {coef}x = {wrong_rhs}."))
+          # Arithmetic controls: relation parser must remain off.
+          arith=[(22,19,31),(18,27,24),(25,16,29),(21,23,35),(24,18,26),(17,31,28),
+                 (26,15,33),(19,28,22),(23,21,37),(20,26,25),(27,14,30),(16,33,27)]
+          for i,(q,pv,disc) in enumerate(arith):
+              total=q*pv; ans=total-disc; wrong=total-(5+(i%4))
+              prob=f"A shop sells {q} identical items at {pv} pounds each, then applies a {disc}-pound discount to the whole purchase. What is the final cost?"
+              chk=f"Before the discount, the purchase total is {wrong} pounds."
+              tasks.append((f"arith_cost_{i}","arith_cost",prob,str(ans),chk))
 
-          seats=[(17,9,24),(14,12,19),(16,11,27),(18,8,21),(15,13,26),(19,7,18)]
-          for i,(tables,seatsn,empty) in enumerate(seats):
-              total=tables*seatsn; ans=total-empty; wrong=total-(5+(i%3))
-              tasks.append((f"seats_control_{i}","seats_control",
-                  f"There are {tables} tables with {seatsn} seats at each table. If {empty} seats are empty, how many seats are occupied?",
-                  str(ans),f"There are {wrong} seats before subtracting the empty seats."))
-
-          perims=[(27,14,9),(29,11,8),(26,16,7),(31,10,6),(28,15,11),(30,13,5)]
-          for i,(l,w,extra) in enumerate(perims):
-              per=2*(l+w); ans=per+extra; wrongsum=l+w-3
-              tasks.append((f"perim_control_{i}","perim_control",
-                  f"A rectangle has length {l} and width {w}. A decorative strip adds {extra} meters beyond the rectangle's perimeter. What is the total length of strip needed?",
-                  str(ans),f"The sum of length and width is {wrongsum}, so the rectangle perimeter is {2*wrongsum}."))
+          seq=[(34,4,11,7),(29,5,13,8),(41,3,17,6),(36,4,9,12),(27,6,15,5),(32,5,14,9),
+               (38,3,12,7),(31,6,10,11),(43,4,16,8),(28,7,9,13),(35,5,18,6),(39,3,20,7)]
+          for i,(s,m,a,b) in enumerate(seq):
+              mid=s*m+a; ans=mid-b; wrong=mid-(2+(i%3))
+              prob=f"Start with {s}. Multiply by {m}, add {a}, then subtract {b}. What number do you get?"
+              chk=f"After multiplying by {m} and adding {a}, the running value is {wrong}."
+              tasks.append((f"arith_seq_{i}","arith_seq",prob,str(ans),chk))
 
           def clean_prompt(problem):
-              return "Solve the problem carefully and naturally from the original information. At the very end, write exactly one line: ANSWER: <answer>.\n\nProblem: "+problem
+              return "Solve the problem carefully and naturally from the original information. At the very end, write exactly one line: ANSWER: <answer>.\\n\\nProblem: "+problem
           def local_prompt(problem,wrong):
-              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nThe checkpoint may be wrong. Recompute the original relation that produced it, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
+              return "Problem: "+problem+"\\nPrevious reasoning checkpoint: "+wrong+"\\nThe checkpoint may be wrong. Recompute the original relation that produced it, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
           def decl_prompt(problem,wrong):
-              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nVerify the checkpoint, recompute the original relation that produced it, correct the intermediate state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
+              return "Problem: "+problem+"\\nPrevious reasoning checkpoint: "+wrong+"\\nVerify the checkpoint, recompute the original relation that produced it, correct the intermediate state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
           def qa_prompt(problem,wrong):
-              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nAsk yourself whether the checkpoint is correct, identify what original relation must be recomputed, correct the state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
+              return "Problem: "+problem+"\\nPrevious reasoning checkpoint: "+wrong+"\\nAsk yourself whether the checkpoint is correct, identify what original relation must be recomputed, correct the state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
           prompts={"local":local_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
 
           def call_chat(content):
-              payload={
-                  "messages":[
+              payload={"messages":[
                       {"role":"system","content":"You are a concise reasoning assistant. Solve the user's problem accurately."},
-                      {"role":"user","content":content}
-                  ],
-                  "temperature":0.0,"seed":1234,"max_tokens":192,"stream":False,
-                  "logprobs":True,"top_logprobs":5
-              }
+                      {"role":"user","content":content}],
+                      "temperature":0.0,"seed":1234,"max_tokens":192,"stream":False,
+                      "logprobs":True,"top_logprobs":5}
               req=urllib.request.Request("http://127.0.0.1:8080/v1/chat/completions",
                   data=json.dumps(payload).encode(),headers={"Content-Type":"application/json"},method="POST")
               t0=time.time()
@@ -173,12 +204,12 @@ jobs:
                   obj=json.loads(r.read().decode())
               return obj,time.time()-t0
 
-          def telemetry(choice):
+          def margin_stats(choice):
               content=(choice.get("logprobs") or {}).get("content") or []
               margins=[]
               for item in content:
-                  tops=item.get("top_logprobs") or []
-                  vals=[float(x.get("logprob")) for x in tops if isinstance(x.get("logprob"),(int,float))]
+                  vals=[float(x.get("logprob")) for x in (item.get("top_logprobs") or [])
+                        if isinstance(x.get("logprob"),(int,float))]
                   sv=sorted(vals,reverse=True)
                   if len(sv)>=2: margins.append(sv[0]-sv[1])
               def mf(n):
@@ -186,14 +217,10 @@ jobs:
                   return sum(xs)/len(xs) if xs else None
               return {"margin8":mf(8),"margin16":mf(16),"margin32":mf(32),"n_tokens":len(content)}
 
-          def p_adv(action,cheap_stats,reset_stats):
-              vals=[
-                  cheap_stats["margin8"],cheap_stats["margin16"],cheap_stats["margin32"],
-                  reset_stats["margin8"],reset_stats["margin16"],reset_stats["margin32"],
-                  cheap_stats["margin8"]-reset_stats["margin8"],
-                  cheap_stats["margin16"]-reset_stats["margin16"],
-                  cheap_stats["margin32"]-reset_stats["margin32"]
-              ]
+          def p_adv(action,c,r):
+              vals=[c["margin8"],c["margin16"],c["margin32"],
+                    r["margin8"],r["margin16"],r["margin32"],
+                    c["margin8"]-r["margin8"],c["margin16"]-r["margin16"],c["margin32"]-r["margin32"]]
               z=INTERCEPT
               for i,v in enumerate(vals):
                   z += COEF[i]*((v-MEAN[i])/SCALE[i])
@@ -203,50 +230,41 @@ jobs:
           outdir=Path("results/outputs"); outdir.mkdir(parents=True,exist_ok=True)
           rows=[]
           for tid,fam,problem,expected,wrong in tasks:
-              # RESET is generated first and is the default answer.
-              robj,relapsed=call_chat(clean_prompt(problem))
+              scaffold=parse_relation_scaffold(problem)
+              robj,_=call_chat(clean_prompt(problem))
               rchoice=robj["choices"][0]
               rtext=rchoice["message"]["content"]
-              rstats=telemetry(rchoice)
+              rstats=margin_stats(rchoice)
               (outdir/f"{tid}__RESET.txt").write_text(rtext)
 
               candidates={}
               for action,maker in prompts.items():
-                  obj,elapsed=call_chat(maker(problem,wrong))
+                  obj,_=call_chat(maker(problem,wrong))
                   choice=obj["choices"][0]
                   text=choice["message"]["content"]
-                  stats=telemetry(choice)
+                  stats=margin_stats(choice)
                   p=p_adv(action,stats,rstats)
                   candidates[action]={"text":text,"stats":stats,"p_adv":p}
                   (outdir/f"{tid}__{action}.txt").write_text(text)
 
               best_action=max(candidates,key=lambda a:candidates[a]["p_adv"])
               best_p=candidates[best_action]["p_adv"]
-              use_cheap=best_p>=THRESHOLD
+              use_cheap=bool(scaffold["has_scaffold"] and best_p>=THRESHOLD)
               final_mode=best_action if use_cheap else "reset"
-              final_text=candidates[best_action]["text"] if use_cheap else rtext
+              rows.append({"id":tid,"family":fam,"expected":expected,"wrong_checkpoint":wrong,
+                           **scaffold,"best_cheap_action":best_action,"best_advantage_p":best_p,
+                           "use_cheap":int(use_cheap),"final_mode":final_mode,
+                           "reset_margin8":rstats["margin8"],"reset_margin16":rstats["margin16"],"reset_margin32":rstats["margin32"],
+                           **{f"{a}_p_adv":candidates[a]["p_adv"] for a in ACTIONS}})
+              print(tid,"scaffold=",scaffold["has_scaffold"],"depth=",scaffold["closure_depth"],
+                    "best=",best_action,"p=",round(best_p,3),"use_cheap=",use_cheap,flush=True)
 
-              row={
-                  "id":tid,"family":fam,"expected":expected,"wrong_checkpoint":wrong,
-                  "best_cheap_action":best_action,"best_advantage_p":best_p,
-                  "use_cheap":int(use_cheap),"final_mode":final_mode,
-                  "reset_margin8":rstats["margin8"],"reset_margin16":rstats["margin16"],"reset_margin32":rstats["margin32"]
-              }
-              for action,c in candidates.items():
-                  row[f"{action}_p_adv"]=c["p_adv"]
-                  row[f"{action}_margin8"]=c["stats"]["margin8"]
-                  row[f"{action}_margin16"]=c["stats"]["margin16"]
-                  row[f"{action}_margin32"]=c["stats"]["margin32"]
-              rows.append(row)
-              print(tid,"best=",best_action,"p_adv=",round(best_p,3),"use_cheap=",use_cheap,flush=True)
-
-          with open("results/live_gate_results.csv","w",newline="") as f:
+          with open("results/scaffold_gate_results.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-          Path("results/live_gate_results.json").write_text(json.dumps(rows,indent=2))
+          Path("results/scaffold_gate_results.json").write_text(json.dumps(rows,indent=2))
           Path("results/task_manifest.json").write_text(json.dumps([
               {"id":tid,"family":fam,"problem":p,"expected":e,"wrong_checkpoint":w}
-              for tid,fam,p,e,w in tasks
-          ],indent=2))
+              for tid,fam,p,e,w in tasks],indent=2))
           PY
 
       - name: Stop server
@@ -257,10 +275,10 @@ jobs:
           fi
           tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-012
+      - name: Upload REAL-DEEPSEEK-MOE-013
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-012-frozen-advantage-gate-live
+          name: real-deepseek-moe-013-scaffold-conditioned-gate
           path: results/
           retention-days: 7
