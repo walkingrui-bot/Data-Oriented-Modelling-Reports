@@ -1,0 +1,302 @@
+name: robot-language-action-007
+
+on:
+  push:
+    branches:
+      - exp/robot-language-action-007
+  workflow_dispatch:
+
+jobs:
+  on-policy-motor-posttrain:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 110
+    steps:
+      - name: Runner info
+        run: |
+          mkdir -p results
+          uname -a | tee results/runner_info.txt
+          nproc | tee -a results/runner_info.txt
+          free -h | tee -a results/runner_info.txt
+
+      - name: Download llama.cpp
+        run: |
+          set -euxo pipefail
+          curl -L --fail --retry 5 --retry-delay 3 -o /tmp/llama.tar.gz https://github.com/ggml-org/llama.cpp/releases/download/b11342/llama-b11342-bin-ubuntu-x64.tar.gz
+          mkdir -p /tmp/llama
+          tar -xzf /tmp/llama.tar.gz -C /tmp/llama
+          LLAMA_SERVER=$(find /tmp/llama -type f -name llama-server | head -1)
+          chmod +x "$LLAMA_SERVER"
+          echo "LLAMA_SERVER=$LLAMA_SERVER" >> "$GITHUB_ENV"
+
+      - name: Download DeepSeekMoE-16B Chat IQ3_S
+        run: |
+          MODEL=/tmp/deepseek-moe-16b-chat.i1-IQ3_S.gguf
+          curl -L --fail --retry 8 --retry-delay 5 -o "$MODEL" "https://huggingface.co/mradermacher/deepseek-moe-16b-chat-i1-GGUF/resolve/main/deepseek-moe-16b-chat.i1-IQ3_S.gguf?download=true"
+          echo "MODEL=$MODEL" >> "$GITHUB_ENV"
+
+      - name: Start embedding server
+        run: |
+          "$LLAMA_SERVER" -m "$MODEL" -c 2048 -t 4 --host 127.0.0.1 --port 8080 --parallel 1 --embedding --pooling last > results/server.log 2>&1 &
+          echo $! > /tmp/llama_server.pid
+          for i in $(seq 1 120); do
+            curl -fsS http://127.0.0.1:8080/health >/dev/null 2>&1 && exit 0
+            sleep 2
+          done
+          exit 1
+
+      - name: On-policy post-train motor head
+        run: |
+          python3 -m pip install --quiet numpy scikit-learn
+          python3 - <<'PY'
+          import json, random, time, urllib.request, csv
+          from pathlib import Path
+          from collections import deque, Counter
+          import numpy as np
+          from sklearn.preprocessing import StandardScaler
+          from sklearn.linear_model import LogisticRegression
+          from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
+
+          OUT=Path("results"); OUT.mkdir(exist_ok=True)
+          N=6; DIRS=[(0,-1),(1,0),(0,1),(-1,0)]
+          DN=["north","east","south","west"]; ARROW=["^",">","v","<"]
+          CLASSES=["FORWARD","LEFT","RIGHT"]
+
+          def blocked(g,x,y,d):
+              dx,dy=DIRS[d]; nx,ny=x+dx,y+dy
+              return nx<0 or ny<0 or nx>=N or ny>=N or g[ny][nx]==1
+
+          def apply(g,s,a):
+              x,y,d=s
+              if a=="LEFT": return (x,y,(d-1)%4),False
+              if a=="RIGHT": return (x,y,(d+1)%4),False
+              if blocked(g,x,y,d): return s,True
+              dx,dy=DIRS[d]; return (x+dx,y+dy,d),False
+
+          def oracle(g,start,goal):
+              start=tuple(start); goal=tuple(goal)
+              if start[:2]==goal: return "STOP",0
+              q=deque([(start,0,None)]); seen={start}
+              while q:
+                  s,dist,first=q.popleft()
+                  for a in CLASSES:
+                      ns,col=apply(g,s,a)
+                      if col: continue
+                      nf=a if first is None else first
+                      if ns[:2]==goal: return nf,dist+1
+                      if ns not in seen:
+                          seen.add(ns); q.append((ns,dist+1,nf))
+              return None,None
+
+          def make_world(seed,p=.15):
+              r=random.Random(seed)
+              while True:
+                  g=[[1 if r.random()<p else 0 for _ in range(N)] for _ in range(N)]
+                  gx,gy=r.randrange(N),r.randrange(N); g[gy][gx]=0
+                  valid=0
+                  for y in range(N):
+                      for x in range(N):
+                          if g[y][x]: continue
+                          a,L=oracle(g,(x,y,0),(gx,gy))
+                          valid += int(a is not None)
+                  if valid>=24: return {"seed":seed,"grid":g,"goal":(gx,gy)}
+
+          def map_text(g,s,goal):
+              x,y,d=s; rows=[]
+              for yy in range(N):
+                  row=[]
+                  for xx in range(N):
+                      ch="#" if g[yy][xx] else "."
+                      if (xx,yy)==goal: ch="G"
+                      if (xx,yy)==(x,y): ch=ARROW[d]
+                      row.append(ch)
+                  rows.append("".join(row))
+              return "\n".join(rows)
+
+          def prompt(g,s,goal):
+              x,y,d=s; gx,gy=goal
+              return (
+                  "Robot motor-state observation. Choose among FORWARD, LEFT, RIGHT. "
+                  "FORWARD moves one free cell; LEFT and RIGHT rotate 90 degrees. "
+                  "Coordinates: x increases right, y increases down.\n"
+                  f"position=({x},{y}); facing={DN[d]}; target=({gx},{gy}); "
+                  f"target_delta=(dx={gx-x},dy={gy-y}).\n"
+                  "Map (# obstacle, . empty, G goal, robot arrow shows orientation):\n"
+                  +map_text(g,s,goal)+"\nMotor-state representation:"
+              )
+
+          def emb(text):
+              data=json.dumps({"content":text}).encode()
+              for k in range(3):
+                  try:
+                      req=urllib.request.Request("http://127.0.0.1:8080/embedding",data=data,headers={"Content-Type":"application/json"},method="POST")
+                      with urllib.request.urlopen(req,timeout=300) as r: obj=json.loads(r.read().decode())
+                      e=obj[0]["embedding"]
+                      if e and isinstance(e[0],list): e=e[-1]
+                      return np.asarray(e,dtype=np.float32)
+                  except Exception:
+                      time.sleep(1)
+              raise RuntimeError("embedding failed")
+
+          def enumerate_states(worlds):
+              rows=[]
+              for w in worlds:
+                  g=w["grid"]; goal=w["goal"]
+                  for y in range(N):
+                      for x in range(N):
+                          if g[y][x] or (x,y)==goal: continue
+                          for d in range(4):
+                              a,L=oracle(g,(x,y,d),goal)
+                              if a in CLASSES: rows.append((w,(x,y,d),a,L))
+              return rows
+
+          def balanced(rows,n,seed):
+              r=random.Random(seed); by={c:[] for c in CLASSES}
+              for z in rows: by[z[2]].append(z)
+              out=[]
+              for c in CLASSES:
+                  r.shuffle(by[c]); out += by[c][:n]
+              r.shuffle(out); return out
+
+          base_worlds=[make_world(s) for s in range(18000,18014)]
+          correction_worlds=[make_world(s) for s in range(18100,18106)]
+          static_test_worlds=[make_world(s) for s in range(18200,18206)]
+          rollout_worlds=[make_world(s) for s in range(18300,18312)]
+
+          train_rows=balanced(enumerate_states(base_worlds),80,1)      # 240
+          test_rows=balanced(enumerate_states(static_test_worlds),30,2) # 90
+
+          def feat_rows(rows):
+              X=[]; y=[]; meta=[]
+              for i,(w,s,a,L) in enumerate(rows):
+                  X.append(emb(prompt(w["grid"],s,w["goal"])))
+                  y.append(a); meta.append((w["seed"],s,a,L))
+                  if (i+1)%20==0: print("feat",i+1,"/",len(rows),flush=True)
+              return np.vstack(X),np.asarray(y),meta
+
+          X0,y0,m0=feat_rows(train_rows)
+          Xt,yt,mt=feat_rows(test_rows)
+          scaler=StandardScaler().fit(X0); X0s=scaler.transform(X0); Xts=scaler.transform(Xt)
+          pre=LogisticRegression(max_iter=3000,class_weight="balanced",C=1.0).fit(X0s,y0)
+
+          def choose(head,g,s,goal):
+              x=scaler.transform(emb(prompt(g,s,goal))[None,:])
+              return head.predict(x)[0]
+
+          # collect states induced by the PRE policy
+          corr=[]
+          pre_corr_eps=[]
+          for w in correction_worlds:
+              g=w["grid"]; goal=w["goal"]
+              cand=[]
+              for y in range(N):
+                  for x in range(N):
+                      if g[y][x] or (x,y)==goal: continue
+                      for d in range(4):
+                          a,L=oracle(g,(x,y,d),goal)
+                          if a in CLASSES and 5<=L<=10: cand.append(((x,y,d),L))
+              s,opt=random.Random(w["seed"]+9).choice(cand)
+              seen=set(); actions=[]; success=False
+              for t in range(18):
+                  if s[:2]==goal: success=True; break
+                  key=(w["seed"],s)
+                  oa,_=oracle(g,s,goal)
+                  pa=choose(pre,g,s,goal)
+                  if key not in seen:
+                      corr.append((w,s,oa,pa))
+                      seen.add(key)
+                  actions.append(pa)
+                  s,_=apply(g,s,pa)
+              pre_corr_eps.append({"seed":w["seed"],"success":int(success),"actions":actions})
+          print("unique correction states",len(corr),flush=True)
+
+          Xc=[]; yc=[]; wc=[]; corr_meta=[]
+          for i,(w,s,oa,pa) in enumerate(corr):
+              Xc.append(emb(prompt(w["grid"],s,w["goal"])))
+              yc.append(oa)
+              wrong=(pa!=oa)
+              wc.append(5.0 if wrong else 1.5)
+              corr_meta.append({"world_seed":w["seed"],"state":list(s),"oracle":oa,"pre_action":pa,"pre_wrong":int(wrong)})
+              if (i+1)%20==0: print("corr feat",i+1,"/",len(corr),flush=True)
+          Xc=np.vstack(Xc) if Xc else np.zeros((0,X0.shape[1]),dtype=np.float32)
+          yc=np.asarray(yc); wc=np.asarray(wc,dtype=float)
+
+          Xall=np.vstack([X0,Xc]); yall=np.concatenate([y0,yc])
+          wall=np.concatenate([np.ones(len(y0)),wc])
+          # preserve same scaler: only train distribution changes
+          Xalls=scaler.transform(Xall)
+          post=LogisticRegression(max_iter=3000,class_weight="balanced",C=1.0).fit(Xalls,yall,sample_weight=wall)
+
+          def met(head):
+              p=head.predict(Xts)
+              return {"accuracy":float(accuracy_score(yt,p)),"macro_f1":float(f1_score(yt,p,average="macro")),
+                      "confusion_matrix":confusion_matrix(yt,p,labels=CLASSES).tolist()}
+
+          def rollout(head,label):
+              eps=[]; traces=[]
+              for w in rollout_worlds:
+                  g=w["grid"]; goal=w["goal"]; cand=[]
+                  for y in range(N):
+                      for x in range(N):
+                          if g[y][x] or (x,y)==goal: continue
+                          for d in range(4):
+                              a,L=oracle(g,(x,y,d),goal)
+                              if a in CLASSES and 5<=L<=10: cand.append(((x,y,d),L))
+                  s,opt=random.Random(w["seed"]+33).choice(cand); start=s
+                  startdist=abs(goal[0]-s[0])+abs(goal[1]-s[1]); best=startdist
+                  actions=[]; collisions=0; agree=0; success=False
+                  for t in range(24):
+                      if s[:2]==goal: success=True; actions.append("STOP"); break
+                      oa,_=oracle(g,s,goal); pa=choose(head,g,s,goal); agree+=int(pa==oa)
+                      before=s; s,col=apply(g,s,pa); collisions+=int(col); actions.append(pa)
+                      dist=abs(goal[0]-s[0])+abs(goal[1]-s[1]); best=min(best,dist)
+                      traces.append({"policy":label,"seed":w["seed"],"step":t,"before":list(before),"after":list(s),"goal":list(goal),"oracle":oa,"action":pa,"collision":int(col)})
+                  final=abs(goal[0]-s[0])+abs(goal[1]-s[1])
+                  eps.append({"policy":label,"seed":w["seed"],"success":int(success),"steps":len(actions),
+                              "start":list(start),"goal":list(goal),"final_state":list(s),"start_distance":startdist,
+                              "best_distance":best,"final_distance":final,"distance_reduction":startdist-final,
+                              "collisions":collisions,"oracle_agreement":agree/max(len([a for a in actions if a!='STOP']),1),
+                              "action_trace":"|".join(actions)})
+              return eps,traces
+
+          eps_pre,tr_pre=rollout(pre,"pre")
+          eps_post,tr_post=rollout(post,"post")
+          all_eps=eps_pre+eps_post; all_tr=tr_pre+tr_post
+
+          def rollsum(label):
+              xs=[e for e in all_eps if e["policy"]==label]
+              return {"episodes":len(xs),"successes":sum(e["success"] for e in xs),
+                      "success_rate":sum(e["success"] for e in xs)/len(xs),
+                      "episodes_improving_distance":sum(e["best_distance"]<e["start_distance"] for e in xs),
+                      "mean_distance_reduction":float(np.mean([e["distance_reduction"] for e in xs])),
+                      "mean_final_distance":float(np.mean([e["final_distance"] for e in xs])),
+                      "mean_collisions":float(np.mean([e["collisions"] for e in xs])),
+                      "mean_oracle_agreement":float(np.mean([e["oracle_agreement"] for e in xs]))}
+
+          summary={"model":"DeepSeekMoE-16B-Chat IQ3_S","backbone":"frozen last pooled hidden state",
+                   "post_training":"on-policy correction of linear motor head only",
+                   "base_train_n":len(y0),"correction_unique_states":len(corr),
+                   "correction_wrong_states":int(sum(m["pre_wrong"] for m in corr_meta)),
+                   "static_world_heldout":{"pre":met(pre),"post":met(post)},
+                   "closed_loop":{"pre":rollsum("pre"),"post":rollsum("post")}}
+          OUT.joinpath("summary.json").write_text(json.dumps(summary,indent=2))
+          OUT.joinpath("correction_states.json").write_text(json.dumps(corr_meta,indent=2))
+          with open(OUT/"closed_loop_episodes.csv","w",newline="") as f:
+              wr=csv.DictWriter(f,fieldnames=all_eps[0].keys()); wr.writeheader(); wr.writerows(all_eps)
+          with open(OUT/"closed_loop_traces.jsonl","w") as f:
+              for r in all_tr: f.write(json.dumps(r)+"\n")
+          print("SUMMARY",json.dumps(summary,indent=2),flush=True)
+          PY
+
+      - name: Stop server
+        if: always()
+        run: |
+          [ -f /tmp/llama_server.pid ] && kill $(cat /tmp/llama_server.pid) || true
+          tail -120 results/server.log > results/server_tail.log || true
+
+      - name: Upload ROBOT-LANGUAGE-ACTION-007
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-language-action-007
+          path: results/
+          retention-days: 7
