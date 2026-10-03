@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "24_config_trial_split": true,
+    "144_unique_trials": true,
+    "train_cv_single_sensor_minimum": true,
+    "source_and_support_gates_passed": true,
+    "test_files_present_only_after_validation_pass": true,
+    "validation_24_balanced_trials": true,
+    "validation_point_metrics": true,
+    "validation_bootstrap": true,
+    "validation_frozen_gates": true,
+    "test_24_balanced_trials": true,
+    "test_point_metrics": true,
+    "test_bootstrap": true,
+    "test_frozen_gates": true,
+    "validation_pass_test_fail": true
+  },
+  "passed": 14,
+  "total": 14,
+  "local_validation": "PASS"
+}

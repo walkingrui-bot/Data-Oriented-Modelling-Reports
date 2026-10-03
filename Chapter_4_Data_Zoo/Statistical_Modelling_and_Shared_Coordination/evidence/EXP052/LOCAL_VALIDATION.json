@@ -1,0 +1,8 @@
+{
+  "scope": "EXP052 saved derived rows plus EXP051 original predictions",
+  "matched_2015_pairs": 32532,
+  "metric_checks": 32,
+  "target_horizon_hours": 24,
+  "gate_recomputed": "LOCAL_FORM_USEFUL_TRANSPORT_COEFFICIENTS_FAIL",
+  "status": "PASS"
+}

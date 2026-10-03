@@ -1,0 +1,365 @@
+{
+  "run_id": "EXP027-CV-001",
+  "parent_feature_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP026-20261002-001/FEATURES.csv",
+  "original_test_used": false,
+  "lambda": 0.1,
+  "seeds": [
+    20261003,
+    20261004,
+    20261005,
+    20261006,
+    20261007
+  ],
+  "fits": {
+    "repeat_1_fold_0_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 909,
+      "converged": true,
+      "gradient_inf": 9.931332304452534e-07,
+      "loss": 0.7735006753462882
+    },
+    "repeat_1_fold_0_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 346,
+      "converged": true,
+      "gradient_inf": 9.86522875343304e-07,
+      "loss": 0.6904959984384611
+    },
+    "repeat_1_fold_1_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 214,
+      "converged": true,
+      "gradient_inf": 9.970866593437405e-07,
+      "loss": 0.7537968796893866
+    },
+    "repeat_1_fold_1_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 423,
+      "converged": true,
+      "gradient_inf": 9.963370838192605e-07,
+      "loss": 0.6724283369536148
+    },
+    "repeat_1_fold_2_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 176,
+      "converged": true,
+      "gradient_inf": 9.06338607879211e-07,
+      "loss": 0.7478886818879
+    },
+    "repeat_1_fold_2_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 568,
+      "converged": true,
+      "gradient_inf": 9.90062687459799e-07,
+      "loss": 0.6710009071682002
+    },
+    "repeat_1_fold_3_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 176,
+      "converged": true,
+      "gradient_inf": 9.284099138241048e-07,
+      "loss": 0.7478710763738804
+    },
+    "repeat_1_fold_3_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 454,
+      "converged": true,
+      "gradient_inf": 9.580926437716825e-07,
+      "loss": 0.6818507360757515
+    },
+    "repeat_1_fold_4_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 176,
+      "converged": true,
+      "gradient_inf": 9.429782122662812e-07,
+      "loss": 0.7582863270623933
+    },
+    "repeat_1_fold_4_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 610,
+      "converged": true,
+      "gradient_inf": 9.567760823585026e-07,
+      "loss": 0.6702628571208499
+    },
+    "repeat_2_fold_0_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 162,
+      "converged": true,
+      "gradient_inf": 9.977987398482194e-07,
+      "loss": 0.7633773995645564
+    },
+    "repeat_2_fold_0_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 470,
+      "converged": true,
+      "gradient_inf": 9.740247585871562e-07,
+      "loss": 0.6788231440112091
+    },
+    "repeat_2_fold_1_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 166,
+      "converged": true,
+      "gradient_inf": 9.871002042050097e-07,
+      "loss": 0.7635435622554446
+    },
+    "repeat_2_fold_1_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 435,
+      "converged": true,
+      "gradient_inf": 9.971485228283175e-07,
+      "loss": 0.6870597467004738
+    },
+    "repeat_2_fold_2_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 160,
+      "converged": true,
+      "gradient_inf": 9.140709964350477e-07,
+      "loss": 0.7595147553697846
+    },
+    "repeat_2_fold_2_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 530,
+      "converged": true,
+      "gradient_inf": 9.843125159432345e-07,
+      "loss": 0.6833780118303867
+    },
+    "repeat_2_fold_3_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 212,
+      "converged": true,
+      "gradient_inf": 9.863607834652982e-07,
+      "loss": 0.7629904836405069
+    },
+    "repeat_2_fold_3_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 489,
+      "converged": true,
+      "gradient_inf": 9.770031335885367e-07,
+      "loss": 0.6821001225272886
+    },
+    "repeat_2_fold_4_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 243,
+      "converged": true,
+      "gradient_inf": 9.61773099324853e-07,
+      "loss": 0.7381160378846461
+    },
+    "repeat_2_fold_4_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 496,
+      "converged": true,
+      "gradient_inf": 9.994848773342557e-07,
+      "loss": 0.6574657853989601
+    },
+    "repeat_3_fold_0_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 157,
+      "converged": true,
+      "gradient_inf": 9.994295149683054e-07,
+      "loss": 0.7601923734831421
+    },
+    "repeat_3_fold_0_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 494,
+      "converged": true,
+      "gradient_inf": 9.823801113570613e-07,
+      "loss": 0.6883558983003122
+    },
+    "repeat_3_fold_1_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 159,
+      "converged": true,
+      "gradient_inf": 9.416995704207608e-07,
+      "loss": 0.7565653930619869
+    },
+    "repeat_3_fold_1_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 284,
+      "converged": true,
+      "gradient_inf": 9.897791571736357e-07,
+      "loss": 0.6771215543373899
+    },
+    "repeat_3_fold_2_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 206,
+      "converged": true,
+      "gradient_inf": 1.629446561483925e-07,
+      "loss": 0.7559897446275412
+    },
+    "repeat_3_fold_2_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 510,
+      "converged": true,
+      "gradient_inf": 9.972674360533146e-07,
+      "loss": 0.6846465521837093
+    },
+    "repeat_3_fold_3_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 186,
+      "converged": true,
+      "gradient_inf": 8.337898066821834e-07,
+      "loss": 0.7573228751598285
+    },
+    "repeat_3_fold_3_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 552,
+      "converged": true,
+      "gradient_inf": 9.86572213023323e-07,
+      "loss": 0.6730554723047493
+    },
+    "repeat_3_fold_4_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 188,
+      "converged": true,
+      "gradient_inf": 9.571809184833174e-07,
+      "loss": 0.7448467878970263
+    },
+    "repeat_3_fold_4_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 487,
+      "converged": true,
+      "gradient_inf": 9.81230224507152e-07,
+      "loss": 0.6594791583102527
+    },
+    "repeat_4_fold_0_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 174,
+      "converged": true,
+      "gradient_inf": 9.548117827294753e-07,
+      "loss": 0.7642324268411579
+    },
+    "repeat_4_fold_0_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 548,
+      "converged": true,
+      "gradient_inf": 9.857598536328733e-07,
+      "loss": 0.6806263955862554
+    },
+    "repeat_4_fold_1_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 183,
+      "converged": true,
+      "gradient_inf": 9.574794396525815e-07,
+      "loss": 0.7422719979165594
+    },
+    "repeat_4_fold_1_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 556,
+      "converged": true,
+      "gradient_inf": 9.487849054653488e-07,
+      "loss": 0.6657813242122214
+    },
+    "repeat_4_fold_2_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 183,
+      "converged": true,
+      "gradient_inf": 9.463030259988662e-07,
+      "loss": 0.734657383511131
+    },
+    "repeat_4_fold_2_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 309,
+      "converged": true,
+      "gradient_inf": 8.823380777898395e-07,
+      "loss": 0.6635591745947302
+    },
+    "repeat_4_fold_3_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 166,
+      "converged": true,
+      "gradient_inf": 8.922366016538008e-07,
+      "loss": 0.7763437315056063
+    },
+    "repeat_4_fold_3_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 565,
+      "converged": true,
+      "gradient_inf": 9.805698580420553e-07,
+      "loss": 0.6968953360039585
+    },
+    "repeat_4_fold_4_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 176,
+      "converged": true,
+      "gradient_inf": 9.352150665971034e-07,
+      "loss": 0.7722172627579731
+    },
+    "repeat_4_fold_4_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 417,
+      "converged": true,
+      "gradient_inf": 9.842516607993937e-07,
+      "loss": 0.6890745420629112
+    },
+    "repeat_5_fold_0_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 179,
+      "converged": true,
+      "gradient_inf": 9.772657912474514e-07,
+      "loss": 0.74749201498847
+    },
+    "repeat_5_fold_0_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 449,
+      "converged": true,
+      "gradient_inf": 9.707839068670305e-07,
+      "loss": 0.6705107174533405
+    },
+    "repeat_5_fold_1_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 178,
+      "converged": true,
+      "gradient_inf": 9.655098339219487e-07,
+      "loss": 0.7509961362374277
+    },
+    "repeat_5_fold_1_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 546,
+      "converged": true,
+      "gradient_inf": 9.903748022124619e-07,
+      "loss": 0.6804375496042262
+    },
+    "repeat_5_fold_2_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 168,
+      "converged": true,
+      "gradient_inf": 9.78278950463968e-07,
+      "loss": 0.7656378692117597
+    },
+    "repeat_5_fold_2_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 448,
+      "converged": true,
+      "gradient_inf": 9.74683306387324e-07,
+      "loss": 0.6888357025838288
+    },
+    "repeat_5_fold_3_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 206,
+      "converged": true,
+      "gradient_inf": 9.268616150241715e-07,
+      "loss": 0.7630488414961045
+    },
+    "repeat_5_fold_3_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 396,
+      "converged": true,
+      "gradient_inf": 9.775047969205058e-07,
+      "loss": 0.6663417945677939
+    },
+    "repeat_5_fold_4_M1_questionnaire": {
+      "lambda": 0.1,
+      "iterations": 287,
+      "converged": true,
+      "gradient_inf": 9.698750174803178e-07,
+      "loss": 0.7599538456134239
+    },
+    "repeat_5_fold_4_M3_combined": {
+      "lambda": 0.1,
+      "iterations": 429,
+      "converged": true,
+      "gradient_inf": 9.770274193994207e-07,
+      "loss": 0.688190794613285
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "activity_key_18": true,
+    "people_51_activities_918": true,
+    "four_members_per_person": true,
+    "zero_qualified_recomputed": true,
+    "no_usable_four_way_clock_overlap": true,
+    "stop_correct": true,
+    "no_model": true
+  },
+  "passed": 7,
+  "total": 7,
+  "all18_with_rows_ignoring_cross_device_clock": 39,
+  "zero_overlap_groups": 901,
+  "undefined_overlap_groups": 17,
+  "invalid_rows": 0
+}

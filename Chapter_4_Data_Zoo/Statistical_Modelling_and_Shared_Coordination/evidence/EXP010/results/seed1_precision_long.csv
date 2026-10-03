@@ -1,0 +1,2 @@
+seed,alpha_num,alpha_lang,num_num_pinball,num_lang_acc,text_num_pinball,text_lang_acc,both_num_pinball,both_lang_acc,base_num_num_pinball,base_text_lang_acc,base_both_num_pinball,base_both_lang_acc
+1,0.75,0.5,0.0739903450012207,0.7247191071510315,0.1531386524438858,0.8146067261695862,0.07390721142292023,0.8913857936859131,0.07867281138896942,0.7808988690376282,0.0850210040807724,0.8426966071128845

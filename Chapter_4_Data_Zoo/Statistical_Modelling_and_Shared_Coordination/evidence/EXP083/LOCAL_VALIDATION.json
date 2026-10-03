@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "source_recheck_all_match": true,
+    "source_support_pass": true,
+    "daily_rows_match": true,
+    "all_daily_hours_at_least_18": true,
+    "base_mae_recomputed": true,
+    "weather_mae_recomputed": true,
+    "gain_recomputed": true,
+    "bootstrap_recomputed": true,
+    "improved_days_recomputed": true,
+    "frozen_three_gates_failed": true,
+    "test_remained_unscored": true
+  },
+  "checks_passed": 11,
+  "checks_total": 11,
+  "local_validation": "PASS"
+}

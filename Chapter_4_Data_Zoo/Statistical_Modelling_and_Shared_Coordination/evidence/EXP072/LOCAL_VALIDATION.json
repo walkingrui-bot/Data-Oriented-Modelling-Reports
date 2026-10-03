@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "seven_version_checks": true,
+    "six_groups": true,
+    "all_twofold": true,
+    "extra_sum": true,
+    "no_conflicts": true,
+    "decision": true,
+    "no_model_scores": true
+  },
+  "passed": 7,
+  "total": 7
+}

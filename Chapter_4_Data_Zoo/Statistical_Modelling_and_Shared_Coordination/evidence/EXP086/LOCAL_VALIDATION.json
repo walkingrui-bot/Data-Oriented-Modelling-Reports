@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "13_dates": true,
+    "sum_rows": true,
+    "all_day_min_rows": true,
+    "two_frozen_failures_only": true,
+    "one_backward_step": true,
+    "zero_models": true,
+    "source_stopped": true
+  },
+  "passed": 7,
+  "total": 7,
+  "local_validation": "PASS"
+}

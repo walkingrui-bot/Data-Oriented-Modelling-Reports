@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "13_days_100_windows": true,
+    "1300_stable": true,
+    "10_levels_daily": true,
+    "backstep_same_window": true,
+    "old_gate_still_failed": true,
+    "new_six_gates_pass": true,
+    "zero_models": true
+  },
+  "passed": 7,
+  "total": 7,
+  "local_validation": "PASS"
+}

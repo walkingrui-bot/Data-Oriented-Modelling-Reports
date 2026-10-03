@@ -1,0 +1,5 @@
+Model,Full,-1 pipeline,-2 pipelines,-3 pipelines,Full seed SD
+Masked polynomial,0.197928,0.198397,0.198865,0.199479,—
+Raw PsyMoE,0.197891,0.198353,0.198987,0.199928,0.000981
+Stat-PsyMoE,0.197868,0.198338,0.198942,0.199817,0.000372
+Stat-PsyMoE + precision,0.197769,0.198229,0.198814,0.199459,0.000253

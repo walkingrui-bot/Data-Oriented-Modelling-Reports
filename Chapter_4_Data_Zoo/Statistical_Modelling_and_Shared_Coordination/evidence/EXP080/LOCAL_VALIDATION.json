@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "attempt_three_valid": true,
+    "member_and_columns": true,
+    "source_span_and_rows": true,
+    "unique_calendar": true,
+    "ten_minute_steps": true,
+    "nine_columns_complete": true,
+    "no_negative_zone": true,
+    "all_q_zone_variable": true,
+    "partition_pairs_sum": true,
+    "partition_gates": true,
+    "frozen_gate_pass": true,
+    "no_model_or_scores": true
+  },
+  "passed": 12,
+  "total": 12
+}

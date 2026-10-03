@@ -1,0 +1,51 @@
+{
+  "scope": "Publication verification only; no experiments rerun and no provider datasets republished.",
+  "source_tables_preserved": 36,
+  "original_figures_preserved": 39,
+  "native_equations_preserved": 4,
+  "added_glossary_tables": 1,
+  "word_pages_reviewed": 61,
+  "header_footer_references": 0,
+  "public_evidence_files": 922,
+  "experiment_identifiers": 89,
+  "EXP048": {
+    "four_domain_relative_MAE_improvements": {
+      "validation_same10": 0.10190173352545573,
+      "future_same10": 0.22272923429356717,
+      "station_2016": 0.1003624139808631,
+      "future_station_2": 0.20400533233913742
+    },
+    "gate": true
+  },
+  "EXP057": {
+    "F32_median_loss_difference": -0.00023937225341796875,
+    "F32_gate": false,
+    "C32_gate": false
+  },
+  "EXP058": {
+    "comparison": "B16_4000_minus_B16_2000_as_improvement",
+    "same_seed_improvements": {
+      "101": 2.9861927032470703e-05,
+      "202": 0.0,
+      "303": 2.5466084480285645e-05
+    },
+    "median_improvement": 2.5466084480285645e-05,
+    "seeds_improving_by_at_least_0_0002": 0,
+    "pass": false
+  },
+  "EXP085": {
+    "single_logloss": 0.9316198398797687,
+    "multi_logloss": 0.6056255131296965,
+    "single_balanced_accuracy": 0.5416666666666667,
+    "multi_balanced_accuracy": 0.5416666666666666,
+    "gate": false
+  },
+  "EXP088": {
+    "base_day_equal_mae_ppm": 0.3277318235507355,
+    "multi_day_equal_mae_ppm": 0.286666334564807,
+    "relative_multi_gain_pct": 12.53021099416402,
+    "improved_days": 2,
+    "improved_levels": 9,
+    "gate": false
+  }
+}

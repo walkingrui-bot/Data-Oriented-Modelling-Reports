@@ -1,0 +1,6 @@
+Component,Structure,Role in the experiment
+A encoder,3 → 10 → 3,Maps continuous observation into the shared coordinate
+B encoder,3 → 10 → 3,Maps probability observation into the shared coordinate
+C encoder,16 → 18 → 3,Maps image observation into the shared coordinate
+Triangle core,Three nonlinear nodes with six directed cross-edges plus self gains,Provides the common internal coordinate used by every observation route
+A/B/C decoders,Shared-coordinate → native output surface,Render the common internal state back into each observer’s native world

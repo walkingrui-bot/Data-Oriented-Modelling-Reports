@@ -1,0 +1,247 @@
+{
+  "run_id": "EXP048-BASELINE-001",
+  "development_only_validation": "validation_same10",
+  "test_evaluated_once": [
+    "future_same10",
+    "station_2016",
+    "future_station_2"
+  ],
+  "domains": {
+    "validation_same10": {
+      "n": 84064,
+      "B0_persistence_MAE": 51.646899980966886,
+      "B1_ridge_MAE": 46.38399134169053,
+      "B0_persistence_RMSE": 79.24352644921443,
+      "B1_ridge_RMSE": 71.67950687799808,
+      "B1_relative_MAE_improvement": 0.10190173352545573
+    },
+    "future_same10": {
+      "n": 13383,
+      "B0_persistence_MAE": 79.55084809086154,
+      "B1_ridge_MAE": 61.83254860818007,
+      "B0_persistence_RMSE": 120.96372615028235,
+      "B1_ridge_RMSE": 95.09552270002223,
+      "B1_relative_MAE_improvement": 0.22272923429356717
+    },
+    "station_2016": {
+      "n": 16796,
+      "B0_persistence_MAE": 55.163610383424626,
+      "B1_ridge_MAE": 49.62725728144432,
+      "B0_persistence_RMSE": 84.86538308409946,
+      "B1_ridge_RMSE": 76.2956416209587,
+      "B1_relative_MAE_improvement": 0.1003624139808631
+    },
+    "future_station_2": {
+      "n": 2676,
+      "B0_persistence_MAE": 87.58856502242152,
+      "B1_ridge_MAE": 69.72003070591427,
+      "B0_persistence_RMSE": 134.1809581187813,
+      "B1_ridge_RMSE": 107.51871193144007,
+      "B1_relative_MAE_improvement": 0.20400533233913742
+    }
+  },
+  "by_station": {
+    "validation_same10": {
+      "Changping": {
+        "n": 8529,
+        "B0_persistence_MAE": 44.41751670770313,
+        "B1_ridge_MAE": 40.52645695467177,
+        "B0_persistence_RMSE": 68.87004606792458,
+        "B1_ridge_RMSE": 63.417805179115184,
+        "B1_relative_MAE_improvement": 0.08760192017570734
+      },
+      "Dingling": {
+        "n": 8242,
+        "B0_persistence_MAE": 45.9790099490415,
+        "B1_ridge_MAE": 40.83200998192354,
+        "B0_persistence_RMSE": 72.60285527129946,
+        "B1_ridge_RMSE": 64.33605864062778,
+        "B1_relative_MAE_improvement": 0.11194238355332953
+      },
+      "Dongsi": {
+        "n": 8142,
+        "B0_persistence_MAE": 57.90469172193564,
+        "B1_ridge_MAE": 52.21129346834657,
+        "B0_persistence_RMSE": 88.25847321268614,
+        "B1_ridge_RMSE": 80.28357005838339,
+        "B1_relative_MAE_improvement": 0.0983236087488275
+      },
+      "Guanyuan": {
+        "n": 8497,
+        "B0_persistence_MAE": 53.91914793456514,
+        "B1_ridge_MAE": 49.30277238657086,
+        "B0_persistence_RMSE": 81.19006928701135,
+        "B1_ridge_RMSE": 74.54833538952322,
+        "B1_relative_MAE_improvement": 0.08561662646443513
+      },
+      "Gucheng": {
+        "n": 8470,
+        "B0_persistence_MAE": 54.81759149940968,
+        "B1_ridge_MAE": 49.60969799848113,
+        "B0_persistence_RMSE": 82.0168518693256,
+        "B1_ridge_RMSE": 77.859311728521,
+        "B1_relative_MAE_improvement": 0.0950040554223297
+      },
+      "Huairou": {
+        "n": 8448,
+        "B0_persistence_MAE": 46.076822916666664,
+        "B1_ridge_MAE": 40.5849834991349,
+        "B0_persistence_RMSE": 71.07862080945466,
+        "B1_ridge_RMSE": 63.71994754611417,
+        "B1_relative_MAE_improvement": 0.11918876063708128
+      },
+      "Nongzhanguan": {
+        "n": 8518,
+        "B0_persistence_MAE": 54.86029584409486,
+        "B1_ridge_MAE": 49.40332062073947,
+        "B0_persistence_RMSE": 82.13648952494603,
+        "B1_ridge_RMSE": 74.67815686300928,
+        "B1_relative_MAE_improvement": 0.09947039364977783
+      },
+      "Shunyi": {
+        "n": 8165,
+        "B0_persistence_MAE": 54.02155541947336,
+        "B1_ridge_MAE": 47.48286696195873,
+        "B0_persistence_RMSE": 83.74630134140237,
+        "B1_ridge_RMSE": 72.52985481022449,
+        "B1_relative_MAE_improvement": 0.1210385078093772
+      },
+      "Tiantan": {
+        "n": 8503,
+        "B0_persistence_MAE": 52.67870163471716,
+        "B1_ridge_MAE": 47.329268514843946,
+        "B0_persistence_RMSE": 80.392686269617,
+        "B1_ridge_RMSE": 72.03461397974002,
+        "B1_relative_MAE_improvement": 0.10154830992166564
+      },
+      "Wanliu": {
+        "n": 8550,
+        "B0_persistence_MAE": 51.972280701754386,
+        "B1_ridge_MAE": 46.66600181299376,
+        "B0_persistence_RMSE": 80.3566880224759,
+        "B1_ridge_RMSE": 71.38959093590425,
+        "B1_relative_MAE_improvement": 0.1020982496267766
+      }
+    },
+    "future_same10": {
+      "Changping": {
+        "n": 1352,
+        "B0_persistence_MAE": 70.15532544378698,
+        "B1_ridge_MAE": 53.01891365563789,
+        "B0_persistence_RMSE": 107.7301856464022,
+        "B1_ridge_RMSE": 79.79463404128506,
+        "B1_relative_MAE_improvement": 0.24426387704351682
+      },
+      "Dingling": {
+        "n": 1361,
+        "B0_persistence_MAE": 65.40852314474651,
+        "B1_ridge_MAE": 46.73524842189366,
+        "B0_persistence_RMSE": 96.48124767831081,
+        "B1_ridge_RMSE": 68.5089700547803,
+        "B1_relative_MAE_improvement": 0.2854868727356773
+      },
+      "Dongsi": {
+        "n": 1321,
+        "B0_persistence_MAE": 89.86676760030281,
+        "B1_ridge_MAE": 70.95157248957797,
+        "B0_persistence_RMSE": 135.91750626282666,
+        "B1_ridge_RMSE": 108.31751898261703,
+        "B1_relative_MAE_improvement": 0.21048042135946488
+      },
+      "Guanyuan": {
+        "n": 1283,
+        "B0_persistence_MAE": 81.20732657833203,
+        "B1_ridge_MAE": 59.73964800809357,
+        "B0_persistence_RMSE": 122.6781968583315,
+        "B1_ridge_RMSE": 86.03796897036746,
+        "B1_relative_MAE_improvement": 0.2643564253963081
+      },
+      "Gucheng": {
+        "n": 1341,
+        "B0_persistence_MAE": 88.19463087248322,
+        "B1_ridge_MAE": 70.03695961688241,
+        "B0_persistence_RMSE": 133.34052832936007,
+        "B1_ridge_RMSE": 112.42784859995092,
+        "B1_relative_MAE_improvement": 0.20588182155730306
+      },
+      "Huairou": {
+        "n": 1349,
+        "B0_persistence_MAE": 64.78799110452186,
+        "B1_ridge_MAE": 49.52231439026563,
+        "B0_persistence_RMSE": 96.72516527885028,
+        "B1_ridge_RMSE": 74.22219840673002,
+        "B1_relative_MAE_improvement": 0.2356250973985019
+      },
+      "Nongzhanguan": {
+        "n": 1335,
+        "B0_persistence_MAE": 88.46292134831461,
+        "B1_ridge_MAE": 70.69317370260231,
+        "B0_persistence_RMSE": 134.89218333022674,
+        "B1_ridge_RMSE": 108.13240485274434,
+        "B1_relative_MAE_improvement": 0.20087226800645164
+      },
+      "Shunyi": {
+        "n": 1352,
+        "B0_persistence_MAE": 83.77810650887574,
+        "B1_ridge_MAE": 66.63095519342772,
+        "B0_persistence_RMSE": 127.57269652793376,
+        "B1_ridge_RMSE": 101.99163965600677,
+        "B1_relative_MAE_improvement": 0.20467341683869866
+      },
+      "Tiantan": {
+        "n": 1343,
+        "B0_persistence_MAE": 83.40804169769173,
+        "B1_ridge_MAE": 67.52126642304862,
+        "B0_persistence_RMSE": 125.0486517382881,
+        "B1_ridge_RMSE": 103.7414926588323,
+        "B1_relative_MAE_improvement": 0.1904705463799754
+      },
+      "Wanliu": {
+        "n": 1346,
+        "B0_persistence_MAE": 80.83506686478455,
+        "B1_ridge_MAE": 63.87599845927735,
+        "B0_persistence_RMSE": 121.86958049824098,
+        "B1_ridge_RMSE": 96.4560515651506,
+        "B1_relative_MAE_improvement": 0.20979840882515988
+      }
+    },
+    "station_2016": {
+      "Aotizhongxin": {
+        "n": 8413,
+        "B0_persistence_MAE": 54.22595982408178,
+        "B1_ridge_MAE": 48.53904637073809,
+        "B0_persistence_RMSE": 82.88560152817274,
+        "B1_ridge_RMSE": 73.59943893413602,
+        "B1_relative_MAE_improvement": 0.10487437145959233
+      },
+      "Wanshouxigong": {
+        "n": 8383,
+        "B0_persistence_MAE": 56.10461648574496,
+        "B1_ridge_MAE": 50.719362541109305,
+        "B0_persistence_RMSE": 86.8068664616644,
+        "B1_ridge_RMSE": 78.90892700032232,
+        "B1_relative_MAE_improvement": 0.09598593274412526
+      }
+    },
+    "future_station_2": {
+      "Aotizhongxin": {
+        "n": 1349,
+        "B0_persistence_MAE": 83.54633061527058,
+        "B1_ridge_MAE": 64.95252317746677,
+        "B0_persistence_RMSE": 128.2891239850017,
+        "B1_ridge_RMSE": 98.21611496626478,
+        "B1_relative_MAE_improvement": 0.22255684122655206
+      },
+      "Wanshouxigong": {
+        "n": 1327,
+        "B0_persistence_MAE": 91.69781461944235,
+        "B1_ridge_MAE": 74.56657754530814,
+        "B0_persistence_RMSE": 139.9163949955315,
+        "B1_ridge_RMSE": 116.21476296904345,
+        "B1_relative_MAE_improvement": 0.18682274103511676
+      }
+    }
+  },
+  "gate_pass": true,
+  "conclusion_code": "TRADITIONAL_BASELINE_GENERALISES_IN_FROZEN_DOMAINS"
+}

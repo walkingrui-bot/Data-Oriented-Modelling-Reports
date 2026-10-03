@@ -1,0 +1,71 @@
+{
+  "episodes": 300,
+  "days": 3,
+  "base_day_equal_mae_ppm": 0.3277318235507355,
+  "multi_day_equal_mae_ppm": 0.286666334564807,
+  "relative_multi_gain_pct": 12.53021099416402,
+  "improved_days": 2,
+  "improved_levels": 9,
+  "daily_mae": {
+    "2016-10-08": {
+      "base_mae": 0.21186959917010278,
+      "multi_mae": 0.21385729351193028
+    },
+    "2016-10-10": {
+      "base_mae": 0.3200015043880115,
+      "multi_mae": 0.27105769224906373
+    },
+    "2016-10-11": {
+      "base_mae": 0.4513243670940922,
+      "multi_mae": 0.375084017933427
+    }
+  },
+  "by_concentration_level_mae": {
+    "0.0": {
+      "base_mae": 0.29039459509642745,
+      "multi_mae": 0.2686775054779494
+    },
+    "2.2": {
+      "base_mae": 0.457340826899019,
+      "multi_mae": 0.6084515666122577
+    },
+    "4.4": {
+      "base_mae": 0.2245707795313783,
+      "multi_mae": 0.22247025558218728
+    },
+    "6.7": {
+      "base_mae": 0.30736612281459263,
+      "multi_mae": 0.2419363808976152
+    },
+    "8.9": {
+      "base_mae": 0.29899610298007734,
+      "multi_mae": 0.20031878227475577
+    },
+    "11.1": {
+      "base_mae": 0.22624645151562628,
+      "multi_mae": 0.20912435189241
+    },
+    "13.3": {
+      "base_mae": 0.37197378455847613,
+      "multi_mae": 0.24788739410072533
+    },
+    "15.6": {
+      "base_mae": 0.5178208685669323,
+      "multi_mae": 0.3704342255456516
+    },
+    "17.8": {
+      "base_mae": 0.1262502067304063,
+      "multi_mae": 0.11516565467390727
+    },
+    "20.0": {
+      "base_mae": 0.456358496814419,
+      "multi_mae": 0.3821972285906104
+    }
+  },
+  "checks": {
+    "gain_at_least_5pct": true,
+    "all_three_days_improve": false,
+    "at_least_seven_of_ten_levels_improve": true
+  },
+  "three_gate_pass": false
+}

@@ -1,0 +1,243 @@
+{
+  "run_id": "EXP049-SHARED-LINEAR-001",
+  "evidence_class": "EXPLORATORY_REUSE_OF_EXPOSED_HOLDOUTS",
+  "EXP048_B1_predictions_original_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP048-20261002-001/HOLDOUT_PREDICTIONS.csv",
+  "domains": {
+    "validation_same10": {
+      "n": 82539,
+      "B1_matched_MAE": 46.4459874050643,
+      "B2_shared_linear_MAE": 46.23720063714722,
+      "B1_matched_RMSE": 71.81338097440084,
+      "B2_shared_linear_RMSE": 71.58753523588318,
+      "B2_relative_MAE_improvement": 0.004495259538702778
+    },
+    "future_same10": {
+      "n": 13309,
+      "B1_matched_MAE": 61.898196341467774,
+      "B2_shared_linear_MAE": 61.495918085232,
+      "B1_matched_RMSE": 95.2696346609591,
+      "B2_shared_linear_RMSE": 94.83922620638688,
+      "B2_relative_MAE_improvement": 0.0064990303435752406
+    },
+    "station_2016": {
+      "n": 16774,
+      "B1_matched_MAE": 49.643215226076585,
+      "B2_shared_linear_MAE": 49.46711982116546,
+      "B1_matched_RMSE": 76.29947908448888,
+      "B2_shared_linear_RMSE": 76.28959669057556,
+      "B2_relative_MAE_improvement": 0.003547219979793459
+    },
+    "future_station_2": {
+      "n": 2676,
+      "B1_matched_MAE": 69.72003070591427,
+      "B2_shared_linear_MAE": 69.25590131819337,
+      "B1_matched_RMSE": 107.51871193144007,
+      "B2_shared_linear_RMSE": 107.402112689795,
+      "B2_relative_MAE_improvement": 0.006657045084771163
+    }
+  },
+  "by_station": {
+    "validation_same10": {
+      "Changping": {
+        "n": 8355,
+        "B1_matched_MAE": 40.51302235338346,
+        "B2_shared_linear_MAE": 40.25339300810211,
+        "B1_matched_RMSE": 63.40729627709727,
+        "B2_shared_linear_RMSE": 62.80725352875101,
+        "B2_relative_MAE_improvement": 0.006408540518569095
+      },
+      "Dingling": {
+        "n": 8114,
+        "B1_matched_MAE": 40.92803814066293,
+        "B2_shared_linear_MAE": 40.71568372767612,
+        "B1_matched_RMSE": 64.51292363632716,
+        "B2_shared_linear_RMSE": 63.84297644428197,
+        "B2_relative_MAE_improvement": 0.005188482581475751
+      },
+      "Dongsi": {
+        "n": 8025,
+        "B1_matched_MAE": 52.24894438637922,
+        "B2_shared_linear_MAE": 52.20978840632287,
+        "B1_matched_RMSE": 80.40385408853204,
+        "B2_shared_linear_RMSE": 80.66722834283476,
+        "B2_relative_MAE_improvement": 0.0007494118879568523
+      },
+      "Guanyuan": {
+        "n": 8356,
+        "B1_matched_MAE": 49.31512067987326,
+        "B2_shared_linear_MAE": 49.237959674668765,
+        "B1_matched_RMSE": 74.59526973310608,
+        "B2_shared_linear_RMSE": 74.7027050516631,
+        "B2_relative_MAE_improvement": 0.0015646520608837422
+      },
+      "Gucheng": {
+        "n": 8313,
+        "B1_matched_MAE": 49.78042243829422,
+        "B2_shared_linear_MAE": 49.72803545770403,
+        "B1_matched_RMSE": 78.12185965695241,
+        "B2_shared_linear_RMSE": 78.1687678619465,
+        "B2_relative_MAE_improvement": 0.0010523611095329954
+      },
+      "Huairou": {
+        "n": 8285,
+        "B1_matched_MAE": 40.52582873150891,
+        "B2_shared_linear_MAE": 40.015730144693016,
+        "B1_matched_RMSE": 63.65966550480076,
+        "B2_shared_linear_RMSE": 62.72299193256786,
+        "B2_relative_MAE_improvement": 0.012586999520611708
+      },
+      "Nongzhanguan": {
+        "n": 8351,
+        "B1_matched_MAE": 49.55158828834189,
+        "B2_shared_linear_MAE": 49.50440898744702,
+        "B1_matched_RMSE": 74.96290879750666,
+        "B2_shared_linear_RMSE": 75.10091677658168,
+        "B2_relative_MAE_improvement": 0.000952124896992812
+      },
+      "Shunyi": {
+        "n": 8023,
+        "B1_matched_MAE": 47.43048800652918,
+        "B2_shared_linear_MAE": 46.8592243702684,
+        "B1_matched_RMSE": 72.44659415495103,
+        "B2_shared_linear_RMSE": 71.79669648945456,
+        "B2_relative_MAE_improvement": 0.012044228517786748
+      },
+      "Tiantan": {
+        "n": 8341,
+        "B1_matched_MAE": 47.50000232145991,
+        "B2_shared_linear_MAE": 47.40174056828567,
+        "B1_matched_RMSE": 72.30968051789924,
+        "B2_shared_linear_RMSE": 72.33439784705256,
+        "B2_relative_MAE_improvement": 0.002068668386777106
+      },
+      "Wanliu": {
+        "n": 8376,
+        "B1_matched_MAE": 46.74489528215321,
+        "B2_shared_linear_MAE": 46.51527296711853,
+        "B1_matched_RMSE": 71.62538302935653,
+        "B2_shared_linear_RMSE": 71.33479644363156,
+        "B2_relative_MAE_improvement": 0.004912243650321058
+      }
+    },
+    "future_same10": {
+      "Changping": {
+        "n": 1343,
+        "B1_matched_MAE": 53.10413542615604,
+        "B2_shared_linear_MAE": 52.83251906510437,
+        "B1_matched_RMSE": 79.97611043438347,
+        "B2_shared_linear_RMSE": 79.04475028471862,
+        "B2_relative_MAE_improvement": 0.005114787367725193
+      },
+      "Dingling": {
+        "n": 1347,
+        "B1_matched_MAE": 46.92811396826452,
+        "B2_shared_linear_MAE": 46.70821471397459,
+        "B1_matched_RMSE": 68.77943673121943,
+        "B2_shared_linear_RMSE": 67.24892902137645,
+        "B2_relative_MAE_improvement": 0.004685874536501378
+      },
+      "Dongsi": {
+        "n": 1318,
+        "B1_matched_MAE": 70.92877303521956,
+        "B2_shared_linear_MAE": 70.49825194044381,
+        "B1_matched_RMSE": 108.36185894363557,
+        "B2_shared_linear_RMSE": 108.36399747225674,
+        "B2_relative_MAE_improvement": 0.006069766560912848
+      },
+      "Guanyuan": {
+        "n": 1275,
+        "B1_matched_MAE": 59.73582108045269,
+        "B2_shared_linear_MAE": 59.301626878230415,
+        "B1_matched_RMSE": 86.16316916547126,
+        "B2_shared_linear_RMSE": 85.9292700552383,
+        "B2_relative_MAE_improvement": 0.0072685734349829945
+      },
+      "Gucheng": {
+        "n": 1335,
+        "B1_matched_MAE": 70.0785313187804,
+        "B2_shared_linear_MAE": 70.03498019145891,
+        "B1_matched_RMSE": 112.58897566043306,
+        "B2_shared_linear_RMSE": 112.5929606400526,
+        "B2_relative_MAE_improvement": 0.00062146175871447
+      },
+      "Huairou": {
+        "n": 1341,
+        "B1_matched_MAE": 49.56863351890797,
+        "B2_shared_linear_MAE": 48.75800426125522,
+        "B1_matched_RMSE": 74.3706216147126,
+        "B2_shared_linear_RMSE": 72.79180108699482,
+        "B2_relative_MAE_improvement": 0.016353673686476222
+      },
+      "Nongzhanguan": {
+        "n": 1329,
+        "B1_matched_MAE": 70.72918911692092,
+        "B2_shared_linear_MAE": 70.4588462158522,
+        "B1_matched_RMSE": 108.27884743918776,
+        "B2_shared_linear_RMSE": 108.35097798363522,
+        "B2_relative_MAE_improvement": 0.0038222253703745768
+      },
+      "Shunyi": {
+        "n": 1345,
+        "B1_matched_MAE": 66.64912759070704,
+        "B2_shared_linear_MAE": 65.82679213105575,
+        "B1_matched_RMSE": 102.1520707769613,
+        "B2_shared_linear_RMSE": 101.5589566474496,
+        "B2_relative_MAE_improvement": 0.012338277924675234
+      },
+      "Tiantan": {
+        "n": 1338,
+        "B1_matched_MAE": 67.55684313480437,
+        "B2_shared_linear_MAE": 67.1339114757297,
+        "B1_matched_RMSE": 103.87155716484673,
+        "B2_shared_linear_RMSE": 103.89428009409745,
+        "B2_relative_MAE_improvement": 0.0062603822122170305
+      },
+      "Wanliu": {
+        "n": 1338,
+        "B1_matched_MAE": 63.950056097409295,
+        "B2_shared_linear_MAE": 63.65445985301954,
+        "B1_matched_RMSE": 96.65383675209675,
+        "B2_shared_linear_RMSE": 96.21536806815901,
+        "B2_relative_MAE_improvement": 0.004622298437698014
+      }
+    },
+    "station_2016": {
+      "Aotizhongxin": {
+        "n": 8403,
+        "B1_matched_MAE": 48.56468934424042,
+        "B2_shared_linear_MAE": 48.3410338098275,
+        "B1_matched_RMSE": 73.63155775036768,
+        "B2_shared_linear_RMSE": 73.46033300506043,
+        "B2_relative_MAE_improvement": 0.0046053117487807604
+      },
+      "Wanshouxigong": {
+        "n": 8371,
+        "B1_matched_MAE": 50.72586401177355,
+        "B2_shared_linear_MAE": 50.59751054548431,
+        "B1_matched_RMSE": 78.88690528220435,
+        "B2_shared_linear_RMSE": 79.02786989131077,
+        "B2_relative_MAE_improvement": 0.0025303357328611
+      }
+    },
+    "future_station_2": {
+      "Aotizhongxin": {
+        "n": 1349,
+        "B1_matched_MAE": 64.95252317746677,
+        "B2_shared_linear_MAE": 64.31292229508155,
+        "B1_matched_RMSE": 98.21611496626478,
+        "B2_shared_linear_RMSE": 97.80817164329696,
+        "B2_relative_MAE_improvement": 0.009847206099102168
+      },
+      "Wanshouxigong": {
+        "n": 1327,
+        "B1_matched_MAE": 74.56657754530814,
+        "B2_shared_linear_MAE": 74.28082875012844,
+        "B1_matched_RMSE": 116.21476296904345,
+        "B2_shared_linear_RMSE": 116.34701978593826,
+        "B2_relative_MAE_improvement": 0.003832129683115415
+      }
+    }
+  },
+  "gate_pass": false,
+  "conclusion_code": "NO_STABLE_SHARED_CURRENT_GAIN"
+}

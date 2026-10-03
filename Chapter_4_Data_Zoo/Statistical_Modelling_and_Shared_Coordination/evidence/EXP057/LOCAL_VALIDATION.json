@@ -1,0 +1,16 @@
+{
+  "run_id": "EXP057-CAPACITY-001",
+  "checks": {
+    "reconstructed_original_validation_within_2e_6": true,
+    "real_development_unit_counts": true,
+    "nine_expected_new_models_only": true,
+    "all_saved_predictions_recompute_reported_loss": true,
+    "all_checkpoint_shapes_and_parameter_counts_match": true,
+    "all_best_epochs_match_traces": true,
+    "B16_epoch_1000_matches_original_traces": true,
+    "frozen_gate_recomputes": true
+  },
+  "passed": 8,
+  "total": 8,
+  "scope": "EXP057 validation predictions, nine saved new states/traces, original B16 training traces and original validation reconstruction summary; no test data or global suite"
+}

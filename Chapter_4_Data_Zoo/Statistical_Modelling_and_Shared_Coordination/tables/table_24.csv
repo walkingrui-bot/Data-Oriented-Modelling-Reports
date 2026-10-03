@@ -1,0 +1,7 @@
+View,Five measurements
+Mean size/shape,"mean radius, texture, perimeter, area, smoothness"
+Mean irregularity,"mean compactness, concavity, concave points, symmetry, fractal dimension"
+SE size/shape,"radius, texture, perimeter, area, smoothness errors"
+SE irregularity,"compactness, concavity, concave-points, symmetry, fractal-dimension errors"
+Worst size/shape,"worst radius, texture, perimeter, area, smoothness"
+Worst irregularity,"worst compactness, concavity, concave points, symmetry, fractal dimension"

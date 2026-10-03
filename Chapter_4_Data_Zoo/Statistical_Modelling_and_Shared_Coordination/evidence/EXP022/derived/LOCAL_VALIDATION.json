@@ -1,0 +1,26 @@
+{
+  "run_id": "EXP022-VERIFY-001",
+  "status": "PASS_SCOPED",
+  "checked": [
+    "source metadata lock",
+    "75/75 ETL gate",
+    "50/50 semantic gate",
+    "25/25 page QA",
+    "10,998 full scope reclassification",
+    "0 assessable same-scope pairs with rate null",
+    "document roles unknown",
+    "8,955 unique Tier A events",
+    "4 BLA anomalies excluded",
+    "4,099 NDA first-observed minima",
+    "5,620 NDA and 750 BLA timelines",
+    "unknown public-first and document date remain null",
+    "no target/disease/indication fields"
+  ],
+  "not_checked": [
+    "unrelated repository",
+    "historical source release availability",
+    "clinical indication",
+    "target or disease mapping",
+    "prediction model"
+  ]
+}

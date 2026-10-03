@@ -1,0 +1,61 @@
+{
+  "run_id": "EXP019-RESTORE-001",
+  "status": "PASS",
+  "new_checkpoints": 9,
+  "detail": {
+    "frozen_seed_101": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/frozen_seed_101.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+      "validation_max_abs_difference": 8.940696716308594e-08,
+      "best_epoch": 1000
+    },
+    "frozen_seed_202": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/frozen_seed_202.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+      "validation_max_abs_difference": 1.7881393432617188e-07,
+      "best_epoch": 948
+    },
+    "frozen_seed_303": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/frozen_seed_303.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt",
+      "validation_max_abs_difference": 1.1920928955078125e-07,
+      "best_epoch": 1000
+    },
+    "full_retrain_seed_101": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/full_retrain_seed_101.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+      "validation_max_abs_difference": 1.043081283569336e-07,
+      "best_epoch": 484
+    },
+    "full_retrain_seed_202": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/full_retrain_seed_202.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+      "validation_max_abs_difference": 1.1920928955078125e-07,
+      "best_epoch": 387
+    },
+    "full_retrain_seed_303": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/full_retrain_seed_303.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt",
+      "validation_max_abs_difference": 1.7881393432617188e-07,
+      "best_epoch": 281
+    },
+    "no_ep_frozen_seed_101": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/no_ep_frozen_seed_101.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+      "validation_max_abs_difference": 1.1920928955078125e-07,
+      "best_epoch": 1000
+    },
+    "no_ep_frozen_seed_202": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/no_ep_frozen_seed_202.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+      "validation_max_abs_difference": 1.7881393432617188e-07,
+      "best_epoch": 999
+    },
+    "no_ep_frozen_seed_303": {
+      "checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/no_ep_frozen_seed_303.pt",
+      "parent_checkpoint": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt",
+      "validation_max_abs_difference": 1.1920928955078125e-07,
+      "best_epoch": 1000
+    }
+  }
+}

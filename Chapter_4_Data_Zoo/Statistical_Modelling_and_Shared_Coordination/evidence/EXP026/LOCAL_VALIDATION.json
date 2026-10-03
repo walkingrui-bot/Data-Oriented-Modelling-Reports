@@ -1,0 +1,20 @@
+{
+  "run_id": "EXP026-VERIFY-001",
+  "checks": {
+    "469_unique_split_and_feature_ids": true,
+    "label_split_alignment": true,
+    "feature_fields_only_allowlist": true,
+    "all_original_sources_readable": true,
+    "source_budget": true,
+    "15_fits_converged": true,
+    "12_validation_candidates": true,
+    "prediction_rows_and_probabilities": true,
+    "prediction_labels_match_split": true,
+    "metrics_recomputed_from_saved_predictions": true,
+    "frozen_gate_recomputed": true
+  },
+  "passed": 11,
+  "total": 11,
+  "all_passed": true,
+  "scope": "Only EXP026 saved outputs; no source fetch or model refit"
+}

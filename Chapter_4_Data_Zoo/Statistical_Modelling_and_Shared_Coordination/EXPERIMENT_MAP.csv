@@ -1,0 +1,90 @@
+experiment,stage,primary_record,public_files,code_files,scope
+EXP001,Controlled coordination mechanisms,evidence/EXP001/README.txt,24,3,Controlled simulation
+EXP002,Controlled coordination mechanisms,evidence/EXP002/README.md,27,4,Controlled simulation
+EXP003,Controlled coordination mechanisms,evidence/EXP003/README.md,38,4,Controlled simulation
+EXP004,Real measurement views,evidence/EXP004/README.md,26,1,See experiment-specific protocol and gate
+EXP005,"Measurement state, time and local precision",evidence/EXP005/README.md,18,4,See experiment-specific protocol and gate
+EXP006,"Measurement state, time and local precision",evidence/EXP006/README.md,19,3,See experiment-specific protocol and gate
+EXP007,"Measurement state, time and local precision",evidence/EXP007/README.md,16,5,See experiment-specific protocol and gate
+EXP008,"Measurement state, time and local precision",evidence/EXP008/README.md,9,2,See experiment-specific protocol and gate
+EXP009,"Measurement state, time and local precision",evidence/EXP009/README.md,21,2,See experiment-specific protocol and gate
+EXP010,"Measurement state, time and local precision",evidence/EXP010/README.md,24,5,See experiment-specific protocol and gate
+EXP011,Statistical calibration and expert routing,evidence/EXP011/README.md,9,1,See experiment-specific protocol and gate
+EXP012,Statistical calibration and expert routing,evidence/EXP012/README.md,10,1,See experiment-specific protocol and gate
+EXP013,Statistical calibration and expert routing,evidence/EXP013/README.md,13,1,See experiment-specific protocol and gate
+EXP014,Statistical calibration and expert routing,evidence/EXP014/README.md,11,1,See experiment-specific protocol and gate
+EXP015,Statistical calibration and expert routing,evidence/EXP015/README.md,11,1,See experiment-specific protocol and gate
+EXP016,Native source passport and training interfaces,evidence/EXP016/README.md,13,6,See experiment-specific protocol and gate
+EXP017,Native source training and expansion,evidence/EXP017/REPORT.md,45,11,See experiment-specific protocol and gate
+EXP018,Native source training and expansion,evidence/EXP018/REPORT.md,8,4,See experiment-specific protocol and gate
+EXP019,Native source training and expansion,evidence/EXP019/REPORT.md,30,6,See experiment-specific protocol and gate
+EXP020,Historical source and event identification,evidence/EXP020/REPORT.md,7,2,See experiment-specific protocol and gate
+EXP021,Historical source and event identification,evidence/EXP021/REPORT.md,13,7,See experiment-specific protocol and gate
+EXP022,Historical source and event identification,evidence/EXP022/REPORT.md,20,10,See experiment-specific protocol and gate
+EXP023,Historical source and event identification,evidence/EXP023/REPORT.md,7,2,See experiment-specific protocol and gate
+EXP024,Historical source and event identification,evidence/EXP024/REPORT.md,8,3,See experiment-specific protocol and gate
+EXP025,Person-level and longitudinal source qualification,evidence/EXP025/REPORT.md,7,2,See experiment-specific protocol and gate
+EXP026,Person-level and longitudinal source qualification,evidence/EXP026/REPORT.md,13,4,See experiment-specific protocol and gate
+EXP027,Person-level and longitudinal source qualification,evidence/EXP027/REPORT.md,10,2,See experiment-specific protocol and gate
+EXP028,Person-level and longitudinal source qualification,evidence/EXP028/REPORT.md,11,3,See experiment-specific protocol and gate
+EXP029,Person-level and longitudinal source qualification,evidence/EXP029/REPORT.md,5,0,See experiment-specific protocol and gate
+EXP030,Person-level and longitudinal source qualification,evidence/EXP030/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP031,Person-level and longitudinal source qualification,evidence/EXP031/REPORT.md,12,4,See experiment-specific protocol and gate
+EXP032,Person-level and longitudinal source qualification,evidence/EXP032/REPORT.md,9,2,See experiment-specific protocol and gate
+EXP033,Person-level and longitudinal source qualification,evidence/EXP033/REPORT.md,11,2,See experiment-specific protocol and gate
+EXP034,Person-level and longitudinal source qualification,evidence/EXP034/REPORT.md,5,0,See experiment-specific protocol and gate
+EXP035,Person-level and longitudinal source qualification,evidence/EXP035/REPORT.md,6,0,See experiment-specific protocol and gate
+EXP036,Person-level and longitudinal source qualification,evidence/EXP036/REPORT.md,8,3,See experiment-specific protocol and gate
+EXP037,Person-level and longitudinal source qualification,evidence/EXP037/REPORT.md,5,1,See experiment-specific protocol and gate
+EXP038,Person-level and longitudinal source qualification,evidence/EXP038/REPORT.md,7,2,See experiment-specific protocol and gate
+EXP039,Person-level and longitudinal source qualification,evidence/EXP039/REPORT.md,5,1,See experiment-specific protocol and gate
+EXP040,Person-level and longitudinal source qualification,evidence/EXP040/REPORT.md,5,1,See experiment-specific protocol and gate
+EXP041,Person-level and longitudinal source qualification,evidence/EXP041/REPORT.md,5,1,See experiment-specific protocol and gate
+EXP042,Person-level and longitudinal source qualification,evidence/EXP042/REPORT.md,5,1,See experiment-specific protocol and gate
+EXP043,Person-level and longitudinal source qualification,evidence/EXP043/REPORT.md,5,1,See experiment-specific protocol and gate
+EXP044,Person-level and longitudinal source qualification,evidence/EXP044/REPORT.md,10,3,See experiment-specific protocol and gate
+EXP045,Person-level and longitudinal source qualification,evidence/EXP045/REPORT.md,5,0,See experiment-specific protocol and gate
+EXP046,Environmental baselines and transport,evidence/EXP046/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP047,Environmental baselines and transport,evidence/EXP047/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP048,Environmental baselines and transport,evidence/EXP048/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP049,Environmental baselines and transport,evidence/EXP049/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP050,Environmental baselines and transport,evidence/EXP050/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP051,Environmental baselines and transport,evidence/EXP051/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP052,Environmental baselines and transport,evidence/EXP052/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP053,Environmental baselines and transport,evidence/EXP053/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP054,Environmental baselines and transport,evidence/EXP054/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP055,Environmental baselines and transport,evidence/EXP055/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP056,Capacity and optimization comparisons,evidence/EXP056/REPORT.md,6,0,See experiment-specific protocol and gate
+EXP057,Capacity and optimization comparisons,evidence/EXP057/REPORT.md,19,2,See experiment-specific protocol and gate
+EXP058,Capacity and optimization comparisons,evidence/EXP058/REPORT.md,12,2,See experiment-specific protocol and gate
+EXP059,Natural missingness and source transport,evidence/EXP059/REPORT.md,7,2,See experiment-specific protocol and gate
+EXP060,Natural missingness and source transport,evidence/EXP060/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP061,Natural missingness and source transport,evidence/EXP061/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP062,Natural missingness and source transport,evidence/EXP062/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP063,Natural missingness and source transport,evidence/EXP063/REPORT.md,9,2,See experiment-specific protocol and gate
+EXP064,Natural missingness and source transport,evidence/EXP064/REPORT.md,7,2,See experiment-specific protocol and gate
+EXP065,Natural missingness and source transport,evidence/EXP065/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP066,Natural missingness and source transport,evidence/EXP066/REPORT.md,7,2,See experiment-specific protocol and gate
+EXP067,Natural missingness and source transport,evidence/EXP067/REPORT.md,8,2,See experiment-specific protocol and gate
+EXP068,Inertial channel and observation-unit tests,evidence/EXP068/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP069,Inertial channel and observation-unit tests,evidence/EXP069/REPORT.md,7,1,See experiment-specific protocol and gate
+EXP070,Inertial channel and observation-unit tests,evidence/EXP070/REPORT.md,7,1,See experiment-specific protocol and gate
+EXP071,Inertial channel and observation-unit tests,evidence/EXP071/REPORT.md,7,1,See experiment-specific protocol and gate
+EXP072,Inertial channel and observation-unit tests,evidence/EXP072/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP073,Inertial channel and observation-unit tests,evidence/EXP073/REPORT.md,8,1,See experiment-specific protocol and gate
+EXP074,Inertial channel and observation-unit tests,evidence/EXP074/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP075,Energy and traffic channel comparisons,evidence/EXP075/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP076,Energy and traffic channel comparisons,evidence/EXP076/REPORT.md,8,1,See experiment-specific protocol and gate
+EXP077,Energy and traffic channel comparisons,evidence/EXP077/REPORT.md,7,1,See experiment-specific protocol and gate
+EXP078,Energy and traffic channel comparisons,evidence/EXP078/REPORT.md,8,1,See experiment-specific protocol and gate
+EXP079,Energy and traffic channel comparisons,evidence/EXP079/REPORT.md,8,1,See experiment-specific protocol and gate
+EXP080,Energy and traffic channel comparisons,evidence/EXP080/REPORT.md,7,1,See experiment-specific protocol and gate
+EXP081,Energy and traffic channel comparisons,evidence/EXP081/REPORT.md,10,1,See experiment-specific protocol and gate
+EXP082,Energy and traffic channel comparisons,evidence/EXP082/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP083,Energy and traffic channel comparisons,evidence/EXP083/REPORT.md,9,2,See experiment-specific protocol and gate
+EXP084,Gas sensor trials and exposure calibration,evidence/EXP084/REPORT.md,7,1,See experiment-specific protocol and gate
+EXP085,Gas sensor trials and exposure calibration,evidence/EXP085/REPORT.md,10,2,See experiment-specific protocol and gate
+EXP086,Gas sensor trials and exposure calibration,evidence/EXP086/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP087,Gas sensor trials and exposure calibration,evidence/EXP087/REPORT.md,6,1,See experiment-specific protocol and gate
+EXP088,Gas sensor trials and exposure calibration,evidence/EXP088/REPORT.md,9,2,See experiment-specific protocol and gate
+EXP089,Retrospective model-selection decision,evidence/EXP089/DECISION.md,5,0,See experiment-specific protocol and gate

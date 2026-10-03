@@ -1,0 +1,19 @@
+{
+  "aggregation": "Within each target-level split, observations are collapsed to the observed 6-bit evidence-presence states (\u226464 cells). Original target-disease pair counts are retained as weights; continuous per-channel evidence scores enter as within-cell means.",
+  "ganglion": "Six channel-specific encoders map [evidence score, evidence-present flag] to 16D; the six vectors are averaged; a shared 16\u00d716 tanh ganglion produces the common evidence state; a sigmoid terminal head estimates human-outcome probability.",
+  "objective": "weighted Bernoulli log loss on human clinical outcome",
+  "baseline_models": [
+    "prevalence",
+    "evidence-count logistic",
+    "linear logistic on six scores + six presence flags",
+    "polynomial logistic with pairwise score and presence interactions"
+  ],
+  "ganglion_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "precision_check": "For two strong ganglion initialisations, combine ganglion and polynomial logits with validation-selected alpha in {0,0.25,0.5,0.75,1}."
+}

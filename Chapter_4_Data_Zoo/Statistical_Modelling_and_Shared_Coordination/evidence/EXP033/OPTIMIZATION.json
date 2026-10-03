@@ -1,0 +1,10 @@
+{
+  "run_id": "EXP033-MODEL-001",
+  "fit": {
+    "lambda": 0.1,
+    "iterations": 80,
+    "converged": true,
+    "gradient_inf": 9.886306951631396e-07,
+    "loss": 0.5668169739332624
+  }
+}

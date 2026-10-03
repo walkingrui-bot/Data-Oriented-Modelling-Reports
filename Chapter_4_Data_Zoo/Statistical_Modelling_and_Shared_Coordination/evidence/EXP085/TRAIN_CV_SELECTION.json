@@ -1,0 +1,48 @@
+{
+  "train_trials": 96,
+  "cv_folds": 4,
+  "candidate_sensor_cv_logloss": {
+    "1": 0.2864173362633358,
+    "2": 0.29859844142038955,
+    "3": 0.3123094936773972,
+    "4": 0.24311305352663867,
+    "5": 0.24436385016213258,
+    "6": 0.24312461735634674,
+    "7": 0.2563803392585981,
+    "8": 0.25094210235513564
+  },
+  "selected_sensor": 4,
+  "single_features": [
+    "temp_base",
+    "temp_delta",
+    "humidity_base",
+    "humidity_delta",
+    "sensor_4_base",
+    "sensor_4_delta"
+  ],
+  "multi_features": [
+    "temp_base",
+    "temp_delta",
+    "humidity_base",
+    "humidity_delta",
+    "sensor_1_base",
+    "sensor_1_delta",
+    "sensor_2_base",
+    "sensor_2_delta",
+    "sensor_3_base",
+    "sensor_3_delta",
+    "sensor_4_base",
+    "sensor_4_delta",
+    "sensor_5_base",
+    "sensor_5_delta",
+    "sensor_6_base",
+    "sensor_6_delta",
+    "sensor_7_base",
+    "sensor_7_delta",
+    "sensor_8_base",
+    "sensor_8_delta"
+  ],
+  "fixed_c": 0.1,
+  "cv_model_fits": 32,
+  "final_model_fits": 2
+}

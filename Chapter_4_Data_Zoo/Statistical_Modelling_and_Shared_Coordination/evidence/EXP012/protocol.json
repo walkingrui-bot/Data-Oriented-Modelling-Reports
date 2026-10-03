@@ -1,0 +1,17 @@
+{
+  "data": "Same 26,278 target-disease pairs and deterministic Ensembl-target 70/15/15 split as Experiment 011.",
+  "channels": [
+    "literature",
+    "somatic mutation",
+    "affected pathway",
+    "RNA expression",
+    "genetic association",
+    "animal model"
+  ],
+  "local_statistical_front_end": "Per-channel weighted logistic calibrator using evidence presence plus score, score^2 and score^3; its calibrated log-odds is appended to the native channel input.",
+  "shared_ganglion": "Six channel-specific encoders -> availability-normalized aggregation -> 16x16 tanh ganglion -> Bernoulli human-outcome head.",
+  "pipeline_dropout": "Training samples one availability mask with 3-6 available channels. Pipeline unavailability is encoded separately from biological evidence absence.",
+  "masked_polynomial": "Classical logistic model with observed scores, presence flags, availability flags, pairwise score/presence interactions, and availability/evidence counts.",
+  "precision_hybrid": "Validation-selected logit blend between Stat-PsyMoE and masked polynomial, alpha in {0,0.25,0.5,0.75,1}.",
+  "evaluation": "Target-holdout log loss with 0,1,2,3 unavailable evidence pipelines; all missingness combinations are enumerated at evaluation."
+}

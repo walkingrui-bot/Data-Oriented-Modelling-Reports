@@ -1,0 +1,7 @@
+Model,6 avail,5 avail,4 avail,3 avail
+Single interaction observer (013),0.197543,0.198054,0.198583,0.199371
+Naive 3-observer committee,0.197674,0.198191,0.198839,0.199651
+Routed committee,0.198179,0.198600,0.199106,0.199789
+Additive observer only,0.199382,0.199008,0.199100,0.199630
+Interaction observer only,0.197809,0.198222,0.198699,0.199359
+Empirical-Bayes observer only,0.197511,0.198087,0.198845,0.199761

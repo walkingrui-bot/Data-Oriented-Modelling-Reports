@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "all_twenty_source_counts_match": true,
+    "both_prior_prediction_sets_match": true,
+    "exact_pair_counts": true,
+    "unique_station_hour": true,
+    "age_group_definition": true,
+    "finite_nonnegative_error": true,
+    "prior_B0_MAE_reproduced": true,
+    "group_counts_reproduced": true,
+    "support_both_years": true,
+    "both_day_intervals_reproduced": true,
+    "frozen_risk_gate_failure": true
+  },
+  "passed": 11,
+  "total": 11,
+  "result": "PASS"
+}

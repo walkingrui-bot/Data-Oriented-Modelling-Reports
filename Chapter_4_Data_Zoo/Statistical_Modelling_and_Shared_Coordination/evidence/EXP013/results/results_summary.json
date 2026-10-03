@@ -1,0 +1,159 @@
+{
+  "experiment": "INTERNAL_COORDINATION_013",
+  "title": "Statistical Observer as a Coordinated Evidence Channel",
+  "date": "2026-10-02",
+  "dataset": {
+    "n": 26278,
+    "train": 17729,
+    "validation": 4138,
+    "test": 4411,
+    "source": "vi-c-ky/Human-genetic-evidence-associated-with-drug-approval / data/final_dataset.csv",
+    "outer_split": "deterministic Ensembl-target 70/15/15 holdout",
+    "inner_stacking": "5-fold target-group cross-fitting inside the outer training set",
+    "biological_channels": [
+      "literature",
+      "somatic mutation",
+      "affected pathway",
+      "RNA expression",
+      "genetic association",
+      "animal model"
+    ],
+    "terminal_leakage_fields_excluded": [
+      "clinical",
+      "overall_score"
+    ]
+  },
+  "architecture": {
+    "six_channel_reference": "six biological channels with channel-local cross-fitted statistical log-odds -> 16D shared ganglion",
+    "seven_channel_model": "same six channels plus a seventh derived statistical observer channel",
+    "statistical_observer_input": "cross-fitted masked-polynomial probability, log-odds, entropy, and available-pipeline fraction",
+    "shared_core": "16x16 tanh ganglion",
+    "training_availability": "all masks with 3-6 biological evidence pipelines available",
+    "precision_output": "optional validation-selected logit blend with final masked-polynomial observer"
+  },
+  "statistical_observer_only": {
+    "full": 0.19777610784448482,
+    "missing1": 0.19820182713101014,
+    "missing2": 0.19868674314057314,
+    "missing3": 0.19935140853010339
+  },
+  "six_channel_runs": [
+    {
+      "seed": 131,
+      "full": 0.19748356404025644,
+      "missing1": 0.19799558363515365,
+      "missing2": 0.19865590534481906,
+      "missing3": 0.19955608590953428
+    },
+    {
+      "seed": 262,
+      "full": 0.19765837407736453,
+      "missing1": 0.19809840905309464,
+      "missing2": 0.19865861820918637,
+      "missing3": 0.19940764767957328
+    },
+    {
+      "seed": 393,
+      "full": 0.1975621658683538,
+      "missing1": 0.1980286469469382,
+      "missing2": 0.1986318923335326,
+      "missing3": 0.19941685099847872
+    }
+  ],
+  "seven_channel_runs": [
+    {
+      "seed": 131,
+      "full": 0.19750472252005835,
+      "missing1": 0.19796191078164066,
+      "missing2": 0.19855517197665407,
+      "missing3": 0.19938228209017855
+    },
+    {
+      "seed": 262,
+      "full": 0.19754321554028595,
+      "missing1": 0.19805448271003034,
+      "missing2": 0.19865496483098813,
+      "missing3": 0.199371163151265
+    },
+    {
+      "seed": 393,
+      "full": 0.19767613771144907,
+      "missing1": 0.1980673434502981,
+      "missing2": 0.198582716357067,
+      "missing3": 0.19929173763205318
+    }
+  ],
+  "hybrid_runs": [
+    {
+      "seed": 131,
+      "alpha_precision": 0.25,
+      "full": 0.19741937518665273,
+      "missing1": 0.19790361534260315,
+      "missing2": 0.1985053068594035,
+      "missing3": 0.19929833829187496
+    },
+    {
+      "seed": 262,
+      "alpha_precision": 0.25,
+      "full": 0.19744666480944692,
+      "missing1": 0.19796882101294536,
+      "missing2": 0.1985633233678034,
+      "missing3": 0.19926472316828292
+    },
+    {
+      "seed": 393,
+      "alpha_precision": 0.0,
+      "full": 0.19767613771144907,
+      "missing1": 0.1980673434502981,
+      "missing2": 0.198582716357067,
+      "missing3": 0.19929173763205318
+    }
+  ],
+  "drop_statistical_channel": [
+    {
+      "seed": 131,
+      "full": 0.19801620046155105,
+      "missing1": 0.19890953373896342,
+      "missing2": 0.20005160141568337,
+      "missing3": 0.20156578760147936
+    },
+    {
+      "seed": 262,
+      "full": 0.19792696516742092,
+      "missing1": 0.19863922693441705,
+      "missing2": 0.19956626226518,
+      "missing3": 0.20078453626532805
+    },
+    {
+      "seed": 393,
+      "full": 0.19834290501681318,
+      "missing1": 0.19897374397477086,
+      "missing2": 0.19982338883055564,
+      "missing3": 0.20098590051474483
+    }
+  ],
+  "wrongly_paired_statistical_channel": [
+    {
+      "seed": 131,
+      "full": 0.1992576796292643,
+      "missing1": 0.20290183244663929,
+      "missing2": 0.20520883049140462,
+      "missing3": 0.20646060058794552
+    },
+    {
+      "seed": 262,
+      "full": 0.20305692072027012,
+      "missing1": 0.202529274294934,
+      "missing2": 0.20650169715615588,
+      "missing3": 0.2072346755896223
+    },
+    {
+      "seed": 393,
+      "full": 0.19961214279631417,
+      "missing1": 0.20213626297249618,
+      "missing2": 0.20436514895233912,
+      "missing3": 0.20513980392249315
+    }
+  ],
+  "original_exp011_full_polynomial_logloss": 0.19734339820316998
+}

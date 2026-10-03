@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "source_match": true,
+    "support_gate": true,
+    "sample_counts": true,
+    "evaluation_days": true,
+    "candidate_minimum": true,
+    "daily_means": true,
+    "relative_gain": true,
+    "bootstrap_ci": true,
+    "better_days": true,
+    "frozen_stop": true,
+    "test_not_scored": true
+  },
+  "passed": 11,
+  "total": 11
+}

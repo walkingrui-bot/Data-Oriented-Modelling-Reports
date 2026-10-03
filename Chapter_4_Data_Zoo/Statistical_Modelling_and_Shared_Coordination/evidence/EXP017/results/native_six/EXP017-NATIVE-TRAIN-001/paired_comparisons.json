@@ -1,0 +1,32 @@
+{
+  "native_stat_moe_minus_source_stat_moe": {
+    "left_minus_right_logloss": 6.479794054557234e-05,
+    "target_grouped_bootstrap_95ci": [
+      -0.0014233498965332977,
+      0.0014298303353897437
+    ],
+    "target_groups": 232,
+    "resamples": 1000,
+    "post_result_descriptive": true
+  },
+  "native_best_ganglion_minus_source_ganglion_202": {
+    "left_minus_right_logloss": -0.0005534948201097324,
+    "target_grouped_bootstrap_95ci": [
+      -0.0018951048799238643,
+      0.0010004476613254833
+    ],
+    "target_groups": 232,
+    "resamples": 1000,
+    "post_result_descriptive": true
+  },
+  "native_best_ganglion_minus_native_stat_moe": {
+    "left_minus_right_logloss": -0.0013605021566311273,
+    "target_grouped_bootstrap_95ci": [
+      -0.004206675017309189,
+      0.0012253472221364864
+    ],
+    "target_groups": 232,
+    "resamples": 1000,
+    "post_result_descriptive": true
+  }
+}

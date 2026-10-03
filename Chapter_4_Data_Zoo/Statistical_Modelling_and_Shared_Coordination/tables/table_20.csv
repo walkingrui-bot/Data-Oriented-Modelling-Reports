@@ -1,0 +1,9 @@
+Path,Contents
+code/experiment.py,"Simulator, heterogeneous encoders, triangle core, decoders, self and binding objectives."
+code/batch_conditions.py,Final condition runner for the five-seed comparisons and freeze controls.
+code/trace_seed0.py,Dense internal trajectory after the self→binding switch.
+results/all_runs.csv,Eight endpoint conditions × five seeds.
+results/seed0_binding_trace.csv,"Cross-generation, internal alignment, audit R², gradient cosines and blockwise parameter movement."
+results/first_binding_update_5seeds.csv,First-update localization across the five final seeds.
+results/seed0_parameters_pre_post.npz,Complete model parameter snapshots immediately before binding and after 700 binding updates.
+data/reference_simulator_seed123.npz,Train/test observations plus simulator-state arrays marked audit_only.

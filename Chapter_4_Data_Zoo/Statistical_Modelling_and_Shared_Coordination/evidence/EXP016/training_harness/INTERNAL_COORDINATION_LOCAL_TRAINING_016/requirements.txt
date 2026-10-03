@@ -1,0 +1,8 @@
+bedrock-bio>=2.0.0
+duckdb>=1.5.0
+numpy>=2.0
+pandas>=2.2
+pyarrow>=18
+scikit-learn>=1.6
+torch>=2.6
+openpyxl>=3.1

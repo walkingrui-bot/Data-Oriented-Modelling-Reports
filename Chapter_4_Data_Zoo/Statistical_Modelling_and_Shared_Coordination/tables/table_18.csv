@@ -1,0 +1,5 @@
+Condition,Pass,Median cross RMSE,Median internal distance,Median audit R²
+Self only,0/5,0.4753,1.5067,0.9190
+Direct reality binding,5/5,0.0463,0.2259,0.9857
+Self → binding,5/5,0.0594,0.2116,0.9811
+Shuffled worlds,0/5,0.2935,1.2483,0.8317

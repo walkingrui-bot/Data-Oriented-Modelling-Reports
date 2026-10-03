@@ -1,0 +1,5 @@
+Condition,Cross-view RMSE,Exact scene retrieval,Same-scene latent distance
+Self only,2.4976,0.88%,1.5011
+Direct Reality Binding,0.6447,11.46%,0.9342
+Self → Reality Binding,0.6415,9.82%,0.9721
+Shuffled pairing,0.9736,1.05%,1.3278

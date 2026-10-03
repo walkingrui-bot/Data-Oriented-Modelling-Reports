@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "source_structure_match": true,
+    "exact_21_person_rows": true,
+    "logloss_mean_recomputed": true,
+    "bacc_mean_recomputed": true,
+    "improved_people_recomputed": true,
+    "predefined_gate_stop": true,
+    "no_test_outputs": true
+  },
+  "passed": 7,
+  "total": 7
+}

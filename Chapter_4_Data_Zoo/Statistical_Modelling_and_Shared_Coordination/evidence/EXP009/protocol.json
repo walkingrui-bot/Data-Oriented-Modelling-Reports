@@ -1,0 +1,25 @@
+{
+  "dataset": "sklearn diabetes, 442 real patient states",
+  "train": 353,
+  "test": 89,
+  "shared_dim": 16,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "steps": 800,
+  "checkpoints": [
+    0,
+    25,
+    50,
+    100,
+    200,
+    400,
+    800
+  ],
+  "numeric_target": "proper quantile prediction of an independent remeasurement; q10/q25/q50/q75/q90",
+  "language_target": "six 3-level semantic concepts; stochastic paraphrase observation; no exact sentence reproduction",
+  "mixed_training": "cycle numeric-only evidence, text-only evidence, both; every step predicts both target types",
+  "language_loss_weight": 0.35
+}

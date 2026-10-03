@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "source_recheck_all_pass": true,
+    "event_support_all_pass": true,
+    "1300_event_keys_unique": true,
+    "split_counts_700_300_300": true,
+    "train_cv_choice_is_best": true,
+    "validation_300_event_predictions": true,
+    "validation_only_three_dates": true,
+    "day_equal_base_recomputed": true,
+    "day_equal_multi_recomputed": true,
+    "relative_gain_recomputed": true,
+    "days_and_levels_recomputed": true,
+    "frozen_dev_gate_failed": true,
+    "later_day_unscored": true
+  },
+  "passed": 13,
+  "total": 13,
+  "local_validation": "PASS"
+}

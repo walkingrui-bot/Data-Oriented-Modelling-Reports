@@ -1,0 +1,32 @@
+{
+  "experiment": "INTERNAL_COORDINATION_002",
+  "dtype": "float32",
+  "train_scenes": 128,
+  "test_scenes": 64,
+  "hidden_simulator_state": "q=[u,v,u*v], audit only",
+  "modalities": {
+    "A": "3 continuous outputs from affine map of q",
+    "B": "3-class probability vector from softmax affine map of q",
+    "C": "4x4 intensity image from sigmoid affine map of q"
+  },
+  "model": "three modality-specific encoders -> one shared 3-node triangle core -> three modality-specific decoders",
+  "self_phase_updates": 180,
+  "direct_binding_updates": 550,
+  "switch_binding_updates": 700,
+  "optimizer": "Adam",
+  "learning_rate": 0.015,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "binding_objective": "each observed modality must generate all three same-scene modalities; simulator latent never enters loss",
+  "shuffled_control": "cross-modal targets permuted across scenes while same-modality targets remain paired",
+  "acceptance_for_main_batch": {
+    "mean_cross_modal_test_RMSE_max": 0.08,
+    "normalized_same_scene_representation_distance_max": 0.4
+  },
+  "note": "Acceptance thresholds were fixed for the final five-seed batch after pilot tuning; all endpoint tables retain raw metrics."
+}

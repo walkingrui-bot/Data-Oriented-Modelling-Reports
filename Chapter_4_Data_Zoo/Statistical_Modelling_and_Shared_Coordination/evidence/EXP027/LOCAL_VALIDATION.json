@@ -1,0 +1,16 @@
+{
+  "run_id": "EXP027-VERIFY-001",
+  "checks": {
+    "original_test_excluded": true,
+    "fold_entries": true,
+    "oof_entries": true,
+    "50_fits": true,
+    "repeat_metrics_recomputed": true,
+    "frozen_gate_recomputed": true
+  },
+  "passed": 6,
+  "total": 6,
+  "all_passed": true,
+  "qualified_repeats": 3,
+  "scope": "EXP027 outputs and EXP026 split IDs only; no refit/test"
+}

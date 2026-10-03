@@ -1,0 +1,7 @@
+Model,Full,-1 pipe,-2 pipes,-3 pipes,Full seed SD
+Statistical observer only,0.197776,0.198202,0.198687,0.199351,—
+Six-channel Stat-PsyMoE,0.197562,0.198029,0.198656,0.199417,0.000088
++ statistical observer channel,0.197543,0.198054,0.198583,0.199371,0.000090
++ output precision blend,0.197447,0.197969,0.198563,0.199292,0.000141
+"Trained model, stat channel removed",0.198016,0.198910,0.199823,0.200986,0.000219
+"Trained model, stat channel mispaired",0.199612,0.202529,0.205209,0.206461,0.002099

@@ -1,0 +1,9 @@
+Engineering object,Status,Observed implementation
+Passport pipelines mapped,18 / 18,Each v0.1 line has a current 26.06 datasource identity.
+Datasource-level association route,18 / 18,"association_by_datasource_direct provides score, evidence count, novelty and timeseries."
+Current native evidence route,18 / 18,Source-specific evidence table or official source-level dataset mapped.
+Within-pipeline Stat-MoE specification,18 / 18,Candidate experts and OOF statistical routing role assigned.
+Time-lock semantics,18 / 18,Evidence/publication/curation/release dates are carried into the pipeline interface.
+Ontology version bridge,Implemented,Legacy EFO IDs are bridged to 26.06 current IDs with disease obsoleteTerms/obsoleteXRefs/dbXRefs.
+Shared-ganglion harness,Implemented,"18 interfaces, availability-aware set aggregation, shared operator and terminal head."
+Frozen-ganglion onboarding,Implemented,New pipeline can train its Stat-MoE/interface while established shared core stays frozen.

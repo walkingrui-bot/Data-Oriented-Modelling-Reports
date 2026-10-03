@@ -1,0 +1,7 @@
+{
+  "scope": "EXP053 plus direct EXP051/052 derived inputs",
+  "matched_2015_pairs": 32532,
+  "calibration_city_states": 4,
+  "metric_checks": 40,
+  "status": "PASS"
+}

@@ -1,0 +1,77 @@
+{
+  "candidate": "JOINT",
+  "evaluation_days": 355,
+  "AR_equal_day_logloss": 0.20839974995638072,
+  "candidate_equal_day_logloss": 0.20350579188173024,
+  "candidate_minus_AR_equal_day_logloss": -0.004893958074650498,
+  "candidate_relative_logloss_gain": 0.023483512219543534,
+  "paired_day_bootstrap_difference_95pct_ci": [
+    -0.00737646042973009,
+    -0.0024131055983638797
+  ],
+  "days_candidate_better": 200,
+  "AR_average_precision": 0.32700507053292743,
+  "candidate_average_precision": 0.33551437796009953,
+  "candidate_minus_AR_average_precision": 0.008509307427172097,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261002,
+  "validation_equal_day_logloss_by_model": {
+    "AR": 0.20839974995638072,
+    "SUB": 0.20390175778667347,
+    "ELECTRICAL": 0.20649955219296448,
+    "JOINT": 0.20350579188173024,
+    "PREVALENCE": 0.26673604913855453
+  },
+  "validation_average_precision_by_model": {
+    "AR": 0.32700507053292743,
+    "SUB": 0.33479828824091484,
+    "ELECTRICAL": 0.3296853851075557,
+    "JOINT": 0.33551437796009953,
+    "PREVALENCE": 0.07334273624823695
+  },
+  "validation_day_support": {
+    "all_target_dates": 362,
+    "evaluation_dates": 355,
+    "evaluation_pairs": 8508,
+    "evaluation_events": 624,
+    "discarded_partial_target_dates": {
+      "2009-06-13": 1,
+      "2009-06-16": 15,
+      "2009-06-20": 2,
+      "2009-06-22": 15,
+      "2009-08-13": 6,
+      "2009-08-14": 9,
+      "2009-08-20": 9
+    }
+  },
+  "source_recheck": "SOURCE_STRUCTURE_MATCH",
+  "model_support": "HOURLY_MODEL_SUPPORT_READY",
+  "event_support": "EVENT_SUPPORT_READY",
+  "training_threshold_q90_kw": 2.64,
+  "model_sample_counts": {
+    "train": 17359,
+    "validation": 8565,
+    "test": 7228
+  },
+  "feature_dimensions": {
+    "AR": 11,
+    "SUB": 26,
+    "ELECTRICAL": 26,
+    "JOINT": 41
+  },
+  "fit_seconds": {
+    "AR": 0.5898134999952163,
+    "SUB": 0.7274905409940402,
+    "ELECTRICAL": 0.5991376250021858,
+    "JOINT": 0.6405542909997166
+  },
+  "model_definition": "fixed HistGradientBoostingClassifier, 200 iterations, leaves15, min_leaf50, lr0.05, L2=10, no early stopping",
+  "test_performance_scored": false,
+  "gates": {
+    "relative_logloss_gain_at_least_5pct": false,
+    "paired_day_ci_upper_below_zero": true,
+    "at_least_60pct_days_better": false,
+    "average_precision_gain_at_least_0p02": false
+  },
+  "decision": "STOP_EVENT_CHANNEL_DEV_GATE"
+}

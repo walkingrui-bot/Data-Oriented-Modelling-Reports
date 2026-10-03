@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "mapping_exact": true,
+    "person_files_count": true,
+    "qualified_count_recomputed": true,
+    "all_activity_gates_recomputed": true,
+    "no_missing_members": true,
+    "no_wrong_id_or_invalid_target_rows": true,
+    "gate_name_correct": true,
+    "no_model_fits": true
+  },
+  "passed": 8,
+  "total": 8
+}

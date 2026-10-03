@@ -1,0 +1,40 @@
+{
+  "run_id": "EXP019-ONBOARD-001",
+  "research_id": "STAT-PSYMOE-EXP019-20261002-001",
+  "source": "cancer_gene_census",
+  "release": "26.06",
+  "terminal_cohort": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/cohort_mapped.parquet",
+  "old_checkpoint_dir": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001",
+  "new_state": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-CGC-STAT-001/cgc_exported_state.parquet",
+  "old_state_rebuilt_in_memory": true,
+  "old_state_reconstruction": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/old_reconstruction.json",
+  "source_state_fields": [
+    "local_prediction",
+    "predictive_entropy",
+    "scaled_log_evidence_rows",
+    "availability",
+    "native_score",
+    "mutation_fraction",
+    "scaled_log_mutated",
+    "scaled_log_publications",
+    "study_support",
+    "direction_support",
+    "expert_disagreement"
+  ],
+  "frozen_checkpoint_contents": "new interface only; restore requires named EXP017 old checkpoint",
+  "full_retrain_initialization": "saved EXP017 checkpoint plus randomly initialized new interface; all parameters trainable",
+  "training": {
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "max_epochs": 1000,
+    "patience": 100,
+    "optimizer": "Adam",
+    "lr": 0.002,
+    "batch": "all train pairs"
+  },
+  "device": "mps",
+  "test_role": "retrospective development only; no test-driven selection"
+}

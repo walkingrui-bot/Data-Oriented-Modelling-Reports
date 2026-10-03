@@ -1,0 +1,78 @@
+{
+  "numeric": {
+    "num_pinball_num": 0.07417085021734238,
+    "num_pinball_text": 0.2780423164367676,
+    "num_pinball_both": 0.1319245994091034,
+    "coverage80_both": 0.5355805158615112,
+    "lang_acc_num": 0.2584269642829895,
+    "lang_acc_text": 0.3071160912513733,
+    "lang_acc_both": 0.2659175992012024,
+    "paired_cosine_gap": 0.010637090541422367,
+    "probe_r2_num": 0.6998375654220581,
+    "probe_r2_text": 0.017617542296648026,
+    "probe_r2_both": 0.6954297423362732,
+    "M_effective_rank": 15.795378684997559
+  },
+  "language": {
+    "num_pinball_num": 0.28878524899482727,
+    "num_pinball_text": 0.28561532497406006,
+    "num_pinball_both": 0.2880313992500305,
+    "coverage80_both": 0.19662921130657196,
+    "lang_acc_num": 0.2827715277671814,
+    "lang_acc_text": 0.8520599007606506,
+    "lang_acc_both": 0.7528089880943298,
+    "paired_cosine_gap": 0.028216423466801643,
+    "probe_r2_num": 0.6479235887527466,
+    "probe_r2_text": 0.37350645661354065,
+    "probe_r2_both": 0.5276007056236267,
+    "M_effective_rank": 13.601971626281738
+  },
+  "mixed": {
+    "num_pinball_num": 0.07931486517190933,
+    "num_pinball_text": 0.15302099287509918,
+    "num_pinball_both": 0.08588037639856339,
+    "coverage80_both": 0.8333333134651184,
+    "lang_acc_num": 0.7247191071510315,
+    "lang_acc_text": 0.7996254563331604,
+    "lang_acc_both": 0.8426966071128845,
+    "paired_cosine_gap": 0.31439629197120667,
+    "probe_r2_num": 0.6767552495002747,
+    "probe_r2_text": 0.40524691343307495,
+    "probe_r2_both": 0.7043692469596863,
+    "M_effective_rank": 15.15558910369873
+  },
+  "freeze200": {
+    "num_pinball_both": 0.08400940150022507,
+    "lang_acc_both": 0.8408239483833313,
+    "probe_r2_both": 0.704180121421814,
+    "paired_cosine_gap": 0.3262150287628174
+  },
+  "geometry": {
+    "delta_norm_numeric": 0.9585042595863342,
+    "delta_norm_language": 5.365433692932129,
+    "delta_norm_mixed": 2.7511179447174072,
+    "cos_num_lang": 0.052077196538448334,
+    "cos_mixed_num": 0.2060183435678482,
+    "cos_mixed_lang": 0.41751402616500854
+  },
+  "stress_numeric_freeze_False": {
+    "num_pinball_both": 0.0906095951795578,
+    "lang_acc_both": 0.8539325594902039,
+    "M_move": 0.544838547706604
+  },
+  "stress_numeric_freeze_True": {
+    "num_pinball_both": 0.09138911962509155,
+    "lang_acc_both": 0.8520599007606506,
+    "M_move": 0.0
+  },
+  "stress_language_freeze_False": {
+    "num_pinball_both": 0.09224739670753479,
+    "lang_acc_both": 0.7752808928489685,
+    "M_move": 1.063542127609253
+  },
+  "stress_language_freeze_True": {
+    "num_pinball_both": 0.08795811980962753,
+    "lang_acc_both": 0.7771535515785217,
+    "M_move": 0.0
+  }
+}

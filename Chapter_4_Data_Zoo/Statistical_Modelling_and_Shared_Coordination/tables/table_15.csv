@@ -1,0 +1,4 @@
+Observer,Generated surface,Native representation
+A,Affine response of q,Three continuous values
+B,Softmax response of q,Three-class probability vector
+C,Sigmoid response of q over fixed spatial bases,4 × 4 intensity image

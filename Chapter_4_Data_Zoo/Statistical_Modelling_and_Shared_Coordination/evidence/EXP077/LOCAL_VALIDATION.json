@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "run_id_corrected": true,
+    "source_rows_official": true,
+    "all_calendar_minutes_accounted": true,
+    "year_counts_within_total": true,
+    "calendar_anomaly_counts_zero": true,
+    "missingness_is_real_and_shared": true,
+    "complete_fractions_recomputed": true,
+    "exact_pairs_bounded": true,
+    "source_gates_all_true": true,
+    "no_model_or_performance": true
+  },
+  "passed": 10,
+  "total": 10
+}

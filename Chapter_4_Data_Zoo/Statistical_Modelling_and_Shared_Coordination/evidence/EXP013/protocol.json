@@ -1,0 +1,18 @@
+{
+  "outer_holdout": "same deterministic target-level split as Experiments 011-012",
+  "strict_stacking": "The statistical observer is never trained on the target group whose training example consumes its output. Five target-group folds are used inside the outer training partition. Validation/test observer outputs use a model trained on all outer-training targets.",
+  "local_statistics": "Each biological channel also uses a cross-fitted cubic logistic calibration based on evidence presence and evidence-score powers.",
+  "global_statistical_observer": "Masked polynomial logistic model over six scores, six evidence-presence flags, six pipeline-availability flags, pairwise score interactions, pairwise presence interactions, and evidence/availability counts.",
+  "seventh_channel_features": [
+    "predicted probability",
+    "predicted log-odds",
+    "Bernoulli entropy",
+    "available-pipeline fraction"
+  ],
+  "ganglion": "six biological encoders plus one statistical-observer encoder -> availability-normalized mean -> shared 16x16 tanh matrix -> Bernoulli terminal head",
+  "damage_tests": [
+    "remove seventh channel after training",
+    "randomly mispair the statistical result with another evidence state"
+  ],
+  "precision_test": "validation-selected logit blend with the final masked-polynomial model; alpha in {0,.25,.5,.75,1}"
+}

@@ -1,0 +1,4 @@
+seed,capacity,text_to_numeric_abs_diff,numeric_to_language_abs_diff
+0,small,0.0,0.0
+0,medium,0.0,0.0
+0,precision,0.0,0.0

@@ -1,0 +1,166 @@
+{
+  "run_id": "EXP019-CGC-STAT-001",
+  "source": "cancer_gene_census",
+  "feature_diagnostics": {
+    "feature_names": {
+      "curated_score": [
+        "availability",
+        "max_native_score",
+        "max_resource_score"
+      ],
+      "mutation_context": [
+        "availability",
+        "log_mutated_samples",
+        "log_tested_samples",
+        "clipped_mutated_fraction",
+        "log_typed_mutations",
+        "log_mutation_contexts"
+      ],
+      "study_support": [
+        "availability",
+        "log_publication_references",
+        "log_distinct_studies",
+        "trait_plus_target_direction_count"
+      ]
+    },
+    "fraction_over_one_train_validation": 0,
+    "train_only_scales": {
+      "density": 1.0,
+      "mutated": 6.5032717596437735,
+      "publications": 2.995732273553991
+    },
+    "date_fields_used_as_features": [],
+    "provenance_key_field": "provenance_study_key"
+  },
+  "state_fields": [
+    "local_prediction",
+    "predictive_entropy",
+    "scaled_log_evidence_rows",
+    "availability",
+    "native_score",
+    "mutation_fraction",
+    "scaled_log_mutated",
+    "scaled_log_publications",
+    "study_support",
+    "direction_support",
+    "expert_disagreement"
+  ],
+  "statistical_routing": {
+    "experts": [
+      "curated_score",
+      "mutation_context",
+      "study_support"
+    ],
+    "weights": {
+      "absent": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "present": [
+        0.0,
+        0.55,
+        0.45
+      ]
+    },
+    "oof_route_logloss_by_regime": {
+      "absent": 0.20074669570306974,
+      "present": 0.2560981017690244
+    },
+    "train_oof": {
+      "curated_score": {
+        "n": 17702,
+        "positive_prevalence": 0.05174556547282793,
+        "logloss": 0.20342967369315262,
+        "brier": 0.04904527216791133,
+        "auroc": 0.5047072133827473,
+        "auprc": 0.05408172434821927,
+        "ece_10_equal_width": 7.764663083529639e-05,
+        "calibration_intercept": -0.30695542369209444,
+        "calibration_slope": 0.8943707385942087
+      },
+      "mutation_context": {
+        "n": 17702,
+        "positive_prevalence": 0.05174556547282793,
+        "logloss": 0.20311315320096018,
+        "brier": 0.04901039082431112,
+        "auroc": 0.5082457204667853,
+        "auprc": 0.05738299438882967,
+        "ece_10_equal_width": 0.0005362848361713176,
+        "calibration_intercept": -0.30631257418629676,
+        "calibration_slope": 0.8941735764752956
+      },
+      "study_support": {
+        "n": 17702,
+        "positive_prevalence": 0.05174556547282793,
+        "logloss": 0.20323849923346105,
+        "brier": 0.04903008971747947,
+        "auroc": 0.5100385497479965,
+        "auprc": 0.05526538247038441,
+        "ece_10_equal_width": 0.0006052264811417693,
+        "calibration_intercept": -0.30647943607832673,
+        "calibration_slope": 0.8943009013494372
+      },
+      "stat_moe": {
+        "n": 17702,
+        "positive_prevalence": 0.05174556547282793,
+        "logloss": 0.20293548703999031,
+        "brier": 0.04897628095092977,
+        "auroc": 0.5090325648271044,
+        "auprc": 0.05812417021298689,
+        "ece_10_equal_width": 0.0007966515753696264,
+        "calibration_intercept": -0.30588473142008277,
+        "calibration_slope": 0.8952771467319423
+      }
+    },
+    "validation": {
+      "curated_score": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.20773955409459735,
+        "brier": 0.050383689240791826,
+        "auroc": 0.5149446923219928,
+        "auprc": 0.05555026447770571,
+        "ece_10_equal_width": 0.0014729098282014721,
+        "calibration_intercept": -0.3037684231293456,
+        "calibration_slope": 0.8852812755211386
+      },
+      "mutation_context": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.20829417903815609,
+        "brier": 0.05031802991190131,
+        "auroc": 0.4932178378880834,
+        "auprc": 0.0631805821973126,
+        "ece_10_equal_width": 0.0016295158924537856,
+        "calibration_intercept": -2.1991644465742337,
+        "calibration_slope": 0.23267310974136549
+      },
+      "study_support": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.20765804641321367,
+        "brier": 0.05037759790209217,
+        "auroc": 0.512325130135713,
+        "auprc": 0.05572033000486949,
+        "ece_10_equal_width": 0.0014898045557754926,
+        "calibration_intercept": -0.30492000847524997,
+        "calibration_slope": 0.8864317226656064
+      },
+      "stat_moe": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.20739578903373013,
+        "brier": 0.05030982674714852,
+        "auroc": 0.5066589979550103,
+        "auprc": 0.06509627500646818,
+        "ece_10_equal_width": 0.0014021367297365026,
+        "calibration_intercept": -0.30326266489961756,
+        "calibration_slope": 0.8862857603682973
+      }
+    }
+  },
+  "train_target_group_folds": 5,
+  "old_source_reconstruction": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-CGC-STAT-001/old_reconstruction.json",
+  "test_performance_computed": false
+}

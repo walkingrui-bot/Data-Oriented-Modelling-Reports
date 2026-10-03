@@ -1,0 +1,8 @@
+{
+  "scope": "EXP051 saved external predictions only",
+  "external_pairs": 93767,
+  "city_metric_checks": 20,
+  "target_horizon_hours": 24,
+  "gate_recomputed": "ZERO_SHOT_EXTERNAL_TRANSPORT_NOT_STABLE",
+  "status": "PASS"
+}

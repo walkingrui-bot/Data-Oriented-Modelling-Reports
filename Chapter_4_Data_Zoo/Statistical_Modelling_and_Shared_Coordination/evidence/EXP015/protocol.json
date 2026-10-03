@@ -1,0 +1,7 @@
+{
+  "expert_training": "Additive and Interaction experts are weighted logistic models; Empirical-Bayes is a shrinkage state estimator. All expert predictions consumed during training are target-group cross-fitted.",
+  "statistical_router": "For each availability regime, convex probability weights are selected by exhaustive simplex search on OOF weighted log loss. A finer router conditions additionally on observed evidence density when that stratum has at least 120 weighted examples; otherwise it falls back to availability-level weights.",
+  "neural_router_control": "Experiment 014 neural routed committee, same three statistical experts.",
+  "ganglion_test": "The availability+density Stat-MoE probability is then used as one derived observer channel beside six biological evidence channels; the shared core remains 16x16.",
+  "outcome": "Phase 4/approved vs Phase 1/2 under the same target-level external holdout."
+}

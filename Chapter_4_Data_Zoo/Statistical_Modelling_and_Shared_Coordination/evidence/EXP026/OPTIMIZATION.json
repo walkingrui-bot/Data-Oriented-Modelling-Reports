@@ -1,0 +1,113 @@
+{
+  "run_id": "EXP026-MODEL-001",
+  "optimizer": "full_batch_softmax_gradient_backtracking",
+  "max_steps": 5000,
+  "tolerance_gradient_inf": 1e-06,
+  "fits": {
+    "M1_questionnaire_validation_lambda_0.01": {
+      "lambda": 0.01,
+      "iterations": 902,
+      "converged": true,
+      "gradient_inf": 9.953641115901081e-07,
+      "loss": 0.6322737243654928
+    },
+    "M1_questionnaire_validation_lambda_0.1": {
+      "lambda": 0.1,
+      "iterations": 429,
+      "converged": true,
+      "gradient_inf": 9.946712383156198e-07,
+      "loss": 0.7612181237395197
+    },
+    "M1_questionnaire_validation_lambda_1.0": {
+      "lambda": 1.0,
+      "iterations": 68,
+      "converged": true,
+      "gradient_inf": 8.272933794775152e-07,
+      "loss": 0.9477188948193362
+    },
+    "M1_questionnaire_validation_lambda_10.0": {
+      "lambda": 10.0,
+      "iterations": 158,
+      "converged": true,
+      "gradient_inf": 9.655276681853116e-07,
+      "loss": 1.0674247122773628
+    },
+    "M2_relaxed_bilateral_validation_lambda_0.01": {
+      "lambda": 0.01,
+      "iterations": 1709,
+      "converged": true,
+      "gradient_inf": 9.84818486590884e-07,
+      "loss": 0.961685564527054
+    },
+    "M2_relaxed_bilateral_validation_lambda_0.1": {
+      "lambda": 0.1,
+      "iterations": 362,
+      "converged": true,
+      "gradient_inf": 9.866607252674879e-07,
+      "loss": 0.9985467452093364
+    },
+    "M2_relaxed_bilateral_validation_lambda_1.0": {
+      "lambda": 1.0,
+      "iterations": 133,
+      "converged": true,
+      "gradient_inf": 9.812071887284638e-07,
+      "loss": 1.049052269135531
+    },
+    "M2_relaxed_bilateral_validation_lambda_10.0": {
+      "lambda": 10.0,
+      "iterations": 198,
+      "converged": true,
+      "gradient_inf": 9.735233422845805e-07,
+      "loss": 1.086655900588213
+    },
+    "M3_combined_validation_lambda_0.01": {
+      "lambda": 0.01,
+      "iterations": 2431,
+      "converged": true,
+      "gradient_inf": 9.971303660642208e-07,
+      "loss": 0.5192857239898918
+    },
+    "M3_combined_validation_lambda_0.1": {
+      "lambda": 0.1,
+      "iterations": 457,
+      "converged": true,
+      "gradient_inf": 9.76496842986863e-07,
+      "loss": 0.6836388207759713
+    },
+    "M3_combined_validation_lambda_1.0": {
+      "lambda": 1.0,
+      "iterations": 200,
+      "converged": true,
+      "gradient_inf": 9.752703493706672e-07,
+      "loss": 0.9074875842219028
+    },
+    "M3_combined_validation_lambda_10.0": {
+      "lambda": 10.0,
+      "iterations": 623,
+      "converged": true,
+      "gradient_inf": 9.904630827242689e-07,
+      "loss": 1.0564997393780906
+    },
+    "M1_questionnaire_final": {
+      "lambda": 0.1,
+      "iterations": 166,
+      "converged": true,
+      "gradient_inf": 9.944719868131696e-07,
+      "loss": 0.7683078353549971
+    },
+    "M2_relaxed_bilateral_final": {
+      "lambda": 0.01,
+      "iterations": 1438,
+      "converged": true,
+      "gradient_inf": 9.69710550114051e-07,
+      "loss": 0.9666460523891978
+    },
+    "M3_combined_final": {
+      "lambda": 0.1,
+      "iterations": 525,
+      "converged": true,
+      "gradient_inf": 9.927653930620877e-07,
+      "loss": 0.6928494891682514
+    }
+  }
+}

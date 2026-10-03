@@ -1,0 +1,15 @@
+{
+  "run_id": "EXP056-CAPACITY-AUDIT-001",
+  "checks": {
+    "six_interfaces_4_to_16": true,
+    "core_16_by_16": true,
+    "outcome_16_to_1": true,
+    "all_best_epochs_at_1000": true,
+    "all_final_validation_still_decreasing": true,
+    "paired_ci_crosses_zero": true,
+    "all_links_resolve": true
+  },
+  "passed": 7,
+  "total": 7,
+  "scope": "static original code, three stored training traces, paired JSON and this experiment markdown links; no model/test rerun"
+}

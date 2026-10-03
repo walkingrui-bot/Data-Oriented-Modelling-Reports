@@ -1,0 +1,218 @@
+{
+  "run_id": "EXP032-MODEL-001",
+  "independence_note": "Five partitions of the same 64 Si people; development only",
+  "repetitions": {
+    "202610020": {
+      "model": {
+        "macro_log_loss": 0.6601609256783405,
+        "balanced_accuracy": 0.69064039408867,
+        "recall_HC_PD": [
+          0.7241379310344828,
+          0.6571428571428571
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            21,
+            8
+          ],
+          [
+            12,
+            23
+          ]
+        ],
+        "n": 64
+      },
+      "train_prior": {
+        "macro_log_loss": 0.6979231188990924,
+        "balanced_accuracy": 0.5,
+        "recall_HC_PD": [
+          0.0,
+          1.0
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "n": 64
+      },
+      "macro_log_loss_improvement": 0.037762193220751916,
+      "frozen_repetition_gate": true
+    },
+    "202610021": {
+      "model": {
+        "macro_log_loss": 0.6446883718350902,
+        "balanced_accuracy": 0.7108374384236453,
+        "recall_HC_PD": [
+          0.7931034482758621,
+          0.6285714285714286
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            23,
+            6
+          ],
+          [
+            13,
+            22
+          ]
+        ],
+        "n": 64
+      },
+      "train_prior": {
+        "macro_log_loss": 0.6979231188990924,
+        "balanced_accuracy": 0.5,
+        "recall_HC_PD": [
+          0.0,
+          1.0
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "n": 64
+      },
+      "macro_log_loss_improvement": 0.05323474706400222,
+      "frozen_repetition_gate": true
+    },
+    "202610022": {
+      "model": {
+        "macro_log_loss": 0.6383050642548154,
+        "balanced_accuracy": 0.6532019704433498,
+        "recall_HC_PD": [
+          0.6206896551724138,
+          0.6857142857142857
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            18,
+            11
+          ],
+          [
+            11,
+            24
+          ]
+        ],
+        "n": 64
+      },
+      "train_prior": {
+        "macro_log_loss": 0.6979231188990924,
+        "balanced_accuracy": 0.5,
+        "recall_HC_PD": [
+          0.0,
+          1.0
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "n": 64
+      },
+      "macro_log_loss_improvement": 0.05961805464427705,
+      "frozen_repetition_gate": true
+    },
+    "202610023": {
+      "model": {
+        "macro_log_loss": 0.6708550193171913,
+        "balanced_accuracy": 0.7078817733990148,
+        "recall_HC_PD": [
+          0.7586206896551724,
+          0.6571428571428571
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            22,
+            7
+          ],
+          [
+            12,
+            23
+          ]
+        ],
+        "n": 64
+      },
+      "train_prior": {
+        "macro_log_loss": 0.6979231188990924,
+        "balanced_accuracy": 0.5,
+        "recall_HC_PD": [
+          0.0,
+          1.0
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "n": 64
+      },
+      "macro_log_loss_improvement": 0.02706809958190115,
+      "frozen_repetition_gate": true
+    },
+    "202610024": {
+      "model": {
+        "macro_log_loss": 0.7142427209309381,
+        "balanced_accuracy": 0.641871921182266,
+        "recall_HC_PD": [
+          0.6551724137931034,
+          0.6285714285714286
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            19,
+            10
+          ],
+          [
+            13,
+            22
+          ]
+        ],
+        "n": 64
+      },
+      "train_prior": {
+        "macro_log_loss": 0.6979231188990924,
+        "balanced_accuracy": 0.5,
+        "recall_HC_PD": [
+          0.0,
+          1.0
+        ],
+        "confusion_rows_true_HC_PD": [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            35
+          ]
+        ],
+        "n": 64
+      },
+      "macro_log_loss_improvement": -0.01631960203184568,
+      "frozen_repetition_gate": false
+    }
+  },
+  "gate_pass": true,
+  "qualifying_repetitions": 4
+}

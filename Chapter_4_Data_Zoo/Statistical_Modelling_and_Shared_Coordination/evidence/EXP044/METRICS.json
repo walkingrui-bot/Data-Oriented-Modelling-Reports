@@ -1,0 +1,124 @@
+{
+  "run_id": "EXP044-CV-001",
+  "development_only": true,
+  "same_40_people_repeated": true,
+  "repetitions": {
+    "202610020": {
+      "scores": {
+        "M0": {
+          "macro_log_loss": 0.8369882167858358,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5623351446188083
+        },
+        "M1": {
+          "macro_log_loss": 0.8365237989996311,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.564452395395213
+        },
+        "M2": {
+          "macro_log_loss": 0.8368692896979066,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5638284032899008
+        }
+      },
+      "M2_minus_M1_macro_log_loss_improvement": -0.00034549069827549683,
+      "M2_minus_M1_balanced_accuracy_gain": 0.0,
+      "M2_minus_M0_macro_log_loss_improvement": 0.00011892708792915485,
+      "frozen_repetition_gate": false
+    },
+    "202610021": {
+      "scores": {
+        "M0": {
+          "macro_log_loss": 0.8369882167858358,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5623351446188083
+        },
+        "M1": {
+          "macro_log_loss": 0.8345280814439087,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5594425270735173
+        },
+        "M2": {
+          "macro_log_loss": 0.8563632644003404,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5794795986804513
+        }
+      },
+      "M2_minus_M1_macro_log_loss_improvement": -0.02183518295643172,
+      "M2_minus_M1_balanced_accuracy_gain": 0.0,
+      "M2_minus_M0_macro_log_loss_improvement": -0.019375047614504592,
+      "frozen_repetition_gate": false
+    },
+    "202610022": {
+      "scores": {
+        "M0": {
+          "macro_log_loss": 0.8369882167858358,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5623351446188083
+        },
+        "M1": {
+          "macro_log_loss": 0.843428448072554,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5676145276613096
+        },
+        "M2": {
+          "macro_log_loss": 0.8632900516692222,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5750244571131884
+        }
+      },
+      "M2_minus_M1_macro_log_loss_improvement": -0.01986160359666822,
+      "M2_minus_M1_balanced_accuracy_gain": 0.0,
+      "M2_minus_M0_macro_log_loss_improvement": -0.026301834883386443,
+      "frozen_repetition_gate": false
+    },
+    "202610023": {
+      "scores": {
+        "M0": {
+          "macro_log_loss": 0.8369882167858358,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5623351446188083
+        },
+        "M1": {
+          "macro_log_loss": 0.9149837960230249,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.6019470900577047
+        },
+        "M2": {
+          "macro_log_loss": 0.928240441942229,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.611759018527812
+        }
+      },
+      "M2_minus_M1_macro_log_loss_improvement": -0.013256645919204058,
+      "M2_minus_M1_balanced_accuracy_gain": 0.0,
+      "M2_minus_M0_macro_log_loss_improvement": -0.0912522251563932,
+      "frozen_repetition_gate": false
+    },
+    "202610024": {
+      "scores": {
+        "M0": {
+          "macro_log_loss": 0.8369882167858358,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5623351446188083
+        },
+        "M1": {
+          "macro_log_loss": 0.8852537625696232,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5900162197855838
+        },
+        "M2": {
+          "macro_log_loss": 0.8882176349955255,
+          "balanced_accuracy": 0.5,
+          "overall_log_loss": 0.5916815653679774
+        }
+      },
+      "M2_minus_M1_macro_log_loss_improvement": -0.0029638724259023475,
+      "M2_minus_M1_balanced_accuracy_gain": 0.0,
+      "M2_minus_M0_macro_log_loss_improvement": -0.05122941820968974,
+      "frozen_repetition_gate": false
+    }
+  },
+  "qualifying_repetitions": 0,
+  "gate_pass": false
+}

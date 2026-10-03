@@ -1,0 +1,8 @@
+Model,Full,-1 pipeline,-2 pipelines,-3 pipelines
+Additive,0.199382,0.199008,0.199100,0.199630
+Interaction,0.197809,0.198222,0.198699,0.199359
+Empirical-Bayes,0.197511,0.198087,0.198845,0.199761
+Stat-MoE: availability,0.197657,0.198091,0.198668,0.199359
+Stat-MoE: availability + density,0.197408,0.197904,0.198547,0.199334
+014 neural routed committee,0.198179,0.198600,0.199106,0.199789
+013 hybrid median,0.197447,0.197969,0.198563,0.199292

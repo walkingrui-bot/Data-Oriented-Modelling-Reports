@@ -1,0 +1,30 @@
+{
+  "experiment": "INTERNAL_COORDINATION_001",
+  "local_models": 7,
+  "local_parameters": 3,
+  "x_points": 17,
+  "repetitions": 30,
+  "observation_noise": [
+    0.0,
+    0.03
+  ],
+  "coordinator_steps": 80,
+  "coordinator_degree": [
+    1,
+    2
+  ],
+  "initializations": [
+    "geometry",
+    "random"
+  ],
+  "updates": [
+    "joint_gradient",
+    "coupled_step"
+  ],
+  "gradient_rate": 0.22,
+  "damping": 0.001,
+  "max_step_norm": 1.0,
+  "coordinate_tolerance": 0.01,
+  "local_training_steps": 500,
+  "created": "2026-10-01"
+}

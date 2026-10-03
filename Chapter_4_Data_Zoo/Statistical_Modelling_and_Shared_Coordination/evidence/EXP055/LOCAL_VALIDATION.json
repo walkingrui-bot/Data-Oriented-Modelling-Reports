@@ -1,0 +1,7 @@
+{
+  "scope": "EXP055 saved predictions plus original EXP051/052 derived rows",
+  "matched_2015_pairs": 32532,
+  "city_window_metric_checks": 120,
+  "gate_recomputed": "ONE_YEAR_HISTORY_SUFFICIENT_EXPLORATORY",
+  "status": "PASS"
+}

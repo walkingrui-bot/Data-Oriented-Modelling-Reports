@@ -1,0 +1,60 @@
+{
+  "run_id": "EXP053-INTERCEPT-001",
+  "evidence_class": "EXPLORATORY_REUSE_OF_EXPOSED_EXTERNAL_TEST",
+  "cities": {
+    "Chengdu": {
+      "n": 8526,
+      "B0_persistence_MAE": 27.46164672765658,
+      "B0_persistence_RMSE": 38.10794943921958,
+      "B1_Beijing_MAE": 26.952238266935293,
+      "B1_Beijing_RMSE": 38.43137163188228,
+      "B2_full_local_MAE": 24.327301732461283,
+      "B2_full_local_RMSE": 33.575394984603115,
+      "B3_30d_intercept_MAE": 27.48612384483046,
+      "B3_30d_intercept_RMSE": 40.97569340192766,
+      "B3_vs_B0_relative_MAE_improvement": -0.0008913200805700239,
+      "B3_recovery_of_full_local_MAE_gain": -0.007809324503652902
+    },
+    "Guangzhou": {
+      "n": 8344,
+      "B0_persistence_MAE": 17.94439117929051,
+      "B0_persistence_RMSE": 26.783805620715736,
+      "B1_Beijing_MAE": 17.899074804097314,
+      "B1_Beijing_RMSE": 24.336744292271344,
+      "B2_full_local_MAE": 15.729686641107426,
+      "B2_full_local_RMSE": 22.613650250170053,
+      "B3_30d_intercept_MAE": 16.375524300429593,
+      "B3_30d_intercept_RMSE": 24.48086648476215,
+      "B3_vs_B0_relative_MAE_improvement": 0.0874293735120718,
+      "B3_recovery_of_full_local_MAE_gain": 0.7083865372615328
+    },
+    "Shanghai": {
+      "n": 8009,
+      "B0_persistence_MAE": 28.225995754775877,
+      "B0_persistence_RMSE": 43.869535521074425,
+      "B1_Beijing_MAE": 28.915661450836982,
+      "B1_Beijing_RMSE": 37.984086197426315,
+      "B2_full_local_MAE": 22.78252733312559,
+      "B2_full_local_RMSE": 35.21732885936758,
+      "B3_30d_intercept_MAE": 23.852564707335922,
+      "B3_30d_intercept_RMSE": 37.28714416745976,
+      "B3_vs_B0_relative_MAE_improvement": 0.1549433750871292,
+      "B3_recovery_of_full_local_MAE_gain": 0.8034272836130587
+    },
+    "Shenyang": {
+      "n": 7653,
+      "B0_persistence_MAE": 48.11603292826343,
+      "B0_persistence_RMSE": 78.68864788451454,
+      "B1_Beijing_MAE": 41.43802547159982,
+      "B1_Beijing_RMSE": 70.94790269868328,
+      "B2_full_local_MAE": 38.94371904528641,
+      "B2_full_local_RMSE": 67.0088770366604,
+      "B3_30d_intercept_MAE": 42.12987318613683,
+      "B3_30d_intercept_RMSE": 67.97394896264088,
+      "B3_vs_B0_relative_MAE_improvement": 0.12441091623350198,
+      "B3_recovery_of_full_local_MAE_gain": 0.6526335468344983
+    }
+  },
+  "gate_pass": false,
+  "conclusion_code": "ONE_INTERCEPT_30D_INSUFFICIENT_EXPLORATORY"
+}

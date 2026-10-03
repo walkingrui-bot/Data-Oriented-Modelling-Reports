@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "all_gates": true,
+    "exact_partition_sum": true,
+    "source_rows": true,
+    "full_ten_min_and_fields": true,
+    "partitions_target_order": true,
+    "true_outcome_and_no_model": true,
+    "ready_status": true
+  },
+  "passed": 7,
+  "total": 7
+}

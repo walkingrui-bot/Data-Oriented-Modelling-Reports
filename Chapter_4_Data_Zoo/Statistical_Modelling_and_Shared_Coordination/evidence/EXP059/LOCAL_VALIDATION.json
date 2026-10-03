@@ -1,0 +1,14 @@
+{
+  "run_id": "EXP059-SOURCE-001",
+  "checks": {
+    "twelve_stations_and_35064_hour_grid": true,
+    "station_year_aggregation_is_12_times_5": true,
+    "attrition_nonincreasing": true,
+    "all_domain_totals_match_station_counts": true,
+    "frozen_gate_recomputes": true,
+    "no_model_output": true
+  },
+  "passed": 6,
+  "total": 6,
+  "scope": "this experiment's aggregate JSON/CSV and frozen source gate; no model, original reload, test or global suite"
+}

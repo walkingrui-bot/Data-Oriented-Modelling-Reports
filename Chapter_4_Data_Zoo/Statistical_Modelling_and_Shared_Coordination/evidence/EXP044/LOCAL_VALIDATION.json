@@ -1,0 +1,8 @@
+{
+  "scope": "EXP044 only",
+  "source_people": 40,
+  "OOF_predictions": 200,
+  "converged_fits": 50,
+  "recomputed_metric_checks": 30,
+  "status": "PASS"
+}

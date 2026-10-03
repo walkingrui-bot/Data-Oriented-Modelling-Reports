@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "fixed_ten_sites": true,
+    "all_ten_official_2026_files": true,
+    "download_budget": true,
+    "origin_window_frozen": true,
+    "explicit_rows_accounted": true,
+    "no_clock_parse_or_duplicate_errors": true,
+    "qualified_set_rederived": true,
+    "only_eight_qualified": true,
+    "BEX_MY1_below_frozen_threshold": true,
+    "no_eight_neighbor_pairs": true
+  },
+  "passed": 10,
+  "total": 10,
+  "result": "PASS"
+}

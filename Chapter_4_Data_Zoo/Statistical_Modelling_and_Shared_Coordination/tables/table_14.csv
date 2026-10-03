@@ -1,0 +1,6 @@
+Question,Observed evidence
+Can different observation formats be bound to one internal coordinate?,Direct reality binding passed the fixed joint criterion in 5/5 seeds; median cross-modal test RMSE was 0.0463 and median normalized same-scene representation distance was 0.2259.
+Can a previously separated internal organization be reorganized?,"After 180 self-only updates, switching the same parameters to reality binding passed in 5/5 seeds; median cross-modal RMSE was 0.0594 and internal distance 0.2116."
+Is shared parameterization alone sufficient?,No. Self-only training had median cross-modal RMSE 0.4753 and internal distance 1.5067; shuffled world pairing had 0.2935 and 1.2483.
+Where does the first reorganization occur?,"Across five seeds, the first binding update produced median parameter displacement 0.3808 in encoders, 0.0539 in decoders, and 0.0446 in the shared triangle core."
+Which plasticity is required?,"Freezing the triangle core retained binding in 4/5 seeds at the matched budget and the fifth crossed the alignment threshold with a longer budget. Freezing encoders, freezing decoders, or allowing only the core to move did not reach the joint criterion."

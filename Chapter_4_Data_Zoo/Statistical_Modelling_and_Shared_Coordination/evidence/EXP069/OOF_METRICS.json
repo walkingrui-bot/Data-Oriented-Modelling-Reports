@@ -1,0 +1,40 @@
+{
+  "subjects": 21,
+  "person_equal_weight_means": {
+    "ACC": {
+      "logloss": 0.3943908003121378,
+      "balanced_accuracy": 0.8748351586767594
+    },
+    "GYR": {
+      "logloss": 0.7373658372135979,
+      "balanced_accuracy": 0.7219046680973568
+    },
+    "JOINT": {
+      "logloss": 0.37052248312967867,
+      "balanced_accuracy": 0.9073117093743003
+    },
+    "PRIOR": {
+      "logloss": 1.7852288444695548,
+      "balanced_accuracy": 0.16666666666666663
+    }
+  },
+  "joint_minus_acc_logloss": -0.023868317182459076,
+  "joint_minus_acc_balanced_accuracy": 0.032476550697541066,
+  "paired_person_bootstrap_logloss_95pct_ci": [
+    -0.09675410997803327,
+    0.07631158420361776
+  ],
+  "subjects_joint_lower_logloss": 16,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261002,
+  "models": "fixed L2 logistic C=1, scaler fit only on fold training people",
+  "source_recheck": "SOURCE_STRUCTURE_MATCH",
+  "test_performance_scored": false,
+  "gates": {
+    "logloss_gain_at_least_0_03": false,
+    "balanced_accuracy_gain_at_least_0_02": true,
+    "bootstrap_upper_below_zero": false,
+    "enough_people_improved": true
+  },
+  "decision": "STOP_JOINT_DEV_GATE"
+}

@@ -1,0 +1,9 @@
+{
+  "current_release_extensions_not_in_v0_2_passport": [
+    "eva_somatic",
+    "progeny",
+    "slapenrich",
+    "sysbio"
+  ],
+  "reason": "Keep the 18-line research object stable for Experiment 016; treat additional current datasources as explicit future extensions rather than silently changing the hypothesis space."
+}

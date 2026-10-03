@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "both_source_years_match": true,
+    "both_pair_years_match": true,
+    "training_only_2024_667": true,
+    "test_only_2025_589": true,
+    "site_pair_counts": true,
+    "unique_and_exact_time": true,
+    "eight_or_nine_neighbors": true,
+    "all_saved_values_finite_nonnegative": true,
+    "all_four_MAE_RMSE_recomputed": true,
+    "all_station_MAE_recomputed": true,
+    "all_four_day_intervals_recomputed": true,
+    "frozen_gates_not_passed": true
+  },
+  "passed": 12,
+  "total": 12,
+  "result": "PASS"
+}

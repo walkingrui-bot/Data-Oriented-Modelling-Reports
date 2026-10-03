@@ -1,0 +1,233 @@
+{
+  "experiment": "INTERNAL_COORDINATION_015",
+  "title": "Statistical Routing Below the Shared Ganglion",
+  "date": "2026-10-02",
+  "dataset": {
+    "n": 26278,
+    "source": "vi-c-ky/Human-genetic-evidence-associated-with-drug-approval / data/final_dataset.csv",
+    "outer_split": "deterministic Ensembl-target 70/15/15 holdout",
+    "training_crossfit": "5-fold target-group OOF predictions for all statistical experts"
+  },
+  "experts": [
+    "Additive",
+    "Interaction",
+    "Empirical-Bayes"
+  ],
+  "routing": {
+    "principle": "classical OOF risk minimisation on the probability simplex; no neural router",
+    "availability_only_weights": {
+      "6": [
+        0.18,
+        0.38,
+        0.44
+      ],
+      "5": [
+        0.02,
+        0.72,
+        0.26
+      ],
+      "4": [
+        0.0,
+        0.9,
+        0.1
+      ],
+      "3": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    "availability_and_density_weights": {
+      "6_0": [
+        0,
+        0,
+        1
+      ],
+      "6_1": [
+        0,
+        0,
+        1
+      ],
+      "6_2": [
+        0,
+        1,
+        0
+      ],
+      "6_3": [
+        0,
+        1,
+        0
+      ],
+      "6_4": [
+        0.2,
+        0.36,
+        0.44
+      ],
+      "5_0": [
+        0.08,
+        0,
+        0.92
+      ],
+      "5_1": [
+        0,
+        0,
+        1
+      ],
+      "5_2": [
+        0,
+        1,
+        0
+      ],
+      "5_3": [
+        0,
+        0.88,
+        0.12
+      ],
+      "5_4": [
+        0.16,
+        0.56,
+        0.28
+      ],
+      "4_0": [
+        0,
+        0.12,
+        0.88
+      ],
+      "4_1": [
+        0,
+        0.44,
+        0.56
+      ],
+      "4_2": [
+        0,
+        1,
+        0
+      ],
+      "4_3": [
+        0,
+        1,
+        0
+      ],
+      "4_4": [
+        0.16,
+        0.64,
+        0.2
+      ],
+      "3_0": [
+        0,
+        0.08,
+        0.92
+      ],
+      "3_1": [
+        0,
+        0.8,
+        0.2
+      ],
+      "3_2": [
+        0,
+        1,
+        0
+      ],
+      "3_3": [
+        0,
+        1,
+        0
+      ]
+    },
+    "density_definition": "number of biologically present evidence classes among currently available pipelines"
+  },
+  "standalone_results": {
+    "Additive": {
+      "full": 0.19938245989553485,
+      "missing1": 0.19900821814788303,
+      "missing2": 0.19909979915439247,
+      "missing3": 0.1996299812044611
+    },
+    "Interaction": {
+      "full": 0.19780863636450538,
+      "missing1": 0.19822166233788815,
+      "missing2": 0.19869870202977405,
+      "missing3": 0.19935932088461894
+    },
+    "Empirical-Bayes": {
+      "full": 0.19751131950336667,
+      "missing1": 0.1980870581171458,
+      "missing2": 0.19884463811307446,
+      "missing3": 0.1997607948625167
+    },
+    "Stat-MoE availability-only": {
+      "full": 0.19765724355797176,
+      "missing1": 0.19809067816994264,
+      "missing2": 0.19866812597799166,
+      "missing3": 0.19935932088461894
+    },
+    "Stat-MoE availability+density": {
+      "full": 0.19740772760486655,
+      "missing1": 0.19790356167484366,
+      "missing2": 0.19854700241867704,
+      "missing3": 0.19933376954662413
+    }
+  },
+  "ganglion_with_stat_moe_runs": [
+    {
+      "seed": 161,
+      "full": 0.19747485738620227,
+      "missing1": 0.19801160636268875,
+      "missing2": 0.1987821355020905,
+      "missing3": 0.19983720725169518,
+      "drop_full": 0.1977593611527122,
+      "drop_missing1": 0.19829609040991347,
+      "drop_missing2": 0.19906730140438658,
+      "drop_missing3": 0.20022074388145214
+    },
+    {
+      "seed": 322,
+      "full": 0.19939556144710843,
+      "missing1": 0.19964419485251872,
+      "missing2": 0.2000901759102575,
+      "missing3": 0.20079178135751002,
+      "drop_full": 0.1998039231573737,
+      "drop_missing1": 0.19993028101439825,
+      "drop_missing2": 0.20014751086414007,
+      "drop_missing3": 0.20052999003760255
+    },
+    {
+      "seed": 483,
+      "full": 0.19762473916738363,
+      "missing1": 0.19806859100380023,
+      "missing2": 0.19872436110103361,
+      "missing3": 0.199634020951445,
+      "drop_full": 0.19791266184466488,
+      "drop_missing1": 0.1983386793367472,
+      "drop_missing2": 0.1989900768941835,
+      "drop_missing3": 0.20001365929512044
+    }
+  ],
+  "ganglion_median": {
+    "full": 0.19762473916738363,
+    "missing1": 0.19806859100380023,
+    "missing2": 0.1987821355020905,
+    "missing3": 0.19983720725169518
+  },
+  "ganglion_drop_stat_moe_median": {
+    "full": 0.19791266184466488,
+    "missing1": 0.1983386793367472,
+    "missing2": 0.19906730140438658,
+    "missing3": 0.20022074388145214
+  },
+  "references": {
+    "original_exp011_polynomial_full_logloss": 0.19734339820316998,
+    "exp013_hybrid_median": {
+      "full": 0.19744666480944692,
+      "missing1": 0.19796882101294536,
+      "missing2": 0.1985633233678034,
+      "missing3": 0.19929173763205318
+    },
+    "exp014_neural_router_median": {
+      "full": 0.19817899772734066,
+      "missing1": 0.19860008771352322,
+      "missing2": 0.19910609911920085,
+      "missing3": 0.19978940467719716
+    }
+  }
+}

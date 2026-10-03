@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "twelve_fixed_codes": true,
+    "fifty_one_people": true,
+    "source_count": true,
+    "order_count": true,
+    "boundary_count": true,
+    "intersection_39": true,
+    "frozen_stop": true,
+    "no_model_test": true
+  },
+  "passed": 8,
+  "total": 8
+}

@@ -1,0 +1,19 @@
+{
+  "numeric_specialist_advantage_pct": 6.93535929478164,
+  "language_specialist_advantage_points": 5.243444442749023,
+  "cross_num_to_language_acc": 0.7247191071510315,
+  "cross_language_to_num_pinball": 0.1530209928750991,
+  "mixed_both_num_pinball": 0.0858803763985633,
+  "mixed_both_lang_acc": 0.8426966071128845,
+  "mixed_both_probe_r2": 0.7043692469596863,
+  "freeze_num_pinball": 0.084009401500225,
+  "freeze_lang_acc": 0.8408239483833313,
+  "freeze_probe_r2": 0.704180121421814,
+  "delta_cos_num_lang": 0.0520771965384483,
+  "delta_cos_mix_num": 0.2060183435678482,
+  "delta_cos_mix_lang": 0.4175140261650085,
+  "lesion2_top_num_pinball": 0.1046877279877662,
+  "lesion2_random_num_pinball": 0.0932326167821884,
+  "lesion2_top_lang_acc": 0.7415730357170105,
+  "lesion2_random_lang_acc": 0.8239700198173523
+}

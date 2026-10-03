@@ -1,0 +1,17 @@
+Noise,Start,Family,Update,Target RMSE,Worst RMSE,Pass
+0.00,Geom,Line,Coupled,0.122899,0.191743,0/30
+0.00,Geom,Line,Joint GD,0.131592,0.192141,0/30
+0.00,Geom,Curve,Coupled,1.10e-16,1.91e-16,30/30
+0.00,Geom,Curve,Joint GD,0.052146,0.075591,0/30
+0.00,Random,Line,Coupled,0.122899,0.191743,0/30
+0.00,Random,Line,Joint GD,0.492645,0.822391,0/30
+0.00,Random,Curve,Coupled,0.105859,0.160508,11/30
+0.00,Random,Curve,Joint GD,0.269217,0.461805,0/30
+0.03,Geom,Line,Coupled,0.123723,0.193508,0/30
+0.03,Geom,Line,Joint GD,0.133069,0.193927,0/30
+0.03,Geom,Curve,Coupled,0.006650,0.010586,11/30
+0.03,Geom,Curve,Joint GD,0.052516,0.077523,0/30
+0.03,Random,Line,Coupled,0.123723,0.193508,0/30
+0.03,Random,Line,Joint GD,0.494042,0.823294,0/30
+0.03,Random,Curve,Coupled,0.099479,0.160017,6/30
+0.03,Random,Curve,Joint GD,0.271152,0.457723,0/30

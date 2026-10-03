@@ -1,0 +1,44 @@
+{
+  "train": {
+    "pairs": 17702,
+    "targets": 990,
+    "positives": 916,
+    "prevalence": 0.05174556547282793,
+    "six_source_rows": {
+      "gwas_credible_sets": 349,
+      "gene_burden": 13,
+      "eva": 112,
+      "expression_atlas": 437,
+      "impc": 299,
+      "europepmc": 8308
+    }
+  },
+  "validation": {
+    "pairs": 4132,
+    "targets": 212,
+    "positives": 220,
+    "prevalence": 0.05324298160696999,
+    "six_source_rows": {
+      "gwas_credible_sets": 87,
+      "gene_burden": 6,
+      "eva": 22,
+      "expression_atlas": 112,
+      "impc": 61,
+      "europepmc": 1772
+    }
+  },
+  "test": {
+    "pairs": 4401,
+    "targets": 232,
+    "positives": 228,
+    "prevalence": 0.051806407634628494,
+    "six_source_rows": {
+      "gwas_credible_sets": 104,
+      "gene_burden": 7,
+      "eva": 25,
+      "expression_atlas": 98,
+      "impc": 48,
+      "europepmc": 1862
+    }
+  }
+}

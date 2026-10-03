@@ -1,0 +1,7 @@
+Condition,Key median result
+Stable affine channel,cross RMSE 0.238; clean-state R² 0.974
+Stable neural channel,cross RMSE 0.235; clean-state R² 0.975
+Drift + neural channel rewrite,focused RMSE 0.351 → 0.469
+Drift + 64-param state,focused RMSE 0.351 → 0.341; core fixed
+"New channel, affine",RMSE 0.310 → 0.216
+"New channel, neural",RMSE 0.320 → 0.213

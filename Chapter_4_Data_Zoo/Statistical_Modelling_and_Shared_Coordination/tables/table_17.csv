@@ -1,0 +1,6 @@
+Condition,Schedule,What is allowed to teach the system
+Self only,180 self-generation updates,Each observed surface reconstructs itself only.
+Direct reality binding,550 binding updates,"Any observed surface must generate A, B and C from the same world."
+Self → binding,180 self updates + 700 binding updates,Existing self-trained parameters are retained and reorganized by same-world consequences.
+Shuffled worlds,180 self updates + 700 shuffled binding updates,Cross-observer targets come from different worlds; self targets remain intact.
+Freeze controls,Self → binding with selected parameter blocks fixed,Locates the plasticity used to achieve binding.

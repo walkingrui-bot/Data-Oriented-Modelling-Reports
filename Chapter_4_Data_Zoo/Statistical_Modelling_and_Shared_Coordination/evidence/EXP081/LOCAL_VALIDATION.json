@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "source_recheck": true,
+    "support_gate": true,
+    "sample_counts": true,
+    "conditional_test": true,
+    "validation_row_count": true,
+    "validation_all_zones_recomputed": true,
+    "validation_overall_gate_consistent": true,
+    "test_row_count": true,
+    "test_all_zones_recomputed": true,
+    "test_overall_gate_consistent": true,
+    "frozen_test_failure": true
+  },
+  "passed": 11,
+  "total": 11
+}

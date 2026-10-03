@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "source_version_and_pair_count_match": true,
+    "667_rows": true,
+    "ten_sites_and_counts": true,
+    "unique_station_hour": true,
+    "exact_24_hour_utc": true,
+    "eight_or_nine_neighbors": true,
+    "nonnegative_finite": true,
+    "saved_inverse_transform": true,
+    "overall_MAE_recomputed": true,
+    "overall_RMSE_recomputed": true,
+    "day_block_interval_recomputed": true,
+    "frozen_gate_failure_recomputed": true
+  },
+  "passed": 12,
+  "total": 12,
+  "result": "PASS"
+}

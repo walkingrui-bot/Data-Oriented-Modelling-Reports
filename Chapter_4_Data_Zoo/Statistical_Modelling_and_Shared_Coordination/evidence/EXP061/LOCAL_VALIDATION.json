@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "twelve_preselected_sites": true,
+    "all_twelve_official_files_retrieved": true,
+    "official_hourly_paths": true,
+    "bounded_read": true,
+    "leap_year_hour_ending_grid": true,
+    "present_hour_categories_sum": true,
+    "no_duplicate_or_unparsed_hour": true,
+    "qualified_sites_rederived": true,
+    "qualified_site_count_eight": true,
+    "target_count_and_neighbors": true,
+    "no_eight_neighbor_pairs": true
+  },
+  "passed": 11,
+  "total": 11,
+  "result": "PASS"
+}

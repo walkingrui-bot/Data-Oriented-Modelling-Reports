@@ -1,0 +1,26 @@
+{
+  "self": {
+    "retrieval_acc": 0.5956666666666667,
+    "min_pair_acc": 0.16,
+    "margin": 0.3976086974143982,
+    "same_raw_dist": 1.5927294308419029,
+    "diff_raw_dist": 3.4606962440808613,
+    "same_diff_ratio": 0.4602338138072911
+  },
+  "bind": {
+    "retrieval_acc": 1.0,
+    "min_pair_acc": 1.0,
+    "margin": 2.324606418609619,
+    "same_raw_dist": 0.2762056078985333,
+    "diff_raw_dist": 3.2731365634997687,
+    "same_diff_ratio": 0.08438560461504338
+  },
+  "shuffle": {
+    "retrieval_acc": 0.6230000000000001,
+    "min_pair_acc": 0.26,
+    "margin": 0.012820701114833355,
+    "same_raw_dist": 0.35396178360531727,
+    "diff_raw_dist": 0.9548723167454203,
+    "same_diff_ratio": 0.37069017228581724
+  }
+}

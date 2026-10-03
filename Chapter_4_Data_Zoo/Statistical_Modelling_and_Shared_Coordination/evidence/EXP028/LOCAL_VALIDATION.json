@@ -1,0 +1,17 @@
+{
+  "run_id": "EXP028-VERIFY-001",
+  "checks": {
+    "372_new_unique_features_no_test": true,
+    "source_gate_and_budget": true,
+    "25_fits_converged": true,
+    "1860_oof_unique_and_same_folds": true,
+    "probabilities_sum_to_one": true,
+    "m4_repeat_metrics_recomputed": true,
+    "frozen_gate_recomputed": true
+  },
+  "passed": 7,
+  "total": 7,
+  "all_passed": true,
+  "qualified_repeats": 5,
+  "scope": "EXP028 outputs plus direct EXP026/027 references; no refit or test"
+}

@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "train_class_windows_sum": true,
+    "test_class_windows_sum": true,
+    "total_window_sum": true,
+    "person_sets_disjoint": true,
+    "all_six_per_domain": true,
+    "all_member_rows_aligned": true,
+    "gates_true": true,
+    "no_model_or_test_score": true
+  },
+  "passed": 8,
+  "total": 8
+}

@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "180_trials": true,
+    "30_configs": true,
+    "24_nonzero_configs": true,
+    "balanced_nonzero": true,
+    "no_backwards": true,
+    "seven_source_gates": true,
+    "zero_models": true
+  },
+  "passed": 7,
+  "total": 7,
+  "local_validation": "PASS"
+}

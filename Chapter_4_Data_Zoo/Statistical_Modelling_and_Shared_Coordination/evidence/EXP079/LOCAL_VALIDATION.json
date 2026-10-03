@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "source_match": true,
+    "hourly_support": true,
+    "event_support": true,
+    "test_event_count_not_prechecked": true,
+    "evaluation_day_count": true,
+    "selected_min_logloss": true,
+    "daily_means": true,
+    "gain_and_better_days": true,
+    "bootstrap_ci": true,
+    "ap_report_arithmetic": true,
+    "frozen_gate_stop": true,
+    "test_not_scored": true
+  },
+  "passed": 12,
+  "total": 12,
+  "limitation": "Average precision compared arithmetically; per-hour probabilities not persisted, so AP not independently recomputed."
+}

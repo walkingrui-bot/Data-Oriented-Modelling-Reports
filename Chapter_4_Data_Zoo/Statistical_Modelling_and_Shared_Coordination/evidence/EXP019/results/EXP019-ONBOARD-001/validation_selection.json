@@ -1,0 +1,420 @@
+{
+  "run_id": "EXP019-ONBOARD-001",
+  "device": "mps",
+  "candidate_seeds": [
+    101,
+    202,
+    303
+  ],
+  "selected_by_validation_only": {
+    "frozen": 101,
+    "full_retrain": 101,
+    "no_ep_frozen": 303
+  },
+  "validation_baseline": {
+    "101": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.19950646113862852,
+      "brier": 0.049071150877935545,
+      "auroc": 0.6441183305447109,
+      "auprc": 0.11727981828890732,
+      "ece_10_equal_width": 0.006964093130099925,
+      "calibration_intercept": -0.1062829832930898,
+      "calibration_slope": 0.9208732417637532
+    },
+    "202": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.19979416055522708,
+      "brier": 0.04914048592145772,
+      "auroc": 0.6435850065067859,
+      "auprc": 0.11587404745508534,
+      "ece_10_equal_width": 0.007650255999822686,
+      "calibration_intercept": -0.15918892906652932,
+      "calibration_slope": 0.9032150805350164
+    },
+    "303": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.19959135158886593,
+      "brier": 0.04907650744352799,
+      "auroc": 0.6413622420524262,
+      "auprc": 0.1181227027533935,
+      "ece_10_equal_width": 0.007754197614317054,
+      "calibration_intercept": -0.10895933401170664,
+      "calibration_slope": 0.9199406788968955
+    }
+  },
+  "validation_no_ep_baseline": {
+    "101": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.21378999290085307,
+      "brier": 0.050606621826563065,
+      "auroc": 0.5259742749581706,
+      "auprc": 0.07137507582882877,
+      "ece_10_equal_width": 0.024432664578485266,
+      "calibration_intercept": -0.8566966616840336,
+      "calibration_slope": 0.5828268479444921
+    },
+    "202": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.2139456620593517,
+      "brier": 0.050786269554194026,
+      "auroc": 0.5198311721509573,
+      "auprc": 0.07056274229446144,
+      "ece_10_equal_width": 0.023852648631045702,
+      "calibration_intercept": -1.0422444252183662,
+      "calibration_slope": 0.5318564136927202
+    },
+    "303": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.21346979395354856,
+      "brier": 0.05071198316982939,
+      "auroc": 0.5310274911693623,
+      "auprc": 0.072662576590324,
+      "ece_10_equal_width": 0.023846847446845433,
+      "calibration_intercept": -0.9906117386709905,
+      "calibration_slope": 0.5484029657935043
+    }
+  },
+  "arm_diagnostics": {
+    "frozen_seed_101": {
+      "arm": "frozen",
+      "seed": 101,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/frozen_seed_101.pt",
+      "best_epoch": 1000,
+      "epochs_run": 1000,
+      "best_validation_logloss": 0.19898362457752228,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.19898364709537994,
+        "brier": 0.04904670298039458,
+        "auroc": 0.6494992098903142,
+        "auprc": 0.12087564541436631,
+        "ece_10_equal_width": 0.006675464895419554,
+        "calibration_intercept": -0.003972725284363646,
+        "calibration_slope": 0.9544078501022897
+      },
+      "trainable_parameters": 192,
+      "total_parameters": 961,
+      "training_wall_seconds": 4.4989904159992875,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": true,
+        "frobenius_by_component": {
+          "interfaces": 0.0,
+          "core": 0.0,
+          "outcome": 0.0
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "full_retrain_seed_101": {
+      "arm": "full_retrain",
+      "seed": 101,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/full_retrain_seed_101.pt",
+      "best_epoch": 484,
+      "epochs_run": 584,
+      "best_validation_logloss": 0.19724628329277039,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.1972462429211834,
+        "brier": 0.04858132138221689,
+        "auroc": 0.6458681911135901,
+        "auprc": 0.13827690506185963,
+        "ece_10_equal_width": 0.005874315248222763,
+        "calibration_intercept": 0.04030393096890388,
+        "calibration_slope": 0.9725314942651079
+      },
+      "trainable_parameters": 961,
+      "total_parameters": 961,
+      "training_wall_seconds": 2.7068162920004397,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": false,
+        "frobenius_by_component": {
+          "interfaces": 10.658874115908542,
+          "core": 5.944498254506704,
+          "outcome": 1.0089071914125085
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "no_ep_frozen_seed_101": {
+      "arm": "no_ep_frozen",
+      "seed": 101,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/no_ep_frozen_seed_101.pt",
+      "best_epoch": 1000,
+      "epochs_run": 1000,
+      "best_validation_logloss": 0.2117481529712677,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.21174817166996185,
+        "brier": 0.050487686986595774,
+        "auroc": 0.5418537367540435,
+        "auprc": 0.07520227950786612,
+        "ece_10_equal_width": 0.022818032024815475,
+        "calibration_intercept": -0.6330987255816872,
+        "calibration_slope": 0.6551912661011536
+      },
+      "trainable_parameters": 192,
+      "total_parameters": 961,
+      "training_wall_seconds": 4.294379124999978,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": true,
+        "frobenius_by_component": {
+          "interfaces": 0.0,
+          "core": 0.0,
+          "outcome": 0.0
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "frozen_seed_202": {
+      "arm": "frozen",
+      "seed": 202,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/frozen_seed_202.pt",
+      "best_epoch": 948,
+      "epochs_run": 1000,
+      "best_validation_logloss": 0.19958950579166412,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.19958956624994914,
+        "brier": 0.04916976910397986,
+        "auroc": 0.6472903885480572,
+        "auprc": 0.11600630907265232,
+        "ece_10_equal_width": 0.007069004160223123,
+        "calibration_intercept": -0.09404492088334566,
+        "calibration_slope": 0.9233011068717681
+      },
+      "trainable_parameters": 192,
+      "total_parameters": 961,
+      "training_wall_seconds": 3.5988735829996585,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": true,
+        "frobenius_by_component": {
+          "interfaces": 0.0,
+          "core": 0.0,
+          "outcome": 0.0
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "full_retrain_seed_202": {
+      "arm": "full_retrain",
+      "seed": 202,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/full_retrain_seed_202.pt",
+      "best_epoch": 387,
+      "epochs_run": 487,
+      "best_validation_logloss": 0.19769801199436188,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.19769807142534984,
+        "brier": 0.04875206992913368,
+        "auroc": 0.6546721044803866,
+        "auprc": 0.1307013642575522,
+        "ece_10_equal_width": 0.0066697437115636115,
+        "calibration_intercept": 0.01975593923796646,
+        "calibration_slope": 0.9661849761227421
+      },
+      "trainable_parameters": 961,
+      "total_parameters": 961,
+      "training_wall_seconds": 2.1576904579997063,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": false,
+        "frobenius_by_component": {
+          "interfaces": 9.688432924664333,
+          "core": 3.5863770608208996,
+          "outcome": 1.0579618677597915
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "no_ep_frozen_seed_202": {
+      "arm": "no_ep_frozen",
+      "seed": 202,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/no_ep_frozen_seed_202.pt",
+      "best_epoch": 999,
+      "epochs_run": 1000,
+      "best_validation_logloss": 0.2115359604358673,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.21153604239967275,
+        "brier": 0.05052294684701537,
+        "auroc": 0.5360778025655327,
+        "auprc": 0.0756028837507061,
+        "ece_10_equal_width": 0.021387438482531895,
+        "calibration_intercept": -0.7661149297471915,
+        "calibration_slope": 0.6192873370788853
+      },
+      "trainable_parameters": 192,
+      "total_parameters": 961,
+      "training_wall_seconds": 4.184323833000235,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": true,
+        "frobenius_by_component": {
+          "interfaces": 0.0,
+          "core": 0.0,
+          "outcome": 0.0
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "frozen_seed_303": {
+      "arm": "frozen",
+      "seed": 303,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/frozen_seed_303.pt",
+      "best_epoch": 1000,
+      "epochs_run": 1000,
+      "best_validation_logloss": 0.19933784008026123,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.19933783213004092,
+        "brier": 0.04911322898256041,
+        "auroc": 0.6454986986428705,
+        "auprc": 0.11922626571829899,
+        "ece_10_equal_width": 0.007322085877052809,
+        "calibration_intercept": -0.03895806185641441,
+        "calibration_slope": 0.9427039396743712
+      },
+      "trainable_parameters": 192,
+      "total_parameters": 961,
+      "training_wall_seconds": 4.220244916999945,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": true,
+        "frobenius_by_component": {
+          "interfaces": 0.0,
+          "core": 0.0,
+          "outcome": 0.0
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "full_retrain_seed_303": {
+      "arm": "full_retrain",
+      "seed": 303,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/full_retrain_seed_303.pt",
+      "best_epoch": 281,
+      "epochs_run": 381,
+      "best_validation_logloss": 0.19754494726657867,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.19754494655596505,
+        "brier": 0.04864332799415316,
+        "auroc": 0.6546965049265663,
+        "auprc": 0.13742817305991795,
+        "ece_10_equal_width": 0.006141233431276323,
+        "calibration_intercept": 0.03940845969367845,
+        "calibration_slope": 0.9739702333358102
+      },
+      "trainable_parameters": 961,
+      "total_parameters": 961,
+      "training_wall_seconds": 1.6500061250008002,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": false,
+        "frobenius_by_component": {
+          "interfaces": 7.236061528863882,
+          "core": 3.922390391007864,
+          "outcome": 0.9566962876010295
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    },
+    "no_ep_frozen_seed_303": {
+      "arm": "no_ep_frozen",
+      "seed": 303,
+      "parent_checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt",
+      "checkpoint_path": "/SOURCE_ROOT/生物圈3号/research/records/STAT-PSYMOE-EXP019-20261002-001/results/EXP019-ONBOARD-001/no_ep_frozen_seed_303.pt",
+      "best_epoch": 1000,
+      "epochs_run": 1000,
+      "best_validation_logloss": 0.21100419759750366,
+      "validation_metrics": {
+        "n": 4132,
+        "positive_prevalence": 0.05324298160696999,
+        "logloss": 0.21100419548692192,
+        "brier": 0.05043512482745618,
+        "auroc": 0.5468906860011156,
+        "auprc": 0.07798842061422805,
+        "ece_10_equal_width": 0.02181043701619631,
+        "calibration_intercept": -0.7089449474366291,
+        "calibration_slope": 0.6380139009426715
+      },
+      "trainable_parameters": 192,
+      "total_parameters": 961,
+      "training_wall_seconds": 4.303874375000305,
+      "legacy_parameter_displacement": {
+        "old_parameters_exactly_equal": true,
+        "frobenius_by_component": {
+          "interfaces": 0.0,
+          "core": 0.0,
+          "outcome": 0.0
+        }
+      },
+      "optimizer": {
+        "type": "Adam",
+        "learning_rate": 0.002,
+        "max_epochs": 1000,
+        "validation_patience": 100
+      }
+    }
+  },
+  "test_performance_computed_at_selection_time": false
+}

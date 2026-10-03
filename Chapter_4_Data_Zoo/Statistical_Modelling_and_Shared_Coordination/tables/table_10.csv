@@ -1,0 +1,5 @@
+Noiseless geometry start,Median target RMSE,All seven pass
+Line with joint gradient,0.131592,0/30
+Line with coupled update,0.122899,0/30
+Curve with joint gradient,0.052146,0/30
+Curve with coupled update,1.10 × 10⁻¹⁶,30/30

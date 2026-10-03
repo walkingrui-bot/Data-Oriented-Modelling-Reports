@@ -1,0 +1,18 @@
+{
+  "seconds": 8.347842693328857,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "derivative_checks": [
+    {
+      "degree": 1,
+      "jacobian_max_error": 4.143266285616676e-11,
+      "gauge_output_max_error": 1.3877787807814457e-17
+    },
+    {
+      "degree": 2,
+      "jacobian_max_error": 1.397779669787269e-10,
+      "gauge_output_max_error": 2.220446049250313e-16
+    }
+  ],
+  "total_fits": 480
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": "INDOOR",
+  "evaluation_days": 20,
+  "AR_equal_day_mae_wh": 34.963772681109724,
+  "candidate_equal_day_mae_wh": 34.96565495717719,
+  "candidate_minus_AR_mae_wh": 0.0018822760674684247,
+  "candidate_relative_mae_gain": -5.383503904561332e-05,
+  "paired_day_bootstrap_difference_95pct_ci_wh": [
+    -0.5348964675679185,
+    0.5534356433301448
+  ],
+  "days_candidate_better": 10,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261002,
+  "validation_equal_day_mae_wh_by_model": {
+    "AR": 34.963772681109724,
+    "INDOOR": 34.96565495717719,
+    "WEATHER": 35.182778109702056,
+    "JOINT": 34.999665493796684,
+    "PERSIST": 51.14583333333333
+  },
+  "validation_day_support": {
+    "all_target_dates": 22,
+    "evaluation_dates": 20,
+    "discarded_partial_target_dates": {
+      "2016-04-16": 52,
+      "2016-05-07": 28
+    }
+  },
+  "source_recheck": "SOURCE_STRUCTURE_MATCH",
+  "model_sample_counts": {
+    "train": 13664,
+    "validation": 2960,
+    "test": 2961
+  },
+  "feature_dimensions": {
+    "AR": 10,
+    "INDOOR": 28,
+    "WEATHER": 16,
+    "JOINT": 34
+  },
+  "fit_seconds": {
+    "AR": 0.6146895420024521,
+    "INDOOR": 0.7241196250033681,
+    "WEATHER": 0.5392180420021759,
+    "JOINT": 0.5765589160000673
+  },
+  "model_definition": "fixed HistGradientBoostingRegressor absolute_error, 200 iterations, leaves15, min_leaf50, lr0.05, L2=10, no early stopping",
+  "test_performance_scored": false,
+  "gates": {
+    "relative_mae_gain_at_least_5pct": false,
+    "paired_day_ci_upper_below_zero": false,
+    "at_least_60pct_days_better": false
+  },
+  "decision": "STOP_ADDITIONAL_CHANNEL_DEV_GATE"
+}

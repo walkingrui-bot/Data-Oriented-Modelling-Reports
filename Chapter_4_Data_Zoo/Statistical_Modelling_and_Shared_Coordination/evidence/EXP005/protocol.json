@@ -1,0 +1,21 @@
+{
+  "experiment": "INTERNAL_COORDINATION_005",
+  "date": "2026-10-01",
+  "backbone": "scikit-learn diabetes dataset, 442 patients, 10 baseline measurements",
+  "split": {"test_fraction": 0.30, "random_state": 20261001},
+  "shared_core": "16x16 tanh linear core",
+  "channels": [
+    "calibration bias / proportional error",
+    "heaping / rounding",
+    "lower limit of detection",
+    "top-coding / saturation",
+    "heteroscedastic error",
+    "nonlinear assay response"
+  ],
+  "main_seeds": [0,1,2],
+  "holdout_channel_seeds": [0,1,2,3,4],
+  "main_training_steps": 300,
+  "dynamic_state_parameters": 64,
+  "drift_calibration_subjects": 48,
+  "note": "Real patient measurements form the covariance backbone. Measurement channels are controlled semi-synthetic operators so measurement truth is auditable."
+}

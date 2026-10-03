@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "source_recheck_pass": true,
+    "window_sum_recomputed": true,
+    "all_51_people_qualified": true,
+    "forty_eleven_split": true,
+    "oof_person_rows_forty": true,
+    "metric_differences_recomputed": true,
+    "improved_people_recomputed": true,
+    "frozen_gate_stop": true,
+    "test_not_scored": true
+  },
+  "passed": 9,
+  "total": 9,
+  "rejected_windows": 0
+}

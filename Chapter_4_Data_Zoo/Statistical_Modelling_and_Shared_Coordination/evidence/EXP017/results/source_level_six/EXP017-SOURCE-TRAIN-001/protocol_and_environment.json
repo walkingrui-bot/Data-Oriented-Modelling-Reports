@@ -1,0 +1,35 @@
+{
+  "run_id": "EXP017-SOURCE-TRAIN-001",
+  "research_id": "STAT-PSYMOE-EXP017-20261002-001",
+  "qualification": "Exploratory 26.06 datasource-level retrospective cohort; native raw and point-in-time not tested",
+  "input_manifest": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/cache_manifest.json",
+  "six_datasources": [
+    "gwas_credible_sets",
+    "gene_burden",
+    "eva",
+    "expression_atlas",
+    "impc",
+    "europepmc"
+  ],
+  "split": "FNV1a32 target hash modulo 100: 70/15/15",
+  "local_oof": "5-fold StratifiedGroupKFold by target; simplex weights on OOF log loss",
+  "ganglion_seeds": [
+    101,
+    202,
+    303
+  ],
+  "ganglion_max_epochs": 250,
+  "ganglion_early_stop_patience": 30,
+  "bootstrap": "300 target-group resamples",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "torch": "2.14.1",
+    "duckdb": "1.5.6",
+    "pyarrow": "25.0.1"
+  },
+  "python": "3.12.14",
+  "output_dir": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/source_level_six/EXP017-SOURCE-TRAIN-001"
+}

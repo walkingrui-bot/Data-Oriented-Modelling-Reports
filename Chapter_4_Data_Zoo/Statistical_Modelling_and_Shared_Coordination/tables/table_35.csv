@@ -1,0 +1,19 @@
+Passport,Pipeline,26.06 datasourceId,Native route,Compatibility
+DP-GEN-01,GWAS associations,gwas_credible_sets,evidence_gwas_credible_sets,Verified native table
+DP-GEN-02,Gene Burden,gene_burden,evidence_gene_burden,Verified native table
+DP-GEN-03,ClinVar,eva,evidence_eva,Verified native table
+DP-GEN-04,Genomics England PanelApp,genomics_england,evidence_genomics_england,Verified native table
+DP-GEN-05,Gene2Phenotype,gene2phenotype,evidence_gene2phenotype,Verified native table
+DP-GEN-06,UniProt literature,uniprot_literature,evidence_uniprot_literature,Verified native table
+DP-GEN-07,UniProt curated variants,uniprot_variants,evidence_uniprot_variants,Verified native table
+DP-GEN-08,Orphanet,orphanet,official Orphanet evidence dataset,Official dataset + datasource route
+DP-GEN-09,ClinGen,clingen,evidence_clingen / official ClinGen dataset,Official table/config route
+DP-SOM-01,Cancer Gene Census,cancer_gene_census,evidence_cancer_gene_census,Verified native table
+DP-SOM-02,IntOGen,intogen,evidence_intogen,Verified native table
+DP-PWY-01,Cancer Biomarkers,cancer_biomarkers,evidence_cancer_biomarkers,Verified native table
+DP-PWY-02,Systematic CRISPR screens,crispr_screen,evidence_crispr_screen,Current-release generalized route
+DP-PWY-03,Project Score / unified cancer CRISPR,crispr,evidence_crispr,Verified native table
+DP-PWY-04,Reactome,reactome,evidence_reactome,Verified native table
+DP-LIT-01,Europe PMC,europepmc,evidence_europepmc,Verified native table
+DP-RNA-01,Expression Atlas,expression_atlas,evidence_expression_atlas,Verified native table
+DP-ANM-01,IMPC / PhenoDigm,impc,evidence_impc,Verified native table

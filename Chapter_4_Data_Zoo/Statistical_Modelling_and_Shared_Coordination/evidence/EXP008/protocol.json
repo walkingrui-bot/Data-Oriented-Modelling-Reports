@@ -1,0 +1,27 @@
+{
+  "experiment": "INTERNAL_COORDINATION_008",
+  "date": "2026-10-01",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "world_slices": 3,
+  "channels": 6,
+  "variables_per_channel": 10,
+  "ganglion_dim": 16,
+  "quantiles": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+  ],
+  "train_steps": 420,
+  "train_static_fraction": 0.25,
+  "training_target": "independent repeat measurement distribution at the current timestamp",
+  "same_time_operation": "commutative mean of channel evidence before one ganglion update",
+  "across_time_operation": "recurrent ganglion update per distinct time slice"
+}

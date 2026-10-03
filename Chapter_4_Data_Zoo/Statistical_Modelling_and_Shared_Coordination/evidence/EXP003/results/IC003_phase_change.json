@@ -1,0 +1,38 @@
+[
+  {
+    "seed": 0,
+    "encoder_delta_l2": 9.12390867880675,
+    "encoder_delta_rms": 0.07274262364240931,
+    "encoder_relative_l2": 0.17414464658430834,
+    "core_delta_l2": 1.0041288201491403,
+    "core_delta_rms": 0.06088425275296683,
+    "core_relative_l2": 0.2635912700210379,
+    "decoder_delta_l2": 21.68436860761866,
+    "decoder_delta_rms": 0.15365851289316243,
+    "decoder_relative_l2": 0.580009845298451
+  },
+  {
+    "seed": 2,
+    "encoder_delta_l2": 9.540607181926452,
+    "encoder_delta_rms": 0.07606485575277674,
+    "encoder_relative_l2": 0.1844024596982571,
+    "core_delta_l2": 1.2617246462326932,
+    "core_delta_rms": 0.07650329392444809,
+    "core_relative_l2": 0.36569873831619015,
+    "decoder_delta_l2": 23.15200744984507,
+    "decoder_delta_rms": 0.16405840998223514,
+    "decoder_relative_l2": 0.6403297375822451
+  },
+  {
+    "seed": 3,
+    "encoder_delta_l2": 8.768204947666469,
+    "encoder_delta_rms": 0.06990668747147405,
+    "encoder_relative_l2": 0.16824933965324665,
+    "core_delta_l2": 0.9730763270301795,
+    "core_delta_rms": 0.05900141879608094,
+    "core_relative_l2": 0.26751346613298777,
+    "decoder_delta_l2": 23.908266669339216,
+    "decoder_delta_rms": 0.16941737012223138,
+    "decoder_relative_l2": 0.6597199104239179
+  }
+]

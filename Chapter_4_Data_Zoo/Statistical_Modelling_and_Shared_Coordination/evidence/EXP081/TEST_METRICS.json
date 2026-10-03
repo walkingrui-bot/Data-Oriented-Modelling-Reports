@@ -1,0 +1,110 @@
+{
+  "by_zone": {
+    "Zone 1 Power Consumption": {
+      "candidate": "WEATHER",
+      "evaluation_days": 60,
+      "OWN_equal_day_mae_source_units": 1986.6862749781244,
+      "candidate_equal_day_mae_source_units": 1749.2449846322147,
+      "candidate_minus_OWN_mae_source_units": -237.44129034590998,
+      "candidate_relative_mae_gain": 0.11951624840641947,
+      "paired_day_bootstrap_difference_95pct_ci_source_units": [
+        -257.4245938401794,
+        -215.45044631649753
+      ],
+      "days_candidate_better": 60,
+      "gates": {
+        "relative_mae_gain_at_least_5pct": true,
+        "paired_day_ci_upper_below_zero": true,
+        "at_least_60pct_days_better": true
+      },
+      "qualified": true,
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 20261002,
+      "equal_day_mae_source_units_by_model": {
+        "OWN": 1986.6862749781244,
+        "WEATHER": 1749.2449846322147,
+        "PERSIST": 1822.7034718449077
+      },
+      "day_support": {
+        "all_dates": 60,
+        "evaluation_dates": 60,
+        "discarded_partial_dates": {}
+      }
+    },
+    "Zone 2 Power Consumption": {
+      "candidate": "WEATHER",
+      "evaluation_days": 60,
+      "OWN_equal_day_mae_source_units": 993.6222778126875,
+      "candidate_equal_day_mae_source_units": 941.8251160746695,
+      "candidate_minus_OWN_mae_source_units": -51.79716173801809,
+      "candidate_relative_mae_gain": 0.05212963003611569,
+      "paired_day_bootstrap_difference_95pct_ci_source_units": [
+        -63.4729337934597,
+        -39.27235337915843
+      ],
+      "days_candidate_better": 53,
+      "gates": {
+        "relative_mae_gain_at_least_5pct": true,
+        "paired_day_ci_upper_below_zero": true,
+        "at_least_60pct_days_better": true
+      },
+      "qualified": true,
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 20261002,
+      "equal_day_mae_source_units_by_model": {
+        "OWN": 993.6222778126875,
+        "WEATHER": 941.8251160746695,
+        "PERSIST": 1569.3612902511575
+      },
+      "day_support": {
+        "all_dates": 60,
+        "evaluation_dates": 60,
+        "discarded_partial_dates": {}
+      }
+    },
+    "Zone 3 Power Consumption": {
+      "candidate": "WEATHER",
+      "evaluation_days": 60,
+      "OWN_equal_day_mae_source_units": 2453.6521186705886,
+      "candidate_equal_day_mae_source_units": 2712.790320542169,
+      "candidate_minus_OWN_mae_source_units": 259.1382018715796,
+      "candidate_relative_mae_gain": -0.1056132611056468,
+      "paired_day_bootstrap_difference_95pct_ci_source_units": [
+        229.1440832469755,
+        288.0609606383685
+      ],
+      "days_candidate_better": 2,
+      "gates": {
+        "relative_mae_gain_at_least_5pct": false,
+        "paired_day_ci_upper_below_zero": false,
+        "at_least_60pct_days_better": false
+      },
+      "qualified": false,
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 20261002,
+      "equal_day_mae_source_units_by_model": {
+        "OWN": 2453.6521186705886,
+        "WEATHER": 2712.790320542169,
+        "PERSIST": 950.8113656648148
+      },
+      "day_support": {
+        "all_dates": 60,
+        "evaluation_dates": 60,
+        "discarded_partial_dates": {}
+      }
+    }
+  },
+  "overall": {
+    "qualified_zones": [
+      "Zone 1 Power Consumption",
+      "Zone 2 Power Consumption"
+    ],
+    "qualified_zone_count": 2,
+    "all_zones_no_more_than_2pct_degradation": false,
+    "qualified_zones_selecting_peer_or_joint": [],
+    "passes": false,
+    "decision": "NO_LATER_MONTH_CHANNEL_GAIN"
+  },
+  "development_gate": "PASS_ADDITIONAL_ZONE_CHANNEL_DEV_GATE",
+  "test_performance_scored": true
+}

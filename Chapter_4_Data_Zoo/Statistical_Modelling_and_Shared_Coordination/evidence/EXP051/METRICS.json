@@ -1,0 +1,40 @@
+{
+  "run_id": "EXP051-TRANSPORT-001",
+  "evidence_class": "NEW_EXTERNAL_GEOGRAPHY_TEST",
+  "cities": {
+    "Chengdu": {
+      "n": 23496,
+      "B0_persistence_MAE": 32.6046986721144,
+      "B1_Beijing_common_ridge_MAE": 33.04711734215194,
+      "B0_persistence_RMSE": 46.58326062269303,
+      "B1_Beijing_common_ridge_RMSE": 49.44489692848504,
+      "B1_relative_MAE_improvement": -0.013569169109234114
+    },
+    "Guangzhou": {
+      "n": 24310,
+      "B0_persistence_MAE": 22.250143973673385,
+      "B1_Beijing_common_ridge_MAE": 19.965377281858355,
+      "B0_persistence_RMSE": 32.85945727698572,
+      "B1_Beijing_common_ridge_RMSE": 28.590692580468424,
+      "B1_relative_MAE_improvement": 0.10268547900267033
+    },
+    "Shanghai": {
+      "n": 24899,
+      "B0_persistence_MAE": 30.3096509899996,
+      "B1_Beijing_common_ridge_MAE": 30.228638376027256,
+      "B0_persistence_RMSE": 47.53834127649951,
+      "B1_Beijing_common_ridge_RMSE": 40.85084253587511,
+      "B1_relative_MAE_improvement": 0.0026728322935514193
+    },
+    "Shenyang": {
+      "n": 21062,
+      "B0_persistence_MAE": 46.138210996106736,
+      "B1_Beijing_common_ridge_MAE": 39.04541227282037,
+      "B0_persistence_RMSE": 72.45122229867765,
+      "B1_Beijing_common_ridge_RMSE": 63.63780536855698,
+      "B1_relative_MAE_improvement": 0.15372938330627672
+    }
+  },
+  "gate_pass": false,
+  "conclusion_code": "ZERO_SHOT_EXTERNAL_TRANSPORT_NOT_STABLE"
+}

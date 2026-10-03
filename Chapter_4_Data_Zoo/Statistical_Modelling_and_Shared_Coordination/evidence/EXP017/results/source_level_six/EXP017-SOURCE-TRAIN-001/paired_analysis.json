@@ -1,0 +1,80 @@
+{
+  "run_id": "EXP017-ANALYSIS-001",
+  "parent_run": "EXP017-SOURCE-TRAIN-001",
+  "paired_comparisons": {
+    "stat_moe_minus_additive_logistic": {
+      "left_minus_right_logloss": -0.0010590514780460362,
+      "target_grouped_bootstrap_95ci": [
+        -0.0022874973715035535,
+        -0.0002019526873238309
+      ],
+      "target_groups": 232,
+      "resamples": 1000,
+      "post_result_descriptive": true
+    },
+    "stat_moe_minus_empirical_bayes": {
+      "left_minus_right_logloss": -0.0008200976396378241,
+      "target_grouped_bootstrap_95ci": [
+        -0.004066988607789691,
+        0.0023291786735134866
+      ],
+      "target_groups": 232,
+      "resamples": 1000,
+      "post_result_descriptive": true
+    },
+    "ganglion_seed_101_minus_stat_moe": {
+      "left_minus_right_logloss": 0.010490069382764335,
+      "target_grouped_bootstrap_95ci": [
+        0.0042989115927530444,
+        0.01618054338838961
+      ],
+      "target_groups": 232,
+      "resamples": 1000,
+      "post_result_descriptive": true
+    },
+    "ganglion_seed_202_minus_stat_moe": {
+      "left_minus_right_logloss": 0.022300492763970857,
+      "target_grouped_bootstrap_95ci": [
+        0.014835624903496141,
+        0.02895976476863306
+      ],
+      "target_groups": 232,
+      "resamples": 1000,
+      "post_result_descriptive": true
+    },
+    "ganglion_seed_303_minus_stat_moe": {
+      "left_minus_right_logloss": 0.005704119807587921,
+      "target_grouped_bootstrap_95ci": [
+        0.0004792238563613412,
+        0.010884306721870891
+      ],
+      "target_groups": 232,
+      "resamples": 1000,
+      "post_result_descriptive": true
+    }
+  },
+  "convergence_trace": {
+    "101": {
+      "epochs_run": 250,
+      "validation_logloss_first": 0.698373556137085,
+      "validation_logloss_last": 0.2112524956464767,
+      "last_50_epoch_validation_slope_per_epoch": -0.0002843206090514985,
+      "last_50_epoch_train_slope_per_epoch": -0.00030388623368697245
+    },
+    "202": {
+      "epochs_run": 250,
+      "validation_logloss_first": 0.812637984752655,
+      "validation_logloss_last": 0.2223817408084869,
+      "last_50_epoch_validation_slope_per_epoch": -0.00046876489901456926,
+      "last_50_epoch_train_slope_per_epoch": -0.0004668561114268873
+    },
+    "303": {
+      "epochs_run": 250,
+      "validation_logloss_first": 0.5448620319366455,
+      "validation_logloss_last": 0.2067779302597046,
+      "last_50_epoch_validation_slope_per_epoch": -0.0001991946556988895,
+      "last_50_epoch_train_slope_per_epoch": -0.00022236972582154345
+    }
+  },
+  "interpretation_boundary": "Post-result descriptive analysis on the original fixed test predictions; no model selection or retraining here."
+}

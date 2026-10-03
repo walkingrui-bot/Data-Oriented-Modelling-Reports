@@ -1,0 +1,7 @@
+Experiment(s),What the real-data branch established
+011,"On 26,278 Open Targets × ChEMBL target–disease pairs, a pairwise polynomial statistical model was the strongest standalone precision model; the ganglion approached it but showed seed variance."
+012–015,Statistics moved inside the architecture. Channel calibration reduced neural variance; a statistical model could act as a derived observer; neural committee routing did not help; direct OOF statistical routing was better and interpretable.
+016,"The system was mapped to 18 native Open Targets evidence pipelines with explicit provenance, ontology bridging and per-pipeline statistical routing interfaces."
+017,"Six native sources were trained. The validation-selected ganglion had test log-loss 0.194880 versus native Stat-MoE 0.196240, but the paired target 95% interval crossed zero."
+018–019,"Source support, rather than architecture preference, controlled expansion. Only Cancer Gene Census passed the fixed support gate; frozen 6→7 onboarding changed test log-loss 0.194880→0.194580, again with an interval crossing zero."
+020–024,"Historical drug outcome identification failed before modelling. A source-semantic regulatory event layer was eventually recovered in EXP022, but indication-specific event reconstruction remained unqualified in EXP023–024."

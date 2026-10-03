@@ -1,0 +1,107 @@
+{
+  "experiment": "INTERNAL_COORDINATION_004",
+  "date": "2026-10-01",
+  "dataset": {
+    "name": "Breast Cancer Wisconsin (Diagnostic)",
+    "source": "UCI Machine Learning Repository / sklearn.datasets.load_breast_cancer",
+    "doi": "10.24432/C5DW2B",
+    "n_total": 569,
+    "split": "stratified 80/20",
+    "split_seed": 42,
+    "n_train": 455,
+    "n_test": 114
+  },
+  "views": {
+    "mean_size_shape": [
+      "mean radius",
+      "mean texture",
+      "mean perimeter",
+      "mean area",
+      "mean smoothness"
+    ],
+    "mean_irregularity": [
+      "mean compactness",
+      "mean concavity",
+      "mean concave points",
+      "mean symmetry",
+      "mean fractal dimension"
+    ],
+    "se_size_shape": [
+      "radius error",
+      "texture error",
+      "perimeter error",
+      "area error",
+      "smoothness error"
+    ],
+    "se_irregularity": [
+      "compactness error",
+      "concavity error",
+      "concave points error",
+      "symmetry error",
+      "fractal dimension error"
+    ],
+    "worst_size_shape": [
+      "worst radius",
+      "worst texture",
+      "worst perimeter",
+      "worst area",
+      "worst smoothness"
+    ],
+    "worst_irregularity": [
+      "worst compactness",
+      "worst concavity",
+      "worst concave points",
+      "worst symmetry",
+      "worst fractal dimension"
+    ]
+  },
+  "architecture": {
+    "encoders": "six independent 5->32->16 tanh MLPs",
+    "shared_core": "16x16 affine + tanh",
+    "decoders": "six independent 16->32->5 tanh MLPs",
+    "latent_object": "16x6 per specimen"
+  },
+  "training": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "self_only": {
+      "steps": 700,
+      "lr": 0.006
+    },
+    "direct_binding": {
+      "steps": 900,
+      "lr": 0.005
+    },
+    "switch_binding": {
+      "self_steps": 600,
+      "self_lr": 0.006,
+      "binding_steps": 700,
+      "binding_lr": 0.005
+    },
+    "shuffled_pairing": {
+      "self_steps": 600,
+      "self_lr": 0.006,
+      "shuffle_steps": 300,
+      "shuffle_lr": 0.002
+    },
+    "batch_size": 128,
+    "optimizer": "Adam",
+    "feature_scaling": "per-view StandardScaler fit on train split only",
+    "latent_alignment_loss": "none"
+  },
+  "primary_metrics": [
+    "cross-view RMSE",
+    "exact cross-view specimen retrieval",
+    "top-5 retrieval",
+    "same-specimen latent distance"
+  ],
+  "audit_only": [
+    "diagnosis logistic-regression accuracy"
+  ],
+  "random_top1_reference": 0.008771929824561403
+}

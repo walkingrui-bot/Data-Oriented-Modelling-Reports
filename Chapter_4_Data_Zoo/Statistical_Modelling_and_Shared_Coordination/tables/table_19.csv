@@ -1,0 +1,6 @@
+Plastic parameters during binding,Median cross RMSE,Median internal distance,Joint pass at 700 updates
+All parameters,0.0594,0.2116,5/5
+Encoders + decoders; core frozen,0.0435,0.2157,4/5
+Core + decoders; encoders frozen,0.2157,1.3523,0/5
+Encoders + core; decoders frozen,0.1918,0.2435,0/5
+Triangle core only,0.2934,1.3166,0/5

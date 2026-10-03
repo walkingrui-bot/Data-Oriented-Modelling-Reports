@@ -16,6 +16,8 @@ Report 02 studies the location and preservation of causal information in data ge
 
 Report 03 develops mechanism-guided modelling through local-scale relations, training coverage, graph state constraints and precommitted validation. [Publication package](releases/Data_Oriented_Modelling_03_Publication_v1.0_20260928.zip) · [Evidence package](releases/Data_Oriented_Modelling_03_Evidence_v1.0_20260928.zip).
 
+**Experimental companion:** [Data Zoo 05 — Statistical Modelling and Shared Coordination](../Chapter_4_Data_Zoo/Statistical_Modelling_and_Shared_Coordination/README.md) follows heterogeneous native models through EXP001–089 and tests when shared coordination adds value beyond task-specific statistics.
+
 [Back to Data-Oriented Modelling — Reports](../README.md)
 
 **Direct continuation:** [Chapter 6 — Model Perception and Control: Continuing Chapters 2, 3 and 5](../Chapter_6_Model_Perception_and_Control/README.md).

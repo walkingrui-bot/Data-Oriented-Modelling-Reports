@@ -1,0 +1,16 @@
+{
+  "run_id": "EXP060-STAT-001",
+  "checks": {
+    "source_counts_equal_EXP059": true,
+    "heldout_row_counts": true,
+    "exact_future_24h_and_no_duplicate_origin": true,
+    "all_neighbors_at_least_eight_and_predictions_finite": true,
+    "three_trained_states_only_and_train_count": true,
+    "heldout_metrics_recomputed": true,
+    "day_block_ci_recomputed": true,
+    "frozen_gate_recomputed": true
+  },
+  "passed": 8,
+  "total": 8,
+  "scope": "EXP060 saved source support, model state and derived heldout predictions; day-block interval and gate; no original reload or global suite"
+}

@@ -1,0 +1,23 @@
+{
+  "evaluation_days": 358,
+  "base_day_equal_mae": 169.7033105467577,
+  "weather_day_equal_mae": 169.36628891879798,
+  "weather_minus_base_day_equal_mae": -0.33702162795974394,
+  "relative_weather_gain_pct": 0.19859461013099705,
+  "paired_day_bootstrap_2000_ci95_for_weather_minus_base": [
+    -1.1076135601860744,
+    0.3897867324131638
+  ],
+  "days_weather_better": 184,
+  "fraction_days_weather_better": 0.5139664804469274,
+  "descriptive_day_equal_mae": {
+    "PERSIST": 596.4070198696003,
+    "WEEK": 682.6549126773643
+  },
+  "checks": {
+    "relative_gain_at_least_5pct": false,
+    "bootstrap_upper_below_zero": false,
+    "at_least_60pct_days_improve": false
+  },
+  "three_gate_pass": false
+}

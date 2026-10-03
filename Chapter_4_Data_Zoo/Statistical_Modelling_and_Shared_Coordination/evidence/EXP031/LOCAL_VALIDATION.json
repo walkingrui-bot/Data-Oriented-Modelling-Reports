@@ -1,0 +1,17 @@
+{
+  "run_id": "EXP031-VERIFY-001",
+  "scope": "derived cohort, features, audit, and summary only; no original-file reread or model fit",
+  "checks": {
+    "person_keys_unique_and_aligned": true,
+    "source_counts_match_summary": true,
+    "source_status_and_feature_values": true,
+    "budget_and_gate_recompute": true
+  },
+  "critical_pass": true,
+  "source_gate": "STOP_NUMERIC_SOURCE",
+  "metadata_correction": {
+    "summary_retries_reported": 0,
+    "failed_file_retries_visible_in_audit": 1,
+    "note": "SOURCE_SUMMARY retries omitted failed-file retries; request count 166 correctly includes them. Original summary retained."
+  }
+}

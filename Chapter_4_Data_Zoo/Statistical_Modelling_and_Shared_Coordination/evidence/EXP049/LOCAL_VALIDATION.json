@@ -1,0 +1,9 @@
+{
+  "scope": "EXP049 only; reads original EXP048 B1 predictions",
+  "validated_evaluation_pairs": 115298,
+  "domain_and_station_metric_checks": 140,
+  "target_horizon_hours": 24,
+  "matched_B1_rows": 115298,
+  "gate_recomputed": "NO_STABLE_SHARED_CURRENT_GAIN",
+  "status": "PASS"
+}

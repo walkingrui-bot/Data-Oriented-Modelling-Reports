@@ -1,0 +1,61 @@
+{
+  "train_target_group_oof": {
+    "M0_six": {
+      "n": 17702,
+      "positive_prevalence": 0.05174556547282793,
+      "logloss": 0.19225583590817097,
+      "brier": 0.04718102889555473,
+      "auroc": 0.6671525111641693,
+      "auprc": 0.14203265408030769,
+      "ece_10_equal_width": 0.001282277977715272,
+      "calibration_intercept": -0.28467427104805476,
+      "calibration_slope": 0.8980761460959439
+    },
+    "M1_six_plus_CGC": {
+      "n": 17702,
+      "positive_prevalence": 0.05174556547282793,
+      "logloss": 0.1919801076819671,
+      "brier": 0.0471839435561909,
+      "auroc": 0.6696872770873211,
+      "auprc": 0.1429463893652041,
+      "ece_10_equal_width": 0.0009430906767924482,
+      "calibration_intercept": -0.3395773391811807,
+      "calibration_slope": 0.8776625180068238
+    }
+  },
+  "validation": {
+    "M0_six": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.19898897100788904,
+      "brier": 0.048897237671075,
+      "auroc": 0.6462376835843094,
+      "auprc": 0.12761964376841553,
+      "ece_10_equal_width": 0.006884953803414367,
+      "calibration_intercept": 0.012738256824145821,
+      "calibration_slope": 0.9592144418135193
+    },
+    "M1_six_plus_CGC": {
+      "n": 4132,
+      "positive_prevalence": 0.05324298160696999,
+      "logloss": 0.19881465451396493,
+      "brier": 0.048833129329121434,
+      "auroc": 0.6448073526677821,
+      "auprc": 0.12483781738727079,
+      "ece_10_equal_width": 0.007400557201183041,
+      "calibration_intercept": -0.08098270619265084,
+      "calibration_slope": 0.9290240962132076
+    }
+  },
+  "validation_paired_M1_minus_M0": {
+    "left_minus_right_logloss": -0.00017431649392409153,
+    "target_grouped_bootstrap_95ci": [
+      -0.0012938117555159683,
+      0.0009911190909156263
+    ],
+    "target_groups": 212,
+    "resamples": 1000,
+    "post_result_descriptive": true
+  },
+  "qualification": "Stacker is target-group OOF conditional on inherited EXP017 local OOF states. Those inherited train states and CGC routing weights were not recomputed in an outer nested fold; validation is the clean incremental selection surface."
+}

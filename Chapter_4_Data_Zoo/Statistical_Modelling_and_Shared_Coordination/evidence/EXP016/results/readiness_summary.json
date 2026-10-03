@@ -1,0 +1,26 @@
+{
+  "experiment": "INTERNAL_COORDINATION_016",
+  "title": "18-Pipeline Native Data Plane",
+  "date": "2026-10-02",
+  "pinned_open_targets_release": "26.06",
+  "readiness": {
+    "passport_pipelines_mapped": "18/18",
+    "datasource_ids_resolved": "18/18",
+    "association_level_route": "18/18 via association_by_datasource_direct",
+    "native_source_route": "18/18 mapped in Passport v0.2",
+    "within_pipeline_stat_moe_spec": "18/18",
+    "time_lock_semantics": "18/18",
+    "disease_ontology_bridge": "implemented using disease obsoleteTerms/obsoleteXRefs/dbXRefs",
+    "shared_ganglion_harness": "implemented",
+    "frozen_ganglion_new_pipeline_onboarding": "implemented",
+    "harness_syntax_and_registry_validation": "passed"
+  },
+  "current_release_compatibility": {
+    "clinvar_germline": "eva",
+    "crisprbrain_v0_1": "broadened to crispr_screen",
+    "project_score": "crispr",
+    "disease_id_change": "26.06 EFO 3.88 replaces many EFO disease IDs with Mondo IDs; bridge required for legacy cohort"
+  },
+  "evidence_status": "data-plane construction and compatibility complete; 18-pipeline performance benchmark begins when the 26.06 source parquet tree is mounted",
+  "next_run": "train native within-pipeline Stat-MoEs, export 18 calibrated states, compare end-to-end ganglion training versus held-out-pipeline frozen-ganglion onboarding"
+}

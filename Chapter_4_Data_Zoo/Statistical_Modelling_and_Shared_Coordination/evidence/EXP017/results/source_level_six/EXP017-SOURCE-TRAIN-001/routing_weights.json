@@ -1,0 +1,99 @@
+{
+  "global_experts": [
+    "additive_logistic",
+    "pairwise_logistic",
+    "empirical_bayes"
+  ],
+  "global_weights": [
+    0.8,
+    0.1,
+    0.1
+  ],
+  "global_oof_logloss": 0.19106307360622027,
+  "local": {
+    "gwas_credible_sets": {
+      "experts": [
+        "score_logistic",
+        "count_logistic",
+        "availability_shrinkage"
+      ],
+      "weights": [
+        0.3,
+        0.55,
+        0.15
+      ],
+      "oof_logloss": 0.20299432639708803,
+      "train_available_pairs": 349
+    },
+    "gene_burden": {
+      "experts": [
+        "score_logistic",
+        "count_logistic",
+        "availability_shrinkage"
+      ],
+      "weights": [
+        0.45,
+        0.0,
+        0.55
+      ],
+      "oof_logloss": 0.2035060713697933,
+      "train_available_pairs": 13
+    },
+    "eva": {
+      "experts": [
+        "score_logistic",
+        "count_logistic",
+        "availability_shrinkage"
+      ],
+      "weights": [
+        0.55,
+        0.4,
+        0.05
+      ],
+      "oof_logloss": 0.20052871428332802,
+      "train_available_pairs": 112
+    },
+    "expression_atlas": {
+      "experts": [
+        "score_logistic",
+        "count_logistic",
+        "availability_shrinkage"
+      ],
+      "weights": [
+        0.85,
+        0.0,
+        0.15
+      ],
+      "oof_logloss": 0.20341090423780803,
+      "train_available_pairs": 437
+    },
+    "impc": {
+      "experts": [
+        "score_logistic",
+        "count_logistic",
+        "availability_shrinkage"
+      ],
+      "weights": [
+        0.45,
+        0.0,
+        0.55
+      ],
+      "oof_logloss": 0.20339774734786684,
+      "train_available_pairs": 299
+    },
+    "europepmc": {
+      "experts": [
+        "score_logistic",
+        "count_logistic",
+        "availability_shrinkage"
+      ],
+      "weights": [
+        0.0,
+        0.95,
+        0.05
+      ],
+      "oof_logloss": 0.19292232909811421,
+      "train_available_pairs": 8308
+    }
+  }
+}

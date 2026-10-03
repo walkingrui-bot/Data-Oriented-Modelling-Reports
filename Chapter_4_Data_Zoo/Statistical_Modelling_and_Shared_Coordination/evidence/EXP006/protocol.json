@@ -1,0 +1,39 @@
+{
+  "experiment": "INTERNAL_COORDINATION_006",
+  "date": "2026-10-01",
+  "backbone": "sklearn diabetes, 442 patients, 10 baseline variables",
+  "train_test_split": {
+    "test_fraction": 0.3,
+    "random_state": 20261001
+  },
+  "stable_measurement_channels": 6,
+  "reality_core_dim": 16,
+  "reality_core_shape": [
+    16,
+    16
+  ],
+  "channel_state_dim": 8,
+  "episode_length": 12,
+  "change_start_step_zero_indexed": 4,
+  "episode_types": [
+    "none",
+    "channel_drift",
+    "world_change",
+    "both"
+  ],
+  "base_training_steps": 300,
+  "dynamic_state_training_steps": 450,
+  "base_learning_rate": 0.008,
+  "state_learning_rate": 0.006,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "world_change": "\u00b10.72 ramp along training-set PC1; audit coordinate hidden from training",
+  "channel_drift": "channel 6 post-measurement gain/offset/nonlinearity ramp; held-out test drift shape differs from training",
+  "state_input": "each channel pre-core feature deviation from cross-channel consensus",
+  "optimization_target": "six-channel reconstruction plus small state magnitude/smoothness penalty; no drift/world labels and no latent alignment loss"
+}

@@ -1,0 +1,53 @@
+{
+  "ganglion_seed_101": {
+    "test_logloss_original": 0.20666554683985852,
+    "test_logloss_channel_shuffle": 0.21324422802126994,
+    "single_pipeline_ablation_logloss": {
+      "gwas_credible_sets": 0.20664660520538647,
+      "gene_burden": 0.2068591205677207,
+      "eva": 0.20807380294421163,
+      "expression_atlas": 0.20664244770447526,
+      "impc": 0.2068158863351035,
+      "europepmc": 0.20807514031589439
+    },
+    "learned_direction_lesion": {
+      "top_direction_removed_logloss": 0.23756379048341844,
+      "random_matched_norm_logloss": 0.20669413667588318,
+      "removed_frobenius_norm": 1.373439908027649
+    }
+  },
+  "ganglion_seed_202": {
+    "test_logloss_original": 0.21847597022106502,
+    "test_logloss_channel_shuffle": 0.21862190004326837,
+    "single_pipeline_ablation_logloss": {
+      "gwas_credible_sets": 0.218456176872224,
+      "gene_burden": 0.21863688527464942,
+      "eva": 0.21989591013146806,
+      "expression_atlas": 0.21862142278005517,
+      "impc": 0.21870401814922877,
+      "europepmc": 0.22105161618834332
+    },
+    "learned_direction_lesion": {
+      "top_direction_removed_logloss": 0.22206164821334237,
+      "random_matched_norm_logloss": 0.21880016387965334,
+      "removed_frobenius_norm": 1.3764292001724243
+    }
+  },
+  "ganglion_seed_303": {
+    "test_logloss_original": 0.20187959726468208,
+    "test_logloss_channel_shuffle": 0.20836689391225743,
+    "single_pipeline_ablation_logloss": {
+      "gwas_credible_sets": 0.2018957882131147,
+      "gene_burden": 0.20197453517087421,
+      "eva": 0.2031095059719984,
+      "expression_atlas": 0.20181593973432066,
+      "impc": 0.20188521013219482,
+      "europepmc": 0.20234842863978308
+    },
+    "learned_direction_lesion": {
+      "top_direction_removed_logloss": 0.20206065188078717,
+      "random_matched_norm_logloss": 0.20277021413757354,
+      "removed_frobenius_norm": 1.413394808769226
+    }
+  }
+}

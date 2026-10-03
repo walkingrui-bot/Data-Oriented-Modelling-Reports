@@ -1,0 +1,32 @@
+{
+  "ganglion_seed_101_minus_stat_moe": {
+    "left_minus_right_logloss": -0.00043328323644662293,
+    "target_grouped_bootstrap_95ci": [
+      -0.0035449610257486347,
+      0.0023895892132589284
+    ],
+    "target_groups": 232,
+    "resamples": 1000,
+    "post_result_descriptive": true
+  },
+  "ganglion_seed_202_minus_stat_moe": {
+    "left_minus_right_logloss": -0.0007422093959758224,
+    "target_grouped_bootstrap_95ci": [
+      -0.003617247974242381,
+      0.0017871776141636998
+    ],
+    "target_groups": 232,
+    "resamples": 1000,
+    "post_result_descriptive": true
+  },
+  "ganglion_seed_303_minus_stat_moe": {
+    "left_minus_right_logloss": -0.0006368243021629922,
+    "target_grouped_bootstrap_95ci": [
+      -0.0035443636397117033,
+      0.002058007487093602
+    ],
+    "target_groups": 232,
+    "resamples": 1000,
+    "post_result_descriptive": true
+  }
+}

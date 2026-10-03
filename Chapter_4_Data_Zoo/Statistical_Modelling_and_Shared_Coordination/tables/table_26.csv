@@ -1,0 +1,4 @@
+Condition,Numeric self pinball,Language self accuracy,Num→Lang accuracy,Text→Num pinball,Both audit R²
+Numeric specialist,0.0742,30.7%,25.8%,0.2780,0.695
+Language specialist,0.2888,85.2%,28.3%,0.2856,0.528
+Mixed ganglion,0.0793,80.0%,72.5%,0.1530,0.704

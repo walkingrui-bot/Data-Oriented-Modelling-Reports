@@ -1,0 +1,22 @@
+{
+  "outer_split": "same deterministic Ensembl-target holdout as Experiments 011-013",
+  "inner_cross_fitting": "5 target-group folds for all three derived observer outputs and channel-local statistics",
+  "observers": [
+    {
+      "name": "additive",
+      "features": "scores, evidence presence, pipeline availability, evidence/availability counts; no pairwise interactions"
+    },
+    {
+      "name": "interaction",
+      "features": "additive features plus pairwise score and evidence-presence interactions"
+    },
+    {
+      "name": "empirical_bayes",
+      "features": "smoothed observed evidence-presence state within the currently available pipelines; beta-binomial shrinkage strength 35"
+    }
+  ],
+  "naive_committee": "six biological channel embeddings plus three observer embeddings are averaged into one 16D shared state before the 16x16 ganglion",
+  "routed_committee": "biological channels are averaged; three observer embeddings are mixed by a learned softmax gate using pipeline availability, evidence density, mean observed score, each observer entropy and observer disagreement; biological and observer mixtures each contribute 50% before the ganglion",
+  "evaluation": "complete evidence and every combination with 1,2,3 biological pipelines unavailable",
+  "important_note": "early naive channel-removal diagnostics that changed the averaging denominator were discarded and are not treated as evidence; reported routing evidence uses observer-only profiles and learned gate weights."
+}

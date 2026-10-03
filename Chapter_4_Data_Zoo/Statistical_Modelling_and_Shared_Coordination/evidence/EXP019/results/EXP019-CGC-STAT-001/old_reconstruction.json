@@ -1,0 +1,20 @@
+{
+  "old_train_oof_max_abs_difference": {
+    "gwas_credible_sets": 0.0,
+    "gene_burden": 0.0,
+    "eva": 0.0,
+    "expression_atlas": 0.0,
+    "impc": 0.0,
+    "europepmc": 0.0
+  },
+  "old_test_checkpoint_max_abs_difference": {
+    "101": 8.940696716308594e-08,
+    "202": 1.7881393432617188e-07,
+    "303": 1.7881393432617188e-07
+  },
+  "old_checkpoint_paths": [
+    "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+    "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+    "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt"
+  ]
+}

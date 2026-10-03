@@ -1,0 +1,165 @@
+{
+  "global_experts": [
+    "additive_logistic",
+    "pairwise_logistic",
+    "empirical_bayes"
+  ],
+  "global_weights": [
+    0.65,
+    0.25,
+    0.1
+  ],
+  "global_oof_logloss": 0.19147418334877825,
+  "local": {
+    "gwas_credible_sets": {
+      "experts": [
+        "native_score_logistic",
+        "native_geometry_logistic",
+        "three_state_shrinkage"
+      ],
+      "geometry_fields": [
+        "availability",
+        "distinct_study_loci",
+        "distinct_publications",
+        "max_resource_score",
+        "mean_resource_score"
+      ],
+      "weights": [
+        0.0,
+        0.45,
+        0.55
+      ],
+      "oof_logloss": 0.2030478129701374,
+      "train_available_pairs": 349,
+      "coverage_scale_train_q95": 2.680453062057495
+    },
+    "gene_burden": {
+      "experts": [
+        "native_score_logistic",
+        "native_geometry_logistic",
+        "three_state_shrinkage"
+      ],
+      "geometry_fields": [
+        "availability",
+        "strongest_neglog10_p",
+        "max_abs_beta",
+        "max_abs_beta__missing_given_present",
+        "mean_beta",
+        "mean_beta__missing_given_present",
+        "distinct_cohorts",
+        "distinct_projects",
+        "max_study_sample_size"
+      ],
+      "weights": [
+        0.6,
+        0.0,
+        0.4
+      ],
+      "oof_logloss": 0.20332643696680547,
+      "train_available_pairs": 13,
+      "coverage_scale_train_q95": 3.0985310077667236
+    },
+    "eva": {
+      "experts": [
+        "native_score_logistic",
+        "native_geometry_logistic",
+        "three_state_shrinkage"
+      ],
+      "geometry_fields": [
+        "availability",
+        "distinct_variants",
+        "distinct_studies",
+        "distinct_significance_sets",
+        "distinct_confidence_levels",
+        "pathogenic_rows",
+        "likely_pathogenic_rows",
+        "benign_rows",
+        "likely_benign_rows",
+        "uncertain_rows",
+        "conflict_rows",
+        "evidence_only_rows",
+        "expert_panel_rows",
+        "pathogenic_fraction",
+        "uncertain_fraction"
+      ],
+      "weights": [
+        0.0,
+        0.25,
+        0.75
+      ],
+      "oof_logloss": 0.20053831773333694,
+      "train_available_pairs": 556,
+      "coverage_scale_train_q95": 2.397895336151123
+    },
+    "expression_atlas": {
+      "experts": [
+        "native_score_logistic",
+        "native_geometry_logistic",
+        "three_state_shrinkage"
+      ],
+      "geometry_fields": [
+        "availability",
+        "distinct_studies",
+        "distinct_contrasts",
+        "mean_signed_log2fc",
+        "mean_abs_log2fc",
+        "max_abs_log2fc",
+        "direction_balance"
+      ],
+      "weights": [
+        0.75,
+        0.15,
+        0.1
+      ],
+      "oof_logloss": 0.20339583356003418,
+      "train_available_pairs": 437,
+      "coverage_scale_train_q95": 1.945910096168518
+    },
+    "impc": {
+      "experts": [
+        "native_score_logistic",
+        "native_geometry_logistic",
+        "three_state_shrinkage"
+      ],
+      "geometry_fields": [
+        "availability",
+        "distinct_models",
+        "max_resource_score",
+        "mean_resource_score",
+        "max_mouse_phenotype_count",
+        "max_mouse_phenotype_count__missing_given_present",
+        "max_human_phenotype_count",
+        "max_human_phenotype_count__missing_given_present"
+      ],
+      "weights": [
+        0.0,
+        0.7,
+        0.3
+      ],
+      "oof_logloss": 0.20321617198242442,
+      "train_available_pairs": 299,
+      "coverage_scale_train_q95": 2.3025851249694824
+    },
+    "europepmc": {
+      "experts": [
+        "native_score_logistic",
+        "native_geometry_logistic",
+        "three_state_shrinkage"
+      ],
+      "geometry_fields": [
+        "availability",
+        "distinct_publications",
+        "max_resource_score",
+        "mean_resource_score"
+      ],
+      "weights": [
+        0.0,
+        0.9,
+        0.1
+      ],
+      "oof_logloss": 0.19250421003239823,
+      "train_available_pairs": 8308,
+      "coverage_scale_train_q95": 6.099533557891846
+    }
+  }
+}

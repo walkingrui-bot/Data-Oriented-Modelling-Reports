@@ -1,0 +1,109 @@
+{
+  "run_id": "EXP058-OPTIMIZATION-001",
+  "qualification": "retrospective development; no old test evaluation",
+  "device": "mps",
+  "model": "B16 fixed 769 parameters",
+  "optimizer": "Adam",
+  "learning_rate": 0.002,
+  "max_epochs": 4000,
+  "patience": 500,
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "real_train_pairs": 17702,
+  "real_validation_pairs": 4132,
+  "new_models": {
+    "101": {
+      "arm": "B16",
+      "seed": 101,
+      "interface_width": 16,
+      "core_width": 16,
+      "total_parameters": 769,
+      "core_weight_shape": [
+        16,
+        16
+      ],
+      "best_epoch": 2369,
+      "epochs_run": 2869,
+      "validation_logloss": 0.19891822338104248,
+      "best_validation_logits_loss": 0.1989181488752365,
+      "last_validation_logloss": 0.1990562528371811,
+      "fit_seconds": 11.960534584002744,
+      "device": "mps",
+      "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP058-20261002-001/TRACES/B16_seed_101.csv",
+      "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP058-20261002-001/MODEL_STATES/B16_seed_101.pt"
+    },
+    "202": {
+      "arm": "B16",
+      "seed": 202,
+      "interface_width": 16,
+      "core_width": 16,
+      "total_parameters": 769,
+      "core_weight_shape": [
+        16,
+        16
+      ],
+      "best_epoch": 1783,
+      "epochs_run": 2283,
+      "validation_logloss": 0.19931641221046448,
+      "best_validation_logits_loss": 0.1993163675069809,
+      "last_validation_logloss": 0.19942057132720947,
+      "fit_seconds": 9.939503916000831,
+      "device": "mps",
+      "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP058-20261002-001/TRACES/B16_seed_202.csv",
+      "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP058-20261002-001/MODEL_STATES/B16_seed_202.pt"
+    },
+    "303": {
+      "arm": "B16",
+      "seed": 303,
+      "interface_width": 16,
+      "core_width": 16,
+      "total_parameters": 769,
+      "core_weight_shape": [
+        16,
+        16
+      ],
+      "best_epoch": 2246,
+      "epochs_run": 2746,
+      "validation_logloss": 0.19892704486846924,
+      "best_validation_logits_loss": 0.19892700016498566,
+      "last_validation_logloss": 0.19901172816753387,
+      "fit_seconds": 11.881692832997942,
+      "device": "mps",
+      "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP058-20261002-001/TRACES/B16_seed_303.csv",
+      "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP058-20261002-001/MODEL_STATES/B16_seed_303.pt"
+    }
+  },
+  "prefix_checks": {
+    "101": {
+      "compared_epochs": 2000,
+      "max_abs_difference": 0.0
+    },
+    "202": {
+      "compared_epochs": 1983,
+      "max_abs_difference": 0.0
+    },
+    "303": {
+      "compared_epochs": 2000,
+      "max_abs_difference": 0.0
+    }
+  },
+  "gate": {
+    "comparison": "B16_4000_minus_B16_2000_as_improvement",
+    "same_seed_improvements": {
+      "101": 2.9861927032470703e-05,
+      "202": 0.0,
+      "303": 2.5466084480285645e-05
+    },
+    "median_improvement": 2.5466084480285645e-05,
+    "seeds_improving_by_at_least_0_0002": 0,
+    "pass": false
+  },
+  "F32_2000_prior_validation_median": 0.19871313869953156,
+  "B16_2000_prior_validation_median": 0.19895251095294952,
+  "B16_4000_validation_median": 0.19892704486846924,
+  "any_best_epoch_at_cap": false,
+  "total_seconds": 34.4738178339976
+}

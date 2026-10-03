@@ -1,0 +1,294 @@
+{
+  "run_id": "EXP026-MODEL-001",
+  "status": "COMPLETE",
+  "science_status": "NO_QUALIFIED_ADDED_VALUE_IN_INTERNAL_SPLIT",
+  "thresholds": {
+    "validation_loss_improvement_min": 0.02,
+    "validation_balanced_accuracy_improvement_min": 0.03,
+    "test_loss_improvement_strictly_positive": true,
+    "test_balanced_accuracy_improvement_strictly_positive": true
+  },
+  "split_counts": {
+    "train": 280,
+    "test": 97,
+    "validation": 92
+  },
+  "M0_prior": {
+    "validation": {
+      "macro_log_loss": 1.2429226762403343,
+      "balanced_accuracy": 0.3333333333333333,
+      "recall_HC_PD_DD": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "class_log_loss_HC_PD_DD": [
+        1.7846420014591906,
+        0.5288441292686691,
+        1.415281897993143
+      ],
+      "confusion_rows_true_HC_PD_DD": [
+        [
+          0,
+          15,
+          0
+        ],
+        [
+          0,
+          55,
+          0
+        ],
+        [
+          0,
+          22,
+          0
+        ]
+      ],
+      "n": 92
+    },
+    "test": {
+      "macro_log_loss": 1.2453699870305739,
+      "balanced_accuracy": 0.3333333333333333,
+      "recall_HC_PD_DD": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "class_log_loss_HC_PD_DD": [
+        1.791759469228055,
+        0.525266307920785,
+        1.4190841839428814
+      ],
+      "confusion_rows_true_HC_PD_DD": [
+        [
+          0,
+          17,
+          0
+        ],
+        [
+          0,
+          56,
+          0
+        ],
+        [
+          0,
+          24,
+          0
+        ]
+      ],
+      "n": 97
+    }
+  },
+  "arms": {
+    "M1_questionnaire": {
+      "lambda": 0.1,
+      "validation": {
+        "macro_log_loss": 0.767093697936165,
+        "balanced_accuracy": 0.6292929292929293,
+        "recall_HC_PD_DD": [
+          0.9333333333333333,
+          0.6363636363636364,
+          0.3181818181818182
+        ],
+        "class_log_loss_HC_PD_DD": [
+          0.6248295848463558,
+          0.7278648801328295,
+          0.94858662882931
+        ],
+        "confusion_rows_true_HC_PD_DD": [
+          [
+            14,
+            0,
+            1
+          ],
+          [
+            9,
+            35,
+            11
+          ],
+          [
+            9,
+            6,
+            7
+          ]
+        ],
+        "n": 92
+      },
+      "test": {
+        "macro_log_loss": 0.8556391934711632,
+        "balanced_accuracy": 0.6552287581699346,
+        "recall_HC_PD_DD": [
+          0.8823529411764706,
+          0.625,
+          0.4583333333333333
+        ],
+        "class_log_loss_HC_PD_DD": [
+          0.6756659119977969,
+          0.8409237038621548,
+          1.050327964553538
+        ],
+        "confusion_rows_true_HC_PD_DD": [
+          [
+            15,
+            0,
+            2
+          ],
+          [
+            11,
+            35,
+            10
+          ],
+          [
+            6,
+            7,
+            11
+          ]
+        ],
+        "n": 97
+      }
+    },
+    "M2_relaxed_bilateral": {
+      "lambda": 0.01,
+      "validation": {
+        "macro_log_loss": 1.0190162853087577,
+        "balanced_accuracy": 0.43636363636363634,
+        "recall_HC_PD_DD": [
+          0.6,
+          0.16363636363636364,
+          0.5454545454545454
+        ],
+        "class_log_loss_HC_PD_DD": [
+          0.9017180498816039,
+          1.137032477243784,
+          1.0182983288008849
+        ],
+        "confusion_rows_true_HC_PD_DD": [
+          [
+            9,
+            3,
+            3
+          ],
+          [
+            27,
+            9,
+            19
+          ],
+          [
+            9,
+            1,
+            12
+          ]
+        ],
+        "n": 92
+      },
+      "test": {
+        "macro_log_loss": 1.16429733830277,
+        "balanced_accuracy": 0.45529878618113906,
+        "recall_HC_PD_DD": [
+          0.7647058823529411,
+          0.14285714285714285,
+          0.4583333333333333
+        ],
+        "class_log_loss_HC_PD_DD": [
+          1.4012927512302655,
+          1.133306676737142,
+          0.9582925869409027
+        ],
+        "confusion_rows_true_HC_PD_DD": [
+          [
+            13,
+            2,
+            2
+          ],
+          [
+            28,
+            8,
+            20
+          ],
+          [
+            11,
+            2,
+            11
+          ]
+        ],
+        "n": 97
+      }
+    },
+    "M3_combined": {
+      "lambda": 0.1,
+      "validation": {
+        "macro_log_loss": 0.7005443039042066,
+        "balanced_accuracy": 0.694949494949495,
+        "recall_HC_PD_DD": [
+          0.8666666666666667,
+          0.6727272727272727,
+          0.5454545454545454
+        ],
+        "class_log_loss_HC_PD_DD": [
+          0.5612503925212504,
+          0.7361699156642785,
+          0.804212603527091
+        ],
+        "confusion_rows_true_HC_PD_DD": [
+          [
+            13,
+            1,
+            1
+          ],
+          [
+            9,
+            37,
+            9
+          ],
+          [
+            5,
+            5,
+            12
+          ]
+        ],
+        "n": 92
+      },
+      "test": {
+        "macro_log_loss": 0.807637637345144,
+        "balanced_accuracy": 0.6376050420168067,
+        "recall_HC_PD_DD": [
+          0.8235294117647058,
+          0.5892857142857143,
+          0.5
+        ],
+        "class_log_loss_HC_PD_DD": [
+          0.5970405073560988,
+          0.8497689133281485,
+          0.9761034913511847
+        ],
+        "confusion_rows_true_HC_PD_DD": [
+          [
+            14,
+            0,
+            3
+          ],
+          [
+            10,
+            33,
+            13
+          ],
+          [
+            5,
+            7,
+            12
+          ]
+        ],
+        "n": 97
+      }
+    }
+  },
+  "M3_minus_M1_improvement": {
+    "validation_macro_log_loss": 0.06654939403195836,
+    "validation_balanced_accuracy": 0.06565656565656564,
+    "test_macro_log_loss": 0.048001556126019196,
+    "test_balanced_accuracy": -0.017623716153127966
+  },
+  "gate_pass": false,
+  "external_validation": false,
+  "test_used_once": true
+}

@@ -1,0 +1,7 @@
+Real route,Observed result and boundary
+UCI HAR / WISDM,Combined inertial channels did not clear the fixed development value gates; external person-level tests remained unscored when development failed.
+Household / submeter electricity,Additional channels did not clear the development gates for next-hour continuous or top-decile event outcomes; conditional future tests were left unopened.
+Tetouan three-zone electricity,"Weather helped Zones 1 and 2 later, but Zone 3 worsened 10.561%, triggering the frozen overall stop. No peer-zone or joint arm earned selection."
+I-94 traffic + weather,Development MAE improved only 0.199%; interval crossed zero; 2018 remained unscored.
+"UCI309 gas trials, EXP085","Eight sensors materially improved probability log-loss on independent held-out trials (0.931620→0.605626), but balanced accuracy was identical at 0.541667; the predeclared overall gain gate therefore failed."
+"UCI487 CO events, EXP088","Fourteen sensors reduced development day-equal MAE 0.327732→0.286666 ppm (12.530%) and improved 9/10 concentration levels, but only 2/3 development days improved; later days were not scored."

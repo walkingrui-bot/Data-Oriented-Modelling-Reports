@@ -1,0 +1,56 @@
+{
+  "run_id": "EXP033-MODEL-001",
+  "train_study": "Si",
+  "holdout_study": "Ga",
+  "train_n": 64,
+  "holdout_n": 47,
+  "train_counts_HC_PD": [
+    29,
+    35
+  ],
+  "holdout_counts_HC_PD": [
+    18,
+    29
+  ],
+  "prior": {
+    "macro_log_loss": 0.697561137621728,
+    "balanced_accuracy": 0.5,
+    "recall_HC_PD": [
+      0.0,
+      1.0
+    ],
+    "confusion_rows_true_HC_PD": [
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        29
+      ]
+    ],
+    "n": 47
+  },
+  "model": {
+    "macro_log_loss": 0.519709531316473,
+    "balanced_accuracy": 0.7614942528735633,
+    "recall_HC_PD": [
+      0.8333333333333334,
+      0.6896551724137931
+    ],
+    "confusion_rows_true_HC_PD": [
+      [
+        15,
+        3
+      ],
+      [
+        9,
+        20
+      ]
+    ],
+    "n": 47
+  },
+  "macro_log_loss_improvement": 0.17785160630525498,
+  "gate_pass": true,
+  "independence_note": "Different original studies; cross-study individual overlap not verified"
+}

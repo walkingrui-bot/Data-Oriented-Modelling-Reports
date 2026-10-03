@@ -1,0 +1,8 @@
+File or directory,Contents
+code/experiment.py,"Simulator, local training, shared line and curve networks, internal updates, derivative checks and main experiment."
+code/controls.py,"Longer-budget follow-up, exact shared-line reference and initialization audit."
+code/analyze.py,"Summary statistics, paired bootstrap and all four figures."
+protocol.json,"Main fixed settings, seeds, noise levels and pass tolerance."
+data/all_experiment_arrays.npz,"Observations, frozen local coefficients, audit quantities and final fitted parameter vectors."
+results/,"Per-run metrics, complete group summaries, parameter trajectories and numerical verification."
+manifest.json,SHA256 digest and byte count for every packaged file.

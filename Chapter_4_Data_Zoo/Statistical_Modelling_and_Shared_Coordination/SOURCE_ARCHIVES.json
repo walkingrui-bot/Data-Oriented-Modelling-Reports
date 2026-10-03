@@ -1,0 +1,38 @@
+[
+  {
+    "name": "INTERNAL_COORDINATION_001_Evidence.zip",
+    "bytes": 1785730,
+    "sha256": "8fabaf4f651d7c069a8464f75a8b73cc945a0cb75e20cae0f3c2310e1a386875",
+    "public_distribution": "No; curated research assets only"
+  },
+  {
+    "name": "INTERNAL_COORDINATION_REPORT_MATERIALS_EXP001-089_20261003.zip",
+    "bytes": 121117151,
+    "sha256": "806b122ba6091c309f0a9fbce6afbfac15f85ccc95326a089f01b8fa6b7c853a",
+    "public_distribution": "No; curated research assets only"
+  },
+  {
+    "name": "FINAL_VERDICT(1).md",
+    "bytes": 2063,
+    "sha256": "193fbc1fedb8c2eab6cf05804b30b0543dffd775ecc64d98a78989f9c760ba87",
+    "public_distribution": "Source retained separately; report or evidence derivative published"
+  },
+  {
+    "name": "INTERNAL_COORDINATION_FINAL_CLOSEOUT_EXP001-089_20261003(1).zip",
+    "bytes": 2967193,
+    "sha256": "80345cd6135bf5af60af7d685da82633c183ee424c6c9289da511353725904d8",
+    "public_distribution": "Source retained separately; report or evidence derivative published"
+  },
+  {
+    "name": "INTERNAL_COORDINATION_Final_Technical_Report_EXP001-089_v1.0_20261003(1).docx",
+    "bytes": 172034,
+    "sha256": "2bb8ea6d96fd2ca7c6404521fa87e473d8f0cdd17c9d0df2313e983e649bc9ed",
+    "public_distribution": "Source retained separately; report or evidence derivative published"
+  },
+  {
+    "name": "INTERNAL_COORDINATION_Living_Report_v0.27_20261003(1).docx",
+    "bytes": 2800820,
+    "sha256": "b0fd84ccf1cb1bd56af52e00e6fc659b43db3f98d1ee328cb4b83155bbca8a69",
+    "public_distribution": "Source retained separately; report or evidence derivative published"
+  }
+]

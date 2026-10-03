@@ -1,0 +1,5 @@
+Question,Observed evidence
+Can learned local mechanisms become a shared learning target?,Seven learned functions jointly trained the higher layer; the inferred state correlated 1.000 with the hidden simulator state after affine alignment in the successful noiseless runs.
+Where does the added capacity act?,Three shared curvature weights activated a curved mechanism family. The seven local parameter vectors expanded from rank one to rank two.
+How does initialization affect coordination?,All seven targets passed in 30/30 geometry starts and 11/30 random starts under the same 80-step coupled update budget.
+What happens to noisy local learning?,"The coordinated functions improved clean-output RMSE in 30/30 noise realizations. Median paired improvement was 17.24%, with a bootstrap 95% interval of 13.26% to 19.52%."

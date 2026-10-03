@@ -1,0 +1,14 @@
+{
+  "run_id": "EXP032-VERIFY-001",
+  "scope": "saved Si source audit and saved model outputs only; no refit or source reread",
+  "checks": {
+    "input_source_qualified": true,
+    "prediction_cardinality": true,
+    "optimization_25_converged": true,
+    "split_assignment_and_prior": true,
+    "independent_metric_recompute": true,
+    "frozen_gate_recompute": true
+  },
+  "pass": true,
+  "qualifying_repetitions": 4
+}

@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "full_directory_result_count": true,
+    "all_bbox_candidates_processed": true,
+    "candidate_coordinates_inside_frozen_box": true,
+    "candidate_long_ids_match": true,
+    "source_codes_unique_and_no_errors": true,
+    "bounded_read_and_hour_grid": true,
+    "pm_rows_accounted": true,
+    "hour_uniqueness": true,
+    "qualified_sites_rederived": true,
+    "ten_qualified_sites": true,
+    "old_eight_site_source_counts_reproduced": true,
+    "eligible_pair_support": true,
+    "neighbor_counts_sum_to_future_targets": true
+  },
+  "passed": 13,
+  "total": 13,
+  "result": "PASS"
+}

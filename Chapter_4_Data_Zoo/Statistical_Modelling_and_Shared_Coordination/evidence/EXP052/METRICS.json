@@ -1,0 +1,51 @@
+{
+  "run_id": "EXP052-LOCAL-RIDGE-001",
+  "evidence_class": "EXPLORATORY_REUSE_OF_EXPOSED_EXTERNAL_TEST",
+  "cities": {
+    "Chengdu": {
+      "n": 8526,
+      "B0_persistence_MAE": 27.46164672765658,
+      "B0_persistence_RMSE": 38.10794943921958,
+      "B1_Beijing_MAE": 26.952238266935293,
+      "B1_Beijing_RMSE": 38.43137163188228,
+      "B2_local_MAE": 24.327301732461283,
+      "B2_local_RMSE": 33.575394984603115,
+      "B2_vs_B0_relative_MAE_improvement": 0.11413536217544817,
+      "B2_vs_B1_relative_MAE_improvement": 0.09739215379726929
+    },
+    "Guangzhou": {
+      "n": 8344,
+      "B0_persistence_MAE": 17.94439117929051,
+      "B0_persistence_RMSE": 26.783805620715736,
+      "B1_Beijing_MAE": 17.899074804097314,
+      "B1_Beijing_RMSE": 24.336744292271344,
+      "B2_local_MAE": 15.729686641107426,
+      "B2_local_RMSE": 22.613650250170053,
+      "B2_vs_B0_relative_MAE_improvement": 0.12342043349673837,
+      "B2_vs_B1_relative_MAE_improvement": 0.1212011339543253
+    },
+    "Shanghai": {
+      "n": 8009,
+      "B0_persistence_MAE": 28.225995754775877,
+      "B0_persistence_RMSE": 43.869535521074425,
+      "B1_Beijing_MAE": 28.915661450836982,
+      "B1_Beijing_RMSE": 37.984086197426315,
+      "B2_local_MAE": 22.78252733312559,
+      "B2_local_RMSE": 35.21732885936758,
+      "B2_vs_B0_relative_MAE_improvement": 0.19285301638044938,
+      "B2_vs_B1_relative_MAE_improvement": 0.2121042303714572
+    },
+    "Shenyang": {
+      "n": 7653,
+      "B0_persistence_MAE": 48.11603292826343,
+      "B0_persistence_RMSE": 78.68864788451454,
+      "B1_Beijing_MAE": 41.43802547159982,
+      "B1_Beijing_RMSE": 70.94790269868328,
+      "B2_local_MAE": 38.94371904528641,
+      "B2_local_RMSE": 67.0088770366604,
+      "B2_vs_B0_relative_MAE_improvement": 0.19062905490675208,
+      "B2_vs_B1_relative_MAE_improvement": 0.06019366024143513
+    }
+  },
+  "conclusion_code": "LOCAL_FORM_USEFUL_TRANSPORT_COEFFICIENTS_FAIL"
+}

@@ -1,0 +1,62 @@
+{
+  "candidate": "SUB",
+  "evaluation_days": 355,
+  "AR_equal_day_mae_kw": 0.48014779456239237,
+  "candidate_equal_day_mae_kw": 0.4775548094170064,
+  "candidate_minus_AR_mae_kw": -0.0025929851453859966,
+  "candidate_relative_mae_gain": 0.00540038957744089,
+  "paired_day_bootstrap_difference_95pct_ci_kw": [
+    -0.004775438442408253,
+    -0.00048413319716332444
+  ],
+  "days_candidate_better": 198,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261002,
+  "validation_equal_day_mae_kw_by_model": {
+    "AR": 0.48014779456239237,
+    "SUB": 0.4775548094170064,
+    "ELECTRICAL": 0.48335444670267724,
+    "JOINT": 0.4793058966521229,
+    "PERSIST": 0.625603725250051
+  },
+  "validation_day_support": {
+    "all_target_dates": 362,
+    "evaluation_dates": 355,
+    "discarded_partial_target_dates": {
+      "2009-06-13": 1,
+      "2009-06-16": 15,
+      "2009-06-20": 2,
+      "2009-06-22": 15,
+      "2009-08-13": 6,
+      "2009-08-14": 9,
+      "2009-08-20": 9
+    }
+  },
+  "source_recheck": "SOURCE_STRUCTURE_MATCH",
+  "model_support": "HOURLY_MODEL_SUPPORT_READY",
+  "model_sample_counts": {
+    "train": 17359,
+    "validation": 8565,
+    "test": 7228
+  },
+  "feature_dimensions": {
+    "AR": 11,
+    "SUB": 26,
+    "ELECTRICAL": 26,
+    "JOINT": 41
+  },
+  "fit_seconds": {
+    "AR": 0.8625142919991049,
+    "SUB": 0.914866584003903,
+    "ELECTRICAL": 0.9394870420001098,
+    "JOINT": 0.7126509999943664
+  },
+  "model_definition": "fixed HistGradientBoostingRegressor absolute_error, 200 iterations, leaves15, min_leaf50, lr0.05, L2=10, no early stopping",
+  "test_performance_scored": false,
+  "gates": {
+    "relative_mae_gain_at_least_5pct": false,
+    "paired_day_ci_upper_below_zero": true,
+    "at_least_60pct_days_better": false
+  },
+  "decision": "STOP_ADDITIONAL_CHANNEL_DEV_GATE"
+}

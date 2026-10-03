@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "source_recheck": true,
+    "twenty_full_days": true,
+    "means_recomputed": true,
+    "candidate_is_min_added": true,
+    "gain_recomputed": true,
+    "day_better_recomputed": true,
+    "frozen_gate_stop": true,
+    "test_not_scored": true
+  },
+  "passed": 8,
+  "total": 8
+}

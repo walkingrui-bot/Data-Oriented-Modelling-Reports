@@ -1,0 +1,18 @@
+{
+  "run_id": "EXP017-GANGLION-LONG-001",
+  "parent_run": "EXP017-SOURCE-TRAIN-001",
+  "amendment": "EXP017-AMEND-002",
+  "input_oof": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/source_level_six/EXP017-SOURCE-TRAIN-001/train_channel_oof.parquet",
+  "input_routing": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/source_level_six/EXP017-SOURCE-TRAIN-001/routing_weights.json",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "max_epochs": 1000,
+  "validation_patience": 100,
+  "selection": "best epoch and best seed by validation log loss only",
+  "best_validation_seed": 202,
+  "test_seen_before_amendment": true,
+  "scope": "Post-result exploratory source-level budget extension; no independent confirmation"
+}

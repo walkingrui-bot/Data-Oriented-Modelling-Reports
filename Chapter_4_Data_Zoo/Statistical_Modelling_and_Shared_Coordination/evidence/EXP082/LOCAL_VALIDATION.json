@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "attempt_two_metadata": true,
+    "original_rows_partition": true,
+    "duplicate_hours_bounded": true,
+    "consistent_traffic_outcomes": true,
+    "weather_conflicts_bounded": true,
+    "numeric_rows_complete": true,
+    "train_pair_date_gate": true,
+    "validation_pair_date_gate": true,
+    "test_pair_date_gate": true,
+    "all_frozen_gates": true,
+    "no_model_or_score": true
+  },
+  "passed": 11,
+  "total": 11
+}

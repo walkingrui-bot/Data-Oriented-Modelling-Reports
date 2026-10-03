@@ -1,0 +1,7 @@
+{
+  "scope": "EXP048 only",
+  "validated_evaluation_pairs": 116919,
+  "domain_metric_checks": 20,
+  "time_lock_hours": 24,
+  "status": "PASS"
+}

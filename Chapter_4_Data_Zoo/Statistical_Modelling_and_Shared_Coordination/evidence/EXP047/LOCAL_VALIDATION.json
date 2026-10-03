@@ -1,0 +1,8 @@
+{
+  "scope": "EXP047 derived station audit only",
+  "station_rows": 12,
+  "unique_station_labels": 12,
+  "every_station_meets_frozen_numeric_rules": true,
+  "common_original_hour_grid_count": 35064,
+  "status": "PASS"
+}

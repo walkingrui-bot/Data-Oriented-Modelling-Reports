@@ -1,0 +1,13 @@
+{
+  "run_id": "EXP033-VERIFY-001",
+  "scope": "saved state and Ga predictions only; no fit or source reread",
+  "checks": {
+    "holdout_keys_and_source_qualified": true,
+    "one_converged_fit": true,
+    "saved_state_shape": false,
+    "prediction_reconstruction": true,
+    "independent_metric_recompute": true,
+    "frozen_gate_recompute": true
+  },
+  "pass": false
+}

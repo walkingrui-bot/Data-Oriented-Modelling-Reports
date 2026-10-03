@@ -1,0 +1,22 @@
+{
+  "run_id": "EXP058-OPTIMIZATION-001",
+  "train_pairs": 17702,
+  "validation_pairs": 4132,
+  "train_targets": 990,
+  "validation_targets": 212,
+  "train_events": 916,
+  "validation_events": 220,
+  "old_validation_prediction_max_abs_difference": {
+    "101": 8.940696716308594e-08,
+    "202": 1.7881393432617188e-07,
+    "303": 8.940696716308594e-08
+  },
+  "train_availability_max_abs_difference": 0.0,
+  "test_split_accessed_for_evaluation": false,
+  "old_training_state_reused_by_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/train_channel_oof.parquet",
+  "old_checkpoint_paths": [
+    "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_101.pt",
+    "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_202.pt",
+    "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/results/native_six/EXP017-NATIVE-TRAIN-001/ganglion_seed_303.pt"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "experiment": "INTERNAL_COORDINATION_010 \u2014 Shared Ganglion + Precision Residual",
+  "date": "2026-10-02",
+  "base": "Experiment 009 mixed numeric-language model; 16D shared ganglion; matched three seeds; 800 mixed steps",
+  "base_parameters": 6320,
+  "ganglion_parameters_including_bias": 272,
+  "base_frozen_during_precision_training": true,
+  "short_screen": {
+    "steps": 300,
+    "capacities": {
+      "small": 688,
+      "medium": 1872,
+      "precision": 4736
+    }
+  },
+  "long_precision": {
+    "steps": 1200,
+    "capacity_parameters": 4736,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "precision_activation": "numeric local expert only when numeric evidence is present; language local expert only when text evidence is present",
+  "blend": "shared + alpha*(local-shared); probabilities use convex probability mixture",
+  "alpha_grid": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "alpha_cap_reason": "retain a nonzero shared-path contribution in precision outputs",
+  "alpha_selection": "20% internal validation split for long precision; same alpha used whenever that native modality is present",
+  "test_split": "same held-out 20% as Experiment 009",
+  "numeric_target": "proper quantile distribution of an independent remeasurement; q10/q25/q50/q75/q90",
+  "language_target": "six semantic 3-class variables; stochastic paraphrase observation; no exact sentence reproduction",
+  "cross_modal_rule": "when native evidence is absent the precision branch is inactive, so cross-modal predictions remain exactly on the shared path",
+  "ganglion_retention_test": "remove top two learned Experiment 009 delta-M SVD directions; compare with norm-matched random perturbation"
+}

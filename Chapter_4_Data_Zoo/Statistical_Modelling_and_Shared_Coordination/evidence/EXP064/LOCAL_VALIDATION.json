@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "fixed_ten_sites": true,
+    "all_official_2025_files": true,
+    "read_budget": true,
+    "2025_hour_grid": true,
+    "explicit_rows_accounted": true,
+    "no_clock_errors": true,
+    "ten_qualified_sites": true,
+    "pair_total_rederived": true,
+    "neighbor_distribution": true,
+    "five_station_and_thirty_day_gate": true
+  },
+  "passed": 10,
+  "total": 10,
+  "result": "PASS"
+}

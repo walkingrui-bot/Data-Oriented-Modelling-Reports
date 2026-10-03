@@ -1,0 +1,63 @@
+{
+  "experiment": "INTERNAL_COORDINATION_003_MULTILINGUAL_CODE_CORE",
+  "date": "2026-10-01",
+  "views": [
+    "English",
+    "Chinese",
+    "Japanese",
+    "Spanish",
+    "Python",
+    "JavaScript"
+  ],
+  "shared_state_dimension": 16,
+  "state_matrix_shape_per_scene": [
+    16,
+    6
+  ],
+  "train_scenes": 800,
+  "heldout_scenes": 200,
+  "semantic_world": "piecewise affine function: comparator, threshold, branch1 slope/intercept, branch2 slope/intercept",
+  "training": {
+    "self_steps": 600,
+    "binding_steps": 650,
+    "shuffle_steps": 650,
+    "batch_size": 64,
+    "semantic_token_weight": 2.5,
+    "syntax_token_weight": 0.35,
+    "optimizer": "AdamW",
+    "learning_rate": 0.004
+  },
+  "runs": [
+    {
+      "initialization_seed": 1,
+      "self_batch_seed": 2,
+      "binding_batch_seed": 920,
+      "shuffle_batch_seed": 1020
+    },
+    {
+      "initialization_seed": 2,
+      "self_batch_seed": 201,
+      "binding_batch_seed": 203,
+      "shuffle_batch_seed": 204
+    },
+    {
+      "initialization_seed": 3,
+      "self_batch_seed": 301,
+      "binding_batch_seed": 303,
+      "shuffle_batch_seed": 304
+    }
+  ],
+  "latent_alignment_loss": false,
+  "audit": {
+    "scene_retrieval_candidates": 200,
+    "free_generation_audit_scenes": 30,
+    "execution_grid": [
+      -5,
+      -2,
+      0,
+      2,
+      5
+    ],
+    "simulator_parameters_training_access": false
+  }
+}

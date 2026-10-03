@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "five_current_records_exist": true,
+    "all_matrix_links_resolve": true,
+    "matrix_has_11_source_groups": true,
+    "decision_keeps_old_gates": true,
+    "zero_new_model_claim": true
+  },
+  "passed": 5,
+  "total": 5,
+  "local_validation": "PASS"
+}

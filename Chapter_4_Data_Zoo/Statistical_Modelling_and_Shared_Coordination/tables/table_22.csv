@@ -1,0 +1,8 @@
+View,Example surface
+English,"if x is greater_than 0 , return 3 * x + 1 ; otherwise return 3 * x + 3 ."
+Chinese,如果 x 大于 0 ， 则 返回 3 * x + 1 ； 否则 返回 3 * x + 3 。
+Japanese,もし x が 0 より大きい なら 返す 3 * x + 1 ； それ以外 返す 3 * x + 3 。
+Spanish,"si x es mayor_que 0 , devuelve 3 * x + 1 ; si_no devuelve 3 * x + 3 ."
+Python,"def f ( x ) : if x > 0 : return 3 * x + 1
+return 3 * x + 3"
+JavaScript,function f ( x ) { if ( x > 0 ) return 3 * x + 1 ; return 3 * x + 3 ; }

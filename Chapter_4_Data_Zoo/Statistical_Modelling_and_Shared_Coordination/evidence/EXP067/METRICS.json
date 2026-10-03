@@ -1,0 +1,187 @@
+{
+  "run_id": "EXP067-RISK-001",
+  "qualification": "retrospective; 2024/2025 B0 scores exposed earlier",
+  "per_year": {
+    "2024": {
+      "all_pairs": 667,
+      "groups": {
+        "SHORT_1_2": {
+          "n": 200,
+          "stations": [
+            "BDMP",
+            "BEX",
+            "CA1",
+            "CLL2",
+            "HIL",
+            "HP1",
+            "HRL",
+            "KC1",
+            "MY1",
+            "THUR"
+          ],
+          "station_count": 10,
+          "days": 111,
+          "B0_MAE": 5.0343975,
+          "target_mean": 8.91244
+        },
+        "MIDDLE_3_5": {
+          "n": 48,
+          "stations": [
+            "BDMP",
+            "BEX",
+            "CA1",
+            "CLL2",
+            "HIL",
+            "HP1",
+            "HRL",
+            "KC1",
+            "MY1"
+          ],
+          "station_count": 9,
+          "days": 26,
+          "B0_MAE": 5.580604166666666,
+          "target_mean": 7.4789375
+        },
+        "LONG_6_PLUS": {
+          "n": 395,
+          "stations": [
+            "BDMP",
+            "CA1",
+            "CLL2",
+            "HIL",
+            "HP1",
+            "KC1",
+            "MY1",
+            "THUR"
+          ],
+          "station_count": 8,
+          "days": 35,
+          "B0_MAE": 5.95263164556962,
+          "target_mean": 9.881032911392404
+        },
+        "LEFT_CENSORED_OR_UNKNOWN_START": {
+          "n": 24,
+          "stations": [
+            "CLL2"
+          ],
+          "station_count": 1,
+          "days": 2,
+          "B0_MAE": 3.9378333333333333,
+          "target_mean": 5.919833333333333
+        }
+      },
+      "support_conditions": {
+        "SHORT_1_2": true,
+        "LONG_6_PLUS": true
+      },
+      "support_pass": true,
+      "long_short_MAE_ratio": 1.1823920629170859,
+      "long_minus_short_day_block": {
+        "block": "GMT_origin_day_all_stations_together",
+        "resamples": 1000,
+        "valid_resamples": 1000,
+        "seed": 20261002,
+        "bootstrap_95ci": [
+          -0.7276429218694284,
+          2.366734583170623
+        ]
+      },
+      "risk_conditions": {
+        "long_short_MAE_ratio_at_least_1_5": false,
+        "day_block_CI_lower_above_zero": false
+      },
+      "risk_pass": false
+    },
+    "2025": {
+      "all_pairs": 589,
+      "groups": {
+        "SHORT_1_2": {
+          "n": 231,
+          "stations": [
+            "BDMP",
+            "BEX",
+            "CA1",
+            "CLL2",
+            "HIL",
+            "HP1",
+            "HRL",
+            "KC1",
+            "MY1",
+            "THUR"
+          ],
+          "station_count": 10,
+          "days": 137,
+          "B0_MAE": 5.2924480519480515,
+          "target_mean": 10.613805194805195
+        },
+        "MIDDLE_3_5": {
+          "n": 62,
+          "stations": [
+            "BDMP",
+            "BEX",
+            "CA1",
+            "CLL2",
+            "HIL",
+            "HP1",
+            "HRL",
+            "KC1",
+            "MY1"
+          ],
+          "station_count": 9,
+          "days": 34,
+          "B0_MAE": 4.531379032258064,
+          "target_mean": 10.362241935483873
+        },
+        "LONG_6_PLUS": {
+          "n": 296,
+          "stations": [
+            "BDMP",
+            "BEX",
+            "CA1",
+            "HIL",
+            "HP1",
+            "HRL",
+            "KC1",
+            "MY1"
+          ],
+          "station_count": 8,
+          "days": 29,
+          "B0_MAE": 3.0668445945945946,
+          "target_mean": 6.669064189189188
+        },
+        "LEFT_CENSORED_OR_UNKNOWN_START": {
+          "n": 0,
+          "stations": [],
+          "station_count": 0,
+          "days": 0,
+          "B0_MAE": null,
+          "target_mean": null
+        }
+      },
+      "support_conditions": {
+        "SHORT_1_2": true,
+        "LONG_6_PLUS": true
+      },
+      "support_pass": true,
+      "long_short_MAE_ratio": 0.579475615913839,
+      "long_minus_short_day_block": {
+        "block": "GMT_origin_day_all_stations_together",
+        "resamples": 1000,
+        "valid_resamples": 1000,
+        "seed": 20261002,
+        "bootstrap_95ci": [
+          -3.6299153471986196,
+          -0.6480052344649259
+        ]
+      },
+      "risk_conditions": {
+        "long_short_MAE_ratio_at_least_1_5": false,
+        "day_block_CI_lower_above_zero": false
+      },
+      "risk_pass": false
+    }
+  },
+  "support_both_years": true,
+  "risk_both_years": false,
+  "gate_code": "NO_REPEATED_LONG_OUTAGE_RISK"
+}

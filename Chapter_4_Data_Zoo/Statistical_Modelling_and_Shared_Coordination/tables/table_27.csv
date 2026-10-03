@@ -1,0 +1,8 @@
+Model,Log loss ↓,AUROC ↑,AUPRC ↑,ECE ↓
+Prevalence,0.2035,0.3962,0.0426,0.0000
+Evidence-count logistic,0.1992,0.5972,0.0817,0.0037
+Linear evidence logistic,0.1981,0.6088,0.0885,0.0060
+Polynomial evidence logistic,0.1973,0.6184,0.0919,0.0041
+Ganglion — best seed,0.1993,0.6150,0.0863,0.0072
+Ganglion — median seed,0.2040,0.5940,0.0811,0.0097
+Ganglion + precision — best,0.1973,0.6181,0.0900,0.0046

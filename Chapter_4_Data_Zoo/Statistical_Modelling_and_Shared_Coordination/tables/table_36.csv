@@ -1,0 +1,7 @@
+Question,Final status,Basis
+Mechanism existence,Retained,EXP001–010 show that shared coordination can be learned and causally perturbed under controlled or limited real-measurement settings.
+Statistics-first design,Retained,EXP011–015 and the later real-task suite repeatedly favour native statistical modelling before shared coordination.
+Statistical expert routing,Retained in tested setting,Direct OOF statistical routing was stronger and more interpretable than neural committee routing in EXP015.
+Real-task default Ganglion,Frozen,No later real added-channel task completed its own frozen downstream gate and directly established a Shared Ganglion gain over its appropriate statistical comparator.
+Capacity explanation,Not identified,EXP057–058 did not justify wider or longer configurations; this does not prove the 16D core is globally sufficient.
+Drug historical prediction,Not identified,"Regulatory source semantics were repaired in EXP022, but indication-specific historical outcome identification did not qualify in EXP023–024."

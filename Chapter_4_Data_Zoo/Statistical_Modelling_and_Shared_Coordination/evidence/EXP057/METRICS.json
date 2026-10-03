@@ -1,0 +1,233 @@
+{
+  "run_id": "EXP057-CAPACITY-001",
+  "qualification": "retrospective development only; previously seen test not accessed",
+  "device": "mps",
+  "optimizer": "Adam",
+  "learning_rate": 0.002,
+  "max_epochs": 2000,
+  "patience": 200,
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "real_train_pairs": 17702,
+  "real_validation_pairs": 4132,
+  "real_train_targets": 990,
+  "real_validation_targets": 212,
+  "arms": {
+    "B16": {
+      "101": {
+        "arm": "B16",
+        "seed": 101,
+        "interface_width": 16,
+        "core_width": 16,
+        "total_parameters": 769,
+        "core_weight_shape": [
+          16,
+          16
+        ],
+        "best_epoch": 2000,
+        "epochs_run": 2000,
+        "validation_logloss": 0.19894808530807495,
+        "best_validation_logits_loss": 0.1989479959011078,
+        "last_validation_logloss": 0.1989479959011078,
+        "fit_seconds": 9.530168624994985,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/B16_seed_101.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/B16_seed_101.pt"
+      },
+      "202": {
+        "arm": "B16",
+        "seed": 202,
+        "interface_width": 16,
+        "core_width": 16,
+        "total_parameters": 769,
+        "core_weight_shape": [
+          16,
+          16
+        ],
+        "best_epoch": 1783,
+        "epochs_run": 1983,
+        "validation_logloss": 0.19931641221046448,
+        "best_validation_logits_loss": 0.1993163675069809,
+        "last_validation_logloss": 0.1993563026189804,
+        "fit_seconds": 9.367084750003414,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/B16_seed_202.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/B16_seed_202.pt"
+      },
+      "303": {
+        "arm": "B16",
+        "seed": 303,
+        "interface_width": 16,
+        "core_width": 16,
+        "total_parameters": 769,
+        "core_weight_shape": [
+          16,
+          16
+        ],
+        "best_epoch": 2000,
+        "epochs_run": 2000,
+        "validation_logloss": 0.19895251095294952,
+        "best_validation_logits_loss": 0.19895252585411072,
+        "last_validation_logloss": 0.19895252585411072,
+        "fit_seconds": 10.199436000002606,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/B16_seed_303.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/B16_seed_303.pt"
+      }
+    },
+    "C32": {
+      "101": {
+        "arm": "C32",
+        "seed": 101,
+        "interface_width": 16,
+        "core_width": 32,
+        "total_parameters": 1057,
+        "core_weight_shape": [
+          32,
+          16
+        ],
+        "best_epoch": 1958,
+        "epochs_run": 2000,
+        "validation_logloss": 0.1992785483598709,
+        "best_validation_logits_loss": 0.1992785632610321,
+        "last_validation_logloss": 0.19927974045276642,
+        "fit_seconds": 9.8097244160017,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/C32_seed_101.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/C32_seed_101.pt"
+      },
+      "202": {
+        "arm": "C32",
+        "seed": 202,
+        "interface_width": 16,
+        "core_width": 32,
+        "total_parameters": 1057,
+        "core_weight_shape": [
+          32,
+          16
+        ],
+        "best_epoch": 1997,
+        "epochs_run": 2000,
+        "validation_logloss": 0.19933205842971802,
+        "best_validation_logits_loss": 0.1993320733308792,
+        "last_validation_logloss": 0.19933201372623444,
+        "fit_seconds": 9.594856292002078,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/C32_seed_202.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/C32_seed_202.pt"
+      },
+      "303": {
+        "arm": "C32",
+        "seed": 303,
+        "interface_width": 16,
+        "core_width": 32,
+        "total_parameters": 1057,
+        "core_weight_shape": [
+          32,
+          16
+        ],
+        "best_epoch": 1839,
+        "epochs_run": 2000,
+        "validation_logloss": 0.19908273220062256,
+        "best_validation_logits_loss": 0.19908267259597778,
+        "last_validation_logloss": 0.19910459220409393,
+        "fit_seconds": 8.6909872920005,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/C32_seed_303.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/C32_seed_303.pt"
+      }
+    },
+    "F32": {
+      "101": {
+        "arm": "F32",
+        "seed": 101,
+        "interface_width": 32,
+        "core_width": 32,
+        "total_parameters": 2049,
+        "core_weight_shape": [
+          32,
+          32
+        ],
+        "best_epoch": 1206,
+        "epochs_run": 1406,
+        "validation_logloss": 0.1988682597875595,
+        "best_validation_logits_loss": 0.19886817038059235,
+        "last_validation_logloss": 0.19889739155769348,
+        "fit_seconds": 6.979818500003603,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/F32_seed_101.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/F32_seed_101.pt"
+      },
+      "202": {
+        "arm": "F32",
+        "seed": 202,
+        "interface_width": 32,
+        "core_width": 32,
+        "total_parameters": 2049,
+        "core_weight_shape": [
+          32,
+          32
+        ],
+        "best_epoch": 1892,
+        "epochs_run": 2000,
+        "validation_logloss": 0.1986893266439438,
+        "best_validation_logits_loss": 0.1986892819404602,
+        "last_validation_logloss": 0.19869324564933777,
+        "fit_seconds": 10.683651583000028,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/F32_seed_202.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/F32_seed_202.pt"
+      },
+      "303": {
+        "arm": "F32",
+        "seed": 303,
+        "interface_width": 32,
+        "core_width": 32,
+        "total_parameters": 2049,
+        "core_weight_shape": [
+          32,
+          32
+        ],
+        "best_epoch": 1686,
+        "epochs_run": 1886,
+        "validation_logloss": 0.19871313869953156,
+        "best_validation_logits_loss": 0.1987130492925644,
+        "last_validation_logloss": 0.1987464427947998,
+        "fit_seconds": 9.78908595899702,
+        "device": "mps",
+        "trace_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/TRACES/F32_seed_303.csv",
+        "checkpoint_path": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP057-20261002-001/MODEL_STATES/F32_seed_303.pt"
+      }
+    }
+  },
+  "gates": {
+    "C32": {
+      "comparison": "C32_minus_B16",
+      "same_seed_differences": {
+        "101": 0.00033046305179595947,
+        "202": 1.564621925354004e-05,
+        "303": 0.00013022124767303467
+      },
+      "median_difference": 0.00013022124767303467,
+      "seeds_improving_by_at_least_0_0005": 0,
+      "gate_pass": false
+    },
+    "F32": {
+      "comparison": "F32_minus_B16",
+      "same_seed_differences": {
+        "101": -7.98255205154419e-05,
+        "202": -0.0006270855665206909,
+        "303": -0.00023937225341796875
+      },
+      "median_difference": -0.00023937225341796875,
+      "seeds_improving_by_at_least_0_0005": 1,
+      "gate_pass": false
+    }
+  },
+  "total_seconds": 85.51133654200385,
+  "stat_moe_original_validation_logloss_report_only": 0.20008862,
+  "any_best_epoch_at_cap": true
+}

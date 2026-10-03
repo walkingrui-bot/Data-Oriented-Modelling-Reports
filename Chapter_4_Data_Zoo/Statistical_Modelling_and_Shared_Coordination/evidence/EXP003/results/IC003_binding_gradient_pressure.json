@@ -1,0 +1,41 @@
+[
+  {
+    "seed": 0,
+    "loss": 0.3064483106136322,
+    "encoder_grad_l2": 0.36429775616834825,
+    "encoder_grad_rms": 0.002904454165820749,
+    "encoder_n": 15732,
+    "core_grad_l2": 0.11045823385074563,
+    "core_grad_rms": 0.006697514196850006,
+    "core_n": 272,
+    "decoder_grad_l2": 0.20782973409708597,
+    "decoder_grad_rms": 0.0014727109861579978,
+    "decoder_n": 19915
+  },
+  {
+    "seed": 2,
+    "loss": 0.5916782021522522,
+    "encoder_grad_l2": 0.5802483799738175,
+    "encoder_grad_rms": 0.004626174045515907,
+    "encoder_n": 15732,
+    "core_grad_l2": 0.17151292409018704,
+    "core_grad_rms": 0.01039949856150566,
+    "core_n": 272,
+    "decoder_grad_l2": 0.31047904301784957,
+    "decoder_grad_rms": 0.0022000985547650747,
+    "decoder_n": 19915
+  },
+  {
+    "seed": 3,
+    "loss": 0.34318992495536804,
+    "encoder_grad_l2": 0.3416264029264873,
+    "encoder_grad_rms": 0.0027237011821606267,
+    "encoder_n": 15732,
+    "core_grad_l2": 0.09808153175423712,
+    "core_grad_rms": 0.00594706640213371,
+    "core_n": 272,
+    "decoder_grad_l2": 0.2277460500428009,
+    "decoder_grad_rms": 0.001613840827008135,
+    "decoder_n": 19915
+  }
+]

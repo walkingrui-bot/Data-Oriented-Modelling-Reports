@@ -1,0 +1,12 @@
+{
+  "scope": "EXP050 saved source audit only",
+  "city_files": 5,
+  "qualifying_non_beijing_cities": [
+    "Chengdu",
+    "Guangzhou",
+    "Shanghai",
+    "Shenyang"
+  ],
+  "gate_recomputed": "EXTERNAL_COMMON_SCHEMA_SOURCE_READY",
+  "status": "PASS"
+}

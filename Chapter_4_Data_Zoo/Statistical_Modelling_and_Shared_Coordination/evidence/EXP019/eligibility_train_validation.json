@@ -1,0 +1,1795 @@
+{
+  "run_id": "EXP019-SUPPORT-001",
+  "research_id": "STAT-PSYMOE-EXP019-20261002-001",
+  "release": "26.06",
+  "selection_partitions": [
+    "train",
+    "validation"
+  ],
+  "test_previously_observed": true,
+  "thresholds": {
+    "train_pairs": 200,
+    "validation_pairs": 50,
+    "train_events": 10,
+    "validation_events": 3,
+    "train_state_min_observed_pairs": 10,
+    "train_state_min_unique_values": 2
+  },
+  "candidates": [
+    {
+      "passport_id": "DP-GEN-04",
+      "datasource": "genomics_england",
+      "native_table": "evidence_genomics_england",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_genomics_england/part-00000-b27971d6-424a-4cbb-8955-cb6f703d8f73-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "studyId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "studyOverview",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "confidence",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "cohortPhenotypes",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "allelicRequirements",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 47102,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 34,
+      "train": {
+        "pairs": 20,
+        "targets": 17,
+        "events": 0,
+        "nonzero_score_pairs": 20,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 61
+      },
+      "validation": {
+        "pairs": 7,
+        "targets": 6,
+        "events": 0,
+        "nonzero_score_pairs": 7,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 27
+      },
+      "score_unique_train": 1,
+      "nonzero_score_pairs_train_validation": 27,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 58,
+          "native_rows": 88
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 58,
+          "native_rows": 88
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": false,
+        "evidence_count_varies": true,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    },
+    {
+      "passport_id": "DP-GEN-05",
+      "datasource": "gene2phenotype",
+      "native_table": "evidence_gene2phenotype",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_gene2phenotype/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_gene2phenotype/part-00000-906ada90-af5a-4c10-b3cb-0e725e5bf397-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "studyId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "confidence",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "allelicRequirements",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "variantFunctionalConsequenceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "directionOnTrait",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "directionOnTarget",
+          "type": "VARCHAR"
+        }
+      ],
+      "native_rows": 5050,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 9,
+      "train": {
+        "pairs": 5,
+        "targets": 5,
+        "events": 0,
+        "nonzero_score_pairs": 5,
+        "unique_nonmissing_pair_scores": 2,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 5
+      },
+      "validation": {
+        "pairs": 1,
+        "targets": 1,
+        "events": 0,
+        "nonzero_score_pairs": 1,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 1
+      },
+      "score_unique_train": 2,
+      "nonzero_score_pairs_train_validation": 6,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 6,
+          "native_rows": 6
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 6,
+          "native_rows": 6
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": false,
+        "evidence_count_varies": false,
+        "variable_native_fields": [],
+        "native_field_probe": {
+          "candidate_fields": [
+            "confidence",
+            "diseaseFromSource",
+            "directionOnTrait",
+            "directionOnTarget"
+          ],
+          "variable_fields": [],
+          "observed": {
+            "confidence": {
+              "observed_pairs": 5,
+              "unique_pair_values": 2,
+              "unique_pair_level_counts": 1
+            },
+            "diseaseFromSource": {
+              "observed_pairs": 5,
+              "unique_pair_values": 3,
+              "unique_pair_level_counts": 1
+            },
+            "directionOnTrait": {
+              "observed_pairs": 5,
+              "unique_pair_values": 1,
+              "unique_pair_level_counts": 1
+            },
+            "directionOnTarget": {
+              "observed_pairs": 1,
+              "unique_pair_values": 1,
+              "unique_pair_level_counts": 1
+            }
+          }
+        }
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT",
+        "FAIL_CONSTANT_STATE"
+      ]
+    },
+    {
+      "passport_id": "DP-GEN-06",
+      "datasource": "uniprot_literature",
+      "native_table": "evidence_uniprot_literature",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_uniprot_literature/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_uniprot_literature/part-00000-d873d4b4-17bf-44b4-9ad8-142e8cd17d87-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "confidence",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "targetModulation",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 6692,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 40,
+      "train": {
+        "pairs": 27,
+        "targets": 22,
+        "events": 5,
+        "nonzero_score_pairs": 27,
+        "unique_nonmissing_pair_scores": 2,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 27
+      },
+      "validation": {
+        "pairs": 7,
+        "targets": 7,
+        "events": 1,
+        "nonzero_score_pairs": 7,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 7
+      },
+      "score_unique_train": 2,
+      "nonzero_score_pairs_train_validation": 34,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 32,
+          "native_rows": 34
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 32,
+          "native_rows": 34
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": true,
+        "evidence_count_varies": false,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    },
+    {
+      "passport_id": "DP-GEN-07",
+      "datasource": "uniprot_variants",
+      "native_table": "evidence_uniprot_variants",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_uniprot_variants/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_uniprot_variants/part-00000-bf773097-355a-46f4-833f-6b71d39e6f83-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "confidence",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "targetModulation",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "variantId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "variantRsId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 36722,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 23,
+      "train": {
+        "pairs": 14,
+        "targets": 12,
+        "events": 3,
+        "nonzero_score_pairs": 14,
+        "unique_nonmissing_pair_scores": 2,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 56
+      },
+      "validation": {
+        "pairs": 5,
+        "targets": 5,
+        "events": 1,
+        "nonzero_score_pairs": 5,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 50
+      },
+      "score_unique_train": 2,
+      "nonzero_score_pairs_train_validation": 19,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 106,
+          "native_rows": 106
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 106,
+          "native_rows": 106
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": true,
+        "evidence_count_varies": true,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    },
+    {
+      "passport_id": "DP-GEN-08",
+      "datasource": "orphanet",
+      "native_table": "evidence_orphanet",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_orphanet/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_orphanet/part-00000-cd6a04cb-4416-4a3a-9177-34497cde762c-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "alleleOrigins",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "confidence",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "targetFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "variantFunctionalConsequenceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "directionOnTrait",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "directionOnTarget",
+          "type": "VARCHAR"
+        }
+      ],
+      "native_rows": 7461,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 6,
+      "train": {
+        "pairs": 4,
+        "targets": 4,
+        "events": 0,
+        "nonzero_score_pairs": 4,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 4
+      },
+      "validation": {
+        "pairs": 1,
+        "targets": 1,
+        "events": 0,
+        "nonzero_score_pairs": 1,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 1
+      },
+      "score_unique_train": 1,
+      "nonzero_score_pairs_train_validation": 5,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 5,
+          "native_rows": 5
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 5,
+          "native_rows": 5
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": false,
+        "evidence_count_varies": false,
+        "variable_native_fields": [],
+        "native_field_probe": {
+          "candidate_fields": [
+            "confidence",
+            "diseaseFromSource",
+            "targetFromSource",
+            "directionOnTrait",
+            "directionOnTarget"
+          ],
+          "variable_fields": [],
+          "observed": {
+            "confidence": {
+              "observed_pairs": 4,
+              "unique_pair_values": 1,
+              "unique_pair_level_counts": 1
+            },
+            "diseaseFromSource": {
+              "observed_pairs": 4,
+              "unique_pair_values": 4,
+              "unique_pair_level_counts": 1
+            },
+            "targetFromSource": {
+              "observed_pairs": 4,
+              "unique_pair_values": 4,
+              "unique_pair_level_counts": 1
+            },
+            "directionOnTrait": {
+              "observed_pairs": 4,
+              "unique_pair_values": 1,
+              "unique_pair_level_counts": 1
+            },
+            "directionOnTarget": {
+              "observed_pairs": 2,
+              "unique_pair_values": 1,
+              "unique_pair_level_counts": 1
+            }
+          }
+        }
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT",
+        "FAIL_CONSTANT_STATE"
+      ]
+    },
+    {
+      "passport_id": "DP-GEN-09",
+      "datasource": "clingen",
+      "native_table": "evidence_clingen",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clingen/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_clingen/part-00000-e8c00d47-85ed-46b3-87e9-c3874b86e730-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "allelicRequirements",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "urls",
+          "type": "STRUCT(niceName VARCHAR, url VARCHAR)[]"
+        },
+        {
+          "name": "confidence",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "releaseDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "studyId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 4537,
+      "date_fields": [
+        "releaseDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 10,
+      "train": {
+        "pairs": 4,
+        "targets": 4,
+        "events": 0,
+        "nonzero_score_pairs": 4,
+        "unique_nonmissing_pair_scores": 2,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 4
+      },
+      "validation": {
+        "pairs": 3,
+        "targets": 3,
+        "events": 0,
+        "nonzero_score_pairs": 3,
+        "unique_nonmissing_pair_scores": 2,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 3
+      },
+      "score_unique_train": 2,
+      "nonzero_score_pairs_train_validation": 7,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "releaseDate": {
+          "nonmissing_rows": 7,
+          "native_rows": 7
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 7,
+          "native_rows": 7
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": false,
+        "evidence_count_varies": false,
+        "variable_native_fields": [],
+        "native_field_probe": {
+          "candidate_fields": [
+            "diseaseFromSource",
+            "confidence"
+          ],
+          "variable_fields": [],
+          "observed": {
+            "diseaseFromSource": {
+              "observed_pairs": 4,
+              "unique_pair_values": 3,
+              "unique_pair_level_counts": 1
+            },
+            "confidence": {
+              "observed_pairs": 4,
+              "unique_pair_values": 2,
+              "unique_pair_level_counts": 1
+            }
+          }
+        }
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT",
+        "FAIL_CONSTANT_STATE"
+      ]
+    },
+    {
+      "passport_id": "DP-SOM-01",
+      "datasource": "cancer_gene_census",
+      "native_table": "evidence_cancer_gene_census",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_cancer_gene_census/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_cancer_gene_census/part-00000-5210a0cd-d578-43c6-8282-95c56ffb9331-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "mutatedSamples",
+          "type": "STRUCT(functionalConsequenceId VARCHAR, numberMutatedSamples BIGINT, numberSamplesTested BIGINT, numberSamplesWithMutationType BIGINT)[]"
+        },
+        {
+          "name": "resourceScore",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "studyId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "directionOnTrait",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "directionOnTarget",
+          "type": "VARCHAR"
+        }
+      ],
+      "native_rows": 91572,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 972,
+      "train": {
+        "pairs": 700,
+        "targets": 84,
+        "events": 53,
+        "nonzero_score_pairs": 700,
+        "unique_nonmissing_pair_scores": 4,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 700
+      },
+      "validation": {
+        "pairs": 165,
+        "targets": 18,
+        "events": 15,
+        "nonzero_score_pairs": 165,
+        "unique_nonmissing_pair_scores": 4,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 165
+      },
+      "score_unique_train": 4,
+      "nonzero_score_pairs_train_validation": 865,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 721,
+          "native_rows": 865
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 721,
+          "native_rows": 865
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": true,
+        "evidence_count_varies": false,
+        "variable_native_fields": []
+      },
+      "eligibility": "PASS",
+      "fail_reasons": []
+    },
+    {
+      "passport_id": "DP-SOM-02",
+      "datasource": "intogen",
+      "native_table": "evidence_intogen",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_intogen/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_intogen/part-00000-57151394-85ce-47b8-8aa7-6c3deedade7b-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "cohortId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "cohortShortName",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "cohortDescription",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "significantDriverMethods",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "mutatedSamples",
+          "type": "STRUCT(functionalConsequenceId VARCHAR, numberMutatedSamples BIGINT, numberSamplesTested BIGINT, numberSamplesWithMutationType BIGINT)[]"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "resourceScore",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "directionOnTrait",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "directionOnTarget",
+          "type": "VARCHAR"
+        }
+      ],
+      "native_rows": 4223,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 102,
+      "train": {
+        "pairs": 86,
+        "targets": 37,
+        "events": 5,
+        "nonzero_score_pairs": 86,
+        "unique_nonmissing_pair_scores": 55,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 179
+      },
+      "validation": {
+        "pairs": 8,
+        "targets": 7,
+        "events": 0,
+        "nonzero_score_pairs": 8,
+        "unique_nonmissing_pair_scores": 8,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 13
+      },
+      "score_unique_train": 55,
+      "nonzero_score_pairs_train_validation": 94,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 155,
+          "native_rows": 192
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 155,
+          "native_rows": 192
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": true,
+        "evidence_count_varies": true,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    },
+    {
+      "passport_id": "DP-PWY-01",
+      "datasource": "cancer_biomarkers",
+      "native_table": "evidence_cancer_biomarkers",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_cancer_biomarkers/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_cancer_biomarkers/part-00000-c2df50a8-0b8b-42f2-a947-d2ff272c9933-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "drugFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "drugId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "drugResponse",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "confidence",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "biomarkerName",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "urls",
+          "type": "STRUCT(niceName VARCHAR, url VARCHAR)[]"
+        },
+        {
+          "name": "biomarkers",
+          "type": "STRUCT(geneExpression STRUCT(id VARCHAR, \"name\" VARCHAR)[], geneticVariation STRUCT(functionalConsequenceId VARCHAR, id VARCHAR, \"name\" VARCHAR)[])"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 1301,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 73,
+      "train": {
+        "pairs": 53,
+        "targets": 29,
+        "events": 10,
+        "nonzero_score_pairs": 53,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 179
+      },
+      "validation": {
+        "pairs": 14,
+        "targets": 7,
+        "events": 2,
+        "nonzero_score_pairs": 14,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 42
+      },
+      "score_unique_train": 1,
+      "nonzero_score_pairs_train_validation": 67,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 162,
+          "native_rows": 221
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 162,
+          "native_rows": 221
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": false,
+        "evidence_count_varies": true,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    },
+    {
+      "passport_id": "DP-PWY-02",
+      "datasource": "crispr_screen",
+      "native_table": "evidence_crispr_screen",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_crispr_screen/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_crispr_screen/part-00000-baa7dfb4-a565-4ca6-a5d1-236ee2a63830-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "studyId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "projectId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "crisprScreenLibrary",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "studyOverview",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "cellType",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "geneticBackground",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "contrast",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "resourceScore",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "statisticalTestTail",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "log2FoldChangeValue",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 21643,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 62,
+      "train": {
+        "pairs": 48,
+        "targets": 35,
+        "events": 4,
+        "nonzero_score_pairs": 48,
+        "unique_nonmissing_pair_scores": 21,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 85
+      },
+      "validation": {
+        "pairs": 5,
+        "targets": 5,
+        "events": 1,
+        "nonzero_score_pairs": 5,
+        "unique_nonmissing_pair_scores": 5,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 9
+      },
+      "score_unique_train": 21,
+      "nonzero_score_pairs_train_validation": 53,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 94,
+          "native_rows": 94
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 94,
+          "native_rows": 94
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": true,
+        "evidence_count_varies": true,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    },
+    {
+      "passport_id": "DP-PWY-03",
+      "datasource": "crispr",
+      "native_table": "evidence_crispr",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_crispr/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_crispr/part-00000-772df01a-64f3-43ad-bb23-d9b74b4e6bf5-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "resourceScore",
+          "type": "DOUBLE"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseCellLines",
+          "type": "STRUCT(id VARCHAR, \"name\" VARCHAR, tissue VARCHAR, tissueId VARCHAR)[]"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 517,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 31,
+      "train": {
+        "pairs": 25,
+        "targets": 15,
+        "events": 4,
+        "nonzero_score_pairs": 25,
+        "unique_nonmissing_pair_scores": 18,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 25
+      },
+      "validation": {
+        "pairs": 5,
+        "targets": 3,
+        "events": 1,
+        "nonzero_score_pairs": 5,
+        "unique_nonmissing_pair_scores": 5,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 5
+      },
+      "score_unique_train": 18,
+      "nonzero_score_pairs_train_validation": 30,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 30,
+          "native_rows": 30
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 30,
+          "native_rows": 30
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": true,
+        "evidence_count_varies": false,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    },
+    {
+      "passport_id": "DP-PWY-04",
+      "datasource": "reactome",
+      "native_table": "evidence_reactome",
+      "release": "26.06",
+      "original_directory_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_reactome/",
+      "original_parquet_urls": [
+        "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/26.06/output/evidence_reactome/part-00000-dfa302cd-c6b6-4abd-b04a-bd500691fa4b-c000.snappy.parquet"
+      ],
+      "parquet_files": 1,
+      "native_schema": [
+        {
+          "name": "id",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceMappedId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datasourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "datatypeId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSource",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "diseaseFromSourceId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "literature",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "pathways",
+          "type": "STRUCT(id VARCHAR, \"name\" VARCHAR)[]"
+        },
+        {
+          "name": "reactionId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "reactionName",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetModulation",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "variantAminoacidDescriptions",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "qualityControls",
+          "type": "VARCHAR[]"
+        },
+        {
+          "name": "diseaseId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "targetId",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "publicationDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "evidenceDate",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "score",
+          "type": "DOUBLE"
+        }
+      ],
+      "native_rows": 10752,
+      "date_fields": [
+        "publicationDate",
+        "evidenceDate"
+      ],
+      "cohort_pairs": 69,
+      "train": {
+        "pairs": 57,
+        "targets": 49,
+        "events": 9,
+        "nonzero_score_pairs": 57,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 698
+      },
+      "validation": {
+        "pairs": 7,
+        "targets": 5,
+        "events": 0,
+        "nonzero_score_pairs": 7,
+        "unique_nonmissing_pair_scores": 1,
+        "score_missing_pairs": 0,
+        "native_rows_within_cohort": 50
+      },
+      "score_unique_train": 1,
+      "nonzero_score_pairs_train_validation": 64,
+      "missingness_train_validation": {
+        "score_missing_rows": 0,
+        "score_missing_pairs": 0
+      },
+      "date_coverage_train_validation": {
+        "publicationDate": {
+          "nonmissing_rows": 748,
+          "native_rows": 748
+        },
+        "evidenceDate": {
+          "nonmissing_rows": 748,
+          "native_rows": 748
+        }
+      },
+      "native_state_variability_train": {
+        "score_varies": false,
+        "evidence_count_varies": true,
+        "variable_native_fields": []
+      },
+      "eligibility": "FAIL",
+      "fail_reasons": [
+        "FAIL_TRAIN_SUPPORT",
+        "FAIL_VALIDATION_SUPPORT",
+        "FAIL_TRAIN_EVENT_SUPPORT",
+        "FAIL_VALIDATION_EVENT_SUPPORT"
+      ]
+    }
+  ],
+  "eligible_datasources": [
+    "cancer_gene_census"
+  ]
+}

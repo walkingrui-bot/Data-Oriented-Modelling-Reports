@@ -1,0 +1,40 @@
+{
+  "people": 40,
+  "person_equal_weight_means": {
+    "ACC": {
+      "logloss": 0.23524852602760288,
+      "balanced_accuracy": 0.8965686274509803
+    },
+    "GYR": {
+      "logloss": 0.4155289886904308,
+      "balanced_accuracy": 0.8151960784313725
+    },
+    "JOINT": {
+      "logloss": 0.2584566352683252,
+      "balanced_accuracy": 0.903921568627451
+    },
+    "PRIOR": {
+      "logloss": 1.0986122886681098,
+      "balanced_accuracy": 0.3333333333333333
+    }
+  },
+  "joint_minus_acc_logloss": 0.02320810924072233,
+  "joint_minus_acc_balanced_accuracy": 0.00735294117647058,
+  "paired_person_bootstrap_logloss_95pct_ci": [
+    -0.011993463996188353,
+    0.06765982023179173
+  ],
+  "people_joint_lower_logloss": 21,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261002,
+  "source_gate": "SOURCE_STRUCTURE_MATCH",
+  "window_gate": "PAIRED_WINDOW_SUPPORT_READY",
+  "test_performance_scored": false,
+  "gates": {
+    "logloss_gain_at_least_0_03": false,
+    "balanced_accuracy_gain_at_least_0_02": false,
+    "bootstrap_upper_below_zero": false,
+    "two_thirds_people_improved": false
+  },
+  "decision": "STOP_JOINT_DEV_GATE"
+}

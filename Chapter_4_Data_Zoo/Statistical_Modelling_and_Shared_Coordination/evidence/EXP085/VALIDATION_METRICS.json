@@ -1,0 +1,23 @@
+{
+  "independent_trials": 24,
+  "co_trials": 12,
+  "me_trials": 12,
+  "single_logloss": 0.5567652289952257,
+  "multi_logloss": 0.35547534321956936,
+  "multi_minus_single_logloss": -0.20128988577565643,
+  "absolute_logloss_improvement": 0.20128988577565637,
+  "paired_trial_bootstrap_2000_ci95_for_multi_minus_single": [
+    -0.27512827141240526,
+    -0.13158099065617565
+  ],
+  "single_balanced_accuracy": 0.625,
+  "multi_balanced_accuracy": 0.7916666666666667,
+  "balanced_accuracy_gain": 0.16666666666666674,
+  "trials_multi_lower_loss": 22,
+  "checks": {
+    "logloss_improvement_at_least_0_05": true,
+    "bootstrap_upper_below_zero": true,
+    "balanced_accuracy_gain_at_least_0_05": true
+  },
+  "three_gate_pass": true
+}

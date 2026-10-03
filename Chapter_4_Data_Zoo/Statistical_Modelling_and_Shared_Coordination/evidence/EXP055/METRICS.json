@@ -1,0 +1,169 @@
+{
+  "run_id": "EXP055-HISTORY-001",
+  "evidence_class": "EXPLORATORY_REUSE_OF_EXPOSED_EXTERNAL_TEST",
+  "windows": {
+    "Q4": {
+      "Chengdu": {
+        "n": 8526,
+        "B0_persistence_MAE": 27.46164672765658,
+        "B0_persistence_RMSE": 38.10794943921958,
+        "B1_Beijing_MAE": 26.952238266935293,
+        "B1_Beijing_RMSE": 38.43137163188228,
+        "B2_two_year_local_MAE": 24.327301732461283,
+        "B2_two_year_local_RMSE": 33.575394984603115,
+        "history_model_MAE": 24.875592498339085,
+        "history_model_RMSE": 35.62753784555362,
+        "history_vs_B0_relative_MAE_improvement": 0.0941696707034354,
+        "history_recovery_of_two_year_MAE_gain": 0.8250700651273908
+      },
+      "Guangzhou": {
+        "n": 8344,
+        "B0_persistence_MAE": 17.94439117929051,
+        "B0_persistence_RMSE": 26.783805620715736,
+        "B1_Beijing_MAE": 17.899074804097314,
+        "B1_Beijing_RMSE": 24.336744292271344,
+        "B2_two_year_local_MAE": 15.729686641107426,
+        "B2_two_year_local_RMSE": 22.613650250170053,
+        "history_model_MAE": 16.48552379157617,
+        "history_model_RMSE": 23.42475126705129,
+        "history_vs_B0_relative_MAE_improvement": 0.08129935271351008,
+        "history_recovery_of_two_year_MAE_gain": 0.6587187421899517
+      },
+      "Shanghai": {
+        "n": 8009,
+        "B0_persistence_MAE": 28.225995754775877,
+        "B0_persistence_RMSE": 43.869535521074425,
+        "B1_Beijing_MAE": 28.915661450836982,
+        "B1_Beijing_RMSE": 37.984086197426315,
+        "B2_two_year_local_MAE": 22.78252733312559,
+        "B2_two_year_local_RMSE": 35.21732885936758,
+        "history_model_MAE": 24.85287946176983,
+        "history_model_RMSE": 36.26095323699054,
+        "history_vs_B0_relative_MAE_improvement": 0.11950389004204787,
+        "history_recovery_of_two_year_MAE_gain": 0.6196630588670566
+      },
+      "Shenyang": {
+        "n": 7653,
+        "B0_persistence_MAE": 48.11603292826343,
+        "B0_persistence_RMSE": 78.68864788451454,
+        "B1_Beijing_MAE": 41.43802547159982,
+        "B1_Beijing_RMSE": 70.94790269868328,
+        "B2_two_year_local_MAE": 38.94371904528641,
+        "B2_two_year_local_RMSE": 67.0088770366604,
+        "history_model_MAE": 40.310319677047225,
+        "history_model_RMSE": 66.86726684280409,
+        "history_vs_B0_relative_MAE_improvement": 0.16222686651773233,
+        "history_recovery_of_two_year_MAE_gain": 0.8510080826717995
+      }
+    },
+    "H2": {
+      "Chengdu": {
+        "n": 8526,
+        "B0_persistence_MAE": 27.46164672765658,
+        "B0_persistence_RMSE": 38.10794943921958,
+        "B1_Beijing_MAE": 26.952238266935293,
+        "B1_Beijing_RMSE": 38.43137163188228,
+        "B2_two_year_local_MAE": 24.327301732461283,
+        "B2_two_year_local_RMSE": 33.575394984603115,
+        "history_model_MAE": 25.72355470945155,
+        "history_model_RMSE": 37.4462765089098,
+        "history_vs_B0_relative_MAE_improvement": 0.06329161668424632,
+        "history_recovery_of_two_year_MAE_gain": 0.5545311766475565
+      },
+      "Guangzhou": {
+        "n": 8344,
+        "B0_persistence_MAE": 17.94439117929051,
+        "B0_persistence_RMSE": 26.783805620715736,
+        "B1_Beijing_MAE": 17.899074804097314,
+        "B1_Beijing_RMSE": 24.336744292271344,
+        "B2_two_year_local_MAE": 15.729686641107426,
+        "B2_two_year_local_RMSE": 22.613650250170053,
+        "history_model_MAE": 15.505626240082025,
+        "history_model_RMSE": 23.04346839468177,
+        "history_vs_B0_relative_MAE_improvement": 0.1359068086981432,
+        "history_recovery_of_two_year_MAE_gain": 1.101169432383616
+      },
+      "Shanghai": {
+        "n": 8009,
+        "B0_persistence_MAE": 28.225995754775877,
+        "B0_persistence_RMSE": 43.869535521074425,
+        "B1_Beijing_MAE": 28.915661450836982,
+        "B1_Beijing_RMSE": 37.984086197426315,
+        "B2_two_year_local_MAE": 22.78252733312559,
+        "B2_two_year_local_RMSE": 35.21732885936758,
+        "history_model_MAE": 23.010222898335066,
+        "history_model_RMSE": 35.55275448914374,
+        "history_vs_B0_relative_MAE_improvement": 0.18478614188689146,
+        "history_recovery_of_two_year_MAE_gain": 0.9581708668862919
+      },
+      "Shenyang": {
+        "n": 7653,
+        "B0_persistence_MAE": 48.11603292826343,
+        "B0_persistence_RMSE": 78.68864788451454,
+        "B1_Beijing_MAE": 41.43802547159982,
+        "B1_Beijing_RMSE": 70.94790269868328,
+        "B2_two_year_local_MAE": 38.94371904528641,
+        "B2_two_year_local_RMSE": 67.0088770366604,
+        "history_model_MAE": 38.71749476119592,
+        "history_model_RMSE": 65.53169353223147,
+        "history_vs_B0_relative_MAE_improvement": 0.19533069530233016,
+        "history_recovery_of_two_year_MAE_gain": 1.0246638184188546
+      }
+    },
+    "Y2014": {
+      "Chengdu": {
+        "n": 8526,
+        "B0_persistence_MAE": 27.46164672765658,
+        "B0_persistence_RMSE": 38.10794943921958,
+        "B1_Beijing_MAE": 26.952238266935293,
+        "B1_Beijing_RMSE": 38.43137163188228,
+        "B2_two_year_local_MAE": 24.327301732461283,
+        "B2_two_year_local_RMSE": 33.575394984603115,
+        "history_model_MAE": 24.55107070786573,
+        "history_model_RMSE": 34.64591575016504,
+        "history_vs_B0_relative_MAE_improvement": 0.10598694421553434,
+        "history_recovery_of_two_year_MAE_gain": 0.9286074201316489
+      },
+      "Guangzhou": {
+        "n": 8344,
+        "B0_persistence_MAE": 17.94439117929051,
+        "B0_persistence_RMSE": 26.783805620715736,
+        "B1_Beijing_MAE": 17.899074804097314,
+        "B1_Beijing_RMSE": 24.336744292271344,
+        "B2_two_year_local_MAE": 15.729686641107426,
+        "B2_two_year_local_RMSE": 22.613650250170053,
+        "history_model_MAE": 15.534610170061448,
+        "history_model_RMSE": 22.751923320026222,
+        "history_vs_B0_relative_MAE_improvement": 0.1342916003753959,
+        "history_recovery_of_two_year_MAE_gain": 1.0880823909838628
+      },
+      "Shanghai": {
+        "n": 8009,
+        "B0_persistence_MAE": 28.225995754775877,
+        "B0_persistence_RMSE": 43.869535521074425,
+        "B1_Beijing_MAE": 28.915661450836982,
+        "B1_Beijing_RMSE": 37.984086197426315,
+        "B2_two_year_local_MAE": 22.78252733312559,
+        "B2_two_year_local_RMSE": 35.21732885936758,
+        "history_model_MAE": 22.667942358267883,
+        "history_model_RMSE": 35.908195833799546,
+        "history_vs_B0_relative_MAE_improvement": 0.19691257112045601,
+        "history_recovery_of_two_year_MAE_gain": 1.0210499934934807
+      },
+      "Shenyang": {
+        "n": 7653,
+        "B0_persistence_MAE": 48.11603292826343,
+        "B0_persistence_RMSE": 78.68864788451454,
+        "B1_Beijing_MAE": 41.43802547159982,
+        "B1_Beijing_RMSE": 70.94790269868328,
+        "B2_two_year_local_MAE": 38.94371904528641,
+        "B2_two_year_local_RMSE": 67.0088770366604,
+        "history_model_MAE": 39.17577891402865,
+        "history_model_RMSE": 67.32124085420253,
+        "history_vs_B0_relative_MAE_improvement": 0.1858061330110875,
+        "history_recovery_of_two_year_MAE_gain": 0.9746999642944053
+      }
+    }
+  },
+  "conclusion_code": "ONE_YEAR_HISTORY_SUFFICIENT_EXPLORATORY"
+}

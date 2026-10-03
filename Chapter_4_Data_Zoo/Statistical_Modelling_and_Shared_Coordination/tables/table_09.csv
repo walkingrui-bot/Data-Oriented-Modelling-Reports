@@ -1,0 +1,5 @@
+Candidate,Shared weights,Internal states,Stored variables
+Common constant reference,3,0,3
+Shared line,6,7,13
+Shared curve,9,7,16
+Independent local targets,21 frozen coefficients,0,21 stored targets

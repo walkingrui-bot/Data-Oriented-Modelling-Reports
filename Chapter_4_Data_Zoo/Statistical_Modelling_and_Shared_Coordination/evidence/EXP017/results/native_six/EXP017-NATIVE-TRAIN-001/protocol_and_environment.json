@@ -1,0 +1,37 @@
+{
+  "run_id": "EXP017-NATIVE-TRAIN-001",
+  "research_id": "STAT-PSYMOE-EXP017-20261002-001",
+  "qualification": "Exploratory 26.06 native evidence summaries; no decision-date time lock",
+  "source_manifest": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/native_cache_manifest.json",
+  "eva_category_definition": "/SOURCE_ROOT/\u751f\u7269\u57083\u53f7/research/records/STAT-PSYMOE-EXP017-20261002-001/native_eva_category_definition.json",
+  "split": "same FNV1a32 Ensembl target hash 70/15/15 as source-level run",
+  "five_fold_oof": "StratifiedGroupKFold by target; local and global weights train-only",
+  "state_fields": [
+    "local_prediction",
+    "predictive_entropy_proxy",
+    "scaled_log_native_evidence_rows",
+    "availability"
+  ],
+  "datetime_fields_used_as_features": [],
+  "ganglion": {
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "max_epochs": 1000,
+    "validation_patience": 100,
+    "best_validation_seed": 101
+  },
+  "test_seen_in_prior_source_level_run": true,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "torch": "2.14.1",
+    "duckdb": "1.5.6",
+    "pyarrow": "25.0.1"
+  },
+  "python": "3.12.14"
+}

@@ -1,0 +1,84 @@
+{
+  "short_none": {
+    "alpha_num": 0.0,
+    "alpha_lang": 0.0,
+    "num_num_pinball": 0.0793148651719093,
+    "text_num_pinball": 0.1530209928750991,
+    "both_num_pinball": 0.0858803763985633,
+    "num_lang_acc": 0.7247191071510315,
+    "text_lang_acc": 0.7996254563331604,
+    "both_lang_acc": 0.8426966071128845
+  },
+  "short_small": {
+    "alpha_num": 0.0,
+    "alpha_lang": 0.0,
+    "num_num_pinball": 0.0793148651719093,
+    "text_num_pinball": 0.1530209928750991,
+    "both_num_pinball": 0.0858803763985633,
+    "num_lang_acc": 0.7247191071510315,
+    "text_lang_acc": 0.795880138874054,
+    "both_lang_acc": 0.8426966071128845
+  },
+  "short_medium": {
+    "alpha_num": 0.0,
+    "alpha_lang": 0.0,
+    "num_num_pinball": 0.0793148651719093,
+    "text_num_pinball": 0.1530209928750991,
+    "both_num_pinball": 0.0858803763985633,
+    "num_lang_acc": 0.7247191071510315,
+    "text_lang_acc": 0.7996254563331604,
+    "both_lang_acc": 0.8426966071128845
+  },
+  "short_precision": {
+    "alpha_num": 0.25,
+    "alpha_lang": 0.25,
+    "num_num_pinball": 0.0782855078577995,
+    "text_num_pinball": 0.1530209928750991,
+    "both_num_pinball": 0.0821591466665268,
+    "num_lang_acc": 0.7247191071510315,
+    "text_lang_acc": 0.7996254563331604,
+    "both_lang_acc": 0.8389512896537781
+  },
+  "long_precision": {
+    "alpha_num": 0.75,
+    "alpha_lang": 0.5,
+    "num_num_pinball": 0.0745237320661544,
+    "text_num_pinball": 0.1530209928750991,
+    "both_num_pinball": 0.0744577869772911,
+    "num_lang_acc": 0.7247191071510315,
+    "text_lang_acc": 0.8370786309242249,
+    "both_lang_acc": 0.9007490873336792
+  },
+  "specialists": {
+    "numeric_pinball": 0.0741708502173423,
+    "language_acc": 0.8520599007606506
+  },
+  "recoveries": {
+    "numeric_same_gap_recovery_pct": 93.13995289809948,
+    "language_same_gap_recovery_pct": 71.42857142857143,
+    "numeric_both_improvement_pct": 13.300581460263952,
+    "language_both_gain_pp": 5.805248022079468
+  },
+  "cross_modal_exact_invariance": {
+    "text_to_numeric_max_abs_diff": 0.0,
+    "numeric_to_language_max_abs_diff": 0.0
+  },
+  "ganglion_full": {
+    "both_num_pinball": 0.0744577869772911,
+    "both_lang_acc": 0.9007490873336792,
+    "text_to_numeric": 0.1530209928750991,
+    "numeric_to_language": 0.7247191071510315
+  },
+  "ganglion_top2_lesion": {
+    "both_num_pinball": 0.0766916424036026,
+    "both_lang_acc": 0.8782771825790405,
+    "text_to_numeric": 0.1647091656923294,
+    "numeric_to_language": 0.6666666865348816
+  },
+  "ganglion_random_matched": {
+    "both_num_pinball": 0.0752242729067802,
+    "both_lang_acc": 0.8932584524154663,
+    "text_to_numeric": 0.1651470214128494,
+    "numeric_to_language": 0.7078651785850525
+  }
+}
