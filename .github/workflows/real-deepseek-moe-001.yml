@@ -1,4 +1,4 @@
-name: real-deepseek-moe-011
+name: real-deepseek-moe-012
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  reset-relative-advantage-harvest:
+  frozen-advantage-gate-live:
     runs-on: ubuntu-24.04
     timeout-minutes: 110
     steps:
@@ -52,132 +52,110 @@ jobs:
           tail -200 results/server.log
           exit 1
 
-      - name: Harvest reset-relative disagreement states
+      - name: Run frozen advantage gate on untouched tasks
         run: |
           python3 - <<'PY'
           import json, csv, re, time, urllib.request, math
           from pathlib import Path
 
+          # Frozen on REAL-011 only. No REAL-012 label is used here.
+          FEATURES=[
+              "cheap_margin8","cheap_margin16","cheap_margin32",
+              "reset_margin8","reset_margin16","reset_margin32",
+              "delta_margin8","delta_margin16","delta_margin32"
+          ]
+          MEAN=[3.66506645,3.79506864,3.83416695,3.27161949,3.70434108,4.92017548,0.39344697,0.09072756,-1.08600853]
+          SCALE=[0.85734903,0.86554829,0.79200918,1.22084926,1.21465805,1.08642669,1.25464422,1.36293031,1.16720512]
+          COEF=[-0.411354891,-0.582587745,0.799368546,0.322557552,0.636039886,-0.798731049,-0.594964572,-0.936826182,1.28586650,-0.317277358,0.00127615535,0.315562092]
+          INTERCEPT=-1.9404355472637143
+          ACTIONS=["decl3","local","qa3"]
+          THRESHOLD=0.878
+
+          Path("results/frozen_advantage_gate.json").write_text(json.dumps({
+              "features":FEATURES,"mean":MEAN,"scale":SCALE,"coef":COEF,
+              "intercept":INTERCEPT,"actions":ACTIONS,"threshold":THRESHOLD,
+              "training_source":"REAL-011 only",
+              "threshold_source":"REAL-011 5-fold state-wise OOF, maximize accuracy subject to zero harmful overrides"
+          },indent=2))
+
           tasks=[]
 
-          # 8 families x 10 states = 80 states.
-          # These are intentionally more structurally demanding than REAL-008/010,
-          # while the wrong checkpoint preserves a useful partial scaffold.
-
-          # 1) Larger two-digit multiplication.
-          muls=[(37,24),(42,19),(34,27),(46,18),(39,26),(44,23),(31,29),(48,17),(36,28),(43,21)]
-          for i,(a,b) in enumerate(muls):
-              ans=a*b
-              wrong=ans-(3+(i%5))
-              tasks.append((f"mulhard_{i}","mulhard",
-                  f"A warehouse has {a} shelves with {b} boxes on each shelf. How many boxes are there in total?",
-                  str(ans),f"{a} × {b} = {wrong}."))
-
-          # 2) Four-operation chain.
-          chains=[(18,4,7,5),(22,3,11,4),(15,5,9,6),(27,2,13,5),(19,4,8,7),
-                  (16,6,10,4),(24,3,14,5),(21,5,6,9),(28,2,17,3),(17,7,12,5)]
-          for i,(s,mul,add,sub) in enumerate(chains):
-              mid=s*mul+add
-              ans=mid-sub
-              wrong=mid-(2+(i%3))
-              tasks.append((f"chain4_{i}","chain4",
-                  f"Start with {s}. Multiply by {mul}, add {add}, then subtract {sub}. What number do you get?",
-                  str(ans),f"After multiplying by {mul} and adding {add}, the running value is {wrong}."))
-
-          # 3) Two-stage algebra: solve x then transform.
-          algebra=[(3,7,52,2,5),(4,9,65,3,4),(5,6,71,2,7),(6,5,83,4,3),(3,11,62,5,6),
-                   (7,4,95,2,9),(5,8,78,3,5),(4,13,77,2,11),(6,7,91,3,8),(8,5,117,2,6)]
-          for i,(coef,c,rhs,k,sub) in enumerate(algebra):
-              x=(rhs-c)//coef
-              ans=k*x-sub
-              wrong_rhs=rhs-c-1
-              tasks.append((f"algebra2_{i}","algebra2",
-                  f"A number x satisfies {coef}x + {c} = {rhs}. What is {k}x - {sub}?",
-                  str(ans),f"Subtracting {c} gives {coef}x = {wrong_rhs}."))
-
-          # 4) Sequential percentage adjustment.
-          percs=[(200,25,20,10),(240,25,15,20),(160,25,12,10),(320,25,18,20),(280,25,16,10),
-                 (360,25,24,20),(400,25,30,10),(240,25,22,10),(480,25,18,20),(200,25,14,20)]
-          for i,(start,pct,add,pct2) in enumerate(percs):
-              after=start*(1-pct/100)+add
-              ans=after*(1-pct2/100)
-              if abs(ans-round(ans))<1e-9: ans=str(int(round(ans)))
-              else: ans=str(round(ans,2))
-              wrong=int(start*(1-pct/100))-5-(i%3)
-              tasks.append((f"percent2_{i}","percent2",
-                  f"A tank starts with {start} liters. Twenty-five percent is used, then {add} liters are added, then {pct2} percent of the new amount is used. How many liters remain?",
-                  ans,f"After the first twenty-five percent is used, {wrong} liters remain."))
-
-          # 5) Perimeter with a second transformation.
-          perims=[(17,9,6),(21,8,5),(18,13,7),(24,7,4),(19,12,8),
-                  (23,10,6),(16,15,5),(25,9,7),(22,11,4),(20,14,8)]
-          for i,(l,w,extra) in enumerate(perims):
-              per=2*(l+w)
-              ans=per+extra
-              wrongsum=l+w-2
-              tasks.append((f"perim2_{i}","perim2",
-                  f"A rectangle has length {l} and width {w}. A decorative strip adds {extra} meters beyond the rectangle's perimeter. What is the total length of strip needed?",
-                  str(ans),f"The sum of length and width is {wrongsum}, so the rectangle perimeter is {2*wrongsum}."))
-
-          # 6) Product-then-subtract seating.
-          seats=[(11,9,13),(12,8,17),(9,14,12),(13,7,15),(10,12,19),
-                 (14,8,21),(15,7,18),(12,11,16),(13,10,22),(16,6,14)]
-          for i,(tables,seatsn,empty) in enumerate(seats):
-              total=tables*seatsn
-              ans=total-empty
-              wrong=total-(4+(i%3))
-              tasks.append((f"seatshard_{i}","seatshard",
-                  f"There are {tables} tables with {seatsn} seats at each table. If {empty} seats are empty, how many seats are occupied?",
-                  str(ans),f"There are {wrong} seats before subtracting the empty seats."))
-
-          # 7) Two-hop logic.
-          words=[
-              ("brims","tals","vors","nems"),("sarns","kels","mors","pivs"),
-              ("dels","raks","wems","toks"),("farns","lops","girs","naks"),
-              ("vells","dors","sims","paks"),("trens","bims","kars","jols"),
-              ("mels","qars","vens","daks"),("harns","fels","ruks","zems"),
-              ("pels","sors","tivs","moks"),("gans","wels","nors","beks")
+          # Advantage-bearing structures.
+          logic2=[
+              ("fraks","dels","vors","meks"),("selds","pans","tirs","goks"),
+              ("nars","vems","luks","fids"),("brens","kods","sars","pels"),
+              ("tovs","mels","qars","daks"),("wens","girs","loms","baks")
           ]
-          for i,(a,b,c,d) in enumerate(words):
-              tasks.append((f"logic2_{i}","logic2",
+          for i,(a,b,c,d) in enumerate(logic2):
+              tasks.append((f"logic2_live_{i}","logic2",
                   f"All {a} are {b}. All {b} are {c}. No {c} are {d}. Can any {a} be a {d}?",
                   "No",f"Because all {a} are {b}, a {a[:-1]} can still be a {d[:-1]}."))
 
-          # 8) Rate/cost composition.
-          rates=[(7,18,25),(9,14,17),(8,21,19),(11,13,23),(6,24,16),
-                 (10,17,28),(12,15,21),(9,22,18),(13,12,26),(8,25,24)]
-          for i,(qty,price,disc) in enumerate(rates):
-              total=qty*price
-              ans=total-disc
-              wrong=total-(3+(i%4))
-              tasks.append((f"cost_{i}","cost",
+          costs=[(14,19,31),(11,23,27),(16,17,34),(13,21,29),(15,18,26),(12,25,33)]
+          for i,(qty,price,disc) in enumerate(costs):
+              total=qty*price; ans=total-disc; wrong=total-(4+(i%4))
+              tasks.append((f"cost_live_{i}","cost",
                   f"A shop sells {qty} identical items at {price} pounds each, then applies a {disc}-pound discount to the whole purchase. What is the final cost?",
                   str(ans),f"Before the discount, the purchase total is {wrong} pounds."))
 
+          p2=[(520,25,23,20),(440,25,17,10),(600,25,28,20),(360,25,19,10),(560,25,24,20),(480,25,21,10)]
+          for i,(start,pct,add,pct2) in enumerate(p2):
+              after=start*(1-pct/100)+add; ans=after*(1-pct2/100)
+              ans=str(int(round(ans))) if abs(ans-round(ans))<1e-9 else str(round(ans,2))
+              wrong=int(start*(1-pct/100))-6-(i%3)
+              tasks.append((f"percent2_live_{i}","percent2",
+                  f"A tank starts with {start} liters. Twenty-five percent is used, then {add} liters are added, then {pct2} percent of the new amount is used. How many liters remain?",
+                  ans,f"After the first twenty-five percent is used, {wrong} liters remain."))
+
+          # Adjacent new structure: three-hop logic.
+          logic3=[
+              ("farns","wels","nors","pims","taks"),("dels","rums","kels","vons","gats"),
+              ("mirs","saks","pels","jors","nems"),("tels","baks","wirs","fons","qaks"),
+              ("lors","dins","vems","raks","sops"),("gels","mors","pivs","naks","bels")
+          ]
+          for i,(a,b,c,d,e) in enumerate(logic3):
+              tasks.append((f"logic3_live_{i}","logic3",
+                  f"All {a} are {b}. All {b} are {c}. All {c} are {d}. No {d} are {e}. Can any {a} be an {e}?",
+                  "No",f"A {a[:-1]} can still be an {e[:-1]} because the last rule only mentions {d}."))
+
+          # Controls where RESET should usually remain preferable.
+          muls=[(52,17),(47,23),(54,19),(49,22),(56,16),(51,21)]
+          for i,(a,b) in enumerate(muls):
+              ans=a*b; wrong=ans-(4+(i%4))
+              tasks.append((f"mul_control_{i}","mul_control",
+                  f"A warehouse has {a} shelves with {b} boxes on each shelf. How many boxes are there in total?",
+                  str(ans),f"{a} × {b} = {wrong}."))
+
+          alg=[(7,9,128,3,8),(6,11,119,4,7),(8,5,141,2,9),(5,14,109,3,6),(9,7,169,2,11),(7,13,153,4,5)]
+          for i,(coef,c,rhs,k,sub) in enumerate(alg):
+              x=(rhs-c)//coef; ans=k*x-sub; wrong_rhs=rhs-c-2
+              tasks.append((f"algebra_control_{i}","algebra_control",
+                  f"A number x satisfies {coef}x + {c} = {rhs}. What is {k}x - {sub}?",
+                  str(ans),f"Subtracting {c} gives {coef}x = {wrong_rhs}."))
+
+          seats=[(17,9,24),(14,12,19),(16,11,27),(18,8,21),(15,13,26),(19,7,18)]
+          for i,(tables,seatsn,empty) in enumerate(seats):
+              total=tables*seatsn; ans=total-empty; wrong=total-(5+(i%3))
+              tasks.append((f"seats_control_{i}","seats_control",
+                  f"There are {tables} tables with {seatsn} seats at each table. If {empty} seats are empty, how many seats are occupied?",
+                  str(ans),f"There are {wrong} seats before subtracting the empty seats."))
+
+          perims=[(27,14,9),(29,11,8),(26,16,7),(31,10,6),(28,15,11),(30,13,5)]
+          for i,(l,w,extra) in enumerate(perims):
+              per=2*(l+w); ans=per+extra; wrongsum=l+w-3
+              tasks.append((f"perim_control_{i}","perim_control",
+                  f"A rectangle has length {l} and width {w}. A decorative strip adds {extra} meters beyond the rectangle's perimeter. What is the total length of strip needed?",
+                  str(ans),f"The sum of length and width is {wrongsum}, so the rectangle perimeter is {2*wrongsum}."))
+
           def clean_prompt(problem):
-              return (
-                  "Solve the problem carefully and naturally from the original information. "
-                  "At the very end, write exactly one line: ANSWER: <answer>.\n\nProblem: "+problem
-              )
+              return "Solve the problem carefully and naturally from the original information. At the very end, write exactly one line: ANSWER: <answer>.\n\nProblem: "+problem
           def local_prompt(problem,wrong):
-              return (
-                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
-                  "\nThe checkpoint may be wrong. Recompute the original relation that produced it, then continue solving naturally. "
-                  "At the very end, write exactly one line: ANSWER: <answer>."
-              )
+              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nThe checkpoint may be wrong. Recompute the original relation that produced it, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
           def decl_prompt(problem,wrong):
-              return (
-                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
-                  "\nVerify the checkpoint, recompute the original relation that produced it, correct the intermediate state if needed, "
-                  "then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
-              )
+              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nVerify the checkpoint, recompute the original relation that produced it, correct the intermediate state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
           def qa_prompt(problem,wrong):
-              return (
-                  "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+
-                  "\nAsk yourself whether the checkpoint is correct, identify what original relation must be recomputed, correct the state if needed, "
-                  "then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
-              )
-          prompts={"clean":lambda p,w:clean_prompt(p),"local":local_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
+              return "Problem: "+problem+"\nPrevious reasoning checkpoint: "+wrong+"\nAsk yourself whether the checkpoint is correct, identify what original relation must be recomputed, correct the state if needed, then continue solving naturally. At the very end, write exactly one line: ANSWER: <answer>."
+          prompts={"local":local_prompt,"decl3":decl_prompt,"qa3":qa_prompt}
 
           def call_chat(content):
               payload={
@@ -188,12 +166,8 @@ jobs:
                   "temperature":0.0,"seed":1234,"max_tokens":192,"stream":False,
                   "logprobs":True,"top_logprobs":5
               }
-              req=urllib.request.Request(
-                  "http://127.0.0.1:8080/v1/chat/completions",
-                  data=json.dumps(payload).encode(),
-                  headers={"Content-Type":"application/json"},
-                  method="POST"
-              )
+              req=urllib.request.Request("http://127.0.0.1:8080/v1/chat/completions",
+                  data=json.dumps(payload).encode(),headers={"Content-Type":"application/json"},method="POST")
               t0=time.time()
               with urllib.request.urlopen(req,timeout=300) as r:
                   obj=json.loads(r.read().decode())
@@ -201,57 +175,74 @@ jobs:
 
           def telemetry(choice):
               content=(choice.get("logprobs") or {}).get("content") or []
-              chosen=[]; entropy=[]; margins=[]
+              margins=[]
               for item in content:
-                  l=item.get("logprob")
-                  if isinstance(l,(int,float)): chosen.append(float(l))
                   tops=item.get("top_logprobs") or []
                   vals=[float(x.get("logprob")) for x in tops if isinstance(x.get("logprob"),(int,float))]
-                  if vals:
-                      probs=[math.exp(v) for v in vals]
-                      residual=max(0.0,1.0-sum(probs))
-                      h=-sum(p*math.log(max(p,1e-12)) for p in probs)
-                      if residual>0: h-=residual*math.log(max(residual,1e-12))
-                      entropy.append(h)
-                      sv=sorted(vals,reverse=True)
-                      if len(sv)>=2: margins.append(sv[0]-sv[1])
-              def mf(xs,n):
-                  ys=xs[:n]
-                  return sum(ys)/len(ys) if ys else None
-              return {
-                  "n_tokens":len(content),
-                  "mean_logprob_first_8":mf(chosen,8),
-                  "mean_entropy_first_8":mf(entropy,8),
-                  "mean_margin_first_8":mf(margins,8),
-                  "mean_logprob_first_16":mf(chosen,16),
-                  "mean_entropy_first_16":mf(entropy,16),
-                  "mean_margin_first_16":mf(margins,16),
-                  "mean_logprob_first_32":mf(chosen,32),
-                  "mean_entropy_first_32":mf(entropy,32),
-                  "mean_margin_first_32":mf(margins,32)
-              }
+                  sv=sorted(vals,reverse=True)
+                  if len(sv)>=2: margins.append(sv[0]-sv[1])
+              def mf(n):
+                  xs=margins[:n]
+                  return sum(xs)/len(xs) if xs else None
+              return {"margin8":mf(8),"margin16":mf(16),"margin32":mf(32),"n_tokens":len(content)}
 
-          outdir=Path("results/trajectories"); outdir.mkdir(parents=True,exist_ok=True)
+          def p_adv(action,cheap_stats,reset_stats):
+              vals=[
+                  cheap_stats["margin8"],cheap_stats["margin16"],cheap_stats["margin32"],
+                  reset_stats["margin8"],reset_stats["margin16"],reset_stats["margin32"],
+                  cheap_stats["margin8"]-reset_stats["margin8"],
+                  cheap_stats["margin16"]-reset_stats["margin16"],
+                  cheap_stats["margin32"]-reset_stats["margin32"]
+              ]
+              z=INTERCEPT
+              for i,v in enumerate(vals):
+                  z += COEF[i]*((v-MEAN[i])/SCALE[i])
+              z += COEF[9+ACTIONS.index(action)]
+              return 1/(1+math.exp(-z))
+
+          outdir=Path("results/outputs"); outdir.mkdir(parents=True,exist_ok=True)
           rows=[]
           for tid,fam,problem,expected,wrong in tasks:
-              for mode,maker in prompts.items():
+              # RESET is generated first and is the default answer.
+              robj,relapsed=call_chat(clean_prompt(problem))
+              rchoice=robj["choices"][0]
+              rtext=rchoice["message"]["content"]
+              rstats=telemetry(rchoice)
+              (outdir/f"{tid}__RESET.txt").write_text(rtext)
+
+              candidates={}
+              for action,maker in prompts.items():
                   obj,elapsed=call_chat(maker(problem,wrong))
                   choice=obj["choices"][0]
                   text=choice["message"]["content"]
                   stats=telemetry(choice)
-                  rows.append({
-                      "id":tid,"family":fam,"mode":mode,
-                      "expected":expected,"wrong_checkpoint":wrong,
-                      "chars":len(text),"elapsed_s":round(elapsed,3),
-                      "prefix64":text[:64].replace("\n","\\n"),
-                      "prefix128":text[:128].replace("\n","\\n"),
-                      **stats
-                  })
-                  (outdir/f"{mode}__{tid}.txt").write_text(text)
-                  print(mode,tid,"tokens=",stats["n_tokens"],flush=True)
+                  p=p_adv(action,stats,rstats)
+                  candidates[action]={"text":text,"stats":stats,"p_adv":p}
+                  (outdir/f"{tid}__{action}.txt").write_text(text)
 
-          with open("results/trajectories.csv","w",newline="") as f:
+              best_action=max(candidates,key=lambda a:candidates[a]["p_adv"])
+              best_p=candidates[best_action]["p_adv"]
+              use_cheap=best_p>=THRESHOLD
+              final_mode=best_action if use_cheap else "reset"
+              final_text=candidates[best_action]["text"] if use_cheap else rtext
+
+              row={
+                  "id":tid,"family":fam,"expected":expected,"wrong_checkpoint":wrong,
+                  "best_cheap_action":best_action,"best_advantage_p":best_p,
+                  "use_cheap":int(use_cheap),"final_mode":final_mode,
+                  "reset_margin8":rstats["margin8"],"reset_margin16":rstats["margin16"],"reset_margin32":rstats["margin32"]
+              }
+              for action,c in candidates.items():
+                  row[f"{action}_p_adv"]=c["p_adv"]
+                  row[f"{action}_margin8"]=c["stats"]["margin8"]
+                  row[f"{action}_margin16"]=c["stats"]["margin16"]
+                  row[f"{action}_margin32"]=c["stats"]["margin32"]
+              rows.append(row)
+              print(tid,"best=",best_action,"p_adv=",round(best_p,3),"use_cheap=",use_cheap,flush=True)
+
+          with open("results/live_gate_results.csv","w",newline="") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
+          Path("results/live_gate_results.json").write_text(json.dumps(rows,indent=2))
           Path("results/task_manifest.json").write_text(json.dumps([
               {"id":tid,"family":fam,"problem":p,"expected":e,"wrong_checkpoint":w}
               for tid,fam,p,e,w in tasks
@@ -266,10 +257,10 @@ jobs:
           fi
           tail -100 results/server.log > results/server_tail.log || true
 
-      - name: Upload REAL-DEEPSEEK-MOE-011
+      - name: Upload REAL-DEEPSEEK-MOE-012
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: real-deepseek-moe-011-reset-relative-advantage-harvest
+          name: real-deepseek-moe-012-frozen-advantage-gate-live
           path: results/
           retention-days: 7
