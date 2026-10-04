@@ -1,0 +1,2 @@
+lambda,epochs,lr,baseline_acc,new_acc,baseline_nll,new_nll,baseline_errors,new_errors,new_blueprint_exit_errors
+0.25,6,0.0001,0.5714285969734192,0.5714285969734192,2.032723903656006,2.1274964809417725,12,12,8

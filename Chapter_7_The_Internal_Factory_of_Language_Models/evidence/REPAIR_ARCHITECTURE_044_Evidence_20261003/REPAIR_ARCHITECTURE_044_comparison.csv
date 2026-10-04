@@ -1,0 +1,5 @@
+repair_architecture,base_parameters_changed,extra_trainable_parameters,repair_gate_required,target_repairs,all_errors_fixed,new_regressions,patch_debt_regressions_per_fix,overall_accuracy,non_target_mean_abs_margin_drift,runtime_reversible_without_checkpoint_restore
+GLOBAL_FINE_TUNE,True,54610,False,8,8,5,0.625,0.6785714285714286,2.082104206085205,False
+GLOBAL_DELETE_UNION,False,0,False,5,5,7,1.4,0.5,4.522128105163574,True
+TASK_BOUND_BYPASS,False,0,True,8,8,0,0.0,0.8571428571428571,3.1888484386399796e-07,True
+TASK_BOUND_SIDECAR,False,384,True,8,8,0,0.0,0.8571428571428571,4.112720546345372e-07,True

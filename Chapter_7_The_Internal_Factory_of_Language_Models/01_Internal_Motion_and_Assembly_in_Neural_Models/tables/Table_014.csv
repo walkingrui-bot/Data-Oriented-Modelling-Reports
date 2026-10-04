@@ -1,0 +1,6 @@
+Variant,Train accuracy,Closure ratio,D→Y identity advantage
+Initialization,59.8%,0.896,−0.039
++ learned attention,69.6%,0.746,+0.015
++ learned FFN,79.5%,0.811,+0.072
++ learned attention + FFN,99.1%,0.708,+0.157
+Full final model,100.0%,0.684,+0.155

@@ -1,0 +1,7 @@
+a,b,metric,diff,lo,hi
+causal_ramp,ramp_up,exact,-0.00859375,-0.01640625,-0.0015625
+causal_ramp,ramp_up,forced_tail,0.002734375,-0.0060546875,0.0107421875
+causal_entropy,ramp_up,exact,-0.0046875,-0.01171875,0.003125
+causal_entropy,ramp_up,forced_tail,0.003125,-0.0048828125,0.0107421875
+causal_ramp,gradient_router,exact,0.02421875,0.00390625,0.04765625
+causal_ramp,gradient_router,forced_tail,0.0318359375,0.0162109375,0.048828125

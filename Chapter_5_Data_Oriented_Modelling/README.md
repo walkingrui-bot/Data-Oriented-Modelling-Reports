@@ -26,4 +26,7 @@ Report 03 develops mechanism-guided modelling through local-scale relations, tra
 
 Its first report, [Model Perception and Action Control](../Chapter_6_Model_Perception_and_Control/Model_Perception_and_Action_Control/README.md), connects these questions to calibrated observation, action eligibility and targeted first-action intervention.
 
+**Internal computation companion:** [Chapter 7 — The Internal Factory of Language Models](../Chapter_7_The_Internal_Factory_of_Language_Models/README.md) follows reasoning, internal assembly, routing and local repair through seven reports, introduced by two interactive views.
+
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
+

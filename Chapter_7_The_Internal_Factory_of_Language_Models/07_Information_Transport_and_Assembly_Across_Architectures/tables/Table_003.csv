@@ -1,0 +1,4 @@
+Architecture,Shuffle penalty,History-conditioned TV,History advantage over erased
+GRU,32.1%,0.365,15.2 pp
+Selective SSM,33.3%,0.324,13.3 pp
+Dense Transformer,34.0%,0.361,15.4 pp

@@ -1,0 +1,4 @@
+level,inherited_fisher,inherited_probe_bal_acc,paired_displacement_cosine_alignment,ask_vs_overact_fisher,ask_vs_overact_probe_bal_acc
+1,0.0306,0.586,0.211,0.1546,0.728
+24,0.1687,0.679,0.466,1.3388,0.924
+28,0.215,0.693,0.478,1.4394,0.915

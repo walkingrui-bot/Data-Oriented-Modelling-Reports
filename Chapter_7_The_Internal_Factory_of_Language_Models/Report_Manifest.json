@@ -1,0 +1,79 @@
+[
+  {
+    "number": 1,
+    "title": "Internal Motion and Assembly in Neural Models",
+    "folder": "01_Internal_Motion_and_Assembly_in_Neural_Models",
+    "word": "01_Internal_Motion_and_Assembly_in_Neural_Models.docx",
+    "figures": 26,
+    "tables": 14,
+    "word_sha256": "8a2b1dced126d08614bd0f7ffafbb248b12374d7671b532e6d8fd8587cf42e11",
+    "story": "What moves inside a model, how fragments form, and how they assemble into a usable configuration.",
+    "rendered_pages": 41
+  },
+  {
+    "number": 2,
+    "title": "Reasoning Dynamics and Discrete Output",
+    "folder": "02_Reasoning_Dynamics_and_Discrete_Output",
+    "word": "02_Reasoning_Dynamics_and_Discrete_Output.docx",
+    "figures": 11,
+    "tables": 4,
+    "word_sha256": "71a353d1d0b01f1d10bf23b1adcc0db5bba087b11531b73ec4786d14917cda5a",
+    "story": "How continuous internal computation passes through a discrete token interface, and how each token participates in the next state change.",
+    "rendered_pages": 20
+  },
+  {
+    "number": 3,
+    "title": "How Loss Functions Shape Reasoning",
+    "folder": "03_How_Loss_Functions_Shape_Reasoning",
+    "word": "03_How_Loss_Functions_Shape_Reasoning.docx",
+    "figures": 47,
+    "tables": 11,
+    "word_sha256": "fcc73a68dfd83ce509be70c152fb6cafbfe305c04a372c8ff7e1040d631e328a",
+    "story": "How training objectives shape acceptance regions, approach trajectories and the passage of a complete reasoning chain.",
+    "rendered_pages": 43
+  },
+  {
+    "number": 4,
+    "title": "Formation and Handoff of Internal Computation",
+    "folder": "04_Formation_and_Handoff_of_Internal_Computation",
+    "word": "04_Formation_and_Handoff_of_Internal_Computation.docx",
+    "figures": 23,
+    "tables": 11,
+    "word_sha256": "8de36aa5e11ffcb50642f2d2b504151902c2aa4aa99e88233e74cd49f6aa0009",
+    "story": "How reusable computational interfaces form, and how causal load moves between states, markers and readout stages.",
+    "rendered_pages": 24
+  },
+  {
+    "number": 5,
+    "title": "Attention Coordination and Candidate Routing",
+    "folder": "05_Attention_Coordination_and_Candidate_Routing",
+    "word": "05_Attention_Coordination_and_Candidate_Routing.docx",
+    "figures": 14,
+    "tables": 12,
+    "word_sha256": "f99fbd1032d783bc97ec28055729fa053f60c506e3e88100dd1dcd73178523f4",
+    "story": "How candidate retrieval, head coordination and ranked routing contribute to later assembly.",
+    "rendered_pages": 30
+  },
+  {
+    "number": 6,
+    "title": "Error Diagnosis and Local Repair",
+    "folder": "06_Error_Diagnosis_and_Local_Repair",
+    "word": "06_Error_Diagnosis_and_Local_Repair.docx",
+    "figures": 9,
+    "tables": 12,
+    "word_sha256": "cb85a03e833ccc752ad3f15dd6989150fecd1355dc8a30836c1aac1223bb2a4c",
+    "story": "How measured error paths lead to scoped interventions, repair permissions, checkpoint compatibility and maintenance.",
+    "rendered_pages": 40
+  },
+  {
+    "number": 7,
+    "title": "Information Transport and Assembly Across Architectures",
+    "folder": "07_Information_Transport_and_Assembly_Across_Architectures",
+    "word": "07_Information_Transport_and_Assembly_Across_Architectures.docx",
+    "figures": 6,
+    "tables": 7,
+    "word_sha256": "cc01fbea818eb2a65ea00e2ee9e9101ccace19b9febe24ad3284a35d41895d91",
+    "story": "Which transport and assembly properties are shared across architectures, and which depend on their implementation.",
+    "rendered_pages": 11
+  }
+]

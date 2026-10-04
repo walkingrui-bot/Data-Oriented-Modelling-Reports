@@ -1,0 +1,5 @@
+Fault,How to identify it,First repair,Long-term repair
+Blueprint exit,depth readout shows correct-region entry followed by exit,run routing/assembly probes and activate the relevant circuit breaker,add trajectory monitoring; prevent the diagnosed late subsystem from overwriting a valid state
+Routing,attention bypass repairs with fewer changes than FFN bypass,attenuate/bypass the offending attention stage,"RCR, history-aware candidate routing, routing-maturity control"
+Assembly,FFN bypass repairs with fewer changes than attention bypass,attenuate/bypass the offending FFN stage,"train/regularize the diagnosed processing stage, not the whole network"
+Coverage gap,never reaches blueprint; no local bypass repairs it,do not keep tuning a local router,"expand training coverage, add adapters/new route capacity, retrain on neighboring failure geometry"

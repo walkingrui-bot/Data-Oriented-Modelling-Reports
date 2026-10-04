@@ -1,0 +1,49 @@
+﻿Report,Title,Section,Experiment or evidence group
+1,Internal Motion and Assembly in Neural Models,Coupled parameter and state motion,ROTATIONAL-DYNAMICS-001 and 002
+1,Internal Motion and Assembly in Neural Models,Directional alignment and its behavioral effect,ROTATIONAL-DYNAMICS-001A to 001C
+1,Internal Motion and Assembly in Neural Models,Relative registration of information fragments,ROTATIONAL-PUZZLE-001 and 002
+1,Internal Motion and Assembly in Neural Models,Formation and readout of a functional fragment,ROTATIONAL-PUZZLE-003
+1,Internal Motion and Assembly in Neural Models,Identity specific coupling within the moving assembly,ROTATIONAL-PUZZLE-003 coupling analysis
+1,Internal Motion and Assembly in Neural Models,Interface locking and continued movement,ROTATIONAL-PUZZLE-004
+1,Internal Motion and Assembly in Neural Models,Rotation translation and moving pivots,ROTATIONAL-DYNAMICS-003
+1,Internal Motion and Assembly in Neural Models,How training builds functional fragment identity,FRAGMENT-ORIGIN-PARAMETER-MECHANICS-001
+1,Internal Motion and Assembly in Neural Models,Rigid transport and deformational steering,DEFORMATION-TRANSPORT-001
+2,Reasoning Dynamics and Discrete Output,The output loop,Discrete readout synthesis
+2,Reasoning Dynamics and Discrete Output,Reasoning steps as directional state changes,COT-MOTION-001
+2,Reasoning Dynamics and Discrete Output,The local action of an emitted token,COT-MOTION-002
+2,Reasoning Dynamics and Discrete Output,One visible token and several possible futures,READOUT-FUNNEL-001
+2,Reasoning Dynamics and Discrete Output,The trajectory begins during the prompt,Pre-reasoning trajectory study
+2,Reasoning Dynamics and Discrete Output,Reading a sequence as successive views of computation,Token replay and control-field synthesis
+3,How Loss Functions Shape Reasoning,Objectives define output regions,LOSS-OUTLET-GEOMETRY-001
+3,How Loss Functions Shape Reasoning,Entering and traversing a reasoning route,LOSS-OUTLET-GEOMETRY-002B
+3,How Loss Functions Shape Reasoning,Mapping the outlet continuously,LOSS-OUTLET-GEOMETRY-003
+3,How Loss Functions Shape Reasoning,Minimum clearance and the upper boundary,LOSS-OUTLET-GEOMETRY-004
+3,How Loss Functions Shape Reasoning,The force beyond the boundary,LOSS-OUTLET-GEOMETRY-005
+3,How Loss Functions Shape Reasoning,Where an equal force enters the computation,LOSS-OUTLET-GEOMETRY-006
+3,How Loss Functions Shape Reasoning,Direction contact timing and depth,OUTLET-007 to OUTLET-012
+3,How Loss Functions Shape Reasoning,Measured feedback and training control,M4-019 to M4-024
+3,How Loss Functions Shape Reasoning,The geometry produced by the loss,M8-045 to M8-051
+4,Formation and Handoff of Internal Computation,Locating the states that carry the route,M3-013 to M3-018
+4,Formation and Handoff of Internal Computation,How a local interface becomes load bearing,M5-025 to M5-032
+4,Formation and Handoff of Internal Computation,Moving the interface moves the computational load,VI-033 to VI-038
+4,Formation and Handoff of Internal Computation,The function that survives relocation,M7-039 to M7-044
+5,Attention Coordination and Candidate Routing,Candidate selection before assembly,ATTENTION-CANDIDATE-NARROWING-001
+5,Attention Coordination and Candidate Routing,Parallel proposals and shared output interaction,ATTENTION-PIPELINES-002 to COORDINATOR-004
+5,Attention Coordination and Candidate Routing,The contribution history behind useful disagreement,ATTENTION-CONTRIBUTION-005 to HISTORY-GATE-007
+5,Attention Coordination and Candidate Routing,Giving candidates explicit priorities,RCR-008 to RCR-011
+5,Attention Coordination and Candidate Routing,Placing confidence inside the proposal list,RCR-012 to RCR-015
+5,Attention Coordination and Candidate Routing,Choosing the scale of the routed object,PIECE-LOGISTICS-016 to DUAL-SCALE-022
+5,Attention Coordination and Candidate Routing,Granting routing authority during learning,RCR-023 to RCR-026
+5,Attention Coordination and Candidate Routing,Adapting the protocol across tasks and architectures,RCR-027 to RCR-031
+5,Attention Coordination and Candidate Routing,Ranking stability as the control signal,RCR-032 and RCR-033
+6,Error Diagnosis and Local Repair,Tracing the work before the output,TOKEN-PROVENANCE-036 and MOTION-037
+6,Error Diagnosis and Local Repair,The trained output geometry and the runtime path,BLUEPRINT-FIELD-038
+6,Error Diagnosis and Local Repair,Diagnosing the subsystem and testing its repair,FAULT-DIAGNOSTIC-039 to 042
+6,Error Diagnosis and Local Repair,Following faults through successive patches,FAULT-MIGRATION-043
+6,Error Diagnosis and Local Repair,Comparing local repair architectures,REPAIR-ARCHITECTURE-044
+6,Error Diagnosis and Local Repair,Task permission and current state permission,TASK-GATE-045
+6,Error Diagnosis and Local Repair,Extending permission to nearby task variants,TASK-BINDING-046
+6,Error Diagnosis and Local Repair,Maintaining repair compatibility across checkpoints,REPAIR-REGISTRY-047
+6,Error Diagnosis and Local Repair,Integrating the model and its repair registry,PATCH-CI-048
+7,Information Transport and Assembly Across Architectures,A shared history dependent computation,ARCHITECTURE-PRODUCTION-LINES-001
+7,Information Transport and Assembly Across Architectures,A common compositional task across five architectures,CROSS-ARCHITECTURE-ASSEMBLY-002

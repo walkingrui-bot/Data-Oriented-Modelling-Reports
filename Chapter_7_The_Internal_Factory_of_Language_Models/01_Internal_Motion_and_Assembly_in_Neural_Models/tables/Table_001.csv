@@ -1,0 +1,8 @@
+Term,Meaning in the experiments
+State trajectory,A sequence of hidden states across network depth.
+Fragment,A group of prompt-conditioned token states whose identity and relations can be measured.
+Shared fragment S,Token positions shared by the two members of a matched prompt pair.
+Delta fragment D,Changed or inserted positions distinguishing the paired prompts.
+Decision state Y,The final non-padding token state used by the classifier.
+Registration,Relative alignment measured between fragments.
+Cycle closure,Agreement between composed and direct relative maps.

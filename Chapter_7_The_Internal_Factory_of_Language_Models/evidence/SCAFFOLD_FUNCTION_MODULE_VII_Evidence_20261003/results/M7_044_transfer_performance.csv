@@ -1,0 +1,4 @@
+world,result_acc,all_results
+seed11_shared,0.903,0.605
+affine_nostep,1.0,1.0
+affine_post,0.9815,0.90875

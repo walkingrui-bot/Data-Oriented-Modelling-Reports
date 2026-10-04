@@ -1,0 +1,6 @@
+Stage,Accuracy,Routing-dominant errors,Assembly-dominant errors
+Baseline,57.1%,5,7
+Patch Routing,64.3%,0,10
+Patch Assembly,75.0%,4,3
+Patch Routing again,71.4%,1,7
+Patch Assembly again,82.1%,2,3

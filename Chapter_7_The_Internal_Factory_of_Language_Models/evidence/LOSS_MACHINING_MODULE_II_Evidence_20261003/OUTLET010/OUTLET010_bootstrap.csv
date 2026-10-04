@@ -1,0 +1,9 @@
+a,b,metric,diff,lo,hi
+depth1,depth2_final,exact,-0.0375,-0.053125,-0.02339843750000057
+depth1,depth2_final,forced_tail,-0.038671875,-0.055078125,-0.0234375
+depth12,depth2_final,exact,-0.0109375,-0.0265625,0.0046875
+depth12,depth2_final,forced_tail,-0.0140625,-0.02578125,-0.002734375
+depth012,depth2_final,exact,-0.0234375,-0.040625,-0.0078125
+depth012,depth2_final,forced_tail,-0.026171875,-0.03984375,-0.013671875
+depth0,depth1,exact,-0.015625,-0.03597656249999996,0.0046875
+depth0,depth1,forced_tail,-0.001953125,-0.01640625,0.013671875

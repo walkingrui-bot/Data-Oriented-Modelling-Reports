@@ -1,0 +1,5 @@
+loss,min_margin,max_margin,open_right
+hard_ce,2.255,12.0,True
+soft_ce90,0.9350000000000005,4.08,False
+hinge_m6,5.9,12.0,True
+target_margin3,2.37,3.630000000000001,False

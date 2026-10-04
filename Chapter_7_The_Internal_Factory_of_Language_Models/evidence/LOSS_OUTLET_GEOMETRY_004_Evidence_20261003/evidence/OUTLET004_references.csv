@@ -1,0 +1,3 @@
+variant,greedy_exact,greedy_final,greedy_result_acc,entry_rate,final_rate,exact_chain_rate,sample_result_acc,forced_tail_acc,forced_final_rate,forced_exact_tail_rate,cum_state_angle,final_state_drift_deg
+base_frozen,0.425,0.495,0.633,0.74375,0.24375,0.15625,0.40625,0.4390625,0.36875,0.25625,33.549171447753906,0.006911736913025379
+continued_full_CE,1.0,1.0,1.0,0.9875,0.78125,0.775,0.86875,0.8984375,0.86875,0.85625,33.159339904785156,13.29849624633789

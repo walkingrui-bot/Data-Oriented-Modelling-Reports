@@ -1,0 +1,5 @@
+Architecture,Carrier,Candidate selection,Local transformation,History task retention
+GRU,Recurrent hidden state,Implicit in recurrent gates,Shared gated update,High
+Selective SSM,Continuous state-space state,Implicit in selective update,Selective state evolution,High
+Dense Transformer,Residual token states,Attention over positions,Attention and feed-forward updates,Lower in this small model
+Sparse MoE,Residual state,Attention and expert router,Selected expert transformations,Separate task and assay

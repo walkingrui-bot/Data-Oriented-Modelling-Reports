@@ -1,0 +1,6 @@
+Term,Meaning in the experiments
+CoT,A generated chain of intermediate reasoning tokens.
+Angular movement,The directional component of a hidden-state change.
+Readout,The map from the hidden state to output scores.
+Token region,Hidden states that yield the same discrete token under the specified selection rule.
+Continuation,The generated trajectory following the current state or prefix.

@@ -1,0 +1,7 @@
+Transfer world,Policy,Exact chain,Forced-entry tail
+seed11,phase only,0.990,0.993
+seed11,phase entropy,0.984,0.992
+seed11,delayed full,0.984,0.992
+affine,phase only,0.970,0.991
+affine,phase entropy,0.971,0.988
+affine,delayed full,0.971,0.988

@@ -1,0 +1,7 @@
+checkpoint_id,ci_verdict,release_action,enable_hotfixes,suspend_hotfixes,migrate_hotfixes,quarantine_hotfixes,variant_state_gated_accuracy,variant_unresolved,ci_reason
+C0_BASE,BASELINE,reference_only,"P0_ACT,P10_ACT,P25_ACT,P35_TEXT,P35_ACT,P40_TEXT,P50_TEXT,P55_ACT",,,,0.9285714285714286,1,source baseline
+C1_GLOBAL_LOCAL_REPAIR,WARN_SCOPE_DRIFT,release_with_scope_warning_and_followup,,"P0_ACT,P10_ACT,P25_ACT,P35_TEXT,P35_ACT,P40_TEXT,P50_TEXT,P55_ACT",,,0.7857142857142857,3,fuzzy suite -14.3 pp; unresolved fuzzy +2
+C2_LOCAL_PLUS_COVERAGE,WARN_UPDATE_REGISTRY,release_with_registry_update,"P0_ACT,P25_ACT,P55_ACT","P10_ACT,P35_TEXT,P35_ACT,P40_TEXT,P50_TEXT",,,0.6428571428571429,5,3 archived hotfix(es) reactivated; fuzzy suite -14.3 pp; unresolved fuzzy +2
+C3_REPLAY_DRIFT,BLOCK,reject_checkpoint,"P0_ACT,P25_ACT,P35_TEXT,P35_ACT,P40_TEXT,P50_TEXT,P55_ACT",P10_ACT,,,0.8571428571428571,2,accuracy -3.6 pp vs parent; NLL +0.262 vs parent; fuzzy suite -7.1 pp
+C4A_COVERAGE_FIRST,WARN_SCOPE_DRIFT,release_with_scope_warning_and_followup,"P0_ACT,P10_ACT,P25_ACT,P35_TEXT,P40_TEXT,P50_TEXT,P55_ACT",P35_ACT,,,0.8571428571428571,2,fuzzy suite -7.1 pp
+C4_COVERAGE_THEN_LOCAL,WARN_SCOPE_DRIFT,release_with_scope_warning_and_followup,P55_ACT,"P0_ACT,P10_ACT,P25_ACT,P35_TEXT,P35_ACT,P40_TEXT,P50_TEXT",,,0.7142857142857143,4,fuzzy suite -14.3 pp; unresolved fuzzy +2

@@ -1,0 +1,6 @@
+Gate architecture,Final accuracy,Repairs,New regressions,Patch debt
+No repair gate,57.1%,0,0,—
+Passive learned telemetry gate,50.0%,3,5,1.667
+Conservative late-flip fuse,60.7%,1,0,0
+"Shadow two-phase, no task binding",71.4%,8,4,0.500
+Task Registry + State Gate,85.7%,8,0,0

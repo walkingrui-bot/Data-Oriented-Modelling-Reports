@@ -1,0 +1,2 @@
+batch_size,max_tokens,params,extra_trainable_params,baseline_median_ms,rcr_median_ms,median_overhead_pct,mean_overhead_pct
+28,128,54610,0,62.09767244999966,65.93984589999309,6.187306703141093,8.569764427643477

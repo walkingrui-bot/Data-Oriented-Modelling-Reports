@@ -1,0 +1,7 @@
+Term,Meaning in the experiments
+RCR,"Ranked candidate routing, with explicit proposal tiers."
+Head contribution,One attention head’s contribution after the shared output projection.
+Corrective opposition,An opposing contribution whose removal harms the measured output.
+Dynamic parcel,A small group identified by recent coordinated movement.
+Routing authority,The strength with which the proposed routing policy acts on the native candidates.
+NLL,Negative log likelihood.

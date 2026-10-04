@@ -1,0 +1,5 @@
+variant,step,common_loss,common_grad_norm,applied_force_norm,cum_impulse,schedule,contact,raw_aux_norm
+full_then_answer,1,2.9799036979675293,20.025334594485958,2.0,2.0,full_then_answer,full_response,0.5083874793365877
+full_then_answer,10,1.5722944736480713,5.864248528064236,2.0,20.0,full_then_answer,full_response,0.17912127348590934
+full_then_answer,30,0.8248206377029419,6.361859627956833,2.0,60.0,full_then_answer,full_response,0.20064466449120322
+full_then_answer,60,0.3135659396648407,5.034973555998585,2.0,120.0,full_then_answer,answer,0.0023992497874058597

@@ -1,0 +1,8 @@
+architecture,seed,method,heldout_acc,heldout_nll,layer
+6L24D,7,baseline,0.607143,1.955753,4.0
+6L24D,7,fixed_75pct,0.571429,1.951605,4.0
+6L24D,7,greedy_selfloc,0.607143,2.167024,5.0
+4L32D,19,baseline,0.535714,2.467912,
+4L32D,19,fixed_last_layer,0.535714,2.518608,3.0
+4L32D,19,greedy_selfloc,0.5,2.959149,2.0
+4L32D,19,one_SE_late,0.5,2.878584,3.0

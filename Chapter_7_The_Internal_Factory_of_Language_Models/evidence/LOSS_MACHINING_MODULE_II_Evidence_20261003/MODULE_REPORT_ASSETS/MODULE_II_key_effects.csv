@@ -1,0 +1,14 @@
+experiment,contrast,delta_exact_pp,lo_pp,hi_pp
+007,t050 - t0_answer,5.15625,3.125,7.187499999999999
+008,full22 - no_aux,5.625,3.4375000000000004,7.968749999999999
+009,ramp_up - ramp_down,4.53125,2.34375,6.71875
+009,answer_then_full - full_then_answer,4.84375,2.5,7.03125
+010,depth2_final - depth1,3.75,2.33984375000005,5.3125
+011,clearance_feedback - uniform,-3.90625,-6.406249999999999,-1.5625
+011,adaptive_direction - ramp_up,-3.28125,-5.46875,-0.9375
+012-seed11,full_uniform - answer_uniform,9.0625,6.406249999999999,12.1875
+012-seed11,full_ramp_up - full_uniform,-0.15625,-0.78125,0.3125
+012-seed11,full_uniform - early_layer,11.25,8.28125,14.374999999999998
+012-affine,full_uniform - answer_uniform,14.374999999999998,10.15625,18.75390624999994
+012-affine,full_ramp_up - full_uniform,1.40625,0.625,2.1875
+012-affine,full_uniform - early_layer,14.6875,11.5625,18.125

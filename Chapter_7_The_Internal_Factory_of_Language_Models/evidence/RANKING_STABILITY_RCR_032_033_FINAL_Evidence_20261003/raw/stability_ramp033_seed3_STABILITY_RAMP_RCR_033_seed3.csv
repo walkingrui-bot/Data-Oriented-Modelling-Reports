@@ -1,0 +1,2 @@
+seed,first_competence_epoch,full_authority_epoch,final_alpha,epochs,sec,train_acc,train_nll,train_margin,train_median,held_acc,held_nll,held_margin,held_median
+3,15,35,1.0,70,39.526100635528564,1.0,0.0022255838848650455,6.329656609467098,6.478506326675415,0.5714285969734192,2.5018599033355713,0.7447445903505597,4.641824722290039

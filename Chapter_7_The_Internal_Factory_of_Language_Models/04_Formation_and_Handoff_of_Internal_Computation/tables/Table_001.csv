@@ -1,0 +1,6 @@
+Term,Meaning in the experiments
+Scaffold,A contextual state with a measured causal role in carrying later computation.
+Carrier,The token position or interface that holds that state.
+Teacher forcing,Supplying the correct preceding tokens while measuring the next output.
+Handoff,The transfer of local computational responsibility to the next result state.
+Delta CE,Change in cross-entropy after a matched intervention.

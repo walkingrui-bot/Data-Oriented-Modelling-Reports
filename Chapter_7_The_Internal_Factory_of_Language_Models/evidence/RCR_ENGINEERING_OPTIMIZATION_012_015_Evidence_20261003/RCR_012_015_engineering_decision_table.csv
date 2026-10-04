@@ -1,0 +1,6 @@
+prototype,heldout_acc,heldout_mean_gain,shadow_mean_gain,status
+v1 fixed tiers + history gate,57.1→60.7%,0.037014,0.0395501554012298,retain baseline
+v2 learned whole-head budget,57.1→60.7%,0.03517811106784,,reject as primary: credit predictor AUROC≈0.53
+v2 self-confidence whole-head budget,57.1→60.7%,0.0356698621596608,,whole-head budget too coarse; converges near 1
+v2 adaptive tier spacing,57.1→60.7%,0.0397136669073786,0.039061175925391,retain as optional light modulation
+temperature control,57.1→60.7%,0.030508,-0.0304728150367736,fails shadow mean; not equivalent to RCR

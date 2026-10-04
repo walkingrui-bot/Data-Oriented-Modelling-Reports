@@ -1,0 +1,7 @@
+Experiment,Controlled variable,Primary executed result,Engineering meaning
+007,Force direction,Middle sector ~62.3% vs answer-only 57.2%,Preferred force sector
+008,Contact position/length,Full response 62.8%; mid7 strongest tail,Distributed guide rail
+009,Timing/order,Ramp-up 66.7%; front<back; order hysteresis,"Late feed, non-commutative history"
+010,Network depth,Final 61.9% > layer1 58.1%,Avoid early pose locking
+011,Feedback policy,Naive feedback < uniform < ramp-up,Dashboard needs phase-aware control
+012,Transfer,"Full response +9.1 pp seed, +14.4 pp new task",Rule transfers

@@ -1,0 +1,2 @@
+n_test,base_accuracy,final_accuracy,positive_variants,positive_authorized,positive_base_errors,positive_repairs,positive_commits,positive_abstentions,negative_controls,negative_false_authorizations,negative_commits,new_regressions
+40,0.5,0.525,16,14,11,1,1,2,24,0,0,0

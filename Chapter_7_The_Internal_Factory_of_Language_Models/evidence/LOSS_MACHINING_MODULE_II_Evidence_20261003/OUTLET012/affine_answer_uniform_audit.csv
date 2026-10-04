@@ -1,0 +1,5 @@
+mode,variant,step,common_loss,force,contact
+affine,answer_uniform,1,0.9814328551292419,2.0,answer
+affine,answer_uniform,20,0.17758338153362274,2.0,answer
+affine,answer_uniform,40,0.03079960122704506,2.0,answer
+affine,answer_uniform,60,0.0030140718445181847,2.0,answer

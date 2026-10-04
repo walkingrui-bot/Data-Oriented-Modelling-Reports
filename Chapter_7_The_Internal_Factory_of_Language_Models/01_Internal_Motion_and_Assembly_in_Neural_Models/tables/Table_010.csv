@@ -1,0 +1,8 @@
+adjacent transforms,pivot drift / cloud radius
+0→1,0.124 (95% bootstrap 0.115–0.132)
+1→2,0.159 (95% bootstrap 0.149–0.173)
+2→3,0.284 (95% bootstrap 0.268–0.302)
+3→4,0.229 (95% bootstrap 0.138–0.288)
+4→5,0.111 (95% bootstrap 0.102–0.339)
+5→6,0.938 (95% bootstrap 0.130–1.048)
+6→7,0.607 (95% bootstrap 0.543–1.055)

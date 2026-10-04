@@ -1,0 +1,9 @@
+a,b,metric,diff,lo,hi
+full_uniform,answer_uniform,exact,0.14375,0.1015625,0.18753906249999944
+full_uniform,answer_uniform,forced_tail,0.080078125,0.050390625,0.116015625
+full_ramp_up,full_uniform,exact,0.0140625,0.00625,0.021875
+full_ramp_up,full_uniform,forced_tail,0.010546875,0.0046875,0.017578125
+full_uniform,early_layer,exact,0.146875,0.115625,0.18125
+full_uniform,early_layer,forced_tail,0.089453125,0.06953125,0.11015625
+full_ramp_up,early_layer,exact,0.1609375,0.128125,0.1953125
+full_ramp_up,early_layer,forced_tail,0.1,0.079296875,0.121484375

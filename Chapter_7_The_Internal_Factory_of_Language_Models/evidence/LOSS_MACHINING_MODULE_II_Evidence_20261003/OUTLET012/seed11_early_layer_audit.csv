@@ -1,0 +1,5 @@
+mode,variant,step,common_loss,force,contact
+seed11,early_layer,1,0.18044205009937286,2.0,layer1_results
+seed11,early_layer,20,0.04022595286369324,2.0,layer1_results
+seed11,early_layer,40,0.0068681505508720875,2.0,layer1_results
+seed11,early_layer,60,0.0029466855339705944,2.0,layer1_results

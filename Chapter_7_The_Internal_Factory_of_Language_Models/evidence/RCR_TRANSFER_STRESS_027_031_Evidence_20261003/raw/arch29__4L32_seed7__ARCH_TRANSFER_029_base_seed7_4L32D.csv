@@ -1,0 +1,2 @@
+seed,mode,layers,d_model,heads,rcr_layer,trigger_epoch,epochs,sec,train_acc,train_nll,train_margin,train_median,held_acc,held_nll,held_margin,held_median
+7,base,4,32,4,3,,40,10.218953609466553,1.0,0.005963041912764311,6.165950348334653,6.27233624458313,0.6071428656578064,1.9167619943618774,1.2256724323545183,3.9389346837997437

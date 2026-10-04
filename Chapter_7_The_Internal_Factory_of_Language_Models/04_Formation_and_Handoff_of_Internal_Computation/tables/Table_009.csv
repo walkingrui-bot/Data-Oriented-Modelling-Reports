@@ -1,0 +1,5 @@
+World,Later-result |drop|,Locality ratio
+shared,0.073,111x
+nostep,0.061,132x
+noresult,0.092,144x
+post,0.073,146x

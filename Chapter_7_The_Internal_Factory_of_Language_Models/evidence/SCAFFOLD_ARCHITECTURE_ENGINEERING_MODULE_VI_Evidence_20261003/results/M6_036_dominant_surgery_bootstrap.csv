@@ -1,0 +1,8 @@
+variant,group,diff_swap_minus_none,ci_lo,ci_hi
+bare,input_b,-0.96875,-0.996875,-0.91875
+double,input_b,-0.146875,-0.2015625,-0.0953125
+no_result,input_b,-0.975,-0.9921875,-0.9515625
+no_step,result_value,-0.975,-0.990625,-0.9484375
+post,input_b,-0.7640625,-0.8453125,-0.675
+shared,pre_boundary,-0.2,-0.2671875,-0.13902343750000057
+specific,pre_boundary,0.0,0.0,0.0

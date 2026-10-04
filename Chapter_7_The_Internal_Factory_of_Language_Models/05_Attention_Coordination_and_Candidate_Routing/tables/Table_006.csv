@@ -1,0 +1,4 @@
+Cohort,AUROC,Average precision,Event mean AUROC,Top-k enrichment
+Train,0.565,0.141,0.529,0.888x
+Held-out,0.528,0.112,0.524,1.120x
+Shadow,0.550,0.121,0.546,1.210x

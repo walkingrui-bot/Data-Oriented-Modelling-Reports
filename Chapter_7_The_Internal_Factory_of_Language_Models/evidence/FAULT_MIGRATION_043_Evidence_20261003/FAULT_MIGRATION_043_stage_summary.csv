@@ -1,0 +1,11 @@
+maintenance_history,stage,accuracy,n_errors,routing_dominant,assembly_dominant,local_gap,blueprint_exit,never_reached
+R→A→R→A,BASE,0.5714285714285714,12,5,7,0,8,4
+R→A→R→A,R patch,0.6428571428571429,10,0,10,0,8,2
+R→A→R→A,A patch,0.75,7,4,3,0,2,5
+R→A→R→A,R patch,0.7142857142857143,8,1,7,0,6,2
+R→A→R→A,A patch,0.8214285714285714,5,2,3,0,5,0
+A→R→A→R,BASE,0.5714285714285714,12,5,7,0,8,4
+A→R→A→R,A patch,0.7857142857142857,6,5,1,0,2,4
+A→R→A→R,R patch,0.6785714285714286,9,1,8,0,7,2
+A→R→A→R,A patch,0.8928571428571429,3,2,1,0,2,1
+A→R→A→R,R patch,0.8571428571428571,4,0,4,0,3,1

@@ -1,0 +1,5 @@
+world,carrier,immediate_serialized_target,immediate_next_token_margin_drop,next_computational_result_drop,later_result_abs_mean,handoff_locality_ratio
+shared,STEP,current input b,12.1329155,8.036107063293457,0.07252774015069,110.80046126469864
+nostep,result value,next-step input b,6.84796,8.065450668334961,0.0611286591738462,131.94221462089274
+noresult,input b,current result value,13.2081175,13.208117485046388,0.0915433702369531,144.28262200434494
+post,input b,RESULT marker -> current result,-0.40259743,10.684865951538086,0.0730366557836532,146.29456725184886

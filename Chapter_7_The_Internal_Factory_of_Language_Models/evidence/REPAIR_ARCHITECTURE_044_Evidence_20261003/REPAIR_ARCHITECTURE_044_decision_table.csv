@@ -1,0 +1,5 @@
+repair_mode,mechanism,target_repairs,new_regressions,runtime_reversible,engineering_decision
+Global fine-tune,Change original parameters,8/8,5,No,Use only when the desired behavior must become part of the shared base model and a broad regression campaign is available
+Global deletion,Disable shared workstations for every task,5/8,7,Yes,Reject as default; useful only as an ablation/stress test
+Task-bound bypass,Disable diagnosed workstations only under a task/state gate,8/8,0,Yes,Preferred subtractive repair for mature task-specific failures
+Task-bound sidecar,Freeze base; gated low-rank residual patch at layer 4,8/8,0,Yes,Preferred additive repair when a new corrective action is needed without rewriting the base

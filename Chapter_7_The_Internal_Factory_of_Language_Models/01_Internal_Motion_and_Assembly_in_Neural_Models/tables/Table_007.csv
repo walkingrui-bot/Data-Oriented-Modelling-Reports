@@ -1,0 +1,7 @@
+injection layer,final-Y shift ratio (real-pose/random),output-margin ratio
+1,0.877,0.884
+2,0.874,0.900
+3,0.933,0.865
+4,0.945,0.874
+5,0.982,1.015
+6,1.014,1.052

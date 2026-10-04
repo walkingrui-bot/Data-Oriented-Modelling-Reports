@@ -1,0 +1,9 @@
+cohort,metric,n_pairs,mean_spearman,median_spearman
+heldout,margin_change,13,-0.38461538461538464,-1.0
+heldout,mean_centroid_divergence,13,-1.0,-1.0
+heldout,mean_interface_divergence,13,-1.0,-1.0
+heldout,DY_comotion_change,13,-0.2692307692307692,-1.0
+train,margin_change,54,0.25925925925925924,1.0
+train,mean_centroid_divergence,54,-1.0,-1.0
+train,mean_interface_divergence,54,-1.0,-1.0
+train,DY_comotion_change,54,-0.5,-1.0

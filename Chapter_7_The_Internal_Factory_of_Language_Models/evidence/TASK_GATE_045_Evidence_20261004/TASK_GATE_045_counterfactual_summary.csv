@@ -1,0 +1,2 @@
+train_max_score,threshold,heldout_activations,unsafe_activations,local_detected,family_correct,local_total
+2.7608792781829834,2.7608802781829835,1,0,1,1,8

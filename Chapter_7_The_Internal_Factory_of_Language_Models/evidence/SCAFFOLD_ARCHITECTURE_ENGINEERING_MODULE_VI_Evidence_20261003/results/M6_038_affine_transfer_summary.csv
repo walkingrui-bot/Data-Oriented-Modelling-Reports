@@ -1,0 +1,5 @@
+variant,teacher_result_acc,teacher_all_results,sample_exact_results,dominant_group,dominant_delta_ce
+shared,0.4301666666666666,0.0041666666666666,0.0015625,result_marker,2.9123284816741943
+no_step,1.0,1.0,0.9859375,result_value,2.8392286663874984
+no_result,1.0,1.0,0.99375,input_b,5.034716389374808
+post,0.9678333333333332,0.8433333333333334,0.6453125,result_marker,2.427512109279633

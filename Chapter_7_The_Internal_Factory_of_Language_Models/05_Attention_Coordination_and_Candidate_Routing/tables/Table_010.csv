@@ -1,0 +1,6 @@
+Architecture,Seed,Baseline,Self-locating RCR,Δ acc.,Selected layer
+4L32D,7,60.71%,64.29%,+3.57 pp,3
+4L32D,11,60.71%,67.86%,+7.14 pp,3
+4L32D,19,53.57%,50.00%,-3.57 pp,2
+6L24D,7,60.71%,60.71%,+0.00 pp,5
+6L24D,11,64.29%,64.29%,+0.00 pp,3

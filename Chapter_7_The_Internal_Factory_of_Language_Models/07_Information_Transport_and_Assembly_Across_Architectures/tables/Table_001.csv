@@ -1,0 +1,7 @@
+Term,Meaning in the experiments
+Transported influence,The hidden-state difference caused by changing one input fragment.
+Pair interaction,The non-additive state difference caused by changing a pair of fragments.
+Retention,Final influence magnitude relative to its magnitude at entry.
+Direction continuity,Cosine similarity of adjacent influence vectors.
+SSM,State-space model.
+MoE,Mixture of experts.

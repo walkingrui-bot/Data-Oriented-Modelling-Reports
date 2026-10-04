@@ -1,0 +1,2 @@
+n_seeds,baseline_accuracy_mean,fixed_rcr_accuracy_mean,warm_rcr_accuracy_mean,warm_accuracy_gain_pp,baseline_nll_mean,fixed_rcr_nll_mean,warm_rcr_nll_mean,warm_nll_change,seeds_accuracy_improved,seeds_accuracy_unchanged,seeds_accuracy_harmed,seeds_nll_improved
+5,0.5499999999920001,0.55,0.5785714,2.8571400007999848,2.35978722842,2.2574422000000003,2.1237348,-0.2360524284200003,4,0,1,4

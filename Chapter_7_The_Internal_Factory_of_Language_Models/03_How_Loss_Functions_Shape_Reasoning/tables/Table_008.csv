@@ -1,0 +1,5 @@
+Routing rule,Exact chain,Forced-entry tail
+ramp up,0.635,0.776
+gradient router,0.602,0.747
+causal ramp,0.627,0.779
+causal entropy,0.630,0.779

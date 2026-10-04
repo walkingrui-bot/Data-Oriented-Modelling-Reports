@@ -1,0 +1,7 @@
+Analogy,What it captures,Measured counterpart
+Rotating puzzle,relative pose must become compatible,"cycle closure, privileged rotation planes, D–Y coupling"
+Building blocks,smaller pieces become larger assemblies,"S–D interface locking, hierarchical aggregation"
+Molecular binding / conformation,coupling is directional and changes the motion of the combined object,"identity-specific co-motion, legal motion after docking, moving local pivots"
+Screw motion,progress can require simultaneous rotation and translation,RD003 rotation + translation decomposition
+Spoon/fork through a slit,a visible correct slice can precede later collision/reorientation,early output compatibility followed by continued angular motion
+Mosaic,the external token is a discrete readout of a richer current state,vocabulary logits followed by discrete token selection

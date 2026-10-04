@@ -1,0 +1,5 @@
+mode,variant,step,common_loss,force,contact
+seed11,no_aux,1,0.18044205009937286,0.0,none
+seed11,no_aux,20,0.017420871183276176,0.0,none
+seed11,no_aux,40,0.0008140031713992357,0.0,none
+seed11,no_aux,60,0.0006686772685497999,0.0,none

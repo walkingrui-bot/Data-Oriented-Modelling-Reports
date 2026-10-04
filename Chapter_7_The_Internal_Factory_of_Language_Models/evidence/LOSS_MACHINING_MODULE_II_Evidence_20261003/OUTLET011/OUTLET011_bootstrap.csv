@@ -1,0 +1,11 @@
+a,b,metric,diff,lo,hi
+clearance_feedback,uniform,exact,-0.0390625,-0.0640625,-0.015625
+clearance_feedback,uniform,forced_tail,-0.035546875,-0.05703125,-0.01484375
+entropy_feedback,uniform,exact,-0.0296875,-0.0515625,-0.0078125
+entropy_feedback,uniform,forced_tail,-0.01953125,-0.036328125,-0.003515625
+delayed_clearance,uniform,exact,-0.0046875,-0.028125,0.0171875
+delayed_clearance,uniform,forced_tail,-0.015234375,-0.032421875,0.000390625
+adaptive_direction,uniform,exact,-0.0046875,-0.0203125,0.009375
+adaptive_direction,uniform,forced_tail,-0.000390625,-0.00859375,0.0078125
+adaptive_direction,ramp_up,exact,-0.0328125,-0.0546875,-0.009375
+adaptive_direction,ramp_up,forced_tail,-0.01484375,-0.027734375,-0.00234375

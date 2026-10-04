@@ -1,0 +1,7 @@
+System,Held-out accuracy,Rescued,Harmed,Mean Δ correct margin
+Baseline,57.14%,—,—,—
+RCR,60.71%,1,0,+0.00895
+Minimal market handoff,60.71%,1,0,+0.01314
+Temperature sharpening control,60.71%,1,0,+0.03051
+History gate only,60.71%,1,0,+0.02078
+History gate + RCR,60.71%,1,0,+0.03701

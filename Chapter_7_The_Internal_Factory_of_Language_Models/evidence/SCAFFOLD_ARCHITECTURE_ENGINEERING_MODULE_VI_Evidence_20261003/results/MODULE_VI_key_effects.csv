@@ -1,0 +1,9 @@
+finding,value
+Shared STEP reaches 90% all-results earlier than step-specific STEP1–4,400 vs 560 updates
+Moving STEP after result greatly accelerates seed7 learning at step320,90.5% vs 35.1% all-results
+Removing STEP relocates mature scaffold to result values,delta-CE 3.53; autonomous tail 97.7%→0.16% under swap
+Removing RESULT relocates scaffold to current input b,delta-CE 6.02; tail 98.4%→0.94%
+Removing STEP+RESULT still permits full task mastery,100% teacher all-results; scaffold on input b delta-CE 5.17
+Mature shared STEP remains dominant scaffold,step400 STEP delta-CE 3.23; tail 98.8%→0%
+Step-specific markers do not become dominant at maturity,step560 input b 3.04 > result value 1.40 > STEP1–4 1.20
+Affine recurrence also relocates scaffold when interfaces are removed,no-STEP→result value; no-RESULT→input b; post-STEP→RESULT marker

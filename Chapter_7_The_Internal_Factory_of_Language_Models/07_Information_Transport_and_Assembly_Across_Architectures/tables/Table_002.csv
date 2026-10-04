@@ -1,0 +1,4 @@
+Architecture,L6 acc,L24 acc,Horizon retention,Motion gain from v+a
+GRU,0.854,0.851,99.65%,23.98%
+Selective SSM,0.843,0.848,100.59%,24.56%
+Dense Transformer,0.844,0.662,78.44%,24.86%

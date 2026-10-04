@@ -1,0 +1,6 @@
+allowed pivot distance,median residual translation fraction
+0.25 × cloud radius,0.761
+0.50 × cloud radius,0.597
+1.00 × cloud radius,0.433
+2.00 × cloud radius,0.291
+5.00 × cloud radius,0.093

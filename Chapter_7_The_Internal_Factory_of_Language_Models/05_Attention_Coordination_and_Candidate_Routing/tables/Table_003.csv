@@ -1,0 +1,3 @@
+Coordinator,Mean heads modified,Mean correct-margin gain
+History gate,1.04,+0.0208
+Clip all negative-consensus heads,2.04,+0.0292

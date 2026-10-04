@@ -1,0 +1,10 @@
+section,world,contrast,value,interpretation
+Index correction,Seed7 ramp-up,Old result_markers label,Actually input b1..b4,Old interpretation superseded
+Corrected scaffold,Seed7 ramp-up,STEP all swap,exact 0.680->0.000,STEP boundaries are dominant free-generation joints
+Corrected scaffold,Seed7 ramp-up,True RESULT markers,exact 0.680->0.653,True RESULT markers are mild in add task
+Genesis,Seed7 full CE,STEP delta CE,0.078 at step240 -> 1.848 at step320,Late crystallization
+Gradient source,Seed7 step320,Result/b-next gradient ratio,66.1x,Future result loss takes over STEP interface
+Plasticity,Seed7,STEP-swap augmentation,1.848->0.007,Scaffold can be untrained
+History,Birth window,Interface->result vs result->interface,STEP 1.705 vs 1.373,Order changes topology and performance
+Transfer,Seed11,STEP delta CE,0.058 at 320 -> 3.030 at 440,Late scaffold genesis replicates
+Transfer,Affine,Mature load topology,b and RESULT > STEP in teacher-forced downstream CE,Task-conditioned scaffold recruitment

@@ -1,0 +1,13 @@
+Case,Path symptom,Root repair signature,ATTN bypass layers needed,FFN bypass layers needed,Repair
+0 ACT,Blueprint exit,ASSEMBLY,—,5,FFN bypass: 3-7
+10 ACT,Blueprint exit,ASSEMBLY,8,3,FFN bypass: 5-7
+25 ACT,Blueprint exit,ASSEMBLY,8,1,FFN bypass: 1
+35 TEXT,Blueprint exit,ASSEMBLY,1,1,FFN bypass: 3
+55 ACT,Blueprint exit,ASSEMBLY,—,3,FFN bypass: 5-7
+15 TEXT,Never reached,Coverage gap,—,—,coverage expansion / retraining
+20 TEXT,Never reached,Coverage gap,—,—,coverage expansion / retraining
+25 TEXT,Never reached,Coverage gap,—,—,coverage expansion / retraining
+55 TEXT,Never reached,Coverage gap,—,—,coverage expansion / retraining
+35 ACT,Blueprint exit,ROUTING,1,7,ATTN bypass: 1
+40 TEXT,Blueprint exit,ROUTING,3,—,ATTN bypass: 5-7
+50 TEXT,Blueprint exit,ROUTING,4,—,ATTN bypass: 4-7

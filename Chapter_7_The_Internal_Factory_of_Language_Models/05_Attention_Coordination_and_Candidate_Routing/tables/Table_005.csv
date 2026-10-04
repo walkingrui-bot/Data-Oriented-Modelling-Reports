@@ -1,0 +1,7 @@
+System,Median Δ correct margin,States with margin improvement
+Baseline,—,—
+RCR,+0.02621,18/28
+Minimal market handoff,+0.01095,15/28
+Temperature sharpening control,−0.00037,14/28
+History gate only,~0,15/28
+History gate + RCR,+0.02625,18/28

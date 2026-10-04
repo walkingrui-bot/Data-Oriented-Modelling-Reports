@@ -1,0 +1,11 @@
+a,b,metric,diff,lo,hi
+front,back,exact,-0.05,-0.075,-0.0234375
+front,back,forced_tail,-0.04453125,-0.068359375,-0.02109375
+ramp_up,ramp_down,exact,0.0453125,0.0234375,0.0671875
+ramp_up,ramp_down,forced_tail,0.035546875,0.0171875,0.054296875
+answer_then_full,full_then_answer,exact,0.0484375,0.025,0.0703125
+answer_then_full,full_then_answer,forced_tail,0.03125,0.00859375,0.052734375
+uniform,front,exact,0.0390625,0.021875,0.05625
+uniform,front,forced_tail,0.025390625,0.006630859375000009,0.04453125
+uniform,back,exact,-0.0109375,-0.03125,0.009375
+uniform,back,forced_tail,-0.019140625,-0.036328125,-0.0015625

@@ -1,0 +1,5 @@
+component,mechanism,coverage_or_repair_rate,false_authorization_or_regression,decision
+Character n-gram fuzzy matcher,Similarity to exact/calibration prompts,31.25%,0,Safe but too conservative
+Task-schema fingerprint,Stable domain + discriminating slots; abstain on ambiguity,87.5%,0,Preferred permission matcher
+Shared family sidecar,One Routing + one Assembly hotfix,66.7% of authorized current errors,0,Useful fallback; repair too broad
+Route-specific sidecar,One tiny hotfix per registered route,88.9% of authorized current errors,0,Preferred repair attachment

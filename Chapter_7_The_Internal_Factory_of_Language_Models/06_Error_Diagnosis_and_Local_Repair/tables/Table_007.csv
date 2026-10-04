@@ -1,0 +1,5 @@
+Repair architecture,Mean absolute nontarget margin change,Removable
+Global fine-tune,2.082104,No
+Global deletion,4.522128,Yes
+Task-bound bypass,0.000000,Yes
+Task-bound sidecar,0.000000,Yes

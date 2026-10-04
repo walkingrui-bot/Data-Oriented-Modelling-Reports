@@ -1,0 +1,5 @@
+variant,train_acc,heldout_acc,train_final_head_cos,heldout_final_head_cos
+trained,1.0,0.5714286,0.96235335,0.11830817
+rotation_only,0.9375,0.5357143,0.8582853,0.11805328
+stretch_only,0.9732143,0.6071429,0.9200092,0.11079174
+initial_QKVO,0.875,0.5,0.7876235,0.10802312

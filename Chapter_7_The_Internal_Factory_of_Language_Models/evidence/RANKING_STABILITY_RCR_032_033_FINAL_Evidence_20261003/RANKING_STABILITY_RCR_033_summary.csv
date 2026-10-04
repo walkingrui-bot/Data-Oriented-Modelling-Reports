@@ -1,0 +1,2 @@
+n_seeds,baseline_accuracy_mean,stability_rcr_accuracy_mean,mean_accuracy_gain_pp,baseline_nll_mean,stability_rcr_nll_mean,mean_nll_change,accuracy_improved_seeds,accuracy_unchanged_seeds,accuracy_harmed_seeds,nll_improved_seeds
+6,0.5238095,0.6011904726425806,7.738097264258066,2.440937188102722,2.1557063261667886,-0.28523086193593344,5,1,0,5

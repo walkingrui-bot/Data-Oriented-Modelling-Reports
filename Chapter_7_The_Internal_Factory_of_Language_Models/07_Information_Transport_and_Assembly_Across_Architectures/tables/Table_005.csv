@@ -1,0 +1,6 @@
+Architecture,Parameters,Mean steps to exact fit
+Vanilla RNN,"2,888",84.0
+GRU,"7,112",58.3
+Selective State Space Model,"11,528",188.7
+Dense Transformer,"18,120",106.3
+Sparse MoE Transformer,"43,536",90.7

@@ -1,0 +1,5 @@
+variant,step,common_loss,common_grad_norm,applied_force_norm,cum_impulse,schedule,contact,raw_aux_norm
+pulse,1,2.979891061782837,20.02531731993097,8.0,8.0,pulse,full_response,0.5083874793365877
+pulse,10,1.599637746810913,6.0400633033182745,0.0,24.0,pulse,full_response,
+pulse,30,0.8683646321296692,5.7324548933802015,0.0,64.0,pulse,full_response,
+pulse,60,0.32845431566238403,5.811147137498827,0.0,120.0,pulse,full_response,

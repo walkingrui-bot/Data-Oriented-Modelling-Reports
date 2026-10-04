@@ -1,0 +1,11 @@
+cohort,metric,n_pairs,mean_within_pair_spearman_alpha,median
+heldout,margin_change,13,-0.0769230769230769,-0.9999999999999999
+heldout,mean_future_centroid_divergence,13,-0.9999999999999999,-0.9999999999999999
+heldout,final_transport_direction_cosine,13,0.9999999999999999,0.9999999999999999
+heldout,mean_future_interface_divergence,13,-0.9999999999999999,-0.9999999999999999
+heldout,DY_comotion_change,13,-0.3,-0.9999999999999999
+train,margin_change,54,0.0574074074074074,0.7999999999999998
+train,mean_future_centroid_divergence,54,-0.9999999999999999,-0.9999999999999999
+train,final_transport_direction_cosine,54,0.9999999999999999,0.9999999999999999
+train,mean_future_interface_divergence,54,-0.9999999999999999,-0.9999999999999999
+train,DY_comotion_change,54,-0.5499999999999999,-0.9999999999999999

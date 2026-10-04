@@ -1,0 +1,3 @@
+maintenance_history,baseline_accuracy,best_accuracy,final_accuracy,fault_recurrence_samples,multi_flip_samples,repaired_then_broke_later,error_to_correct_transitions,correct_to_error_regressions
+R→A→R→A,0.5714285714285714,0.8214285714285714,0.8214285714285714,11,11,11,24,17
+A→R→A→R,0.5714285714285714,0.8928571428571429,0.8571428571428571,13,13,11,24,16

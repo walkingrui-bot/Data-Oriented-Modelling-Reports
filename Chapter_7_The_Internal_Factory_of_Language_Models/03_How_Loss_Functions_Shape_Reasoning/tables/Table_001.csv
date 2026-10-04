@@ -1,0 +1,9 @@
+Term,Meaning in the experiments
+Margin,Correct-output score minus the relevant competing score.
+Outlet,A region satisfying the specified output objective or excess-loss threshold.
+Entry,Correct production of the first intermediate result.
+Passage,Correct autonomous continuation across the measured sequence.
+Forced tail,Continuation after supplying the exact prefix through the first result.
+Contact surface,Token or layer locations through which an auxiliary training force acts.
+CE,Cross-entropy.
+pp,Percentage points.

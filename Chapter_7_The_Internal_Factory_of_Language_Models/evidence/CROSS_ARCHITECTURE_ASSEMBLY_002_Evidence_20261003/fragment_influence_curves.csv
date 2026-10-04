@@ -1,0 +1,721 @@
+architecture,seed,fragment,position,influence
+Vanilla RNN,11,0,0,0.0
+Vanilla RNN,11,0,1,10.077164649963379
+Vanilla RNN,11,0,2,10.621491432189941
+Vanilla RNN,11,0,3,9.617071151733398
+Vanilla RNN,11,0,4,9.783248901367188
+Vanilla RNN,11,0,5,8.50728702545166
+Vanilla RNN,11,0,6,9.076276779174805
+Vanilla RNN,11,0,7,9.342812538146973
+Vanilla RNN,11,1,0,0.0
+Vanilla RNN,11,1,1,0.0
+Vanilla RNN,11,1,2,10.125860214233398
+Vanilla RNN,11,1,3,8.419488906860352
+Vanilla RNN,11,1,4,8.860201835632324
+Vanilla RNN,11,1,5,8.425554275512695
+Vanilla RNN,11,1,6,9.00625228881836
+Vanilla RNN,11,1,7,9.330411911010742
+Vanilla RNN,11,2,0,0.0
+Vanilla RNN,11,2,1,0.0
+Vanilla RNN,11,2,2,0.0
+Vanilla RNN,11,2,3,10.004068374633789
+Vanilla RNN,11,2,4,7.330831527709961
+Vanilla RNN,11,2,5,7.0323286056518555
+Vanilla RNN,11,2,6,7.204693794250488
+Vanilla RNN,11,2,7,8.38419246673584
+Vanilla RNN,11,3,0,0.0
+Vanilla RNN,11,3,1,0.0
+Vanilla RNN,11,3,2,0.0
+Vanilla RNN,11,3,3,0.0
+Vanilla RNN,11,3,4,7.7577409744262695
+Vanilla RNN,11,3,5,7.1358513832092285
+Vanilla RNN,11,3,6,7.234893798828125
+Vanilla RNN,11,3,7,8.388265609741211
+Vanilla RNN,11,4,0,0.0
+Vanilla RNN,11,4,1,0.0
+Vanilla RNN,11,4,2,0.0
+Vanilla RNN,11,4,3,0.0
+Vanilla RNN,11,4,4,0.0
+Vanilla RNN,11,4,5,9.351733207702637
+Vanilla RNN,11,4,6,8.1580171585083
+Vanilla RNN,11,4,7,7.63352632522583
+Vanilla RNN,11,5,0,0.0
+Vanilla RNN,11,5,1,0.0
+Vanilla RNN,11,5,2,0.0
+Vanilla RNN,11,5,3,0.0
+Vanilla RNN,11,5,4,0.0
+Vanilla RNN,11,5,5,0.0
+Vanilla RNN,11,5,6,7.290253639221191
+Vanilla RNN,11,5,7,6.519215106964111
+Vanilla RNN,22,0,0,0.0
+Vanilla RNN,22,0,1,6.134480953216553
+Vanilla RNN,22,0,2,6.942141532897949
+Vanilla RNN,22,0,3,5.5687408447265625
+Vanilla RNN,22,0,4,5.737249851226807
+Vanilla RNN,22,0,5,7.193666458129883
+Vanilla RNN,22,0,6,7.608029842376709
+Vanilla RNN,22,0,7,8.633609771728516
+Vanilla RNN,22,1,0,0.0
+Vanilla RNN,22,1,1,0.0
+Vanilla RNN,22,1,2,6.602477550506592
+Vanilla RNN,22,1,3,4.796991348266602
+Vanilla RNN,22,1,4,5.2101311683654785
+Vanilla RNN,22,1,5,7.109565258026123
+Vanilla RNN,22,1,6,7.583422660827637
+Vanilla RNN,22,1,7,8.631114959716797
+Vanilla RNN,22,2,0,0.0
+Vanilla RNN,22,2,1,0.0
+Vanilla RNN,22,2,2,0.0
+Vanilla RNN,22,2,3,10.36329460144043
+Vanilla RNN,22,2,4,9.43763256072998
+Vanilla RNN,22,2,5,9.062797546386719
+Vanilla RNN,22,2,6,8.554866790771484
+Vanilla RNN,22,2,7,8.756246566772461
+Vanilla RNN,22,3,0,0.0
+Vanilla RNN,22,3,1,0.0
+Vanilla RNN,22,3,2,0.0
+Vanilla RNN,22,3,3,0.0
+Vanilla RNN,22,3,4,8.876937866210938
+Vanilla RNN,22,3,5,8.296836853027344
+Vanilla RNN,22,3,6,8.330262184143066
+Vanilla RNN,22,3,7,8.870702743530273
+Vanilla RNN,22,4,0,0.0
+Vanilla RNN,22,4,1,0.0
+Vanilla RNN,22,4,2,0.0
+Vanilla RNN,22,4,3,0.0
+Vanilla RNN,22,4,4,0.0
+Vanilla RNN,22,4,5,9.841934204101562
+Vanilla RNN,22,4,6,8.69301700592041
+Vanilla RNN,22,4,7,8.511526107788086
+Vanilla RNN,22,5,0,0.0
+Vanilla RNN,22,5,1,0.0
+Vanilla RNN,22,5,2,0.0
+Vanilla RNN,22,5,3,0.0
+Vanilla RNN,22,5,4,0.0
+Vanilla RNN,22,5,5,0.0
+Vanilla RNN,22,5,6,8.423333168029785
+Vanilla RNN,22,5,7,7.189816951751709
+Vanilla RNN,33,0,0,0.0
+Vanilla RNN,33,0,1,10.554365158081055
+Vanilla RNN,33,0,2,9.363153457641602
+Vanilla RNN,33,0,3,7.253678798675537
+Vanilla RNN,33,0,4,7.038475036621094
+Vanilla RNN,33,0,5,6.852145195007324
+Vanilla RNN,33,0,6,6.91655969619751
+Vanilla RNN,33,0,7,7.403088569641113
+Vanilla RNN,33,1,0,0.0
+Vanilla RNN,33,1,1,0.0
+Vanilla RNN,33,1,2,8.023911476135254
+Vanilla RNN,33,1,3,6.793668746948242
+Vanilla RNN,33,1,4,6.798917770385742
+Vanilla RNN,33,1,5,6.630485534667969
+Vanilla RNN,33,1,6,6.9231438636779785
+Vanilla RNN,33,1,7,7.412525177001953
+Vanilla RNN,33,2,0,0.0
+Vanilla RNN,33,2,1,0.0
+Vanilla RNN,33,2,2,0.0
+Vanilla RNN,33,2,3,12.105109214782715
+Vanilla RNN,33,2,4,7.780797481536865
+Vanilla RNN,33,2,5,7.051273345947266
+Vanilla RNN,33,2,6,8.320406913757324
+Vanilla RNN,33,2,7,8.652210235595703
+Vanilla RNN,33,3,0,0.0
+Vanilla RNN,33,3,1,0.0
+Vanilla RNN,33,3,2,0.0
+Vanilla RNN,33,3,3,0.0
+Vanilla RNN,33,3,4,8.171026229858398
+Vanilla RNN,33,3,5,7.263772964477539
+Vanilla RNN,33,3,6,8.43364143371582
+Vanilla RNN,33,3,7,8.649642944335938
+Vanilla RNN,33,4,0,0.0
+Vanilla RNN,33,4,1,0.0
+Vanilla RNN,33,4,2,0.0
+Vanilla RNN,33,4,3,0.0
+Vanilla RNN,33,4,4,0.0
+Vanilla RNN,33,4,5,10.580263137817383
+Vanilla RNN,33,4,6,8.706278800964355
+Vanilla RNN,33,4,7,6.783447265625
+Vanilla RNN,33,5,0,0.0
+Vanilla RNN,33,5,1,0.0
+Vanilla RNN,33,5,2,0.0
+Vanilla RNN,33,5,3,0.0
+Vanilla RNN,33,5,4,0.0
+Vanilla RNN,33,5,5,0.0
+Vanilla RNN,33,5,6,7.424023628234863
+Vanilla RNN,33,5,7,6.626256942749023
+GRU,11,0,0,0.0
+GRU,11,0,1,13.153873443603516
+GRU,11,0,2,10.46351432800293
+GRU,11,0,3,9.187692642211914
+GRU,11,0,4,9.513503074645996
+GRU,11,0,5,9.299339294433594
+GRU,11,0,6,9.17232894897461
+GRU,11,0,7,9.47422981262207
+GRU,11,1,0,0.0
+GRU,11,1,1,0.0
+GRU,11,1,2,11.053016662597656
+GRU,11,1,3,9.097074508666992
+GRU,11,1,4,9.573381423950195
+GRU,11,1,5,9.320917129516602
+GRU,11,1,6,9.169868469238281
+GRU,11,1,7,9.472631454467773
+GRU,11,2,0,0.0
+GRU,11,2,1,0.0
+GRU,11,2,2,0.0
+GRU,11,2,3,10.68085765838623
+GRU,11,2,4,9.196105003356934
+GRU,11,2,5,9.014480590820312
+GRU,11,2,6,9.095623016357422
+GRU,11,2,7,9.392342567443848
+GRU,11,3,0,0.0
+GRU,11,3,1,0.0
+GRU,11,3,2,0.0
+GRU,11,3,3,0.0
+GRU,11,3,4,9.604096412658691
+GRU,11,3,5,8.961358070373535
+GRU,11,3,6,9.048062324523926
+GRU,11,3,7,9.347843170166016
+GRU,11,4,0,0.0
+GRU,11,4,1,0.0
+GRU,11,4,2,0.0
+GRU,11,4,3,0.0
+GRU,11,4,4,0.0
+GRU,11,4,5,8.467769622802734
+GRU,11,4,6,6.331241607666016
+GRU,11,4,7,5.357248306274414
+GRU,11,5,0,0.0
+GRU,11,5,1,0.0
+GRU,11,5,2,0.0
+GRU,11,5,3,0.0
+GRU,11,5,4,0.0
+GRU,11,5,5,0.0
+GRU,11,5,6,6.883640289306641
+GRU,11,5,7,5.729090690612793
+GRU,22,0,0,0.0
+GRU,22,0,1,12.588913917541504
+GRU,22,0,2,9.190804481506348
+GRU,22,0,3,8.049481391906738
+GRU,22,0,4,8.792082786560059
+GRU,22,0,5,8.671287536621094
+GRU,22,0,6,9.200701713562012
+GRU,22,0,7,10.39327621459961
+GRU,22,1,0,0.0
+GRU,22,1,1,0.0
+GRU,22,1,2,8.788619041442871
+GRU,22,1,3,8.106976509094238
+GRU,22,1,4,8.83544921875
+GRU,22,1,5,8.682113647460938
+GRU,22,1,6,9.195850372314453
+GRU,22,1,7,10.384048461914062
+GRU,22,2,0,0.0
+GRU,22,2,1,0.0
+GRU,22,2,2,0.0
+GRU,22,2,3,11.168334007263184
+GRU,22,2,4,9.515801429748535
+GRU,22,2,5,8.711227416992188
+GRU,22,2,6,8.632678031921387
+GRU,22,2,7,9.373404502868652
+GRU,22,3,0,0.0
+GRU,22,3,1,0.0
+GRU,22,3,2,0.0
+GRU,22,3,3,0.0
+GRU,22,3,4,9.967628479003906
+GRU,22,3,5,8.718083381652832
+GRU,22,3,6,8.582544326782227
+GRU,22,3,7,9.328716278076172
+GRU,22,4,0,0.0
+GRU,22,4,1,0.0
+GRU,22,4,2,0.0
+GRU,22,4,3,0.0
+GRU,22,4,4,0.0
+GRU,22,4,5,8.832292556762695
+GRU,22,4,6,6.709238052368164
+GRU,22,4,7,5.964303016662598
+GRU,22,5,0,0.0
+GRU,22,5,1,0.0
+GRU,22,5,2,0.0
+GRU,22,5,3,0.0
+GRU,22,5,4,0.0
+GRU,22,5,5,0.0
+GRU,22,5,6,6.4592084884643555
+GRU,22,5,7,5.271107196807861
+GRU,33,0,0,0.0
+GRU,33,0,1,12.078913688659668
+GRU,33,0,2,9.084247589111328
+GRU,33,0,3,9.44040584564209
+GRU,33,0,4,9.68044662475586
+GRU,33,0,5,9.62369155883789
+GRU,33,0,6,10.04653549194336
+GRU,33,0,7,10.229071617126465
+GRU,33,1,0,0.0
+GRU,33,1,1,0.0
+GRU,33,1,2,9.417743682861328
+GRU,33,1,3,9.520237922668457
+GRU,33,1,4,9.709272384643555
+GRU,33,1,5,9.628311157226562
+GRU,33,1,6,10.054991722106934
+GRU,33,1,7,10.236053466796875
+GRU,33,2,0,0.0
+GRU,33,2,1,0.0
+GRU,33,2,2,0.0
+GRU,33,2,3,9.34866714477539
+GRU,33,2,4,8.344001770019531
+GRU,33,2,5,8.110649108886719
+GRU,33,2,6,8.55105972290039
+GRU,33,2,7,8.731557846069336
+GRU,33,3,0,0.0
+GRU,33,3,1,0.0
+GRU,33,3,2,0.0
+GRU,33,3,3,0.0
+GRU,33,3,4,8.935237884521484
+GRU,33,3,5,8.056085586547852
+GRU,33,3,6,8.5404691696167
+GRU,33,3,7,8.707662582397461
+GRU,33,4,0,0.0
+GRU,33,4,1,0.0
+GRU,33,4,2,0.0
+GRU,33,4,3,0.0
+GRU,33,4,4,0.0
+GRU,33,4,5,8.306408882141113
+GRU,33,4,6,5.623773097991943
+GRU,33,4,7,5.482190132141113
+GRU,33,5,0,0.0
+GRU,33,5,1,0.0
+GRU,33,5,2,0.0
+GRU,33,5,3,0.0
+GRU,33,5,4,0.0
+GRU,33,5,5,0.0
+GRU,33,5,6,5.4729814529418945
+GRU,33,5,7,5.1099629402160645
+Selective State Space Model,11,0,0,0.0
+Selective State Space Model,11,0,1,13.742966651916504
+Selective State Space Model,11,0,2,6.222437381744385
+Selective State Space Model,11,0,3,4.537493705749512
+Selective State Space Model,11,0,4,7.872012138366699
+Selective State Space Model,11,0,5,6.543446063995361
+Selective State Space Model,11,0,6,7.406989097595215
+Selective State Space Model,11,0,7,11.220197677612305
+Selective State Space Model,11,1,0,0.0
+Selective State Space Model,11,1,1,0.0
+Selective State Space Model,11,1,2,10.252859115600586
+Selective State Space Model,11,1,3,4.583266258239746
+Selective State Space Model,11,1,4,7.98989725112915
+Selective State Space Model,11,1,5,6.563158988952637
+Selective State Space Model,11,1,6,7.432842254638672
+Selective State Space Model,11,1,7,11.317731857299805
+Selective State Space Model,11,2,0,0.0
+Selective State Space Model,11,2,1,0.0
+Selective State Space Model,11,2,2,0.0
+Selective State Space Model,11,2,3,10.463048934936523
+Selective State Space Model,11,2,4,4.842937469482422
+Selective State Space Model,11,2,5,6.1865434646606445
+Selective State Space Model,11,2,6,6.902310848236084
+Selective State Space Model,11,2,7,9.794478416442871
+Selective State Space Model,11,3,0,0.0
+Selective State Space Model,11,3,1,0.0
+Selective State Space Model,11,3,2,0.0
+Selective State Space Model,11,3,3,0.0
+Selective State Space Model,11,3,4,13.500530242919922
+Selective State Space Model,11,3,5,6.106305122375488
+Selective State Space Model,11,3,6,6.78770637512207
+Selective State Space Model,11,3,7,9.661154747009277
+Selective State Space Model,11,4,0,0.0
+Selective State Space Model,11,4,1,0.0
+Selective State Space Model,11,4,2,0.0
+Selective State Space Model,11,4,3,0.0
+Selective State Space Model,11,4,4,0.0
+Selective State Space Model,11,4,5,13.320972442626953
+Selective State Space Model,11,4,6,3.545860767364502
+Selective State Space Model,11,4,7,6.100313663482666
+Selective State Space Model,11,5,0,0.0
+Selective State Space Model,11,5,1,0.0
+Selective State Space Model,11,5,2,0.0
+Selective State Space Model,11,5,3,0.0
+Selective State Space Model,11,5,4,0.0
+Selective State Space Model,11,5,5,0.0
+Selective State Space Model,11,5,6,11.905686378479004
+Selective State Space Model,11,5,7,6.086197853088379
+Selective State Space Model,22,0,0,0.0
+Selective State Space Model,22,0,1,13.479595184326172
+Selective State Space Model,22,0,2,4.140753746032715
+Selective State Space Model,22,0,3,4.982593059539795
+Selective State Space Model,22,0,4,4.094027519226074
+Selective State Space Model,22,0,5,5.546951770782471
+Selective State Space Model,22,0,6,6.304937839508057
+Selective State Space Model,22,0,7,9.914680480957031
+Selective State Space Model,22,1,0,0.0
+Selective State Space Model,22,1,1,0.0
+Selective State Space Model,22,1,2,11.270017623901367
+Selective State Space Model,22,1,3,5.619036674499512
+Selective State Space Model,22,1,4,4.465121746063232
+Selective State Space Model,22,1,5,5.994632720947266
+Selective State Space Model,22,1,6,6.608684539794922
+Selective State Space Model,22,1,7,9.78000259399414
+Selective State Space Model,22,2,0,0.0
+Selective State Space Model,22,2,1,0.0
+Selective State Space Model,22,2,2,0.0
+Selective State Space Model,22,2,3,12.674396514892578
+Selective State Space Model,22,2,4,9.896527290344238
+Selective State Space Model,22,2,5,6.455146312713623
+Selective State Space Model,22,2,6,7.673118591308594
+Selective State Space Model,22,2,7,11.811102867126465
+Selective State Space Model,22,3,0,0.0
+Selective State Space Model,22,3,1,0.0
+Selective State Space Model,22,3,2,0.0
+Selective State Space Model,22,3,3,0.0
+Selective State Space Model,22,3,4,12.244686126708984
+Selective State Space Model,22,3,5,6.480605125427246
+Selective State Space Model,22,3,6,7.684179782867432
+Selective State Space Model,22,3,7,11.771495819091797
+Selective State Space Model,22,4,0,0.0
+Selective State Space Model,22,4,1,0.0
+Selective State Space Model,22,4,2,0.0
+Selective State Space Model,22,4,3,0.0
+Selective State Space Model,22,4,4,0.0
+Selective State Space Model,22,4,5,10.482340812683105
+Selective State Space Model,22,4,6,2.9220383167266846
+Selective State Space Model,22,4,7,6.412633419036865
+Selective State Space Model,22,5,0,0.0
+Selective State Space Model,22,5,1,0.0
+Selective State Space Model,22,5,2,0.0
+Selective State Space Model,22,5,3,0.0
+Selective State Space Model,22,5,4,0.0
+Selective State Space Model,22,5,5,0.0
+Selective State Space Model,22,5,6,9.281258583068848
+Selective State Space Model,22,5,7,6.2776994705200195
+Selective State Space Model,33,0,0,0.0
+Selective State Space Model,33,0,1,15.6939115524292
+Selective State Space Model,33,0,2,7.52555513381958
+Selective State Space Model,33,0,3,10.790840148925781
+Selective State Space Model,33,0,4,10.889613151550293
+Selective State Space Model,33,0,5,2.840303421020508
+Selective State Space Model,33,0,6,4.187804222106934
+Selective State Space Model,33,0,7,16.91397476196289
+Selective State Space Model,33,1,0,0.0
+Selective State Space Model,33,1,1,0.0
+Selective State Space Model,33,1,2,14.28026294708252
+Selective State Space Model,33,1,3,10.610183715820312
+Selective State Space Model,33,1,4,10.826258659362793
+Selective State Space Model,33,1,5,2.839435577392578
+Selective State Space Model,33,1,6,4.185335636138916
+Selective State Space Model,33,1,7,16.883434295654297
+Selective State Space Model,33,2,0,0.0
+Selective State Space Model,33,2,1,0.0
+Selective State Space Model,33,2,2,0.0
+Selective State Space Model,33,2,3,12.018447875976562
+Selective State Space Model,33,2,4,7.4819793701171875
+Selective State Space Model,33,2,5,1.7664988040924072
+Selective State Space Model,33,2,6,2.54392671585083
+Selective State Space Model,33,2,7,11.317288398742676
+Selective State Space Model,33,3,0,0.0
+Selective State Space Model,33,3,1,0.0
+Selective State Space Model,33,3,2,0.0
+Selective State Space Model,33,3,3,0.0
+Selective State Space Model,33,3,4,10.269071578979492
+Selective State Space Model,33,3,5,1.5771063566207886
+Selective State Space Model,33,3,6,2.23372483253479
+Selective State Space Model,33,3,7,10.91585922241211
+Selective State Space Model,33,4,0,0.0
+Selective State Space Model,33,4,1,0.0
+Selective State Space Model,33,4,2,0.0
+Selective State Space Model,33,4,3,0.0
+Selective State Space Model,33,4,4,0.0
+Selective State Space Model,33,4,5,14.047962188720703
+Selective State Space Model,33,4,6,3.9875521659851074
+Selective State Space Model,33,4,7,9.262432098388672
+Selective State Space Model,33,5,0,0.0
+Selective State Space Model,33,5,1,0.0
+Selective State Space Model,33,5,2,0.0
+Selective State Space Model,33,5,3,0.0
+Selective State Space Model,33,5,4,0.0
+Selective State Space Model,33,5,5,0.0
+Selective State Space Model,33,5,6,16.507863998413086
+Selective State Space Model,33,5,7,9.99356460571289
+Dense Transformer,11,0,0,0.0
+Dense Transformer,11,0,1,5.139035224914551
+Dense Transformer,11,0,2,7.441986560821533
+Dense Transformer,11,0,3,9.542123794555664
+Dense Transformer,11,0,4,10.360103607177734
+Dense Transformer,11,0,5,8.007800102233887
+Dense Transformer,11,0,6,8.896571159362793
+Dense Transformer,11,0,7,9.927323341369629
+Dense Transformer,11,1,0,0.0
+Dense Transformer,11,1,1,0.0
+Dense Transformer,11,1,2,7.9514570236206055
+Dense Transformer,11,1,3,9.4735689163208
+Dense Transformer,11,1,4,9.305423736572266
+Dense Transformer,11,1,5,7.965163230895996
+Dense Transformer,11,1,6,8.724041938781738
+Dense Transformer,11,1,7,9.927251815795898
+Dense Transformer,11,2,0,0.0
+Dense Transformer,11,2,1,0.0
+Dense Transformer,11,2,2,0.0
+Dense Transformer,11,2,3,6.206994533538818
+Dense Transformer,11,2,4,7.8965349197387695
+Dense Transformer,11,2,5,9.770009994506836
+Dense Transformer,11,2,6,8.61777114868164
+Dense Transformer,11,2,7,9.0114164352417
+Dense Transformer,11,3,0,0.0
+Dense Transformer,11,3,1,0.0
+Dense Transformer,11,3,2,0.0
+Dense Transformer,11,3,3,0.0
+Dense Transformer,11,3,4,8.641340255737305
+Dense Transformer,11,3,5,9.690899848937988
+Dense Transformer,11,3,6,7.961582183837891
+Dense Transformer,11,3,7,9.039552688598633
+Dense Transformer,11,4,0,0.0
+Dense Transformer,11,4,1,0.0
+Dense Transformer,11,4,2,0.0
+Dense Transformer,11,4,3,0.0
+Dense Transformer,11,4,4,0.0
+Dense Transformer,11,4,5,6.472955703735352
+Dense Transformer,11,4,6,5.541950702667236
+Dense Transformer,11,4,7,6.2206573486328125
+Dense Transformer,11,5,0,0.0
+Dense Transformer,11,5,1,0.0
+Dense Transformer,11,5,2,0.0
+Dense Transformer,11,5,3,0.0
+Dense Transformer,11,5,4,0.0
+Dense Transformer,11,5,5,0.0
+Dense Transformer,11,5,6,9.815592765808105
+Dense Transformer,11,5,7,6.136357307434082
+Dense Transformer,22,0,0,0.0
+Dense Transformer,22,0,1,1.7593477964401245
+Dense Transformer,22,0,2,13.042007446289062
+Dense Transformer,22,0,3,7.724121570587158
+Dense Transformer,22,0,4,9.220643997192383
+Dense Transformer,22,0,5,8.58493423461914
+Dense Transformer,22,0,6,7.2486748695373535
+Dense Transformer,22,0,7,9.575481414794922
+Dense Transformer,22,1,0,0.0
+Dense Transformer,22,1,1,0.0
+Dense Transformer,22,1,2,13.013896942138672
+Dense Transformer,22,1,3,7.924590110778809
+Dense Transformer,22,1,4,9.28369140625
+Dense Transformer,22,1,5,8.57614517211914
+Dense Transformer,22,1,6,7.153061866760254
+Dense Transformer,22,1,7,9.568218231201172
+Dense Transformer,22,2,0,0.0
+Dense Transformer,22,2,1,0.0
+Dense Transformer,22,2,2,0.0
+Dense Transformer,22,2,3,4.899637699127197
+Dense Transformer,22,2,4,9.852124214172363
+Dense Transformer,22,2,5,8.608179092407227
+Dense Transformer,22,2,6,9.943713188171387
+Dense Transformer,22,2,7,10.222667694091797
+Dense Transformer,22,3,0,0.0
+Dense Transformer,22,3,1,0.0
+Dense Transformer,22,3,2,0.0
+Dense Transformer,22,3,3,0.0
+Dense Transformer,22,3,4,10.73436450958252
+Dense Transformer,22,3,5,8.507094383239746
+Dense Transformer,22,3,6,9.958271980285645
+Dense Transformer,22,3,7,10.171262741088867
+Dense Transformer,22,4,0,0.0
+Dense Transformer,22,4,1,0.0
+Dense Transformer,22,4,2,0.0
+Dense Transformer,22,4,3,0.0
+Dense Transformer,22,4,4,0.0
+Dense Transformer,22,4,5,6.21812629699707
+Dense Transformer,22,4,6,5.729150772094727
+Dense Transformer,22,4,7,6.1813788414001465
+Dense Transformer,22,5,0,0.0
+Dense Transformer,22,5,1,0.0
+Dense Transformer,22,5,2,0.0
+Dense Transformer,22,5,3,0.0
+Dense Transformer,22,5,4,0.0
+Dense Transformer,22,5,5,0.0
+Dense Transformer,22,5,6,7.383975028991699
+Dense Transformer,22,5,7,5.811346054077148
+Dense Transformer,33,0,0,0.0
+Dense Transformer,33,0,1,5.938453674316406
+Dense Transformer,33,0,2,8.181943893432617
+Dense Transformer,33,0,3,9.534896850585938
+Dense Transformer,33,0,4,8.585165977478027
+Dense Transformer,33,0,5,9.582921981811523
+Dense Transformer,33,0,6,7.937578201293945
+Dense Transformer,33,0,7,10.27291202545166
+Dense Transformer,33,1,0,0.0
+Dense Transformer,33,1,1,0.0
+Dense Transformer,33,1,2,7.727629661560059
+Dense Transformer,33,1,3,5.801040172576904
+Dense Transformer,33,1,4,7.604373455047607
+Dense Transformer,33,1,5,8.982802391052246
+Dense Transformer,33,1,6,8.729957580566406
+Dense Transformer,33,1,7,10.148600578308105
+Dense Transformer,33,2,0,0.0
+Dense Transformer,33,2,1,0.0
+Dense Transformer,33,2,2,0.0
+Dense Transformer,33,2,3,11.068288803100586
+Dense Transformer,33,2,4,8.669469833374023
+Dense Transformer,33,2,5,8.021177291870117
+Dense Transformer,33,2,6,3.7834813594818115
+Dense Transformer,33,2,7,9.18704605102539
+Dense Transformer,33,3,0,0.0
+Dense Transformer,33,3,1,0.0
+Dense Transformer,33,3,2,0.0
+Dense Transformer,33,3,3,0.0
+Dense Transformer,33,3,4,11.104269027709961
+Dense Transformer,33,3,5,7.868243217468262
+Dense Transformer,33,3,6,2.8160526752471924
+Dense Transformer,33,3,7,9.22284984588623
+Dense Transformer,33,4,0,0.0
+Dense Transformer,33,4,1,0.0
+Dense Transformer,33,4,2,0.0
+Dense Transformer,33,4,3,0.0
+Dense Transformer,33,4,4,0.0
+Dense Transformer,33,4,5,6.63754940032959
+Dense Transformer,33,4,6,4.455012321472168
+Dense Transformer,33,4,7,7.3284125328063965
+Dense Transformer,33,5,0,0.0
+Dense Transformer,33,5,1,0.0
+Dense Transformer,33,5,2,0.0
+Dense Transformer,33,5,3,0.0
+Dense Transformer,33,5,4,0.0
+Dense Transformer,33,5,5,0.0
+Dense Transformer,33,5,6,4.049124240875244
+Dense Transformer,33,5,7,6.983164310455322
+Sparse MoE Transformer,11,0,0,0.0
+Sparse MoE Transformer,11,0,1,4.678828239440918
+Sparse MoE Transformer,11,0,2,3.808561086654663
+Sparse MoE Transformer,11,0,3,4.384536266326904
+Sparse MoE Transformer,11,0,4,5.382024765014648
+Sparse MoE Transformer,11,0,5,8.235600471496582
+Sparse MoE Transformer,11,0,6,7.093971252441406
+Sparse MoE Transformer,11,0,7,10.415515899658203
+Sparse MoE Transformer,11,1,0,0.0
+Sparse MoE Transformer,11,1,1,0.0
+Sparse MoE Transformer,11,1,2,5.193024635314941
+Sparse MoE Transformer,11,1,3,4.360023021697998
+Sparse MoE Transformer,11,1,4,5.74992561340332
+Sparse MoE Transformer,11,1,5,8.894339561462402
+Sparse MoE Transformer,11,1,6,6.4902472496032715
+Sparse MoE Transformer,11,1,7,10.427925109863281
+Sparse MoE Transformer,11,2,0,0.0
+Sparse MoE Transformer,11,2,1,0.0
+Sparse MoE Transformer,11,2,2,0.0
+Sparse MoE Transformer,11,2,3,9.942666053771973
+Sparse MoE Transformer,11,2,4,10.780155181884766
+Sparse MoE Transformer,11,2,5,9.756814956665039
+Sparse MoE Transformer,11,2,6,9.559514045715332
+Sparse MoE Transformer,11,2,7,9.889698028564453
+Sparse MoE Transformer,11,3,0,0.0
+Sparse MoE Transformer,11,3,1,0.0
+Sparse MoE Transformer,11,3,2,0.0
+Sparse MoE Transformer,11,3,3,0.0
+Sparse MoE Transformer,11,3,4,10.697057723999023
+Sparse MoE Transformer,11,3,5,8.01950454711914
+Sparse MoE Transformer,11,3,6,9.966859817504883
+Sparse MoE Transformer,11,3,7,10.01379108428955
+Sparse MoE Transformer,11,4,0,0.0
+Sparse MoE Transformer,11,4,1,0.0
+Sparse MoE Transformer,11,4,2,0.0
+Sparse MoE Transformer,11,4,3,0.0
+Sparse MoE Transformer,11,4,4,0.0
+Sparse MoE Transformer,11,4,5,8.59439468383789
+Sparse MoE Transformer,11,4,6,3.401301383972168
+Sparse MoE Transformer,11,4,7,5.537309169769287
+Sparse MoE Transformer,11,5,0,0.0
+Sparse MoE Transformer,11,5,1,0.0
+Sparse MoE Transformer,11,5,2,0.0
+Sparse MoE Transformer,11,5,3,0.0
+Sparse MoE Transformer,11,5,4,0.0
+Sparse MoE Transformer,11,5,5,0.0
+Sparse MoE Transformer,11,5,6,8.176158905029297
+Sparse MoE Transformer,11,5,7,5.481237411499023
+Sparse MoE Transformer,22,0,0,0.0
+Sparse MoE Transformer,22,0,1,8.669035911560059
+Sparse MoE Transformer,22,0,2,3.8222899436950684
+Sparse MoE Transformer,22,0,3,4.938983917236328
+Sparse MoE Transformer,22,0,4,3.94535493850708
+Sparse MoE Transformer,22,0,5,8.361085891723633
+Sparse MoE Transformer,22,0,6,4.417464733123779
+Sparse MoE Transformer,22,0,7,10.119251251220703
+Sparse MoE Transformer,22,1,0,0.0
+Sparse MoE Transformer,22,1,1,0.0
+Sparse MoE Transformer,22,1,2,9.056822776794434
+Sparse MoE Transformer,22,1,3,4.425045967102051
+Sparse MoE Transformer,22,1,4,3.6305365562438965
+Sparse MoE Transformer,22,1,5,8.175180435180664
+Sparse MoE Transformer,22,1,6,4.600159168243408
+Sparse MoE Transformer,22,1,7,10.105066299438477
+Sparse MoE Transformer,22,2,0,0.0
+Sparse MoE Transformer,22,2,1,0.0
+Sparse MoE Transformer,22,2,2,0.0
+Sparse MoE Transformer,22,2,3,9.135758399963379
+Sparse MoE Transformer,22,2,4,7.284275054931641
+Sparse MoE Transformer,22,2,5,9.561389923095703
+Sparse MoE Transformer,22,2,6,6.369763374328613
+Sparse MoE Transformer,22,2,7,9.719393730163574
+Sparse MoE Transformer,22,3,0,0.0
+Sparse MoE Transformer,22,3,1,0.0
+Sparse MoE Transformer,22,3,2,0.0
+Sparse MoE Transformer,22,3,3,0.0
+Sparse MoE Transformer,22,3,4,8.094075202941895
+Sparse MoE Transformer,22,3,5,9.324835777282715
+Sparse MoE Transformer,22,3,6,6.5352983474731445
+Sparse MoE Transformer,22,3,7,9.708837509155273
+Sparse MoE Transformer,22,4,0,0.0
+Sparse MoE Transformer,22,4,1,0.0
+Sparse MoE Transformer,22,4,2,0.0
+Sparse MoE Transformer,22,4,3,0.0
+Sparse MoE Transformer,22,4,4,0.0
+Sparse MoE Transformer,22,4,5,7.116726875305176
+Sparse MoE Transformer,22,4,6,4.865072727203369
+Sparse MoE Transformer,22,4,7,5.116054058074951
+Sparse MoE Transformer,22,5,0,0.0
+Sparse MoE Transformer,22,5,1,0.0
+Sparse MoE Transformer,22,5,2,0.0
+Sparse MoE Transformer,22,5,3,0.0
+Sparse MoE Transformer,22,5,4,0.0
+Sparse MoE Transformer,22,5,5,0.0
+Sparse MoE Transformer,22,5,6,7.215120315551758
+Sparse MoE Transformer,22,5,7,4.883135795593262
+Sparse MoE Transformer,33,0,0,0.0
+Sparse MoE Transformer,33,0,1,4.703368186950684
+Sparse MoE Transformer,33,0,2,8.81418228149414
+Sparse MoE Transformer,33,0,3,4.845872402191162
+Sparse MoE Transformer,33,0,4,5.592435836791992
+Sparse MoE Transformer,33,0,5,3.739901542663574
+Sparse MoE Transformer,33,0,6,3.8258368968963623
+Sparse MoE Transformer,33,0,7,10.676328659057617
+Sparse MoE Transformer,33,1,0,0.0
+Sparse MoE Transformer,33,1,1,0.0
+Sparse MoE Transformer,33,1,2,9.176734924316406
+Sparse MoE Transformer,33,1,3,7.737052917480469
+Sparse MoE Transformer,33,1,4,7.190036773681641
+Sparse MoE Transformer,33,1,5,4.7781982421875
+Sparse MoE Transformer,33,1,6,6.227312088012695
+Sparse MoE Transformer,33,1,7,10.75665283203125
+Sparse MoE Transformer,33,2,0,0.0
+Sparse MoE Transformer,33,2,1,0.0
+Sparse MoE Transformer,33,2,2,0.0
+Sparse MoE Transformer,33,2,3,10.990489959716797
+Sparse MoE Transformer,33,2,4,9.68087387084961
+Sparse MoE Transformer,33,2,5,5.812284469604492
+Sparse MoE Transformer,33,2,6,8.346186637878418
+Sparse MoE Transformer,33,2,7,9.158685684204102
+Sparse MoE Transformer,33,3,0,0.0
+Sparse MoE Transformer,33,3,1,0.0
+Sparse MoE Transformer,33,3,2,0.0
+Sparse MoE Transformer,33,3,3,0.0
+Sparse MoE Transformer,33,3,4,10.801162719726562
+Sparse MoE Transformer,33,3,5,4.60689115524292
+Sparse MoE Transformer,33,3,6,7.880053520202637
+Sparse MoE Transformer,33,3,7,9.134398460388184
+Sparse MoE Transformer,33,4,0,0.0
+Sparse MoE Transformer,33,4,1,0.0
+Sparse MoE Transformer,33,4,2,0.0
+Sparse MoE Transformer,33,4,3,0.0
+Sparse MoE Transformer,33,4,4,0.0
+Sparse MoE Transformer,33,4,5,8.931580543518066
+Sparse MoE Transformer,33,4,6,4.667751789093018
+Sparse MoE Transformer,33,4,7,4.927488327026367
+Sparse MoE Transformer,33,5,0,0.0
+Sparse MoE Transformer,33,5,1,0.0
+Sparse MoE Transformer,33,5,2,0.0
+Sparse MoE Transformer,33,5,3,0.0
+Sparse MoE Transformer,33,5,4,0.0
+Sparse MoE Transformer,33,5,5,0.0
+Sparse MoE Transformer,33,5,6,8.451977729797363
+Sparse MoE Transformer,33,5,7,4.3947954177856445

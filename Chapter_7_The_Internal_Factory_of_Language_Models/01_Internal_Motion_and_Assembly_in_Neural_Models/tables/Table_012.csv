@@ -1,0 +1,4 @@
+kind,rotation fraction,deformation fraction,axial translation fraction 10deg,pivot offset over radius
+all,0.229,0.566,0.897,0.207
+delta,0.239,0.480,0.897,0.178
+shared,0.230,0.577,0.867,0.276

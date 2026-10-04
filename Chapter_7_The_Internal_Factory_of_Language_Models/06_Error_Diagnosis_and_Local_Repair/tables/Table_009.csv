@@ -1,0 +1,7 @@
+Checkpoint,Description,Held-out accuracy,NLL
+C0,original source checkpoint,57.1%,2.0327
+C1,global local-fault repair,67.9%,1.2625
+C2,"local repair, then coverage expansion",71.4%,0.8651
+C3,continued replay-only training drift,53.6%,2.2948
+C4A,coverage expansion first,67.9%,1.4515
+C4,"coverage expansion, then the same local repair",75.0%,0.9391

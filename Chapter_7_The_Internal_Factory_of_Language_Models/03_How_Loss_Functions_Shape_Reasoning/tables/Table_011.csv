@@ -1,0 +1,8 @@
+World,One-sided frac,Bilateral frac,Nearest normal wall,Tangential radius
+wall2,1.000,0.000,1.148,9.720
+full ce,0.988,0.000,2.034,12.099
+result ce,0.994,0.000,2.075,12.806
+hinge4,1.000,0.000,1.247,8.952
+band3,0.000,1.000,0.335,6.742
+soft09,0.000,1.000,0.232,3.200
+corridor,1.000,0.000,1.868,11.513

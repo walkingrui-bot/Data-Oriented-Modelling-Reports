@@ -1,0 +1,7 @@
+sample_id,tokens,promoted,discarded,discard_rate,reentered,discard_positive_support,discard_negative_support,alive_negative_support
+5,89,56,32,0.5714285714285714,11,16,16,12
+10,40,35,14,0.4,6,9,5,12
+11,55,39,24,0.6153846153846154,7,13,11,10
+12,35,32,21,0.65625,5,15,6,7
+22,49,42,22,0.5238095238095238,10,9,13,8
+26,118,69,46,0.6666666666666666,11,17,29,7

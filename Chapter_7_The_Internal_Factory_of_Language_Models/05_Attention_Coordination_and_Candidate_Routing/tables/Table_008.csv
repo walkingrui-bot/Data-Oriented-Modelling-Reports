@@ -1,0 +1,4 @@
+Cohort,Base acc.,Dual-scale acc.,Rescued / harmed,Mean margin gain,Pair-bootstrap 95% CI
+Train,100%,100%,0 / 0,+0.04583,+0.03148 to +0.06262
+Held-out,57.14%,60.71%,1 / 0,+0.09284,−0.08869 to +0.37359
+Shadow,100%,100%,0 / 0,+0.04224,+0.01953 to +0.07014

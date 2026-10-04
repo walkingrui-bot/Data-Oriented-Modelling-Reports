@@ -1,0 +1,5 @@
+Repair architecture,Target repairs,New regressions,Accuracy,Patch debt
+Global fine-tune,8/8,5,67.86%,0.625
+Global deletion,5/8,7,50.00%,1.400
+Task-bound bypass,8/8,0,85.71%,0.000
+Task-bound sidecar,8/8,0,85.71%,0.000

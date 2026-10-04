@@ -1,0 +1,9 @@
+registry_entry,pair_id,task_mode,repair_family,registered_repair,binding_policy,schema_signature,sidecar_parameters,runtime_contract
+P0_ACT,0,ACT,ASSEMBLY,FFN bypass: 3-7,EXACT_ONLY,EXACT-ONLY: sibling is semantically almost identical; do not fuzzy-bind.,192,commit only if current base output violates registered task mode and route sidecar restores it
+P10_ACT,10,ACT,ASSEMBLY,FFN bypass: 5-7,SCHEMA_FUZZY,Son + goal + sports/news,192,commit only if current base output violates registered task mode and route sidecar restores it
+P25_ACT,25,ACT,ASSEMBLY,FFN bypass: 1,SCHEMA_FUZZY,Charlie Ji + interviewer/reviews,192,commit only if current base output violates registered task mode and route sidecar restores it
+P35_TEXT,35,TEXT,ASSEMBLY,FFN bypass: 3,SCHEMA_FUZZY,DartFX + Spanish + absence of charts slot,192,commit only if current base output violates registered task mode and route sidecar restores it
+P35_ACT,35,ACT,ROUTING,ATTN bypass: 1,SCHEMA_FUZZY,DartFX + Spanish + charts slot,192,commit only if current base output violates registered task mode and route sidecar restores it
+P40_TEXT,40,TEXT,ROUTING,ATTN bypass: 5-7,SCHEMA_FUZZY,RSD1 + rds.com + no explicit API key,192,commit only if current base output violates registered task mode and route sidecar restores it
+P50_TEXT,50,TEXT,ROUTING,ATTN bypass: 4-7,SCHEMA_FUZZY,rds.example.org + key 1231231 + no FastQuery/nickname,192,commit only if current base output violates registered task mode and route sidecar restores it
+P55_ACT,55,ACT,ASSEMBLY,FFN bypass: 5-7,SCHEMA_FUZZY,man + dress + red slot,192,commit only if current base output violates registered task mode and route sidecar restores it

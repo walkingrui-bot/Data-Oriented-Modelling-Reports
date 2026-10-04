@@ -1,0 +1,2 @@
+seed,layers,d_model,heads,selected_layer,trigger_epoch,epochs,sec,train_acc,train_nll,train_margin,train_median,held_acc,held_nll,held_margin,held_median
+7,6,24,4,5,10,55,23.306514978408813,1.0,0.014209150336682796,6.270490911922285,6.546509742736816,0.6071428656578064,2.1670243740081787,1.1309318776641573,4.229538679122925

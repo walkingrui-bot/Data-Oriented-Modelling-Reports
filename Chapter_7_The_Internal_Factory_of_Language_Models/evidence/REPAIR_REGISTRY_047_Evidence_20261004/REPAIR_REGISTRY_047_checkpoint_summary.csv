@@ -1,0 +1,7 @@
+checkpoint_id,heldout_accuracy,active_compatible,retire_redundant,retire_dangerous,needs_migration,variant_current_errors,variant_old_patch_repairs,variant_always_on_regressions
+C0_BASE,0.5714285969734192,8,0,0,0,9,8,1
+C1_GLOBAL_LOCAL_REPAIR,0.6785714030265808,0,8,0,0,9,6,0
+C2_LOCAL_PLUS_COVERAGE,0.7142857313156128,3,5,0,0,9,4,0
+C3_REPLAY_DRIFT,0.5357142686843872,7,1,0,0,9,7,1
+C4A_COVERAGE_FIRST,0.6785714030265808,7,1,0,0,8,6,1
+C4_COVERAGE_THEN_LOCAL,0.75,1,7,0,0,9,5,1

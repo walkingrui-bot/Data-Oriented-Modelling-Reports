@@ -1,0 +1,2 @@
+gap_threshold,test_n,positive_n,negative_n,permission_accuracy,positive_permission_recall,negative_abstention_rate,false_authorizations,wrong_family_authorizations,exact_only_entries
+0.10132827076706014,40,16,24,0.725,0.3125,1.0,0,0,1

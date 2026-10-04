@@ -1,0 +1,2 @@
+C2_accuracy,C4_accuracy,prediction_disagreements,correctness_disagreements,mean_abs_margin_difference,max_abs_margin_difference,parameter_rms_difference,registry_lifecycle_status_differences
+0.7142857313156128,0.75,3,3,1.6337783336639404,10.011500358581543,0.0031208265117456274,2

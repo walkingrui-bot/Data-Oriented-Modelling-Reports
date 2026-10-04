@@ -1,0 +1,5 @@
+Transition type,n,Mean angle,Mean correct-signed margin change
+NN,137,1.1596 rad (66.44°),+1.015
+NR,150,1.1378 rad (65.19°),+11.117
+RN,90,1.1672 rad (66.88°),-9.140
+RR,263,1.1515 rad (65.97°),+2.082

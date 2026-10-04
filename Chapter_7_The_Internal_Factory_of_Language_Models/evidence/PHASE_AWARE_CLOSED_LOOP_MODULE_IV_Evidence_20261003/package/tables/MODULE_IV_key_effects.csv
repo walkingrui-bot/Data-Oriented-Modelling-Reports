@@ -1,0 +1,7 @@
+finding,effect,lo,hi,scope
+phase+entropy vs ramp-up,0.00078125,-0.00546875,0.00703125,normal seed7
+gradient-joint router vs ramp-up,-0.0359375,-0.05390625,-0.01953125,normal seed7
+causal-calibrated vs gradient router,0.02421875,0.00390625,0.04765625,seed7 routing
+phase+entropy vs ramp-up after hard fault,0.00234375,-0.00546875,0.01015625,hard route knock
+phase+entropy vs ramp-up transfer seed11,-0.00625,-0.0109375,-0.00234375,transfer
+phase+entropy vs ramp-up transfer affine,0.0015625,-0.0015625,0.0046875,transfer

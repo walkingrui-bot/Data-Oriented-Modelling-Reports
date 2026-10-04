@@ -1,0 +1,2 @@
+train_positive_variants,test_n,base_accuracy,final_accuracy,positive_test_variants,positive_authorized,positive_base_errors,positive_repairs,positive_commits,positive_authorized_error_repair_rate,negative_controls,negative_false_authorizations,negative_commits,new_regressions
+24,40,0.5,0.65,16,14,11,6,6,0.6666666666666666,24,0,0,0

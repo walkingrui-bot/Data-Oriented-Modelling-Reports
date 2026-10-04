@@ -1,0 +1,7 @@
+variant,group,condition,exact,acc
+no_result,input_b,none,0.996875,0.99765625
+no_result,input_b,swap,0.0,0.157421875
+no_step,result_value,none,0.9890625,0.990234375
+no_step,result_value,swap,0.009375,0.252734375
+post,result_marker,none,0.615625,0.746484375
+post,result_marker,swap,0.04375,0.18515625

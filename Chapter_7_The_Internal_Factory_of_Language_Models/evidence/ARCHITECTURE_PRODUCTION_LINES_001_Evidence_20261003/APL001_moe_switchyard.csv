@@ -1,0 +1,12 @@
+metric,value
+stale expert identity penalty pp,-19.66
+stale mixture weights penalty pp,-3.13
+identity/weight penalty magnitude ratio,6.281150159744409
+native vs random routing advantage pp (drift),7.8
+native vs random routing advantage pp (clean),15.06
+oracle over native pp (drift),24.31
+oracle over native pp (clean),17.01
+native closed-loop recovery %,43.06
+global oracle recovery %,74.0
+global anti-oracle recovery %,1.65
+exact oracle pair selected %,19.0

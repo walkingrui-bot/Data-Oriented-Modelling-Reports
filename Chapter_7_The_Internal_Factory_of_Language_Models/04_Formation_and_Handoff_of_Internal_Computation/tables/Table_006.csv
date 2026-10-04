@@ -1,0 +1,7 @@
+Training objective,Result acc,All-results acc,STEP swap ΔCE
+full,0.806,0.342,1.848
+no b loss,0.380,0.001,0.000
+b x5,0.284,0.000,0.021
+no step target,0.363,0.002,0.301
+no result marker target,0.981,0.910,0.908
+result value x5,0.450,0.000,0.153

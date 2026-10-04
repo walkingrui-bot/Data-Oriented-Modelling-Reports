@@ -1,6 +1,6 @@
 # Chapter 6 — Model Perception and Control: Continuing Chapters 2, 3 and 5
 
-[All chapters](../README.md) · [Previous: Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md)
+[All chapters](../README.md) · [Previous: Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md) · [Next: Chapter 7](../Chapter_7_The_Internal_Factory_of_Language_Models/README.md)
 
 This chapter directly continues Chapters 2, 3 and 5, bringing together generative-state control, experimental measurement and mechanism-guided modelling.
 
@@ -18,4 +18,7 @@ Report 01 follows corrective optics for language statistics into coding-agent re
 
 Related research: [How Language Models Reach an Answer](../Chapter_3_Machine_Learning_Epidemiology/How_Language_Models_Reach_an_Answer/README.md) and [Data-Oriented Modelling](../Chapter_5_Data_Oriented_Modelling/README.md).
 
+**Internal computation companion:** [Chapter 7 — The Internal Factory of Language Models](../Chapter_7_The_Internal_Factory_of_Language_Models/README.md) follows reasoning, internal assembly, routing and local repair through seven reports, introduced by two interactive views.
+
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
+

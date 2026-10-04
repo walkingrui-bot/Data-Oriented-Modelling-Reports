@@ -1,0 +1,6 @@
+Computational interface,Token positions
+STEP boundary,"13, 17, 21, 25"
+Current input b,"14, 18, 22, 26"
+RESULT marker,"15, 19, 23, 27"
+Result value,"16, 20, 24, 28"
+ANSWER marker,29

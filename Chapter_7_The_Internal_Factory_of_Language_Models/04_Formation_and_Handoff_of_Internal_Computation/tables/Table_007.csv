@@ -1,0 +1,8 @@
+Architecture,Repeated block,First ≥90% all-results,All-results at maturity,Dominant mature load,Swap ΔCE
+shared,[STEP b RESULT r] ×4,400,1.000,pre boundary,3.23
+specific,[STEP1 b RESULT r] … [STEP4 b RESULT r],560,0.985,input b,3.04
+post,[b RESULT r STEP] ×4,320,0.905,input b,3.50
+no step,[b RESULT r] ×4,280,0.948,result value,3.19
+no result,[STEP b r] ×4,280,0.969,input b,5.56
+bare,[b r] ×4,240,0.934,input b,4.31
+double,[STEP b RESULT r STEP] ×4,400,0.915,input b,2.92

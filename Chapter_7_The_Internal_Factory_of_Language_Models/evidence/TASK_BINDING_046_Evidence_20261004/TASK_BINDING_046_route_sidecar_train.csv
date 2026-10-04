@@ -1,0 +1,9 @@
+entry_id,n_train,train_accuracy,trainable_params
+P0_ACT,3,1.0,192
+P10_ACT,3,1.0,192
+P25_ACT,3,1.0,192
+P35_ACT,3,1.0,192
+P35_TEXT,3,1.0,192
+P40_TEXT,3,1.0,192
+P50_TEXT,3,1.0,192
+P55_ACT,3,1.0,192

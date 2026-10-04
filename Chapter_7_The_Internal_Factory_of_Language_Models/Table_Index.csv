@@ -1,0 +1,72 @@
+Report,Table,File,Caption
+1,1,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_001.csv,Table 1. Terms used in this report
+1,2,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_002.csv,Table 2. Relative registration of information fragments
+1,3,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_003.csv,Table 3. Formation and readout of a functional fragment
+1,4,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_004.csv,Table 4. Identity specific coupling within the moving assembly
+1,5,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_005.csv,Table 5. Identity specific coupling within the moving assembly
+1,6,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_006.csv,Table 6. Interface locking and continued movement
+1,7,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_007.csv,Table 7. Interface locking and continued movement
+1,8,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_008.csv,Table 8. Interface locking and continued movement
+1,9,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_009.csv,Table 9. Rotation translation and moving pivots
+1,10,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_010.csv,Table 10. Rotation translation and moving pivots
+1,11,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_011.csv,Table 11. Rotation translation and moving pivots — panel 1 of 3
+1,12,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_012.csv,Table 12. Rotation translation and moving pivots — panel 2 of 3
+1,13,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_013.csv,Table 13. Rotation translation and moving pivots — panel 3 of 3
+1,14,01_Internal_Motion_and_Assembly_in_Neural_Models/tables/Table_014.csv,Table 14. How training builds functional fragment identity
+2,1,02_Reasoning_Dynamics_and_Discrete_Output/tables/Table_001.csv,Table 1. Terms used in this report
+2,2,02_Reasoning_Dynamics_and_Discrete_Output/tables/Table_002.csv,Table 2. Reasoning steps as directional state changes
+2,3,02_Reasoning_Dynamics_and_Discrete_Output/tables/Table_003.csv,Table 3. Reasoning steps as directional state changes
+2,4,02_Reasoning_Dynamics_and_Discrete_Output/tables/Table_004.csv,Table 4. Reading a sequence as successive views of computation
+3,1,03_How_Loss_Functions_Shape_Reasoning/tables/Table_001.csv,Table 1. Terms used in this report
+3,2,03_How_Loss_Functions_Shape_Reasoning/tables/Table_002.csv,Table 2. High-power exact-chain passage with boundary held fixed and post-wall force varied.
+3,3,03_How_Loss_Functions_Shape_Reasoning/tables/Table_003.csv,Table 3. Where an equal force enters the computation
+3,4,03_How_Loss_Functions_Shape_Reasoning/tables/Table_004.csv,Table 4. Direction contact timing and depth
+3,5,03_How_Loss_Functions_Shape_Reasoning/tables/Table_005.csv,Table 5. Measured feedback and training control
+3,6,03_How_Loss_Functions_Shape_Reasoning/tables/Table_006.csv,Table 6. Measured feedback and training control
+3,7,03_How_Loss_Functions_Shape_Reasoning/tables/Table_007.csv,Table 7. Measured feedback and training control
+3,8,03_How_Loss_Functions_Shape_Reasoning/tables/Table_008.csv,Table 8. Measured feedback and training control
+3,9,03_How_Loss_Functions_Shape_Reasoning/tables/Table_009.csv,Table 9. Measured feedback and training control
+3,10,03_How_Loss_Functions_Shape_Reasoning/tables/Table_010.csv,Table 10. The geometry produced by the loss
+3,11,03_How_Loss_Functions_Shape_Reasoning/tables/Table_011.csv,Table 11. The geometry produced by the loss
+4,1,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_001.csv,Table 1. Terms used in this report
+4,2,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_002.csv,Table 2. Locating the states that carry the route
+4,3,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_003.csv,Table 3. Locating the states that carry the route
+4,4,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_004.csv,Table 4. How a local interface becomes load bearing
+4,5,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_005.csv,Table 5. How a local interface becomes load bearing
+4,6,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_006.csv,Table 6. How a local interface becomes load bearing
+4,7,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_007.csv,Table 7. Moving the interface moves the computational load
+4,8,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_008.csv,Table 8. The function that survives relocation — panel 1 of 2
+4,9,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_009.csv,Table 9. The function that survives relocation — panel 2 of 2
+4,10,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_010.csv,Table 10. The function that survives relocation
+4,11,04_Formation_and_Handoff_of_Internal_Computation/tables/Table_011.csv,Table 11. The function that survives relocation
+5,1,05_Attention_Coordination_and_Candidate_Routing/tables/Table_001.csv,Table 1. Terms used in this report
+5,2,05_Attention_Coordination_and_Candidate_Routing/tables/Table_002.csv,Table 2. The contribution history behind useful disagreement — panel 1 of 2
+5,3,05_Attention_Coordination_and_Candidate_Routing/tables/Table_003.csv,Table 3. The contribution history behind useful disagreement — panel 2 of 2
+5,4,05_Attention_Coordination_and_Candidate_Routing/tables/Table_004.csv,Table 4. Giving candidates explicit priorities — panel 1 of 2
+5,5,05_Attention_Coordination_and_Candidate_Routing/tables/Table_005.csv,Table 5. Giving candidates explicit priorities — panel 2 of 2
+5,6,05_Attention_Coordination_and_Candidate_Routing/tables/Table_006.csv,Table 6. Choosing the scale of the routed object
+5,7,05_Attention_Coordination_and_Candidate_Routing/tables/Table_007.csv,Table 7. Choosing the scale of the routed object
+5,8,05_Attention_Coordination_and_Candidate_Routing/tables/Table_008.csv,Table 8. Choosing the scale of the routed object
+5,9,05_Attention_Coordination_and_Candidate_Routing/tables/Table_009.csv,Table 9. Adapting the protocol across tasks and architectures
+5,10,05_Attention_Coordination_and_Candidate_Routing/tables/Table_010.csv,Table 10. Adapting the protocol across tasks and architectures
+5,11,05_Attention_Coordination_and_Candidate_Routing/tables/Table_011.csv,Table 11. Ranking stability as the control signal — panel 1 of 2
+5,12,05_Attention_Coordination_and_Candidate_Routing/tables/Table_012.csv,Table 12. Ranking stability as the control signal — panel 2 of 2
+6,1,06_Error_Diagnosis_and_Local_Repair/tables/Table_001.csv,Table 1. Terms used in this report
+6,2,06_Error_Diagnosis_and_Local_Repair/tables/Table_002.csv,Table 2. Diagnosing the subsystem and testing its repair
+6,3,06_Error_Diagnosis_and_Local_Repair/tables/Table_003.csv,Table 3. Diagnosing the subsystem and testing its repair
+6,4,06_Error_Diagnosis_and_Local_Repair/tables/Table_004.csv,Table 4. Following faults through successive patches
+6,5,06_Error_Diagnosis_and_Local_Repair/tables/Table_005.csv,Table 5. Following faults through successive patches
+6,6,06_Error_Diagnosis_and_Local_Repair/tables/Table_006.csv,Table 6. Comparing local repair architectures — panel 1 of 2
+6,7,06_Error_Diagnosis_and_Local_Repair/tables/Table_007.csv,Table 7. Comparing local repair architectures — panel 2 of 2
+6,8,06_Error_Diagnosis_and_Local_Repair/tables/Table_008.csv,Table 8. Task permission and current state permission
+6,9,06_Error_Diagnosis_and_Local_Repair/tables/Table_009.csv,Table 9. Maintaining repair compatibility across checkpoints
+6,10,06_Error_Diagnosis_and_Local_Repair/tables/Table_010.csv,Table 10. Integrating the model and its repair registry — panel 1 of 3
+6,11,06_Error_Diagnosis_and_Local_Repair/tables/Table_011.csv,Table 11. Integrating the model and its repair registry — panel 2 of 3
+6,12,06_Error_Diagnosis_and_Local_Repair/tables/Table_012.csv,Table 12. Integrating the model and its repair registry — panel 3 of 3
+7,1,07_Information_Transport_and_Assembly_Across_Architectures/tables/Table_001.csv,Table 1. Terms used in this report
+7,2,07_Information_Transport_and_Assembly_Across_Architectures/tables/Table_002.csv,Table 2. A shared history dependent computation — panel 1 of 2
+7,3,07_Information_Transport_and_Assembly_Across_Architectures/tables/Table_003.csv,Table 3. A shared history dependent computation — panel 2 of 2
+7,4,07_Information_Transport_and_Assembly_Across_Architectures/tables/Table_004.csv,Table 4. A shared history dependent computation
+7,5,07_Information_Transport_and_Assembly_Across_Architectures/tables/Table_005.csv,Table 5. A common compositional task across five architectures
+7,6,07_Information_Transport_and_Assembly_Across_Architectures/tables/Table_006.csv,Table 6. A common compositional task across five architectures
+7,7,07_Information_Transport_and_Assembly_Across_Architectures/tables/Table_007.csv,Table 7. A common compositional task across five architectures

@@ -1,0 +1,5 @@
+mode,variant,step,common_loss,force,contact
+seed11,full_uniform,1,0.18044205009937286,2.0,full_response
+seed11,full_uniform,20,0.0027204942889511585,2.0,full_response
+seed11,full_uniform,40,2.6100149625563063e-05,2.0,full_response
+seed11,full_uniform,60,1.2230052561790217e-05,2.0,full_response

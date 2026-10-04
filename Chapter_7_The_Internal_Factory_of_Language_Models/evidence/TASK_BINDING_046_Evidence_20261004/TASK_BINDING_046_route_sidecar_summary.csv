@@ -1,0 +1,2 @@
+n_route_sidecars,params_per_sidecar,total_registry_sidecar_params,active_params_per_request,test_n,base_accuracy,final_accuracy,positive_authorized,authorized_base_errors,repairs,commits,repair_rate_authorized_errors,negative_false_authorizations,negative_commits,new_regressions
+8,192,1536,192,40,0.5,0.7,14,9,8,8,0.8888888888888888,0,0,0

@@ -1,0 +1,9 @@
+Term,Meaning in the experiments
+Path symptom,The observed sequence of output-compatible and incompatible states.
+Repair signature,The subsystem intervention that restores the measured result.
+Bypass,A scoped suppression of a selected local update.
+Sidecar,A detachable residual repair module attached to a frozen model.
+Task permission,A registry decision about which task may use a repair.
+State permission,A runtime decision about whether its current state warrants committing that repair.
+Patch debt,New regressions divided by repaired errors.
+CI,Continuous integration of checkpoints and compatible repair records.

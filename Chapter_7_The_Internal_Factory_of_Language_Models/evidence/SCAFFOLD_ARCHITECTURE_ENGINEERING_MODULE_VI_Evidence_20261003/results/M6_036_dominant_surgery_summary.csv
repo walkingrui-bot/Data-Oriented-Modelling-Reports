@@ -1,0 +1,15 @@
+variant,group,condition,exact_tail,tail_result_acc,final
+bare,input_b,none,0.9921875,0.994921875,0.9921875
+bare,input_b,swap,0.0234375,0.17265625,0.15
+double,input_b,none,0.2296875,0.505078125,0.321875
+double,input_b,swap,0.0828125,0.269140625,0.19375
+no_result,input_b,none,0.984375,0.9890625,0.984375
+no_result,input_b,swap,0.009375,0.199609375,0.1875
+no_step,result_value,none,0.9765625,0.987109375,0.9765625
+no_step,result_value,swap,0.0015625,0.202734375,0.26875
+post,input_b,none,0.7640625,0.873046875,0.7703125
+post,input_b,swap,0.0,0.15625,0.1203125
+shared,pre_boundary,none,0.2015625,0.390625,0.2921875
+shared,pre_boundary,swap,0.0015625,0.111328125,0.109375
+specific,pre_boundary,none,0.0,0.0984375,0.096875
+specific,pre_boundary,swap,0.0,0.0953125,0.0890625

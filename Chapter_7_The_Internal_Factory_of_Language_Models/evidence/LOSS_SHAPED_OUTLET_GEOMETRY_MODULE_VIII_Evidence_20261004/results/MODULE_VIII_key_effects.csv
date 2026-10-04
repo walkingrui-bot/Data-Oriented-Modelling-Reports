@@ -1,0 +1,11 @@
+section,contrast,result,interpretation
+Terminal topology,wall2/fullCE/resultCE/hinge/corridor,~99-100% one-sided normal exit,Open one-wall outlet
+Terminal topology,band3/soft09,100% bilateral normal exit,Two-wall finite outlet
+Thickness,band3,near normal 0.335 vs tangent 6.742,Thin anisotropic sheet
+Thickness,soft09,near normal 0.232 vs tangent 3.200,Even thinner finite-optimum sheet
+Connectivity,band3,24.2% low-loss straight paths vs 100% class-correct,Curved thin subset inside connected correct region
+Connectivity,soft09,45.8% low-loss straight paths vs 100% class-correct,Finite-optimum curved subset
+Trajectory,corridor,layer1 median margin -2.154 vs ~-3.1 to -3.46,Approach path is pre-positioned earlier
+State vs head,7×7 hybrid matrix,74.4% body / 25.3% readout / 0.2% interaction,Loss primarily relocates hidden states
+Behavior,fullCE vs soft09,"+31.95 pp exact-chain, CI +29.06 to +35.00",Outlet geometry materially changes autonomous passage
+Transfer,seed11 + affine,wall/hinge one-sided; band/soft bilateral in every case,Topology follows loss form across seed/task

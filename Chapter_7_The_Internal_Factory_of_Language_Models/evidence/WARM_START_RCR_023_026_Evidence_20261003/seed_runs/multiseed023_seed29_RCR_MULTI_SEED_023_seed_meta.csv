@@ -1,0 +1,2 @@
+seed,epochs,train_acc,train_nll,heldout_acc,heldout_nll,parcel_threshold,elapsed_train_cache_sec
+29,50,1.0,0.012681402266025543,0.4642857015132904,2.7983288764953613,0.043129268117149934,28.394237518310547

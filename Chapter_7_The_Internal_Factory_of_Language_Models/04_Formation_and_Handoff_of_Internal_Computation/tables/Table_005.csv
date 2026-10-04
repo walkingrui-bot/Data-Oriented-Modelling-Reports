@@ -1,0 +1,7 @@
+Swap,Exact tail,Tail result accuracy
+none,0.680,0.770
+STEP markers,0.000,0.124
+input b,0.328,0.438
+RESULT markers,0.653,0.754
+result values,0.669,0.766
+ANSWER marker,0.336,0.684

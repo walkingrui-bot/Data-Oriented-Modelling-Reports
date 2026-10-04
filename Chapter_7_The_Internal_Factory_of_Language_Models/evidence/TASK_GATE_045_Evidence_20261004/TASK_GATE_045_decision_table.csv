@@ -1,0 +1,5 @@
+gate_architecture,permission_signal,final_accuracy,repairs,new_regressions,engineering_decision
+Passive learned gate,Frozen hidden/logistics telemetry only,50.0%,3,5,Reject as actuator; unsafe
+Conservative late-flip fuse,Stable earlier opposite branch; train-calibrated zero-alarm threshold,60.7%,1,0,"Safe alarm, insufficient coverage"
+"Shadow two-phase, no task binding",Earlier competing branch + bypass/sidecar agreement,71.4%,8,4,"Excellent diagnosis, unsafe without task permission"
+Task Registry + State Gate,Known task eligibility first; state consensus second,85.7%,8,0,Current preferred architecture

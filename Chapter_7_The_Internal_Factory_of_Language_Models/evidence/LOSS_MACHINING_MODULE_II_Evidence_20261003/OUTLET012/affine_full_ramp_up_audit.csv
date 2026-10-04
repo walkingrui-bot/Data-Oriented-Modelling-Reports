@@ -1,0 +1,5 @@
+mode,variant,step,common_loss,force,contact
+affine,full_ramp_up,1,0.9814369678497314,0.0,full_response
+affine,full_ramp_up,20,0.12513478100299835,1.2881355932203389,full_response
+affine,full_ramp_up,40,0.011089568957686424,2.6440677966101696,full_response
+affine,full_ramp_up,60,3.140216358588077e-05,4.0,full_response

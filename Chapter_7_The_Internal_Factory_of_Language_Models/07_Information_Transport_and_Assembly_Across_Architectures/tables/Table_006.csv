@@ -1,0 +1,6 @@
+Architecture,Functional-pair share,Functional / nonfunctional interaction
+Vanilla RNN,33.7% ± 1.8,2.03× ± 0.17
+GRU,37.7% ± 1.7,2.43× ± 0.18
+Selective State Space Model,35.5% ± 3.3,2.21× ± 0.31
+Dense Transformer,40.2% ± 1.6,2.70× ± 0.18
+Sparse MoE Transformer,39.3% ± 2.1,2.59× ± 0.23

@@ -1,0 +1,15 @@
+world,kind,index,mean_margin_drop
+seed11_shared,immediate_next_token,0,11.041742324829102
+seed11_shared,result,2,4.628798961639404
+seed11_shared,result,3,-0.02301107905805111
+seed11_shared,result,4,-0.015117937698960304
+seed11_shared,result,5,-0.10390916466712952
+affine_nostep,immediate_next_token,0,5.046917915344238
+affine_nostep,result,3,8.688651084899902
+affine_nostep,result,4,-0.06292013823986053
+affine_nostep,result,5,-0.16316646337509155
+affine_post,immediate_next_token,0,6.244071006774902
+affine_post,result,2,6.244071006774902
+affine_post,result,3,-0.030814100056886673
+affine_post,result,4,-0.04698310047388077
+affine_post,result,5,-0.1627589762210846

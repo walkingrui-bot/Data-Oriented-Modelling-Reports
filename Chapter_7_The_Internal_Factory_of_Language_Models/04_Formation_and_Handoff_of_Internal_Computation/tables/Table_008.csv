@@ -1,0 +1,5 @@
+World,Scaffold carrier,Immediate serialized target,Immediate next-token drop,Next-result drop
+shared,STEP,current input b,12.13,8.04
+nostep,result value,next-step input b,6.85,8.07
+noresult,input b,current result value,13.21,13.21
+post,input b,RESULT marker → current result,-0.40,10.68

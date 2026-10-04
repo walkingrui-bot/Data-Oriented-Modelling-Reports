@@ -1,0 +1,6 @@
+variant,step,teacher_result_acc,teacher_all_results,teacher_final,sample_result_acc,sample_exact_results,sample_final
+shared,320,0.8225,0.35083333333333333,1.0,,,
+shared,400,1.0,1.0,1.0,0.98875,0.978125,0.98125
+shared,480,1.0,1.0,1.0,0.9925,0.9875,0.9875
+shared,560,1.0,1.0,1.0,0.995625,0.99375,0.99375
+shared,640,1.0,1.0,1.0,0.995625,0.99375,0.99375

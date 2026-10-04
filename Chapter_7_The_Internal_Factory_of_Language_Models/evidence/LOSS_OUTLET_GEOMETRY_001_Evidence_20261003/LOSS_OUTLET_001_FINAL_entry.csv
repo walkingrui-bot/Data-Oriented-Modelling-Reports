@@ -1,0 +1,13 @@
+variant,split,median_stable_loss_entry,median_stable_correct_entry
+baseline_ce,train,5.0,1.0
+baseline_ce,heldout,8.0,6.0
+continue_ce,train,4.0,1.0
+continue_ce,heldout,7.0,6.0
+soft_ce90,train,4.0,2.0
+soft_ce90,heldout,9.0,7.0
+hinge_m6,train,7.0,1.0
+hinge_m6,heldout,8.5,6.0
+target_margin3,train,8.0,1.0
+target_margin3,heldout,9.0,7.5
+multi_exit_ce,train,3.0,0.0
+multi_exit_ce,heldout,7.0,5.0

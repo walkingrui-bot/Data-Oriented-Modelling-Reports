@@ -1,0 +1,5 @@
+mode,variant,step,common_loss,force,contact
+affine,early_layer,1,0.9814328551292419,2.0,layer1_results
+affine,early_layer,20,0.18528303503990173,2.0,layer1_results
+affine,early_layer,40,0.03836754709482193,2.0,layer1_results
+affine,early_layer,60,0.012001282535493374,2.0,layer1_results

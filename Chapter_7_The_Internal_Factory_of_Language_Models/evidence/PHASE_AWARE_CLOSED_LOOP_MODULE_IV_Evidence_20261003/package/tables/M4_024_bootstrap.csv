@@ -1,0 +1,9 @@
+mode,a,b,metric,diff,lo,hi
+seed11,seed11_phase_entropy,seed11_phase_only,exact,-0.00625,-0.0109375,-0.00234375
+seed11,seed11_phase_entropy,seed11_phase_only,forced_tail,-0.0009765625,-0.0025390625,0.0
+seed11,seed11_delayed_full,seed11_phase_only,exact,-0.00546875,-0.01015625,-0.0015625
+seed11,seed11_delayed_full,seed11_phase_only,forced_tail,-0.0009765625,-0.0025390625,0.0
+affine,affine_phase_entropy,affine_phase_only,exact,0.0015625,-0.0015625,0.0046875
+affine,affine_phase_entropy,affine_phase_only,forced_tail,-0.0033203125,-0.006645507812499995,-0.0001953125
+affine,affine_delayed_full,affine_phase_only,exact,0.0015625,-0.00234375,0.00546875
+affine,affine_delayed_full,affine_phase_only,forced_tail,-0.0033203125,-0.006645507812499995,-0.0001953125
