@@ -250,6 +250,18 @@ def layer_analysis(n, layer):
                 if norm>1e-12:
                     X.append(d/norm); y.append(s); world_ids.append(w)
     X=np.asarray(X); y=np.asarray(y); world_ids=np.asarray(world_ids)
+    if len(X) == 0:
+        return {
+            "n":n, "layer":layer,
+            "slot_decode_acc":None,
+            "effective_rank_pr":0.0,
+            "rank90":0,
+            "same_key_cos":None,
+            "same_slot_cos":None,
+            "slot_minus_key_cos":None,
+            "mean_delta_norm":0.0,
+            "sv":[],
+        }
 
     prot=[]
     for s in range(n):
@@ -339,7 +351,8 @@ for layer in range(n_layers):
 summary={}
 for n in NS:
     rows=[r for r in analysis if r["n"]==n]
-    best=max(rows,key=lambda r:(r["slot_decode_acc"],r["slot_minus_key_cos"]))
+    valid=[r for r in rows if r["slot_decode_acc"] is not None and r["slot_minus_key_cos"] is not None]
+    best=max(valid,key=lambda r:(r["slot_decode_acc"],r["slot_minus_key_cos"]))
     summary[str(n)]=best
 
 # Behavior aggregate on edited variants only
