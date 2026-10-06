@@ -264,7 +264,7 @@ def layer_analysis(n, layer):
         }
 
     prot=[]
-    for s in range(n):
+    for s in present_slots:
         m=X[y==s].mean(0)
         if np.linalg.norm(m)>1e-12: m=m/np.linalg.norm(m)
         prot.append(m)
@@ -283,15 +283,21 @@ def layer_analysis(n, layer):
     for parity in [0,1]:
         tr=(world_ids%2)==parity
         te=~tr
-        train_prot=[]
-        for s in range(n):
-            m=X[tr & (y==s)].mean(0)
+        train_prot=[]; train_slots=[]
+        for s in present_slots:
+            sel=tr & (y==s)
+            if not np.any(sel):
+                continue
+            m=X[sel].mean(0)
             if np.linalg.norm(m)>1e-12: m=m/np.linalg.norm(m)
-            train_prot.append(m)
+            train_prot.append(m); train_slots.append(s)
+        if len(train_prot) < 2 or not np.any(te):
+            continue
         TP=np.stack(train_prot)
-        pred=np.argmax(X[te]@TP.T,axis=1)
+        pred_idx=np.argmax(X[te]@TP.T,axis=1)
+        pred=np.asarray(train_slots)[pred_idx]
         accs.append(float(np.mean(pred==y[te])))
-    slot_decode=float(np.mean(accs))
+    slot_decode=float(np.mean(accs)) if accs else None
 
     same_key=[]; same_slot=[]
     for w in range(WORLDS):
@@ -303,6 +309,8 @@ def layer_analysis(n, layer):
             same_slot.append(cosine(deltas[(n,layer,w,0,s)], deltas[(n,layer,w,1,s)]))
     same_key=np.asarray(same_key,dtype=float)
     same_slot=np.asarray(same_slot,dtype=float)
+    key_mean=float(np.nanmean(same_key)) if np.any(np.isfinite(same_key)) else None
+    slot_mean=float(np.nanmean(same_slot)) if np.any(np.isfinite(same_slot)) else None
 
     norms=[np.linalg.norm(deltas[(n,layer,w,pi,s)])
            for w in range(WORLDS) for pi in [0,1] for s in range(n)]
@@ -312,9 +320,9 @@ def layer_analysis(n, layer):
         "slot_decode_acc":slot_decode,
         "effective_rank_pr":float(pr),
         "rank90":rank90,
-        "same_key_cos":float(np.nanmean(same_key)),
-        "same_slot_cos":float(np.nanmean(same_slot)),
-        "slot_minus_key_cos":float(np.nanmean(same_slot)-np.nanmean(same_key)),
+        "same_key_cos":key_mean,
+        "same_slot_cos":slot_mean,
+        "slot_minus_key_cos":(slot_mean-key_mean) if (slot_mean is not None and key_mean is not None) else None,
         "mean_delta_norm":float(np.mean(norms)),
         "sv":sv.tolist(),
     }
