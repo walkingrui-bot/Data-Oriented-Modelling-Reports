@@ -166,15 +166,15 @@ model = AutoModelForCausalLM.from_pretrained(
 model.eval()
 print("loaded",flush=True)
 
-first_ids, space_ids = {}, {}
+first_ids = {}
 for d in DIGITS:
     a = tok(d,add_special_tokens=False)["input_ids"]
-    b = tok(" "+d,add_special_tokens=False)["input_ids"]
-    if len(a) != 1 or len(b) != 1:
-        raise RuntimeError(f"digit not single-token: {d}: {a} / {b}")
-    first_ids[d], space_ids[d] = a[0], b[0]
+    if len(a) != 1:
+        raise RuntimeError(f"digit not single-token: {d}: {a}")
+    first_ids[d] = a[0]
+space_tokenization = tok(" ",add_special_tokens=False)["input_ids"]
 with open(OUTDIR/"token_ids.json","w") as f:
-    json.dump({"first":first_ids,"space":space_ids},f,indent=2)
+    json.dump({"digit":first_ids,"space_tokenization":space_tokenization},f,indent=2)
 
 sequences = {k:balanced_sequences(k, 30 if k==2 else N_DEFAULT, SEED) for k in KS}
 print({k:len(v) for k,v in sequences.items()},flush=True)
@@ -193,7 +193,10 @@ for task in TASKS:
                 texts = []
                 for s in sub:
                     pref = target_for(task,s)[:stage]
-                    texts.append(chat_prompt(tok,task,s) + " ".join(pref))
+                    ans = " ".join(pref)
+                    if stage > 0:
+                        ans += " "
+                    texts.append(chat_prompt(tok,task,s) + ans)
                 enc = tok(texts,return_tensors="pt",padding=True,add_special_tokens=False)
                 lens = enc["attention_mask"].sum(dim=1)-1
                 with torch.inference_mode():
@@ -210,7 +213,7 @@ for task in TASKS:
             logits = np.concatenate(all_logits,axis=0)
 
             next_labels = [t[stage] for t in targets]
-            candidate_ids = first_ids if stage == 0 else space_ids
+            candidate_ids = first_ids
             cand = np.array([candidate_ids[d] for d in DIGITS],dtype=int)
             targ = np.array([candidate_ids[d] for d in next_labels],dtype=int)
             full_top1 = np.argmax(logits,axis=1)
@@ -301,6 +304,8 @@ for stage in range(5):
     for ei,seq in enumerate(attn_examples):
         targ = target_for(primary,seq)
         pref = " ".join(targ[:stage])
+        if stage > 0:
+            pref += " "
         ptxt = chat_prompt(tok,primary,seq)
         full = ptxt + pref
         spos = source_positions(tok,ptxt,primary,seq)
