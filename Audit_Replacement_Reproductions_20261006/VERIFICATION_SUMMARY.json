@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "n_gates": 20,
+  "gates": [
+    "RR00 matched fingerprint",
+    "RR01 heldout and rollout",
+    "RR01 transplant",
+    "RR02 task learned",
+    "RR02 history effect",
+    "RR03 mirror control",
+    "RR04 source warning",
+    "RR04 residual extension",
+    "RR05 observational equivalence",
+    "RR05 intervention discrimination",
+    "RR06 exact task fit",
+    "RR06 functional assembly",
+    "RR07 independent confirmation",
+    "RR07 matched control",
+    "RR08 disconnected readiness",
+    "RR08 active recovery",
+    "RR09 same final performance",
+    "RR09 loss shapes geometry",
+    "RR10 routing damage",
+    "RR10 downstream repair"
+  ]
+}
