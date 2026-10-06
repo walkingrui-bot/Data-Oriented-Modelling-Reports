@@ -1,0 +1,48 @@
+name: NAD EXP001 Qwen Blueprint Slots
+
+on:
+  push:
+    branches:
+      - exp/neural-blueprint-slots-qwen05b-20261006
+    paths:
+      - experiments/neural_algorithm_decompilation/**
+      - .github/workflows/nad_exp001_qwen_slots.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run-exp001:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      TOKENIZERS_PARALLELISM: "false"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      WORLDS: "12"
+      MODEL_ID: "Qwen/Qwen2.5-0.5B-Instruct"
+      OUTDIR: "outputs"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --extra-index-url https://download.pytorch.org/whl/cpu torch
+          pip install "transformers>=4.48,<5" accelerate sentencepiece safetensors
+
+      - name: Run blueprint slot probe
+        run: |
+          python experiments/neural_algorithm_decompilation/EXP001_blueprint_slots_qwen05b.py
+
+      - name: Upload numerical outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nad-exp001-qwen05b-blueprint-slots
+          path: outputs/
+          if-no-files-found: error
+          retention-days: 30
