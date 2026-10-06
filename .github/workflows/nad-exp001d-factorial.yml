@@ -1,0 +1,45 @@
+name: NAD EXP001D Factorial Source Slot
+on:
+  push:
+    branches:
+      - exp/neural-blueprint-slots-qwen05b-20261006
+    paths:
+      - ".github/workflows/nad-exp001d-factorial.yml"
+      - "experiments/neural_algorithm_decompilation/EXP001D_factorial_source_slot.py"
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      HF_HUB_DISABLE_XET: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - name: Fetch script
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p experiments/neural_algorithm_decompilation
+          curl -L --fail \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github.raw+json" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/contents/experiments/neural_algorithm_decompilation/EXP001D_factorial_source_slot.py?ref=$GITHUB_SHA" \
+            -o experiments/neural_algorithm_decompilation/EXP001D_factorial_source_slot.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.46.3" accelerate safetensors
+      - name: Run
+        run: python experiments/neural_algorithm_decompilation/EXP001D_factorial_source_slot.py
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nad-exp001d-factorial-source-slot
+          path: factorial_fill_results/
+          if-no-files-found: warn
