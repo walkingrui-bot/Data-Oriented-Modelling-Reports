@@ -16,7 +16,7 @@ SEED = 20261006
 DIGITS = ["1","2","3","4","5","6"]
 KS = [2,3,4,5,6]
 TASKS = ["copy","reverse"]
-N_DEFAULT = 18
+N_DEFAULT = 36
 BATCH = 18
 DEPTHS = [0,6,12,18,24]
 OUTDIR = Path("scratch/neural_blueprint_slots_qwen05b/results_fast")
@@ -93,9 +93,10 @@ def source_positions(tok, prompt_text, task, seq):
 def cv_ridge_acc(X, y):
     y = np.asarray(y)
     counts = Counter(y.tolist())
-    if len(counts) < 2 or min(counts.values()) < 3:
+    if len(counts) < 2 or min(counts.values()) < 2:
         return float("nan")
-    skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=SEED)
+    n_splits = min(3, min(counts.values()))
+    skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=SEED)
     vals = []
     for tr,te in skf.split(X,y):
         clf = make_pipeline(StandardScaler(), RidgeClassifier(alpha=10.0))
@@ -431,7 +432,8 @@ att_df = pd.DataFrame(attn_rows)
 pat_df = pd.DataFrame(patch_rows)
 
 sub = probe_df[(probe_df.task==primary)&(probe_df.k==5)&(probe_df.stage==0)]
-best_depth = int(sub.groupby("depth").accuracy.mean().idxmax())
+depth_score = sub.groupby("depth").accuracy.mean().dropna()
+best_depth = int(depth_score.idxmax()) if len(depth_score) else 18
 best_probe = sub[sub.depth==best_depth].sort_values("future_offset")
 best_er = er_df[(er_df.task==primary)&(er_df.stage==0)&(er_df.depth==best_depth)].sort_values("k")
 near_depth = min([6,12,18,24],key=lambda x:abs(x-best_depth))
