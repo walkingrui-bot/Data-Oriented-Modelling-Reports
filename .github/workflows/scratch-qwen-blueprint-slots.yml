@@ -5,8 +5,7 @@ on:
     branches:
       - exp/neural-blueprint-slots-qwen05b-20261006
     paths:
-      - "scratch/neural_blueprint_slots_qwen05b/**"
-      - ".github/workflows/scratch-qwen-blueprint-slots.yml"
+      - "scratch/neural_blueprint_slots_qwen05b/run_exp.py"
 
 permissions:
   contents: read
