@@ -26,10 +26,11 @@ Mathematics, statistics, and machine learning already provide a large collection
 
 ## Research lines and evidence
 
-This map connects the design philosophy to the studies that support it. Status reflects the records reviewed on **2 October 2026**, with the Data Zoo shared-coordination publication updated on **3 October 2026** and the internal-factory chapter added on **4 October 2026**. **Published** entries link to public reports and their evidence indexes. **Recorded experiments — publication pending** identifies existing research records; **documented design — publication pending** identifies a prepared method or architecture specification.
+This map connects the design philosophy to the studies that support it. Status reflects the records reviewed on **2 October 2026**, with the Data Zoo shared-coordination publication updated on **3 October 2026**, the internal-factory chapter added on **4 October 2026**, and the Chapter 8 synthesis added on **6 October 2026**. **Published** entries link to public reports and their evidence indexes. **Recorded experiments — publication pending** identifies existing research records; **documented design — publication pending** identifies a prepared method or architecture specification.
 
 | Research line | Evidence and contribution | Record and publication status |
 | --- | --- | --- |
+| Executable Plans and Answer Generation | Controlled plan transfers, recovered algorithms, state interventions and execution-order experiments synthesize the earlier language-model research. | **Published, 6 October 2026:** [Chapter 8 — From Blueprint to Algorithm](Chapter_8_From_Blueprint_to_Algorithm/README.md). Conclusion of the current explanatory sequence, with future additions maintained in the corresponding topical chapters. |
 | Internal Computation, Assembly and Repair | Seven studies connect internal motion, discrete output, loss-shaped reasoning, computational handoff, attention routing, local repair and cross-architecture transport. | **Published, 4 October 2026:** [Chapter 7 — The Internal Factory of Language Models](Chapter_7_The_Internal_Factory_of_Language_Models/README.md), with two introductory interactive views and an indexed numerical evidence collection. |
 | Language Generation and Answer Recovery | Experiments track answer-ready states, training history, local control and recovery along a reasoning trajectory. | **Published:** [Chapter 2](Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md), [Chapter 3](Chapter_3_Machine_Learning_Epidemiology/README.md) and [How Language Models Reach an Answer](Chapter_3_Machine_Learning_Epidemiology/How_Language_Models_Reach_an_Answer/EVIDENCE_INDEX.md), following [Chapter 1](Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/README.md). |
 | Identifying and Modelling Data-Generating Mechanisms | Studies locate identifiable information under stated assumptions, measure how representations transform it, and test candidate operations through transfer, edits and interventions. | **Published:** [Chapter 5, Report 01](Chapter_5_Data_Oriented_Modelling/Heterogeneous_Data_and_General_Data_Intelligence/EVIDENCE_INDEX.md); [Report 02, CG001–CG024](Chapter_5_Data_Oriented_Modelling/Learning_Causal_Structure_from_Data_Geometry/EVIDENCE_INDEX.md); [Report 03](Chapter_5_Data_Oriented_Modelling/Modelling_Hypothesized_Mechanisms_Underlying_Data/EVIDENCE_INDEX.md). |
@@ -52,7 +53,7 @@ This map connects the design philosophy to the studies that support it. Status r
 
 **[Don't feel like reading the reports? Getting lost in them? Start with Chapter 0 — The Story Version.](Chapter_0_The_Story_Version/README.md)** A moving finger, a cloud of data, a stack of burgers and a detective explain why we are doing this research. The story grows with the project.
 
-Chapters 1–7 contain the research reports, supporting experiments and evidence.
+Chapters 1–8 contain the research reports, supporting experiments and evidence.
 
 | Chapter | Title | Open |
 | --- | --- | --- |
@@ -64,6 +65,7 @@ Chapters 1–7 contain the research reports, supporting experiments and evidence
 | **5** | **Data-Oriented Modelling** | [Read Chapter 5](Chapter_5_Data_Oriented_Modelling/README.md) |
 | **6** | **Model Perception and Control — Continuing Chapters 2, 3 and 5** | [Read Chapter 6](Chapter_6_Model_Perception_and_Control/README.md) |
 | **7** | **The Internal Factory of Language Models** | [Two interactive views and seven reports](Chapter_7_The_Internal_Factory_of_Language_Models/README.md) |
+| **8** | **From Blueprint to Algorithm** | [Read the synthesis and its evidence](Chapter_8_From_Blueprint_to_Algorithm/README.md) |
 
 **Chapter 3 contains two reports.** Report 01 brings together the research report and The Engineer’s Edition. Report 02, **[How Language Models Reach an Answer](Chapter_3_Machine_Learning_Epidemiology/How_Language_Models_Reach_an_Answer/README.md)**, connects language dynamics, protected training and answer-recovery control across 18 experiments. It is also listed as Chapter 2, Report 02.
 
@@ -85,5 +87,6 @@ Chapter 6, **Model Perception and Control — Continuing Chapters 2, 3 and 5**, 
 
 Chapter 7, **[The Internal Factory of Language Models](Chapter_7_The_Internal_Factory_of_Language_Models/README.md)**, brings together seven reports on internal computation, from moving states and discrete tokens to assembly, coordination and repair. Two interactive recorded-data views introduce the chapter.
 
-Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
+Chapter 8, **[From Blueprint to Algorithm](Chapter_8_From_Blueprint_to_Algorithm/README.md)**, brings the language-model research into one account of answer generation. It connects the earlier observations to executable plans, recovered algorithms, state transfer and execution order. The evidence for this explanatory sequence is now assembled; future findings and gaps will be maintained in the corresponding topical chapters and linked back to the synthesis.
 
+Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.

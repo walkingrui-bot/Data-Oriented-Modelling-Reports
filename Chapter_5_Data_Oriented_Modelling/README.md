@@ -28,5 +28,8 @@ Its first report, [Model Perception and Action Control](../Chapter_6_Model_Perce
 
 **Internal computation companion:** [Chapter 7 — The Internal Factory of Language Models](../Chapter_7_The_Internal_Factory_of_Language_Models/README.md) follows reasoning, internal assembly, routing and local repair through seven reports, introduced by two interactive views.
 
-Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.
+## Synthesis of the language model research
 
+[Chapter 8 — From Blueprint to Algorithm](../Chapter_8_From_Blueprint_to_Algorithm/README.md) brings together the earlier evidence and the controlled blueprint, algorithm-recovery and execution studies. It closes the current explanatory sequence; later additions remain in their corresponding topical chapters.
+
+Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.

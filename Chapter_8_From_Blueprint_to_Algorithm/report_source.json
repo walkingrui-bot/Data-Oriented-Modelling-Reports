@@ -1,0 +1,1728 @@
+{
+  "intro": "Chapter 8 synthesizes the earlier language-model studies and their supporting evidence, from internal motion and answer recovery to computational assembly and control. It asks how a model turns context into the operations that generate an answer. The controlled experiments identify executable plan states, recover explicit algorithms, and show how output order and training history shape execution.",
+  "closure": "The evidence for the present explanatory sequence has now been assembled into a coherent, relatively detailed account. This chapter closes that research chain at its current evidential scope. Future findings and remaining gaps will be added to the corresponding topical chapters and linked back to this synthesis.",
+  "blocks": [
+    {
+      "source_block": 0,
+      "text": "From Blueprint to Algorithm",
+      "source_style": ""
+    },
+    {
+      "source_block": 1,
+      "text": "How Neural Networks Generate Answers",
+      "source_style": ""
+    },
+    {
+      "source_block": 2,
+      "text": "Chapter 8 of Data Oriented Modelling\nA synthesis of executable plans, recovered algorithms, competing objectives, chain of thought and training order",
+      "source_style": ""
+    },
+    {
+      "source_block": 3,
+      "text": "English edition v1.0 · 6 October 2026",
+      "source_style": ""
+    },
+    {
+      "source_block": 4,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 6,
+      "text": "In the controlled networks studied here, answer generation can be decomposed into a sequence of computational events. Context forms an executable blueprint, represented as ordered operations or a distributed program state. Autoregressive output positions schedule the available components. In sequentially dependent tasks, chain-of-thought tokens record intermediate states that subsequent computation reads again. Competing objectives preserve shared components while branching execution, and early training can move particular operations to the front of the schedule.",
+      "source_style": "table"
+    },
+    {
+      "source_block": 9,
+      "text": "Overview",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 10,
+      "text": "This research began with a missing piece. We could observe a model moving, rotating and combining its internal components, but we could not yet explain why it knew what to do next. We provisionally called the missing object a blueprint. Starting with small, controllable systems, we turned that idea into an object that could be executed, transplanted, altered and, eventually, replaced by an explicit algorithm.",
+      "source_style": ""
+    },
+    {
+      "source_block": 11,
+      "text": "The experiments recovered something closer to a computation schedule than a static draft of an answer. It specifies which operations are available, which logical positions they belong to, which are ready to execute and how they unfold. As output is produced, the updated context continues to reshape the schedule.",
+      "source_style": ""
+    },
+    {
+      "source_block": 12,
+      "text": "How to read the evidence",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 13,
+      "text": "The earlier Internal Factory of Language Models sequence studied rotation and translation, fragmented computation, complete future trajectories, loss shaping, CoT length, recovery in later layers and training history. Those studies supplied behavioral, geometric and intervention-based evidence about mechanisms. This report brings the central hypotheses into controlled computational systems: we identify and transplant blueprint states, alter intermediate values, measure curriculum effects and recover explicit programs whose outputs can be compared with the networks. Correspondence with larger language models remains a mechanistic interpretation across scales.",
+      "source_style": ""
+    },
+    {
+      "source_block": 14,
+      "text": "Explicit calibration. Twelve discrete plans can be generated reliably from context, including a rule permutation held out from training.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 15,
+      "text": "A blueprint learned from answers alone. Without blueprint labels during training, an eight-dimensional hidden state supports 100% readout of operation, argument order and output style. On transplantation to a new numeric payload, the executor follows the donor plan in 100% of the tested cases.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 16,
+      "text": "Where the plan becomes jointly readable. Full-plan linear readout rises from about 67% to 100% after the first nonlinearity. The final code is distributed across coordinates; it is not confined to a single blueprint neuron.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 17,
+      "text": "Algorithm recovery. An explicit program reproduces the outputs of the 20,454-parameter network on all 52,272 inputs in its complete valid finite domain.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 18,
+      "text": "A larger recurrent network. A two-layer GRU with 187,069 parameters, trained on one final-answer objective, forms an ordered three-slot program [op1 | op2 | op3]. Its first-layer state at the end of the context is the principal storage site.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 19,
+      "text": "Competing objectives. Two partially conflicting targets leave shared components intact while branching the execution plan. Their gradients point in opposing directions, and the model retains competing output branches with probabilities close to 0.5 each.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 20,
+      "text": "Transformer execution. The complete operation table is readable at the end of the context, while the components causally used in execution remain distributed across the context facts. Successive output positions retrieve E0, E1 and E2, providing an execution clock.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 21,
+      "text": "Chain of thought as state. When an intermediate value is forcibly changed, approximately 97–98% of downstream computations follow the altered state in the sequential task. Here, intermediate tokens carry external computational state.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 22,
+      "text": "Training order. When the final loss accepts both A→B and B→A, 10, 30 or 70 early A-only training steps move the final A-first rate from 32% to 72%, 100% and 100%. Early B-only training produces the corresponding preference for B.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 23,
+      "text": "Serialization policy. When later computation genuinely depends on an earlier state, reasoning→answer training places the causal prerequisite first in all three tested initializations. The early operator has mean entropy about 0.028; the later conditional operator has mean entropy about 0.142, on the scale reported in the experimental record.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 24,
+      "text": "Language and computational state. Interventions on markers and values show that tokens which describe or route computation can have different causal roles from tokens carrying its state. What a CoT sequence says therefore cannot, by itself, establish which computation has been completed.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 25,
+      "text": "The strongest direct causal evidence in this report comes from fully controlled small and medium-sized experimental networks. These systems provide reproducible examples of mechanisms and specific coordinates for interpreting larger-model behavior. The larger-model correspondences are retained at their stated evidential level.",
+      "source_style": "table"
+    },
+    {
+      "source_block": 27,
+      "text": "Reading guide",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 28,
+      "text": "Calibrate a blueprint with known structure, then construct it from relations in the current context.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 29,
+      "text": "Remove blueprint supervision and test whether an executable plan still develops.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 30,
+      "text": "Locate its formation, from separate ingredients to joint readout and distributed storage.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 31,
+      "text": "Recover the operators and replace the network behavior with an explicit algorithm.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 32,
+      "text": "Test whether a larger network forms an ordered program.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 33,
+      "text": "Introduce competing objectives and examine shared components and branching execution.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 34,
+      "text": "Study the relationship between the Transformer blueprint, output order and CoT.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 35,
+      "text": "Measure how early training changes the order in which operations become executable.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 36,
+      "text": "Reconnect the results to earlier language statistics and the drawing analogy.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 37,
+      "text": "Bring together the execution model, failure types and interpretation of token replay.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 38,
+      "text": "Review the earlier hypotheses against the direct evidence and close the present research sequence.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 39,
+      "text": "1 Compiling context into an executable blueprint",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 41,
+      "text": "We began with a modest definition. After reading context, a model may form an object that determines how it will carry out the remaining task. Such an object should at least specify an operation, an argument order and an output style. In a small enough task, its possible values should be enumerable and executable. Shuffling the presentation of semantically equivalent context should preserve the plan.",
+      "source_style": ""
+    },
+    {
+      "source_block": 42,
+      "text": "EXP001 Explicit blueprint calibration",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 43,
+      "text": "We first constructed a small world in which a blueprint was guaranteed to exist. A model with 11,323 parameters receives 2,880 synthetic contexts and generates a three-slot plan: OP, ARG_ORDER and STYLE. There are only 3 × 2 × 2 = 12 possible plans, so the complete conditional distribution p(B | C) can be enumerated exactly.",
+      "source_style": ""
+    },
+    {
+      "source_block": 45,
+      "text": [
+        [
+          "Measure",
+          "Result"
+        ],
+        [
+          "OP / ORDER / STYLE accuracy",
+          "100% / 100% / 100%"
+        ],
+        [
+          "Whole-plan accuracy",
+          "100%"
+        ],
+        [
+          "Same semantic context shuffled 100 times",
+          "100% retain the same correct plan"
+        ],
+        [
+          "Correct-plan probability in the illustrated example",
+          "0.9833"
+        ],
+        [
+          "Posterior entropy in that example",
+          "0.1417 bits"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 48,
+      "text": "EXP001 establishes a calibration instrument. If a blueprint is an executable object, this task tells us how to measure it. It also replaces the loose question of what the model intends to say with a discrete operation that can actually be run. Presentation-order invariance is built into this encoder; the shuffle test checks that property rather than demonstrating a learned invariance.",
+      "source_style": ""
+    },
+    {
+      "source_block": 50,
+      "text": "A plan copied from a fixed rule-ID lookup would still leave the interesting question open. Can the model construct the plan when the current rules arrive as relations in the context itself?",
+      "source_style": ""
+    },
+    {
+      "source_block": 51,
+      "text": "EXP002 Constructing the plan from current relations",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 52,
+      "text": "We removed the fixed rule ID and supplied three shuffled (goal→operation) relations. Training uses four rule permutations, validation uses one, and the test set uses the unseen permutation (2, 1, 0).",
+      "source_style": ""
+    },
+    {
+      "source_block": 54,
+      "text": [
+        [
+          "Measure",
+          "Held-out rule result"
+        ],
+        [
+          "OP / ORDER / STYLE accuracy",
+          "100% / 100% / 100%"
+        ],
+        [
+          "Whole-plan accuracy",
+          "100%"
+        ],
+        [
+          "Mean attention mass on the fact matching the queried goal",
+          "0.9999"
+        ],
+        [
+          "Correct-plan probability in the illustrated example",
+          "0.9767"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 57,
+      "text": "The blueprint is now constructed from current context relations. When those relations change, the plan changes with them. In this calibration task, the model can assemble a correct plan for a rule permutation absent from training.",
+      "source_style": ""
+    },
+    {
+      "source_block": 58,
+      "text": "2 A blueprint learned without blueprint labels",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 60,
+      "text": "An intermediate label imposed by the experimenter does not show that an ordinary training objective needs such a representation. We therefore removed blueprint supervision altogether. The model receives context and final-answer targets, and must organize its intermediate computation for itself. We identify an internal plan by its ability to control future execution, with readout serving as a supporting measurement.",
+      "source_style": ""
+    },
+    {
+      "source_block": 61,
+      "text": "EXP003 Testing an unseen rule permutation",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 62,
+      "text": "The 20,454-parameter network is divided into a planner, an eight-dimensional bottleneck and an executor. The executor cannot see the rules, queried goal, order bit or style bit. It receives only the latent state z and the numeric payload. Training supplies no blueprint labels. The first version also tests a rule permutation completely absent from training.",
+      "source_style": ""
+    },
+    {
+      "source_block": 64,
+      "text": [
+        [
+          "Measure",
+          "Result"
+        ],
+        [
+          "Held-out exact-answer accuracy",
+          "53.17%"
+        ],
+        [
+          "Operation readout",
+          "61.67%"
+        ],
+        [
+          "Order / style readout",
+          "100% / 100%"
+        ],
+        [
+          "Donor z transplanted to a new payload",
+          "52.00% follow the donor plan"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 67,
+      "text": "This experiment detects partial plan structure but also tests the harder problem of generalizing a relation pattern. Order and style are fully recoverable from the bottleneck; operation identity transfers only partially to the held-out rule. To isolate whether answer supervision can produce an executable internal plan, we next separate that question from unseen-rule generalization.",
+      "source_style": ""
+    },
+    {
+      "source_block": 68,
+      "text": "EXP003B Isolating the executable latent plan",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 69,
+      "text": "The architecture remains unchanged, but training now covers the current rule family. Testing uses fresh contexts and payloads. The network still learns only from final answers. Blueprint labels are introduced after training solely to fit readout probes.",
+      "source_style": ""
+    },
+    {
+      "source_block": 71,
+      "text": [
+        [
+          "Measure or intervention",
+          "Result"
+        ],
+        [
+          "Exact final-answer accuracy",
+          "100%"
+        ],
+        [
+          "Operation / order / style readout from z",
+          "100% / 100% / 100%"
+        ],
+        [
+          "Complete 12-state blueprint readout",
+          "100%"
+        ],
+        [
+          "3,000 donor-z and recipient-payload transplants",
+          "100% follow the donor plan"
+        ],
+        [
+          "Set z to zero",
+          "2.70% exact-answer accuracy"
+        ],
+        [
+          "Randomly exchange z and score against the original answer",
+          "12.58%"
+        ],
+        [
+          "Score the same exchanges against donor-plan counterfactual answers",
+          "100%"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 73,
+      "text": "The decisive test is easy to picture: take the eight-dimensional state out of one problem and install it in another. What transfers is the procedure for handling new numbers. The state does not merely carry the original answer; its computational meaning is established by what it makes the executor do.",
+      "source_style": "table"
+    },
+    {
+      "source_block": 76,
+      "text": "This gives blueprint a precise operational meaning. It forms before the answer, carries rules for future execution, and changes that execution when replaced. The transplant establishes causal control; the probe tells us what can be read from the state.",
+      "source_style": ""
+    },
+    {
+      "source_block": 77,
+      "text": "3 Where the blueprint becomes jointly readable",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 79,
+      "text": "If context is progressively compiled into a plan, we should be able to follow the transition from separate ingredients to a jointly readable object. The earlier language of rotation, translation and recombination also invites a sharper question: which mathematical operation makes the complete plan explicit?",
+      "source_style": ""
+    },
+    {
+      "source_block": 80,
+      "text": "EXP004 Readout and transplantation across stages",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 81,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 84,
+      "text": [
+        [
+          "Stage",
+          "Operation",
+          "Order",
+          "Style",
+          "Whole plan"
+        ],
+        [
+          "goal",
+          "32.90%",
+          "50.08%",
+          "51.10%",
+          "8.03%"
+        ],
+        [
+          "context_selected",
+          "100%",
+          "50.27%",
+          "50.35%",
+          "25.22%"
+        ],
+        [
+          "planner_input",
+          "100%",
+          "100%",
+          "66.72%",
+          "66.72%"
+        ],
+        [
+          "h1",
+          "100%",
+          "100%",
+          "100%",
+          "100%"
+        ],
+        [
+          "h2",
+          "100%",
+          "100%",
+          "100%",
+          "100%"
+        ],
+        [
+          "z",
+          "100%",
+          "100%",
+          "100%",
+          "100%"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 86,
+      "text": "Transplanting the complete donor state at planner_input, h1, h2 or z makes all tested downstream answers follow the donor blueprint. Causal control is therefore already present at planner_input, before the full plan reaches perfect linear readability. From h1 onward, perfect readout and perfect donor-plan transfer coexist. These measurements distinguish when information becomes linearly explicit from when it can already control later computation.",
+      "source_style": ""
+    },
+    {
+      "source_block": 87,
+      "text": "EXP004C Localizing the formation operator",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 88,
+      "text": "The first planner stage computes pre1 = Linear(c0), followed by h1 = tanh(pre1). Complete-plan readout is 66.72% at c0 and 67.83% after the affine transformation; after tanh it reaches 100%. Style readout also rises from 66.72% to 100%.",
+      "source_style": ""
+    },
+    {
+      "source_block": 90,
+      "text": "In this trained network, the first nonlinearity makes the separate conditions linearly explicit as a joint plan. Its local Jacobian is J(x) = diag(1 − tanh²(Wx + b))W. A shared affine transformation is followed by input-dependent gains that change how directions contribute. The result locates a change in representational accessibility; it does not imply that information is created from nothing at h1.",
+      "source_style": ""
+    },
+    {
+      "source_block": 91,
+      "text": "EXP004B Distributed storage and complementary inference",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 92,
+      "text": "The final eight-dimensional z shows differentiated but mixed roles. Operation has η² ≈ 0.915 at z4, style has η² ≈ 0.939 at z0, and argument order has η² ≈ 0.789 at z3. Replacing a single coordinate by its mean can sharply reduce exact-answer accuracy: ablations of z0, z5 and z2 reduce it from 100% to 61.22%, 64.45% and 68.62%, respectively. The strongest factor association and the largest ablation effect need not occur at the same coordinate.",
+      "source_style": ""
+    },
+    {
+      "source_block": 93,
+      "text": "Attention produces a more surprising result. When queried about G0, the model mostly reads G1 and G2; for G1 it reads G0 and G2; for G2 it reads G0 and G1. The queried row receives only about 3% of the attention mass. Causal interventions confirm the pattern: none of 144 changes to the queried row changes behavior, whereas changes to a nonqueried row alter the program in 97.9% of interventions.",
+      "source_style": ""
+    },
+    {
+      "source_block": 95,
+      "text": "Formation and storage are different locations. The complete plan becomes jointly readable at h1, is reorganized at h2, and is compressed into z. Its final representation is distributed. More strikingly, the model has learned complementary inference: the other two relations identify the missing operation. We never instructed it to ignore the queried row, yet that is the procedure it uses in this task.",
+      "source_style": ""
+    },
+    {
+      "source_block": 96,
+      "text": "4 Recovering the algorithm from the network",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 98,
+      "text": "The earlier descriptions of internal pieces rotating and moving can be connected to explicit mathematics. An affine layer computes Wx + b: b translates the state, while W changes its directions and scales. For a rectangular matrix, a singular-value decomposition expresses this as orthogonal changes of coordinates and scaling or projection; other decompositions can expose shearing. We can therefore ask which operator is applied, and whether the sequence of operators can be recovered as a runnable program.",
+      "source_style": ""
+    },
+    {
+      "source_block": 99,
+      "text": "EXP005 Neural algorithm decompilation",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 100,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 103,
+      "text": "Causal tests identify the planner's complement rule. Changing the queried fact changes behavior in 0% of interventions. Changing another fact changes behavior in 97.92%, affecting an average of 73.28% of payload outputs.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 104,
+      "text": "Exhaustive enumeration of the executor yields six modular linear forms. For example, operation 0 with order 0 computes (x + 2y) mod 11; operation 2 with order 1 computes (x + 4y) mod 11.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 105,
+      "text": "Output style follows style_bit XOR [goal == 2].",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 106,
+      "text": "The first affine map has shape 64 × 72 and numerical rank 64. Its first 18 singular directions account for 90% of its Frobenius energy.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 107,
+      "text": "An explicit program containing no neural-network weights agrees exactly with the trained network on all 52,272 inputs in the complete valid finite domain.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 108,
+      "text": "other_ops = [op for (goal, op) in facts\n             if goal != query_goal]\noperation = missing({0, 1, 2}, other_ops)\n(a, b) = COEFF[(operation, order_bit)]\nvalue = (a*x + b*y) mod 11\nstyle = style_bit XOR [query_goal == G2]",
+      "source_style": "table"
+    },
+    {
+      "source_block": 111,
+      "text": "Here, interpretation becomes algorithm recovery: the parameterized behavior is replaced by an independently executable program. The recovered procedure also need not match the procedure used to generate the training data. A network can solve the same rule with a different internal algorithm that is behaviorally equivalent on the valid domain.",
+      "source_style": ""
+    },
+    {
+      "source_block": 112,
+      "text": "5 An ordered program in a larger recurrent network",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 114,
+      "text": "The small system exposes operation, order and style, but it is deliberately constrained. We therefore move to a two-layer GRU with 187,069 parameters. It has one training objective: read three relation facts in shuffled order and predict the final scalar after three operations. No operation-slot, intermediate-state or blueprint labels are supplied during training.",
+      "source_style": ""
+    },
+    {
+      "source_block": 115,
+      "text": "Single objective GRU",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 117,
+      "text": "Final-answer accuracy is 100% over the complete finite domain of 4,992 cases.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 118,
+      "text": "After the first fact, its logical operation slot is 100% linearly readable, while unread slots remain near chance. After two facts, both observed slots are fully readable. After all three, the complete 64-way program [op1 | op2 | op3] is 100% readable.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 119,
+      "text": "Independent contributions from the three slots explain 93.15% of the first-layer hidden geometry and 86.27% of the second-layer geometry.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 120,
+      "text": "Changing one operation through its corresponding slot direction in both recurrent layers makes 98.77% of outputs match the counterfactual program.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 121,
+      "text": "The recovered non-neural program agrees with the network on all 4,992 valid cases.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 122,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 125,
+      "text": "The blueprint now has the form of a three-slot program table, [op1 | op2 | op3]. The first layer is its main store; the second contains a fully readable copy expressed in a form coordinated with execution. The network has separated the presentation order of facts from their logical execution order.",
+      "source_style": ""
+    },
+    {
+      "source_block": 126,
+      "text": "6 Shared components under competing objectives",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 128,
+      "text": "A single objective can encourage one committed program. Larger-model observations, however, repeatedly show reusable pieces, local assembly and competition later in processing. One possible mechanism is that partially overlapping objectives make shared components more stable than any one complete execution sequence.",
+      "source_style": ""
+    },
+    {
+      "source_block": 129,
+      "text": "Control with distinguishable tasks",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 130,
+      "text": "When A and B are identified by explicit task cues, a shared network can route conditionally. Both tasks reach 100%, and their training gradients are positively aligned. Having two tasks alone therefore does not establish destructive competition.",
+      "source_style": ""
+    },
+    {
+      "source_block": 131,
+      "text": "Partially conflicting targets on the same input",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 132,
+      "text": "We then give the same input and output head two targets: A executes E0→E1→E2, while B executes E0→E2→E1. They share the first step and all three operations, differing only in the order of the last two. Their final answers coincide in 25% of cases and conflict in 75%.",
+      "source_style": ""
+    },
+    {
+      "source_block": 133,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 136,
+      "text": [
+        [
+          "Measure",
+          "Result"
+        ],
+        [
+          "Both A and B in the top two on conflicting cases",
+          "100%"
+        ],
+        [
+          "Mean p(A) / p(B)",
+          "0.4989 / 0.4987"
+        ],
+        [
+          "Layer 1 additive slot R² from single to conflicting objectives",
+          "0.9315 → 0.9212"
+        ],
+        [
+          "Layer 2 additive slot R² from single to conflicting objectives",
+          "0.8627 → 0.8176"
+        ],
+        [
+          "Both donor branches retained after context-state transplantation",
+          "100%"
+        ],
+        [
+          "Both counterfactual branches recovered after shared-slot editing",
+          "98.75%"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 139,
+      "text": "The blueprint is not erased. The shared operation table remains relatively stable, while commitment to one execution order branches. The single-objective network produces a committed plan; the partially conflicting network retains competing plans. This offers a specific candidate mechanism for fragmented execution in larger models: training can preserve reusable pieces while deferring the choice of execution order to later competition.",
+      "source_style": ""
+    },
+    {
+      "source_block": 140,
+      "text": "7 Transformer output positions and execution order",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 142,
+      "text": "A GRU has a recurrent state that can act like a central register. A Transformer instead has a context stream, attention and an autoregressive token sequence. We therefore use a three-block causal Transformer with 116,512 parameters to compare direct answers, forward CoT and reverse CoT, together with internal activation patching. The question is how the plan, output positions and intermediate states work together.",
+      "source_style": ""
+    },
+    {
+      "source_block": 143,
+      "text": "Readable plans can precede successful execution",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 144,
+      "text": "In the direct-only model, the final-layer state at SEP supports E0, E1 and E2 readout of 100%, 99.82% and 100%. In the early Direct-first curriculum phase, all three slots are already 100% readable after the first block, yet actual direct-answer accuracy is only about 16%. The corresponding Trace-first phase already produces complete traces with 100% accuracy.",
+      "source_style": ""
+    },
+    {
+      "source_block": 146,
+      "text": "These measurements separate plan formation from execution. The operation table can already be available while the model is still unable to combine all three steps into a reliable final answer.",
+      "source_style": ""
+    },
+    {
+      "source_block": 147,
+      "text": "A readable summary and its causal storage",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 148,
+      "text": "Donor and recipient problems differ in exactly one operation slot. Replacing the recipient SEP activation with the donor activation does not transfer the future program. Replacing the changed fact at the earliest layer does: the changed slot follows the donor in 100% of cases, the other slots retain their recipient values in 100%, and the complete trace and final answer also follow the donor in 100%.",
+      "source_style": ""
+    },
+    {
+      "source_block": 150,
+      "text": "The Transformer blueprint therefore has a different storage organization from the GRU's final recurrent state. SEP makes the whole plan readable, but the components used causally in execution remain distributed in the context and fact stream.",
+      "source_style": ""
+    },
+    {
+      "source_block": 151,
+      "text": "Output positions schedule retrieval",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 152,
+      "text": "In forward CoT, attention from successive execution markers has a clear rhythm. In the first block, S1 mainly retrieves E0, S2 retrieves E1 and S3 retrieves E2. Each corresponding operation token is correct in 100% of the recorded cases.",
+      "source_style": ""
+    },
+    {
+      "source_block": 153,
+      "text": [
+        [
+          "Output position",
+          "Attention to E0",
+          "Attention to E1",
+          "Attention to E2"
+        ],
+        [
+          "S1",
+          "0.472",
+          "0.159",
+          "0.038"
+        ],
+        [
+          "S2",
+          "0.016",
+          "0.274",
+          "0.027"
+        ],
+        [
+          "S3",
+          "0.046",
+          "0.032",
+          "0.436"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 155,
+      "text": "The recovered execution loop retrieves the current operator, transforms the current value, writes the new state as a token and reads it again at the next position before retrieving the following operator. The blueprint supplies the operation logic; autoregressive position supplies the clock.",
+      "source_style": "table"
+    },
+    {
+      "source_block": 157,
+      "text": "Intermediate CoT values can carry computational state",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 158,
+      "text": "We directly replace a correct intermediate value with a false one. If the sequence were used only as an explanation, later computation could return to the original answer. If the emitted value is used as state, subsequent operations should continue from the substituted value.",
+      "source_style": ""
+    },
+    {
+      "source_block": 159,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 162,
+      "text": "Replacing V1 makes V2, V3 and the final answer follow the counterfactual state in 97.83%, 97.25% and 97.42% of cases. Replacing V2 changes V3 and the final answer accordingly in 98.33% and 98.50%.",
+      "source_style": ""
+    },
+    {
+      "source_block": 164,
+      "text": "CoT is therefore part of an evolving computation in this task. Each emitted value is a visible result of earlier execution and immediately becomes input to later execution. An output both reveals a completed step and changes the state from which the next step proceeds.",
+      "source_style": ""
+    },
+    {
+      "source_block": 165,
+      "text": "Why reversing the trace disrupts execution",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 166,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 168,
+      "text": "The forward and reverse traces contain identical operation identities and intermediate values, with equal supervised token counts. After 14 epochs, forward CoT gives 100% exact traces and final answers. Reverse CoT gives only 7.29% exact traces and 9.75% final answers, although all three operation tokens at S3, S2 and S1 remain 100% correct.",
+      "source_style": ""
+    },
+    {
+      "source_block": 169,
+      "text": "The reverse model fails mainly on values. It first emits V3 correctly in 9.75% of cases, then V2 in 15.41%, and finally V1 in 38.11%. Attention correctly reverses the retrieval order to E2, E1 and E0. It knows which operator to retrieve, but is asked to produce a future state before its causal prerequisites have been written into the external sequence.",
+      "source_style": ""
+    },
+    {
+      "source_block": 171,
+      "text": "This gives a concrete account of why CoT helps here. It decomposes a composition of functions into local one-step transitions and writes each result back into autoregressive context. Direct generation is also learnable: with approximately the same optimizer-update budget, the direct-only model reaches 98.29% on the seen domain. It must, however, complete the composed calculation internally before emitting one result.",
+      "source_style": ""
+    },
+    {
+      "source_block": 172,
+      "text": "When language exposes an unfinished transition",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 173,
+      "text": "A sentence in a CoT sequence should not automatically be treated as a completed judgment that the model has settled on. A possible interpretation of the controlled findings is that computational pieces are still turning, combining and settling while the output interface continues to demand tokens. The language head may project whatever is available at that instant: committed answer components, an emerging next operation, and an unsettled transition. In more vivid terms, the workshop is halfway through the job when the front desk is asked to describe what is on the bench. An odd sentence need not correspond to an equally complete odd judgment inside the model.",
+      "source_style": ""
+    },
+    {
+      "source_block": 174,
+      "text": "The proposed trajectory is a stable state S_k, a changing transition region T_(k→k+1), and a new stable state S_(k+1). Some token spans may report completed state commitments; others may sample the transition. On this account, awkward wording and an incorrect computational trajectory are different events. What controls the future is which states have been committed and which operations are ready to execute.",
+      "source_style": ""
+    },
+    {
+      "source_block": 175,
+      "text": "The marker-versus-state intervention supports distinguishing token roles. Both labels and externalized values matter causally, but a wrong marker paired with the correct value preserves the complete correct continuation in 28.43% of cases. A correct marker paired with a wrong value preserves it in 20.59%; when both are wrong, the rate falls to 8.82%. These results motivate separating routing or commitment tokens, state-bearing tokens and weaker descriptive tokens, rather than assigning every keyword the same computational role.",
+      "source_style": ""
+    },
+    {
+      "source_block": 176,
+      "text": "The unfinished-transition account also makes a prediction about the earlier CoT-length findings. If forced continuation moves the model into the onset of another operation, internal rearrangement and branch competition should intensify. Cutting the sequence or forcing language output at that point may expose a mixture of answer and transition state. Alignment between accuracy troughs and peaks in hidden-state displacement, attention redistribution, branch entropy or changing operator confidence would provide a direct test. That precise alignment remains a prediction rather than a measured result in this report.",
+      "source_style": ""
+    },
+    {
+      "source_block": 177,
+      "text": "8 Training history and the order of execution",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 179,
+      "text": "An earlier intuition was that the model draws the most certain structure first. An operation repeated and reused early in training may become ready to execute earlier. When a later task permits several correct orders, that operation may consequently be placed near the front of the plan.",
+      "source_style": ""
+    },
+    {
+      "source_block": 180,
+      "text": "A final task that accepts either order",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 181,
+      "text": "The task has two independent branches. A uses a fixed, frequently reusable affine operator; B selects from a family of four operators according to context. The final answer requires both, and the final loss accepts both A→B and B→A. Every dose condition starts from the same initialization and receives the same 300-step flexible-order final training phase. Only the identity and number of early A-only or B-only steps differ.",
+      "source_style": ""
+    },
+    {
+      "source_block": 182,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 185,
+      "text": [
+        [
+          "Early training and final preference",
+          "0 steps",
+          "10 steps",
+          "30 steps",
+          "70 steps"
+        ],
+        [
+          "A-only training then A-first",
+          "32.35%",
+          "72.06%",
+          "100%",
+          "100%"
+        ],
+        [
+          "B-only training then B-first",
+          "67.65%",
+          "100%",
+          "100%",
+          "100%"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 187,
+      "text": "The readiness test is more revealing than the first-token preference. After 30 A-only steps, forcing A first gives the correct immediate value in 100% of cases; forcing B gives it in only 5.88%. After 30 B-only steps, B is immediately executable in 100%, while A is ready in 17.65%. Training history changes which computation is ready in the initial execution state.",
+      "source_style": ""
+    },
+    {
+      "source_block": 188,
+      "text": "Independent initializations and competing attractors",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 189,
+      "text": "All three seeds with stable-A-first pretraining favor A-first, although one retains a 70.6/29.4 mixture. Two of three seeds with B-first pretraining converge to B-first; the other later returns to A-first. Curriculum creates a strong bias toward an execution-order attractor, rather than an absolute rule.",
+      "source_style": ""
+    },
+    {
+      "source_block": 190,
+      "text": "Execution order and external working state",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 191,
+      "text": "In the flexible-order task, A and B are independent. Replacing the first emitted branch value does not consistently force the final answer to use the false value, because the original context permits recomputation. This differs from the 97–98% counterfactual propagation in the sequentially dependent task in Section 7.",
+      "source_style": ""
+    },
+    {
+      "source_block": 193,
+      "text": "Training order and CoT state externalization are related but distinct mechanisms. Training history shapes which operation is ready first. An emitted intermediate value acts as a working tape when later computation actually reads and depends on it; the strength of that dependence must be measured for the particular task.",
+      "source_style": ""
+    },
+    {
+      "source_block": 194,
+      "text": "9 Stable structure and the drawing analogy",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 196,
+      "text": "The earlier language statistics suggested a structure made from a few stable axes, replaceable local operators and a rhythm of composition. Those observations came mainly from statistics and internal geometry. The controlled studies now provide a concrete version: a model can separate stable components, operation subspaces and execution order.",
+      "source_style": ""
+    },
+    {
+      "source_block": 197,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 199,
+      "text": "Drawing the reliable structure first",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 200,
+      "text": "The useful part of the old question about how a convolutional model draws was an intuition about computational order. Establish the most stable, certain and reusable structure, then add detail. In an image, this might be a broad outline followed by structure, local shapes and texture. In language generation, the corresponding proposal is a reliable organizing axis, mature operators, local execution, state updates, and then finer detail or branches.",
+      "source_style": ""
+    },
+    {
+      "source_block": 201,
+      "text": "Think of the model as drawing, looking and revising. The strokes made most readily executable by training are laid down first. Once a stroke becomes a token, it also becomes part of the canvas on which the next computation works.",
+      "source_style": "table"
+    },
+    {
+      "source_block": 203,
+      "text": "Why fragmented execution may emerge at larger scale",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 204,
+      "text": "A single objective encourages a committed program. Partially conflicting objectives make a shared operation table more stable than a unique execution order. With more objectives and more extensive sharing, reusable computational pieces may become more useful to retain than complete task-specific programs. The turning, moving, assembly and competition observed in larger models could reflect this organization. This is a cross-scale mechanism hypothesis, supported here by the controlled competing-objective example.",
+      "source_style": ""
+    },
+    {
+      "source_block": 205,
+      "text": "This returns us to the question of whether a language model generates only words or also an evolving process that can continue generating words. In the controlled Transformer, the token sequence can function as an execution trace and as a medium for passing computational state.",
+      "source_style": ""
+    },
+    {
+      "source_block": 206,
+      "text": "10 A program whose execution eligibility changes over time",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 207,
+      "text": "Taken together, the experiments support a dynamic execution schedule. It contains available components, logical positions, readiness to execute, candidate branches and the current state. Each output can constrain the schedule again, supply state to the next computation and change what becomes executable.",
+      "source_style": ""
+    },
+    {
+      "source_block": 208,
+      "text": "Context activates stable structure and reusable operators. A blueprint precursor holds the available components and their readiness. The system commits to an order or retains competing branches. Autoregressive positions schedule local execution; where needed, a result is written as an external state token. That token returns to the context and constrains the next round of execution and commitment.",
+      "source_style": "table"
+    },
+    {
+      "source_block": 210,
+      "text": "Two failure mechanisms",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 211,
+      "text": "Formation failure. The context fails to produce a schedule covering the combination required by the current problem. In the controlled compositional holdout, learned first and second slots remain executable, while the unseen third-slot combination fails. The boundary lies in which program combinations the system can form.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 212,
+      "text": "Commitment or execution failure. The required components and shared structure are available, but competing orders or objectives remain active, or the execution circuit cannot yet unfold the plan reliably. The competing-goal experiment demonstrates branching; the early Transformer with a fully readable plan but about 16% direct-answer accuracy demonstrates incomplete execution learning.",
+      "source_style": "ListNumber"
+    },
+    {
+      "source_block": 213,
+      "text": "These mechanisms suggest different interventions. Extending the combinations that can be formed addresses the first problem. Changing scheduling, routing or later competition may address the second without relearning the underlying components. This is an implication for diagnosis, rather than a repair result established by every experiment here.",
+      "source_style": ""
+    },
+    {
+      "source_block": 214,
+      "text": "Interpreting earlier token replay experiments",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 215,
+      "text": "Earlier experiments truncated the same CoT at each token position and restarted a complete continuation from the question plus the first k tokens. This can now be interpreted as future-program tomography: reset the internal state, preserve only the external token history, and test which future plans and execution paths that history can reconstruct. If complete continuations suddenly converge after one token, that token may mark a commitment event that removes competing paths. This interpretation has not been directly retested on the controlled models in this series.",
+      "source_style": ""
+    },
+    {
+      "source_block": 216,
+      "text": "The interpretation also explains why identical final answers do not establish identical internal paths. Different programs can project to the same answer. Token replay can consequently study branching, convergence, reconstruction and commitment, beyond the probability of the next token alone.",
+      "source_style": ""
+    },
+    {
+      "source_block": 217,
+      "text": "11 What each level of evidence establishes",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 218,
+      "text": [
+        [
+          "Proposition",
+          "Strongest recorded evidence",
+          "Evidence level"
+        ],
+        [
+          "An executable plan state can precede the answer",
+          "3,000 donor-state transplants follow the donor plan in 100% of cases",
+          "Controlled causal test"
+        ],
+        [
+          "Joint plan readout has a localized formation stage",
+          "About 67% before the first nonlinearity and 100% after it",
+          "Controlled localization"
+        ],
+        [
+          "Network behavior can be replaced by an explicit program",
+          "52,272 of 52,272 valid-domain outputs agree",
+          "Exact finite-domain equivalence"
+        ],
+        [
+          "A blueprint can contain ordered operation slots",
+          "GRU 64-way readout reaches 100%; slot edits yield 98.77% counterfactual answers",
+          "Controlled causal test"
+        ],
+        [
+          "Competing targets can preserve branching plans",
+          "Opposing gradients, approximately 0.5/0.5 branches and causal transplantation",
+          "Controlled causal test"
+        ],
+        [
+          "Transformer output positions can schedule operators",
+          "S1/E0, S2/E1 and S3/E2 retrieval with 100% operation accuracy",
+          "Controlled mechanism evidence"
+        ],
+        [
+          "CoT can carry external computational state",
+          "Altered intermediate values propagate in approximately 97–98% of sequential-task continuations",
+          "Controlled causal test"
+        ],
+        [
+          "Training history can move operations earlier",
+          "Matched-initialization dose experiment with a loss accepting either final order",
+          "Controlled causal effect and path dependence"
+        ],
+        [
+          "The same complete mechanism describes large language models",
+          "Earlier geometric and behavioral findings motivate the correspondence",
+          "Cross-scale interpretation"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 220,
+      "text": "The change in method",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 221,
+      "text": "The central methodological move is to operate on internal objects. We transplant, replace, remove and corrupt them, ask them to control new payloads, and attempt to replace the resulting neural behavior with an ordinary program. We use blueprint and operator as computational terms when these interventions establish their role in future behavior. A readable word or label from a probe is insufficient on its own.",
+      "source_style": ""
+    },
+    {
+      "source_block": 223,
+      "text": "12 Synthesis of the evidence for answer generation",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 224,
+      "text": "The role of this chapter",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 225,
+      "text": "The earlier studies were like tapping along a wall to work out the machinery behind it. Internal motion, rotation and translation, fragmented execution, complete future trajectories, CoT length, recovery in later layers and training order constrained one another. The present synthesis adds a more direct standard: in a system with a known task, controllable states and an enumerable valid domain, identify a plan, move it, alter it or remove it, and test whether future behavior changes as predicted. The controlled experiments meet that standard for the mechanisms described here.",
+      "source_style": ""
+    },
+    {
+      "source_block": 226,
+      "text": "This chapter assembles those results into an assessment of the earlier hypotheses. It completes the explanatory sequence by connecting its observations to identifiable computational objects.",
+      "source_style": ""
+    },
+    {
+      "source_block": 227,
+      "text": "12.1 From readable activations to controllable computation",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 228,
+      "text": "The earlier work shifted attention from which token activates a unit to how computational pieces move and exchange control, and why interventions at particular locations can recover an answer. Those findings narrowed the mechanism while allowing several possible explanations. The controlled studies introduce three stronger criteria.",
+      "source_style": ""
+    },
+    {
+      "source_block": 229,
+      "text": "Executability. An internal object can drive subsequent computation, in addition to being readable by a probe.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 230,
+      "text": "Transferability. A state taken from problem A makes problem B's new payload execute according to A's plan.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 231,
+      "text": "Replaceability. A recovered explicit program agrees with the network on every input in the task's complete valid finite domain.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 232,
+      "text": "These criteria turn activation interpretation into tests of computational objects. The strongest finite-domain example recovers the behavior of the 20,454-parameter network as complementary inference, six coefficient pairs and an XOR rule, with agreement on 52,272 of 52,272 valid inputs. Geometric descriptions of movement and rearrangement can then be connected to a sequence of mathematical operations.",
+      "source_style": ""
+    },
+    {
+      "source_block": 233,
+      "text": "12.2 Reviewing the earlier propositions",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 234,
+      "text": "The following comparisons retain the distinction between the earlier evidence and the new controlled tests. Earlier evidence includes behavior, geometry, trajectories and local interventions. Direct evidence here means transplantation, state manipulation or algorithm-level comparison within the specified controlled system.",
+      "source_style": ""
+    },
+    {
+      "source_block": 235,
+      "text": [
+        [
+          "Earlier proposition",
+          "Earlier evidence",
+          "Direct test in this series",
+          "Assessment"
+        ],
+        [
+          "Context forms an object specifying what to do next",
+          "Internal motion, future outputs and recovery in later layers point to an organizing state available before the answer.",
+          "Answer-only supervision produces an eight-dimensional plan state. Operation, order and style are readable, and donor state with recipient payload follows the donor plan in 100% of tested transplants.",
+          "Direct support in the controlled system for an executable blueprint-like state."
+        ],
+        [
+          "The blueprint is an operation schedule rather than a complete sentence draft",
+          "Fragment assembly, position-specific gains and motion before output suggest sequential use of local computations.",
+          "The 187,069-parameter GRU forms [op1 | op2 | op3]. Editing one slot in both layers produces the corresponding counterfactual answer in 98.77% of cases.",
+          "Direct support for an ordered operator schedule."
+        ],
+        [
+          "Geometric transformations correspond to computational operators",
+          "Representation geometry and internal motion indicate direction changes and transport.",
+          "Joint plan readout is localized to the affine-to-tanh transition. Jacobian analysis, singular values and ablations connect geometric changes to operators, followed by recovery of an explicit program.",
+          "Direct support for relating geometric observations to matrix and nonlinear operations."
+        ],
+        [
+          "Competing objectives can preserve shared fragments and branch execution",
+          "Larger-model observations show component reuse, local switching and competition in later processing.",
+          "Partially conflicting targets yield a whole-parameter gradient cosine of about −0.596. Shared slot structure remains, and both execution branches occupy the top two outputs in 100% of conflicting cases.",
+          "Direct support for shared components and branched plans as a possible result of competing training objectives."
+        ],
+        [
+          "CoT can be computational state",
+          "Length effects, truncation, recovery and changes in complete future trajectories show that emitted text can affect later computation.",
+          "Replacing V1 makes downstream V2, V3 and the final answer follow the false state in approximately 97–98% of cases. Replacing V2 produces corresponding downstream changes.",
+          "Direct support for an external state tape in the sequentially dependent task."
+        ],
+        [
+          "Output order participates in scheduling",
+          "Success varies across output positions and length intervals, suggesting that sequence position is computationally consequential.",
+          "Forward CoT reaches 100%. Reverse CoT still retrieves every operator correctly, but final-answer accuracy is only about 9.75%.",
+          "Direct support for separating correct operator retrieval from successful state computation in the required order."
+        ],
+        [
+          "Training history shapes operator precedence",
+          "Earlier training and later output habits are related, but separating that relationship from task content is difficult.",
+          "With both A→B and B→A accepted by the final loss, 0, 10, 30 and 70 A-only steps yield A-first rates of 32.35%, 72.06%, 100% and 100%.",
+          "Direct support for curriculum-dependent execution-order attractors."
+        ],
+        [
+          "Reasoning before the answer can produce an early stable stage and a later conditional stage",
+          "Earlier CoT behavior and length curves suggest an initial reliable structure followed by finer or more fragmented processing.",
+          "In the dependent task, all three R2A initializations select causally prior A first. Mean entropies are about 0.028 for A and 0.142 for B; mean logit margins are about 6.64 and 4.69.",
+          "Direct support in the controlled dependent task. Independent branches retain initialization-dependent order."
+        ],
+        [
+          "Linguistic labels and computational state have different roles",
+          "Earlier observations distinguish awkward wording with a correct answer from plausible wording with an incorrect answer.",
+          "Correct complete continuations occur in 28.43% with wrong marker and correct state, 20.59% with correct marker and wrong state, and 8.82% with both wrong.",
+          "Direct support for distinct causal roles of markers and values. The broader description-versus-computation interpretation remains a synthesis."
+        ],
+        [
+          "Longer CoT may pass a settled state and expose a new transition",
+          "Earlier length experiments show separated favorable intervals, later divergence and declining accuracy.",
+          "The controlled work establishes later conditional computation and failures under reversed execution. It does not yet align the earlier error intervals with measured peaks at operator onset.",
+          "A specific mechanism prediction has been formulated; exact temporal alignment remains unverified."
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 236,
+      "text": "12.3 Generation as a changing program state",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 237,
+      "text": "The most consistent object across the direct experiments is a dynamic program state. It holds reusable components, logical positions, current readiness, candidate branches and committed local results. Context changes that state; emitted tokens and intermediate results can change it again.",
+      "source_style": ""
+    },
+    {
+      "source_block": 238,
+      "text": "The proposed computational sequence is:",
+      "source_style": ""
+    },
+    {
+      "source_block": 239,
+      "text": "Context activates reusable structure; the blueprint determines which operations are eligible; an operation changes the state; its result is committed; the system reschedules subsequent computation and continues the output.",
+      "source_style": ""
+    },
+    {
+      "source_block": 240,
+      "text": "Stable axes are statistical or representational directions retained across tasks.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 241,
+      "text": "Reusable operators are transformations applied repeatedly to different contents.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 242,
+      "text": "A blueprint specifies their current eligibility and schedule for a particular task.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 243,
+      "text": "Fragmented execution arises when objectives share components and compete for their use at particular moments.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 244,
+      "text": "This connects the early language statistics to algorithm recovery. A model can learn stable organizing directions and replaceable operations, then use current context to assemble a task-specific plan. At the computational level, language generation can be the progressive unfolding of that plan through a language output interface.",
+      "source_style": ""
+    },
+    {
+      "source_block": 245,
+      "text": "12.4 Different computational roles within CoT",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 246,
+      "text": "The interventions motivate distinguishing three roles within a token sequence. Their evidence is strongest for routing markers and state-bearing values; the descriptive category is an interpretation of how language can accompany those processes.",
+      "source_style": ""
+    },
+    {
+      "source_block": 247,
+      "text": "Routing or commitment tokens select a computational path. They need not contain the full calculation that follows them.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 248,
+      "text": "State-bearing tokens externalize a completed local result that a later operator can read and use.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 249,
+      "text": "Descriptive tokens primarily make the sequence readable to a person. Their wording can temporarily diverge from the underlying computational state.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 250,
+      "text": "This suggests a way to understand some apparently strange CoT sentences. The output may project a committed answer component together with an unfinished computational transition. To use the workshop image again: the parts are still being fitted together, but the workshop camera has been connected directly to the language head. The emitted sentence may therefore be an imperfect view of an ongoing process rather than a settled internal proposition.",
+      "source_style": ""
+    },
+    {
+      "source_block": 251,
+      "text": "Two observations support this interpretation: strong propagation through state-bearing tokens in the sequential task, and different effects of marker and state interventions. Identifying an unfinished transition directly would require token-level alignment with hidden-state displacement, Jacobian norm, attention redistribution or branch-entropy peaks. That alignment is not part of the present measured evidence.",
+      "source_style": ""
+    },
+    {
+      "source_block": 252,
+      "text": "12.5 Why the drawing analogy remains useful",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 253,
+      "text": "The old drawing analogy can now be expressed as a mechanism hypothesis. Repeated training can make well-supported, reusable computations that depend directly on the original context ready earlier. Computations depending on previous results, additional branches or weaker support may occur later. In the controlled serialization study, R2A gives mean entropy 0.028 for the early A value and 0.142 for the later conditional B value, with respective logit margins of 6.64 and 4.69.",
+      "source_style": ""
+    },
+    {
+      "source_block": 254,
+      "text": "Drawing the broad structure first therefore refers to executing a mature operator and committing its result. The new state reduces what remains to be resolved and lets more specific operations become executable. The visible sequence may look progressively more detailed because computational prerequisites are being satisfied along the way.",
+      "source_style": ""
+    },
+    {
+      "source_block": 255,
+      "text": "12.6 Formation and execution boundaries",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 256,
+      "text": "The synthesis distinguishes at least two levels at which answer generation can fail.",
+      "source_style": ""
+    },
+    {
+      "source_block": 257,
+      "text": "The boundary of plan formation",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 258,
+      "text": "The context may fail to form a schedule that covers the current combination. In the controlled compositional holdout, the first two learned slots remain executable, but the unseen third-slot combination fails. Having the pieces available and being able to assemble the required combination are different capacities.",
+      "source_style": ""
+    },
+    {
+      "source_block": 259,
+      "text": "The boundary of commitment and execution",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 260,
+      "text": "The pieces may already be present while commitment to a route or reliable unfolding of the plan remains incomplete. Competing targets can retain two branches near 0.5/0.5. The early Transformer provides another example: a complete program is already 100% readable while direct answers remain poor. Scheduling, routing and state handoff become central to diagnosing these failures.",
+      "source_style": ""
+    },
+    {
+      "source_block": 261,
+      "text": "These levels organize the earlier puzzle of a model apparently knowing enough and still answering incorrectly. The decisive questions are whether the current problem has produced an executable plan and whether that plan has been committed and carried out correctly.",
+      "source_style": ""
+    },
+    {
+      "source_block": 262,
+      "text": "12.7 What the earlier chapters established",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 263,
+      "text": "The controlled tests give a common interpretation to several earlier lines of evidence. Their contributions can be separated by evidential status.",
+      "source_style": ""
+    },
+    {
+      "source_block": 264,
+      "text": "Core mechanisms directly supported in the controlled systems include executable blueprints, operation schedules, distributed program components, branching under competing targets, CoT state transfer, the computational role of output order and curriculum-dependent precedence.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 265,
+      "text": "Mechanistic synthesis across experiments supports a picture in which well-supported computations become ready earlier, later computations are more conditional, and competing objectives preserve shared pieces while allowing execution to branch.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 266,
+      "text": "Specific predictions remain about token replay as future-program tomography, alignment between CoT-length error intervals and operator transitions, and layer-by-layer correspondence in large pretrained language models.",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 267,
+      "text": "The earlier findings thus form a connected research sequence. Controlled blueprint formation, algorithm recovery, state transplantation and serialization tests raise its central propositions to direct evidence in identifiable systems, while retaining the remaining interpretations at their stated scope.",
+      "source_style": ""
+    },
+    {
+      "source_block": 268,
+      "text": "12.8 An integrated account of answer generation",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 269,
+      "text": "The current evidence supports the following account.",
+      "source_style": ""
+    },
+    {
+      "source_block": 270,
+      "text": "The model turns context into reusable computational components and relational state. Training history and current context influence which operators become ready first. Those operators are organized into a blueprint or schedule that changes as their results arrive. The answer develops through local computation, commitment of intermediate state and rescheduling of later work. Competing objectives can favor stable shared components over a unique complete program. Autoregressive output partly binds the order of internal execution to the order of external presentation. A CoT sequence can consequently carry working state, provide routing markers, and perhaps expose transitions that have not yet settled.",
+      "source_style": ""
+    },
+    {
+      "source_block": 271,
+      "text": "This makes the question about what a model is thinking more precise. Which computational objects have formed? Which operators can execute now? In what order do they change the state? Which of those states actually control the future?",
+      "source_style": ""
+    },
+    {
+      "source_block": 272,
+      "text": "12.9 Completion of the current research sequence",
+      "source_style": "Heading2"
+    },
+    {
+      "source_block": 273,
+      "text": "Chapter 8 brings together the evidence collected for this explanatory sequence and gives a relatively detailed account of how the studied models generate answers. The chain from earlier observations to controlled mechanisms is now complete as a synthesis of the present research. Future findings or gaps will be added to the corresponding topical chapters and linked back here. Work on new architectures belongs to its own research sequence.",
+      "source_style": ""
+    },
+    {
+      "source_block": 275,
+      "text": "The earlier chapters established the connected observations. This chapter adds direct identification, transplantation, state intervention and algorithm recovery. Together they support a testable computational description: the studied models generate answers by executing reusable operators within a changing blueprint, committing state and scheduling what happens next.",
+      "source_style": "EvidenceLabel"
+    },
+    {
+      "source_block": 276,
+      "text": "Appendix A Experimental systems",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 277,
+      "text": [
+        [
+          "Study",
+          "Model and scale",
+          "Training signal",
+          "Central recorded result"
+        ],
+        [
+          "EXP001",
+          "11,323 parameters",
+          "Explicit plan labels",
+          "100% exact 12-state plans"
+        ],
+        [
+          "EXP002",
+          "14,587 parameters",
+          "Explicit plans from current rule relations",
+          "100% on a held-out rule permutation"
+        ],
+        [
+          "EXP003 and EXP003B",
+          "20,454 parameters; 8D bottleneck",
+          "Final answers only",
+          "EXP003B plan readout and donor transfer reach 100%"
+        ],
+        [
+          "EXP004 including B and C",
+          "Same planner and executor",
+          "Final answers only",
+          "Full joint readout first reaches 100% at h1"
+        ],
+        [
+          "EXP005",
+          "Same planner and executor",
+          "Final answers only",
+          "52,272 of 52,272 explicit-program outputs agree"
+        ],
+        [
+          "Single-objective GRU",
+          "187,069 parameters; two layers",
+          "Final scalar only",
+          "Ordered slots; 4,992 of 4,992 recovered-program outputs agree"
+        ],
+        [
+          "Competing-objective GRU",
+          "Approximately 187,000 parameters",
+          "Two partially conflicting targets",
+          "Shared operation state with competing branches"
+        ],
+        [
+          "Causal Transformer",
+          "116,512 parameters; three blocks",
+          "Direct answer and CoT variants",
+          "Position-dependent retrieval and external CoT state"
+        ],
+        [
+          "Flexible-order curriculum Transformer",
+          "18,432 parameters",
+          "Final loss accepts either trace order",
+          "Early training changes later execution order"
+        ]
+      ],
+      "source_style": "table"
+    },
+    {
+      "source_block": 279,
+      "text": "Appendix B Principal experimental records",
+      "source_style": "Heading1"
+    },
+    {
+      "source_block": 280,
+      "text": "TINY_BLUEPRINT_EXP001_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 281,
+      "text": "TINY_BLUEPRINT_EXP002_CONTEXT_BUILT_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 282,
+      "text": "TINY_BLUEPRINT_EXP003B_LATENT_BLUEPRINT_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 283,
+      "text": "TINY_BLUEPRINT_EXP004_FORMATION_LOCALIZATION.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 284,
+      "text": "TINY_BLUEPRINT_EXP004C_BIRTH_OPERATOR.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 285,
+      "text": "TINY_BLUEPRINT_EXP005_NEURAL_NETWORK_DECOMPILATION.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 286,
+      "text": "PROGRAM_GRU_SINGLE_OBJECTIVE_DECOMPILATION_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 287,
+      "text": "TWO_GOAL_BLUEPRINT_COMPETITION_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 288,
+      "text": "TRANSFORMER_BLUEPRINT_COT_DECOMPILATION_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 289,
+      "text": "TRAINING_ORDER_BLUEPRINT_FRONTLOADING_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 290,
+      "text": "SERIALIZATION_POLICY_OPERATOR_PRECEDENCE_REPORT.md",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 291,
+      "text": "DEPENDENT_R2A_FRONT_STABILITY_METRICS.json",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 292,
+      "text": "SERIALIZATION_CAUSAL_ASYMMETRY.json",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 293,
+      "text": "SERIALIZATION_RATIONALIZATION_AND_STABILITY.json",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 294,
+      "text": "MARKER_VS_STATE_CAUSAL_TEST.json",
+      "source_style": "ListBullet"
+    },
+    {
+      "source_block": 295,
+      "text": "Quantitative results are drawn from the recorded controlled experiments and the final source manuscript. The accompanying evidence index links the reports, archived metrics, recovered algorithms and available checkpoints. It identifies results recorded only in the manuscript separately from those also supported by recovered companion records. Larger-model interpretations retain the evidential status stated in the report.",
+      "source_style": ""
+    },
+    {
+      "source_block": 296,
+      "text": "The image that remains",
+      "source_style": ""
+    },
+    {
+      "source_block": 297,
+      "text": "",
+      "source_style": ""
+    },
+    {
+      "source_block": 299,
+      "text": "From asking what a model is thinking to identifying the algorithm it executes.",
+      "source_style": ""
+    }
+  ],
+  "figures": [
+    {
+      "figure": 1,
+      "occurrence": 1,
+      "source_block": 4,
+      "file": "figures/Figure_01.png",
+      "caption": "Figure 1. The research sequence, from testing whether an executable blueprint exists to measuring how training history changes execution order. This is a conceptual map of the experiments in this report; it does not plot measured quantities."
+    },
+    {
+      "figure": 2,
+      "occurrence": 2,
+      "source_block": 81,
+      "file": "figures/Figure_02.png",
+      "caption": "Figure 2. Linear readout accuracy across stages of the answer-only planner in EXP004. Operation, argument order, style and the complete 12-state plan are probed separately. The complete plan first reaches 100% at h1. Points are recorded accuracies, joined to show stage order; they are not estimates across repeated training runs, and no error bars are reported. Values are also given in Table 5."
+    },
+    {
+      "figure": 3,
+      "occurrence": 3,
+      "source_block": 100,
+      "file": "figures/Figure_03.png",
+      "caption": "Figure 3. The explicit algorithm recovered from the 20,454-parameter network in EXP005. The planner infers the missing operation from the two nonqueried facts. The executor uses one of six modular coefficient pairs, followed by an XOR formatting rule. The archived exhaustive comparison reports exact two-token agreement on all 52,272 valid inputs. This diagram summarizes a recovered program rather than a statistical estimate."
+    },
+    {
+      "figure": 4,
+      "occurrence": 4,
+      "source_block": 122,
+      "file": "figures/Figure_04.png",
+      "caption": "Figure 4. Causal localization of the GRU program at the end of the context, before the recipient payload is processed. Bars give donor-plan agreement after replacing the stated recurrent layers with donor or zero states. Both donor layers yield 100%; donor L1 with recipient L2 yields 42.63%; donor L2 with recipient L1 yields 13.93%; donor L1 with zero L2 yields 80.50%; donor L2 with zero L1 yields 27.33%. The archived measurements identify L1 as the main store, while perfect transfer requires the coordinated two-layer state. No uncertainty intervals are reported."
+    },
+    {
+      "figure": 5,
+      "occurrence": 5,
+      "source_block": 133,
+      "file": "figures/Figure_05.png",
+      "caption": "Figure 5. Gradient cosine similarity between the two target losses on examples with conflicting answers. Values are approximately −1.0000 for output logits, −0.5964 for all parameters, −0.8574 for embeddings, −0.8291 for GRU L1, −0.5567 for GRU L2 and −0.5173 for the output head. Negative values indicate opposing update directions. Source: PARTIAL_CONFLICT_BLUEPRINT_ANALYSIS.json. These are recorded measurements without reported uncertainty intervals."
+    },
+    {
+      "figure": 6,
+      "occurrence": 6,
+      "source_block": 159,
+      "file": "figures/Figure_06.png",
+      "caption": "Figure 6. Counterfactual state propagation in the sequential Transformer task. After replacing V1, the next V2, downstream V3 and final answer follow the counterfactual state in 97.83%, 97.25% and 97.42% of cases. After replacing V2, V3 and the final answer follow it in 98.33% and 98.50%. The original context and program remain available. Source: TRANSFORMER_COT_STATE_INTERVENTION.json. Rates measure agreement with the counterfactual continuation; no uncertainty intervals are reported."
+    },
+    {
+      "figure": 7,
+      "occurrence": 7,
+      "source_block": 166,
+      "file": "figures/Figure_07.png",
+      "caption": "Figure 7. Forward and reverse CoT after the same 14-epoch, batch-512 training schedule. Both traces contain the same operations and intermediate values and receive the same number of supervised tokens. Forward generation reaches 100% exact traces and answers; reverse generation reaches 7.29% and 9.75%, while operation identity remains 100% correct at all three positions. These are results on the trained program domain, distinct from the compositional holdout. Source: TRANSFORMER_BLUEPRINT_COT_DECOMPILATION_REPORT.md and TRANSFORMER_REVERSE_TRACE_DIAGNOSIS.json. No uncertainty intervals are reported."
+    },
+    {
+      "figure": 8,
+      "occurrence": 8,
+      "source_block": 182,
+      "file": "figures/Figure_08.png",
+      "caption": "Figure 8. Preferred execution order after the final flexible-order training phase. The horizontal axis is the number of early single-branch training steps; the vertical axis is the percentage of cases executing that pretrained branch first. All dose conditions share one initialization and the same subsequent 300-step training phase. Lines connect recorded dose conditions, not population estimates. Independent-seed results are discussed in the text; error bars were not reported for this dose series. Source: TRAINING_ORDER_BLUEPRINT_FRONTLOADING_REPORT.md."
+    },
+    {
+      "figure": 9,
+      "occurrence": 9,
+      "source_block": 197,
+      "file": "figures/Figure_09.png",
+      "caption": "Figure 9. The synthesis connects stable representational structure and reusable operators to a blueprint specifying eligibility, order and branches. Autoregressive position schedules execution. Competing objectives, externalized CoT state where it is used, and training history influence that organization. This is a conceptual synthesis of the controlled results and the interpretations discussed in Sections 9–12; it is not an independently measured network diagram."
+    }
+  ],
+  "tables": [
+    {
+      "number": 1,
+      "title": "Explicit blueprint calibration",
+      "source_block": 45,
+      "file": "evidence/report_tables/Table_01.csv",
+      "note": "Source: TINY_BLUEPRINT_EXP001_REPORT.md. Synthetic contexts; 80/10/10 training, validation and test split. Accuracy is the percentage of correct slot or whole-plan predictions on the test set. Probability and entropy refer to one illustrated example. Presentation-order invariance is built into the encoder."
+    },
+    {
+      "number": 2,
+      "title": "Context-built plans on the held-out rule",
+      "source_block": 54,
+      "file": "evidence/report_tables/Table_02.csv",
+      "note": "Source: TINY_BLUEPRINT_EXP002_CONTEXT_BUILT_REPORT.md. The test permutation is (2, 1, 0). Attention mass and probability are unitless; accuracies are percentages. The probability is from one illustrated example."
+    },
+    {
+      "number": 3,
+      "title": "Initial latent-plan test with rule holdout",
+      "source_block": 64,
+      "file": "evidence/report_tables/Table_03.csv",
+      "note": "Source: the final source manuscript, EXP003 section. These preliminary values were retained as reported; a separate EXP003 result file was not recovered for this edition. Readout and transplant agreement measure different outcomes."
+    },
+    {
+      "number": 4,
+      "title": "Answer-only latent plans and intervention controls",
+      "source_block": 71,
+      "file": "evidence/report_tables/Table_04.csv",
+      "note": "Sources: TINY_BLUEPRINT_EXP003B_LATENT_BLUEPRINT_REPORT.md and TINY_BLUEPRINT_EXP003B_CONTROLS.md. Training covers the rule family; evaluation uses fresh contexts and payloads. Transplant agreement compares the output with the donor plan applied to recipient numbers. Other rates use the scoring target stated in the row."
+    },
+    {
+      "number": 5,
+      "title": "Linear readout across planner stages",
+      "source_block": 84,
+      "file": "evidence/report_tables/Table_05.csv",
+      "note": "Source: TINY_BLUEPRINT_EXP004_FORMATION_LOCALIZATION.md. All entries are percentage accuracy of frozen-model linear probes. Whole-plan readout classifies 12 plans. These are readout scores, not transplant scores."
+    },
+    {
+      "number": 6,
+      "title": "Shared slot structure and competing branches",
+      "source_block": 136,
+      "file": "evidence/report_tables/Table_06.csv",
+      "note": "Sources: TWO_GOAL_BLUEPRINT_COMPETITION_REPORT.md and PARTIAL_CONFLICT_BLUEPRINT_ANALYSIS.json. Probabilities and R² are unitless. Top-two rates score both competing outputs; the target probabilities are measured on conflicting examples. The causal edit rate scores both counterfactual branches."
+    },
+    {
+      "number": 7,
+      "title": "Attention from execution markers to logical facts",
+      "source_block": 153,
+      "file": "evidence/report_tables/Table_07.csv",
+      "note": "Sources: TRANSFORMER_BLUEPRINT_COT_DECOMPILATION_REPORT.md and TRANSFORMER_ATTENTION_EXECUTION_ROUTING.json. Values are mean first-block attention mass, without units. Rows need not sum to one because other context positions can receive attention. Attention patterns are interpreted together with the separate causal tests."
+    },
+    {
+      "number": 8,
+      "title": "Early training dose and later execution order",
+      "source_block": 185,
+      "file": "evidence/report_tables/Table_08.csv",
+      "note": "Source: TRAINING_ORDER_BLUEPRINT_FRONTLOADING_REPORT.md. All conditions share one initialization and 300 subsequent flexible-order training steps. Every condition reaches 100% valid traces and final answers. Rates measure execution-order preference, not answer improvement; independent-seed results are reported separately."
+    },
+    {
+      "number": 9,
+      "title": "Evidence levels for the central propositions",
+      "source_block": 218,
+      "file": "evidence/report_tables/Table_09.csv",
+      "note": "Sources: the experiment reports and metrics indexed in Appendix B. Controlled causal findings apply to their stated tasks and trained models. The last row identifies the larger-model correspondence as an interpretation rather than an equivalent direct validation."
+    },
+    {
+      "number": 10,
+      "title": "Experimental systems and training signals",
+      "source_block": 277,
+      "file": "evidence/report_tables/Table_10.csv",
+      "note": "Sources: the final source manuscript and accompanying experimental reports. Parameter counts are counts of trainable parameters as reported. Percentages and finite-domain comparisons are task-specific; training objectives and evaluation domains differ between studies."
+    }
+  ]
+}

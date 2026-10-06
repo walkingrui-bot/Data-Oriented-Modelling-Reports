@@ -1,0 +1,13 @@
+{
+  "force_V1": {
+    "full_downstream_exact": 0.9725,
+    "V2_counterfactual": 0.9783333333333334,
+    "V3_counterfactual": 0.9725,
+    "final_counterfactual": 0.9741666666666666
+  },
+  "force_V2": {
+    "full_downstream_exact": 0.9808333333333333,
+    "V3_counterfactual": 0.9833333333333333,
+    "final_counterfactual": 0.985
+  }
+}

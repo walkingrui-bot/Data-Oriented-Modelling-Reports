@@ -1,0 +1,7 @@
+parameter_group,gradient_cosine
+Output logits,-0.9999726414680481
+All parameters,-0.5964436531066895
+Embedding,-0.8574491739273071
+GRU L1,-0.82912278175354
+GRU L2,-0.5567470788955688
+Output head,-0.5172508955001831

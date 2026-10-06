@@ -60,4 +60,8 @@ The same report is cross-listed as [Chapter 2, Report 02](../Chapter_2_Language_
 
 Its first report, [Model Perception and Action Control](../Chapter_6_Model_Perception_and_Control/Model_Perception_and_Action_Control/README.md), connects these questions to calibrated observation, action eligibility and targeted first-action intervention.
 
+## Synthesis of the language model research
+
+[Chapter 8 — From Blueprint to Algorithm](../Chapter_8_From_Blueprint_to_Algorithm/README.md) brings together the earlier evidence and the controlled blueprint, algorithm-recovery and execution studies. It closes the current explanatory sequence; later additions remain in their corresponding topical chapters.
+
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.

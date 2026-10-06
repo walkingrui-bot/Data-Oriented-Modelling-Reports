@@ -1,0 +1,80 @@
+{
+  "L0": {
+    "payload": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    },
+    "changed_fact": {
+      "changed_slot_follows_donor": 1.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 1.0,
+      "full_trace_donor": 1.0
+    },
+    "SEP": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    },
+    "all_context": {
+      "changed_slot_follows_donor": 1.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 1.0,
+      "full_trace_donor": 1.0
+    }
+  },
+  "L1": {
+    "payload": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    },
+    "changed_fact": {
+      "changed_slot_follows_donor": 0.1619047619047619,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.23809523809523808,
+      "full_trace_donor": 0.15714285714285714
+    },
+    "SEP": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    },
+    "all_context": {
+      "changed_slot_follows_donor": 0.16666666666666666,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.24761904761904763,
+      "full_trace_donor": 0.16666666666666666
+    }
+  },
+  "L2": {
+    "payload": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    },
+    "changed_fact": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    },
+    "SEP": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    },
+    "all_context": {
+      "changed_slot_follows_donor": 0.0,
+      "other_slots_remain_recipient": 1.0,
+      "final_answer_follows_donor": 0.09523809523809523,
+      "full_trace_donor": 0.0
+    }
+  }
+}

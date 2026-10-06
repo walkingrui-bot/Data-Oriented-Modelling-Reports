@@ -1,0 +1,6 @@
+intervened_value_and_downstream_target,counterfactual_agreement_pct
+V1 → V2,97.83
+V1 → V3,97.25
+V1 → answer,97.42
+V2 → V3,98.33
+V2 → answer,98.5

@@ -1,0 +1,3 @@
+Early training and final preference,0 steps,10 steps,30 steps,70 steps
+A-only training then A-first,32.35%,72.06%,100%,100%
+B-only training then B-first,67.65%,100%,100%,100%

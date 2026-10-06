@@ -1,0 +1,8 @@
+Measure or intervention,Result
+Exact final-answer accuracy,100%
+Operation / order / style readout from z,100% / 100% / 100%
+Complete 12-state blueprint readout,100%
+"3,000 donor-z and recipient-payload transplants",100% follow the donor plan
+Set z to zero,2.70% exact-answer accuracy
+Randomly exchange z and score against the original answer,12.58%
+Score the same exchanges against donor-plan counterfactual answers,100%

@@ -1,0 +1,5 @@
+Measure,Held-out rule result
+OP / ORDER / STYLE accuracy,100% / 100% / 100%
+Whole-plan accuracy,100%
+Mean attention mass on the fact matching the queried goal,0.9999
+Correct-plan probability in the illustrated example,0.9767

@@ -15,3 +15,7 @@ This chapter follows relational fingerprints, transferred rules, self-writing, a
 | Chapters 1 and 2 archival record | [DOI: 10.5281/zenodo.22974937](https://doi.org/10.5281/zenodo.22974937) |
 
 The shared project information, original combined catalogs, provenance records, and original release manifests are kept once in this chapter. [Repository organization and original path map](REPOSITORY_ORGANIZATION.md) explains their scope. [Original reproduction instructions](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/v0.1.0/docs/REPRODUCTION.md) belong to the preserved v0.1.0 layout.
+
+## Synthesis of the language model research
+
+[Chapter 8 — From Blueprint to Algorithm](../Chapter_8_From_Blueprint_to_Algorithm/README.md) brings together the earlier evidence and the controlled blueprint, algorithm-recovery and execution studies. It closes the current explanatory sequence; later additions remain in their corresponding topical chapters.

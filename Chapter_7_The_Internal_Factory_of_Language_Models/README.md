@@ -1,6 +1,6 @@
 # Chapter 7 — The Internal Factory of Language Models
 
-[All chapters](../README.md) · [Previous: Chapter 6](../Chapter_6_Model_Perception_and_Control/README.md)
+[All chapters](../README.md) · [Previous: Chapter 6](../Chapter_6_Model_Perception_and_Control/README.md) · [Next: Chapter 8](../Chapter_8_From_Blueprint_to_Algorithm/README.md)
 
 How does a model turn moving internal states into an answer? This chapter follows the process from the formation of small computational pieces, through reasoning and output, to candidate routing, local repair and comparisons across architectures.
 
@@ -51,5 +51,9 @@ The chapter contains **seven English Word reports, 136 embedded figures and 71 t
 ## Connections to the earlier chapters
 
 [Chapter 2](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) develops the control view of language-model dynamics. [Chapter 3](../Chapter_3_Machine_Learning_Epidemiology/README.md) supplies the experimental diagnosis approach. [Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md) connects measured mechanisms to modelling choices. [Chapter 6](../Chapter_6_Model_Perception_and_Control/README.md) follows perception and action control. This chapter examines the internal computation that supports those processes.
+
+## Synthesis of the language model research
+
+[Chapter 8 — From Blueprint to Algorithm](../Chapter_8_From_Blueprint_to_Algorithm/README.md) brings together the earlier evidence and the controlled blueprint, algorithm-recovery and execution studies. It closes the current explanatory sequence; later additions remain in their corresponding topical chapters.
 
 Some hypotheses developed in this research have received substantive validation through engineering implementations. Data models are forthcoming.

@@ -1,0 +1,6 @@
+Measure,Result
+OP / ORDER / STYLE accuracy,100% / 100% / 100%
+Whole-plan accuracy,100%
+Same semantic context shuffled 100 times,100% retain the same correct plan
+Correct-plan probability in the illustrated example,0.9833
+Posterior entropy in that example,0.1417 bits

@@ -1,0 +1,12 @@
+study,section,question,main_record,evaluation
+EXP001,1,Can an explicit plan be calibrated?,evidence/EXP001/TINY_BLUEPRINT_EXP001_REPORT.md,Synthetic contexts; test plans; presentation shuffles
+EXP002,1,Can current relations construct the plan?,evidence/EXP002/TINY_BLUEPRINT_EXP002_CONTEXT_BUILT_REPORT.md,"Rule permutation (2, 1, 0) held out"
+EXP003,2,Does a latent plan transfer to an unseen rule?,REPORT_EN.md#2-a-blueprint-learned-without-blueprint-labels,Preliminary values retained from the final manuscript
+EXP003B,2,Can answers alone teach a transferable procedure?,evidence/EXP003B/TINY_BLUEPRINT_EXP003B_LATENT_BLUEPRINT_REPORT.md,"Fresh contexts and payloads; 3,000 donor transfers"
+EXP004 and B/C,3,Where does joint readout appear and what carries control?,evidence/EXP004/TINY_BLUEPRINT_EXP004_FORMATION_LOCALIZATION.md,"Frozen probes, donor states, coordinate and fact interventions"
+EXP005,4,Can an explicit program reproduce network behavior?,evidence/EXP005/TINY_BLUEPRINT_EXP005_NEURAL_NETWORK_DECOMPILATION.md,"52,272 valid inputs; reported exhaustive equivalence"
+GRU_SINGLE,5,How are shuffled facts assembled into an ordered program?,evidence/GRU_SINGLE/PROGRAM_GRU_SINGLE_OBJECTIVE_DECOMPILATION_REPORT.md,"4,992 valid inputs; layer transplants and slot edits"
+GRU_COMPETING,6,What survives conflicting objectives?,evidence/GRU_COMPETING/TWO_GOAL_BLUEPRINT_COMPETITION_REPORT.md,Task-cued control; conflict gradients and paired output branches
+TRANSFORMER,7 and 10,"How do context, positions and emitted state coordinate execution?",evidence/TRANSFORMER/TRANSFORMER_BLUEPRINT_COT_DECOMPILATION_REPORT.md,Activation patching; forward/reverse traces; state edits; compositional holdout
+CURRICULUM,8,Does early training change execution readiness and order?,evidence/CURRICULUM/TRAINING_ORDER_BLUEPRINT_FRONTLOADING_REPORT.md,Matched initialization and final training; independent-seed checks
+SERIALIZATION,12,How does answer placement interact with causal prerequisites?,evidence/SERIALIZATION/SERIALIZATION_POLICY_OPERATOR_PRECEDENCE_REPORT.md,R2A/A2R comparisons; three dependent-task seeds; marker and value interventions

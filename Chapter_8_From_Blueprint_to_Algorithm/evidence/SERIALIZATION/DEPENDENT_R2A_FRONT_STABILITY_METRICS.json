@@ -1,0 +1,36 @@
+{
+  "seeds": [
+    {
+      "A_ready_if_first_marker_forced": 1.0,
+      "B_ready_if_first_marker_forced": 0.0392156862745098,
+      "A_value_entropy": 0.03153005946546281,
+      "B_value_entropy": 0.1515666183047727,
+      "A_value_margin": 6.484513754938163,
+      "B_value_margin": 4.619717527838314
+    },
+    {
+      "A_ready_if_first_marker_forced": 1.0,
+      "B_ready_if_first_marker_forced": 0.058823529411764705,
+      "A_value_entropy": 0.022388083099583893,
+      "B_value_entropy": 0.13248352797738477,
+      "A_value_margin": 6.86888217458538,
+      "B_value_margin": 4.7382287137648635
+    },
+    {
+      "A_ready_if_first_marker_forced": 1.0,
+      "B_ready_if_first_marker_forced": 0.0196078431372549,
+      "A_value_entropy": 0.031125949010910356,
+      "B_value_entropy": 0.14224719074463435,
+      "A_value_margin": 6.561537027359009,
+      "B_value_margin": 4.719806002635582
+    }
+  ],
+  "average": {
+    "A_ready_if_first_marker_forced": 1.0,
+    "B_ready_if_first_marker_forced": 0.0392156862745098,
+    "A_value_entropy": 0.02834803052531902,
+    "B_value_entropy": 0.14209911234226394,
+    "A_value_margin": 6.638310985627517,
+    "B_value_margin": 4.69258408141292
+  }
+}

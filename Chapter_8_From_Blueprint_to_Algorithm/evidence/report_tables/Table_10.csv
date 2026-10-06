@@ -1,0 +1,10 @@
+Study,Model and scale,Training signal,Central recorded result
+EXP001,"11,323 parameters",Explicit plan labels,100% exact 12-state plans
+EXP002,"14,587 parameters",Explicit plans from current rule relations,100% on a held-out rule permutation
+EXP003 and EXP003B,"20,454 parameters; 8D bottleneck",Final answers only,EXP003B plan readout and donor transfer reach 100%
+EXP004 including B and C,Same planner and executor,Final answers only,Full joint readout first reaches 100% at h1
+EXP005,Same planner and executor,Final answers only,"52,272 of 52,272 explicit-program outputs agree"
+Single-objective GRU,"187,069 parameters; two layers",Final scalar only,"Ordered slots; 4,992 of 4,992 recovered-program outputs agree"
+Competing-objective GRU,"Approximately 187,000 parameters",Two partially conflicting targets,Shared operation state with competing branches
+Causal Transformer,"116,512 parameters; three blocks",Direct answer and CoT variants,Position-dependent retrieval and external CoT state
+Flexible-order curriculum Transformer,"18,432 parameters",Final loss accepts either trace order,Early training changes later execution order

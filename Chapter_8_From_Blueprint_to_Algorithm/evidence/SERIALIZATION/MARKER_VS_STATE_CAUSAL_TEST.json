@@ -1,0 +1,30 @@
+{
+  "baseline_correct_marker_correct_state": {
+    "B_marker": 1.0,
+    "B_value": 1.0,
+    "ANS_marker": 1.0,
+    "final_value": 1.0,
+    "full_tail": 1.0
+  },
+  "wrong_marker_correct_state": {
+    "B_marker": 1.0,
+    "B_value": 0.28431372549019607,
+    "ANS_marker": 1.0,
+    "final_value": 0.29411764705882354,
+    "full_tail": 0.28431372549019607
+  },
+  "correct_marker_wrong_state": {
+    "B_marker": 1.0,
+    "B_value": 0.20588235294117646,
+    "ANS_marker": 1.0,
+    "final_value": 0.20588235294117646,
+    "full_tail": 0.20588235294117646
+  },
+  "wrong_marker_wrong_state": {
+    "B_marker": 1.0,
+    "B_value": 0.08823529411764706,
+    "ANS_marker": 1.0,
+    "final_value": 0.09803921568627451,
+    "full_tail": 0.08823529411764706
+  }
+}

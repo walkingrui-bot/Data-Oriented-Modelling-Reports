@@ -30,3 +30,7 @@ The canonical publication is **Chapter 3, Report 02**, English edition 1.0, date
 **Recommended reading order:** [Chapter 2](../Chapter_2_Language_Models_Motor_Control_and_Deep_Space_Drift/README.md) → [Chapter 3](../Chapter_3_Machine_Learning_Epidemiology/README.md) → [Chapter 5](../Chapter_5_Data_Oriented_Modelling/README.md) → [Chapter 6](../Chapter_6_Model_Perception_and_Control/README.md).
 
 The [shared project and original path map](../Chapter_1_Language_Models_Fit_the_Function_That_Generates_the_Answer/REPOSITORY_ORGANIZATION.md) are kept once under Chapter 1. [Original reproduction instructions](https://github.com/walkingrui-bot/Data-Oriented-Modelling-Reports/blob/v0.1.0/docs/REPRODUCTION.md) belong to the preserved v0.1.0 layout.
+
+## Synthesis of the language model research
+
+[Chapter 8 — From Blueprint to Algorithm](../Chapter_8_From_Blueprint_to_Algorithm/README.md) brings together the earlier evidence and the controlled blueprint, algorithm-recovery and execution studies. It closes the current explanatory sequence; later additions remain in their corresponding topical chapters.

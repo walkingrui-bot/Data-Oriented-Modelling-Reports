@@ -1,0 +1,14 @@
+{
+  "R2A": {
+    "B_marker": 1.0,
+    "B_cf_value": 0.4019607843137255,
+    "final_cf": 0.4019607843137255,
+    "full_cf_tail": 0.4019607843137255
+  },
+  "A2R": {
+    "preferred_B_marker": 1.0,
+    "true_B_value": 0.00980392156862745,
+    "true_A_value": 0.9901960784313726,
+    "true_reasoning_tail": 0.00980392156862745
+  }
+}

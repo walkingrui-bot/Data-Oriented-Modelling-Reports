@@ -1,0 +1,7 @@
+Measure,Result
+Both A and B in the top two on conflicting cases,100%
+Mean p(A) / p(B),0.4989 / 0.4987
+Layer 1 additive slot R² from single to conflicting objectives,0.9315 → 0.9212
+Layer 2 additive slot R² from single to conflicting objectives,0.8627 → 0.8176
+Both donor branches retained after context-state transplantation,100%
+Both counterfactual branches recovered after shared-slot editing,98.75%
