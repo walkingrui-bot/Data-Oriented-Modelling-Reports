@@ -1,0 +1,39 @@
+name: Scratch Qwen Blueprint Slots
+
+on:
+  push:
+    branches:
+      - exp/neural-blueprint-slots-qwen05b-20261006
+    paths:
+      - "scratch/neural_blueprint_slots_qwen05b/**"
+      - ".github/workflows/scratch-qwen-blueprint-slots.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      HF_HUB_DISABLE_XET: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install CPU inference stack
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.46.3" accelerate safetensors scikit-learn pandas matplotlib
+      - name: Run blueprint-slot probe
+        run: python scratch/neural_blueprint_slots_qwen05b/run_exp.py
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qwen05b-blueprint-slot-results
+          path: scratch/neural_blueprint_slots_qwen05b/results
+          if-no-files-found: warn
