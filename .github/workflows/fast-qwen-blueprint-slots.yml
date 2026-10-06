@@ -1,0 +1,44 @@
+name: Fast Qwen Blueprint Slots
+
+on:
+  push:
+    branches:
+      - exp/neural-blueprint-slots-qwen05b-20261006
+    paths:
+      - "scratch/neural_blueprint_slots_qwen05b/run_fast.py"
+      - ".github/workflows/fast-qwen-blueprint-slots.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  probe-fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      HF_HUB_DISABLE_XET: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - name: Fetch only fast experiment script
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p scratch/neural_blueprint_slots_qwen05b
+          curl -L --fail             -H "Authorization: Bearer $GH_TOKEN"             -H "Accept: application/vnd.github.raw+json"             "https://api.github.com/repos/$GITHUB_REPOSITORY/contents/scratch/neural_blueprint_slots_qwen05b/run_fast.py?ref=$GITHUB_SHA"             -o scratch/neural_blueprint_slots_qwen05b/run_fast.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install CPU inference stack
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers==4.46.3" accelerate safetensors scikit-learn pandas matplotlib
+      - name: Run fast blueprint-slot probe
+        run: python scratch/neural_blueprint_slots_qwen05b/run_fast.py
+      - name: Upload fast results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qwen05b-blueprint-slot-results-fast
+          path: scratch/neural_blueprint_slots_qwen05b/results_fast
+          if-no-files-found: warn
